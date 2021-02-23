@@ -1,0 +1,267 @@
+{
+    "data": [{
+        "id": "1",
+        "nom": "Home",
+        "adress": "",
+        "description": "VannTile Factory",
+        "summary": "Remember, you have been warned: you might find something awesome.",
+        "share": {
+            "t": [
+                "Check out this #graphicdesigner & #webdeveloper blog: @vanntile Factory http://vanntile.tk"
+            ],
+            "w": [
+                "http://vanntile.tk VannTile Factory designer blog. Remember, you have been warned: you might find something awesome."
+            ],
+            "p": {
+                "media": "VannTile signature logo",
+                "url": "http://vanntile.tk/img/base/meta-logoredesign.png"
+            }
+        },
+        "meta-description": "Need someone to turn an idea into a graphic? I create with love and that's the first step to success. The Factory is the portfolio of VannTile Ianito, graphic designer and web developer.",
+        "meta-tags": "VannTile Ianito, VannTile Factory, designer, portfolio, graphic design, illustrations, mockups, wallpapers, logo design, icon design, graphic content, blog, articles"
+    },{
+        "id": "2",
+        "nom": "My story",
+        "adress": "my-story",
+        "description": "How my story came true.",
+        "summary": "Of course, everything began like a game, with no guiding rules",
+        "share": {
+            "t": [
+                "How @vanntile became a graphic designer all of a sudden http://vanntile.tk/my-story",
+                "'Of course, #graphicdesign began like a game, with no guiding rules' @vanntile http://vanntile.tk/my-story"
+            ],
+            "w": [
+                "VannTile Factory http://vanntile.tk/my-story How @vanntile became a graphic designer all of a sudden",
+                "VannTile says '#graphicdesign began like a game, with no guiding rules' at http://vanntile.tk/my-story"
+            ],
+            "p": {
+                "media": "iPhone art piece",
+                "url": "http://vanntile.tk/img/base/meta-mystory.png"
+            }
+        },
+        "meta-description": "How my #designer story came true. Of course, everything began like a game, with no guiding rules. I've made this website as a portfolio and as blog too.",
+        "meta-tags": "graphic design, designer beginning, drawing, GIMP, Inkscape, portfolio, my designer story, VannTile Ianito, blog, article"
+    },{
+        "id": "3",
+        "nom": "My tools",
+        "adress": "my-tools",
+        "description": "Tools for web designers & developers",
+        "summary": "Tools for web designers & developers",
+        "share": {
+            "t": [
+                "Tools for web #designers & #developers on @annTile Factory http://vanntile.tk/my-tools"
+            ],
+            "w": [
+                "VannTile Factory http://vanntile.tk/my-tools Tools for web designers & developers"
+            ],
+            "p": {
+                "media": "VannTile's web tools",
+                "url": "http://vanntile.tk/img/base/meta-mytools.png"
+            }
+        },
+        "meta-description": "We all have our favorite tools we use to make our websites fancier, prettier and more useable. Code clarity turns a mess into an interesting experience. Web enthuziasts only.",
+        "meta-tags": "web design, web development, tools for website developing, dirtymarkup, css minifier, js minifier, image minifier, kraken.io, can I use, Icomoon.io, color hex, real favicon generator, jsfiddle, codepen, plunkr, cloud9, tinypng, VannTile Ianito, blog, article"
+    },{
+        "id": "4",
+        "nom": "LayerSpot",
+        "adress": "layerspot",
+        "description": "LayerSpot Wallpaper Collection",
+        "summary": "How to make a spectacular wallpaper collection",
+        "share": {
+            "t": [
+                "How to make a spectacular wallpaper collection @vannTile Factory http://vanntile.tk/layerspot",
+                "The challange of a lifetime: really successful art @vannTile Factory http://vanntile.tk/layerspot",
+                "Pay zero bucks for LayerSpot - a delightful wallpaper series @vannTile Factory http://vanntile.tk/layerspot"
+            ],
+            "w": [
+                "http://vanntile.tk/layerspot How to make a spectacular wallpaper collection at The Factory",
+                "VannTile Factory http://vanntile.tk/layerspot The challange of a lifetime: really successful art",
+                "http://vanntile.tk/layerspot Pay zero bucks for LayerSpot - a delightful wallpaper series at The Factory"
+            ],
+            "p": {
+                "media": "LayerSpot mockup",
+                "url": "http://vanntile.tk/img/base/meta-layerspot.jpg"
+            }
+        },
+        "meta-description": "Pay zero bucks for a delightful material design inspired wallpaper series called LayerSpot. Diverse and colorful, you'll definitely love it.",
+        "meta-tags": "hd wallpaper, download, themed wallpaper collection, bold colors, LayerSpot, Material Design, VannTile Ianito, post, portfolio, showcase, graphic design"
+    },{
+        "id": "5",
+        "nom": "My Facebook",
+        "adress": "my-facebook",
+        "description": "Answering why I don't have a Facebook",
+        "summary": "The toxic taboo question: Why don't you have a Facebook?",
+        "share": {
+            "t": [
+                "The toxic taboo question: Why don't you have a #Facebook? at @vannTile Factory http://vanntile.tk/my-facebook",
+                "'If it looks like a silly photo, post it!' at @vannTile Factory http://vanntile.tk/my-facebook",
+                "'A good guy might better stay off Facebook' at @vannTile Factory http://vanntile.tk/my-facebook"
+            ],
+            "w": [
+                "VannTile Factory http://vanntile.tk/my-facebook The toxic taboo question: Why don't you have a Facebook?",
+                "VannTile Factory http://vanntile.tk/my-facebook If it looks like a silly photo, post it!",
+                "VannTile Factory http://vanntile.tk/my-facebook A good guy might better stay off Facebook"
+            ],
+            "p": {
+                "media": "Want to know why I don't have a FB?",
+                "url": "http://vanntile.tk/img/base/meta-myfacebook.png"
+            }
+        },
+        "meta-description": "The toxic taboo question: Why don't you have a Facebook? You cannot debate this: Facebook is your life in a timeline. It is becoming more and more jammed with large useless groups.",
+        "meta-tags": "Why I don't have a Facebook, social obsession, privacy, social comparison, no facebook, social networks, VannTile Ianito, blog, article"
+    },{
+        "id": "6",
+        "nom": "Logo redesign",
+        "adress": "logo-redesign",
+        "description": "When I had a logo redesign",
+        "summary": "Research payed up - I'm unique through social media",
+        "share": {
+            "t": [
+                ".@vanntile Caution - the fundamentals of an old, inconclusive logo #designerproblems http://vanntile.tk/logo-redesign",
+                ".@vanntile Something unusual doesn't make your brand remarked #designerproblems http://vanntile.tk/logo-redesign",
+                ".@vanntile Bomb alert - Searching for an ultimate mark #designerproblems http://vanntile.tk/logo-redesign",
+                ".@vanntile Research payed up - I'm unique through social media #designerproblems http://vanntile.tk/logo-redesign"
+            ],
+            "w": [
+                "VannTile Factory http://vanntile.tk/logo-redesign Caution - the fundamentals of an old, inconclusive logo",
+                "VannTile Factory http://vanntile.tk/logo-redesign Something unusual doesn't make your brand remarked",
+                "VannTile Factory http://vanntile.tk/logo-redesign Bomb alert - Searching for an ultimate mark",
+                "VannTile Factory http://vanntile.tk/logo-redesign Research payed up - I'm unique through social media"
+            ],
+            "p": {
+                "media": "My logo redesigned",
+                "url": "http://vanntile.tk/img/base/meta-logoredesign.png"
+            }
+        },
+        "meta-description": "The fundamentals of an old, inconclusive logo. The branding is essential if you're looking to make a well-known designer out of yourself.",
+        "meta-tags": "logo redesign, design, social awereness, graphic designer, logo integration, product, service, marketing, VannTile Ianito, blog, article"
+    },{
+        "id": "7",
+        "nom": "Nature molds",
+        "adress": "nature-molds",
+        "description": "I molded six nature landscapes",
+        "summary": "I should make nature molding my hobby",
+        "share": {
+            "t": [
+                ".@vanntile Molding nature in a few fantastic illustrations http://vanntile.tk/nature-molds"
+            ],
+            "w": [
+                "VannTile Factory http://vanntile.tk/nature-molds Molding nature in a few fantastic illustrations"
+            ],
+            "p": {
+                "media": "Sunset Mold",
+                "url": "http://vanntile.tk/img/base/meta-naturemolds.jpg"
+            }
+        },
+        "meta-description": "I have been molding nature in a few fantastic illustrations than I gathered here for your delight. These are part of a single-theme series.",
+        "meta-tags": "Nature Molds, landscape illustration, VannTile Ianito, post, portfolio, showcase, graphic design, vector design"
+    },{
+        "id": "8",
+        "nom": "Consoles",
+        "adress": "consoles",
+        "description": "This is a larger project I plan to extend with time",
+        "summary": "Technology and, obviously, games, are an important part of our lives",
+        "share": {
+            "t": [
+                ".@vanntile Molding technology in more fantastic illustrations http://vanntile.tk/consoles",
+                ".@vanntile Consoles - a gamer's first addiction http://vanntile.tk/consoles",
+                ".@vanntile When Nintendo took over the gamer's world http://vanntile.tk/consoles"
+            ],
+            "w": [
+                "VannTile Factory http://vanntile.tk/consoles When Nintendo took over the gamer's world",
+                "VannTile Factory http://vanntile.tk/consoles Consoles - a gamer's first addiction",
+                "VannTile Factory http://vanntile.tk/consoles Molding technology in more fantastic illustrations"
+            ],
+            "p": {
+                "media": "Vector Design Console",
+                "url": "http://vanntile.tk/img/base/meta-consoles.png"
+            }
+        },
+        "meta-description": "Games are an important part of our lives so I decided to have a little tribute to them. Vector designs of some major nintendo consoles",
+        "meta-tags": "nintendo, pokemon, hand held games, game consoles, VannTile Ianito, post, portfolio, showcase, graphic design, vector design"
+    },{
+        "id": "9",
+        "nom": "Logo Concepts",
+        "adress": "logo-concepts",
+        "description": "These are a few of my logo concepts. Some are for sale, some aren't",
+        "summary": "I can express my thoughts and turn a branding issue into a little pieces of art",
+        "share": {
+            "t": [
+                ".@vanntile Conceptualizing isn't hard! http://vanntile.tk/logo-concepts",
+                ".@vanntile If you think creating a concept for an icon is difficult, you're wrong http://vanntile.tk/logo-concepts"
+            ],
+            "w": [
+                "VannTile Factory http://vanntile.tk/logo-concepts Conceptualizing isn't hard!",
+                "VannTile Factory http://vanntile.tk/logo-concepts If you think creating a concept for an icon is difficult, you're wrong"
+            ],
+            "p": {
+                "media": "Triangle logo concept",
+                "url": "http://vanntile.tk/img/base/meta-logoconcepts.png"
+            }
+        },
+        "meta-description": "The logo portfolio bin of VannTile Ianito. These are only a few concepts. Some are for sale, some are not, but all are made with love.",
+        "meta-tags": "logo design, logo concepts, vectorized art, creative process, VannTile Ianito, post, portfolio, showcase, graphic design, vector design"
+    },{
+        "id": "10",
+        "nom": "ColorChords Walls",
+        "adress": "colorchords",
+        "description": "ColorChords Wallpaper Collection",
+        "summary": "A bold, sensitive and chaotic wallpaper series",
+        "share": {
+            "t": [
+                "You can get a great hd wallpaper right now from @vanntile http://vanntile.tk/colorchords",
+                ".@vanntile Bold colors to express pedantic feelings http://vanntile.tk/colorchords"
+            ],
+            "w": [
+                "http://vanntile.tk/logo-concepts YYou can get a great hd wallpaper right now from VannTile Factory",
+                "VannTile Factory http://vanntile.tk/logo-concepts Bold colors to express pedantic feelingsg"
+            ],
+            "p": {
+                "media": "ColorChords mockup",
+                "url": "http://vanntile.tk/img/base/meta-colorchords.jpg"
+            }
+        },
+        "meta-description": "ColorChords is a themed wallpaper pack. I used bold color palettes to express aspirations. Somebody told me they look like psychedelic experiences for everyone.",
+        "meta-tags": "hd wallpaper, download, ColorChords, themed wallpaper collection, psychedelic experiences, bold colors, VannTile Ianito, post, portfolio, showcase, graphic design, vector design"
+    },{
+        "id": "11",
+        "nom": "MD Icon",
+        "adress": "mdicon-inkscape",
+        "description": "Material Design Icon made in Inkscape",
+        "summary": "The settings of Inkscape for a Material Design Icon",
+        "share": {
+            "t": [
+                ".@vanntile The settings of Inkscape for a Material Design Icon http://vanntile.tk/mdicon-inkscape"
+            ],
+            "w": [
+                "VannTile Factory http://vanntile.tk/mdicon-inkscape The settings of Inkscape for a Material Design Icon"
+            ],
+            "p": {
+                "media": "My material icon",
+                "url": "http://vanntile.tk/img/base/meta-logoredesign.png"
+            }
+        },
+        "meta-description": "The complete settings of Inkscape for a Material Design Icon on VannTile Factory",
+        "meta-tags": "Material Design, icon, guidelines, inkscape, vector design, VannTile Ianito, blog, article"
+    },{
+        "id": "12",
+        "nom": "Illustrations",
+        "adress": "illustrations",
+        "description": "Illustrations portfolio of VannTile",
+        "summary": "I'll use this place as a bin for my illustrations.",
+        "share": {
+            "t": [
+                "The illustration portfolio bin of @vanntile http://vanntile.tk/illustrations"
+            ],
+            "w": [
+                "http://vanntile.tk/illustrations The illustration portfolio bin of VannTile Ianito."
+            ],
+            "p": {
+                "media": "Circular Gallifreyan poem",
+                "url": "http://vanntile.tk/img/base/meta-illustrations.png"
+            }
+        },
+        "meta-description": "The illustration portfolio bin of VannTile Ianito. This place will grow with time, but it will cover my best graphic content pieces",
+        "meta-tags": "illustrations, graphic content, Doctor Who, circular gallifreyan poem, VannTile Ianito, post, portfolio, showcase, graphic design, vector design"
+    }]
+}

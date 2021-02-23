@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /img/assets/
+Disallow: /img/SVG/
+
+Crawl-delay: 1
+Sitemap: http://vanntile.tk/sitemap.xml
