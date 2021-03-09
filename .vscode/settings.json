@@ -1,0 +1,8 @@
+{
+  "files.associations": {
+    ".czrc": "jsonc"
+  },
+  "material-icon-theme.folders.associations": {
+    "types": "typescript"
+  }
+}
