@@ -3,7 +3,9 @@
     ".czrc": "jsonc"
   },
   "material-icon-theme.folders.associations": {
-    "types": "typescript"
+    "types": "typescript",
+    "blog": "docs",
+    "posts": "markdown"
   },
   "tailwindCSS.includeLanguages": {
     "typescript": "javascript"
