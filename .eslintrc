@@ -1,0 +1,32 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2020": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 11,
+    "project": "./tsconfig.json",
+    "sourceType": "module"
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:import/errors",
+    "plugin:import/typescript",
+    "prettier"
+  ],
+  "plugins": [
+    "import",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "no-console": "warn",
+    "no-nested-ternary": "off",
+    "@typescript-eslint/restrict-template-expressions": "off",
+    "@typescript-eslint/no-explicit-any": "off"
+  }
+}

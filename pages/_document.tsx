@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import crypto from 'crypto'
-import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Document, { Head, Html, Main, NextScript } from 'next/document'
 
 const cspHashOf = (text: string) => {
   const hash = crypto.createHash('sha256')

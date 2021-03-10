@@ -1,0 +1,14 @@
+!**/.eslintrc*
+**/build*
+**/node_modules*
+**/.next*
+dist
+coverage
+*.svg
+*.ico
+*.json
+.gitignore
+.npmignore
+*.md
+*.log
+*.lock
