@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/global.css'
+import '../styles/globals.css'
 
 type Props = {
   Component: React.ElementType

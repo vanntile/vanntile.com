@@ -4,5 +4,8 @@
   },
   "material-icon-theme.folders.associations": {
     "types": "typescript"
+  },
+  "tailwindCSS.includeLanguages": {
+    "typescript": "javascript"
   }
 }

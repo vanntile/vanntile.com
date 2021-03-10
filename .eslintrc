@@ -23,6 +23,7 @@
     "import",
     "@typescript-eslint"
   ],
+  "ignorePatterns": "*config.js",
   "rules": {
     "no-console": "warn",
     "no-nested-ternary": "off",
