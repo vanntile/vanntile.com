@@ -1,17 +1,7 @@
-import React, { ReactNode } from 'react'
 import Link from 'next/link'
-import Head from 'next/head'
 
-type Props = {
-  children?: ReactNode
-  title?: string
-}
-
-const Layout = ({ children, title = 'This is the default title' }: Props): JSX.Element => (
-  <div className="flex flex-row flex-wrap px-12 py-16">
-    <Head>
-      <title>{title}</title>
-    </Head>
+const Header = (): JSX.Element => {
+  return (
     <header className="w-full pb-8">
       <nav className="flex flex-row justify-center gap-5">
         <Link href="/">
@@ -33,12 +23,7 @@ const Layout = ({ children, title = 'This is the default title' }: Props): JSX.E
         </Link>
       </nav>
     </header>
-    {children}
-    <footer className="w-full pt-12 text-center">
-      <hr />
-      <span>I'm here to stay</span>
-    </footer>
-  </div>
-)
+  )
+}
 
-export default Layout
+export default Header

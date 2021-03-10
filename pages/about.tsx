@@ -1,14 +1,18 @@
+import Head from 'next/head'
 import React from 'react'
-import Layout from '../components/Layout'
+import Header from '../components/Header'
 
 const About = (): JSX.Element => {
   return (
-    <Layout title="About">
-      <div className="w-full">
-        <h1 className="text-4xl">About page</h1>
-        <p>Some boring content</p>
-      </div>
-    </Layout>
+    <>
+      <Head>
+        <title>About</title>
+      </Head>
+
+      <Header />
+      <h1 className="text-4xl">About page</h1>
+      <p>Some boring content</p>
+    </>
   )
 }
 

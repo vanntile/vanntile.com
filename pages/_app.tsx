@@ -13,7 +13,9 @@ const App: React.FC<Props> = ({ Component, pageProps }): JSX.Element => {
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Component {...pageProps} />
+      <div className="px-12 py-16">
+        <Component {...pageProps} />
+      </div>
     </>
   )
 }
