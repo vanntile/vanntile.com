@@ -1,8 +1,8 @@
+import Date from '@vcomponents/Date'
+import { getAllPostIds, getPostData } from '@vlib/posts'
+import utilStyles from '@vstyles/utils.module.css'
+import { PostData, PostIdParams } from '@vtypes/types'
 import Head from 'next/head'
-import Date from '../../components/Date'
-import { getAllPostIds, getPostData } from '../../lib/posts'
-import utilStyles from '../../styles/utils.module.css'
-import { PostData, PostIdParams } from '../../types/types'
 
 const Post = ({ postData }: { postData: PostData }): JSX.Element => {
   return (

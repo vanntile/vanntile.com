@@ -19,7 +19,22 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "esnext"
+    "target": "esnext",
+    "baseUrl": "./",
+    "paths": {
+      "@vcomponents/*": [
+        "components/*"
+      ],
+      "@vlib/*": [
+        "lib/*"
+      ],
+      "@vstyles/*": [
+        "styles/*"
+      ],
+      "@vtypes/*": [
+        "types/*"
+      ]
+    }
   },
   "exclude": [
     ".vscode",

@@ -1,6 +1,6 @@
+import Header from '@vcomponents/Header'
 import Head from 'next/head'
 import React from 'react'
-import Header from '../components/Header'
 
 const About = (): JSX.Element => {
   return (

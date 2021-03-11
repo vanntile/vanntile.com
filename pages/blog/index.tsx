@@ -1,8 +1,8 @@
+import Header from '@vcomponents/Header'
+import { getSortedPostsData } from '@vlib/posts'
+import { PostData } from '@vtypes/types'
 import Head from 'next/head'
 import Link from 'next/link'
-import Header from '../../components/Header'
-import { getSortedPostsData } from '../../lib/posts'
-import { PostData } from '../../types/types'
 
 const Blog = ({ allPosts }: { allPosts: PostData[] }): JSX.Element => (
   <>

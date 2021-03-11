@@ -10,7 +10,10 @@
   "parserOptions": {
     "ecmaVersion": 11,
     "project": "./tsconfig.json",
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
   "extends": [
     "eslint:recommended",
@@ -30,5 +33,38 @@
     "no-nested-ternary": "off",
     "@typescript-eslint/restrict-template-expressions": "off",
     "@typescript-eslint/no-explicit-any": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          [
+            "@vcomponents",
+            "./components"
+          ],
+          [
+            "@vlib",
+            "./lib"
+          ],
+          [
+            "@vstyles",
+            "./styles"
+          ],
+          [
+            "@vtypes",
+            "./types"
+          ]
+        ],
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".d.ts",
+          ".ts",
+          ".tsx",
+          ".json",
+          ".css"
+        ]
+      }
+    }
   }
 }

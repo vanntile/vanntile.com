@@ -1,9 +1,9 @@
+import { PostData, PostIdParams } from '@vtypes/types'
 import fs from 'fs'
 import matter from 'gray-matter'
 import path from 'path'
 import remark from 'remark'
 import html from 'remark-html'
-import { PostData, PostIdParams } from '../types/types'
 
 const postsDirectory = path.join(process.cwd(), 'posts')
 

@@ -1,9 +1,9 @@
+import '@vstyles/globals.css'
+import '@vstyles/nprogress.css'
 import Head from 'next/head'
 import Router from 'next/router'
 import { done, start } from 'nprogress'
 import React from 'react'
-import '../styles/globals.css'
-import '../styles/nprogress.css'
 
 type Props = {
   Component: React.ElementType
