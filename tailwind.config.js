@@ -1,4 +1,5 @@
-const { spacing, fontFamily } = require('tailwindcss/defaultTheme')
+const { spacing } = require('tailwindcss/defaultTheme')
+const typography = require('@tailwindcss/typography')
 
 module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
@@ -73,5 +74,5 @@ module.exports = {
   variants: {
     typography: ['dark'],
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [typography],
 }

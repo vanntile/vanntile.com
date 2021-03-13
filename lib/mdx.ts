@@ -30,11 +30,16 @@ export const getFileBySlug = async (slug: string, subfolder?: string): Promise<M
   // Use gray-matter to parse the post metadata section
   const { data, content } = matter(sourceFile)
 
+  const autolinkOptions = {
+    linkProperties: { ariaLabel: 'Anchor', tabIndex: -1, className: ['icon-link'] },
+    content: {},
+  }
+
   // Use remark to convert markdown into HTML string
   const contentMDX = await renderToString(content, {
     components: MDXComponents,
     mdxOptions: {
-      remarkPlugins: [reTOC, reCodeTitles, reSlug, reHeadings, reHint, reHtml],
+      remarkPlugins: [reTOC, reCodeTitles, reSlug, [reHeadings, autolinkOptions], reHint, reHtml],
       rehypePlugins: [mdxPrism],
     },
   })

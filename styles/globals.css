@@ -179,3 +179,17 @@ table {
   display: block;
   overflow-y: scroll;
 }
+
+/* Link hash, similar to GitHub ones */
+/* group flex whitespace-pre-wrap */
+a.icon-link {
+  @apply absolute text-gray-400 hover:text-gray-400 no-underline hover:no-underline shadow-none opacity-0 -ml-6 pr-3
+}
+
+:is(h1, h2, h3, h4, h5):hover > .icon-link {
+  @apply opacity-100
+}
+
+.icon-link::after {
+  content: "#";
+}
