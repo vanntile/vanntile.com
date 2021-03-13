@@ -1,16 +1,19 @@
 const mdx = require('@next/mdx')
-const headings = require('remark-autolink-headings')
-const codeTitle = require('remark-code-titles')
-const html = require('remark-html')
-const remarkSlug = require('remark-slug')
+const mdxPrism = require('mdx-prism')
+const reHeadings = require('remark-autolink-headings')
+const reCodeTitles = require('remark-code-titles')
+const reHint = require('remark-hint')
+const reHtml = require('remark-html')
+const reSlug = require('remark-slug')
+const reTOC = require('remark-toc')
 
 const withMDX = mdx({
   options: {
-    remarkPlugins: [codeTitle, remarkSlug, headings, html],
-    rehypePlugins: [],
+    remarkPlugins: [reTOC, reCodeTitles, reSlug, reHeadings, reHint, reHtml],
+    rehypePlugins: [mdxPrism],
   },
 })
 
 module.exports = withMDX({
-  pageExtensions: ['mdx', 'jsx', 'js', 'ts', 'tsx'],
+  pageExtensions: ['mdx', 'ts', 'tsx'],
 })

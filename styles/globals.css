@@ -2,17 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: optional;
-  src: url(/fonts/inter-var-latin.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
-}
-
 ::selection {
   background-color: #47a3f3;
   color: #fefefe;
@@ -42,6 +31,15 @@ html {
     backdrop-filter: none;
     @apply bg-opacity-100;
   }
+}
+
+pre {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+pre::-webkit-scrollbar {
+  display: none;
 }
 
 .prose pre {
@@ -117,15 +115,6 @@ pre[class*='language-'] {
   @apply text-gray-800 dark:text-gray-50;
 }
 
-pre::-webkit-scrollbar {
-  display: none;
-}
-
-pre {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
 .remark-code-title {
   @apply text-gray-800 dark:text-gray-200 px-5 py-3 border border-b-0 border-gray-200 dark:border-gray-700 rounded-t bg-gray-200 dark:bg-gray-800 text-sm font-mono font-bold;
 }
@@ -136,6 +125,34 @@ pre {
 
 .mdx-marker {
   @apply block -mx-4 px-4 bg-gray-100 dark:bg-gray-800 border-l-4 border-blue-500;
+}
+
+.hint {
+  @apply border p-4 my-4;
+}
+
+.hint.tip {
+  @apply border-blue-200 dark:border-blue-900 bg-blue-50 dark:bg-blue-900;
+}
+
+.hint.tip::selection {
+  @apply bg-blue-900 dark:bg-blue-50 text-blue-50 dark:text-blue-900;
+}
+
+.hint.warn {
+  @apply border-yellow-200 dark:border-yellow-500 bg-yellow-50 dark:bg-yellow-500;
+}
+
+.hint.warn::selection {
+  @apply bg-yellow-500 dark:bg-yellow-50 text-yellow-50 dark:text-yellow-500;
+}
+
+.hint.error {
+  @apply border-red-200 dark:border-red-900 bg-red-50 dark:bg-red-900;
+}
+
+.hint.error::selection {
+  @apply bg-red-900 dark:bg-red-50 text-red-50 dark:text-red-900;
 }
 
 /* Remove Safari input shadow on mobile */

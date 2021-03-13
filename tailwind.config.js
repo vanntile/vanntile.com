@@ -8,10 +8,7 @@ module.exports = {
       colors: {
         'blue-opaque': 'rgb(13 42 148 / 18%)',
       },
-      fontFamily: {
-        sans: ['Inter', ...fontFamily.sans],
-      },
-      typography: theme => ({
+      typography: (theme) => ({
         DEFAULT: {
           css: {
             color: theme('colors.gray.700'),

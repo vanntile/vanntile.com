@@ -1,14 +1,13 @@
-import { BlogLayout, MDXComponents } from '@vcomponents'
+import { BlogLayout } from '@vcomponents'
 import { getFileBySlug, getSlugs } from '@vlib/mdx'
 import { MDXFile, SlugParam } from '@vtypes/types'
-import hydrate from 'next-mdx-remote/hydrate'
 
 const BlogPost = ({ contentMDX, frontMatter }: MDXFile): JSX.Element => {
-  const content = hydrate(contentMDX, {
-    components: MDXComponents,
-  })
-
-  return <BlogLayout frontMatter={frontMatter}>{content}</BlogLayout>
+  return (
+    <BlogLayout frontMatter={frontMatter}>
+      <div dangerouslySetInnerHTML={{ __html: contentMDX.renderedOutput }}></div>
+    </BlogLayout>
+  )
 }
 
 export const getStaticPaths = (): { paths: SlugParam[]; fallback: boolean } => ({
