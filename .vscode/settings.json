@@ -7,6 +7,9 @@
     "blog": "docs",
     "posts": "markdown"
   },
+  "material-icon-theme.files.associations": {
+    "next.config.js": "vercel"
+  },
   "tailwindCSS.includeLanguages": {
     "typescript": "javascript"
   }

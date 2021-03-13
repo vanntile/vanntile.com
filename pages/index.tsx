@@ -1,4 +1,4 @@
-import Header from '@vcomponents/Header'
+import { Header } from '@vcomponents'
 import Head from 'next/head'
 import Link from 'next/link'
 

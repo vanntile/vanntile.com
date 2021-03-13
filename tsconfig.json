@@ -22,8 +22,8 @@
     "target": "esnext",
     "baseUrl": "./",
     "paths": {
-      "@vcomponents/*": [
-        "components/*"
+      "@vcomponents": [
+        "components/index.ts"
       ],
       "@vlib/*": [
         "lib/*"

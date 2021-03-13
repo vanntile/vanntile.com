@@ -1,3 +1,5 @@
+import { MDXProvider } from '@mdx-js/react'
+import { MDXComponents } from '@vcomponents'
 import '@vstyles/globals.css'
 import '@vstyles/nprogress.css'
 import Head from 'next/head'
@@ -16,14 +18,14 @@ Router.events.on('routeChangeError', () => done())
 
 const App: React.FC<Props> = ({ Component, pageProps }): JSX.Element => {
   return (
-    <>
+    <MDXProvider components={MDXComponents}>
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className="px-12 py-16">
         <Component {...pageProps} />
       </div>
-    </>
+    </MDXProvider>
   )
 }
 

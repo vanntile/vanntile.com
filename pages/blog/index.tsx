@@ -1,10 +1,10 @@
-import Header from '@vcomponents/Header'
-import { getSortedPostsData } from '@vlib/posts'
-import { PostData } from '@vtypes/types'
+import { Header } from '@vcomponents'
+import { getSortedPostsData } from '@vlib/mdx'
+import { MDXFile } from '@vtypes/types'
 import Head from 'next/head'
 import Link from 'next/link'
 
-const Blog = ({ allPosts }: { allPosts: PostData[] }): JSX.Element => (
+const Blog = ({ allPosts }: { allPosts: MDXFile[] }): JSX.Element => (
   <>
     <Head>
       <title>Blog</title>
@@ -12,18 +12,21 @@ const Blog = ({ allPosts }: { allPosts: PostData[] }): JSX.Element => (
 
     <Header />
     <h1 className="text-4xl">Blog posts</h1>
-    {allPosts.map(({ id, title }) => (
-      <p key={id}>
-        <Link href={`/blog/${id}`}>
-          <a className="leading-6 underline text-black-600 hover:text-blue-600 visited:text-purple-600 transition-colors">
+    {allPosts.map(({ frontMatter: { slug, title, summary } }) => (
+      <div key={slug} className="py-2">
+        <Link href={`/blog/${slug}`}>
+          <a className="text-lg leading-6 underline text-black-600 hover:text-blue-600 visited:text-purple-600 transition-colors">
             {title}
           </a>
         </Link>
-      </p>
+        <p className="pl-2">{summary}</p>
+      </div>
     ))}
   </>
 )
 
-export const getStaticProps = (): { props: { allPosts: PostData[] } } => ({ props: { allPosts: getSortedPostsData() } })
+export const getStaticProps = async (): Promise<{ props: { allPosts: MDXFile[] } }> => ({
+  props: { allPosts: await getSortedPostsData('posts') },
+})
 
 export default Blog

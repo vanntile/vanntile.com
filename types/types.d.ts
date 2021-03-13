@@ -1,8 +1,24 @@
-export type PostData = {
-  id: string
-  contentHtml?: string
-  date?: string
-  [key: string]: any
+export interface PageMeta {
+  title: string
+  publishedAt: string
+  summary: string
+  image: string
 }
 
-export type PostIdParams = { params: { id: string } }
+export interface IReadTimeResults {
+  text: string
+  time: number
+  words: number
+  minutes: number
+}
+
+export interface MDXMeta extends PageMeta {
+  slug: string
+  reading: IReadTimeResults
+}
+export interface MDXFile {
+  contentMDX: MdxRemote.Source
+  frontMatter: MDXMeta
+}
+
+export type SlugParam = { params: { slug: string } }

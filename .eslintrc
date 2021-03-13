@@ -40,7 +40,7 @@
         "map": [
           [
             "@vcomponents",
-            "./components"
+            "./components/index.ts"
           ],
           [
             "@vlib",
