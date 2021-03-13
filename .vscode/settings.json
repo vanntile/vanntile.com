@@ -1,6 +1,7 @@
 {
   "files.associations": {
-    ".czrc": "jsonc"
+    ".czrc": "jsonc",
+    ".stylelintrc": "jsonc"
   },
   "material-icon-theme.folders.associations": {
     "types": "typescript",
@@ -12,5 +13,10 @@
   },
   "tailwindCSS.includeLanguages": {
     "typescript": "javascript"
+  },
+  "css.validate": false,
+  "stylelint.enable": true,
+  "editor.quickSuggestions": {
+    "strings": true
   }
 }
