@@ -30,6 +30,10 @@ export const getFileBySlug = async (slug: string, subfolder?: string): Promise<M
   // Use gray-matter to parse the post metadata section
   const { data, content } = matter(sourceFile)
 
+  const tocOptions = {
+    tight: true,
+    ordered: true,
+  }
   const autolinkOptions = {
     linkProperties: { ariaLabel: 'Anchor', tabIndex: -1, className: ['icon-link'] },
     content: {},
@@ -39,7 +43,7 @@ export const getFileBySlug = async (slug: string, subfolder?: string): Promise<M
   const contentMDX = await renderToString(content, {
     components: MDXComponents,
     mdxOptions: {
-      remarkPlugins: [reTOC, reCodeTitles, reSlug, [reHeadings, autolinkOptions], reHint, reHtml],
+      remarkPlugins: [[reTOC, tocOptions], reCodeTitles, reSlug, [reHeadings, autolinkOptions], reHint, reHtml],
       rehypePlugins: [mdxPrism],
     },
   })

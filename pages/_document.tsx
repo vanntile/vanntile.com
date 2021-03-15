@@ -17,12 +17,12 @@ export default class MyDocument extends Document {
     }
 
     return (
-      <Html>
+      <Html lang="en">
         <Head>
           <meta charSet="utf-8" />
           <meta httpEquiv="Content-Security-Policy" content={csp} />
         </Head>
-        <body>
+        <body className="bg-white dark:bg-black text-white dark:text-black">
           <Main />
           <NextScript />
         </body>

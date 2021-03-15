@@ -1,7 +1,6 @@
 import { Date } from '@vcomponents'
 import { MDXMeta } from '@vtypes/types'
 import Head from 'next/head'
-import utilStyles from '@vstyles/utils.module.css'
 
 const BlogLayout = ({
   children,
@@ -15,12 +14,12 @@ const BlogLayout = ({
       <Head>
         <title>{title}</title>
       </Head>
-      <article className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16">
-        <h1 className={utilStyles.headingXl}>{title}</h1>
-        <div className={utilStyles.lightText}>
+      <article className="prose prose-md dark:prose-dark flex flex-col justify-center items-start max-w-2xl mx-auto mb-16">
+        <h1 className="text-4xl dark:text-gray-100">{title}</h1>
+        <div className="text-gray-400">
           <Date dateString={publishedAt} />, {reading.text}
         </div>
-        <div className="prose dark:prose-dark max-w-none w-full">{children}</div>
+        <div className="max-w-none w-full">{children}</div>
       </article>
     </>
   )

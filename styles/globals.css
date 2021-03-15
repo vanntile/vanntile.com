@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Objectivity';
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(../public/fonts/Objectivity-Regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Objectivity';
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(../public/fonts/Objectivity-Bold.woff2) format('woff2');
+}
+
 ::selection {
   background-color: #47a3f3;
   color: #fefefe;
@@ -42,12 +58,21 @@ pre::-webkit-scrollbar {
   display: none;
 }
 
+.prose a:not(.icon-link):after {
+  content: "";
+  @apply w-full h-1 absolute left-0 -bottom-2 bg-current transform scale-x-0 origin-right transition-transform duration-300;
+}
+
+.prose :is(a:hover, a:focus):not(.icon-link)::after {
+  @apply scale-x-100 origin-left;
+}
+
 .prose pre {
   @apply bg-gray-50 border border-gray-200 dark:border-gray-700 dark:bg-gray-900;
 }
 
 .prose code {
-  @apply text-gray-800 dark:text-gray-200 px-1 py-0.5 border border-gray-100 dark:border-gray-800 rounded-md bg-gray-100 dark:bg-gray-900;
+  @apply px-1 py-0.5 border border-gray-100 dark:border-gray-800 rounded-md bg-gray-100 dark:bg-gray-900;
 }
 
 .prose img {
@@ -181,13 +206,12 @@ table {
 }
 
 /* Link hash, similar to GitHub ones */
-/* group flex whitespace-pre-wrap */
-a.icon-link {
-  @apply absolute text-gray-400 hover:text-gray-400 no-underline hover:no-underline shadow-none opacity-0 -ml-6 pr-3
+:is(h1, h2, h3, h4):hover > a.icon-link {
+  @apply opacity-100;
 }
 
-:is(h1, h2, h3, h4, h5):hover > .icon-link {
-  @apply opacity-100
+a.icon-link {
+  @apply absolute text-gray-400 hover:text-gray-400 no-underline hover:no-underline shadow-none opacity-0 -ml-8;
 }
 
 .icon-link::after {
