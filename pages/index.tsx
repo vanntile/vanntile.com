@@ -1,13 +1,8 @@
-import { Header } from '@vcomponents'
-import Head from 'next/head'
+import { Container, Header } from '@vcomponents'
 import Link from 'next/link'
 
 const IndexPage = (): JSX.Element => (
-  <>
-    <Head>
-      <title>Portfolio</title>
-    </Head>
-
+  <Container>
     <Header />
     <h1 className="text-4xl">Hello Next.js 👋</h1>
     <p>
@@ -17,7 +12,7 @@ const IndexPage = (): JSX.Element => (
         </a>
       </Link>
     </p>
-  </>
+  </Container>
 )
 
 export default IndexPage

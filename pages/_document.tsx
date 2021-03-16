@@ -19,7 +19,20 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <meta charSet="utf-8" />
+          <link
+            rel="preload"
+            href="./fonts/Objectivity-Regular.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="./fonts/Objectivity-Bold.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
           <meta httpEquiv="Content-Security-Policy" content={csp} />
         </Head>
         <body className="bg-white dark:bg-black text-white dark:text-black">
