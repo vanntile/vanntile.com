@@ -25,11 +25,7 @@ const Container: React.FC<Props> = ({ children, ...customMeta }): JSX.Element =>
   } as Record<string, string>
 
   return (
-    <div
-      className={`max-w-none min-h-screen w-full px-8 bg-white dark:bg-black ${
-        router.asPath !== '/' ? 'prose prose-md dark:prose-dark' : ''
-      }`}
-    >
+    <div className="max-w-none min-h-screen w-full px-8 bg-white dark:bg-black">
       <Head>
         <title>{meta.title}</title>
         <meta content="text/html; charset=utf-8" httpEquiv="content-type" />
@@ -53,10 +49,10 @@ const Container: React.FC<Props> = ({ children, ...customMeta }): JSX.Element =>
       {router.asPath === '/' ? (
         <main className="flex flex-col justify-center py-16">{children}</main>
       ) : (
-        <>
+        <div className="prose dark:prose-dark max-w-3xl mx-auto">
           {mounted && <Navigation theme={theme} onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} />}
-          <main className="flex flex-col justify-center max-w-3xl mx-auto mt-8 mb-16">{children}</main>
-        </>
+          <main className="flex flex-col justify-center mt-8 mb-16">{children}</main>
+        </div>
       )}
     </div>
   )
