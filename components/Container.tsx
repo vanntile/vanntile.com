@@ -1,3 +1,4 @@
+import { Navigation } from '@vcomponents'
 import { useTheme } from 'next-themes'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
@@ -24,7 +25,11 @@ const Container: React.FC<Props> = ({ children, ...customMeta }): JSX.Element =>
   } as Record<string, string>
 
   return (
-    <div className="bg-white dark:bg-black">
+    <div
+      className={`max-w-none min-h-screen w-full px-8 bg-white dark:bg-black ${
+        router.asPath !== '/' ? 'prose prose-md dark:prose-dark' : ''
+      }`}
+    >
       <Head>
         <title>{meta.title}</title>
         <meta content="text/html; charset=utf-8" httpEquiv="content-type" />
@@ -45,17 +50,14 @@ const Container: React.FC<Props> = ({ children, ...customMeta }): JSX.Element =>
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
       </Head>
-      <nav className="sticky-nav flex justify-between items-center max-w-4xl w-full p-8 my-0 md:my-8 mx-auto bg-white dark:bg-black bg-opacity-60">
-        <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
-          {mounted && (theme === 'dark' ? 'Dark' : 'Light')}
-        </button>
-      </nav>
-      <main
-        id="skip"
-        className="flex flex-col justify-center bg-white dark:bg-black text-dark dark:text-white px-12 py-16"
-      >
-        {children}
-      </main>
+      {router.asPath === '/' ? (
+        <main className="flex flex-col justify-center py-16">{children}</main>
+      ) : (
+        <>
+          {mounted && <Navigation theme={theme} onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} />}
+          <main className="flex flex-col justify-center max-w-3xl mx-auto mt-8 mb-16">{children}</main>
+        </>
+      )}
     </div>
   )
 }

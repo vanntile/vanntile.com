@@ -1,4 +1,4 @@
-import { Container, Header } from '@vcomponents'
+import { Container } from '@vcomponents'
 import { getSortedPostsData } from '@vlib/mdx'
 import { MDXFile } from '@vtypes/types'
 import Link from 'next/link'
@@ -8,8 +8,7 @@ const Blog = ({ allPosts }: { allPosts: MDXFile[] }): JSX.Element => (
     title="Blog - vanntile's words"
     description="Articles on tech, software development, design and case studies."
   >
-    <Header />
-    <h1 className="text-4xl">Blog posts</h1>
+    <h1>Blog posts</h1>
     {allPosts.map(({ frontMatter: { slug, title, summary } }) => (
       <div key={slug} className="py-2">
         <Link href={`/blog/${slug}`}>

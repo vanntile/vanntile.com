@@ -42,10 +42,8 @@ module.exports = {
           css: {
             color: theme('colors.gray.300'),
             a: {
-              color: theme('colors.blue.400'),
-              '&:hover': {
-                color: theme('colors.blue.600'),
-              },
+              color: theme('colors.brand.secondary'),
+              '&:hover': { color: theme('colors.brand.secondary') },
               code: { color: theme('colors.blue.400') },
             },
             code: { color: theme('colors.gray.200') },
@@ -53,7 +51,7 @@ module.exports = {
               borderLeftColor: theme('colors.gray.700'),
               color: theme('colors.gray.300'),
             },
-            'h2,h3,h4': {
+            'h1,h2,h3,h4': {
               color: theme('colors.gray.100'),
               'scroll-margin-top': spacing[32],
             },
