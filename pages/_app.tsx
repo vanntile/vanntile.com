@@ -16,14 +16,12 @@ Router.events.on('routeChangeStart', () => start())
 Router.events.on('routeChangeComplete', () => done())
 Router.events.on('routeChangeError', () => done())
 
-const App: React.FC<Props> = ({ Component, pageProps }): JSX.Element => {
-  return (
-    <ThemeProvider attribute="class">
-      <MDXProvider components={MDXComponents}>
-        <Component {...pageProps} />
-      </MDXProvider>
-    </ThemeProvider>
-  )
-}
+const App: React.FC<Props> = ({ Component, pageProps }): JSX.Element => (
+  <ThemeProvider attribute="class">
+    <MDXProvider components={MDXComponents}>
+      <Component {...pageProps} />
+    </MDXProvider>
+  </ThemeProvider>
+)
 
 export default App

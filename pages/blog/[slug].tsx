@@ -2,13 +2,11 @@ import { BlogLayout } from '@vcomponents'
 import { getFileBySlug, getSlugs } from '@vlib/mdx'
 import { MDXFile, SlugParam } from '@vtypes/types'
 
-const BlogPost = ({ contentMDX, frontMatter }: MDXFile): JSX.Element => {
-  return (
-    <BlogLayout frontMatter={frontMatter}>
-      <div dangerouslySetInnerHTML={{ __html: contentMDX.renderedOutput }}></div>
-    </BlogLayout>
-  )
-}
+const BlogPost = ({ contentMDX, frontMatter }: MDXFile): JSX.Element => (
+  <BlogLayout frontMatter={frontMatter}>
+    <div dangerouslySetInnerHTML={{ __html: contentMDX.renderedOutput }}></div>
+  </BlogLayout>
+)
 
 export const getStaticPaths = (): { paths: SlugParam[]; fallback: boolean } => ({
   paths: getSlugs('posts'),
