@@ -35,7 +35,7 @@ export default class MyDocument extends Document {
           />
           <meta httpEquiv="Content-Security-Policy" content={csp} />
         </Head>
-        <body className="bg-white dark:bg-black text-white dark:text-black">
+        <body>
           <Main />
           <NextScript />
         </body>

@@ -3,12 +3,12 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
 
-interface ContainerParams {
+interface Props {
   children: React.ReactNode
   [key: string]: any
 }
 
-const Container = ({ children, ...customMeta }: ContainerParams): JSX.Element => {
+const Container: React.FC<Props> = ({ children, ...customMeta }): JSX.Element => {
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
   const router = useRouter()
@@ -27,7 +27,8 @@ const Container = ({ children, ...customMeta }: ContainerParams): JSX.Element =>
     <div className="bg-white dark:bg-black">
       <Head>
         <title>{meta.title}</title>
-        <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+        <meta content="text/html; charset=utf-8" httpEquiv="content-type" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="robots" content="follow, index" />
         <meta name="application-name" content={meta.title} />
         <meta name="description" content={meta.description} />
@@ -49,7 +50,10 @@ const Container = ({ children, ...customMeta }: ContainerParams): JSX.Element =>
           {mounted && (theme === 'dark' ? 'Dark' : 'Light')}
         </button>
       </nav>
-      <main id="skip" className="flex flex-col justify-center bg-white dark:bg-black px-8">
+      <main
+        id="skip"
+        className="flex flex-col justify-center bg-white dark:bg-black text-dark dark:text-white px-12 py-16"
+      >
         {children}
       </main>
     </div>
