@@ -14,7 +14,7 @@ module.exports = {
   theme: {
     screens: {
       md: '768px',
-      '2xl': '1536px',
+      '2xl': '2560px',
     },
     extend: {
       colors: {

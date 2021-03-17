@@ -11,13 +11,11 @@ export default class MyDocument extends Document {
   render() {
     let csp = `default-src 'self'; script-src 'self' ${cspHashOf(NextScript.getInlineScriptSource(this.props))}`
     if (process.env.NODE_ENV !== 'production') {
-      csp = `style-src 'self' 'unsafe-inline'; font-src 'self' data:; default-src 'self'; script-src 'unsafe-eval' 'self' ${cspHashOf(
-        NextScript.getInlineScriptSource(this.props),
-      )}`
+      csp = `style-src 'self' 'unsafe-inline'; font-src 'self' data:; default-src 'self'; script-src 'unsafe-inline' 'unsafe-eval' 'self'`
     }
 
     return (
-      <Html lang="en">
+      <Html lang="en" className="dark">
         <Head>
           <link
             rel="preload"

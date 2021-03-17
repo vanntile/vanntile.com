@@ -17,7 +17,7 @@ Router.events.on('routeChangeComplete', () => done())
 Router.events.on('routeChangeError', () => done())
 
 const App: React.FC<Props> = ({ Component, pageProps }): JSX.Element => (
-  <ThemeProvider attribute="class">
+  <ThemeProvider attribute="class" defaultTheme="dark">
     <MDXProvider components={MDXComponents}>
       <Component {...pageProps} />
     </MDXProvider>

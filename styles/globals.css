@@ -178,7 +178,7 @@ pre[class*='language-'] {
 }
 
 .prose a.icon-link {
-  @apply absolute -ml-6 text-gray-400 no-underline shadow-none opacity-0 hover:text-gray-400 hover:no-underline;
+  @apply absolute -ml-6 text-gray-400 no-underline shadow-none opacity-0 2xl:-ml-12 hover:text-gray-400 hover:no-underline;
 }
 
 .prose .icon-link::before {
