@@ -55,7 +55,7 @@ input[type='email'] {
   appearance: none;
 }
 
-/*** @tailwind/typography prose codes ***/
+/*** @tailwind/typography prose ***/
 .prose a::after {
   content: "";
   @apply w-full h-1 absolute left-0 -bottom-1 bg-current transform scale-x-0 origin-right transition-transform duration-500;
@@ -66,16 +66,20 @@ input[type='email'] {
 }
 
 .prose pre {
-  @apply bg-gray-50 border border-gray-200 dark:border-gray-700 dark:bg-gray-900;
+  @apply bg-gray-50 dark:bg-gray-900 border rounded border-gray-200 dark:border-gray-700 overflow-x-auto my-5 md:my-6 2xl:my-8 px-3 py-2 md:px-4 md:py-3 2xl:px-8 2xl:py-7;
 }
 
 .prose code {
-  @apply px-1 py-0.5 border border-gray-100 dark:border-gray-800 rounded-md bg-gray-100 dark:bg-gray-900;
+  @apply bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-200 text-xs md:text-base 2xl:text-xl;
 }
 
-.prose img {
-  /* Don't apply styles to next/image */
-  @apply m-0;
+/*** remark-code-title ***/
+.remark-code-title {
+  @apply bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 text-sm 2xl:text-lg font-mono font-bold border border-b-0 rounded-t border-gray-200 dark:border-gray-700 px-3 py-2 md:px-4 md:py-3 2xl:px-8 2xl:py-7;
+}
+
+.remark-code-title + pre {
+  @apply mt-0 rounded-t-none;
 }
 
 /*** mdxPrism code highlighting ***/
@@ -173,19 +177,10 @@ pre[class*='language-'] {
   @apply opacity-100;
 }
 
-a.icon-link {
-  @apply absolute text-gray-400 hover:text-gray-400 no-underline hover:no-underline shadow-none opacity-0 -ml-8;
+.prose a.icon-link {
+  @apply absolute text-gray-400 hover:text-gray-400 no-underline hover:no-underline shadow-none opacity-0 -ml-6;
 }
 
-.icon-link::before {
+.prose .icon-link::before {
   content: "#";
-}
-
-/*** Other remark styling ***/
-.remark-code-title {
-  @apply text-gray-800 dark:text-gray-200 px-5 py-3 border border-b-0 border-gray-200 dark:border-gray-700 rounded-t bg-gray-200 dark:bg-gray-800 text-sm font-mono font-bold;
-}
-
-.remark-code-title + pre {
-  @apply mt-0 rounded-t-none;
 }

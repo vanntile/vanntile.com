@@ -11,11 +11,7 @@ const Blog = ({ allPosts }: { allPosts: MDXFile[] }): JSX.Element => (
     <h1>Blog posts</h1>
     {allPosts.map(({ frontMatter: { slug, title, summary } }) => (
       <div key={slug} className="py-2">
-        <Link href={`/blog/${slug}`}>
-          <a className="text-lg leading-6 underline text-black-600 hover:text-blue-600 visited:text-purple-600 transition-colors">
-            {title}
-          </a>
-        </Link>
+        <Link href={`/blog/${slug}`}>{title}</Link>
         <p className="pl-2">{summary}</p>
       </div>
     ))}

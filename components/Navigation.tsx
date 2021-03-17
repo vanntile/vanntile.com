@@ -7,7 +7,7 @@ interface Props {
 }
 
 const Navigation: React.FC<Props> = ({ theme, onClick }): JSX.Element => (
-  <nav className="sticky top-0 z-10 flex flex-row justify-end items-center gap-8 max-w-3xl w-full mx-auto py-4 bg-white dark:bg-black">
+  <nav className="sticky top-0 z-10 flex flex-row justify-end items-center gap-8 max-w-full md:max-w-3xl 2xl:max-w-6xl w-full mx-auto py-4 bg-white dark:bg-black">
     <Link href="/">Home</Link>
     <Link href="/blog">Blog</Link>
     <button

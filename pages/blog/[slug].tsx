@@ -4,7 +4,7 @@ import { MDXFile, SlugParam } from '@vtypes/types'
 
 const BlogPost = ({ contentMDX, frontMatter }: MDXFile): JSX.Element => (
   <BlogLayout frontMatter={frontMatter}>
-    <div dangerouslySetInnerHTML={{ __html: contentMDX.renderedOutput }}></div>
+    <div className="max-w-full" dangerouslySetInnerHTML={{ __html: contentMDX.renderedOutput }}></div>
   </BlogLayout>
 )
 

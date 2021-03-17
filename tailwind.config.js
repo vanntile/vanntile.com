@@ -2,10 +2,20 @@ const { spacing, fontFamily } = require('tailwindcss/defaultTheme')
 const typography = require('@tailwindcss/typography')
 const colors = require('tailwindcss/colors')
 
+const resetPreCode = {
+  pre: false,
+  code: false,
+  'pre code': false,
+}
+
 module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
   theme: {
+    screens: {
+      md: '768px',
+      '2xl': '1536px',
+    },
     extend: {
       colors: {
         brand: {
@@ -33,9 +43,19 @@ module.exports = {
             'h2,h3,h4': {
               'scroll-margin-top': spacing[32],
             },
-            code: { color: theme('colors.gray.800') },
             'blockquote p:first-of-type::before': false,
             'blockquote p:last-of-type::after': false,
+            ...resetPreCode,
+          },
+        },
+        sm: {
+          css: {
+            ...resetPreCode,
+          },
+        },
+        '2xl': {
+          css: {
+            ...resetPreCode,
           },
         },
         dark: {
@@ -46,14 +66,12 @@ module.exports = {
               '&:hover': { color: theme('colors.brand.secondary') },
               code: { color: theme('colors.blue.400') },
             },
-            code: { color: theme('colors.gray.200') },
             blockquote: {
               borderLeftColor: theme('colors.gray.700'),
               color: theme('colors.gray.300'),
             },
             'h1,h2,h3,h4': {
               color: theme('colors.gray.100'),
-              'scroll-margin-top': spacing[32],
             },
             hr: { borderColor: theme('colors.gray.700') },
             ol: {
@@ -83,5 +101,5 @@ module.exports = {
   variants: {
     typography: ['responsive', 'dark'],
   },
-  plugins: [typography],
+  plugins: [typography({ modifiers: ['sm', '2xl'] })],
 }
