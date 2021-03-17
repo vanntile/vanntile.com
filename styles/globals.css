@@ -2,80 +2,80 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Objectivity';
-  font-style: normal;
-  font-weight: normal;
-  font-display: swap;
-  src: url(../public/fonts/Objectivity-Regular.woff2) format('woff2');
-}
+@layer base {
+  @font-face {
+    font-family: 'Objectivity';
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url(../public/fonts/Objectivity-Regular.woff2) format('woff2');
+  }
 
-@font-face {
-  font-family: 'Objectivity';
-  font-style: normal;
-  font-weight: bold;
-  font-display: swap;
-  src: url(../public/fonts/Objectivity-Bold.woff2) format('woff2');
-}
+  @font-face {
+    font-family: 'Objectivity';
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    src: url(../public/fonts/Objectivity-Bold.woff2) format('woff2');
+  }
 
-::selection {
-  @apply bg-brand text-gray-50
-}
+  :root {
+    --brand-primary: #3429AA;
+  }
 
-html {
-  scroll-behavior: smooth;
-  min-width: 320px;
-}
+  ::selection {
+    @apply bg-brand text-gray-50;
+  }
 
-table {
-  display: block;
-  overflow-y: scroll;
-}
+  html {
+    scroll-behavior: smooth;
+    min-width: 320px;
+  }
 
-#__next {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+  table {
+    display: block;
+    overflow-y: scroll;
+  }
 
-pre {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
+  pre {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 
-pre::-webkit-scrollbar {
-  display: none;
-}
+  pre::-webkit-scrollbar {
+    display: none;
+  }
 
-/* Remove Safari input shadow on mobile */
-input[type='text'],
-input[type='email'] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  /* Remove Safari input shadow on mobile */
+  input[type='text'],
+  input[type='email'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
 }
 
 /*** @tailwind/typography prose ***/
 .prose a::after {
   content: "";
-  @apply w-full h-1 absolute left-0 -bottom-1 bg-current transform scale-x-0 origin-right transition-transform duration-500;
+  @apply absolute left-0 w-full h-1 transition-transform duration-500 origin-right transform scale-x-0 bg-current -bottom-1;
 }
 
 .prose :is(a:hover, a:focus)::after {
-  @apply scale-x-100 origin-left;
+  @apply origin-left scale-x-100;
 }
 
 .prose pre {
-  @apply bg-gray-50 dark:bg-gray-900 border rounded border-gray-200 dark:border-gray-700 overflow-x-auto my-5 md:my-6 2xl:my-8 px-3 py-2 md:px-4 md:py-3 2xl:px-8 2xl:py-7;
+  @apply px-3 py-2 my-5 overflow-x-auto border border-gray-200 rounded bg-gray-50 dark:bg-gray-900 dark:border-gray-700 md:my-6 2xl:my-8 md:px-4 md:py-3 2xl:px-8 2xl:py-7;
 }
 
 .prose code {
-  @apply bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-200 text-xs md:text-base 2xl:text-xl;
+  @apply text-xs text-gray-900 bg-gray-50 dark:bg-gray-900 dark:text-gray-200 md:text-base 2xl:text-xl;
 }
 
 /*** remark-code-title ***/
 .remark-code-title {
-  @apply bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 text-sm 2xl:text-lg font-mono font-bold border border-b-0 rounded-t border-gray-200 dark:border-gray-700 px-3 py-2 md:px-4 md:py-3 2xl:px-8 2xl:py-7;
+  @apply px-3 py-2 font-mono text-sm font-bold text-gray-800 bg-gray-200 border border-b-0 border-gray-200 rounded-t dark:bg-gray-800 dark:text-gray-200 2xl:text-lg dark:border-gray-700 md:px-4 md:py-3 2xl:px-8 2xl:py-7;
 }
 
 .remark-code-title + pre {
@@ -145,7 +145,7 @@ pre[class*='language-'] {
 
 /*** remark-hint styling ***/
 .hint {
-  @apply border p-4 my-4;
+  @apply p-4 my-4 border;
 }
 
 .hint.tip {
@@ -178,7 +178,7 @@ pre[class*='language-'] {
 }
 
 .prose a.icon-link {
-  @apply absolute text-gray-400 hover:text-gray-400 no-underline hover:no-underline shadow-none opacity-0 -ml-6;
+  @apply absolute -ml-6 text-gray-400 no-underline shadow-none opacity-0 hover:text-gray-400 hover:no-underline;
 }
 
 .prose .icon-link::before {

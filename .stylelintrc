@@ -6,7 +6,8 @@
       {
         "ignoreAtRules": [
           "extends",
-          "tailwind"
+          "tailwind",
+          "layer"
         ]
       }
     ],

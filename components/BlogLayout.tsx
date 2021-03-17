@@ -9,7 +9,7 @@ const BlogLayout = ({
   frontMatter: MDXMeta
 }): JSX.Element => (
   <Container title={title} description={summary} date={new Date(publishedAt).toISOString()} type="article">
-    <article className="flex flex-col justify-center items-start">
+    <article className="flex flex-col items-start justify-center">
       <h1>{title}</h1>
       <div className="text-gray-400">
         <ArticleDate dateString={publishedAt} />, {reading.text}

@@ -40,7 +40,8 @@
     ".vscode",
     "node_modules",
     "public",
-    "styles"
+    "styles",
+    "snippets"
   ],
   "include": [
     "**/*.ts",
