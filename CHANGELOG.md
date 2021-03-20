@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.12.0](https://github.com/vanntile/vanntile.com/compare/v0.11.1...v0.12.0) (2021-03-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* - Using tailwindcss/jit compiler for faster development
+* - edited tsconfig to ignore old snippets
+* - Container contains major logic in meta tags and theming.
+
+### Bug Fixes
+
+* :bug: Dark mode ([813f58d](https://github.com/vanntile/vanntile.com/commit/813f58df60997a463a99cc7a51fd4833eb8e795c))
+* :bug: Sizing contents ([b1e9790](https://github.com/vanntile/vanntile.com/commit/b1e97902873d30039dfff4f1f9128bf29ddbe8a7))
+
+
+### feature
+
+* :star2: Added Container component ([4eca814](https://github.com/vanntile/vanntile.com/commit/4eca81462586d18d168e8d5e02f91c43214972b3))
+
+
+### refactoring
+
+* :fire: Added headwind class order and css base layer ([fde4aca](https://github.com/vanntile/vanntile.com/commit/fde4acaf0926b0f199224be155dfe77e9564c50b))
+
+
+### config
+
+* :wrench: removed tailwind/typography and added css ([b22f742](https://github.com/vanntile/vanntile.com/commit/b22f742ae0b96b81a258aa27c5f60add7fec8edc))
+
 ### [0.11.1](https://github.com/vanntile/vanntile.com/compare/v0.11.0...v0.11.1) (2021-03-13)
 
 ## [0.11.0](https://github.com/vanntile/vanntile.com/compare/v0.10.0...v0.11.0) (2021-03-10)
