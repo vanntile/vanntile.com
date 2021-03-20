@@ -49,7 +49,7 @@ const Container: React.FC<Props> = ({ children, ...customMeta }): JSX.Element =>
       {router.asPath === '/' ? (
         <main className="flex flex-col justify-center py-16">{children}</main>
       ) : (
-        <div className="max-w-full mx-auto prose-sm prose md:prose 2xl:prose-2xl dark:prose-dark md:max-w-3xl 2xl:max-w-6xl">
+        <div className="max-w-full mx-auto prose md:max-w-3xl 2xl:max-w-6xl">
           {mounted && <Navigation theme={theme} onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} />}
           <main className="pt-8 pb-32">{children}</main>
         </div>

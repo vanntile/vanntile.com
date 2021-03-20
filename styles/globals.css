@@ -8,7 +8,7 @@
     font-style: normal;
     font-weight: normal;
     font-display: swap;
-    src: url(../public/fonts/Objectivity-Regular.woff2) format('woff2');
+    src: url('/fonts/Objectivity-Regular.woff2') format('woff2');
   }
 
   @font-face {
@@ -16,7 +16,7 @@
     font-style: normal;
     font-weight: bold;
     font-display: swap;
-    src: url(../public/fonts/Objectivity-Bold.woff2) format('woff2');
+    src: url('/fonts/Objectivity-Bold.woff2') format('woff2');
   }
 
   :root {
@@ -32,12 +32,45 @@
     min-width: 320px;
   }
 
-  table {
-    display: block;
-    overflow-y: scroll;
+  /* Remove Safari input shadow on mobile */
+  input[type='text'],
+  input[type='email'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  h1 {
+    @apply font-extrabold text-gray-900 dark:text-gray-100;
+  }
+
+  h2 {
+    @apply font-bold text-gray-900 dark:text-gray-100;
+  }
+
+  h3, h4 {
+    @apply font-semibold text-gray-900 dark:text-gray-100;
+  }
+
+  :is(h2, h3, h4) + * {
+    @apply mt-0;
+  }
+
+  a {
+    @apply relative font-bold no-underline text-brand hover:text-brand dark:text-brand-secondary dark:hover:text-brand-secondary;
+  }
+
+  a::after {
+    @apply absolute left-0 w-full h-1 transition-transform duration-500 origin-right transform scale-x-0 bg-current -bottom-1;
+    content: "";
+  }
+
+  :is(a:hover, a:focus)::after {
+    @apply origin-left scale-x-100;
   }
 
   pre {
+    @apply px-3 py-2 my-5 overflow-x-auto text-gray-800 border border-gray-200 rounded bg-gray-50 md:my-6 2xl:my-8 md:px-4 md:py-3 2xl:px-8 2xl:py-7;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
@@ -46,31 +79,405 @@
     display: none;
   }
 
-  /* Remove Safari input shadow on mobile */
-  input[type='text'],
-  input[type='email'] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+  code {
+    @apply text-xs font-semibold text-gray-900 bg-gray-50 md:text-base 2xl:text-xl;
+  }
+
+  @variants dark {
+    pre {
+      @apply dark:bg-gray-900 dark:border-gray-700 dark:text-gray-50;
+    }
+
+    code {
+      @apply dark:bg-gray-900 dark:text-gray-200;
+    }
+  }
+
+  a code {
+    @apply text-brand dark:text-blue-400;
+  }
+
+  h2 code {
+    font-size: calc(18em / 20);
+  }
+
+  h3 code {
+    font-size: calc(16em / 18)
+  }
+
+  ol, ul {
+    margin-top: calc(16em / 14);
+    margin-bottom: calc(16em / 14);
+  }
+
+  li {
+    margin-top: calc(4em / 14);
+    margin-bottom: clac(4em / 14);
+  }
+
+  :is(ol, ul) > li {
+    @apply relative;
+    padding-left: calc(22em / 14);
+  }
+
+  ol > li::before {
+    @apply absolute left-0 font-normal text-gray-500;
+    content: counter(list-item, decimal) ".";
+  }
+
+  ul > li::before {
+    @apply absolute bg-gray-300 rounded-full;
+    content: '';
+    width: calc(5em / 14);
+    height: calc(5em / 14);
+    top: calc(5.5em / 14);
+    left: calc(3em / 14);
+  }
+
+  ul > li p {
+    margin-top: calc(8em / 14);
+    margin-bottom: calc(8em / 14);
+  }
+
+  :is(ol, ul) > li > *:first-child {
+    margin-top: calc(16em / 14);
+  }
+
+  :is(ol, ul) > li > *:last-child {
+    margin-bottom: calc(16em / 14);
+  }
+
+  ul ul, ul ol, ol ul, ol ol {
+    margin-top: calc(8em / 14);
+    margin-bottom: calc(8em / 14);
+  }
+
+  @screen md {
+    ol, ul {
+      margin-top: calc(20em / 16);
+      margin-bottom: calc(20em / 16);
+    }
+
+    li {
+      margin-top: calc(8em / 16);
+      margin-bottom: clac(8em / 16);
+    }
+
+    :is(ol, ul) > li {
+      padding-left: calc(28em / 16);
+    }
+
+    ul > li::before {
+      width: calc(6em / 16);
+      height: calc(6em / 16);
+      top: calc(8.5em / 16);
+      left: calc(4em / 16);
+    }
+
+    > ul > li p {
+      margin-top: calc(12em / 16);
+      margin-bottom: calc(12em / 16);
+    }
+
+    > :is(ol, ul) > li > *:first-child {
+      margin-top: calc(20em / 16);
+    }
+
+    > :is(ol, ul) > li > *:last-child {
+      margin-bottom: calc(20em / 16);
+    }
+
+    ul ul, ul ol, ol ul, ol ol {
+      margin-top: calc(12em / 16);
+      margin-bottom: calc(12em / 16);
+    }
+
+    h2 code {
+      font-size: calc(21em / 24);
+    }
+
+    h3 code {
+      font-size: calc(18em / 20)
+    }
+  }
+
+  @screen 2xl {
+    ol, ul {
+      margin-top: calc(32em / 24);
+      margin-bottom: calc(32em / 24);
+    }
+
+    li {
+      margin-top: calc(12em / 24);
+      margin-bottom: clac(12em / 24);
+    }
+
+    :is(ol, ul) > li {
+      padding-left: calc(40em / 24);
+    }
+
+    ul > li::before {
+      width: calc(8em / 24);
+      height: calc(8em / 24);
+      top: calc(10.5em / 24);
+      left: calc(6em / 24);
+    }
+
+    > ul > li p {
+      margin-top: calc(20em / 24);
+      margin-bottom: calc(20em / 24);
+    }
+
+    > :is(ol, ul) > li > *:first-child {
+      margin-top: calc(32em / 24);
+    }
+
+    > :is(ol, ul) > li > *:last-child {
+      margin-bottom: calc(32em / 24);
+    }
+
+    ul ul, ul ol, ol ul, ol ol {
+      margin-top: calc(16em / 24);
+      margin-bottom: calc(16em / 24);
+    }
+
+    h2 code {
+      font-size: calc(42em / 48);
+    }
+
+    h3 code {
+      font-size: calc(32em / 36);
+    }
   }
 }
 
-/*** @tailwind/typography prose ***/
-.prose a::after {
-  content: "";
-  @apply absolute left-0 w-full h-1 transition-transform duration-500 origin-right transform scale-x-0 bg-current -bottom-1;
-}
+@layer components {
+  .prose {
+    @apply text-sm text-gray-700;
+    line-height: calc(24 / 14);
+  }
 
-.prose :is(a:hover, a:focus)::after {
-  @apply origin-left scale-x-100;
-}
+  @variants dark {
+    .prose {
+      @apply dark:text-gray-300;
+    }
+  }
 
-.prose pre {
-  @apply px-3 py-2 my-5 overflow-x-auto border border-gray-200 rounded bg-gray-50 dark:bg-gray-900 dark:border-gray-700 md:my-6 2xl:my-8 md:px-4 md:py-3 2xl:px-8 2xl:py-7;
-}
+  .prose p {
+    margin-top: calc(16em / 14);
+    margin-bottom: calc(16em / 14);
+  }
 
-.prose code {
-  @apply text-xs text-gray-900 bg-gray-50 dark:bg-gray-900 dark:text-gray-200 md:text-base 2xl:text-xl;
+  .prose h1 {
+    font-size: calc(30em / 14);
+    line-height: calc(36 / 30);
+    margin-top: 0;
+    margin-bottom: calc(24em / 30);
+  }
+
+  .prose h2 {
+    font-size: calc(20em / 14);
+    line-height: calc(28 / 20);
+    margin-top: calc(32em / 20);
+    margin-bottom: calc(8em / 20);
+  }
+
+  .prose h3 {
+    font-size: calc(18em / 14);
+    line-height: calc(28 / 18);
+    margin-top: calc(28em / 18);
+    margin-bottom: calc(8em / 18);
+  }
+
+  .prose h4 {
+    line-height: calc(20 / 14);
+    margin-top: calc(20em / 14);
+    margin-bottom: calc(8em / 14);
+  }
+
+  .prose :is(h2, h3, h4) {
+    scroll-margin-top: 8rem;
+  }
+
+  .prose blockquote {
+    @apply italic font-medium text-gray-900 border-l-4 border-gray-200 dark:border-gray-700 dark:text-gray-300;
+    quotes: "\\201C" "\\201D" "\\2018" "\\2019";
+    margin-top: calc(24em / 18);
+    margin-bottom: calc(24em / 18);
+    padding-left: calc(20em / 18);
+  }
+
+  .prose :is(img, video, figure) {
+    margin-top: calc(24em / 14);
+    margin-bottom: calc(24em / 14);
+  }
+
+  .prose figure > * {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .prose figure figcaption {
+    font-size: calc(12em / 14);
+    line-height: calc(16 / 12);
+    margin-top: calc(8em / 12);
+  }
+
+  .prose table {
+    @apply block w-full overflow-y-scroll text-left;
+    margin-top: calc(32em / 16);
+    margin-bottom: calc(32em / 16);
+    font-size: calc(12em / 14);
+    line-height: calc(18 / 12);
+  }
+
+  .prose thead {
+    @apply font-black text-gray-900 border-b-2 border-gray-300 dark:text-gray-100;
+  }
+
+  .prose thead th {
+    @apply pb-3 pl-4 pr-4 md:pb-2 md:pl-2 md:pr-2 2xl:pb-4 2xl:pl-3 2xl:pr-3;
+    vertical-align: bottom;
+  }
+
+  .prose thead tr {
+    @apply border-gray-200 dark:border-gray-700;
+    border-bottom-width: 1px;
+  }
+
+  .prose tbody td {
+    @apply p-2 2xl:p-4;
+    vertical-align: top;
+  }
+
+  .prose thead th:first-child, .prose tbody td:first-child {
+    @apply pl-0;
+  }
+
+  .prose thead th:last-child, .prose tbody td:last-child {
+    @apply pr-0;
+  }
+
+  @screen md {
+    .prose {
+      @apply text-base;
+      line-height: calc(28 / 16);
+    }
+
+    .prose p {
+      margin-top: calc(20em / 16);
+      margin-bottom: calc(20em / 16);
+    }
+
+    .prose h1 {
+      font-size: calc(36em / 16);
+      line-height: calc(40 / 36);
+      margin-bottom: calc(32em / 36);
+    }
+
+    .prose h2 {
+      font-size: calc(24em / 16);
+      line-height: calc(32 / 24);
+      margin-top: calc(48em / 24);
+      margin-bottom: calc(24em / 24);
+    }
+
+    .prose h3 {
+      font-size: calc(20em / 16);
+      line-height: calc(32 / 20);
+      margin-top: calc(32em / 20);
+      margin-bottom: calc(12em / 20);
+    }
+
+    .prose h4 {
+      line-height: calc(24 / 16);
+      margin-top: calc(24em / 16);
+      margin-bottom: calc(8em / 16);
+    }
+
+    .prose blockquote {
+      margin-top: calc(32em / 20);
+      margin-bottom: calc(32em / 20);
+      padding-left: calc(20em / 20);
+    }
+
+    .prose :is(img, video, figure) {
+      margin-top: calc(32em / 16);
+      margin-bottom: calc(32em / 16);
+    }
+
+    .prose figure figcaption {
+      @apply text-gray-500;
+      font-size: calc(14em / 16);
+      line-height: calc(20 / 14);
+      margin-top: calc(12em / 14);
+    }
+
+    .prose table {
+      font-size: calc(14em / 16);
+      line-height: calc(24em / 14);
+    }
+  }
+
+  @screen 2xl {
+    .prose {
+      @apply text-2xl;
+      line-height: calc(40 / 24);
+    }
+
+    .prose p {
+      margin-top: calc(32em / 24);
+      margin-bottom: calc(32em / 24);
+    }
+
+    .prose h1 {
+      font-size: calc(64em / 24);
+      line-height: calc(64 / 64);
+      margin-bottom: calc(56em / 64);
+    }
+
+    .prose h2 {
+      font-size: calc(48em / 24);
+      line-height: calc(52 / 48);
+      margin-top: calc(72em / 48);
+      margin-bottom: calc(40em / 48);
+    }
+
+    .prose h3 {
+      font-size: calc(36em / 24);
+      line-height: calc(44 / 36);
+      margin-top: calc(56em / 36);
+      margin-bottom: calc(24em / 36);
+    }
+
+    .prose h4 {
+      line-height: calc(36 / 24);
+      margin-top: calc(40em / 24);
+      margin-bottom: calc(16em / 24);
+    }
+
+    .prose blockquote {
+      margin-top: calc(64em / 36);
+      margin-bottom: calc(64em / 36);
+      padding-left: calc(40em / 36);
+    }
+
+    .prose :is(img, video, figure) {
+      margin-top: calc(48em / 24);
+      margin-bottom: calc(48em / 24);
+    }
+
+    .prose figure figcaption {
+      font-size: calc(20em / 24);
+      line-height: calc(32 / 20);
+      margin-top: calc(20em / 20);
+    }
+
+    .prose table {
+      font-size: calc(20em / 24);
+      line-height: calc(28em / 20);
+    }
+  }
 }
 
 /*** remark-code-title ***/
@@ -83,10 +490,7 @@
 }
 
 /*** mdxPrism code highlighting ***/
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
+.token:is(.comment,.prolog,.doctype,.cdata) {
   @apply text-gray-700 dark:text-gray-300;
 }
 
@@ -94,53 +498,29 @@
   @apply text-gray-700 dark:text-gray-300;
 }
 
-.token.property,
-.token.tag,
-.token.boolean,
-.token.number,
-.token.constant,
-.token.symbol,
-.token.deleted {
+.token:is(.property,.tag,.boolean,.number,.constant,.symbol,.deleted) {
   @apply text-green-500;
 }
 
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted {
+.token:is(.selector,.attr-name,.string,.char,.builtin,.inserted) {
   @apply text-purple-500;
 }
 
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string {
+.token:is(.operator,.entity,.url),
+:is(.language-css,.style) .token.string {
   @apply text-yellow-500;
 }
 
-.token.atrule,
-.token.attr-value,
-.token.keyword {
+.token:is(.atrule,.attr-value,.keyword) {
   @apply text-blue-500;
 }
 
-.token.function,
-.token.class-name {
+.token:is(.function,.class-name) {
   @apply text-pink-500;
 }
 
-.token.regex,
-.token.important,
-.token.variable {
+.token:is(.regex,.important,.variable) {
   @apply text-yellow-500;
-}
-
-code[class*='language-'],
-pre[class*='language-'] {
-  @apply text-gray-800 dark:text-gray-50;
 }
 
 /*** remark-hint styling ***/
@@ -173,11 +553,11 @@ pre[class*='language-'] {
 }
 
 /*** remark-autolink-headings - link hash, similar to GitHub ones ***/
-:is(h1, h2, h3, h4):hover > a.icon-link {
+:is(h1, h2, h3, h4):hover > .icon-link {
   @apply opacity-100;
 }
 
-.prose a.icon-link {
+.prose .icon-link {
   @apply absolute -ml-6 text-gray-400 no-underline shadow-none opacity-0 2xl:-ml-12 hover:text-gray-400 hover:no-underline;
 }
 
