@@ -22,7 +22,7 @@ module.exports = {
           tint: '#A3B5E3',
           accent: '#FF9A63',
         },
-        gray: colors.trueGray,
+        gray: colors.blueGray,
       },
       fontFamily: {
         sans: ['Objectivity', ...fontFamily.sans],

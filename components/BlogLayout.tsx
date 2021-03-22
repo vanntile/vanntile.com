@@ -11,7 +11,7 @@ const BlogLayout = ({
   <Container title={title} description={summary} date={new Date(publishedAt).toISOString()} type="article">
     <article className="flex flex-col items-start justify-center">
       <h1>{title}</h1>
-      <div className="text-gray-400">
+      <div className="text-gray-400 dark:text-brand-secondary">
         <ArticleDate dateString={publishedAt} />, {reading.text}
       </div>
       {children}

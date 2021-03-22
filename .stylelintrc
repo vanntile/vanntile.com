@@ -9,7 +9,8 @@
           "tailwind",
           "layer",
           "screen",
-          "variants"
+          "variants",
+          "media"
         ]
       }
     ],

@@ -19,8 +19,19 @@
     src: url('/fonts/Objectivity-Bold.woff2') format('woff2');
   }
 
+  /* Stop any animation if the user has set their device to "prefers reduced motion". */
+  @​media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+      animation-duration: 0.1s !important;
+      transition-duration: 0.1s !important;
+    }
+  }
+
   :root {
-    --brand-primary: #3429AA;
+    --brand-accent: #FF9A63;
+    --nprogress-color: var(--brand-accent);
   }
 
   ::selection {
@@ -45,7 +56,7 @@
   }
 
   h2 {
-    @apply font-bold text-gray-900 dark:text-gray-100;
+    @apply font-bold text-gray-900 dark:text-indigo-200;
   }
 
   h3, h4 {
@@ -57,11 +68,11 @@
   }
 
   a {
-    @apply relative font-bold no-underline text-brand hover:text-brand dark:text-brand-secondary dark:hover:text-brand-secondary;
+    @apply relative font-bold no-underline text-brand hover:text-brand dark:text-brand-accent;
   }
 
   a::after {
-    @apply absolute left-0 w-full h-1 transition-transform duration-500 origin-right transform scale-x-0 bg-current -bottom-1;
+    @apply absolute left-0 w-full h-1 transition-transform duration-500 origin-right transform scale-x-0 bg-current -bottom-2;
     content: "";
   }
 
@@ -80,21 +91,11 @@
   }
 
   code {
-    @apply text-xs font-semibold text-gray-900 bg-gray-50 md:text-base 2xl:text-xl;
-  }
-
-  @variants dark {
-    pre {
-      @apply dark:bg-gray-900 dark:border-gray-700 dark:text-gray-50;
-    }
-
-    code {
-      @apply dark:bg-gray-900 dark:text-gray-200;
-    }
+    @apply text-xs font-medium text-gray-900 2xl:font-semibold bg-gray-50 md:text-base 2xl:text-xl;
   }
 
   a code {
-    @apply text-brand dark:text-blue-400;
+    @apply text-brand dark:text-brand-accent;
   }
 
   h2 code {
@@ -150,6 +151,24 @@
   ul ul, ul ol, ol ul, ol ol {
     margin-top: calc(8em / 14);
     margin-bottom: calc(8em / 14);
+  }
+
+  @variants dark {
+    ::selection {
+      @apply dark:bg-gray-100 dark:text-brand;
+    }
+
+    pre {
+      @apply dark:bg-gray-900 dark:border-gray-600 dark:text-gray-50;
+    }
+
+    code {
+      @apply dark:bg-gray-900 dark:text-gray-200;
+    }
+
+    ol > li::before {
+      @apply dark:text-brand-tint;
+    }
   }
 
   @screen md {
@@ -259,7 +278,7 @@
 
   @variants dark {
     .prose {
-      @apply dark:text-gray-300;
+      @apply dark:text-brand-tint;
     }
   }
 
@@ -482,7 +501,7 @@
 
 /*** remark-code-title ***/
 .remark-code-title {
-  @apply px-3 py-2 font-mono text-sm font-bold text-gray-800 bg-gray-200 border border-b-0 border-gray-200 rounded-t dark:bg-gray-800 dark:text-gray-200 2xl:text-lg dark:border-gray-700 md:px-4 md:py-3 2xl:px-8 2xl:py-7;
+  @apply px-3 py-2 font-mono text-sm font-bold text-gray-800 bg-gray-200 border border-b-0 border-gray-200 rounded-t dark:bg-gray-800 dark:text-gray-200 2xl:text-lg dark:border-gray-600 md:px-4 md:py-3 2xl:px-8 2xl:py-7;
 }
 
 .remark-code-title + pre {
@@ -491,36 +510,36 @@
 
 /*** mdxPrism code highlighting ***/
 .token:is(.comment,.prolog,.doctype,.cdata) {
-  @apply text-gray-700 dark:text-gray-300;
+  @apply text-gray-700 dark:text-green-500;
 }
 
 .token.punctuation {
   @apply text-gray-700 dark:text-gray-300;
 }
 
-.token:is(.property,.tag,.boolean,.number,.constant,.symbol,.deleted) {
-  @apply text-green-500;
+.token:is(.property,.tag,.boolean,.number,.unit,.constant,.symbol,.deleted) {
+  @apply text-green-500 dark:text-yellow-400;
 }
 
-.token:is(.selector,.attr-name,.string,.char,.builtin,.inserted) {
-  @apply text-purple-500;
+.token:is(.selector,.attr-value,.string,.char,.builtin,.inserted) {
+  @apply text-purple-500 dark:text-red-400;
 }
 
-.token:is(.operator,.entity,.url),
-:is(.language-css,.style) .token.string {
-  @apply text-yellow-500;
+.token:is(.operator,.entity,.url,.attr-name),
+:is(.language-css,.language-scss,.style) .token.property {
+  @apply text-blue-800 dark:text-blue-300;
 }
 
-.token:is(.atrule,.attr-value,.keyword) {
-  @apply text-blue-500;
+.token:is(.atrule,.maybe-class-name) {
+  @apply text-blue-800 dark:text-yellow-400;
 }
 
-.token:is(.function,.class-name) {
-  @apply text-pink-500;
+.token:is(.function,.class-name,.keyword) {
+  @apply text-pink-600 dark:text-white;
 }
 
 .token:is(.regex,.important,.variable) {
-  @apply text-yellow-500;
+  @apply text-pink-600 dark:text-blue-300;
 }
 
 /*** remark-hint styling ***/
@@ -529,27 +548,27 @@
 }
 
 .hint.tip {
-  @apply border-blue-200 dark:border-blue-900 bg-blue-50 dark:bg-blue-900;
+  @apply text-blue-900 border-blue-300 dark:text-blue-200 dark:border-blue-500 bg-blue-50 dark:bg-blue-900;
 }
 
 .hint.tip::selection {
-  @apply bg-blue-900 dark:bg-blue-50 text-blue-50 dark:text-blue-900;
+  @apply bg-blue-900 text-gray-50 dark:bg-gray-50 dark:text-blue-900;
 }
 
 .hint.warn {
-  @apply border-yellow-200 dark:border-yellow-500 bg-yellow-50 dark:bg-yellow-500;
+  @apply text-yellow-900 border-yellow-300 dark:text-gray-900 dark:border-yellow-300 bg-yellow-50 dark:bg-yellow-500;
 }
 
 .hint.warn::selection {
-  @apply bg-yellow-500 dark:bg-yellow-50 text-yellow-50 dark:text-yellow-500;
+  @apply bg-yellow-500 text-gray-50 dark:bg-gray-50 dark:text-gray-900;
 }
 
 .hint.error {
-  @apply border-red-200 dark:border-red-900 bg-red-50 dark:bg-red-900;
+  @apply text-red-900 border-red-300 dark:text-red-200 dark:border-red-500 bg-red-50 dark:bg-red-800;
 }
 
 .hint.error::selection {
-  @apply bg-red-900 dark:bg-red-50 text-red-50 dark:text-red-900;
+  @apply bg-red-900 text-gray-50 dark:bg-gray-50 dark:text-red-900;
 }
 
 /*** remark-autolink-headings - link hash, similar to GitHub ones ***/

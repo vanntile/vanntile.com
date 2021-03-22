@@ -25,7 +25,7 @@ const Container: React.FC<Props> = ({ children, ...customMeta }): JSX.Element =>
   } as Record<string, string>
 
   return (
-    <div className="w-full min-h-screen px-6 bg-white max-w-none dark:bg-black">
+    <div className="w-full min-h-screen px-6 bg-white max-w-none dark:bg-gray-900">
       <Head>
         <title>{meta.title}</title>
         <meta content="text/html; charset=utf-8" httpEquiv="content-type" />
