@@ -20,6 +20,7 @@
   }
 
   /* Stop any animation if the user has set their device to "prefers reduced motion". */
+  /* stylelint-disable-next-line at-rule-no-unknown */
   @​media (prefers-reduced-motion: reduce) {
     * {
       animation: none !important;
@@ -43,6 +44,10 @@
     min-width: 320px;
   }
 
+  body {
+    @apply text-sm leading-6 text-gray-700 md:text-base md:leading-7 2xl:text-2xl 2xl:leading-relaxed;
+  }
+
   /* Remove Safari input shadow on mobile */
   input[type='text'],
   input[type='email'] {
@@ -52,15 +57,42 @@
   }
 
   h1 {
-    @apply font-extrabold text-gray-900 dark:text-gray-100;
+    @apply mt-0 text-3xl font-extrabold text-gray-900 md:text-4xl 2xl:leading-none 2xl:text-7xl;
+    margin-bottom: 0.875em;
   }
 
   h2 {
-    @apply font-bold text-gray-900 dark:text-indigo-200;
+    @apply text-xl font-bold text-gray-900 md:text-2xl 2xl:text-5xl 2xl:leading-none;
+    margin-top: 1.6em;
+    margin-bottom: 0.75em;
   }
 
   h3, h4 {
-    @apply font-semibold text-gray-900 dark:text-gray-100;
+    @apply font-semibold text-gray-900;
+    margin-top: 1.55em;
+    margin-bottom: 0.6em;
+  }
+
+  h3 {
+    @apply text-lg md:text-xl 2xl:text-4xl 2xl:leading-tight;
+  }
+
+  h4 {
+    @apply leading-5 md:leading-normal;
+  }
+
+  :is(h2, h3, h4) {
+    scroll-margin-top: 8rem;
+  }
+
+  p {
+    margin-top: calc(16em / 14);
+    margin-bottom: calc(16em / 14);
+  }
+
+  figure > * {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   :is(h2, h3, h4) + * {
@@ -78,6 +110,16 @@
 
   :is(a:hover, a:focus)::after {
     @apply origin-left scale-x-100;
+  }
+
+  /* Quotes, pre, code */
+
+  blockquote {
+    @apply italic font-medium text-gray-900 border-l-4 border-gray-200 dark:border-gray-700 dark:text-gray-300;
+    quotes: "\\201C" "\\201D" "\\2018" "\\2019";
+    margin-top: calc(24em / 18);
+    margin-bottom: calc(24em / 18);
+    padding-left: calc(20em / 18);
   }
 
   pre {
@@ -98,14 +140,11 @@
     @apply text-brand dark:text-brand-accent;
   }
 
-  h2 code {
-    font-size: calc(18em / 20);
+  h2 code, h3 code {
+    font-size: inherit;
   }
 
-  h3 code {
-    font-size: calc(16em / 18)
-  }
-
+  /* Lists */
   ol, ul {
     margin-top: calc(16em / 14);
     margin-bottom: calc(16em / 14);
@@ -153,9 +192,67 @@
     margin-bottom: calc(8em / 14);
   }
 
+  /* Images */
+  :is(img, video, figure) {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
+
+  figure figcaption {
+    @apply leading-snug;
+    font-size: 0.875em;
+    margin-top: 0.875em;
+  }
+
+  /* Tables */
+  table {
+    @apply block w-full overflow-y-scroll text-sm leading-normal text-left 2xl:text-xl;
+    margin-top: calc(32em / 16);
+    margin-bottom: calc(32em / 16);
+  }
+
+  thead {
+    @apply font-black text-gray-900 border-b-2 border-gray-300 dark:text-gray-100;
+  }
+
+  thead th {
+    @apply pb-3 pl-4 pr-4 md:pb-2 md:pl-2 md:pr-2 2xl:pb-4 2xl:pl-3 2xl:pr-3;
+    vertical-align: bottom;
+  }
+
+  thead tr {
+    @apply border-gray-200 dark:border-gray-700;
+    border-bottom-width: 1px;
+  }
+
+  tbody td {
+    @apply p-2 2xl:p-4;
+    vertical-align: top;
+  }
+
+  thead th:first-child, tbody td:first-child {
+    @apply pl-0;
+  }
+
+  thead th:last-child, tbody td:last-child {
+    @apply pr-0;
+  }
+
   @variants dark {
     ::selection {
       @apply dark:bg-gray-100 dark:text-brand;
+    }
+
+    body {
+      @apply dark:text-brand-tint;
+    }
+
+    h1 {
+      @apply dark:text-gray-100;
+    }
+
+    h2, h3, h4 {
+      @apply dark:text-indigo-200;
     }
 
     pre {
@@ -172,6 +269,18 @@
   }
 
   @screen md {
+    p {
+      margin-top: calc(20em / 16);
+      margin-bottom: calc(20em / 16);
+    }
+
+    blockquote {
+      margin-top: calc(32em / 20);
+      margin-bottom: calc(32em / 20);
+      padding-left: calc(20em / 20);
+    }
+
+    /* Lists */
     ol, ul {
       margin-top: calc(20em / 16);
       margin-bottom: calc(20em / 16);
@@ -210,17 +319,21 @@
       margin-top: calc(12em / 16);
       margin-bottom: calc(12em / 16);
     }
-
-    h2 code {
-      font-size: calc(21em / 24);
-    }
-
-    h3 code {
-      font-size: calc(18em / 20)
-    }
   }
 
   @screen 2xl {
+    p {
+      margin-top: calc(32em / 24);
+      margin-bottom: calc(32em / 24);
+    }
+
+    blockquote {
+      margin-top: calc(64em / 36);
+      margin-bottom: calc(64em / 36);
+      padding-left: calc(40em / 36);
+    }
+
+    /* Lists */
     ol, ul {
       margin-top: calc(32em / 24);
       margin-bottom: calc(32em / 24);
@@ -258,243 +371,6 @@
     ul ul, ul ol, ol ul, ol ol {
       margin-top: calc(16em / 24);
       margin-bottom: calc(16em / 24);
-    }
-
-    h2 code {
-      font-size: calc(42em / 48);
-    }
-
-    h3 code {
-      font-size: calc(32em / 36);
-    }
-  }
-}
-
-@layer components {
-  .prose {
-    @apply text-sm text-gray-700;
-    line-height: calc(24 / 14);
-  }
-
-  @variants dark {
-    .prose {
-      @apply dark:text-brand-tint;
-    }
-  }
-
-  .prose p {
-    margin-top: calc(16em / 14);
-    margin-bottom: calc(16em / 14);
-  }
-
-  .prose h1 {
-    font-size: calc(30em / 14);
-    line-height: calc(36 / 30);
-    margin-top: 0;
-    margin-bottom: calc(24em / 30);
-  }
-
-  .prose h2 {
-    font-size: calc(20em / 14);
-    line-height: calc(28 / 20);
-    margin-top: calc(32em / 20);
-    margin-bottom: calc(8em / 20);
-  }
-
-  .prose h3 {
-    font-size: calc(18em / 14);
-    line-height: calc(28 / 18);
-    margin-top: calc(28em / 18);
-    margin-bottom: calc(8em / 18);
-  }
-
-  .prose h4 {
-    line-height: calc(20 / 14);
-    margin-top: calc(20em / 14);
-    margin-bottom: calc(8em / 14);
-  }
-
-  .prose :is(h2, h3, h4) {
-    scroll-margin-top: 8rem;
-  }
-
-  .prose blockquote {
-    @apply italic font-medium text-gray-900 border-l-4 border-gray-200 dark:border-gray-700 dark:text-gray-300;
-    quotes: "\\201C" "\\201D" "\\2018" "\\2019";
-    margin-top: calc(24em / 18);
-    margin-bottom: calc(24em / 18);
-    padding-left: calc(20em / 18);
-  }
-
-  .prose :is(img, video, figure) {
-    margin-top: calc(24em / 14);
-    margin-bottom: calc(24em / 14);
-  }
-
-  .prose figure > * {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  .prose figure figcaption {
-    font-size: calc(12em / 14);
-    line-height: calc(16 / 12);
-    margin-top: calc(8em / 12);
-  }
-
-  .prose table {
-    @apply block w-full overflow-y-scroll text-left;
-    margin-top: calc(32em / 16);
-    margin-bottom: calc(32em / 16);
-    font-size: calc(12em / 14);
-    line-height: calc(18 / 12);
-  }
-
-  .prose thead {
-    @apply font-black text-gray-900 border-b-2 border-gray-300 dark:text-gray-100;
-  }
-
-  .prose thead th {
-    @apply pb-3 pl-4 pr-4 md:pb-2 md:pl-2 md:pr-2 2xl:pb-4 2xl:pl-3 2xl:pr-3;
-    vertical-align: bottom;
-  }
-
-  .prose thead tr {
-    @apply border-gray-200 dark:border-gray-700;
-    border-bottom-width: 1px;
-  }
-
-  .prose tbody td {
-    @apply p-2 2xl:p-4;
-    vertical-align: top;
-  }
-
-  .prose thead th:first-child, .prose tbody td:first-child {
-    @apply pl-0;
-  }
-
-  .prose thead th:last-child, .prose tbody td:last-child {
-    @apply pr-0;
-  }
-
-  @screen md {
-    .prose {
-      @apply text-base;
-      line-height: calc(28 / 16);
-    }
-
-    .prose p {
-      margin-top: calc(20em / 16);
-      margin-bottom: calc(20em / 16);
-    }
-
-    .prose h1 {
-      font-size: calc(36em / 16);
-      line-height: calc(40 / 36);
-      margin-bottom: calc(32em / 36);
-    }
-
-    .prose h2 {
-      font-size: calc(24em / 16);
-      line-height: calc(32 / 24);
-      margin-top: calc(48em / 24);
-      margin-bottom: calc(24em / 24);
-    }
-
-    .prose h3 {
-      font-size: calc(20em / 16);
-      line-height: calc(32 / 20);
-      margin-top: calc(32em / 20);
-      margin-bottom: calc(12em / 20);
-    }
-
-    .prose h4 {
-      line-height: calc(24 / 16);
-      margin-top: calc(24em / 16);
-      margin-bottom: calc(8em / 16);
-    }
-
-    .prose blockquote {
-      margin-top: calc(32em / 20);
-      margin-bottom: calc(32em / 20);
-      padding-left: calc(20em / 20);
-    }
-
-    .prose :is(img, video, figure) {
-      margin-top: calc(32em / 16);
-      margin-bottom: calc(32em / 16);
-    }
-
-    .prose figure figcaption {
-      @apply text-gray-500;
-      font-size: calc(14em / 16);
-      line-height: calc(20 / 14);
-      margin-top: calc(12em / 14);
-    }
-
-    .prose table {
-      font-size: calc(14em / 16);
-      line-height: calc(24em / 14);
-    }
-  }
-
-  @screen 2xl {
-    .prose {
-      @apply text-2xl;
-      line-height: calc(40 / 24);
-    }
-
-    .prose p {
-      margin-top: calc(32em / 24);
-      margin-bottom: calc(32em / 24);
-    }
-
-    .prose h1 {
-      font-size: calc(64em / 24);
-      line-height: calc(64 / 64);
-      margin-bottom: calc(56em / 64);
-    }
-
-    .prose h2 {
-      font-size: calc(48em / 24);
-      line-height: calc(52 / 48);
-      margin-top: calc(72em / 48);
-      margin-bottom: calc(40em / 48);
-    }
-
-    .prose h3 {
-      font-size: calc(36em / 24);
-      line-height: calc(44 / 36);
-      margin-top: calc(56em / 36);
-      margin-bottom: calc(24em / 36);
-    }
-
-    .prose h4 {
-      line-height: calc(36 / 24);
-      margin-top: calc(40em / 24);
-      margin-bottom: calc(16em / 24);
-    }
-
-    .prose blockquote {
-      margin-top: calc(64em / 36);
-      margin-bottom: calc(64em / 36);
-      padding-left: calc(40em / 36);
-    }
-
-    .prose :is(img, video, figure) {
-      margin-top: calc(48em / 24);
-      margin-bottom: calc(48em / 24);
-    }
-
-    .prose figure figcaption {
-      font-size: calc(20em / 24);
-      line-height: calc(32 / 20);
-      margin-top: calc(20em / 20);
-    }
-
-    .prose table {
-      font-size: calc(20em / 24);
-      line-height: calc(28em / 20);
     }
   }
 }
@@ -576,10 +452,10 @@
   @apply opacity-100;
 }
 
-.prose .icon-link {
+.icon-link {
   @apply absolute -ml-6 text-gray-400 no-underline shadow-none opacity-0 2xl:-ml-12 hover:text-gray-400 hover:no-underline;
 }
 
-.prose .icon-link::before {
+.icon-link::before {
   content: "#";
 }
