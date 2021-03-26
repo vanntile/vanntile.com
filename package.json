@@ -1,6 +1,6 @@
 {
   "name": "vanntile-portfolio",
-  "version": "0.12.1",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@next/mdx": "^10.0.8",

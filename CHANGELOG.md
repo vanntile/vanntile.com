@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/vanntile/vanntile.com/compare/v0.12.1...v1.0.0) (2021-03-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* - major homepage changes
+* - refactores the styles
+
+### refactoring
+
+* :fire: removed prose ([9a9de75](https://github.com/vanntile/vanntile.com/commit/9a9de75727c04b6af3187935a09a3edaace8a234))
+
+
+### feature
+
+* :star2: created homepage ([5ad0c24](https://github.com/vanntile/vanntile.com/commit/5ad0c246cb49fa503fc864fb95b61b2b98bbf2ac))
+
 ### [0.12.1](https://github.com/vanntile/vanntile.com/compare/v0.12.0...v0.12.1) (2021-03-22)
 
 ## [0.12.0](https://github.com/vanntile/vanntile.com/compare/v0.11.1...v0.12.0) (2021-03-20)
