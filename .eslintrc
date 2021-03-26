@@ -1,0 +1,70 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2020": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 11,
+    "project": "./tsconfig.json",
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:import/errors",
+    "plugin:import/typescript",
+    "prettier"
+  ],
+  "plugins": [
+    "import",
+    "@typescript-eslint"
+  ],
+  "ignorePatterns": "*config.js",
+  "rules": {
+    "no-console": "warn",
+    "no-nested-ternary": "off",
+    "@typescript-eslint/restrict-template-expressions": "off",
+    "@typescript-eslint/no-explicit-any": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          [
+            "@vcomponents",
+            "./components/index.ts"
+          ],
+          [
+            "@vlib",
+            "./lib"
+          ],
+          [
+            "@vstyles",
+            "./styles"
+          ],
+          [
+            "@vtypes",
+            "./types"
+          ]
+        ],
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".d.ts",
+          ".ts",
+          ".tsx",
+          ".json",
+          ".css"
+        ]
+      }
+    }
+  }
+}

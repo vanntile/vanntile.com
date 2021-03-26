@@ -1,0 +1,22 @@
+{
+  "files.associations": {
+    ".czrc": "jsonc",
+    ".stylelintrc": "jsonc"
+  },
+  "material-icon-theme.folders.associations": {
+    "types": "typescript",
+    "blog": "docs",
+    "posts": "markdown"
+  },
+  "material-icon-theme.files.associations": {
+    "next.config.js": "vercel"
+  },
+  "tailwindCSS.includeLanguages": {
+    "typescript": "javascript"
+  },
+  "css.validate": false,
+  "stylelint.enable": true,
+  "editor.quickSuggestions": {
+    "strings": true
+  }
+}

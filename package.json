@@ -1,28 +1,101 @@
 {
-  "name": "deploy-test",
-  "version": "0.1.1",
+  "name": "vanntile-portfolio",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "@next/mdx": "^10.0.8",
+    "date-fns": "^2.19.0",
+    "next": "^10.0.8",
+    "next-mdx-remote": "^2.1.3",
+    "next-themes": "^0.0.12",
+    "nprogress": "^0.2.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-tabs": "^3.2.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.0.1",
+    "@commitlint/config-conventional": "^12.0.1",
+    "@mdx-js/loader": "^1.6.22",
+    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
+    "@tailwindcss/jit": "^0.1.4",
+    "@types/eslint": "^7.2.7",
+    "@types/eslint-plugin-prettier": "^3.1.0",
+    "@types/mdx-js__react": "^1.5.3",
+    "@types/module-alias": "^2.0.0",
+    "@types/node": "^14.14.33",
+    "@types/nprogress": "^0.2.0",
+    "@types/prettier": "^2.2.2",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.2",
+    "@types/react-tabs": "^2.3.2",
+    "@typescript-eslint/eslint-plugin": "^4.17.0",
+    "@typescript-eslint/parser": "^4.17.0",
+    "autoprefixer": "^10.2.5",
+    "commitizen": "^4.2.3",
+    "cz-emoji": "github:ngryman/cz-emoji",
+    "eslint": "^7.21.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "gray-matter": "^4.0.2",
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.4",
+    "mdx-prism": "^0.3.3",
+    "module-alias": "^2.2.2",
+    "postcss": "^8.2.8",
+    "prettier": "^2.2.1",
+    "reading-time": "^1.3.0",
+    "rehype": "^11.0.0",
+    "remark": "^13.0.0",
+    "remark-autolink-headings": "^6.0.1",
+    "remark-code-titles": "^0.1.1",
+    "remark-hint": "^1.0.9",
+    "remark-html": "^13.0.1",
+    "remark-slug": "^6.0.0",
+    "remark-toc": "^7.2.0",
+    "standard-version": "^9.1.1",
+    "stylelint-config-recommended": "^4.0.0",
+    "tailwindcss": "^2.0.3",
+    "typescript": "4.2"
   },
   "scripts": {
-    "build": "echo 'OK'",
-    "live": "node index.js"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "type-check": "tsc",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "commit": "cz",
+    "release": "standard-version --no-verify --sign"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --staged --write",
+      "eslint --cache . --fix"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "_moduleAliases": {
+    "@vcomponents": "./components/index.ts",
+    "@vlib": "./lib",
+    "@vstyles": "./styles",
+    "@vtypes": "./types"
   },
   "engines": {
     "node": "14.x"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanntile/vanntile.com.git"
+  },
+  "keywords": [],
+  "author": "vanntile"
 }

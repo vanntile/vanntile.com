@@ -1,0 +1,52 @@
+<div class="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16">
+<div class="prose max-w-none w-full">
+
+# Article name
+
+React attempts to be as unopinionated as possible. This is both it's greatest strength _and_ weakness.
+
+Over the years, I've tried many different ways to style my React apps. Each solution has its pros and cons.
+This article will share my journey using CSS with React and how it's evolved to its current state. Then, I'll discuss pros/cons of
+different approaches for styling.
+
+## Table of Contents
+
+## Hints
+
+!> Here is a tip.
+
+?> And a warning.
+
+x> Or an error.
+
+## Vanilla CSS
+
+Like most, I started web development with vanilla CSS. All you need is a single HTML and CSS file. Pretty simple.
+
+```html:index.html
+<h1 class="header">Welcome</h1>
+```
+
+```css:index.css
+.header {
+  font-size: 32px;
+}
+```
+
+### Tailwind CSS
+
+[Tailwind CSS](https://tailwindcss.com/) has been rapidly growing in popularity. Many people are frustrated with the bloat of CSS frameworks like
+[Bootstrap](https://getbootstrap.com/) and want an alternative. Tailwind provides an impressive developer experience with a refined API.
+
+With the combination of [Tailwind UI](https://tailwindui.com/), you can easily build extensible, well-designed applications.
+
+<ProsCard
+  title="Tailwind"
+  pros={[
+    'You want to never leave your HTML (or JSX).',
+    'You need to enforce a design system.',
+    'You want to spend less time trying to name components.'
+  ]}
+/>
+</div>
+</div>
