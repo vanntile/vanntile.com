@@ -65,7 +65,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p $PORT",
     "type-check": "tsc",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
