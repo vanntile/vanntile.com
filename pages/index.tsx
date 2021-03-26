@@ -169,22 +169,27 @@ const IndexPage = (): JSX.Element => {
   const externals = [
     {
       href: 'https://github.com/vanntile',
+      name: 'vanntile on GitHub',
       d: svg.github,
     },
     {
       href: 'https://gitlab.com/vanntile',
+      name: 'vanntile on GitLab',
       d: svg.gitlab,
     },
     {
       href: 'https://stackoverflow.com/users/4679160/vanntile-ianito',
+      name: 'vanntile on StackOverflow',
       d: svg.stackoverflow,
     },
     {
       href: 'https://dribbble.com/vanntile',
+      name: 'vanntile on Dribbble',
       d: svg.dribbble,
     },
     {
       href: 'https://www.linkedin.com/in/valentin-ionita',
+      name: 'vanntile on Linkedin',
       d: svg.linkedin,
     },
   ]
@@ -324,10 +329,20 @@ const IndexPage = (): JSX.Element => {
               key={e.href}
               href={e.href}
               target="_blank"
+              rel="noreferrer"
+              title={e.name}
               className={`${styles.rotateScaleUp} pseudo-none bg-gray-900 rounded-full h-12 w-12 focus:outline-none focus:ring-8 ring-brand-accent`}
             >
-              <svg width="48px" height="48px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                width="48px"
+                height="48px"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path d={e.d} fill="currentColor" className="text-gray-200" />
+                <span className="visuallyhidden">{e.name}</span>
               </svg>
             </a>
           ))}
