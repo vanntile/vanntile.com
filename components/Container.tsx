@@ -25,7 +25,7 @@ const Container: React.FC<Props> = ({ children, ...customMeta }): JSX.Element =>
   } as Record<string, string>
 
   return (
-    <div className="w-full min-h-screen px-6 bg-white max-w-none dark:bg-gray-900">
+    <div className="w-full min-h-screen bg-white max-w-none dark:bg-gray-900">
       <Head>
         <title>{meta.title}</title>
         <meta content="text/html; charset=utf-8" httpEquiv="content-type" />
@@ -47,9 +47,9 @@ const Container: React.FC<Props> = ({ children, ...customMeta }): JSX.Element =>
         <meta name="twitter:image" content={meta.image} />
       </Head>
       {router.asPath === '/' ? (
-        <main className="flex flex-col justify-center py-16">{children}</main>
+        <main className="flex flex-col justify-center bg-gray-900 text-brand-tint home">{children}</main>
       ) : (
-        <div className="max-w-full mx-auto md:max-w-2xl 2xl:max-w-6xl">
+        <div className="max-w-full px-6 mx-auto md:max-w-2xl 2xl:max-w-6xl">
           {mounted && <Navigation theme={theme} onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} />}
           <main className="pt-8 pb-32">{children}</main>
         </div>

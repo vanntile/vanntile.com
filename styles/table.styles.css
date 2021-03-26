@@ -1,0 +1,32 @@
+table {
+  @apply block w-full overflow-y-scroll text-sm leading-normal text-left 2xl:text-xl;
+  margin-top: calc(32em / 16);
+  margin-bottom: calc(32em / 16);
+}
+
+thead {
+  @apply font-black text-gray-900 border-b-2 border-gray-300 dark:text-gray-100;
+}
+
+thead th {
+  @apply pb-3 pl-4 pr-4 md:pb-2 md:pl-2 md:pr-2 2xl:pb-4 2xl:pl-3 2xl:pr-3;
+  vertical-align: bottom;
+}
+
+thead tr {
+  @apply border-gray-200 dark:border-gray-700;
+  border-bottom-width: 1px;
+}
+
+tbody td {
+  @apply p-2 2xl:p-4;
+  vertical-align: top;
+}
+
+thead th:first-child, tbody td:first-child {
+  @apply pl-0;
+}
+
+thead th:last-child, tbody td:last-child {
+  @apply pr-0;
+}

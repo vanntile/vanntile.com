@@ -21,7 +21,7 @@
 
   /* Stop any animation if the user has set their device to "prefers reduced motion". */
   /* stylelint-disable-next-line at-rule-no-unknown */
-  @​media (prefers-reduced-motion: reduce) {
+  @media (prefers-reduced-motion: reduce) {
     * {
       animation: none !important;
       transition: none !important;
@@ -62,7 +62,7 @@
   }
 
   h2 {
-    @apply text-xl font-bold text-gray-900 md:text-2xl 2xl:text-5xl 2xl:leading-none;
+    @apply text-2xl font-bold text-gray-900 md:text-2xl 2xl:text-5xl 2xl:leading-none;
     margin-top: 1.6em;
     margin-bottom: 0.75em;
   }
@@ -161,12 +161,12 @@
   }
 
   ol > li::before {
-    @apply absolute left-0 font-normal text-gray-500;
+    @apply absolute left-0 font-normal text-current;
     content: counter(list-item, decimal) ".";
   }
 
   ul > li::before {
-    @apply absolute bg-gray-300 rounded-full;
+    @apply absolute bg-current rounded-full;
     content: '';
     width: calc(5em / 14);
     height: calc(5em / 14);
@@ -204,40 +204,6 @@
     margin-top: 0.875em;
   }
 
-  /* Tables */
-  table {
-    @apply block w-full overflow-y-scroll text-sm leading-normal text-left 2xl:text-xl;
-    margin-top: calc(32em / 16);
-    margin-bottom: calc(32em / 16);
-  }
-
-  thead {
-    @apply font-black text-gray-900 border-b-2 border-gray-300 dark:text-gray-100;
-  }
-
-  thead th {
-    @apply pb-3 pl-4 pr-4 md:pb-2 md:pl-2 md:pr-2 2xl:pb-4 2xl:pl-3 2xl:pr-3;
-    vertical-align: bottom;
-  }
-
-  thead tr {
-    @apply border-gray-200 dark:border-gray-700;
-    border-bottom-width: 1px;
-  }
-
-  tbody td {
-    @apply p-2 2xl:p-4;
-    vertical-align: top;
-  }
-
-  thead th:first-child, tbody td:first-child {
-    @apply pl-0;
-  }
-
-  thead th:last-child, tbody td:last-child {
-    @apply pr-0;
-  }
-
   @variants dark {
     ::selection {
       @apply dark:bg-gray-100 dark:text-brand;
@@ -261,10 +227,6 @@
 
     code {
       @apply dark:bg-gray-900 dark:text-gray-200;
-    }
-
-    ol > li::before {
-      @apply dark:text-brand-tint;
     }
   }
 
@@ -302,16 +264,16 @@
       left: calc(4em / 16);
     }
 
-    > ul > li p {
+    ul > li p {
       margin-top: calc(12em / 16);
       margin-bottom: calc(12em / 16);
     }
 
-    > :is(ol, ul) > li > *:first-child {
+    :is(ol, ul) > li > *:first-child {
       margin-top: calc(20em / 16);
     }
 
-    > :is(ol, ul) > li > *:last-child {
+    :is(ol, ul) > li > *:last-child {
       margin-bottom: calc(20em / 16);
     }
 
@@ -355,16 +317,16 @@
       left: calc(6em / 24);
     }
 
-    > ul > li p {
+    ul > li p {
       margin-top: calc(20em / 24);
       margin-bottom: calc(20em / 24);
     }
 
-    > :is(ol, ul) > li > *:first-child {
+    :is(ol, ul) > li > *:first-child {
       margin-top: calc(32em / 24);
     }
 
-    > :is(ol, ul) > li > *:last-child {
+    :is(ol, ul) > li > *:last-child {
       margin-bottom: calc(32em / 24);
     }
 
@@ -373,6 +335,15 @@
       margin-bottom: calc(16em / 24);
     }
   }
+}
+
+.pseudo-none::before, .pseudo-none:hover::before, .pseudo-none:focus::before,
+.pseudo-none::after, .pseudo-none:hover::after, .pseudo-none:focus::after {
+  display: none!important;
+}
+
+:is(ol, ul).pseudo-none li::before {
+  display: none!important;
 }
 
 /*** remark-code-title ***/
@@ -432,7 +403,7 @@
 }
 
 .hint.warn {
-  @apply text-yellow-900 border-yellow-300 dark:text-gray-900 dark:border-yellow-300 bg-yellow-50 dark:bg-yellow-500;
+  @apply text-yellow-900 border-yellow-300 dark:text-gray-900 bg-yellow-50 dark:bg-yellow-500;
 }
 
 .hint.warn::selection {
@@ -440,7 +411,7 @@
 }
 
 .hint.error {
-  @apply text-red-900 border-red-300 dark:text-red-200 dark:border-red-500 bg-red-50 dark:bg-red-800;
+  @apply text-red-500 border-red-200 dark:text-red-200 dark:border-red-900 bg-red-50 dark:bg-red-800;
 }
 
 .hint.error::selection {
