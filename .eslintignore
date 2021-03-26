@@ -12,3 +12,4 @@ coverage
 *.md
 *.log
 *.lock
+**/snippets*
