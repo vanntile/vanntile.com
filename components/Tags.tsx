@@ -5,7 +5,7 @@ interface Props {
 }
 
 const Tags: React.FC<Props> = ({ tags, additionalClasses, className }): JSX.Element => (
-  <div className={`pb-4 w-full overflow-hidden flex flex-row flex-wrap gap-2 ${className}`}>
+  <div className={`mt-1 pb-4 overflow-hidden flex flex-row flex-wrap gap-2 ${className}`}>
     {tags.map((s: string) => (
       <span key={s} className={`px-4 py-2 whitespace-nowrap text-sm font-semibold rounded ${additionalClasses}`}>
         {s}

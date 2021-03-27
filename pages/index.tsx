@@ -180,12 +180,12 @@ const IndexPage: React.FC<Props> = ({ externals }): JSX.Element => {
       <section className={`${styles.hSection} flex flex-col justify-center px-6 py-16 text-left min-h-screen`}>
         <div>
           <header className="mb-16 group">
-            <h1 className="mb-1 font-mono text-5xl text-gray-100 md:text-6xl">
+            <h1 className="mb-1 font-mono text-4xl text-gray-100 md:text-6xl">
               hi, I'm <br className="block md:hidden" />
               <span className="inline-flex h-20 max-w-xl pt-2 overflow-x-hidden overflow-y-visible animate-type group-hover:animate-type-reverse whitespace-nowrap text-brand-accent">
                 vanntile 👋
               </span>
-              <span className="box-border inline-block w-1 h-12 ml-2 -mb-2 bg-white md:-mb-4 md:h-16 animate-cursor"></span>
+              <span className="box-border inline-block w-1 h-10 ml-2 -mb-2 bg-white md:-mb-4 md:h-16 animate-cursor"></span>
             </h1>
             <div className="text-xl font-semibold md:text-3xl">developer by choice and designer for fun</div>
           </header>
@@ -223,7 +223,7 @@ const IndexPage: React.FC<Props> = ({ externals }): JSX.Element => {
               fillRule="evenodd"
               clipRule="evenodd"
               d={svg.logomark}
-              className={`text-gray-900 stroke-current ${styles.logomarkSvg}`}
+              className={`text-gray-900 stroke-current ${styles.logoSvg}`}
             ></path>
           </svg>
         </div>
@@ -233,32 +233,26 @@ const IndexPage: React.FC<Props> = ({ externals }): JSX.Element => {
           Keep scrolling if you wanna know why, how and what I work on!
         </p>
         <h3 className="text-gray-900 dark:text-gray-900">What is my tech stack?</h3>
-        <ol>
-          <li>Languages</li>
-          <Tags
-            tags={['JavaScript', 'TypeScript', 'CSS3', 'Python 3', 'C++', 'Haskell']}
-            additionalClasses="text-brand-accent bg-gray-800 px-3"
-            className="py-1 mx-6"
-          />
-          <li>Frameworks &amp; tools</li>
-          <Tags
-            tags={['Angular', 'React', 'NextJS', 'NodeJS', 'Docker', 'Heroku', 'git']}
-            additionalClasses="text-brand-accent bg-gray-800 px-3"
-            className="py-1 mx-6"
-          />
-          <li>Design tools &amp; knowledge</li>
-          <Tags
-            tags={['Figma', 'Inkscape', 'SVG', 'Typography', 'Layout', 'Visual idenitities']}
-            additionalClasses="text-brand-accent bg-gray-800 px-3"
-            className="py-1 mx-6"
-          />
-          <li>Other snappy stuff</li>
-          <Tags
-            tags={['Linux (Debian)', 'VSCode', 'Notion', 'Prettier', 'Jupyter', 'Markdown']}
-            additionalClasses="text-brand-accent bg-gray-800 px-3"
-            className="py-1 mx-6"
-          />
-        </ol>
+        <span className="block font-bold">Languages</span>
+        <Tags
+          tags={['JavaScript', 'TypeScript', 'CSS3', 'Python 3', 'C++', 'Haskell']}
+          additionalClasses="text-brand-accent bg-gray-800 px-3"
+        />
+        <span className="block font-bold">Frameworks &amp; tools</span>
+        <Tags
+          tags={['Angular', 'React', 'NextJS', 'NodeJS', 'Docker', 'Heroku', 'git']}
+          additionalClasses="text-brand-accent bg-gray-800 px-3"
+        />
+        <span className="block font-bold">Design tools &amp; knowledge</span>
+        <Tags
+          tags={['Figma', 'Inkscape', 'SVG', 'Typography', 'Layout', 'Visual idenitities']}
+          additionalClasses="text-brand-accent bg-gray-800 px-3"
+        />
+        <span className="block font-bold">Other snappy stuff</span>
+        <Tags
+          tags={['Linux (Debian)', 'VSCode', 'Notion', 'Prettier', 'Jupyter', 'Markdown']}
+          additionalClasses="text-brand-accent bg-gray-800 px-3"
+        />
         <TriangleDivider color="text-brand" />
       </section>
       <section className={`${styles.hSection} bg-brand text-gray-200`} ref={experienceSectionRef}>
@@ -270,12 +264,13 @@ const IndexPage: React.FC<Props> = ({ externals }): JSX.Element => {
             width="520"
             height="60"
             viewBox="480 0 800 168"
+            preserveAspectRatio="xMidYMid meet"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d={svg.logotype}
               fill="currentColor"
-              className={`text-gray-200 stroke-current ${styles.logomarkSvg}`}
+              className={`text-gray-200 stroke-current ${styles.logoSvg} ${styles.logotypeSvg}`}
             />
           </svg>
         </div>
@@ -321,8 +316,8 @@ const IndexPage: React.FC<Props> = ({ externals }): JSX.Element => {
               <svg
                 aria-hidden="true"
                 focusable="false"
-                width="48px"
-                height="48px"
+                width="48"
+                height="48"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >

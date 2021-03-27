@@ -6,7 +6,7 @@
  * W. https://svgartista.net
  **************************************************/
 
-.logomarkSvg {
+.logoSvg {
   stroke-dashoffset: 2526.631103515625px;
   stroke-dasharray: 2526.631103515625px;
   fill: transparent;
@@ -14,9 +14,19 @@
     fill 0.85s cubic-bezier(0.47, 0, 0.745, 0.715) 0.6s;
 }
 
-.active .logomarkSvg {
+.active .logoSvg {
   stroke-dashoffset: 0;
   fill: currentColor;
+}
+
+.logotypeSvg {
+  transform-origin: right;
+}
+
+@media all and (max-width: 520px) {
+  .logotypeSvg {
+    transform: scale(0.7) translateX(30px);
+  }
 }
 
 /* ----------------------------------------------
@@ -82,12 +92,14 @@
 }
 
 .hSection {
-  @apply relative w-full px-6 pb-32 mx-auto;
+  @apply relative w-full px-4 pb-32 mx-auto overflow-hidden;
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 1000px;
 }
 
 @screen md {
   .hSection {
-    @apply max-w-3xl;
+    @apply max-w-3xl px-6;
   }
 }
 
