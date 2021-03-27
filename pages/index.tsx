@@ -3,9 +3,18 @@ import svg from '@vlib/svgPaths'
 import useIntersection from '@vlib/useIntersection'
 import styles from '@vstyles/home.module.css'
 import { useRef, useState } from 'react'
-import { Tab, TabList, TabPanel, Tabs } from 'react-tabs'
+import { Tab, TabList, TabPanel, Tabs, resetIdCounter } from 'react-tabs'
 
-const IndexPage = (): JSX.Element => {
+interface ExternalSVG {
+  href: string
+  name: string
+  d: string
+}
+interface Props {
+  externals: ExternalSVG[]
+}
+
+const IndexPage: React.FC<Props> = ({ externals }): JSX.Element => {
   const techSectionRef = useRef(null)
   const experienceSectionRef = useRef(null)
   const logomarkInt = useIntersection(techSectionRef, { root: null, rootMargin: '0px', threshold: 0.4 })
@@ -166,34 +175,6 @@ const IndexPage = (): JSX.Element => {
     },
   ]
 
-  const externals = [
-    {
-      href: 'https://github.com/vanntile',
-      name: 'vanntile on GitHub',
-      d: svg.github,
-    },
-    {
-      href: 'https://gitlab.com/vanntile',
-      name: 'vanntile on GitLab',
-      d: svg.gitlab,
-    },
-    {
-      href: 'https://stackoverflow.com/users/4679160/vanntile-ianito',
-      name: 'vanntile on StackOverflow',
-      d: svg.stackoverflow,
-    },
-    {
-      href: 'https://dribbble.com/vanntile',
-      name: 'vanntile on Dribbble',
-      d: svg.dribbble,
-    },
-    {
-      href: 'https://www.linkedin.com/in/valentin-ionita',
-      name: 'vanntile on Linkedin',
-      d: svg.linkedin,
-    },
-  ]
-
   return (
     <Container>
       <section className={`${styles.hSection} flex flex-col justify-center px-6 py-16 text-left min-h-screen`}>
@@ -229,6 +210,8 @@ const IndexPage = (): JSX.Element => {
       <section className={`${styles.hSection} pt-12 text-gray-800 font-bold bg-brand-accent`} ref={techSectionRef}>
         <div className="flex flex-col items-center justify-center w-full -my-12">
           <svg
+            aria-hidden="true"
+            focusable="false"
             className={logomarkInt && logomarkInt.intersectionRatio >= 0.4 ? styles.active : ''}
             width="210"
             height="210"
@@ -281,6 +264,8 @@ const IndexPage = (): JSX.Element => {
       <section className={`${styles.hSection} bg-brand text-gray-200`} ref={experienceSectionRef}>
         <div className="flex flex-col items-center justify-center w-full mt-12">
           <svg
+            aria-hidden="true"
+            focusable="false"
             className={logotypeInt && logotypeInt.intersectionRatio >= 0.4 ? styles.active : ''}
             width="520"
             height="60"
@@ -342,7 +327,6 @@ const IndexPage = (): JSX.Element => {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path d={e.d} fill="currentColor" className="text-gray-200" />
-                <span className="visuallyhidden">{e.name}</span>
               </svg>
             </a>
           ))}
@@ -353,6 +337,41 @@ const IndexPage = (): JSX.Element => {
       </footer>
     </Container>
   )
+}
+
+export const getStaticProps = (): { props: Props } => {
+  resetIdCounter()
+  return {
+    props: {
+      externals: [
+        {
+          href: 'https://github.com/vanntile',
+          name: 'vanntile on GitHub',
+          d: svg.github,
+        },
+        {
+          href: 'https://gitlab.com/vanntile',
+          name: 'vanntile on GitLab',
+          d: svg.gitlab,
+        },
+        {
+          href: 'https://stackoverflow.com/users/4679160/vanntile-ianito',
+          name: 'vanntile on StackOverflow',
+          d: svg.stackoverflow,
+        },
+        {
+          href: 'https://dribbble.com/vanntile',
+          name: 'vanntile on Dribbble',
+          d: svg.dribbble,
+        },
+        {
+          href: 'https://www.linkedin.com/in/valentin-ionita',
+          name: 'vanntile on Linkedin',
+          d: svg.linkedin,
+        },
+      ],
+    },
+  }
 }
 
 export default IndexPage
