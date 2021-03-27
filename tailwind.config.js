@@ -30,7 +30,7 @@ module.exports = {
       animation: {
         cursor: 'cursor .6s linear infinite alternate',
         type: 'type 1.8s ease-out .8s 1 normal both',
-        'type-reverse': 'type 1.8s ease-out 8.8s infinite alternate-reverse both',
+        'type-reverse': 'type 1.8s ease-out 0s infinite alternate-reverse both',
       },
       keyframes: {
         cursor: {

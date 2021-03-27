@@ -51,14 +51,18 @@ const IndexPage: React.FC<Props> = ({ externals }): JSX.Element => {
           <p className="mt-0 mb-2 text-sm font-semibold text-indigo-300">
             Technical Trainer, <span className="ml-2 font-mono tracking-wide">Sep 2018 - Jun 2020</span>
           </p>
-          <p>
-            Developer for <strong>Inkscape</strong>, a vector design desktop application that follows the{' '}
-            <strong>SVG</strong> standards. Worked on a <strong>C++</strong> dialog system refactoring project, with
-            over 120 commits, <strong>6000 lines changed</strong>, reducing code length by 10%. The resulting change
-            eliminated more than 12 active UX issues. Implementing the new dialog system consisted of removing old
-            dependencies, standardising a design pattern and propagating document state. Specifically, this included{' '}
-            <strong>over 20 features</strong>.
-          </p>
+          <ul>
+            <li>
+              Contributed as a technical trainer by creating resources and delivering presentations at{' '}
+              <strong>four editions of a web-technologies workshop</strong>, based on Angular, with a total of 80
+              participants.
+            </li>
+            <li>
+              Contributed as a designer by creating the branding, designing and implementing the website and creating
+              the social media posts of a <strong>mentorship program</strong> for university students called Techtor.
+            </li>
+            <li>Contributed as a technical trainer at a mobile development workshop for 20 young children.</li>
+          </ul>
           <Tags tags={['designing', 'training', 'documenting']} additionalClasses="bg-indigo-900" />
           <h3 className="mb-0">LSAC - Automatics and Computing Student League</h3>
           <p className="mt-0 mb-2 text-sm font-semibold text-indigo-300">
@@ -81,7 +85,7 @@ const IndexPage: React.FC<Props> = ({ externals }): JSX.Element => {
             Trainer, <span className="ml-2 font-mono tracking-wide">Sep 2018 - Jun 2019</span>
           </p>
           <p>
-            Participated twice a month as a trainer at workshops for primary-school chil- dren where we taught basic
+            Participated twice a month as a trainer at workshops for primary-school children where we taught basic
             programming using online tools, mainly Scratch.
           </p>
         </>
