@@ -8,6 +8,8 @@ const TriangleDivider: React.FC<Props> = ({ color }): JSX.Element => (
     style={{ height: '80px' }}
   >
     <svg
+      aria-hidden="true"
+      focusable="false"
       className="absolute bottom-0 overflow-hidden"
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="none"

@@ -430,3 +430,7 @@
 .icon-link::before {
   content: "#";
 }
+
+.will-change {
+  will-change: transform;
+}

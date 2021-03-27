@@ -186,10 +186,10 @@ const IndexPage: React.FC<Props> = ({ externals }): JSX.Element => {
           <header className="mb-16 group">
             <h1 className="mb-1 font-mono text-4xl text-gray-100 md:text-6xl">
               hi, I'm <br className="block md:hidden" />
-              <span className="inline-flex h-20 max-w-xl pt-2 overflow-x-hidden overflow-y-visible animate-type group-hover:animate-type-reverse whitespace-nowrap text-brand-accent">
+              <span className="inline-flex h-20 pt-2 overflow-x-hidden animate-type group-hover:animate-type-reverse whitespace-nowrap text-brand-accent will-change">
                 vanntile 👋
               </span>
-              <span className="box-border inline-block w-1 h-10 ml-2 -mb-2 bg-white md:-mb-4 md:h-16 animate-cursor"></span>
+              <span className="box-border inline-block w-1 h-10 ml-2 -mb-2 bg-white md:-mb-4 md:h-16 animate-cursor will-change"></span>
             </h1>
             <div className="text-xl font-semibold md:text-3xl">developer by choice and designer for fun</div>
           </header>
@@ -227,7 +227,7 @@ const IndexPage: React.FC<Props> = ({ externals }): JSX.Element => {
               fillRule="evenodd"
               clipRule="evenodd"
               d={svg.logomark}
-              className={`text-gray-900 stroke-current ${styles.logoSvg}`}
+              className={`text-gray-900 stroke-current will-change ${styles.logoSvg}`}
             ></path>
           </svg>
         </div>
@@ -274,7 +274,7 @@ const IndexPage: React.FC<Props> = ({ externals }): JSX.Element => {
             <path
               d={svg.logotype}
               fill="currentColor"
-              className={`text-gray-200 stroke-current ${styles.logoSvg} ${styles.logotypeSvg}`}
+              className={`text-gray-200 stroke-current will-change ${styles.logoSvg} ${styles.logotypeSvg}`}
             />
           </svg>
         </div>
@@ -315,7 +315,7 @@ const IndexPage: React.FC<Props> = ({ externals }): JSX.Element => {
               target="_blank"
               rel="noreferrer"
               title={e.name}
-              className={`${styles.rotateScaleUp} pseudo-none bg-gray-900 rounded-full h-12 w-12 focus:outline-none focus:ring-8 ring-brand-accent`}
+              className={`${styles.rotateScaleUp} pseudo-none bg-gray-900 rounded-full h-12 w-12 focus:outline-none focus:ring-8 ring-brand-accent will-change`}
             >
               <svg
                 aria-hidden="true"

@@ -32,7 +32,7 @@ git push --tags
 
 - [ ]: styles: em visual tests, code size reduction
 - [ ]: styles: color no-overrrides
-- [ ]: styles: check accessibilty on colors and
+- [x]: styles: check accessibilty on colors and
 - [x]: styles: 360px not rendered correctly
 - [ ]: security: CSP fix for ThemeProvider (maybe PR)
 - [ ]: content: add 1 article
