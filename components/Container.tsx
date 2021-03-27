@@ -19,7 +19,7 @@ const Container: React.FC<Props> = ({ children, ...customMeta }): JSX.Element =>
   const meta = {
     title: `vanntile's portfolio - developer by choice and designer for fun`,
     description: `Frontend developer and graphic designer.`,
-    image: 'https://vanntile.com/static/images/banner.png',
+    image: 'https://vanntile.com/images/banner.png',
     type: 'website',
     ...customMeta,
   } as Record<string, string>
