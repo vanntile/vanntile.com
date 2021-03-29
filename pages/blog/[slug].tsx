@@ -1,20 +1,28 @@
 import { BlogLayout } from '@vcomponents'
 import { getFileBySlug, getSlugs } from '@vlib/mdx'
-import { MDXFile, SlugParam } from '@vtypes/types'
+import { MDXFile } from '@vtypes/types'
+import { GetStaticPaths, GetStaticProps } from 'next'
+import { ParsedUrlQuery } from 'querystring'
 
-const BlogPost = ({ contentMDX, frontMatter }: MDXFile): JSX.Element => (
+interface Params extends ParsedUrlQuery {
+  slug: string
+}
+
+const BlogPost: React.FC<MDXFile> = ({ contentMDX, frontMatter }): JSX.Element => (
   <BlogLayout frontMatter={frontMatter}>
     <div className="max-w-full" dangerouslySetInnerHTML={{ __html: contentMDX.renderedOutput }}></div>
   </BlogLayout>
 )
 
-export const getStaticPaths = (): { paths: SlugParam[]; fallback: boolean } => ({
-  paths: getSlugs('posts'),
-  fallback: false,
-})
+export const getStaticPaths: GetStaticPaths<Params> = async () =>
+  await Promise.resolve({
+    paths: getSlugs('posts'),
+    fallback: false,
+  })
 
-export const getStaticProps = async ({ params: { slug } }: SlugParam): Promise<{ props: MDXFile }> => ({
-  props: await getFileBySlug(slug, 'posts'),
-})
+export const getStaticProps: GetStaticProps<MDXFile, Params> = async (context) => {
+  const params = context.params as Params
+  return { props: await getFileBySlug(params.slug, 'posts') }
+}
 
 export default BlogPost

@@ -2,19 +2,45 @@ import { Container, Tags, TriangleDivider } from '@vcomponents'
 import svg from '@vlib/svgPaths'
 import useIntersection from '@vlib/useIntersection'
 import styles from '@vstyles/home.module.css'
+import { GetStaticProps } from 'next'
 import { useRef, useState } from 'react'
-import { Tab, TabList, TabPanel, Tabs, resetIdCounter } from 'react-tabs'
+import { resetIdCounter, Tab, TabList, TabPanel, Tabs } from 'react-tabs'
 
 interface ExternalSVG {
   href: string
   name: string
   d: string
 }
-interface Props {
-  externals: ExternalSVG[]
-}
 
-const IndexPage: React.FC<Props> = ({ externals }): JSX.Element => {
+const externals: ExternalSVG[] = [
+  {
+    href: 'https://github.com/vanntile',
+    name: 'vanntile on GitHub',
+    d: svg.github,
+  },
+  {
+    href: 'https://gitlab.com/vanntile',
+    name: 'vanntile on GitLab',
+    d: svg.gitlab,
+  },
+  {
+    href: 'https://stackoverflow.com/users/4679160/vanntile-ianito',
+    name: 'vanntile on StackOverflow',
+    d: svg.stackoverflow,
+  },
+  {
+    href: 'https://dribbble.com/vanntile',
+    name: 'vanntile on Dribbble',
+    d: svg.dribbble,
+  },
+  {
+    href: 'https://www.linkedin.com/in/valentin-ionita',
+    name: 'vanntile on Linkedin',
+    d: svg.linkedin,
+  },
+]
+
+const IndexPage: React.FC = (): JSX.Element => {
   const techSectionRef = useRef(null)
   const experienceSectionRef = useRef(null)
   const logomarkInt = useIntersection(techSectionRef, { root: null, rootMargin: '0px', threshold: 0.4 })
@@ -340,39 +366,9 @@ const IndexPage: React.FC<Props> = ({ externals }): JSX.Element => {
   )
 }
 
-export const getStaticProps = (): { props: Props } => {
+export const getStaticProps: GetStaticProps<Record<string, any>> = () => {
   resetIdCounter()
-  return {
-    props: {
-      externals: [
-        {
-          href: 'https://github.com/vanntile',
-          name: 'vanntile on GitHub',
-          d: svg.github,
-        },
-        {
-          href: 'https://gitlab.com/vanntile',
-          name: 'vanntile on GitLab',
-          d: svg.gitlab,
-        },
-        {
-          href: 'https://stackoverflow.com/users/4679160/vanntile-ianito',
-          name: 'vanntile on StackOverflow',
-          d: svg.stackoverflow,
-        },
-        {
-          href: 'https://dribbble.com/vanntile',
-          name: 'vanntile on Dribbble',
-          d: svg.dribbble,
-        },
-        {
-          href: 'https://www.linkedin.com/in/valentin-ionita',
-          name: 'vanntile on Linkedin',
-          d: svg.linkedin,
-        },
-      ],
-    },
-  }
+  return Promise.resolve({ props: {} })
 }
 
 export default IndexPage

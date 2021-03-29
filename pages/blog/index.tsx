@@ -1,9 +1,14 @@
 import { Container } from '@vcomponents'
 import { getSortedPostsData } from '@vlib/mdx'
 import { MDXFile } from '@vtypes/types'
+import { GetStaticProps } from 'next'
 import Link from 'next/link'
 
-const Blog = ({ allPosts }: { allPosts: MDXFile[] }): JSX.Element => (
+interface Props {
+  allPosts: MDXFile[]
+}
+
+const Blog: React.FC<Props> = ({ allPosts }): JSX.Element => (
   <Container
     title="Blog - vanntile's words"
     description="Articles on tech, software development, design and case studies."
@@ -18,7 +23,7 @@ const Blog = ({ allPosts }: { allPosts: MDXFile[] }): JSX.Element => (
   </Container>
 )
 
-export const getStaticProps = async (): Promise<{ props: { allPosts: MDXFile[] } }> => ({
+export const getStaticProps: GetStaticProps<Props> = async () => ({
   props: { allPosts: await getSortedPostsData('posts') },
 })
 

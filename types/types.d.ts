@@ -20,5 +20,3 @@ export interface MDXFile {
   contentMDX: import('next-mdx-remote/types').MdxRemote.Source
   frontMatter: MDXMeta
 }
-
-export type SlugParam = { params: { slug: string } }

@@ -1,5 +1,5 @@
 import { MDXComponents } from '@vcomponents'
-import { MDXFile, PageMeta, SlugParam } from '@vtypes/types'
+import { MDXFile, PageMeta } from '@vtypes/types'
 import fs from 'fs'
 import matter from 'gray-matter'
 import mdxPrism from 'mdx-prism'
@@ -18,7 +18,7 @@ const root = process.cwd()
 export const getFiles = (subfolder?: string): string[] =>
   fs.readdirSync(subfolder ? path.join(root, 'data', subfolder) : path.join(root, 'data'))
 
-export const getSlugs = (subfolder?: string): SlugParam[] =>
+export const getSlugs = (subfolder?: string): { params: { slug: string } }[] =>
   getFiles(subfolder).map((fileName) => ({ params: { slug: fileName.replace(/\.mdx$/, '') } }))
 
 export const getFileBySlug = async (slug: string, subfolder?: string): Promise<MDXFile> => {
