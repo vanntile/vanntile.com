@@ -20,3 +20,9 @@ export interface MDXFile {
   contentMDX: import('next-mdx-remote/types').MdxRemote.Source
   frontMatter: MDXMeta
 }
+
+export enum Status {
+  Sent = 'Message sent',
+  Error = 'Sending error',
+  RateLimited = 'Rate limit exceeded',
+}
