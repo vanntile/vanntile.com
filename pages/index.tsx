@@ -210,12 +210,14 @@ const IndexPage: React.FC = (): JSX.Element => {
       <section className={`${styles.hSection} flex flex-col justify-center px-6 py-16 text-left min-h-screen`}>
         <div>
           <header className="mb-16 group">
-            <h1 className="mb-1 font-mono text-4xl text-gray-100 md:text-6xl">
+            <h1 className="mb-2 font-mono text-4xl text-gray-100 md:text-6xl">
               hi, I'm <br className="block md:hidden" />
               <span className="relative">
-                <span className="h-20 pt-2 overflow-x-hidden whitespace-nowrap text-brand-accent">vanntile 👋</span>
+                <span className="h-20 pt-2 overflow-x-hidden whitespace-nowrap text-brand-accent">
+                  vanntile <span className="text-3xl md:text-5xl">👋</span>
+                </span>
                 <span
-                  className={`${styles.cursor} absolute left-0 inline-block h-10 bg-gray-900 w-96 -top-1 md:h-16 animate-type will-change`}
+                  className={`${styles.cursor} absolute -bottom-0 left-0 -top-1 inline-block bg-gray-900 w-full animate-type will-change`}
                 ></span>
               </span>
             </h1>
