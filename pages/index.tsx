@@ -1,4 +1,4 @@
-import { Container, Tags, TriangleDivider } from '@vcomponents'
+import { ContactForm, Container, Tags, TriangleDivider } from '@vcomponents'
 import svg from '@vlib/svgPaths'
 import useIntersection from '@vlib/useIntersection'
 import styles from '@vstyles/home.module.css'
@@ -335,7 +335,7 @@ const IndexPage: React.FC = (): JSX.Element => {
       <section className={`${styles.hSection} mb-32`}>
         <h2 className="text-current md:text-4xl">Contact</h2>
         <p>You can find me here and there.</p>
-        <div className="flex flex-row gap-6">
+        <div className="flex flex-row gap-6 mb-8">
           {externals.map((e) => (
             <a
               key={e.href}
@@ -358,6 +358,7 @@ const IndexPage: React.FC = (): JSX.Element => {
             </a>
           ))}
         </div>
+        <ContactForm />
       </section>
       <footer className={`${styles.hSection} py-20 border-t-2 border-brand-accent`}>
         Designed &amp; built by vanntile
