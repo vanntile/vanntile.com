@@ -39,8 +39,8 @@ git push --tags
 - [ ]: content: add brand book in the 'Design deck'
 - [ ]: SEO: images, images, images
 - [x]: homepage: li non accessible on homepage
-- [ ]: homepage: add sections links above the fold (and blog link)
+- [x]: homepage: add sections links above the fold (and blog link)
 - [x]: homepage: check if content-visibility is useful
 - [ ]: performance: worker thread?
 - [ ]: performance: slow loading (idk how to fix?)
-- [ ]: heroku: mailgun and contact form
+- [x]: heroku: mailgun and contact form

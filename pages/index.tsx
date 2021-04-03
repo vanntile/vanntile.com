@@ -238,10 +238,37 @@ const IndexPage: React.FC = (): JSX.Element => {
             solution, but the <span className={styles.highlight}>balance</span> between a maintainable implementation
             and user-focused functionality.
           </p>
+          <div className="flex flex-row gap-4 mt-8">
+            <a className="visuallyhidden" href="#section-tech">
+              Skip to main content
+            </a>
+            <a
+              className="px-4 py-2 border-2 border-current text-brand-accent hover:text-brand-accent"
+              href="#section-tech"
+            >
+              techstack
+            </a>
+            <a
+              className="px-4 py-2 border-2 border-current text-brand-accent hover:text-brand-accent"
+              href="#section-experience"
+            >
+              experience
+            </a>
+            <a
+              className="px-4 py-2 border-2 border-current text-brand-accent hover:text-brand-accent"
+              href="#section-contact"
+            >
+              contact
+            </a>
+          </div>
         </div>
         <TriangleDivider color="text-brand-accent" />
       </section>
-      <section className={`${styles.hSection} pt-12 text-gray-800 font-bold bg-brand-accent`} ref={techSectionRef}>
+      <section
+        id="section-tech"
+        className={`${styles.hSection} pt-12 text-gray-800 font-bold bg-brand-accent`}
+        ref={techSectionRef}
+      >
         <div className="flex flex-col items-center justify-center w-full -my-12">
           <svg
             aria-hidden="true"
@@ -289,7 +316,11 @@ const IndexPage: React.FC = (): JSX.Element => {
         />
         <TriangleDivider color="text-brand" />
       </section>
-      <section className={`${styles.hSection} bg-brand text-gray-200`} ref={experienceSectionRef}>
+      <section
+        id="section-experience"
+        className={`${styles.hSection} bg-brand text-gray-200`}
+        ref={experienceSectionRef}
+      >
         <div className="flex flex-col items-center justify-center w-full mt-12">
           <svg
             aria-hidden="true"
@@ -334,7 +365,7 @@ const IndexPage: React.FC = (): JSX.Element => {
         </Tabs>
         <TriangleDivider color="text-gray-900" />
       </section>
-      <section className={`${styles.hSection} mb-32`}>
+      <section id="section-contact" className={`${styles.hSection} mb-32`}>
         <h2 className="text-current md:text-4xl">Contact</h2>
         <p>You can find me here and there.</p>
         <div className="flex flex-row gap-6 mb-8">
