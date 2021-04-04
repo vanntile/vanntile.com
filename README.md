@@ -16,6 +16,14 @@ It currently integrates the following:
 - husky
 - Prettier configuration
 - TypeScript
+- Module alias
+- NextJS (React framework)
+- React tabs (accessible and usable)
+- TailwindCSS & PostCSS
+- MDX, remark, rehype, mdx-prism (and @next/mdx)
+- restrictive CSP
+- Next API
+- Mailgun.js & rate limiting (with lru-cache)
 
 ## How to release
 
@@ -25,7 +33,7 @@ npm run commit
 # 2. Relase
 npm run release
 # 3. Push the tags
-git push --tags
+git push --follow-tags
 ```
 
 ## TODO
@@ -42,5 +50,5 @@ git push --tags
 - [x]: homepage: add sections links above the fold (and blog link)
 - [x]: homepage: check if content-visibility is useful
 - [ ]: performance: worker thread?
-- [ ]: performance: slow loading (idk how to fix?)
+- [x]: performance: slow loading (idk how to fix?)
 - [x]: heroku: mailgun and contact form

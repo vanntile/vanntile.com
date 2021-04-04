@@ -15,5 +15,8 @@ const withMDX = mdx({
 })
 
 module.exports = withMDX({
+  future: {
+    webpack5: true,
+  },
   pageExtensions: ['mdx', 'ts', 'tsx'],
 })

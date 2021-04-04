@@ -3,7 +3,7 @@ import Document, { Head, Html, Main, NextScript } from 'next/document'
 
 const prod = process.env.NODE_ENV == 'production'
 const referrer = 'strict-origin'
-const nextThemesSha = "'sha256-ZxiMCbcVxDCutNT7QrHdr+d0Z99vF3DED6pLitElTag='"
+const nextThemesSha = "'sha256-4b6neOQEfz/94vH7nVjqnqWI8K3KNB/U9aK4wMD5oYA='"
 
 const cspHashOf = (text: string) => {
   const hash = crypto.createHash('sha256')
