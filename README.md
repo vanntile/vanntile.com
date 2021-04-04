@@ -45,10 +45,10 @@ git push --follow-tags
 - [x]: security: CSP fix for ThemeProvider (maybe PR)
 - [ ]: content: add 1 article
 - [ ]: content: add brand book in the 'Design deck'
-- [ ]: SEO: images, images, images
+- [x]: SEO: images, images, images
 - [x]: homepage: li non accessible on homepage
 - [x]: homepage: add sections links above the fold (and blog link)
 - [x]: homepage: check if content-visibility is useful
-- [ ]: performance: worker thread?
+- [ ]: ~~performance: worker thread?~~
 - [x]: performance: slow loading (idk how to fix?)
 - [x]: heroku: mailgun and contact form
