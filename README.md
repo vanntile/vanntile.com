@@ -38,7 +38,7 @@ git push --follow-tags
 
 ## TODO
 
-- [ ]: styles: em visual tests, code size reduction
+- [x]: styles: em visual tests, code size reduction
 - [x]: styles: color no-overrrides
 - [x]: styles: check accessibilty on colors and
 - [x]: styles: 360px not rendered correctly

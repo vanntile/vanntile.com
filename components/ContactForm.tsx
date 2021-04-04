@@ -61,11 +61,11 @@ const ContactForm: React.FC = (): JSX.Element => {
   }
 
   return sent ? (
-    <div className="px-4 pb-5 border border-current">
+    <div className="px-4 pb-4 border border-current">
       <h3>Message sent</h3>
     </div>
   ) : (
-    <form action="#" className="px-4 pb-5 border border-current" onSubmit={sendContactForm}>
+    <form action="#" className="px-4 pb-4 border border-current" onSubmit={sendContactForm}>
       <h3>Send me a message</h3>
       <div className="flex flex-col mb-3">
         <label>
@@ -76,7 +76,7 @@ const ContactForm: React.FC = (): JSX.Element => {
             placeholder="A curios person"
             autoComplete="on"
             required
-            className="w-full p-3 bg-gray-800 border border-gray-900 focus:border-current focus:outline-none"
+            className="w-full px-4 py-2 bg-gray-800 border border-gray-900 focus:border-current focus:outline-none"
             value={formName}
             onChange={handleFormChange}
           />
@@ -91,7 +91,7 @@ const ContactForm: React.FC = (): JSX.Element => {
             placeholder="you.are.amazing@domain.com"
             autoComplete="on"
             required
-            className="w-full p-3 bg-gray-800 border border-gray-900 focus:border-current focus:outline-none"
+            className="w-full px-4 py-2 bg-gray-800 border border-gray-900 focus:border-current focus:outline-none"
             value={formEmail}
             onChange={handleFormChange}
           />
@@ -104,13 +104,13 @@ const ContactForm: React.FC = (): JSX.Element => {
             rows={5}
             name="message"
             required
-            className="w-full p-3 bg-gray-800 border border-gray-900 focus:border-current focus:outline-none"
+            className="w-full px-4 py-2 bg-gray-800 border border-gray-900 focus:border-current focus:outline-none"
             value={formMessage}
             onChange={handleFormChange}
           />
         </label>
       </div>
-      {formError && <div className="p-3 text-red-500 capitalize border border-red-500">{formError}</div>}
+      {formError && <div className="px-4 py-2 text-red-500 capitalize border border-red-500">{formError}</div>}
       <button
         type="submit"
         disabled={disabled || !!formError}

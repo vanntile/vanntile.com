@@ -56,16 +56,16 @@ const IndexPage: React.FC = (): JSX.Element => {
       children: (
         <>
           <h3 className="my-0">University Politehnica of Bucharest, Romania</h3>
-          <p className="mt-0 mb-2 text-sm font-semibold text-indigo-300">
+          <p className={styles.pExp}>
             Bachelor of Computer Engineering, <span className="ml-2 font-mono tracking-wide">Sep 2017 - Jul 2021</span>
           </p>
-          <p className="mt-0 text-sm font-semibold text-indigo-300">GPA: 9.77/10</p>
+          <p className={styles.pExp}>GPA: 9.77/10</p>
           <h3 className="mb-0">Åbo Akademi University, Turku, Finland</h3>
-          <p className="mt-0 mb-2 text-sm font-semibold text-indigo-300">
+          <p className={styles.pExp}>
             Erasmus+ Exchange Student in Computer Science,{' '}
             <span className="ml-2 font-mono tracking-wide">Aug 2019 - May 2020</span>
           </p>
-          <p className="mt-0 text-sm font-semibold text-indigo-300">GPA: 5/5</p>
+          <p className={styles.pExp}>GPA: 5/5</p>
         </>
       ),
     },
@@ -75,7 +75,7 @@ const IndexPage: React.FC = (): JSX.Element => {
       children: (
         <>
           <h3 className="my-0">Codette</h3>
-          <p className="mt-0 mb-2 text-sm font-semibold text-indigo-300">
+          <p className={styles.pExp}>
             Technical Trainer, <span className="ml-2 font-mono tracking-wide">Sep 2018 - Jun 2020</span>
           </p>
           <ul>
@@ -92,7 +92,7 @@ const IndexPage: React.FC = (): JSX.Element => {
           </ul>
           <Tags tags={['designing', 'training', 'documenting']} additionalClasses="bg-indigo-900" />
           <h3 className="mb-0">LSAC - Automatics and Computing Student League</h3>
-          <p className="mt-0 mb-2 text-sm font-semibold text-indigo-300">
+          <p className={styles.pExp}>
             Graphic Designer, <span className="ml-2 font-mono tracking-wide">Feb 2018 - Feb 2019</span>
           </p>
           <ul>
@@ -108,7 +108,7 @@ const IndexPage: React.FC = (): JSX.Element => {
           </ul>
           <Tags tags={['designing', 'managing', 'mentoring']} additionalClasses="bg-indigo-900" />
           <h3 className="mb-0">Coder Dojo</h3>
-          <p className="mt-0 mb-2 text-sm font-semibold text-indigo-300">
+          <p className={styles.pExp}>
             Trainer, <span className="ml-2 font-mono tracking-wide">Sep 2018 - Jun 2019</span>
           </p>
           <p>
@@ -124,7 +124,7 @@ const IndexPage: React.FC = (): JSX.Element => {
       children: (
         <>
           <h3 className="my-0">Inkscape, Google Summer of Code 2020</h3>
-          <p className="mt-0 mb-2 text-sm font-semibold text-indigo-300">
+          <p className={styles.pExp}>
             Remote Software Developer, <span className="ml-2 font-mono tracking-wide">Jun 2020 - Aug 2020</span>
           </p>
           <p>
@@ -137,7 +137,7 @@ const IndexPage: React.FC = (): JSX.Element => {
           </p>
           <Tags tags={['C++', 'GTK+', 'gtkmm', 'UX', 'refactoring']} additionalClasses="bg-indigo-900" />
           <h3 className="mb-0">Inkscape, Google Summer of Code 2019</h3>
-          <p className="mt-0 mb-2 text-sm font-semibold text-indigo-300">
+          <p className={styles.pExp}>
             Remote Software Developer, <span className="ml-2 font-mono tracking-wide">May 2020 - Aug 2020</span>
           </p>
           <p>
@@ -160,12 +160,12 @@ const IndexPage: React.FC = (): JSX.Element => {
       children: (
         <>
           <h3 className="my-0">Postis, Bucharest, Romania</h3>
-          <p className="mt-0 mb-2 text-sm font-semibold text-indigo-300">
+          <p className={styles.pExp}>
             Junior Software Engineer, <span className="ml-2 font-mono tracking-wide">Sep 2020 - Present</span>
           </p>
           <p>Current position</p>
           <Tags tags={['AngularJS', 'Svelte', 'NLP', 'Python']} additionalClasses="bg-indigo-900" />
-          <p className="mt-10 mb-2 text-sm font-semibold text-indigo-300">
+          <p className={styles.pExp}>
             Frontend Developer Intern, <span className="ml-2 font-mono tracking-wide">Jul 2018 - Sep 2018</span>
           </p>
           <p>
@@ -185,7 +185,7 @@ const IndexPage: React.FC = (): JSX.Element => {
       children: (
         <>
           <h3 className="mt-0">Etsimo Healthcare Oy, Turku, Finland</h3>
-          <p className="mt-0 mb-2 text-sm font-semibold text-indigo-300">
+          <p className={styles.pExp}>
             Junior Software Engineer, <span className="ml-2 font-mono tracking-wide">Jan 2020 - Jun 2020</span>
           </p>
           <p>
@@ -224,7 +224,7 @@ const IndexPage: React.FC = (): JSX.Element => {
             </h1>
             <div className="text-xl font-semibold md:text-3xl">developer by choice and designer for fun</div>
           </header>
-          <p className="max-w-lg">
+          <p>
             Are you searching for a practical enthusiast for your <span className={styles.highlight}>project</span>?
           </p>
           <p className="max-w-lg">
@@ -298,22 +298,22 @@ const IndexPage: React.FC = (): JSX.Element => {
         <span className="block font-bold">Languages</span>
         <Tags
           tags={['JavaScript', 'TypeScript', 'CSS3', 'Python 3', 'C++', 'Haskell']}
-          additionalClasses="text-brand-accent bg-gray-800 px-3"
+          additionalClasses="text-brand-accent bg-gray-800"
         />
         <span className="block font-bold">Frameworks &amp; tools</span>
         <Tags
           tags={['Angular', 'React', 'NextJS', 'NodeJS', 'Docker', 'Heroku', 'git']}
-          additionalClasses="text-brand-accent bg-gray-800 px-3"
+          additionalClasses="text-brand-accent bg-gray-800"
         />
         <span className="block font-bold">Design tools &amp; knowledge</span>
         <Tags
           tags={['Figma', 'Inkscape', 'SVG', 'Typography', 'Layout', 'Visual idenitities']}
-          additionalClasses="text-brand-accent bg-gray-800 px-3"
+          additionalClasses="text-brand-accent bg-gray-800"
         />
         <span className="block font-bold">Other snappy stuff</span>
         <Tags
           tags={['Linux (Debian)', 'VSCode', 'Notion', 'Prettier', 'Jupyter', 'Markdown']}
-          additionalClasses="text-brand-accent bg-gray-800 px-3"
+          additionalClasses="text-brand-accent bg-gray-800"
         />
         <TriangleDivider color="text-brand" />
       </section>
@@ -342,7 +342,7 @@ const IndexPage: React.FC = (): JSX.Element => {
         </div>
         <h2 className="text-gray-100 md:text-4xl dark:text-gray-100">./about/experience</h2>
         <Tabs selectedIndex={selectedTab} onSelect={(idx: number) => setSelectedTab(idx)}>
-          <TabList className="flex m-0 overflow-x-scroll text-gray-100 bg-indigo-900 border-2 border-b-0 rounded-t-lg cursor-pointer md:overflow-hidden">
+          <TabList className="flex m-0 overflow-x-scroll text-gray-100 bg-indigo-900 border-2 border-b-0 cursor-pointer md:overflow-hidden">
             {tabs.map((tab) => (
               <Tab
                 key={tab.idx}
@@ -369,7 +369,7 @@ const IndexPage: React.FC = (): JSX.Element => {
       <section id="section-contact" className={`${styles.hSection} mb-32`}>
         <h2 className="text-current md:text-4xl">Contact</h2>
         <p>You can find me here and there.</p>
-        <div className="flex flex-row gap-6 mb-8">
+        <div className="flex flex-row gap-8 mb-8">
           {externals.map((e) => (
             <a
               key={e.href}
