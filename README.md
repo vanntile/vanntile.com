@@ -39,7 +39,7 @@ git push --follow-tags
 ## TODO
 
 - [ ]: styles: em visual tests, code size reduction
-- [ ]: styles: color no-overrrides
+- [x]: styles: color no-overrrides
 - [x]: styles: check accessibilty on colors and
 - [x]: styles: 360px not rendered correctly
 - [x]: security: CSP fix for ThemeProvider (maybe PR)
@@ -49,6 +49,6 @@ git push --follow-tags
 - [x]: homepage: li non accessible on homepage
 - [x]: homepage: add sections links above the fold (and blog link)
 - [x]: homepage: check if content-visibility is useful
-- [ ]: ~~performance: worker thread?~~
+- [x]: ~~performance: worker thread?~~
 - [x]: performance: slow loading (idk how to fix?)
 - [x]: heroku: mailgun and contact form

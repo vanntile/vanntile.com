@@ -294,7 +294,7 @@ const IndexPage: React.FC = (): JSX.Element => {
           I am an in-progress computer engineer with a deep passion for the worlds of frontend, design and deployment.
           Keep scrolling if you wanna know why, how and what I work on!
         </p>
-        <h3 className="text-gray-900 dark:text-gray-900">What is my tech stack?</h3>
+        <h3>What is my tech stack?</h3>
         <span className="block font-bold">Languages</span>
         <Tags
           tags={['JavaScript', 'TypeScript', 'CSS3', 'Python 3', 'C++', 'Haskell']}

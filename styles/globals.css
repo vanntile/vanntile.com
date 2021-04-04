@@ -36,7 +36,7 @@
   }
 
   ::selection {
-    @apply bg-brand text-gray-50;
+    @apply bg-brand text-gray-50 dark:bg-gray-100 dark:text-brand;
   }
 
   html {
@@ -45,7 +45,7 @@
   }
 
   body {
-    @apply text-sm leading-6 text-gray-700 md:text-base md:leading-7 2xl:text-2xl 2xl:leading-relaxed;
+    @apply text-sm leading-6 text-gray-700 dark:text-brand-tint md:text-base md:leading-7 2xl:text-2xl 2xl:leading-relaxed;
   }
 
   /* Remove Safari input shadow on mobile */
@@ -57,18 +57,18 @@
   }
 
   h1 {
-    @apply mt-0 text-3xl font-extrabold text-gray-900 md:text-4xl 2xl:leading-none 2xl:text-7xl;
+    @apply mt-0 text-3xl font-extrabold text-gray-900 dark:text-gray-100 md:text-4xl 2xl:leading-none 2xl:text-7xl;
     margin-bottom: 0.875em;
   }
 
   h2 {
-    @apply text-2xl font-bold text-gray-900 md:text-2xl 2xl:text-5xl 2xl:leading-none;
+    @apply text-2xl font-bold text-gray-900 dark:text-brand-tint md:text-2xl 2xl:text-5xl 2xl:leading-none;
     margin-top: 1.6em;
     margin-bottom: 0.75em;
   }
 
   h3, h4 {
-    @apply font-semibold text-gray-900;
+    @apply font-semibold;
     margin-top: 1.55em;
     margin-bottom: 0.6em;
   }
@@ -82,7 +82,7 @@
   }
 
   :is(h2, h3, h4) {
-    scroll-margin-top: 8rem;
+    scroll-margin-top: 3rem;
   }
 
   p {
@@ -123,7 +123,7 @@
   }
 
   pre {
-    @apply px-3 py-2 my-5 overflow-x-auto text-gray-800 border border-gray-200 rounded bg-gray-50 md:my-6 2xl:my-8 md:px-4 md:py-3 2xl:px-8 2xl:py-7;
+    @apply px-3 py-2 my-5 overflow-x-auto text-gray-800 border border-gray-200 rounded dark:border-gray-600 dark:bg-gray-900 dark:text-gray-200 bg-gray-50 md:my-6 2xl:my-8 md:px-4 md:py-3 2xl:px-8 2xl:py-7;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
@@ -133,7 +133,7 @@
   }
 
   code {
-    @apply text-xs font-medium text-gray-900 2xl:font-semibold bg-gray-50 md:text-base 2xl:text-xl;
+    @apply text-xs font-medium text-gray-900 2xl:font-semibold dark:bg-gray-900 dark:text-gray-200 bg-gray-50 md:text-base 2xl:text-xl;
   }
 
   a code {
@@ -204,33 +204,11 @@
     margin-top: 0.875em;
   }
 
-  @variants dark {
-    ::selection {
-      @apply dark:bg-gray-100 dark:text-brand;
-    }
-
-    body {
-      @apply dark:text-brand-tint;
-    }
-
-    h1 {
-      @apply dark:text-gray-100;
-    }
-
-    h2, h3, h4 {
-      @apply dark:text-indigo-200;
-    }
-
-    pre {
-      @apply dark:bg-gray-900 dark:border-gray-600 dark:text-gray-50;
-    }
-
-    code {
-      @apply dark:bg-gray-900 dark:text-gray-200;
-    }
-  }
-
   @screen md {
+    :is(h2, h3, h4) {
+      scroll-margin-top: 8rem;
+    }
+
     p {
       margin-top: calc(20em / 16);
       margin-bottom: calc(20em / 16);
