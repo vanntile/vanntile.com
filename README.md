@@ -34,7 +34,7 @@ git push --tags
 - [ ]: styles: color no-overrrides
 - [x]: styles: check accessibilty on colors and
 - [x]: styles: 360px not rendered correctly
-- [ ]: security: CSP fix for ThemeProvider (maybe PR)
+- [x]: security: CSP fix for ThemeProvider (maybe PR)
 - [ ]: content: add 1 article
 - [ ]: content: add brand book in the 'Design deck'
 - [ ]: SEO: images, images, images
