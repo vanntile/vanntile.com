@@ -30,11 +30,6 @@
     }
   }
 
-  :root {
-    --brand-accent: #FF9A63;
-    --nprogress-color: var(--brand-accent);
-  }
-
   ::selection {
     @apply bg-brand text-gray-50 dark:bg-gray-100 dark:text-brand;
   }
