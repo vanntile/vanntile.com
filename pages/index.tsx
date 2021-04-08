@@ -2,6 +2,7 @@ import { ContactForm, Container, Tags, TriangleDivider } from '@vcomponents'
 import svg from '@vlib/svgPaths'
 import useIntersection from '@vlib/useIntersection'
 import styles from '@vstyles/home.module.css'
+import { NextPage } from 'next'
 import { useRef, useState } from 'react'
 import { resetIdCounter, Tab, TabList, TabPanel, Tabs } from 'react-tabs'
 
@@ -39,7 +40,7 @@ const externals: ExternalSVG[] = [
   },
 ]
 
-const IndexPage: React.FC = (): JSX.Element => {
+const IndexPage: NextPage = () => {
   const techSectionRef = useRef(null)
   const experienceSectionRef = useRef(null)
   const logomarkInt = useIntersection(techSectionRef, { root: null, rootMargin: '0px', threshold: 0.4 })
