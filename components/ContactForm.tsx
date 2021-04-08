@@ -73,7 +73,7 @@ const ContactForm: React.FC = (): JSX.Element => {
           <input
             type="text"
             name="name"
-            placeholder="A curios person"
+            placeholder="A curious person"
             autoComplete="on"
             required
             className="w-full px-4 py-2 bg-gray-800 border border-gray-900 focus:border-current focus:outline-none"

@@ -14,11 +14,15 @@ const TriangleDivider: React.FC<Props> = ({ color }): JSX.Element => (
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="none"
       version="1.1"
-      viewBox="0 0 2560 100"
+      viewBox="0 0 2560 110"
       x="0"
       y="0"
     >
-      <polygon className={`fill-current ${color}`} points="2560 0 2560 120 0 120 0 100"></polygon>
+      <polygon
+        className={`fill-current ${color}`}
+        transform="translate(0 10)"
+        points="2560 0 2560 110 0 110 0 100"
+      ></polygon>
     </svg>
   </div>
 )

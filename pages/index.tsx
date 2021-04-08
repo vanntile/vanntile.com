@@ -211,7 +211,7 @@ const IndexPage: NextPage = () => {
     <Container>
       <section className={`${styles.hSection} flex flex-col justify-center px-6 py-16 text-left min-h-screen`}>
         <div>
-          <header className="mb-16 group">
+          <header className="mb-16">
             <h1 className="mb-2 font-mono text-4xl text-gray-100 md:text-6xl">
               hi, I'm <br className="block md:hidden" />
               <span className="relative">
@@ -228,17 +228,18 @@ const IndexPage: NextPage = () => {
           <p>
             Are you searching for a practical enthusiast for your <span className={styles.highlight}>project</span>?
           </p>
-          <p className="max-w-lg">
+          <p className="max-w-lg 2xl:max-w-5xl">
             I speak the languages of both <span className={styles.highlight}>engineering and aesthetics</span>, being
             perfectly positioned to formulate the path of a feasible product with customer experience in mind. My
             preferred work is <span className={styles.highlight}>fullstack development</span>. I'm using the best tool
-            for the job, <br className="hidden md:inline-block" /> be it a reliable framework or the latest web
-            features.
+            for the job, <br className="hidden md:inline-block 2xl:hidden" /> be it a reliable framework or the latest
+            web features.
           </p>
-          <p className="max-w-lg">
-            Neither impressive interfaces nor blazing performance are <br className="hidden md:inline-block" /> the
-            solution, but the <span className={styles.highlight}>balance</span> between a maintainable implementation
-            and user-focused functionality.
+          <p className="max-w-lg 2xl:max-w-5xl">
+            Neither impressive interfaces nor blazing performance are{' '}
+            <br className="hidden md:inline-block 2xl:hidden" /> the solution, but the{' '}
+            <span className={styles.highlight}>balance</span> between a maintainable implementation and user-focused
+            functionality.
           </p>
           <div className="flex flex-row gap-4 mt-8">
             <a className="visuallyhidden" href="#section-tech">
