@@ -348,7 +348,7 @@ const IndexPage: React.FC = (): JSX.Element => {
                 key={tab.idx}
                 className={`${
                   selectedTab === tab.idx ? 'bg-brand' : 'border-b-2'
-                } pseudo-none p-2 px-5 font-bold focus:outline-white mt-0`}
+                } list-none ml-0 mb-0 py-2 px-5 font-bold focus:outline-white mt-0`}
               >
                 {tab.name}
               </Tab>
