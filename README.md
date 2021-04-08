@@ -16,6 +16,14 @@ It currently integrates the following:
 - husky
 - Prettier configuration
 - TypeScript
+- Module alias
+- NextJS (React framework)
+- React tabs (accessible and usable)
+- TailwindCSS & PostCSS
+- MDX, remark, rehype, mdx-prism (and @next/mdx)
+- restrictive CSP
+- Next API
+- Mailgun.js & rate limiting (with lru-cache)
 
 ## How to release
 
@@ -25,22 +33,22 @@ npm run commit
 # 2. Relase
 npm run release
 # 3. Push the tags
-git push --tags
+git push --follow-tags
 ```
 
 ## TODO
 
-- [ ]: styles: em visual tests, code size reduction
-- [ ]: styles: color no-overrrides
+- [x]: styles: em visual tests, code size reduction
+- [x]: styles: color no-overrrides
 - [x]: styles: check accessibilty on colors and
 - [x]: styles: 360px not rendered correctly
-- [ ]: security: CSP fix for ThemeProvider (maybe PR)
+- [x]: security: CSP fix for ThemeProvider (maybe PR)
 - [ ]: content: add 1 article
 - [ ]: content: add brand book in the 'Design deck'
-- [ ]: SEO: images, images, images
+- [x]: SEO: images, images, images
 - [x]: homepage: li non accessible on homepage
 - [x]: homepage: add sections links above the fold (and blog link)
 - [x]: homepage: check if content-visibility is useful
-- [ ]: performance: worker thread?
-- [ ]: performance: slow loading (idk how to fix?)
+- [x]: ~~performance: worker thread?~~
+- [x]: performance: slow loading (idk how to fix?)
 - [x]: heroku: mailgun and contact form

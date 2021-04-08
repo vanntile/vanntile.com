@@ -2,6 +2,7 @@ const { fontFamily } = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 
 module.exports = {
+  mode: 'jit',
   purge: {
     content: ['./pages/**/*.{js,ts,jsx,tsx,.mdx}', './components/**/*.{js,ts,jsx,tsx,.mdx}'],
     options: {
@@ -47,6 +48,5 @@ module.exports = {
       },
     },
   },
-  variants: {},
   plugins: [require('tailwindcss-visuallyhidden')()],
 }

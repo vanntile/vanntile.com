@@ -17,8 +17,8 @@ const Container: React.FC<Props> = ({ children, ...customMeta }): JSX.Element =>
   useEffect(() => setMounted(true), [])
 
   const meta = {
-    title: `vanntile's portfolio - developer by choice and designer for fun`,
-    description: `Frontend developer and graphic designer.`,
+    title: `vanntile - frontend developer and graphic designer`,
+    description: `Developer by choice and designer for fun. I speak the languages of both engineering and aesthetics and can help with your next project.`,
     image: 'https://vanntile.com/images/banner.png',
     type: 'website',
     ...customMeta,

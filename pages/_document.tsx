@@ -1,13 +1,30 @@
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+import crypto from 'crypto'
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 
-export default class MyDocument extends Document {
-  render() {
-    let csp = `default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; object-src 'none'`
-    if (process.env.NODE_ENV !== 'production') {
-      csp = `style-src 'self' 'unsafe-inline'; font-src 'self' data:; default-src 'self'; script-src 'unsafe-inline' 'unsafe-eval' 'self'`
-    }
+const prod = process.env.NODE_ENV == 'production'
+const referrer = 'strict-origin'
+const nextThemesSha = "'sha256-4b6neOQEfz/94vH7nVjqnqWI8K3KNB/U9aK4wMD5oYA='"
 
+const cspHashOf = (text: string) => {
+  const hash = crypto.createHash('sha256')
+  hash.update(text)
+  return `'sha256-${hash.digest('base64')}'`
+}
+
+const getCsp = (props: any): string => {
+  let csp = `default-src 'self';`
+  csp += `script-src 'self' ${
+    prod ? `${nextThemesSha} ${cspHashOf(NextScript.getInlineScriptSource(props))}` : "'unsafe-inline' 'unsafe-eval'"
+  };`
+  csp += `style-src 'self' 'unsafe-inline' ${prod ? ''  : "'unsafe-eval'"};`
+  csp += `font-src 'self' ${prod ? '' : 'data:'};`
+  csp += `object-src 'none';`
+
+  return csp
+}
+
+export default class CustomDocument extends Document {
+  render(): JSX.Element {
     return (
       <Html lang="en" className="dark">
         <Head>
@@ -33,7 +50,8 @@ export default class MyDocument extends Document {
             type="font/woff2"
             crossOrigin="anonymous"
           />
-          <meta httpEquiv="Content-Security-Policy" content={csp} />
+          <meta httpEquiv="Content-Security-Policy" content={getCsp(this.props)} />
+          <meta name="referrer" content={referrer} />
         </Head>
         <body>
           <Main />

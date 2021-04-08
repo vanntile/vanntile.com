@@ -1,14 +1,14 @@
 import { Container } from '@vcomponents'
 import { getSortedPostsData } from '@vlib/mdx'
 import { MDXFile } from '@vtypes/types'
-import { GetStaticProps } from 'next'
+import { GetStaticProps, NextPage } from 'next'
 import Link from 'next/link'
 
 interface Props {
   allPosts: MDXFile[]
 }
 
-const Blog: React.FC<Props> = ({ allPosts }): JSX.Element => (
+const Blog: NextPage<Props> = ({ allPosts }) => (
   <Container
     title="Blog - vanntile's words"
     description="Articles on tech, software development, design and case studies."

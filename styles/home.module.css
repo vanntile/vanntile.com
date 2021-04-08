@@ -120,6 +120,10 @@
   contain-intrinsic-size: 1px 1000px;
 }
 
+.pExp {
+  @apply mt-0 mb-2 text-sm font-semibold text-indigo-300;
+}
+
 @screen md {
   .hSection {
     @apply max-w-3xl px-6;

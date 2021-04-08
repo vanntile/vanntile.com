@@ -1,14 +1,14 @@
 import { BlogLayout } from '@vcomponents'
 import { getFileBySlug, getSlugs } from '@vlib/mdx'
 import { MDXFile } from '@vtypes/types'
-import { GetStaticPaths, GetStaticProps } from 'next'
+import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { ParsedUrlQuery } from 'querystring'
 
 interface Params extends ParsedUrlQuery {
   slug: string
 }
 
-const BlogPost: React.FC<MDXFile> = ({ contentMDX, frontMatter }): JSX.Element => (
+const BlogPost: NextPage<MDXFile> = ({ contentMDX, frontMatter }) => (
   <BlogLayout frontMatter={frontMatter}>
     <div className="max-w-full" dangerouslySetInnerHTML={{ __html: contentMDX.renderedOutput }}></div>
   </BlogLayout>
