@@ -225,6 +225,9 @@ const IndexPage: NextPage = () => {
             </h1>
             <div className="text-xl font-semibold md:text-3xl">developer by choice and designer for fun</div>
           </header>
+          <a className="visuallyhidden" href="#section-tech">
+            Skip to main content
+          </a>
           <p>
             Are you searching for a practical enthusiast for your <span className={styles.highlight}>project</span>?
           </p>
@@ -240,10 +243,7 @@ const IndexPage: NextPage = () => {
             solution, but the <span className={styles.highlight}>balance</span> between a maintainable implementation
             and user-focused functionality.
           </p>
-          <div className="flex flex-row gap-4 mt-8">
-            <a className="visuallyhidden" href="#section-tech">
-              Skip to main content
-            </a>
+          <div className="flex flex-row mt-8 space-x-2">
             <a
               className="px-4 py-2 border-2 border-current text-brand-accent hover:text-brand-accent"
               href="#section-tech"
@@ -370,7 +370,7 @@ const IndexPage: NextPage = () => {
       <section id="section-contact" className={`${styles.hSection} mb-32`}>
         <h2 className="text-current md:text-4xl">Contact</h2>
         <p>You can find me here and there.</p>
-        <div className="flex flex-row gap-8 mb-8">
+        <div className="flex flex-row mb-8 space-x-8">
           {externals.map((e) => (
             <a
               key={e.href}
