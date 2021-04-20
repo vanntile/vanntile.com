@@ -1,0 +1,304 @@
+---
+title: 'How to do commits and versioning'
+publishedAt: '2021-04-21'
+summary: 'To commit or not to commit, that is the question? I go deep in how to manage a Node project with npm and how versioning should be used.'
+image: 'blog/banner-commits-and-versioning.png'
+---
+
+## Commiting is hard!
+
+Whether making time for taxes, organising desktop files or a relationship, commiting is hard. Oh, and also `git`.
+Git is, as many of you probably already know, infinitely useful and incredibly hard to properly operate from an
+organisational point of view. I know what you're thinking, just a quick `issue fix` commit won't create any problems.
+But I assure you, 25 commits later, when you don't know when you did a fix or why you did commit `package.json`
+modifications (yes, I am a JS developer, roast me on your favorite social media) for the third time in a row, you would
+wish you had a system.
+
+For an `npm` project, my system is described in detail below and it uses standard development packages that you might
+want to consider for your own work. As a plus, now I have a standard way of commiting in any project, no matter
+the technology (thanks to globally installed npm packages).
+
+Why would you keep reading? Well, you can copy the commands and configs like in a tutorial, or at least be aware what
+pitfalls are actually manageable in today's industry.
+
+## Table of Contents
+
+## Conventional commits
+
+[Conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) are a spec for how to write commits, which brings
+advantages for everyone. Spec or no spec, as everyone starts using this properly it will get better to jump into
+someone's project. It's structure is supposed to look like:
+
+```
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+- **type** is the most important part: it stands as a quick "tag" that you can easily scan for when you're looking at a
+commit history. As a bonus, having a solid set of tags can be used for CI/CD pipeline triggers. More on the standard
+tags (and my chosen scopes) below.
+- **description** is a short text which focuses on what the change was on. There are common rules on writing it properly.
+  - Use the imperative mood
+  - Write short messages (under 50 characters usually, under 75 for the full line with commitlint)
+  - Do not end it with a period
+  - Think of what changes if the commit is merged/accepted in an upstream branch
+
+You can use the package [commitlint](https://github.com/conventional-changelog/commitlint) to check if your commit
+messages respect the standard rules, or, just as I usually do, extend the [conventional config](https://github.com/conventional-changelog/commitlint/tree/master/@commitlint/config-conventional)
+with your own scopes and types.
+
+## Let's start practicing
+
+Let's put the above into action. First, install the below packages.
+
+?> In all shell blocks below, the "𝝺" (lambda) symbol stands for a prompt.
+
+```bash
+𝝺 npm i -D @commitlint/cli @commitlint/config-conventional
+𝝺 npm i -D lint-staged husky prettier
+```
+
+I personally use the below commitlint configuration.
+
+```js:.commitlintrc.cjs
+module.exports = {
+  extends: ['@commitlint/config-conventional'],
+  rules: {
+    'scope-enum': [
+      2,
+      'always',
+      [
+        "style", "lint", "review", "uiux", "deps", "build",
+        "release", "flags", "logs", "db", "security", "perf",
+        "a11y", "i18n", "typos", "literals", "analytics",
+        "seo", "linux", "windows", "osx", "android", "ios"
+      ],
+    ],
+    'type-enum': [
+      2,
+      'always',
+      [
+        'wip', 'feat', 'fix', 'config', 'refactor', 'revert',
+        'chore', 'ci', 'assets', 'test', 'docs', 'init'
+      ],
+    ],
+  },
+}
+```
+
+### Hooks, but not React hooks
+
+Many projects have various code checking or linting tasks, and mine are no different. I always add a prettier configuration
+such as the `.prettierrc` below and hook in the pre-commit step using [Husky 🐶](https://github.com/typicode/husky).
+
+```json:.prettierrc
+{
+  "printWidth": 120,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "endOfLine": "lf"
+}
+```
+
+It can be a pain to run some tasks on the complete codebase, so we can use [lint-staged](https://www.npmjs.com/package/lint-staged)
+in order to check only the files staged since the last commit. You can see below, my only task is linting (and
+fixing errors) with prettier, on *JavaScript-like* files.
+
+
+```json:package.json
+{
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --staged --write"
+    ]
+  }
+}
+```
+
+Now we only need to set up husky and its [commit hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks):
+
+- on **pre-commit** we will run lint-staged which will use out `package.json` configuration and trigger prettier
+- we will use commitlint on our **commit message**
+
+```bash
+𝝺 npm set-script prepare "husky install" && npm run prepare
+𝝺 npx husky add .husky/pre-commit "npx lint-staged"
+𝝺 npx husky add .husky/commit-msg "npx commitlint --config .commitlintrc.cjs --edit"
+```
+
+### Semantic versioning
+
+If you are unfamiliar with [semantic versioning](https://semver.org/), it's a way of numbering releases for packages.
+Dependency hell is a thing, and if you haven't had dependency version conflicts in your `package.json` until now, you
+have just been lucky. Even though [semantic-release](https://www.npmjs.com/package/semantic-release) is the most popular
+release automation package out there, as I rarely end up in the position of needing to release a package (only internal
+ones until now), I choose [standard-version](https://www.npmjs.com/package/standard-version) which is:
+
+- simpler
+- autogenerates a `CHANGELOG.md` file on releases based on your conventional commit messages
+- bumps package **version number** and creates git **tags**
+
+Install it and add the **npm script** for quick access.
+
+```bash
+𝝺 npm i -D standard-version
+```
+```json:package.json
+{
+  "scripts": {
+    //...
+    "release": "standard-version --no-verify --sign"
+  }
+}
+```
+
+## Be a commit citizen!
+
+Of course, semantic commits are cool, but learning a new syntax is so hard when you just want commit and go home at the
+end of the day (PS: never push to production at the end of the day. **NEVER**) That's where [commitizen](https://github.com/commitizen/cz-cli)
+comes into place, giving you a cli tool that can hook into git and ask you every part of the commit that you need to
+introduce. Of course, once cgain, everything is customizable, to match your commit convention. You can even skip
+questions!.
+
+The best part is that you can add emoji into commit messages! GitHub, GitLab and BitBucket support a range of
+[standard emoji code](https://www.webfx.com/tools/emoji-cheat-sheet/) and some famous tools like [gitmoji](https://gitmoji.dev/)
+stand for adding emoji in commit messages to make them, once again, easier to follow (yes, that's the purpose of tags,
+but an image is worth a thousand words, so an emoji about 1 word). To combine that with commitizen, just add the
+[cz-emoji](https://www.npmjs.com/package/cz-emoji) adapter and it will add an emoji code at the beggining of your
+descriptions. Install both packages globally with npm, and you will now be able to run `git cz` to run the **CLI**.
+
+```bash
+𝝺 npm i -g commitizen cz-emoji
+𝝺 touch ~/.czrc
+```
+
+### What's your type?
+
+Before you get to see my `commitizen` configuration, I need to finally exaplain my choice of types and scopes. The most
+basic types are the commitlint defaults, which follow the
+[Angular convention for commit types](https://github.com/conventional-changelog/commitlint/tree/master/@commitlint/config-conventional#type-enum).
+However, that can become bothersome as some tags are overlapping (`build` and `ci` seem to me more of the same while
+you can have different other types of tasks associate with the build systems - refactoring, chores, configs) and some
+essential ones are missing (how could you lack a work-in-progress tag `wip` for a fast iteration project is unthinkable).
+More than that, the **gitmoji** choice of associations creates an even longer list of possibilities (as they became
+cz-emoji defaults). Specifically:
+
+- having a type for `windows` doesn't explain that you did a fix, feature or configuration, so it should better be a scope
+- having 4 different `dependency` tags is just polluting the namespace.
+
+I have tried getting my own list and, after a few iterations, I end up with the below scopes and types, both ordered
+mostly by frequency of use.
+
+
+```json:.czrc
+{
+  "path": "cz-emoji",
+  "config": {
+    "cz-emoji": {
+      "conventional": true,
+      "skipQuestions": [
+        "issues"
+      ],
+      "symbol": false,
+      "scopes": [
+        "style", "lint", "review", "uiux", "deps", "build",
+        "release", "flags", "logs", "db", "security", "perf",
+        "a11y", "i18n", "typos", "literals", "analytics",
+        "seo", "linux", "windows", "osx", "android", "ios"
+      ],
+      "types": [
+        {
+          "emoji": "🚧",
+          "code": ":construction:",
+          "description": "Work in progress.",
+          "name": "wip"
+        },
+        {
+          "emoji": "🌟",
+          "code": ":star2:",
+          "description": "Introducing new features.",
+          "name": "feat"
+        },
+        {
+          "emoji": "🐛",
+          "code": ":bug:",
+          "description": "Fixing a bug.",
+          "name": "fix"
+        },
+        {
+          "emoji": "🔧",
+          "code": ":wrench:",
+          "description": "Changing configuration files.",
+          "name": "config"
+        },
+        {
+          "emoji": "🔥",
+          "code": ":fire:",
+          "description": "Refactoring.",
+          "name": "refactor"
+        },
+        {
+          "emoji": "⏪️",
+          "code": ":rewind:",
+          "description": "Reverting changes.",
+          "name": "revert"
+        },
+        {
+          "emoji": "🔩",
+          "code": ":nut_and_bolt:",
+          "description": "Doing a chore.",
+          "name": "chore"
+        },
+        {
+          "emoji": "👷",
+          "code": ":construction_worker:",
+          "description": "Changing CI/build system.",
+          "name": "ci"
+        },
+        {
+          "emoji": "🍱",
+          "code": ":bento:",
+          "description": "Adding or updating assets.",
+          "name": "assets"
+        },
+        {
+          "emoji": "✅",
+          "code": ":white_check_mark:",
+          "description": "Adding tests.",
+          "name": "test"
+        },
+        {
+          "emoji": "📝",
+          "code": ":pencil:",
+          "description": "Writing docs.",
+          "name": "docs"
+        },
+        {
+          "emoji": "🎉",
+          "code": ":tada:",
+          "description": "Initial commit.",
+          "name": "init"
+        }
+      ]
+    }
+  }
+}
+```
+
+## Conclusion
+
+It's important to have a way of working with your projects properly, that you always rely on and guides you through the
+administrative, non-coding part. Or at least that's what everyone thinks (and yours humble author with them).
+
+## See also
+
+- [Attlassian's Gitflow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
+- [Tagging releases with git](https://dev.to/neshaz/a-tutorial-for-tagging-releases-in-git-147e)
+
+<NextArticleSection title="How to properly start a dockerized Express project" link="express-starter" />
