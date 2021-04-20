@@ -3,12 +3,18 @@ import { MDXMeta } from '@vtypes/types'
 
 const BlogLayout = ({
   children,
-  frontMatter: { title, summary, publishedAt, reading },
+  frontMatter: { title, summary, publishedAt, image, reading },
 }: {
   children: React.ReactNode
   frontMatter: MDXMeta
 }): JSX.Element => (
-  <Container title={title} description={summary} date={new Date(publishedAt).toISOString()} type="article">
+  <Container
+    title={title}
+    description={summary}
+    date={new Date(publishedAt).toISOString()}
+    image={image}
+    type="article"
+  >
     <article className="flex flex-col items-start justify-center">
       <h1>{title}</h1>
       <div className="text-gray-400 dark:text-brand-secondary">

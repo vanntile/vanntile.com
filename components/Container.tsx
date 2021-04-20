@@ -19,7 +19,7 @@ const Container: React.FC<Props> = ({ children, ...customMeta }): JSX.Element =>
   const meta = {
     title: `vanntile - frontend developer and graphic designer`,
     description: `Developer by choice and designer for fun. I speak the languages of both engineering and aesthetics and can help with your next project.`,
-    image: 'https://vanntile.com/images/banner.png',
+    image: 'banner.png',
     type: 'website',
     ...customMeta,
   } as Record<string, string>
@@ -39,12 +39,12 @@ const Container: React.FC<Props> = ({ children, ...customMeta }): JSX.Element =>
         <meta property="og:site_name" content="vanntile's portfolio" />
         <meta property="og:title" content={meta.title} />
         <meta property="og:description" content={meta.description} />
-        <meta property="og:image" content={meta.image} />
+        <meta property="og:image" content={`https://vanntile.com/images/${meta.image}`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@vanntile" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
-        <meta name="twitter:image" content={meta.image} />
+        <meta name="twitter:image" content={`https://vanntile.com/images/${meta.image}`} />
       </Head>
       {router.asPath === '/' ? (
         <main className="flex flex-col justify-center bg-gray-900 text-brand-tint home">{children}</main>
