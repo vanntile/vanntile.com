@@ -2,6 +2,138 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 2.0.0 (2021-05-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* **security:** - Changed email sending dependencies and functions
+* **security:** - removed hash from production CSP due to compatibility issues
+* - changed from React static + express to NextJS
+
+* config(release): :wrench: added commitizen
+
+* docs: :pencil: Updated README
+
+* chore(release): 0.10.0
+
+* feature(security): :star2: Added CSP header
+
+* feature: :star2: Added proper linting
+* - Added ESLINT proper configs
+
+* feature: :star2: Added TailwingCSS for UI styling
+
+Using preprocessed tailwind seems like an efficient choice
+* - Learning tailwind
+
+* fix: :bug: Next viewport warning
+
+* refactoring: :fire: Remade markup
+
+* feature: :star2: Added loading progress bar
+* - new stylesheet added
+
+* feature: :star2: Added Markdown dynamic content generation
+* - remark and grey-matter
+
+* chore(release): 0.11.0
+
+* refactoring(client): :fire: Changed paths to aliased modules
+
+Added tsconfig and eslint resolvers and settings
+
+* feature: :star2: added MDX rendering and rendering
+
+- Added MDXProvider for idirect rendering of
+- Refactor lib/posts to lib/mdx for remote rendering (with local data source for now)
+- Changed tailwind styles and css (TODO: customise them)
+- Added reading time to posts
+- Reworked aliased modules as default exports for components
+
+* config: :wrench: Updated dependencies
+
+Removed some deps, added stylelint
+
+* feature: :star2: MDX setup completed
+
+* chore(release): 0.11.1
+
+* feature: :star2: added header link hashes styling
+
+* wip(client): :construction: added basic type and color styling"
+
+* feature: :star2: Added Container component
+* - Container contains major logic in meta tags and theming.
+
+* refactoring: :fire: Removed unused snippets to their own folder
+
+* refactoring: :fire: Syntax refactor
+
+* refactoring: :fire: rework on container and navbar
+
+* refactoring: :fire: reorganised global styles
+
+* fix: :bug: Sizing contents
+
+* wip: :construction: Tailwind size styling
+
+* refactoring: :fire: Added headwind class order and css base layer
+* - edited tsconfig to ignore old snippets
+
+* fix: :bug: Dark mode
+
+* config: :wrench: removed tailwind/typography and added css
+* - Using tailwindcss/jit compiler for faster development
+
+* chore(release): 0.12.0
+
+* feature: :star2: updated styling
+
+- Completed dark theme for blog
+
+* chore(release): 0.12.1
+
+* refactoring: :fire: removed prose
+* - refactores the styles
+
+* config: :wrench: added dependency
+
+* feature: :star2: added components
+
+* feature: :star2: added useIntersection hook
+
+* feature: :star2: created homepage
+* - major homepage changes
+
+* chore: :nut_and_bolt: removed not own content
+
+* chore(release): 1.0.0
+
+### Features
+
+* :star2: contact form ([ca8794a](https://github.com/vanntile/vanntile.com/commit/ca8794addcc5ede01499ba00aab0099eaf891716))
+
+
+### Bug Fixes
+
+* **uiux:** :bug: small spacing issues ([8eefb21](https://github.com/vanntile/vanntile.com/commit/8eefb2141823cac20ab0fdcfd0c7571eb612843a))
+* **uiux:** :bug: tags spacing ([1eb81e7](https://github.com/vanntile/vanntile.com/commit/1eb81e7d787905b15831c5d51422bbee74745caf))
+* :bug: accessibility and animation improvements ([86c373d](https://github.com/vanntile/vanntile.com/commit/86c373d463413e2736594262e81d44d21451e4c2))
+* :bug: broken animation visibility ([077dc95](https://github.com/vanntile/vanntile.com/commit/077dc955e964947f7944991b419f515f61dfed3a))
+* :bug: content deploy fixes ([1d820cb](https://github.com/vanntile/vanntile.com/commit/1d820cb377ac2fba880934084b22f6d898b1851d))
+* :bug: heroku fixes ([ef915e1](https://github.com/vanntile/vanntile.com/commit/ef915e1a30e020590ea5f4d4224b46bbbf5bc424))
+* :bug: improved accessibility ([d2b2742](https://github.com/vanntile/vanntile.com/commit/d2b274246f1813f5d13e56a03e2f490f12369d7c))
+* :bug: initial deploy fixes ([b44dcd9](https://github.com/vanntile/vanntile.com/commit/b44dcd92de9e5a9e244d59461afa40b15e6e15d5))
+* :bug: missing tags keys ([870c0c9](https://github.com/vanntile/vanntile.com/commit/870c0c98b00f1118dbc689a0a5a1e0d3c2ccc98a))
+* :bug: user submitted bug ([c721592](https://github.com/vanntile/vanntile.com/commit/c721592d3c54b05f7e06f5fbf173a5dca20fb302))
+* upgrades and fixes ([#3](https://github.com/vanntile/vanntile.com/issues/3)) ([357c24b](https://github.com/vanntile/vanntile.com/commit/357c24be93b7a28fc465cea12c519957a7162b42))
+* **security:** :bug: Changed email packages to remove security issue ([65a6f8e](https://github.com/vanntile/vanntile.com/commit/65a6f8ecd54554eb7ebbb6b5043fcedb1554f8e7))
+* **security:** :bug: updated CSP headers ([7b6733b](https://github.com/vanntile/vanntile.com/commit/7b6733bbcef514bae496d34ed3a9fc951250cc66))
+
+
+* NextJS rewrite (#1) ([03f5f36](https://github.com/vanntile/vanntile.com/commit/03f5f365c9124886b093ef71fe7ab7440bc6522e)), closes [#1](https://github.com/vanntile/vanntile.com/issues/1)
+
 ## [1.0.0](https://github.com/vanntile/vanntile.com/compare/v0.12.1...v1.0.0) (2021-03-26)
 
 

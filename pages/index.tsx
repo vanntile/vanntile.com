@@ -368,10 +368,12 @@ const IndexPage: NextPage = () => {
         </Tabs>
         <TriangleDivider color="text-gray-900" />
       </section>
-      <section id="section-contact" className={`${styles.hSection} mb-32`}>
-        <h2 className="text-current md:text-4xl">Contact</h2>
+      <section className={`${styles.hSection} mb-32`}>
+        <h2 id="section-contact" className="text-current md:text-4xl">
+          ./contact
+        </h2>
         <p>You can find me here and there.</p>
-        <div className="flex flex-row mb-8 space-x-8">
+        <div className="flex flex-row flex-wrap mb-8 space-x-4 md:space-x-8">
           {externals.map((e) => (
             <a
               key={e.href}
