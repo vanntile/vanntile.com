@@ -13,10 +13,10 @@ const cspHashOf = (text: string) => {
 
 const getCsp = (props: any): string => {
   let csp = `default-src 'self';`
-  csp += `script-src 'self' ${
-    prod ? `${nextThemesSha} ${cspHashOf(NextScript.getInlineScriptSource(props))}` : "'unsafe-inline' 'unsafe-eval'"
+  csp += `script-src 'self' 'unsafe-eval' ${
+    prod ? `${nextThemesSha} ${cspHashOf(NextScript.getInlineScriptSource(props))}` : "'unsafe-inline'"
   };`
-  csp += `style-src 'self' 'unsafe-inline' ${prod ? ''  : "'unsafe-eval'"};`
+  csp += `style-src 'self' 'unsafe-inline' ${prod ? '' : "'unsafe-eval'"};`
   csp += `font-src 'self' ${prod ? '' : 'data:'};`
   csp += `object-src 'none';`
 
@@ -38,14 +38,14 @@ export default class CustomDocument extends Document {
           <meta name="theme-color" content="#3429aa" />
           <link
             rel="preload"
-            href="./fonts/Objectivity-Regular.woff2"
+            href="/fonts/Objectivity-Regular.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
           />
           <link
             rel="preload"
-            href="./fonts/Objectivity-Bold.woff2"
+            href="/fonts/Objectivity-Bold.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"

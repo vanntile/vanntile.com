@@ -17,7 +17,7 @@ export interface MDXMeta extends PageMeta {
   reading: IReadTimeResults
 }
 export interface MDXFile {
-  contentMDX: import('next-mdx-remote/types').MdxRemote.Source
+  contentMDX: import('next-mdx-remote/types').MDXRemoteSerializeResult
   frontMatter: MDXMeta
 }
 

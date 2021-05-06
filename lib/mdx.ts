@@ -1,9 +1,8 @@
-import { MDXComponents } from '@vcomponents'
 import { MDXFile, PageMeta } from '@vtypes/types'
 import fs from 'fs'
 import matter from 'gray-matter'
 import mdxPrism from 'mdx-prism'
-import renderToString from 'next-mdx-remote/render-to-string'
+import { serialize } from 'next-mdx-remote/serialize'
 import path from 'path'
 import readingTime from 'reading-time'
 import reHeadings from 'remark-autolink-headings'
@@ -40,8 +39,7 @@ export const getFileBySlug = async (slug: string, subfolder?: string): Promise<M
   }
 
   // Use remark to convert markdown into HTML string
-  const contentMDX = await renderToString(content, {
-    components: MDXComponents,
+  const contentMDX = await serialize(content, {
     mdxOptions: {
       remarkPlugins: [[reTOC, tocOptions], reCodeTitles, reSlug, [reHeadings, autolinkOptions], reHint, reHtml],
       rehypePlugins: [mdxPrism],

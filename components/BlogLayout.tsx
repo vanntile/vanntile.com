@@ -14,7 +14,7 @@ const BlogLayout = ({
       <div className="text-gray-400 dark:text-brand-secondary">
         <ArticleDate dateString={publishedAt} />, {reading.text}
       </div>
-      {children}
+      <div className="max-w-full">{children}</div>
     </article>
   </Container>
 )
