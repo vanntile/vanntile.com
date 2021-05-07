@@ -4,9 +4,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [2.0.1](https://github.com/vanntile/vanntile.com/compare/v2.0.0...v2.0.1) (2021-05-06)
 
-## 2.0.0 (2021-05-05)
-
-
 ### ⚠ BREAKING CHANGES
 
 * **security:** - Changed email sending dependencies and functions
