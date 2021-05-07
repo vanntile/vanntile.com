@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/vanntile/vanntile.com/compare/v2.0.1...v2.1.0) (2021-05-07)
+
+
+### Features
+
+* **security:** :star2: update headers ([792965c](https://github.com/vanntile/vanntile.com/commit/792965cc55a3e57c078b2f8936c9ca11d83f0090))
+
 ### [2.0.1](https://github.com/vanntile/vanntile.com/compare/v2.0.0...v2.0.1) (2021-05-06)
 
 ### ⚠ BREAKING CHANGES
