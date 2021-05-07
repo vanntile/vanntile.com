@@ -1,27 +1,4 @@
-import crypto from 'crypto'
 import Document, { Head, Html, Main, NextScript } from 'next/document'
-
-const prod = process.env.NODE_ENV == 'production'
-const referrer = 'strict-origin'
-const nextThemesSha = "'sha256-4b6neOQEfz/94vH7nVjqnqWI8K3KNB/U9aK4wMD5oYA='"
-
-const cspHashOf = (text: string) => {
-  const hash = crypto.createHash('sha256')
-  hash.update(text)
-  return `'sha256-${hash.digest('base64')}'`
-}
-
-const getCsp = (props: any): string => {
-  let csp = `default-src 'self';`
-  csp += `script-src 'self' 'unsafe-eval' ${
-    prod ? `${nextThemesSha} ${cspHashOf(NextScript.getInlineScriptSource(props))}` : "'unsafe-inline'"
-  };`
-  csp += `style-src 'self' 'unsafe-inline' ${prod ? '' : "'unsafe-eval'"};`
-  csp += `font-src 'self' ${prod ? '' : 'data:'};`
-  csp += `object-src 'none';`
-
-  return csp
-}
 
 export default class CustomDocument extends Document {
   render(): JSX.Element {
@@ -50,8 +27,6 @@ export default class CustomDocument extends Document {
             type="font/woff2"
             crossOrigin="anonymous"
           />
-          <meta httpEquiv="Content-Security-Policy" content={getCsp(this.props)} />
-          <meta name="referrer" content={referrer} />
         </Head>
         <body>
           <Main />
