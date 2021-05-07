@@ -1,27 +1,4 @@
-import crypto from 'crypto'
 import Document, { Head, Html, Main, NextScript } from 'next/document'
-
-const prod = process.env.NODE_ENV == 'production'
-const referrer = 'strict-origin'
-const nextThemesSha = "'sha256-4b6neOQEfz/94vH7nVjqnqWI8K3KNB/U9aK4wMD5oYA='"
-
-const cspHashOf = (text: string) => {
-  const hash = crypto.createHash('sha256')
-  hash.update(text)
-  return `'sha256-${hash.digest('base64')}'`
-}
-
-const getCsp = (props: any): string => {
-  let csp = `default-src 'self';`
-  csp += `script-src 'self' ${
-    prod ? `${nextThemesSha} ${cspHashOf(NextScript.getInlineScriptSource(props))}` : "'unsafe-inline' 'unsafe-eval'"
-  };`
-  csp += `style-src 'self' 'unsafe-inline' ${prod ? ''  : "'unsafe-eval'"};`
-  csp += `font-src 'self' ${prod ? '' : 'data:'};`
-  csp += `object-src 'none';`
-
-  return csp
-}
 
 export default class CustomDocument extends Document {
   render(): JSX.Element {
@@ -38,20 +15,18 @@ export default class CustomDocument extends Document {
           <meta name="theme-color" content="#3429aa" />
           <link
             rel="preload"
-            href="./fonts/Objectivity-Regular.woff2"
+            href="/fonts/Objectivity-Regular.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
           />
           <link
             rel="preload"
-            href="./fonts/Objectivity-Bold.woff2"
+            href="/fonts/Objectivity-Bold.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
           />
-          <meta httpEquiv="Content-Security-Policy" content={getCsp(this.props)} />
-          <meta name="referrer" content={referrer} />
         </Head>
         <body>
           <Main />

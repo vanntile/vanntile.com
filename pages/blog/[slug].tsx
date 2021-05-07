@@ -1,7 +1,8 @@
-import { BlogLayout } from '@vcomponents'
+import { BlogLayout, MDXComponents } from '@vcomponents'
 import { getFileBySlug, getSlugs } from '@vlib/mdx'
 import { MDXFile } from '@vtypes/types'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
+import { MDXRemote } from 'next-mdx-remote'
 import { ParsedUrlQuery } from 'querystring'
 
 interface Params extends ParsedUrlQuery {
@@ -10,7 +11,7 @@ interface Params extends ParsedUrlQuery {
 
 const BlogPost: NextPage<MDXFile> = ({ contentMDX, frontMatter }) => (
   <BlogLayout frontMatter={frontMatter}>
-    <div className="max-w-full" dangerouslySetInnerHTML={{ __html: contentMDX.renderedOutput }}></div>
+    <MDXRemote {...contentMDX} components={MDXComponents} />
   </BlogLayout>
 )
 
