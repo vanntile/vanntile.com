@@ -18,6 +18,8 @@ const withMDX = mdx({
   },
 })
 
+// TODO: HTTPS redirect
+
 module.exports = withMDX({
   future: {
     webpack5: true,
@@ -43,10 +45,9 @@ module.exports = withMDX({
               frameAncestors: "'none'",
               formAction: "'none'",
               baseURI: "'self'",
-              'require-trusted-types-for': "'script'",
             },
           },
-          forceHTTPSRedirect: [true, { maxAge: 60 * 60 * 24 * 4, includeSubDomains: true }],
+          forceHTTPSRedirect: [true, { maxAge: 60 * 60 * 24 * 30 * 6, includeSubDomains: true, preload: true }],
           referrerPolicy: 'same-origin',
         }),
       },
