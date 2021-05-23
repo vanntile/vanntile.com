@@ -3,9 +3,6 @@
   "version": "2.1.0",
   "private": true,
   "dependencies": {
-    "@mdx-js/loader": "^1.6.22",
-    "@mdx-js/mdx": "^1.6.22",
-    "@mdx-js/react": "^1.6.22",
     "abort-controller": "^3.0.0",
     "cors": "^2.8.5",
     "date-fns": "^2.21.3",
@@ -72,7 +69,6 @@
     "build": "next build",
     "start": "next start -p $PORT",
     "lint": "eslint .",
-    "commit": "cz",
     "release": "standard-version --no-verify --sign",
     "prepare": "husky install"
   },
