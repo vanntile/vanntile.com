@@ -213,7 +213,7 @@ const IndexPage: NextPage = () => {
         <div>
           <header className="mb-16">
             <h1 className="mb-2 font-mono text-4xl text-gray-100 md:text-6xl">
-              hi, I'm <br className="block md:hidden" />
+              hi, I&apos;m <br className="block md:hidden" />
               <span className="relative">
                 <span className="h-20 pt-2 overflow-x-hidden whitespace-nowrap text-brand-accent">
                   vanntile <span className="text-3xl md:text-5xl">👋</span>
@@ -234,9 +234,9 @@ const IndexPage: NextPage = () => {
           <p className="max-w-lg 2xl:max-w-5xl">
             I speak the languages of both <span className={styles.highlight}>engineering and aesthetics</span>, being
             perfectly positioned to formulate the path of a feasible product with customer experience in mind. My
-            preferred work is <span className={styles.highlight}>fullstack development</span>. I'm using the best tool
-            for the job, <br className="hidden md:inline-block 2xl:hidden" /> be it a reliable framework or the latest
-            web features.
+            preferred work is <span className={styles.highlight}>fullstack development</span>. I&apos;m using the best
+            tool for the job, <br className="hidden md:inline-block 2xl:hidden" /> be it a reliable framework or the
+            latest web features.
           </p>
           <p className="max-w-lg 2xl:max-w-5xl">
             Neither impressive interfaces nor blazing performance are{' '}

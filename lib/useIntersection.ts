@@ -21,7 +21,7 @@ const useIntersection = (
       }
     }
     return () => ({})
-  }, [ref.current, options.threshold, options.root, options.rootMargin])
+  }, [ref, options, options.threshold, options.root, options.rootMargin])
 
   return intersectionObserverEntry
 }

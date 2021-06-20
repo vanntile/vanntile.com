@@ -16,4 +16,6 @@ export const runMiddleware = (
   })
 }
 
-export default { runMiddleware }
+const middleware = { runMiddleware }
+
+export default middleware

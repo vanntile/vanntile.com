@@ -6,25 +6,19 @@
     "es2020": true,
     "node": true
   },
-  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 11,
-    "project": "./tsconfig.json",
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
+    "project": "./tsconfig.json"
   },
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "plugin:import/errors",
-    "plugin:import/typescript",
-    "prettier"
+    "prettier",
+    "next",
+    "next/core-web-vitals"
   ],
   "plugins": [
-    "import",
     "@typescript-eslint"
   ],
   "ignorePatterns": "*config.js",
