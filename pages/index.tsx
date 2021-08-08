@@ -3,6 +3,7 @@ import svg from '@vlib/svgPaths'
 import useIntersection from '@vlib/useIntersection'
 import styles from '@vstyles/home.module.css'
 import { NextPage } from 'next'
+import Link from 'next/link'
 import { useRef, useState } from 'react'
 import { resetIdCounter, Tab, TabList, TabPanel, Tabs } from 'react-tabs'
 
@@ -296,6 +297,9 @@ const IndexPage: NextPage = () => {
             >
               experience
             </a>
+            <Link href={`/blog`}>
+              <a className="px-4 py-2 border-2 border-current text-brand-accent hover:text-brand-accent">blog</a>
+            </Link>
             <a
               className="px-4 py-2 border-2 border-current text-brand-accent hover:text-brand-accent"
               href="#section-contact"
