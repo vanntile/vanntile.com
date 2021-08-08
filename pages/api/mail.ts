@@ -20,6 +20,10 @@ type Params = {
 
 const logger = console
 
+// FIXME: whenever mailgun-js adds proper types
+/* eslint-disable @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access  */
+/* eslint-disable @typescript-eslint/no-unsafe-call  */
+
 const mailgun = new Mailgun(formData as any)
 const mg = mailgun.client({
   username: 'api',
