@@ -3,6 +3,7 @@ interface PageMeta {
   publishedAt: string
   summary: string
   image: string
+  tags?: string[]
 }
 
 interface IReadTimeResults {

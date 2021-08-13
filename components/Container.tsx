@@ -35,6 +35,7 @@ const Container: React.FC<Props> = ({ children, ...customMeta }): JSX.Element =>
         <meta name="description" content={meta.description} />
         <link rel="canonical" href={`https://vanntile.com${router.asPath}`} />
         {meta.date && <meta property="article:published_time" content={meta.date} />}
+        {meta.tags && <meta name="keywords" content={meta.tags} />}
         <meta property="og:url" content={`https://vanntile.com${router.asPath}`} />
         <meta property="og:site_name" content="vanntile's portfolio" />
         <meta property="og:title" content={meta.title} />
