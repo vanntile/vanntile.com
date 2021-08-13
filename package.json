@@ -80,8 +80,7 @@
   "_moduleAliases": {
     "@vcomponents": "./components/index.ts",
     "@vlib": "./lib",
-    "@vstyles": "./styles",
-    "@vtypes": "./types"
+    "@vstyles": "./styles"
   },
   "engines": {
     "node": "14.x"
@@ -91,5 +90,6 @@
     "url": "git+https://github.com/vanntile/vanntile.com.git"
   },
   "keywords": [],
-  "author": "vanntile"
+  "author": "vanntile",
+  "typings": "types/types.d.ts"
 }

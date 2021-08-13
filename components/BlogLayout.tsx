@@ -1,5 +1,4 @@
 import { ArticleDate, Container } from '@vcomponents'
-import { MDXMeta } from '@vtypes/types'
 
 const BlogLayout = ({
   children,

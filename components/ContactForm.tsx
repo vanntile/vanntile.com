@@ -1,5 +1,5 @@
-import { Status } from '@vtypes/types'
 import React, { ChangeEvent, useEffect, useState } from 'react'
+import { Status } from '@vlib/constants'
 
 const SENT = 'Message sent'
 

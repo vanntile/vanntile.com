@@ -1,6 +1,5 @@
 import { BlogLayout, MDXComponents } from '@vcomponents'
 import { getFileBySlug, getSlugs } from '@vlib/mdx'
-import { MDXFile } from '@vtypes/types'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { MDXRemote } from 'next-mdx-remote'
 import { ParsedUrlQuery } from 'querystring'

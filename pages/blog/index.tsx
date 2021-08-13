@@ -1,6 +1,5 @@
 import { Container } from '@vcomponents'
 import { getSortedPostsData } from '@vlib/mdx'
-import { MDXFile } from '@vtypes/types'
 import { GetStaticProps, NextPage } from 'next'
 import Link from 'next/link'
 

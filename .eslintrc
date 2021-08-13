@@ -43,10 +43,6 @@
           [
             "@vstyles",
             "./styles"
-          ],
-          [
-            "@vtypes",
-            "./types"
           ]
         ],
         "extensions": [
