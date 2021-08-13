@@ -16,7 +16,7 @@
     "mailgun.js": "^3.3.0",
     "mdx-prism": "^0.3.3",
     "module-alias": "^2.2.2",
-    "next": "^10.2.0",
+    "next": "^11.1.0",
     "next-mdx-remote": "^3.0.1",
     "next-secure-headers": "^2.2.0",
     "next-themes": "^0.0.14",
