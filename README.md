@@ -27,5 +27,5 @@ It currently integrates the following:
 
 ## TODO
 
-- [ ]: content: add 1 article
+- [x]: content: add 2 articles
 - [ ]: content: add brand book in the 'Design deck'
