@@ -83,7 +83,8 @@
     "@vstyles": "./styles"
   },
   "engines": {
-    "node": "14.x"
+    "node": "14.x",
+    "npm": "7.x"
   },
   "repository": {
     "type": "git",
@@ -91,5 +92,8 @@
   },
   "keywords": [],
   "author": "vanntile",
-  "typings": "types/types.d.ts"
+  "typings": "types/types.d.ts",
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
+  }
 }
