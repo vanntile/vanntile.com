@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/vanntile/vanntile.com/compare/v2.1.0...v2.2.0) (2021-08-24)
+
+
+### Features
+
+* **seo:** :star2: add keywords metadata ([1c356d3](https://github.com/vanntile/vanntile.com/commit/1c356d396b0cf20b899d429750c52d8b74f898a2))
+* **uiux:** :star2: add read more button on blog ([941bab2](https://github.com/vanntile/vanntile.com/commit/941bab2f9058acd25a6fd9b2fa947230aada10c9))
+* :star2: make blog visible ([ea9ab23](https://github.com/vanntile/vanntile.com/commit/ea9ab23d34b1b3d76529bca8e261b6f065a95f0c))
+* **uiux:** :star2: add next article footer component ([49843a2](https://github.com/vanntile/vanntile.com/commit/49843a260e195f68b40a2fe93eca9cfa470f218b))
+
+
+### Bug Fixes
+
+* :bug: repair broken useIntersectionObserver ([0797a60](https://github.com/vanntile/vanntile.com/commit/0797a606359a4a3cab8d452f74562d5dd8f7d9d3))
+* **deps:** :bug: update types ([d2e919c](https://github.com/vanntile/vanntile.com/commit/d2e919c4b58731e645720dca4d8c53fb4bcf28fb))
+* :bug: display article meta image ([6817a12](https://github.com/vanntile/vanntile.com/commit/6817a12568dc737823d4a9053e7d6f504406d990))
+
 ## [2.1.0](https://github.com/vanntile/vanntile.com/compare/v2.0.1...v2.1.0) (2021-05-07)
 
 
