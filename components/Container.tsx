@@ -9,7 +9,7 @@ interface Props {
   [key: string]: any
 }
 
-const Container: React.FC<Props> = ({ children, ...customMeta }): JSX.Element => {
+const Container: React.FC<Props> = ({ children, ...customMeta }: Props): JSX.Element => {
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
   const router = useRouter()
@@ -31,16 +31,29 @@ const Container: React.FC<Props> = ({ children, ...customMeta }): JSX.Element =>
         <meta content="text/html; charset=utf-8" httpEquiv="content-type" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="robots" content="follow, index" />
+        <meta name="theme-color" content="#3429AA" />
+        <meta name="color-scheme" content="dark light"></meta>
         <meta name="application-name" content={meta.title} />
+        <meta name="author" content="vanntile" />
         <meta name="description" content={meta.description} />
-        <link rel="canonical" href={`https://vanntile.com${router.asPath}`} />
-        {meta.date && <meta property="article:published_time" content={meta.date} />}
         {meta.tags && <meta name="keywords" content={meta.tags} />}
+        <link rel="canonical" href={`https://vanntile.com${router.asPath}`} />
+        <meta property="og:type" content={meta.type} />
+        {meta.type === 'article' && (
+          <>
+            {meta.date && <meta property="article:author" content="https://www.facebook.com/vanntile/" />}
+            {meta.date && <meta property="article:published_time" content={meta.date} />}
+          </>
+        )}
         <meta property="og:url" content={`https://vanntile.com${router.asPath}`} />
         <meta property="og:site_name" content="vanntile's portfolio" />
         <meta property="og:title" content={meta.title} />
         <meta property="og:description" content={meta.description} />
         <meta property="og:image" content={`https://vanntile.com/images/${meta.image}`} />
+        <meta property="og:image:width" content="1600" />
+        <meta property="og:image:height" content="800" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="twitter:domain" content="vanntile.com"></meta>
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@vanntile" />
         <meta name="twitter:title" content={meta.title} />
