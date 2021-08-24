@@ -1,6 +1,6 @@
+import { Status } from '@vlib/constants'
 import { runMiddleware } from '@vlib/middleware'
 import rateLimit from '@vlib/rateLimit'
-import { Status } from '@vtypes/types.d'
 import AbortController from 'abort-controller'
 import Cors from 'cors'
 import formData from 'form-data'
@@ -19,6 +19,10 @@ type Params = {
 }
 
 const logger = console
+
+// FIXME: whenever mailgun-js adds proper types
+/* eslint-disable @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access  */
+/* eslint-disable @typescript-eslint/no-unsafe-call  */
 
 const mailgun = new Mailgun(formData as any)
 const mg = mailgun.client({

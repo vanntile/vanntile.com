@@ -30,10 +30,6 @@
     }
   }
 
-  ::selection {
-    @apply bg-brand text-gray-50 dark:bg-gray-100 dark:text-brand;
-  }
-
   html {
     scroll-behavior: smooth;
     min-width: 320px;
@@ -97,7 +93,7 @@
   }
 
   a::after {
-    @apply absolute left-0 w-full h-1 transition-transform duration-500 origin-right transform scale-x-0 bg-current -bottom-2;
+    @apply absolute left-0 w-full h-1 transition-transform duration-500 origin-right scale-x-0 bg-current -bottom-2;
     content: "";
   }
 

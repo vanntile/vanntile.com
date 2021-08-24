@@ -30,7 +30,7 @@ const Navigation: React.FC<Props> = ({ theme, onClick }): JSX.Element => (
         }`}
       >
         <div
-          className={`w-5 h-5 transform bg-white rounded-full shadow-md transition-transform ${
+          className={`w-5 h-5 bg-white rounded-full shadow-md transition-transform ${
             theme === 'light' ? '' : 'translate-x-7'
           }`}
         ></div>

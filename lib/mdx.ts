@@ -1,4 +1,3 @@
-import { MDXFile, PageMeta } from '@vtypes/types'
 import fs from 'fs'
 import matter from 'gray-matter'
 import mdxPrism from 'mdx-prism'

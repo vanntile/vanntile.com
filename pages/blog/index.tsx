@@ -1,6 +1,5 @@
 import { Container } from '@vcomponents'
 import { getSortedPostsData } from '@vlib/mdx'
-import { MDXFile } from '@vtypes/types'
 import { GetStaticProps, NextPage } from 'next'
 import Link from 'next/link'
 
@@ -14,10 +13,16 @@ const Blog: NextPage<Props> = ({ allPosts }) => (
     description="Articles on tech, software development, design and case studies."
   >
     <h1>Blog posts</h1>
-    {allPosts.map(({ frontMatter: { slug, title, summary } }) => (
-      <div key={slug} className="py-2">
+    {allPosts.map(({ frontMatter: { slug, title, summary, publishedAt } }) => (
+      <div key={slug} className="pt-2 pb-4">
+        <p className="mb-0">{publishedAt}</p>
         <Link href={`/blog/${slug}`}>{title}</Link>
         <p className="pl-2">{summary}</p>
+        <Link href={`/blog/${slug}`}>
+          <a className="px-4 py-2 border-2 border-current text-brand-accent hover:text-brand-accent dark:text-brand-secondary dark:hover:text-brand-secondary">
+            Read more...
+          </a>
+        </Link>
       </div>
     ))}
   </Container>

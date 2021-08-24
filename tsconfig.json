@@ -30,11 +30,12 @@
       ],
       "@vstyles/*": [
         "styles/*"
-      ],
-      "@vtypes/*": [
-        "types/*"
       ]
-    }
+    },
+    "typeRoots": [
+      "node_modules/@types",
+      "types"
+    ]
   },
   "exclude": [
     ".vscode",
@@ -45,6 +46,8 @@
   ],
   "include": [
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "types/index.d.ts",
+    "types/modules.d.ts"
   ]
 }

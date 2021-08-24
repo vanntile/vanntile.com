@@ -25,17 +25,6 @@ It currently integrates the following:
 - Next API
 - Mailgun.js & rate limiting (with lru-cache)
 
-## How to release
-
-```sh
-# 1. Commit
-npm run commit
-# 2. Relase
-npm run release
-# 3. Push the tags
-git push --follow-tags
-```
-
 ## TODO
 
 - [ ]: content: add 1 article

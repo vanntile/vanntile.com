@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import ProsCard from './ProsCard'
 import ConsCard from './ConsCard'
+import NextArticleSection from './NextArticleSection'
 
 const CustomLink = (props: Record<string, any>): JSX.Element => {
   const { href } = props as { href: string }
@@ -21,6 +22,7 @@ const MDXComponents = {
   a: CustomLink,
   ProsCard,
   ConsCard,
+  NextArticleSection,
 }
 
 export default MDXComponents

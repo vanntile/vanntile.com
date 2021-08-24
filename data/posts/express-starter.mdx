@@ -1,0 +1,527 @@
+---
+title: 'How to properly start a dockerized Express project'
+publishedAt: '2021-08-24'
+summary: 'There is a significant amount of scaffolding needed to be done when starting a new Express project. I present my tools for your convenience.'
+image: 'blog/banner-express-starter.png'
+tags: 'node, express, server, configuration, workflow, eslint, docker, openapi'
+---
+
+## Introductory section
+
+In this article I am describing a list of comprehensive steps, configurations and packages that I am using when creating
+a NodeJS project that is developed in a Docker container. This is going to be a long path to completion, but at the end
+of the rainbow I have a special tool that would make things fairly easier.
+
+
+## Table of Contents
+
+## Setting the package
+
+For the initial step we will create a basic configuration in the project directory. This includes a standard
+`package.json` and a license.
+
+```json:package.json
+{
+  "main": "src/index.mjs",
+  "type": "module",
+  "engines": {
+    "node": "14.x",
+    "npm": "7.x"
+  },
+  "scripts": {
+    "start": "node src/index.mjs",
+    "dev": "nodemon src/index.mjs",
+    "lint": "eslint -c .eslintrc .",
+    "test": "echo 'OK'"
+  },
+  "lint-staged": {
+    "*.{js,jsx,mjs,ts,tsx}": [
+      "prettier --staged --write",
+      "eslint --cache -c .eslintrc --fix"
+    ]
+  },
+  "license": "MIT"
+}
+```
+
+You can find the [MIT license](https://mit-license.org/) which should be the template for your
+`LICENSE.md` file. Don't forget to change the "copyright holders" placeholder.
+
+## Configurations
+
+We will add a set of configurations for environment variables, ESLint and Prettier. A Node-specific
+[.gitignore](https://www.toptal.com/developers/gitignore/api/node,vscode,macos) can be generated using Toptal's tool.
+
+```:.env.example
+NODE_ENV=development
+PORT=8080
+MY_SECRET=sosecret
+```
+
+```:.eslintignore
+!**/.eslintrc*
+**/build*
+**/node_modules*
+*.ico
+*.json
+*.lock
+*.log
+*.md
+*.svg
+.gitignore
+.npmignore
+coverage
+dist
+```
+
+```json:.eslintrc
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2020": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:security/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "security"
+  ],
+  "rules": {
+    "no-console": "warn",
+    "no-nested-ternary": "off"
+  }
+}
+```
+
+```json:.prettierrc
+{
+  "printWidth": 120,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "endOfLine": "lf"
+}
+```
+
+Finally, we are going to create a standard folder structure for our work:
+
+```bash
+## Create directory structure
+mkdir -p src/{api,utils,modules}
+```
+
+## OpenAPI
+
+[OpenAPI](https://spec.openapis.org/oas/v3.1.0.html) represents the current de-facto standard for specifying a HTTP APIs,
+making it both human and machine readable, with the advantages of verification, automation and communication of common
+interfaces inside a project and between projects. I tend to use OpenAPIs as a request response validation tool, but it
+can be used even as the first step of any API, at the conceptual phase. We start our project with a basic,
+undifferentiated spec.
+
+```yaml:./src/api/openapi.yml
+openapi: 3.0.0
+info:
+  title: project name
+  version: '1.0'
+  contact:
+    name: project
+    email: email@example.domain.com
+  description: An OpenAPI specification
+  license:
+    name: MIT
+    url: ../../LICENSE.md
+servers:
+  - url: 'http://localhost:3000/api'
+tags:
+  - name: user
+    description: A user of the app
+paths: {}
+components:
+  schemas: {}
+```
+
+## Docker
+
+Increasing both development speed and ease, having a Docker-capable project from the start can improve the quality of
+your work later, so we create a set of files that are sufficient for a small backend server. At any time, the backend
+can be extended by adding external loggin, API gateways using [Kong](https://konghq.com/) or databases, making the
+project almost ready for deployment.
+
+```:.dockerignore
+node_modules/
+*.rest
+.env.example
+.eslintignore
+.eslintrc
+.gitignore
+.prettierrc
+CHANGELOG.md
+LICENSE.md
+README.md
+docker-compose.yml
+```
+
+```Dockerfile:Dockerfile
+FROM node:14.16.0-alpine
+
+WORKDIR /home/node/app
+
+COPY package*.json ./
+
+RUN apk add --no-cache git && npm ci
+
+CMD ["node", "src/index.js"]
+
+USER node
+
+HEALTHCHECK --interval=2m --timeout=10s --retries=5 \
+  CMD node ./src/healthcheck.mjs
+```
+
+```yaml:docker-compose.yml
+version: '3.8'
+
+services:
+  project:
+    container_name: project-service
+    build: .
+    command: ['npm', 'run', 'dev']
+    environment:
+      NODE_ENV: ${NODE_ENV}
+      PORT: ${PORT}
+      MY_SECRET: ${MY_SECRET}
+    ports:
+      - ${PORT}:${PORT}
+    networks:
+      - project_network
+    volumes:
+      - ./src:/home/node/app/src
+    init: true
+
+networks:
+  project_network:
+```
+
+We need to make an actual environment variables file (starting with the given example). Building an image will be
+possible at the end of the setup.
+
+```bash
+# Create a local environment variables file
+cp .env.example .env
+
+# Build and run the Docker image
+docker-compose up --build
+```
+
+## Base packages
+
+At this point we will be installing a number of packages that form the core of our application. In order, they are:
+
+- Express and various middlware for error handling ([express-async-errors](https://github.com/davidbanham/express-async-errors)),
+secure HTTP headers ([helmet](https://github.com/helmetjs/helmet) and [cors](https://github.com/expressjs/cors)),
+logging ([morgan](https://github.com/expressjs/morgan) and [tslog](https://github.com/fullstack-build/tslog)), OpenAPI
+requests validation ([express-openapi-validator](https://github.com/cdimascio/express-openapi-validator))
+- project management such as formatting ([prettier](https://github.com/prettier/prettier)), linting
+([eslint](https://github.com/eslint/eslint) and its plugins), checked out file actions
+([lint-staged](https://github.com/okonet/lint-staged))
+- live code reload using [nodemon](https://github.com/remy/nodemon)
+- a practical fetching library [node-fetch](https://github.com/node-fetch/node-fetch)
+- Docker production secret management with [docker-secret](https://github.com/hwkd/docker-secret)
+
+You can see other potential packages (depending om the actual usecase) at the [end of the article](#see-also).
+
+```bash
+# Install express and base packages
+npm i express express-async-errors helmet cors morgan tslog express-openapi-validator
+
+# ESLint, Prettier, lint-staged
+npm i -D eslint prettier lint-staged eslint-config-prettier eslint-plugin-prettier eslint-plugin-security
+
+# nodemon helps with live development
+npm i -D nodemon
+
+# Easy to use fetching library
+npm i node-fetch
+
+# When using secrets in docker
+npm i docker-secret
+```
+
+
+We initialize a git repository in order to set up the next package.
+
+```bash
+git init
+```
+
+We shouldn't forget to add [husky](https://typicode.github.io/husky/) in order to use git hooks that assure our code
+quality, such as consistent formatting, respecting ESLint rules and running security checks. Tests are also welcome.
+
+```bash
+# Initialize the git hooks and add a standard `pre-commit` hook
+npx husky-init && npm install
+
+# Manually change the command in the `./.husky/pre-commit` to
+# npx lint-staged
+```
+
+
+## Base source code
+
+It is now finally time to write the base source code. The following snippets will take advantage or complete all the
+previous steps.
+
+### Utilities
+
+First we get some utilities set up, like `config.mjs` and `logger.mjs` for reading configurations from environment
+variables and logging events respecively.
+
+```js:src/utils/config.mjs
+import getSecret from 'docker-secret'
+
+// constants
+const DEV = 'development'
+
+// configurations
+const PORT = process.env.PORT || 8080
+const NODE_ENV = process.env.NODE_ENV || DEV
+const MY_SECRET = NODE_ENV === DEV ? process.env.MY_SECRET : getSecret(process.env.MY_SECRET_FILE)
+
+export default {
+  PORT,
+  NODE_ENV,
+  MY_SECRET,
+}
+```
+
+```js:src/utils/logger.mjs
+import { Logger } from 'tslog'
+
+const logger = new Logger({
+  name: 'log',
+  displayLoggerName: false,
+  printLogMessageInNewLine: true,
+  overwriteConsole: true,
+})
+
+export default logger
+```
+
+Both `ServerError.mjs` and `middleware.mjs` refer to error handling, either being a base error class or a set of
+Express middleware functions to inject directly into our pipeline.
+
+```js:src/utils/ServerError.mjs
+class ServerError extends Error {
+  constructor(message, httpStatus) {
+    super(message)
+    this.name = this.constructor.name
+    this.httpStatus = httpStatus || 500
+    Error.captureStackTrace(this, this.constructor)
+  }
+}
+
+export default ServerError
+```
+
+```js:src/utils/middleware.mjs
+import logger from './logger.mjs'
+
+export const unknownEndpoint = (_req, res) => {
+  res.status(404).send({ error: 'unknown endpoint' })
+}
+
+export const errorHandler = (err, _req, res, next) => {
+  if (res.headersSent) return next(err)
+
+  logger.error(err)
+
+  const status = err.httpStatus ?? 500
+  const message = err.message ?? 'Something Bad Happened'
+
+  res.status(status).json({ message })
+}
+
+export default {
+  unknownEndpoint,
+  errorHandler,
+}
+```
+
+Finally, some short utility functions to ease the use of fetch calls.
+
+```js:src/utils/utils.mjs
+import fetch from 'node-fetch'
+import ServerError from './ServerError.mjs'
+
+const checkStatus = (response) => {
+  if (response.ok) return response
+  else throw new ServerError(response.statusText, response.status)
+}
+
+export const fetcher = async (...params) => {
+  const response = await fetch(...params)
+  checkStatus(response)
+
+  return await response.json()
+}
+
+export default { fetcher }
+```
+
+### Main modules
+
+Before we actually start the app, we will set up a healthcheck script that was previously referenced in out `Dockerfile`.
+Its use might not be obvious in the normal case, but it manages to answer status requests and verify that the state of
+our server is still running.
+
+```js:src/healthcheck.mjs
+/* eslint-disable no-console */
+import http from 'http'
+
+const options = {
+  method: 'get',
+  host: 'localhost',
+  path: '/liveliness',
+  port: process.env.PORT,
+  timeout: 2000,
+}
+
+const request = http
+  .request(options, (res) => {
+    console.log(`STATUS: ${res.statusCode}`)
+
+    if (res.statusCode == 200) process.exit(0)
+    process.exit(1)
+  })
+  .on('error', function (err) {
+    console.log('ERROR: ', err)
+    process.exit(1)
+  })
+
+request.end()
+```
+
+In our main script, we create an Express app and start an HTTP server running that app.
+
+```js:src/index.mjs
+import http from 'http'
+import app from './app.mjs'
+import config from './utils/config.mjs'
+import logger from './utils/logger.mjs'
+
+/****** Starting server ******/
+
+const server = http.createServer(app)
+
+server.listen(config.PORT, () => {
+  logger.info(`Server listening on port ${config.PORT} an running in ${config.NODE_ENV} mode`)
+})
+```
+
+Our app uses the common middleware for HTTP headers, parsing request bodies into json and request logging. We further
+connect the OpenAPIValidator running with the spec defined above and use a set of routes defined in our router module.
+Finally, we declare an endpoint that answers the liveliness probe and catch all other async errors.
+
+```js:src/app.mjs
+import cors from 'cors'
+import express from 'express'
+import 'express-async-errors'
+import OpenApiValidator from 'express-openapi-validator'
+import helmet from 'helmet'
+import morgan from 'morgan'
+// Local imports
+import routes from './routes.mjs'
+import config from './utils/config.mjs'
+import logger from './utils/logger.mjs'
+import middleware from './utils/middleware.mjs'
+
+// Starting app
+const app = express()
+logger.info(`Connecting to ${config.PORT}`)
+
+/****** Middleware ******/
+
+// Base middleware
+app.use(helmet())
+app.use(cors())
+app.use(express.json())
+app.use(
+  morgan(`:remote-addr - :remote-user [:date[web]] ':method :url HTTP/:http-version' :status :res[content-length]`),
+)
+
+// OpenAPI middleware
+app.use(
+  OpenApiValidator.middleware({
+    apiSpec: './src/api/openapi.yaml',
+    validateRequests: true,
+    validateResponses: {
+      removeAdditional: 'failing',
+    },
+    ignorePaths: /.*\/hello$/, // After defining OpenAPI for more paths, you can remove this
+  }),
+)
+
+// Use routed endpoints
+app.use('/api', routes)
+
+// Heathcheck endpoint
+app.get('/liveliness', (_, res) => {
+  res.status(200).end()
+})
+
+// Error handler custom middleware
+app.use(middleware.errorHandler)
+
+export default app
+```
+
+For the routes themselves, we just introduce a standard `/hello` route to test in the most general way that a `GET`
+request works properly.
+
+```js:src/routes.mjs
+import { Router } from 'express'
+
+const router = Router()
+
+router.get('/hello', async (_, res) => {
+  res.json({ message: 'world' })
+})
+
+export default router
+```
+
+## Final details
+
+At this point, you can create the initial commit (or use `git cz` if you've read my previous
+[article](/blog/commits-and-versioning) and now use Commitizen) and start working on your real work.
+
+I am aware that the above seem to be a numerous set of steps that might not alll be necessary, especially for a small
+scale microservice. The truth is that this article has the purpose of putting all those step in a logical order, exactly
+because it is a complex process. However, I can try to better help you right now. You can use my own **NPM package**,
+[create-edo-app](https://www.npmjs.com/package/@vanntile/create-edo-app) that helps starting this project only using
+an `npx` call. It is a work in progress, so I recommend careful consideration when using my boilerplate, templetized
+package, but I trust that at some point in the future I will start all my Express servers using this one.
+
+
+## See also
+
+- rate limiting with [node-rate-limiter-flexible](https://github.com/animir/node-rate-limiter-flexible)
+- [safe-regex](https://github.com/substack/safe-regex)
+- CSRF protection with [csurf](https://github.com/expressjs/csurf)
+- file uploading with [multer](https://github.com/expressjs/multer)
+- data encryption with [node-argon2](https://github.com/ranisalt/node-argon2)
+- authentication with [passport](https://github.com/jaredhanson/passport)
+- [The best way to securely manage user sessions](https://supertokens.io/blog/the-best-way-to-securely-manage-user-sessions)
+- One Time Password (OTP) with [otplib](https://github.com/yeojz/otplib)
+- session middleware for JWT with [jwt-redis-session](https://github.com/azuqua/jwt-redis-session) or [redis-jwt](https://github.com/kevoj/redis-jwt)

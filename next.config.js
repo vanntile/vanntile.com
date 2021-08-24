@@ -1,28 +1,14 @@
-const mdx = require('@next/mdx')
-const mdxPrism = require('mdx-prism')
-const { PHASE_DEVELOPMENT_SERVER } = require('next/constants')
 const { createSecureHeaders } = require('next-secure-headers')
-const reHeadings = require('remark-autolink-headings')
-const reCodeTitles = require('remark-code-titles')
-const reHint = require('remark-hint')
-const reHtml = require('remark-html')
-const reSlug = require('remark-slug')
-const reTOC = require('remark-toc')
 
 const isProd = process.env.NODE_ENV === 'production'
 
-const withMDX = mdx({
-  options: {
-    remarkPlugins: [reTOC, reCodeTitles, reSlug, reHeadings, reHint, reHtml],
-    rehypePlugins: [mdxPrism],
-  },
-})
+// TODO: HTTPS redirect
 
-module.exports = withMDX({
-  future: {
-    webpack5: true,
+module.exports = {
+  experimental: {
+    esmExternals: true,
   },
-  pageExtensions: ['mdx', 'ts', 'tsx'],
+  pageExtensions: ['mdx', 'tsx'],
   poweredByHeader: false,
   async headers() {
     return [
@@ -40,25 +26,43 @@ module.exports = withMDX({
               styleSrc: ["'self'", "'unsafe-inline'", isProd ? null : "'unsafe-eval'"],
               fontSrc: "'self'",
               objectSrc: "'none'",
+              mediaSrc: "'none'",
               frameAncestors: "'none'",
               formAction: "'none'",
+              workerSrc: "'none'",
               baseURI: "'self'",
-              'require-trusted-types-for': "'script'",
             },
           },
-          forceHTTPSRedirect: [true, { maxAge: 60 * 60 * 24 * 4, includeSubDomains: true }],
+          forceHTTPSRedirect: [true, { maxAge: 60 * 60 * 24 * 365, includeSubDomains: true, preload: true }],
           referrerPolicy: 'same-origin',
         }),
       },
       {
         source: '/(.*)',
         headers: [
+          // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control
+          {
+            key: 'X-DNS-Prefetch-Control',
+            value: 'on',
+          },
+          // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy
+          // Opt-out of Google FLoC: https://amifloced.org/
           {
             key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=()',
+            value: 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
           },
         ],
       },
     ]
   },
-})
+}

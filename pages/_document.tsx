@@ -28,7 +28,7 @@ export default class CustomDocument extends Document {
             crossOrigin="anonymous"
           />
         </Head>
-        <body>
+        <body className="selection:bg-brand selection:text-gray-50 dark:selection:bg-gray-100 dark:selection:text-brand">
           <Main />
           <NextScript />
         </body>
