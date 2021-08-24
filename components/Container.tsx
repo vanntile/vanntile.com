@@ -28,11 +28,8 @@ const Container: React.FC<Props> = ({ children, ...customMeta }: Props): JSX.Ele
     <div className="w-full min-h-screen bg-white max-w-none dark:bg-gray-900">
       <Head>
         <title>{meta.title}</title>
-        <meta content="text/html; charset=utf-8" httpEquiv="content-type" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="robots" content="follow, index" />
-        <meta name="theme-color" content="#3429AA" />
-        <meta name="color-scheme" content="dark light"></meta>
         <meta name="application-name" content={meta.title} />
         <meta name="author" content="vanntile" />
         <meta name="description" content={meta.description} />
@@ -41,7 +38,7 @@ const Container: React.FC<Props> = ({ children, ...customMeta }: Props): JSX.Ele
         <meta property="og:type" content={meta.type} />
         {meta.type === 'article' && (
           <>
-            {meta.date && <meta property="article:author" content="https://www.facebook.com/vanntile/" />}
+            <meta property="article:author" content="https://www.facebook.com/vanntile/" />
             {meta.date && <meta property="article:published_time" content={meta.date} />}
           </>
         )}
@@ -53,12 +50,39 @@ const Container: React.FC<Props> = ({ children, ...customMeta }: Props): JSX.Ele
         <meta property="og:image:width" content="1600" />
         <meta property="og:image:height" content="800" />
         <meta property="og:locale" content="en_US" />
-        <meta property="twitter:domain" content="vanntile.com"></meta>
+        <meta property="twitter:domain" content="vanntile.com" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@vanntile" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={`https://vanntile.com/images/${meta.image}`} />
+        {meta.type === 'article' && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'BlogPosting',
+                headline: meta.title,
+                image: meta.image,
+                author: {
+                  '@type': 'Person',
+                  name: 'vanntile',
+                  url: 'https://vanntile.com',
+                },
+                keywords: meta.tags ? meta.tags.replace(',', '') : undefined,
+                wordcount: meta.wordcount ? meta.wordcount : undefined,
+                url: `https://vanntile.com${router.asPath}`,
+                mainEntityOfPage: {
+                  '@type': 'WebPage',
+                  '@id': 'https://google.com/article',
+                },
+                datePublished: meta.date ? meta.date : undefined,
+                description: meta.description,
+              }),
+            }}
+          />
+        )}
       </Head>
       {router.asPath === '/' ? (
         <main className="flex flex-col justify-center bg-gray-900 text-brand-tint home">{children}</main>

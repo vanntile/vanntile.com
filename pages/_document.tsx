@@ -13,6 +13,7 @@ export default class CustomDocument extends Document {
           <meta name="apple-mobile-web-app-title" content="vanntile's portfolio" />
           <meta name="application-name" content="vanntile's portfolio" />
           <meta name="theme-color" content="#3429aa" />
+          <meta name="color-scheme" content="dark light" />
           <link
             rel="preload"
             href="/fonts/Objectivity-Regular.woff2"

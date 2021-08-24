@@ -13,6 +13,7 @@ const BlogLayout = ({
     date={new Date(publishedAt).toISOString()}
     image={image}
     type="article"
+    wordcount={reading.words}
   >
     <article className="flex flex-col items-start justify-center">
       <h1>{title}</h1>
