@@ -67,42 +67,32 @@ const IndexPage: NextPage = () => {
           <a className="visuallyhidden" href="#section-tech">
             Skip to main content
           </a>
-          <p>
+          <p className="md:text-lg 2xl:text-2xl">
             Are you searching for a practical enthusiast for your <span className={styles.highlight}>project</span>?
           </p>
-          <p className="max-w-lg 2xl:max-w-5xl">
+          <p className="max-w-2xl md:text-lg 2xl:max-w-5xl 2xl:text-2xl">
             I speak the languages of both <span className={styles.highlight}>engineering and aesthetics</span>, being
-            perfectly positioned to formulate the path of a feasible product with customer experience in mind. My
-            preferred work is <span className={styles.highlight}>fullstack development</span>. I&apos;m using the best
-            tool for the job, <br className="hidden md:inline-block 2xl:hidden" /> be it a reliable framework or the
-            latest web features.
+            <br className="hidden md:inline-block 2xl:hidden" /> perfectly positioned to formulate the path of a
+            feasible product with customer experience in mind. My preferred work is{' '}
+            <span className={styles.highlight}>fullstack development</span>. I&apos;m using the best tool for the job,
+            be it a reliable framework or the latest web features.
           </p>
-          <p className="max-w-lg 2xl:max-w-5xl">
-            Neither impressive interfaces nor blazing performance are{' '}
-            <br className="hidden md:inline-block 2xl:hidden" /> the solution, but the{' '}
-            <span className={styles.highlight}>balance</span> between a maintainable implementation and user-focused
-            functionality.
+          <p className="max-w-2xl md:text-lg 2xl:max-w-5xl 2xl:text-2xl">
+            Neither impressive interfaces nor blazing performance are the solution, but the{' '}
+            <span className={styles.highlight}>balance</span> between a maintainable implementation and
+            <br className="hidden md:inline-block 2xl:hidden" /> user-focused functionality.
           </p>
-          <div className="flex flex-row mt-8 space-x-2">
-            <a
-              className="px-4 py-2 border-2 border-current text-brand-accent hover:text-brand-accent"
-              href="#section-tech"
-            >
+          <div className="flex flex-row flex-wrap mt-8 space-x-2">
+            <a className={styles.cta} href="#section-tech">
               techstack
             </a>
-            <a
-              className="px-4 py-2 border-2 border-current text-brand-accent hover:text-brand-accent"
-              href="#section-experience"
-            >
+            <a className={styles.cta} href="#section-experience">
               experience
             </a>
             <Link href={`/blog`}>
-              <a className="px-4 py-2 border-2 border-current text-brand-accent hover:text-brand-accent">blog</a>
+              <a className={styles.cta}>blog</a>
             </Link>
-            <a
-              className="px-4 py-2 border-2 border-current text-brand-accent hover:text-brand-accent"
-              href="#section-contact"
-            >
+            <a className={styles.cta} href="#section-contact">
               contact
             </a>
           </div>
@@ -144,9 +134,11 @@ const IndexPage: NextPage = () => {
           tags={['JavaScript', 'TypeScript', 'CSS3', 'Python 3', 'C++', 'Haskell']}
           additionalClasses="text-brand-accent bg-gray-800"
         />
+        <span className="block font-bold">Standards &amp; paradigms</span>
+        <Tags tags={['OpenAPI', 'REST', 'GraphQL']} additionalClasses="text-brand-accent bg-gray-800" />
         <span className="block font-bold">Frameworks &amp; tools</span>
         <Tags
-          tags={['Angular', 'React', 'NextJS', 'NodeJS', 'Docker', 'Heroku', 'git']}
+          tags={['React', 'NextJS', 'Angular', 'NodeJS', 'FastAPI', 'Docker', 'Heroku', 'git']}
           additionalClasses="text-brand-accent bg-gray-800"
         />
         <span className="block font-bold">Design tools &amp; knowledge</span>
@@ -214,7 +206,7 @@ const IndexPage: NextPage = () => {
         </div>
         <ContactForm />
       </section>
-      <footer className={`${styles.hSection} py-20 border-t-2 border-brand-accent`}>
+      <footer className={`${styles.hSection} py-14 border-t-2 border-brand-accent`}>
         Designed &amp; built by vanntile
       </footer>
     </Container>
