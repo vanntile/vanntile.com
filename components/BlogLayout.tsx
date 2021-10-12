@@ -1,4 +1,6 @@
-import { ArticleDate, Container } from '@vcomponents'
+import { Container } from '@vcomponents'
+import format from 'date-fns/format'
+import parseISO from 'date-fns/parseISO'
 
 const BlogLayout = ({
   children,
@@ -18,7 +20,7 @@ const BlogLayout = ({
     <article className="flex flex-col items-start justify-center">
       <h1>{title}</h1>
       <div className="text-gray-400 dark:text-brand-secondary">
-        <ArticleDate dateString={publishedAt} />, {reading.text}
+        <time dateTime={publishedAt}>{format(parseISO(publishedAt), 'LLLL d, yyyy')}</time>, {reading.text}
       </div>
       <div className="max-w-full">{children}</div>
     </article>
