@@ -19,9 +19,7 @@ const Blog: NextPage<Props> = ({ allPosts }) => (
         <Link href={`/blog/${slug}`}>{title}</Link>
         <p className="pl-2">{summary}</p>
         <Link href={`/blog/${slug}`}>
-          <a className="px-4 py-2 border-2 border-current text-brand-accent hover:text-brand-accent dark:text-brand-secondary dark:hover:text-brand-secondary">
-            Read more...
-          </a>
+          <a className="cta">Read more</a>
         </Link>
       </div>
     ))}

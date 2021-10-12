@@ -83,16 +83,16 @@ const IndexPage: NextPage = () => {
             <br className="hidden md:inline-block 2xl:hidden" /> user-focused functionality.
           </p>
           <div className="flex flex-row flex-wrap mt-8 space-x-2">
-            <a className={styles.cta} href="#section-tech">
+            <a className="cta" href="#section-tech">
               techstack
             </a>
-            <a className={styles.cta} href="#section-experience">
+            <a className="cta" href="#section-experience">
               experience
             </a>
             <Link href={`/blog`}>
-              <a className={styles.cta}>blog</a>
+              <a className="cta">blog</a>
             </Link>
-            <a className={styles.cta} href="#section-contact">
+            <a className="cta" href="#section-contact">
               contact
             </a>
           </div>

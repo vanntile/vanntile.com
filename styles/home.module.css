@@ -135,7 +135,3 @@
     @apply max-w-6xl;
   }
 }
-
-.cta {
-  @apply px-4 py-2 mb-2 border-2 border-current text-brand-accent hover:text-brand-accent;
-}

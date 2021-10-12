@@ -276,3 +276,9 @@ pre::-webkit-scrollbar {
 .will-change {
   will-change: transform;
 }
+
+/* Common styles */
+
+.cta {
+  @apply px-4 py-2 mb-2 border-2 border-current text-brand-accent hover:text-brand-accent;
+}
