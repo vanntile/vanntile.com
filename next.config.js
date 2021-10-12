@@ -27,6 +27,7 @@ module.exports = {
               fontSrc: "'self'",
               objectSrc: "'none'",
               mediaSrc: "'none'",
+              imgSrc: ["'self'", 'data:'],
               frameAncestors: "'none'",
               formAction: "'none'",
               workerSrc: "'none'",

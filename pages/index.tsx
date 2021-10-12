@@ -1,10 +1,17 @@
 import { ContactForm, Container, ExperienceTabs, Tags, TriangleDivider } from '@vcomponents'
+import { getSortedPostsData } from '@vlib/mdx'
 import svg from '@vlib/svgPaths'
 import useIntersection from '@vlib/useIntersection'
 import styles from '@vstyles/home.module.css'
-import { NextPage } from 'next'
+import { GetStaticProps, NextPage } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useRef } from 'react'
+import deckPage1 from '../public/images/deck/page.1.webp'
+
+interface Props {
+  blogPosts: MDXFile[]
+}
 
 interface ExternalSVG {
   href: string
@@ -40,7 +47,7 @@ const externals: ExternalSVG[] = [
   },
 ]
 
-const IndexPage: NextPage = () => {
+const IndexPage: NextPage<Props> = ({ blogPosts }) => {
   const techSectionRef = useRef(null)
   const ExperienceTabsRef = useRef(null)
   const logomarkInt = useIntersection(techSectionRef, { root: null, rootMargin: '0px', threshold: 0.4 })
@@ -89,9 +96,12 @@ const IndexPage: NextPage = () => {
             <a className="cta" href="#section-experience">
               experience
             </a>
-            <Link href={`/blog`}>
-              <a className="cta">blog</a>
-            </Link>
+            <a className="cta" href="#section-design">
+              design
+            </a>
+            <a className="cta" href="#section-blog">
+              blog
+            </a>
             <a className="cta" href="#section-contact">
               contact
             </a>
@@ -176,9 +186,46 @@ const IndexPage: NextPage = () => {
         <ExperienceTabs />
         <TriangleDivider color="text-gray-900" />
       </section>
-      <section className={`${styles.hSection} mb-32`}>
+      <section className={`${styles.hSection} pb-2 mb-16`}>
+        <h2 id="section-blog" className="text-current md:text-4xl">
+          ./blog/coding/latest
+        </h2>
+        {blogPosts.map(({ frontMatter: { slug, title, summary, publishedAt } }) => (
+          <div key={slug} className="py-4">
+            <p className="my-0">{publishedAt}</p>
+            <Link href={`/blog/${slug}`}>
+              <a className="text-brand-accent">{title}</a>
+            </Link>
+            <p className="my-1">{summary}</p>
+          </div>
+        ))}
+        <div className="my-6">
+          <span className="pr-4 md:text-xl">...or </span>
+          <Link href={`/blog`}>
+            <a className="cta">Check all blog posts</a>
+          </Link>
+        </div>
+      </section>
+      <section className={`${styles.hSection} pb-2 mb-16`}>
+        <h2 id="section-design" className="text-current md:text-4xl">
+          ./blog/design/featured
+        </h2>
+        <Link href={`/design/brand-book`} passHref={true}>
+          <div className="relative cursor-pointer md:-mx-6 group bg-brand">
+            <div className="transition transform scale-100 blur-none group-hover:blur-sm group-hover:scale-90 group-hover:mix-blend-lighten">
+              <Image src={deckPage1} alt="vanntile brand deck cover page" />
+            </div>
+            <div className="absolute top-0 left-0 grid items-center justify-center w-full h-full">
+              <h3 className="pt-2 pl-4 my-0 text-2xl text-gray-100 border-l-8 opacity-0 md:text-5xl group-hover:opacity-100 border-brand-accent">
+                Brand book
+              </h3>
+            </div>
+          </div>
+        </Link>
+      </section>
+      <section className={`${styles.hSection} mb-16`}>
         <h2 id="section-contact" className="text-current md:text-4xl">
-          ./contact
+          ./public/contact
         </h2>
         <p>You can find me here and there.</p>
         <div className="flex flex-row flex-wrap mb-8 space-x-4 md:space-x-8">
@@ -212,5 +259,9 @@ const IndexPage: NextPage = () => {
     </Container>
   )
 }
+
+export const getStaticProps: GetStaticProps<Props> = async () => ({
+  props: { blogPosts: (await getSortedPostsData('posts')).slice(0, 3) },
+})
 
 export default IndexPage
