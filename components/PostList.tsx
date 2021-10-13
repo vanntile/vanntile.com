@@ -15,7 +15,7 @@ const PostList = ({ posts, readMore }: Props): JSX.Element => (
           <time dateTime={publishedAt}>{format(parseISO(publishedAt), 'LLLL d, yyyy')}</time>
         </p>
         <Link href={`/blog/${slug}`}>
-          <a className="text-brand-accent">{title}</a>
+          <a className="text-brand dark:text-brand-accent">{title}</a>
         </Link>
         <p className="my-1">{summary}</p>
         {readMore && (
