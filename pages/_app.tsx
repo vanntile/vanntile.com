@@ -18,7 +18,7 @@ Router.events.on('routeChangeComplete', () => done())
 Router.events.on('routeChangeError', () => done())
 
 const App: NextPage<Props> = ({ Component, pageProps }) => (
-  <ThemeProvider attribute="class" defaultTheme="dark">
+  <ThemeProvider attribute="class" forcedTheme={(Component as unknown as { theme: string }).theme || undefined}>
     <MDXProvider components={MDXComponents}>
       <Component {...pageProps} />
     </MDXProvider>

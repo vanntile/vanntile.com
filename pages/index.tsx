@@ -47,7 +47,7 @@ const externals: ExternalSVG[] = [
   },
 ]
 
-const IndexPage: NextPage<Props> = ({ blogPosts }) => {
+const IndexPage: NextPage<Props> & { theme: string } = ({ blogPosts }) => {
   const techSectionRef = useRef(null)
   const ExperienceTabsRef = useRef(null)
   const logomarkInt = useIntersection(techSectionRef, { root: null, rootMargin: '0px', threshold: 0.4 })
@@ -246,4 +246,5 @@ export const getStaticProps: GetStaticProps<Props> = async () => ({
   props: { blogPosts: await getSortedPostsData('posts') },
 })
 
+IndexPage.theme = 'dark'
 export default IndexPage
