@@ -2,7 +2,7 @@ interface Props {
   color: string
 }
 
-const TriangleDivider: React.FC<Props> = ({ color }): JSX.Element => (
+const TriangleDivider: React.FC<Props> = ({ color }) => (
   <div
     className="absolute bottom-0 left-0 right-0 top-auto w-full overflow-hidden pointer-events-none"
     style={{ height: '80px' }}

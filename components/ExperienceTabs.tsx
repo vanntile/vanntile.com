@@ -1,9 +1,9 @@
 import { Tags } from '@vcomponents'
 import styles from '@vstyles/home.module.css'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { resetIdCounter, Tab, TabList, TabPanel, Tabs } from 'react-tabs'
 
-const ExperienceTabs = (): JSX.Element => {
+const ExperienceTabs: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState(0)
 
   resetIdCounter()

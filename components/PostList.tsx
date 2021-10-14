@@ -7,7 +7,7 @@ interface Props {
   readMore?: boolean
 }
 
-const PostList = ({ posts, readMore }: Props): JSX.Element => (
+const PostList: React.FC<Props> = ({ posts, readMore }) => (
   <>
     {posts.map(({ frontMatter: { slug, title, summary, publishedAt } }) => (
       <div key={slug} className="py-4">

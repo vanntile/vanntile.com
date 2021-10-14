@@ -1,3 +1,4 @@
+import { heavyComponents } from '@vcomponents'
 import fs from 'fs'
 import matter from 'gray-matter'
 import mdxPrism from 'mdx-prism'
@@ -45,6 +46,10 @@ export const getFileBySlug = async (slug: string, subfolder?: string): Promise<M
     },
   })
 
+  const componentNames = Object.keys(heavyComponents)
+    .map((e) => (new RegExp(e).test(content) ? e : null))
+    .filter(Boolean) as string[]
+
   return {
     contentMDX,
     frontMatter: {
@@ -52,6 +57,7 @@ export const getFileBySlug = async (slug: string, subfolder?: string): Promise<M
       ...(data as PageMeta),
       reading: readingTime(content),
     },
+    componentNames,
   }
 }
 

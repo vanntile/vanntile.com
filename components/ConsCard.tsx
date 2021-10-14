@@ -1,4 +1,9 @@
-const ConsCard = ({ title, cons }: { title: string; cons: string[] }): JSX.Element => (
+interface Props {
+  title: string
+  cons: string[]
+}
+
+const ConsCard: React.FC<Props> = ({ title, cons }) => (
   <div className="w-full px-6 pt-4 pb-2 my-6 border border-red-200 rounded dark:border-red-900 bg-red-50 dark:bg-red-800 dark:text-gray-100">
     <span>{`You might not use ${title} if...`}</span>
     <div className="mt-4">

@@ -1,4 +1,9 @@
-const ProsCard = ({ title, pros }: { title: string; pros: string[] }): JSX.Element => (
+interface Props {
+  title: string
+  pros: string[]
+}
+
+const ProsCard: React.FC<Props> = ({ title, pros }) => (
   <div className="w-full px-6 pt-4 pb-2 my-4 border border-green-200 rounded dark:border-green-900 bg-green-50 dark:bg-green-800 dark:text-gray-100">
     <span>{`You might use ${title} if...`}</span>
     <div className="mt-4">

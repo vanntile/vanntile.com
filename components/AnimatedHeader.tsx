@@ -1,6 +1,7 @@
 import styles from '@vstyles/home.module.css'
+import React from 'react'
 
-const AnimatedHeader = (): JSX.Element => (
+const AnimatedHeader: React.FC = () => (
   <h1 className="mb-2 font-mono text-4xl text-gray-100 md:text-6xl">
     hi, I&apos;m <br className="block md:hidden" />
     <span className="relative">

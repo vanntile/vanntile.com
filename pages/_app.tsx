@@ -1,5 +1,3 @@
-import { MDXProvider } from '@mdx-js/react'
-import { MDXComponents } from '@vcomponents'
 import '@vstyles/globals.css'
 import '@vstyles/nprogress.css'
 import { NextPage } from 'next'
@@ -19,9 +17,7 @@ Router.events.on('routeChangeError', () => done())
 
 const App: NextPage<Props> = ({ Component, pageProps }) => (
   <ThemeProvider attribute="class" forcedTheme={(Component as unknown as { theme: string }).theme || undefined}>
-    <MDXProvider components={MDXComponents}>
-      <Component {...pageProps} />
-    </MDXProvider>
+    <Component {...pageProps} />
   </ThemeProvider>
 )
 

@@ -1,12 +1,11 @@
 import Link from 'next/link'
-import React from 'react'
 
 interface Props {
   theme: string | undefined
   onClick: React.MouseEventHandler
 }
 
-const Navigation: React.FC<Props> = ({ theme, onClick }): JSX.Element => (
+const Navigation: React.FC<Props> = ({ theme, onClick }) => (
   <nav className="sticky top-0 z-10 flex flex-row items-center justify-end w-full max-w-full gap-8 py-4 mx-auto bg-white md:max-w-3xl 2xl:max-w-6xl dark:bg-gray-900">
     <Link href="/">Home</Link>
     <Link href="/blog">Blog</Link>

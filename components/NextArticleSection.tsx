@@ -1,6 +1,10 @@
 import Link from 'next/link'
+interface Props {
+  link: string
+  title: string
+}
 
-const NextArticleSection = ({ link, title }: { link: string; title: string }): JSX.Element => (
+const NextArticleSection: React.FC<Props> = ({ link, title }) => (
   <div className="flex flex-row justify-between w-full py-12">
     <span>Next article</span>
     <span>

@@ -1,9 +1,9 @@
-import React, { ChangeEvent, useEffect, useState } from 'react'
+import { ChangeEvent, useEffect, useState } from 'react'
 import { Status } from '@vlib/constants'
 
 const SENT = 'Message sent'
 
-const ContactForm: React.FC = (): JSX.Element => {
+const ContactForm: React.FC = () => {
   const [sent, setSent] = useState(false)
   const [disabled, setDisabled] = useState(true)
   const [formName, setFormName] = useState('')

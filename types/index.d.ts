@@ -20,4 +20,5 @@ interface MDXMeta extends PageMeta {
 interface MDXFile {
   contentMDX: import('next-mdx-remote/types').MDXRemoteSerializeResult
   frontMatter: MDXMeta
+  componentNames: string[]
 }

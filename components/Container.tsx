@@ -2,14 +2,14 @@ import { Navigation } from '@vcomponents'
 import { useTheme } from 'next-themes'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 interface Props {
   children: React.ReactNode
   [key: string]: any
 }
 
-const Container: React.FC<Props> = ({ children, ...customMeta }: Props): JSX.Element => {
+const Container: React.FC<Props> = ({ children, ...customMeta }: Props) => {
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
   const router = useRouter()

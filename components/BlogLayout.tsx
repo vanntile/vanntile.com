@@ -2,13 +2,12 @@ import { Container } from '@vcomponents'
 import format from 'date-fns/format'
 import parseISO from 'date-fns/parseISO'
 
-const BlogLayout = ({
-  children,
-  frontMatter: { title, summary, publishedAt, image, reading },
-}: {
+interface Props {
   children: React.ReactNode
   frontMatter: MDXMeta
-}): JSX.Element => (
+}
+
+const BlogLayout: React.FC<Props> = ({ children, frontMatter: { title, summary, publishedAt, image, reading } }) => (
   <Container
     title={title}
     description={summary}
