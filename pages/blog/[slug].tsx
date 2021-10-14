@@ -1,7 +1,6 @@
 import { BlogLayout, defaultComponents, heavyComponents } from '@vcomponents'
 import { getFileBySlug, getSlugs } from '@vlib/mdx'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
-// import dynamic from 'next/dynamic'
 import { MDXRemote } from 'next-mdx-remote'
 import { ParsedUrlQuery } from 'querystring'
 

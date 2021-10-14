@@ -101,7 +101,7 @@ const IndexPage: NextPage<Props> & { theme: string } = ({ blogPosts }) => {
       </section>
       <section
         id="section-tech"
-        className={`${styles.hSection} pt-12 text-gray-800 font-bold bg-brand-accent`}
+        className={`${styles.hSection} pt-12 pb-24 text-gray-800 font-bold bg-brand-accent`}
         ref={techSectionRef}
       >
         <div className="flex flex-col items-center justify-center w-full -my-12">
@@ -153,7 +153,11 @@ const IndexPage: NextPage<Props> & { theme: string } = ({ blogPosts }) => {
         />
         <TriangleDivider color="text-brand" />
       </section>
-      <section id="section-experience" className={`${styles.hSection} bg-brand text-gray-200`} ref={ExperienceTabsRef}>
+      <section
+        id="section-experience"
+        className={`${styles.hSection} pb-24 bg-brand text-gray-200`}
+        ref={ExperienceTabsRef}
+      >
         <div className="flex flex-col items-center justify-center w-full mt-12">
           <svg
             aria-hidden="true"
@@ -176,7 +180,7 @@ const IndexPage: NextPage<Props> & { theme: string } = ({ blogPosts }) => {
         <ExperienceTabs />
         <TriangleDivider color="text-gray-900" />
       </section>
-      <section className={`${styles.hSection} pb-2 mb-16`}>
+      <section className={`${styles.hSection} my-16`}>
         <h2 id="section-blog" className="text-current md:text-4xl">
           ./blog/coding/latest
         </h2>
@@ -188,7 +192,7 @@ const IndexPage: NextPage<Props> & { theme: string } = ({ blogPosts }) => {
           </Link>
         </div>
       </section>
-      <section className={`${styles.hSection} pb-2 mb-16`}>
+      <section className={`${styles.hSection} mb-24`}>
         <h2 id="section-design" className="text-current md:text-4xl">
           ./blog/design/featured
         </h2>
@@ -205,7 +209,7 @@ const IndexPage: NextPage<Props> & { theme: string } = ({ blogPosts }) => {
           </div>
         </Link>
       </section>
-      <section className={`${styles.hSection} mb-16`}>
+      <section className={`${styles.hSection} mb-24`}>
         <h2 id="section-contact" className="text-current md:text-4xl">
           ./public/contact
         </h2>

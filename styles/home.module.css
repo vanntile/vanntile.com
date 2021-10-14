@@ -115,7 +115,7 @@
 }
 
 .hSection {
-  @apply relative w-full px-4 pb-32 mx-auto overflow-hidden;
+  @apply relative w-full px-4 mx-auto overflow-hidden;
   content-visibility: auto;
   contain-intrinsic-size: 1px 1000px;
 }
