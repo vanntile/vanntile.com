@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.3.0](https://github.com/vanntile/vanntile.com/compare/v2.2.1...v2.3.0) (2021-10-17)
+
+
+### Features
+
+* **seo:** :star2: add brand deck page content ([6e0262c](https://github.com/vanntile/vanntile.com/commit/6e0262cbcd89dcee3d1d76092eb784a73c1aa4a8))
+* :star2: add design and blog homepage sections ([ed7d9de](https://github.com/vanntile/vanntile.com/commit/ed7d9deb97499315b60e77cfa3d13c82ab80caee))
+
+
+### Bug Fixes
+
+* **uiux:** :bug: add UI breakpoint ([a2c8c4f](https://github.com/vanntile/vanntile.com/commit/a2c8c4f119d27f9190005b8ebf35f410c4c46552))
+* **uiux:** :bug: change cta and header accents ([6821b52](https://github.com/vanntile/vanntile.com/commit/6821b527e4a5e1481535b4fbc6cd66989dcae073))
+* **uiux:** :bug: fix UI theme switching ([37fec49](https://github.com/vanntile/vanntile.com/commit/37fec4952a33d69ea7a9405d6b212ceb2e86c46f))
+* **uiux:** :bug: update spacing following readability issues ([bae9290](https://github.com/vanntile/vanntile.com/commit/bae9290486a2a869ebd2624a6e4520fb83c145c9))
+
 ### [2.2.1](https://github.com/vanntile/vanntile.com/compare/v2.2.0...v2.2.1) (2021-09-24)
 
 
