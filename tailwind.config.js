@@ -49,5 +49,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require('tailwindcss-visuallyhidden')()],
+  plugins: [require('tailwindcss-visuallyhidden')(), require('tailwindcss-scroll-snap')],
 }

@@ -60,6 +60,7 @@
     "standard-version": "^9.3.1",
     "stylelint-config-recommended": "^5.0.0",
     "tailwindcss": "^2.2.16",
+    "tailwindcss-scroll-snap": "^1.1.0",
     "tailwindcss-visuallyhidden": "^1.0.2",
     "typescript": "4.4"
   },
