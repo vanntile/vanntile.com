@@ -8,6 +8,7 @@ const defaultComponents = {
 }
 
 const heavyComponents = {
+  AnimatedHeader: dynamic(() => import('./AnimatedHeader')),
   ProsCard: dynamic(() => import('./ProsCard')),
   ConsCard: dynamic(() => import('./ConsCard')),
   NextArticleSection: dynamic(() => import('./NextArticleSection')),
