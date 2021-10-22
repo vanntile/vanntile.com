@@ -1,6 +1,4 @@
 import Link from 'next/link'
-import format from 'date-fns/format'
-import parseISO from 'date-fns/parseISO'
 
 interface Props {
   posts: MDXFile[]
@@ -12,7 +10,11 @@ const PostList: React.FC<Props> = ({ posts, readMore }) => (
     {posts.map(({ frontMatter: { slug, title, summary, publishedAt } }) => (
       <div key={slug} className="py-4">
         <p className="my-0">
-          <time dateTime={publishedAt}>{format(parseISO(publishedAt), 'LLLL d, yyyy')}</time>
+          <time dateTime={publishedAt}>
+            {new Intl.DateTimeFormat('en', { year: 'numeric', month: 'long', day: '2-digit' }).format(
+              new Date(publishedAt),
+            )}
+          </time>
         </p>
         <Link href={`/blog/${slug}`}>
           <a className="text-brand dark:text-brand-accent">{title}</a>

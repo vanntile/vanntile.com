@@ -5,13 +5,11 @@
   "dependencies": {
     "abort-controller": "^3.0.0",
     "cors": "^2.8.5",
-    "date-fns": "^2.25.0",
     "form-data": "^4.0.0",
     "gray-matter": "^4.0.3",
     "lru-cache": "^6.0.0",
     "mailgun.js": "^3.5.9",
     "mdx-prism": "^0.3.4",
-    "module-alias": "^2.2.2",
     "next": "^11.1.2",
     "next-mdx-remote": "^3.0.6",
     "next-secure-headers": "^2.2.0",
@@ -28,7 +26,8 @@
     "remark-hint": "^1.0.10",
     "remark-html": "^15.0.0",
     "remark-slug": "^7.0.0",
-    "remark-toc": "^8.0.0"
+    "remark-toc": "^8.0.0",
+    "sharp": "^0.29.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.2.1",
@@ -39,7 +38,6 @@
     "@types/eslint-plugin-prettier": "^3.1.0",
     "@types/lru-cache": "^5.1.1",
     "@types/mdx-js__react": "^1.5.4",
-    "@types/module-alias": "^2.0.1",
     "@types/node": "^16.10.5",
     "@types/nprogress": "^0.2.0",
     "@types/prettier": "^2.4.1",
@@ -77,11 +75,6 @@
       "prettier --staged --write",
       "eslint --cache . --fix"
     ]
-  },
-  "_moduleAliases": {
-    "@vcomponents": "./components/index.ts",
-    "@vlib": "./lib",
-    "@vstyles": "./styles"
   },
   "engines": {
     "node": "14.17.x",

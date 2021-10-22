@@ -1,6 +1,4 @@
 import { Container } from '@vcomponents'
-import format from 'date-fns/format'
-import parseISO from 'date-fns/parseISO'
 
 interface Props {
   children: React.ReactNode
@@ -19,7 +17,12 @@ const BlogLayout: React.FC<Props> = ({ children, frontMatter: { title, summary, 
     <article className="flex flex-col items-start justify-center">
       <h1>{title}</h1>
       <div className="text-gray-400 dark:text-brand-secondary">
-        <time dateTime={publishedAt}>{format(parseISO(publishedAt), 'LLLL d, yyyy')}</time>, {reading.text}
+        <time dateTime={publishedAt}>
+          {new Intl.DateTimeFormat('en', { year: 'numeric', month: 'long', day: '2-digit' }).format(
+            new Date(publishedAt),
+          )}
+        </time>
+        , {reading.text}
       </div>
       <div className="max-w-full">{children}</div>
     </article>

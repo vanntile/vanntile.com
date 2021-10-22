@@ -66,4 +66,4 @@ export const getSortedPostsData = async (subfolder?: string): Promise<MDXFile[]>
     await Promise.all(
       getFiles(subfolder).map(async (fileName) => await getFileBySlug(fileName.replace(/\.mdx$/, ''), subfolder)),
     )
-  ).sort((a, b) => (a.frontMatter.publishedAt < b.frontMatter.publishedAt ? 1 : -1))
+  ).sort((a, b) => new Date(b.frontMatter.publishedAt).getTime() - new Date(a.frontMatter.publishedAt).getTime())
