@@ -20,7 +20,7 @@ module.exports = {
               defaultSrc: "'self'",
               scriptSrc: [
                 "'self'",
-                isProd ? "'sha256-4b6neOQEfz/94vH7nVjqnqWI8K3KNB/U9aK4wMD5oYA='" : "'unsafe-inline'",
+                isProd ? "'sha256-g2oW2Dny7QAk7D0xY1C8Kxov7kkFB5GX6bWOAvf8nuc='" : "'unsafe-inline'",
                 "'unsafe-eval'", // TODO: find a way to MDX without this
               ],
               styleSrc: ["'self'", "'unsafe-inline'", isProd ? null : "'unsafe-eval'"],
