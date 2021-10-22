@@ -1,13 +1,13 @@
 import Link from 'next/link'
 
 interface Props {
-  posts: MDXFile[]
+  posts: PageMeta[]
   readMore?: boolean
 }
 
 const PostList: React.FC<Props> = ({ posts, readMore }) => (
   <>
-    {posts.map(({ frontMatter: { slug, title, summary, publishedAt } }) => (
+    {posts.map(({ slug, title, summary, publishedAt }) => (
       <div key={slug} className="py-4">
         <p className="my-0">
           <time dateTime={publishedAt}>

@@ -8,7 +8,7 @@ module.exports = {
   experimental: {
     esmExternals: true,
   },
-  pageExtensions: ['mdx', 'tsx'],
+  pageExtensions: ['tsx'],
   poweredByHeader: false,
   async headers() {
     return [

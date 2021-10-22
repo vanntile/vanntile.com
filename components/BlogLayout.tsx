@@ -1,11 +1,13 @@
 import { Container } from '@vcomponents'
+import { ReadTimeResults } from 'reading-time'
 
 interface Props {
   children: React.ReactNode
-  frontMatter: MDXMeta
+  meta: PageMeta
+  reading: ReadTimeResults
 }
 
-const BlogLayout: React.FC<Props> = ({ children, frontMatter: { title, summary, publishedAt, image, reading } }) => (
+const BlogLayout: React.FC<Props> = ({ children, meta: { title, summary, publishedAt, image }, reading }) => (
   <Container
     title={title}
     description={summary}

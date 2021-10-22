@@ -1,9 +1,9 @@
 import { Container, PostList } from '@vcomponents'
-import { getSortedPostsData } from '@vlib/mdx'
+import { getPostsMeta } from '@vlib/mdx'
 import { GetStaticProps, NextPage } from 'next'
 
 interface Props {
-  blogPosts: MDXFile[]
+  blogPosts: PageMeta[]
 }
 
 const Blog: NextPage<Props> = ({ blogPosts }) => (
@@ -16,8 +16,6 @@ const Blog: NextPage<Props> = ({ blogPosts }) => (
   </Container>
 )
 
-export const getStaticProps: GetStaticProps<Props> = async () => ({
-  props: { blogPosts: await getSortedPostsData('posts') },
-})
+export const getStaticProps: GetStaticProps<Props> = () => ({ props: { blogPosts: getPostsMeta('posts') } })
 
 export default Blog

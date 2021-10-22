@@ -1,5 +1,5 @@
 import { AnimatedHeader, ContactForm, Container, ExperienceTabs, PostList, Tags, TriangleDivider } from '@vcomponents'
-import { getSortedPostsData } from '@vlib/mdx'
+import { getPostsMeta } from '@vlib/mdx'
 import svg from '@vlib/svgPaths'
 import useIntersection from '@vlib/useIntersection'
 import styles from '@vstyles/home.module.css'
@@ -10,7 +10,7 @@ import { useRef } from 'react'
 import deckPage1 from '../public/images/deck/page.1.webp'
 
 interface Props {
-  blogPosts: MDXFile[]
+  blogPosts: PageMeta[]
 }
 
 interface ExternalSVG {
@@ -246,9 +246,7 @@ const IndexPage: NextPage<Props> & { theme: string } = ({ blogPosts }) => {
   )
 }
 
-export const getStaticProps: GetStaticProps<Props> = async () => ({
-  props: { blogPosts: await getSortedPostsData('posts') },
-})
+export const getStaticProps: GetStaticProps<Props> = () => ({ props: { blogPosts: getPostsMeta('posts') } })
 
 IndexPage.theme = 'dark'
 export default IndexPage
