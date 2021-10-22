@@ -155,7 +155,7 @@ const IndexPage: NextPage<Props> & { theme: string } = ({ blogPosts }) => {
       </section>
       <section
         id="section-experience"
-        className={`${styles.hSection} pb-24 bg-brand text-gray-200`}
+        className={`${styles.hSection} pb-24 bg-brand text-gray-100`}
         ref={ExperienceTabsRef}
       >
         <div className="flex flex-col items-center justify-center w-full mt-12">
@@ -172,7 +172,7 @@ const IndexPage: NextPage<Props> & { theme: string } = ({ blogPosts }) => {
             <path
               d={svg.logotype}
               fill="currentColor"
-              className={`text-gray-200 stroke-current will-change ${styles.logoSvg} ${styles.logotypeSvg}`}
+              className={`text-gray-100 stroke-current will-change ${styles.logoSvg} ${styles.logotypeSvg}`}
             />
           </svg>
         </div>
@@ -198,7 +198,7 @@ const IndexPage: NextPage<Props> & { theme: string } = ({ blogPosts }) => {
         </h2>
         <Link href={`/design/brand-book`} passHref={true}>
           <div className="relative cursor-pointer md:-mx-6 group bg-brand">
-            <div className="transition transform scale-100 blur-none group-hover:blur-sm group-hover:scale-90 group-hover:mix-blend-lighten">
+            <div className="transition-transform scale-100 blur-none group-hover:blur-sm group-hover:scale-90 group-hover:mix-blend-lighten">
               <Image src={deckPage1} alt="vanntile brand deck cover page" />
             </div>
             <div className="absolute top-0 left-0 grid items-center justify-center w-full h-full">
@@ -232,7 +232,7 @@ const IndexPage: NextPage<Props> & { theme: string } = ({ blogPosts }) => {
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path d={e.d} fill="currentColor" className="text-gray-200" />
+                <path d={e.d} fill="currentColor" className="text-gray-100" />
               </svg>
             </a>
           ))}

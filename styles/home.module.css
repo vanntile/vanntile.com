@@ -1,26 +1,3 @@
-/* Cursor animation */
-
-.cursor::after {
-  display: block;
-  content: '';
-  position: absolute;
-  width: 4px;
-  height: 100%;
-  background-color: #fff;
-  animation: cursor .6s linear infinite alternate;
-  will-change: opacity;
-}
-
-@keyframes cursor {
-  0%, 40% {
-    opacity: 1;
-  }
-
-  60%, 100% {
-    opacity: 0;
-  }
-}
-
 /* Logo animation */
 
 /***************************************************
@@ -121,7 +98,7 @@
 }
 
 .pExp {
-  @apply mt-0 mb-2 text-sm font-semibold text-indigo-300;
+  @apply mt-0 mb-2 font-semibold leading-4 text-brand-tint;
 }
 
 @screen md {
