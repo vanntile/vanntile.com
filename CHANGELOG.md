@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.4.0](https://github.com/vanntile/vanntile.com/compare/v2.3.0...v2.4.0) (2021-10-22)
+
+
+### Features
+
+* **seo:** :star2: add compositing animation article ([fd549ee](https://github.com/vanntile/vanntile.com/commit/fd549ee4a1c695209e5483e99731b82de029155c))
+
+
+### Bug Fixes
+
+* :bug: change wrong image path ([c34f4d2](https://github.com/vanntile/vanntile.com/commit/c34f4d2bda854a5d4b1c9648cdd7d9ed8f0b7ce1))
+* **build:** :bug: change broken asset ([1e30d90](https://github.com/vanntile/vanntile.com/commit/1e30d901c4d1f92abef7257f5393c54f980e35a2))
+* **security:** :bug: change CSP hash ([f65d62a](https://github.com/vanntile/vanntile.com/commit/f65d62a6e6fe659893f8c31ea4b364e2572330a0))
+* **uiux:** :bug: optimize styles ([d1bdefb](https://github.com/vanntile/vanntile.com/commit/d1bdefb23845779438610e4902fb3a6339164f61))
+
 ## [2.3.0](https://github.com/vanntile/vanntile.com/compare/v2.2.1...v2.3.0) (2021-10-17)
 
 
