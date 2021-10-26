@@ -10,6 +10,7 @@
       "dom",
       "es2017"
     ],
+    "incremental": true,
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
