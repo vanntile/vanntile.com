@@ -18,12 +18,7 @@ type Params = {
   email: string
 }
 
-const logger = console
-
-// FIXME: whenever mailgun-js adds proper types
-/* eslint-disable @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access  */
-/* eslint-disable @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-argument  */
-const mailgun = new Mailgun(formData as any)
+const mailgun = new Mailgun(formData)
 const mg = mailgun.client({
   username: 'api',
   key: process.env.MAILGUN_API_KEY as string,
@@ -59,11 +54,9 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<Data>): Promise
 
       res.status(200).json({ status: Status.Sent })
     } catch (err) {
-      logger.error(err)
       res.status(500).json({ status: Status.Error })
     }
   } catch {
-    logger.error(Status.RateLimited)
     res.status(429).json({ status: Status.RateLimited })
   }
 }
