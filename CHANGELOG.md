@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.4.2](https://github.com/vanntile/vanntile.com/compare/v2.4.1...v2.4.2) (2021-12-11)
+
+
+### Bug Fixes
+
+* :bug: compile broken api route ([c707c92](https://github.com/vanntile/vanntile.com/commit/c707c92f5ccca3de4f9e5d0b370c319795f52fcc))
+
 ### [2.4.1](https://github.com/vanntile/vanntile.com/compare/v2.4.0...v2.4.1) (2021-12-11)
 
 
