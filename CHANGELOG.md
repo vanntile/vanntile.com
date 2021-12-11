@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.4.1](https://github.com/vanntile/vanntile.com/compare/v2.4.0...v2.4.1) (2021-12-11)
+
+
+### Bug Fixes
+
+* :bug: update tailwind ([09b79c5](https://github.com/vanntile/vanntile.com/commit/09b79c539f2ce11da124c35198ec11753429ce82))
+
 ## [2.4.0](https://github.com/vanntile/vanntile.com/compare/v2.3.0...v2.4.0) (2021-10-22)
 
 
