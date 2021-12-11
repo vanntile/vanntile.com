@@ -2,13 +2,7 @@ const { fontFamily } = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  mode: 'jit',
-  purge: {
-    content: ['./pages/**/*.{js,ts,jsx,tsx,.mdx}', './components/**/*.{js,ts,jsx,tsx,.mdx}'],
-    options: {
-      keyframes: true,
-    },
-  },
+  content: ['./pages/**/*.{js,ts,jsx,tsx,.mdx}', './components/**/*.{js,ts,jsx,tsx,.mdx}'],
   darkMode: 'class',
   theme: {
     screens: {
@@ -24,7 +18,6 @@ module.exports = {
           tint: '#A3B5E3',
           accent: '#FF9A63',
         },
-        gray: colors.blueGray,
       },
       fontFamily: {
         sans: ['Objectivity', ...fontFamily.sans],
@@ -54,5 +47,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require('tailwindcss-visuallyhidden')(), require('tailwindcss-scroll-snap')],
+  plugins: [require('tailwindcss-visuallyhidden')()],
 }

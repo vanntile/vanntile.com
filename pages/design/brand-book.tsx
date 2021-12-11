@@ -128,7 +128,7 @@ const images: ImageSrcDesc[] = [
 
 const BrandBook: NextPage = () => (
   <div className="relative w-screen h-screen py-4 bg-gray-900">
-    <div className="relative h-full overflow-y-scroll snap snap-y snap-mandatory max-w-screen-2xl">
+    <div className="relative h-full overflow-y-scroll snap-y snap-mandatory max-w-screen-2xl">
       {images.map(({ src, alt }: ImageSrcDesc) => (
         <div key={alt?.replace(' ', '_')} className="relative h-full snap-center">
           <Image layout="fill" objectFit="contain" src={src} alt={alt} unoptimized={true} lazyBoundary="4000px" />
