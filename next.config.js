@@ -5,10 +5,11 @@ const isProd = process.env.NODE_ENV === 'production'
 // TODO: HTTPS redirect
 
 module.exports = {
+  swcMinify: true,
   experimental: {
     esmExternals: true,
   },
-  pageExtensions: ['tsx'],
+  pageExtensions: ['tsx', 'ts'],
   poweredByHeader: false,
   async headers() {
     return [
