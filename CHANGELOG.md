@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/vanntile/vanntile.com/compare/v2.4.2...v3.0.0) (2022-04-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* **style:** - remove all React components with minor functionality loss
+
+* **style:** :fire: move from NextJS to Astro ([331162a](https://github.com/vanntile/vanntile.com/commit/331162a794b3a788bc74882310280a26b2767c66))
+
 ### [2.4.2](https://github.com/vanntile/vanntile.com/compare/v2.4.1...v2.4.2) (2021-12-11)
 
 
