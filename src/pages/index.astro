@@ -1,0 +1,237 @@
+---
+import AnimatedHeader from '../components/AnimatedHeader.astro'
+import Experience from '../components/Experience.astro'
+import SectionDivider from '../components/SectionDivider.astro'
+import Tags from '../components/Tags.astro'
+import BaseLayout from '../layouts/BaseLayout.astro'
+import svg from '../lib/svgPaths.json'
+
+const socialMedia: ExternalSVG[] = [
+  {
+    href: 'https://github.com/vanntile',
+    name: 'vanntile on GitHub',
+    d: svg.github,
+  },
+  {
+    href: 'https://www.aedin.com/in/valentin-ionita',
+    name: 'vanntile on aedin',
+    d: svg.linkedin,
+  },
+  {
+    href: 'https://stackoverflow.com/users/4679160/vanntile-ianito',
+    name: 'vanntile on StackOverflow',
+    d: svg.stackoverflow,
+  },
+  {
+    href: 'https://gitlab.com/vanntile',
+    name: 'vanntile on GitLab',
+    d: svg.gitlab,
+  },
+  {
+    href: 'https://dribbble.com/vanntile',
+    name: 'vanntile on Dribbble',
+    d: svg.dribbble,
+  },
+]
+
+const latestPosts = (await Astro.glob<PageMeta>('./blog/*.md'))
+  .sort((a, b) => new Date(b.frontmatter.publishedAt).valueOf() - new Date(a.frontmatter.publishedAt).valueOf())
+  .slice(0, 3)
+---
+
+<script is:inline>
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.4,
+  }
+
+  const setObserver = (target, element) => {
+    const callback = (entries, observer) => {
+      if (entries[0].intersectionRatio > 0.4) element.classList.add('active')
+      else element.classList.remove('active')
+    }
+
+    const observer = new IntersectionObserver(callback, options)
+    observer.observe(target)
+  }
+
+  window.addEventListener('DOMContentLoaded', (event) => {
+    setObserver(document.querySelector('#section-tech'), document.querySelector('#logoSvg'))
+    setObserver(document.querySelector('#section-experience'), document.querySelector('#logotypeSvg'))
+  })
+</script>
+
+<BaseLayout withNav="false">
+  <main class="w-full pt-8 pb-32 mx-auto xl:px-6 xl:text-lg 2xl:text-xl max-w-prose 2xl:max-w-6xl">
+    <section class="flex flex-col justify-center min-h-screen px-6 py-16 text-left hSection">
+      <div>
+        <header class="mb-16">
+          <AnimatedHeader />
+          <div class="text-xl font-semibold md:text-3xl">developer by choice and designer for fun</div>
+        </header>
+        <a class="sr-only" href="#section-tech"> Skip to main content </a>
+        <p class="md:text-lg 2xl:text-2xl">
+          Are you searching for a practical enthusiast for your <span class="highlight">project</span>?
+        </p>
+        <p class="max-w-2xl md:text-lg 2xl:max-w-5xl 2xl:text-2xl">
+          I speak the languages of both <span class="highlight">engineering and aesthetics</span>, being
+          <br class="hidden md:inline-block 2xl:hidden" /> perfectly positioned to formulate the path of a feasible product
+          with customer experience in mind. My preferred work is{' '}
+          <span class="highlight">fullstack development</span>. I&apos;m using the best tool for the job, be it a
+          reliable framework or the latest web features.
+        </p>
+        <p class="max-w-2xl md:text-lg 2xl:max-w-5xl 2xl:text-2xl">
+          Neither impressive interfaces nor blazing performance are the solution, but the{' '}
+          <span class="highlight">balance</span> between a maintainable implementation and
+          <br class="hidden md:inline-block 2xl:hidden" /> user-focused functionality.
+        </p>
+        <div class="flex flex-row flex-wrap mt-8 space-x-2">
+          <a class="cta" href="#section-tech">techstack</a>
+          <a class="cta" href="#section-experience">experience</a>
+          <a class="cta" href="#section-blog">blog</a>
+          <a class="cta" href="#section-design">design</a>
+          <a class="cta" href="#section-contact">contact</a>
+        </div>
+      </div>
+      <SectionDivider color="text-brand-accent" />
+    </section>
+    <section id="section-tech" class="pt-12 pb-24 font-bold text-gray-800 hSection bg-brand-accent">
+      <div class="flex flex-col items-center justify-center w-full -my-12">
+        <svg
+          id="logoSvg"
+          aria-hidden="true"
+          focusable="false"
+          class="active"
+          width="210"
+          height="210"
+          viewBox="0 0 500 500"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d={svg.logomark}
+            class="text-gray-900 stroke-current will-change-transform logoSvg"></path>
+        </svg>
+      </div>
+      <h2 class="text-gray-900 dark:text-gray-900">./about/tech</h2>
+      <p>
+        I am an in-progress computer engineer with a deep passion for the worlds of frontend, design and deployment. Keep
+        scrolling if you wanna know why, how and what I work on!
+      </p>
+      <h3>What is my tech stack?</h3>
+      <span class="block font-bold">Languages</span>
+      <Tags
+        tags={['JavaScript', 'TypeScript', 'CSS3', 'Python 3', 'C++', 'Haskell']}
+        styles="text-brand-accent bg-gray-800"
+      />
+      <span class="block font-bold">Standards &amp; paradigms</span>
+      <Tags tags={['OpenAPI', 'REST', 'GraphQL']} styles="text-brand-accent bg-gray-800" />
+      <span class="block font-bold">Frameworks &amp; tools</span>
+      <Tags
+        tags={['React', 'NextJS', 'Angular', 'NodeJS', 'FastAPI', 'Docker', 'Heroku', 'git']}
+        styles="text-brand-accent bg-gray-800"
+      />
+      <span class="block font-bold">Design tools &amp; knowledge</span>
+      <Tags
+        tags={['Figma', 'Inkscape', 'SVG', 'Typography', 'Layout', 'Visual idenitities']}
+        styles="text-brand-accent bg-gray-800"
+      />
+      <span class="block font-bold">Other snappy stuff</span>
+      <Tags
+        tags={['Linux (Debian)', 'VSCode', 'Notion', 'Prettier', 'Jupyter', 'Markdown']}
+        styles="text-brand-accent bg-gray-800"
+      />
+      <SectionDivider color="text-brand" />
+    </section>
+    <section id="section-experience" class="pb-24 text-gray-100 hSection bg-brand">
+      <div class="flex flex-col items-center justify-center w-full mt-12">
+        <svg
+          id="logotypeSvg"
+          aria-hidden="true"
+          focusable="false"
+          class="active"
+          width="520"
+          height="60"
+          viewBox="480 0 800 168"
+          preserveAspectRatio="xMidYMid meet"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d={svg.logotype}
+            fill="currentColor"
+            class="text-gray-100 stroke-current will-change-transform logoSvg logotypeSvg"></path>
+        </svg>
+      </div>
+      <h2 class="text-gray-100 dark:text-gray-100">./about/experience</h2>
+      <Experience />
+      <SectionDivider color="text-white dark:text-gray-900" />
+    </section>
+    <section class="my-16 hSection">
+      <h2 id="section-blog">./blog/coding/latest</h2>
+      <div>
+        {latestPosts.map((post) => (
+          <div class="py-4">
+            <p class="my-0">
+              <time datetime={post.frontmatter.publishedAt}>
+                {new Intl.DateTimeFormat('en', { year: 'numeric', month: 'long', day: '2-digit' }).format(
+                  new Date(post.frontmatter.publishedAt),
+                )}
+              </time>
+            </p>
+            <a href={post.url}>{post.frontmatter.title}</a>
+            <p class="my-1">{post.frontmatter.summary}</p>
+          </div>
+        ))}
+      </div>
+      <div class="my-6">
+        <span class="pr-4 md:text-xl">...or </span>
+        <a class="cta" href="/blog">Check all blog posts </a>
+      </div>
+    </section>
+    <section class="mb-24 hSection">
+      <h2 id="section-design">./blog/design</h2>
+      <a href="/design/brand-book">
+        <div class="relative cursor-pointer md:-mx-6 group bg-brand">
+          <div class="transition-transform scale-100 blur-none group-hover:blur-sm group-hover:scale-90 group-hover:mix-blend-lighten">
+            <img loading="lazy" src="/assets/deck/page.1.webp" alt="vanntile brand deck cover page" />
+          </div>
+          <div class="absolute top-0 left-0 grid items-center justify-center w-full h-full">
+            <h3 class="pt-2 pl-4 my-0 text-2xl text-gray-100 border-l-8 opacity-0 md:text-5xl group-hover:opacity-100 border-brand-accent">
+              Brand book
+            </h3>
+          </div>
+        </div>
+      </a>
+    </section>
+    <section class="mb-24 hSection">
+      <h2 id="section-contact">./public/contact</h2>
+      <p>You can find me here and there.</p>
+      <div class="flex flex-row flex-wrap mb-8 space-x-4 md:space-x-8">
+        {socialMedia.map((e) => (
+          <a
+            href={e.href}
+            target="_blank"
+            rel="noreferrer"
+            title={e.name}
+            class="w-12 h-12 bg-transparent rounded-full rotateScaleUp pseudo-none dark:bg-gray-900 focus:outline-none focus:ring-8 ring-brand-accent will-change-transform"
+          >
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              width="48"
+              height="48"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d={e.d} fill="currentColor" class="text-gray-900 dark:text-gray-100" />
+            </svg>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+  <footer class="border-t-2 hSection py-14 border-brand-accent">Designed &amp; built by vanntile</footer>
+</BaseLayout>

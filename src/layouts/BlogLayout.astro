@@ -1,0 +1,35 @@
+---
+import '../styles/prism-theme.css'
+import readingTime from 'reading-time'
+import BaseLayout from '../layouts/BaseLayout.astro'
+import NextArticle from '../components/NextArticle.astro'
+
+interface Props {
+  content: PageMeta & { url: string, astro: any }
+}
+
+const { content } = Astro.props as Props
+const { title, publishedAt, nextArticle } = content
+
+const articles = await Astro.glob<PageMeta>('../pages/blog/*.md')
+
+const nextArticleTitle = nextArticle ? articles.find((e) => e.url.split('/')[2] === nextArticle).frontmatter.title : ''
+
+const dateFormat = { year: 'numeric', month: 'long', day: '2-digit' } as Intl.DateTimeFormatOptions
+const reading = readingTime(content.astro.source)
+---
+
+<BaseLayout {content}>
+  <main class="w-full pt-8 pb-32 mx-auto xl:px-6 xl:text-lg 2xl:text-xl max-w-prose 2xl:max-w-6xl">
+    <article>
+      <h1>{title}</h1>
+      <div class="font-bold text-gray-400 dark:text-brand-secondary">
+        <time datetime={publishedAt}>
+          {new Intl.DateTimeFormat('en', dateFormat).format(new Date(publishedAt))}
+        </time>, {reading.text}
+      </div>
+      <slot />
+      {nextArticle && <NextArticle title={nextArticleTitle} link={nextArticle} />}
+    </article>
+  </main>
+</BaseLayout>
