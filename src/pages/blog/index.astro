@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+
+const content = {
+  title: `Blog - twigs and thoughts`,
+  description: `Articles on tech, software development, design and case studies.`,
+  image: 'banner.png',
+  imageAlt: 'Banner image with logo and "Good design is invisible" motto',
+  type: 'website',
+}
+
+const posts = (await Astro.glob<PageMeta>('./*.md')).sort(
+  (a, b) => new Date(b.frontmatter.publishedAt).valueOf() - new Date(a.frontmatter.publishedAt).valueOf(),
+)
+---
+
+<BaseLayout {content}>
+  <main class="w-full pt-8 pb-32 mx-auto xl:px-6 xl:text-lg 2xl:text-xl max-w-prose 2xl:max-w-6xl">
+    <h1>Blog posts</h1>
+    {posts.map((post) => (
+      <div class="py-4">
+        <p class="my-0">
+          <time datetime={post.frontmatter.publishedAt}>
+            {new Intl.DateTimeFormat('en', { year: 'numeric', month: 'long', day: '2-digit' }).format(
+              new Date(post.frontmatter.publishedAt),
+            )}
+          </time>
+        </p>
+        <a href={post.url}>{post.frontmatter.title}</a>
+        <p class="my-1">{post.frontmatter.summary}</p>
+        <a href={post.url} class="inline-block mt-2 cta">
+          Read more
+        </a>
+      </div>
+    ))}
+  </main>
+</BaseLayout>

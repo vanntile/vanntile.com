@@ -1,0 +1,319 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Objectivity';
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url('/fonts/Objectivity-Regular.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Objectivity';
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    src: url('/fonts/Objectivity-Bold.woff2') format('woff2');
+  }
+
+  /* Stop any animation if the user has set their device to "prefers reduced motion". */
+  /* stylelint-disable-next-line at-rule-no-unknown */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+      animation-duration: 0.1s !important;
+      transition-duration: 0.1s !important;
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+    min-width: 320px;
+  }
+
+  body {
+    @apply min-h-screen text-sm leading-6 text-gray-700 bg-white dark:text-brand-tint md:text-base md:leading-7 2xl:text-2xl 2xl:leading-relaxed selection:bg-brand selection:text-gray-50 dark:selection:bg-gray-100 dark:selection:text-brand dark:bg-gray-900;
+  }
+
+  /* Remove Safari input shadow on mobile */
+  input[type='text'],
+  input[type='email'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  h1 {
+    @apply mt-0 text-6xl font-extrabold text-gray-900 dark:text-gray-100 xl:text-7xl 2xl:leading-none 2xl:text-9xl;
+    margin-bottom: 0.875em;
+  }
+
+  h2 {
+    @apply text-3xl font-bold text-gray-900 dark:text-brand-tint xl:text-4xl 2xl:text-7xl 2xl:leading-none;
+    margin-top: 1.6em;
+    margin-bottom: 0.75em;
+  }
+
+  h3,
+  h4 {
+    @apply my-2 font-semibold;
+    margin-top: 1.55em;
+    margin-bottom: 0.6em;
+  }
+
+  h3 {
+    @apply text-lg md:text-xl 2xl:text-4xl 2xl:leading-tight;
+  }
+
+  h4 {
+    @apply leading-5 md:leading-normal;
+  }
+
+  :is(h2, h3, h4) {
+    scroll-margin-top: 3rem;
+  }
+
+  p {
+    @apply my-4 md:my-5 2xl:my-8 max-w-prose;
+  }
+
+  figure > * {
+    @apply my-0;
+  }
+
+  :is(h2, h3, h4) + * {
+    @apply mt-0;
+  }
+
+  a {
+    @apply relative font-bold no-underline text-brand hover:text-brand dark:text-brand-accent;
+  }
+
+  a::after {
+    @apply absolute left-0 w-full h-1 transition-transform duration-500 origin-right scale-x-0 bg-current -bottom-2;
+    content: '';
+  }
+
+  :is(a:hover, a:focus)::after {
+    @apply origin-left scale-x-100;
+  }
+
+  /* Quotes, pre, code */
+
+  blockquote {
+    @apply pl-4 my-6 italic font-medium text-gray-900 border-l-4 border-gray-200 dark:border-gray-700 dark:text-gray-300 md:my-8 2xl:my-16 md:pl-5 2xl:pl-8;
+    quotes: '\\201C''\\201D''\\2018''\\2019';
+  }
+
+  pre {
+    @apply px-3 py-2 my-5 overflow-x-auto text-gray-800 border border-gray-200 rounded dark:border-gray-600 dark:bg-gray-900 dark:text-gray-200 bg-gray-50 md:my-6 2xl:my-8 md:px-4 md:py-3 2xl:px-8 2xl:py-7;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  code {
+    @apply text-xs font-medium text-gray-900 2xl:font-semibold dark:bg-gray-900 dark:text-gray-200 bg-gray-50 md:text-base 2xl:text-xl;
+  }
+
+  a code {
+    @apply text-brand dark:text-brand-accent;
+  }
+
+  h2 code,
+  h3 code {
+    font-size: inherit;
+  }
+
+  /* Lists */
+  ol,
+  ul {
+    @apply my-4 md:my-5 2xl:my-8;
+  }
+
+  li,
+  ul > li p {
+    @apply my-1 md:my-2 2xl:my-3;
+  }
+
+  ol > li {
+    @apply relative pl-5 md:pl-7 2xl:pl-10;
+  }
+
+  ul > li {
+    @apply relative ml-5 list-disc md:ml-7 2xl:ml-10;
+  }
+
+  ol > li::before {
+    @apply absolute left-0 font-normal text-current;
+    content: counter(list-item, decimal) '.';
+  }
+
+  ul > li::marker {
+    @apply text-lg text-current md:text-xl 2xl:text-3xl;
+  }
+
+  :is(ol, ul) > li > *:first-child {
+    @apply mt-4 md:mt-5 2xl:mt-8;
+  }
+
+  :is(ol, ul) > li > *:last-child {
+    @apply mb-4 md:mb-5 2xl:mb-8;
+  }
+
+  ul ul,
+  ul ol,
+  ol ul,
+  ol ol {
+    @apply my-3 md:my-3 2xl:my-4;
+  }
+
+  @screen md {
+    :is(h2, h3, h4) {
+      scroll-margin-top: 8rem;
+    }
+  }
+}
+
+@layer components {
+  .experience-section h3:first-child {
+    @apply my-0;
+  }
+
+  .experience-section h3:not(:first-child) {
+    @apply mt-5 mb-0;
+  }
+
+  .cta {
+    @apply px-4 py-2 mb-2 border-2 border-current text-brand dark:text-brand-accent hover:text-brand dark:hover:text-brand-accent;
+  }
+
+  .p-experience {
+    @apply mt-0 mb-2 font-semibold leading-4 text-brand-tint;
+  }
+
+  .highlight {
+    @apply border-b-2 border-brand-accent;
+  }
+
+  .hSection {
+    @apply relative w-full px-4 mx-auto overflow-hidden;
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 1000px;
+  }
+
+  @screen md {
+    .hSection {
+      @apply max-w-3xl px-6;
+    }
+  }
+
+  @screen 2xl {
+    .hSection {
+      @apply max-w-6xl;
+    }
+  }
+
+  /* Logo animation */
+
+  /***************************************************
+  * Generated by SVG Artista on 3/25/2021, 2:10:58 PM
+  * MIT license (https://opensource.org/licenses/MIT)
+  * W. https://svgartista.net
+  **************************************************/
+
+  .logoSvg {
+    stroke-dashoffset: 2526.631103515625px;
+    stroke-dasharray: 2526.631103515625px;
+    fill: transparent;
+    transition: stroke-dashoffset 1.2s cubic-bezier(0.47, 0, 0.745, 0.715) 0s,
+      fill 0.85s cubic-bezier(0.47, 0, 0.745, 0.715) 0.6s;
+  }
+
+  .active .logoSvg {
+    stroke-dashoffset: 0;
+    fill: currentColor;
+  }
+
+  .logotypeSvg {
+    transform-origin: right;
+  }
+
+  @media all and (max-width: 520px) {
+    .logotypeSvg {
+      transform: scale(0.7) translateX(30px);
+    }
+  }
+
+  /* ----------------------------------------------
+  * Generated by Animista on 2021-3-26 14:40:37
+  * Licensed under FreeBSD License.
+  * See http://animista.net/license for more info.
+  * w: http://animista.net, t: @cssanimista
+  * ---------------------------------------------- */
+
+  /**
+  * ----------------------------------------
+  * animation rotate-scale-up
+  * ----------------------------------------
+  */
+
+  .rotateScaleUp:hover {
+    -webkit-animation: rotate-scale-up 0.85s linear both;
+    animation: rotate-scale-up 0.85s linear both;
+  }
+
+  @-webkit-keyframes rotate-scale-up {
+    0% {
+      -webkit-transform: scale(1) rotateZ(0);
+              transform: scale(1) rotateZ(0);
+    }
+    50% {
+      -webkit-transform: scale(2) rotateZ(180deg);
+              transform: scale(2) rotateZ(180deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotateZ(360deg);
+              transform: scale(1) rotateZ(360deg);
+    }
+  }
+  @keyframes rotate-scale-up {
+    0% {
+      -webkit-transform: scale(1) rotateZ(0);
+              transform: scale(1) rotateZ(0);
+    }
+    50% {
+      -webkit-transform: scale(2) rotateZ(180deg);
+              transform: scale(2) rotateZ(180deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotateZ(360deg);
+              transform: scale(1) rotateZ(360deg);
+    }
+  }
+
+
+  /* Fade */
+
+  .fadeupEnter {
+    opacity: 0.01;
+    transform: translateY(20px);
+    transition: opacity 300ms var(--easing),transform 300ms var(--easing);
+  }
+}
+
+
+@layer utilities {
+  .pseudo-none::before,
+  .pseudo-none:hover::before,
+  .pseudo-none:focus::before,
+  .pseudo-none::after,
+  .pseudo-none:hover::after,
+  .pseudo-none:focus::after,
+  pre::-webkit-scrollbar {
+    display: none !important;
+  }
+}

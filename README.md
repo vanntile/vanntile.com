@@ -1,31 +1,43 @@
-# vanntile's portfolio
+# Welcome to [Astro](https://astro.build)
 
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/starter)
 
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-[![npm type definitions](https://img.shields.io/npm/types/typescript)](https://github.com/Microsoft/TypeScript)
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-A NextJS MDX personal [portfolio site](https://vanntile.com). Here's a cookie 🍪.
+## 🚀 Project Structure
 
-## Contains
+Inside of your Astro project, you'll see the following folders and files:
 
-It currently integrates the following:
+```
+/
+├── public/
+│   ├── robots.txt
+│   └── favicon.ico
+├── src/
+│   ├── components/
+│   │   └── Tour.astro
+│   └── pages/
+│       └── index.astro
+└── package.json
+```
 
-- commitizen, cz-emoji, commitlint
-- standard-version
-- husky v6
-- Prettier configuration
-- TypeScript
-- Module alias
-- NextJS (React framework)
-- React tabs (accessible and usable)
-- TailwindCSS & PostCSS
-- MDX, remark, rehype, mdx-prism (and @next/mdx)
-- restrictive CSP
-- Next API
-- Mailgun.js & rate limiting (with lru-cache)
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-## TODO
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-- [x]: content: add 2 articles
-- [ ]: content: add brand book in the 'Design deck'
+Any static assets, like images, can be placed in the `public/` directory.
+
+## 🧞 Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command           | Action                                       |
+| :---------------- | :------------------------------------------- |
+| `npm install`     | Installs dependencies                        |
+| `npm run dev`     | Starts local dev server at `localhost:3000`  |
+| `npm run build`   | Build your production site to `./dist/`      |
+| `npm run preview` | Preview your build locally, before deploying |
+
+## 👀 Want to learn more?
+
+Feel free to check [our documentation](https://github.com/withastro/astro) or jump into our [Discord server](https://astro.build/chat).

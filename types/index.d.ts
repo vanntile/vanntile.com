@@ -3,6 +3,13 @@ interface PageMeta {
   publishedAt: string
   summary: string
   image: string
-  tags?: string[]
-  slug: string
+  imageAlt: string
+  keywords: string
+  nextArticle?: string
+}
+
+interface ExternalSVG {
+  href: string
+  name: string
+  d: string
 }

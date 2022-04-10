@@ -1,0 +1,273 @@
+---
+import Tags from './Tags.astro'
+
+const prefix: string = 'experience'
+const tabNames: string[] = ['Education', 'Volunteering', 'AScI', 'Postis', 'GSoC', 'Etsimo']
+---
+
+<script type="module">
+  let idx = 0
+
+  const setTabFocus = (tabs, tabpanels, tab, styles = { active: [], inactive: [] }) => (event) => {
+    if (tab.getAttribute('aria-disabled') === 'true' || tab.getAttribute('aria-selected') === 'true') return
+
+    const controlledPanel = document.querySelector(`#${tab.getAttribute('aria-controls')}`)
+
+    idx = Array.from(tabs).findIndex((e) => e === tab)
+
+    // Handle the tabs
+    tabs.forEach((e) => {
+      styles.active.forEach((cls) => e === tab ? e.classList.add(cls) : e.classList.remove(cls))
+      styles.inactive.forEach((cls) => e !== tab ? e.classList.add(cls) : e.classList.remove(cls))
+      e.setAttribute('aria-selected', e === tab)
+      e.setAttribute('tabindex', e === tab ? 0 : -1)
+    })
+
+    // Handle the tab panels
+    tabpanels.forEach((e) => {
+      e === controlledPanel ? e.classList.remove('hidden') : e.classList.add('hidden')
+    })
+
+    event.preventDefault()
+  }
+
+  const setKeyChange = (tabs, tab) => (event) => {
+    const LEFT_ARROW = 37
+    const UP_ARROW = 38
+    const RIGHT_ARROW = 39
+    const DOWN_ARROW = 40
+    const k = event.which || event.keyCode
+
+    if (k >= LEFT_ARROW && k <= DOWN_ARROW) {
+      if (k == LEFT_ARROW || k == UP_ARROW) idx = idx > 0 ? idx - 1 : tabs.length - 1
+      else if (k == RIGHT_ARROW || k == DOWN_ARROW) idx = (idx + 1) % tabs.length
+
+      tabs[idx].focus()
+      tabs[idx].click()
+      event.preventDefault()
+    }
+  }
+
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const prefix = 'experience'
+    const styles = {
+      active: ['bg-brand'],
+      inactive: ['border-b-2']
+    }
+    const tabs = document.querySelectorAll(`[aria-controls^="${prefix}-tabpanel-"]`)
+    const tabpanels = document.querySelectorAll(`[id^="${prefix}-tabpanel-"]`)
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', setTabFocus(tabs, tabpanels, tab, styles))
+      tab.addEventListener('keydown', setKeyChange(tabs))
+    })
+
+    // Hide all tabs
+    Array.from(tabpanels).slice(1).forEach((e) => e.classList.add('hidden'))
+  })
+</script>
+
+<div class="experience-section">
+  <ul
+    class="flex m-0 overflow-x-scroll text-gray-100 bg-indigo-900 border-2 border-b-0 cursor-pointer md:overflow-hidden"
+    role="tablist"
+  >
+    {tabNames.map((tabName, idx) => (
+      <li
+        class={`${
+          idx === 0 ? 'bg-brand' : 'border-b-2'
+        } list-none ml-0 mb-0 py-2 px-5 font-bold focus:outline-white mt-0`}
+        role="tab"
+        id={`${prefix}-tab-${idx * 2}`}
+        aria-selected={idx === 0}
+        aria-disabled="false"
+        aria-controls={`${prefix}-tabpanel-${idx * 2 + 1}`}
+        tabindex={idx === 0 ? 0 : -1}
+      >
+        {tabName}
+      </li>
+    ))}
+    <div class="flex-grow block border-b-2"></div>
+  </ul>
+  <div
+    class="w-full p-4 pt-8 border-2 border-t-0"
+    role="tabpanel"
+    id={`${prefix}-tabpanel-1`}
+    aria-labelledby={`${prefix}-tab-0`}
+  >
+    <h3>Aalto University, Finland</h3>
+    <p class="p-experience">
+      MSc. in Security and Cloud Computing,{' '}
+      <span class="ml-2 font-mono tracking-wide">Sep 2021 - Present</span>
+    </p>
+    <p class="p-experience">School of Science</p>
+    <h3>University Politehnica of Bucharest, Romania</h3>
+    <p class="p-experience">
+      BSc. in Computer Engineering, <span class="ml-2 font-mono tracking-wide">Sep 2017 - Jul 2021</span>
+    </p>
+    <p class="p-experience">GPA: 9.79/10</p>
+    <h3>Åbo Akademi University, Turku, Finland</h3>
+    <p class="p-experience">
+      Erasmus+ Exchange Student in Computer Science,{' '}
+      <span class="ml-2 font-mono tracking-wide">Aug 2019 - May 2020</span>
+    </p>
+    <p class="p-experience">GPA: 5/5</p>
+  </div>
+  <div
+    class="w-full p-4 pt-8 border-2 border-t-0"
+    role="tabpanel"
+    id={`${prefix}-tabpanel-3`}
+    aria-labelledby={`${prefix}-tab-2`}
+  >
+    <h3>Codette</h3>
+    <p class="p-experience">
+      Technical Trainer, <span class="ml-2 font-mono tracking-wide">Sep 2018 - Jun 2020</span>
+    </p>
+    <ul>
+      <li>
+        Contributed as a technical trainer by creating resources and delivering presentations at{' '}
+        <strong>four editions of a web-technologies workshop</strong>, based on Angular, with a total of 80
+        participants.
+      </li>
+      <li>
+        Contributed as a designer by creating the branding, designing and implementing the website and creating the
+        social media posts of a <strong>mentorship program</strong> for university students called Techtor.
+      </li>
+      <li>Contributed as a technical trainer at a mobile development workshop for 20 young children.</li>
+    </ul>
+    <Tags tags={['designing', 'training', 'documenting']} styles="bg-indigo-900" />
+    <h3>LSAC - Automatics and Computing Student League</h3>
+    <p class="p-experience">
+      Graphic Designer, <span class="ml-2 font-mono tracking-wide">Feb 2018 - Feb 2019</span>
+    </p>
+    <ul>
+      <li>
+        Created posters and graphics for the student association events, with a{' '}
+        <strong>reach of 3000 people</strong> and set the creative direction to a LSAC organised hackathon.
+      </li>
+      <li>
+        Managed the fifth HackITAll edition, a student hackathon supported by Amazon, in the position of the{' '}
+        <strong>Design Project Manager</strong>.
+      </li>
+      <li>Mentored new members and trained them through an Introduction to design workshop.</li>
+    </ul>
+    <Tags tags={['designing', 'managing', 'mentoring']} styles="bg-indigo-900" />
+    <h3>Coder Dojo</h3>
+    <p class="p-experience">
+      Trainer, <span class="ml-2 font-mono tracking-wide">Sep 2018 - Jun 2019</span>
+    </p>
+    <p>
+      Participated twice a month as a trainer at workshops for primary-school children where we taught basic programming
+      using online tools, mainly Scratch.
+    </p>
+  </div>
+  <div
+    class="w-full p-4 pt-8 border-2 border-t-0"
+    role="tabpanel"
+    id={`${prefix}-tabpanel-5`}
+    aria-labelledby={`${prefix}-tab-4`}
+  >
+    <h3>Aalto Science Institute</h3>
+    <p class="p-experience">
+      Research Assistant in Human Computer Interaction department,{' '}
+      <span class="ml-2 font-mono tracking-wide">Jun 2021 - Aug 2021</span>
+    </p>
+    <ul>
+      <li>
+        Worked on a <strong>Vue</strong> app, that scores a given website (screenshot or URL) on a set of UIX design metrics
+        researched in the Aalto User Interfaces department. I have upgraded{' '}
+        <strong>Webpack</strong> configurations and frontend dependencies, implemented result dynamic plotting and improved
+        backend logging.
+      </li>
+      <li>
+        Created a <strong>Figma</strong> plugin that communicates to the user a set of{' '}
+        <strong>color palettes</strong> generated by a machine learning model that could improve their design. I have modeled
+        and written the backend application using <strong>FastAPI</strong>, I have decided the data interfaces and
+        collaborated with integrating the model.
+      </li>
+    </ul>
+    <Tags tags={['Vue', 'Preact', 'tornado', 'FastAPI', 'Figma API']} styles="bg-indigo-900" />
+  </div>
+  <div
+    class="w-full p-4 pt-8 border-2 border-t-0"
+    role="tabpanel"
+    id={`${prefix}-tabpanel-7`}
+    aria-labelledby={`${prefix}-tab-6`}
+  >
+    <h3>Postis, Bucharest, Romania</h3>
+    <p class="p-experience">
+      Junior Software Engineer, <span class="ml-2 font-mono tracking-wide">Sep 2020 - May 2021</span>
+    </p>
+    <ul>
+      <li>
+        Analyzing customer post-delivery text reviews in order to discover trends and associate them with business
+        issues.
+      </li>
+      <li>
+        Implemented <strong>internationalization</strong> and managed the frontend of a SaaS web platform.
+      </li>
+    </ul>
+    <Tags tags={['AngularJS', 'Svelte', 'NLP', 'Python']} styles="bg-indigo-900" />
+    <p class="p-experience">
+      Frontend Developer Intern, <span class="ml-2 font-mono tracking-wide">Jul 2018 - Sep 2018</span>
+    </p>
+    <p>
+      Managed a delivery tracking web application of over <strong>50 000 orders</strong>, using Git versioning,
+      AngularJS, Bootstrap, Grunt and proprietary REST APIs. Fixed interface bugs,{' '}
+      <strong>shortened the load time </strong> by removing 7 unused dependencies and added 5 new client functionalities
+      while pushing over 75 commits. <strong>Reduced main app size by 20%</strong> and an order tracking page by 90% by using
+      ES6 instead of jQuery.
+    </p>
+    <Tags tags={['AngularJS', 'Bootstrap', 'REST APIs', 'ES6']} styles="bg-indigo-900" />
+  </div>
+  <div
+    class="w-full p-4 pt-8 border-2 border-t-0"
+    role="tabpanel"
+    id={`${prefix}-tabpanel-9`}
+    aria-labelledby={`${prefix}-tab-8`}
+  >
+    <h3>Inkscape, Google Summer of Code 2020</h3>
+    <p class="p-experience">
+      Remote Software Developer, <span class="ml-2 font-mono tracking-wide">Jun 2020 - Aug 2020</span>
+    </p>
+    <p>
+      Developer for <strong>Inkscape</strong>, a vector design desktop application that follows the{' '}
+      <strong>SVG</strong> standards. Worked on a <strong>C++</strong> dialog system refactoring project, with over 120 commits,
+      <strong>6000 lines changed</strong>, reducing code length by 10%. The resulting change eliminated more than 12
+      active UX issues. Implementing the new dialog system consisted of removing old dependencies, standardising a
+      design pattern and propagating document state. Specifically, this included <strong>over 20 features</strong>.
+    </p>
+    <Tags tags={['C++', 'GTK+', 'gtkmm', 'UX', 'refactoring']} styles="bg-indigo-900" />
+    <h3>Inkscape, Google Summer of Code 2019</h3>
+    <p class="p-experience">
+      Remote Software Developer, <span class="ml-2 font-mono tracking-wide">May 2020 - Aug 2020</span>
+    </p>
+    <p>
+      Implemented <strong>JavaScript polyfills</strong> that reproduce, in browsers, SVG functionality which exists in Inkscape
+      but has been dropped by the <strong>SVG2 specification</strong> draft. Had over 60 commits in 4 feature branches over
+      4 months, using JavaScript and the GTK+ toolkit. Implemented new functionality (paint servers preview dialog) as a
+      starter point for future fill and stroke paint servers unification.
+    </p>
+    <Tags tags={['JavaScript', 'polyfills', 'SVG', 'GTK+', 'standardisation']} styles="bg-indigo-900" />
+  </div>
+  <div
+    class="w-full p-4 pt-8 border-2 border-t-0"
+    role="tabpanel"
+    id={`${prefix}-tabpanel-11`}
+    aria-labelledby={`${prefix}-tab-10`}
+  >
+    <h3>Etsimo Healthcare Oy, Turku, Finland</h3>
+    <p class="p-experience">
+      Junior Software Engineer, <span class="ml-2 font-mono tracking-wide">Jan 2020 - Jun 2020</span>
+    </p>
+    <p>
+      Worked on improving RxJS state in an Angular user-facing app of the cer- tified Diagnosis Engine. Integrated
+      dynamic translations with an existing Flask REST backend, <strong>reducing load time by 20%</strong>. Created, in
+      a team of two, over 12 iterations, an intended-use <strong>conversational workflow</strong> demo of the Etsimo service
+      capabilities, deployed from a <strong>Node.js server</strong> with a Preact chat interface. Written from the bottom
+      up a new <strong>TypeScript library</strong> that exposes Etsimo’s API for developer use, helps with type checking
+      for JavaScript apps and has automated <strong>unit tests</strong>.
+    </p>
+    <Tags tags={['API', 'Angular', 'RxJS', 'Preact', 'Flask', 'NodeJS', 'TypeScript']} styles="bg-indigo-900" />
+  </div>
+</div>

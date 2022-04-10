@@ -1,0 +1,68 @@
+---
+import svg from '../lib/svgPaths.json'
+---
+
+<script is:inline>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const html = document.querySelector('html')
+    const lightThemeBtn = document.querySelector('#lightThemeBtn')
+    const darkThemeBtn = document.querySelector('#darkThemeBtn')
+    const switchBtn = document.querySelector('#switch')
+
+    const savedTheme = window.localStorage.getItem('theme')
+    if (savedTheme === 'light') {
+      switchBtn.setAttribute('aria-checked', true)
+      switchBtn.classList.remove('bg-brand-tint')
+      switchBtn.classList.add('bg-gray-300')
+      switchBtn.children[0].classList.remove('translate-x-7')
+      lightThemeBtn.setAttribute('fill', 'currentColor')
+      darkThemeBtn.setAttribute('fill', 'none')
+    }
+
+    document.querySelector('#themeToggler').addEventListener('click', (event) => {
+      const isDarkTheme = html.classList.value.includes('dark')
+
+      switchBtn.setAttribute('aria-checked', !isDarkTheme)
+      switchBtn.classList.toggle('bg-brand-tint')
+      switchBtn.classList.toggle('bg-gray-300')
+      switchBtn.children[0].classList.toggle('translate-x-7')
+      lightThemeBtn.setAttribute('fill', isDarkTheme ? 'currentColor' : 'none')
+      darkThemeBtn.setAttribute('fill', isDarkTheme ? 'none' : 'currentColor')
+
+      html.classList.toggle('dark')
+      window.localStorage.setItem('theme', isDarkTheme ? 'light' : 'dark')
+    })
+  })
+</script>
+
+<nav class="sticky top-0 z-10 flex flex-row items-center justify-end w-full max-w-5xl gap-8 py-4 mx-auto bg-white rounded-b-md 2xl:max-w-6xl dark:bg-gray-900 ring-4 ring-white dark:ring-gray-900">
+  <a href="/">Home</a>
+  <a href="/blog">Blog</a>
+  <div id="themeToggler" class="flex items-center justify-center px-4 py-2 cursor-pointer">
+    <svg id="lightThemeBtn" class="w-6 h-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d={svg.sunIcon}
+      ></path>
+    </svg>
+    <button
+      id="switch"
+      role="switch"
+      aria-checked="true"
+      aria-label="Toggle dark mode"
+      class="flex items-center px-1 mx-3 rounded-full w-14 h-7 focus:outline-none focus:ring-2 ring-gray-700 dark:ring-gray-100 dark:ring-offset-2 bg-brand-tint"
+    >
+      <div class="w-5 h-5 transition-transform bg-white rounded-full shadow-md translate-x-7"></div>
+    </button>
+    <svg id="darkThemeBtn" class="w-6 h-6 text-gray-500" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d={svg.moonIcon}
+      ></path>
+    </svg>
+  </div>
+</nav>
