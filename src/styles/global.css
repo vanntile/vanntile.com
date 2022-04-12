@@ -116,7 +116,7 @@
   }
 
   code {
-    @apply text-xs font-medium text-gray-900 2xl:font-semibold dark:bg-gray-900 dark:text-gray-200 bg-gray-50 md:text-base 2xl:text-xl;
+    @apply text-xs font-medium text-gray-900 bg-gray-200 rounded 2xl:font-semibold dark:bg-gray-900 dark:text-gray-200 md:text-base 2xl:text-xl;
   }
 
   a code {

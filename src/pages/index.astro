@@ -125,24 +125,24 @@ const latestPosts = (await Astro.glob<PageMeta>('./blog/*.md'))
       <span class="block font-bold">Languages</span>
       <Tags
         tags={['JavaScript', 'TypeScript', 'CSS3', 'Python 3', 'C++', 'Haskell']}
-        styles="text-brand-accent bg-gray-800"
+        class="bg-gray-800 text-brand-accent"
       />
       <span class="block font-bold">Standards &amp; paradigms</span>
-      <Tags tags={['OpenAPI', 'REST', 'GraphQL']} styles="text-brand-accent bg-gray-800" />
+      <Tags tags={['OpenAPI', 'REST', 'GraphQL']} class="bg-gray-800 text-brand-accent" />
       <span class="block font-bold">Frameworks &amp; tools</span>
       <Tags
         tags={['React', 'NextJS', 'Astro', 'Angular', 'NodeJS', 'FastAPI', 'Docker', 'Heroku', 'git']}
-        styles="text-brand-accent bg-gray-800"
+        class="bg-gray-800 text-brand-accent"
       />
       <span class="block font-bold">Design tools &amp; knowledge</span>
       <Tags
         tags={['Figma', 'Inkscape', 'SVG', 'Typography', 'Layout', 'Visual idenitities']}
-        styles="text-brand-accent bg-gray-800"
+        class="bg-gray-800 text-brand-accent"
       />
       <span class="block font-bold">Other snappy stuff</span>
       <Tags
         tags={['Linux (Debian)', 'VSCode', 'Notion', 'Prettier', 'Jupyter', 'Markdown']}
-        styles="text-brand-accent bg-gray-800"
+        class="bg-gray-800 text-brand-accent"
       />
       <SectionDivider color="text-brand" />
     </section>

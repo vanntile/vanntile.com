@@ -1,10 +1,10 @@
 ---
 interface Props {
   tags: string[]
-  styles?: string
+  class?: string
 }
 
-const { tags, styles } = Astro.props as Props
+const { tags, class: styles } = Astro.props as Props
 ---
 
 <div class={`mt-1 pb-2 overflow-hidden flex flex-row flex-wrap space-x-2`}>
