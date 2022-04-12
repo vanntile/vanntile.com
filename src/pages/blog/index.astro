@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
+import Tags from '../../components/Tags.astro'
 
 const content = {
   title: `Blog - twigs and thoughts`,
@@ -31,6 +32,12 @@ const posts = (await Astro.glob<PageMeta>('./*.md')).sort(
         <a href={post.url} class="inline-block mt-2 cta">
           Read more
         </a>
+        <div class="inline-block px-4">
+          <Tags
+            tags={post.frontmatter.keywords.split(', ').slice(0, 3)}
+            class="py-1 text-xs tracking-widest bg-transparent border-2 border-current text-brand dark:text-brand-tint rounded-2xl"
+          />
+        </div>
       </div>
     ))}
   </main>

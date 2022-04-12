@@ -3,13 +3,14 @@ import '../styles/prism-theme.css'
 import readingTime from 'reading-time'
 import BaseLayout from '../layouts/BaseLayout.astro'
 import NextArticle from '../components/NextArticle.astro'
+import Tags from '../components/Tags.astro'
 
 interface Props {
   content: PageMeta & { url: string, astro: any }
 }
 
 const { content } = Astro.props as Props
-const { title, publishedAt, nextArticle } = content
+const { title, publishedAt, nextArticle, keywords } = content
 
 const articles = await Astro.glob<PageMeta>('../pages/blog/*.md')
 
@@ -23,10 +24,16 @@ const reading = readingTime(content.astro.source)
   <main class="w-full px-6 pt-8 pb-32 mx-auto xl:text-lg 2xl:text-xl max-w-prose 2xl:max-w-6xl">
     <article>
       <h1>{title}</h1>
-      <div class="font-bold text-gray-400 dark:text-brand-secondary">
+      <div class="-mt-8 font-bold text-gray-500 dark:text-brand-secondary">
         <time datetime={publishedAt}>
           {new Intl.DateTimeFormat('en', dateFormat).format(new Date(publishedAt))}
         </time>, {reading.text}
+      </div>
+      <div class="py-4">
+        <Tags
+          tags={keywords.split(', ')}
+          class="text-xs tracking-wide bg-transparent border-2 border-current text-brand dark:text-brand-tint rounded-2xl"
+        />
       </div>
       <slot />
       {nextArticle && <NextArticle title={nextArticleTitle} link={nextArticle} />}
