@@ -12,13 +12,13 @@
     "release": "standard-version --no-verify --sign"
   },
   "devDependencies": {
-    "@astrojs/tailwind": "^0.1.2",
+    "@astrojs/tailwind": "^0.2.0",
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
     "@types/tailwindcss": "^3.0.10",
-    "astro": "^0.26.1",
+    "astro": "^1.0.0-beta.12",
     "husky": "^7.0.4",
-    "lint-staged": "^12.3.7",
+    "lint-staged": "^12.3.8",
     "prettier-plugin-astro": "^0.0.12",
     "reading-time": "^1.5.0",
     "rehype-autolink-headings": "^6.1.1",

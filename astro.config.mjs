@@ -34,5 +34,5 @@ export default defineConfig({
       ],
     ],
   },
-  integrations: [tailwind({ config: { applyAstroPreset: false, applyBaseStyles: false } })],
+  integrations: [tailwind({ config: { applyBaseStyles: false } })],
 })
