@@ -2,7 +2,7 @@
 title: From NextJS to Astro
 publishedAt: 2022-04-17
 summary: Migrating vanntile.com from NextJS to Astro and how I let go of React in favor of static site generation.
-image: blog/next-to-astro.png
+image: blog/banner-next-to-astro.png
 imageAlt: Banner image with NextJS logo and an arrow emoji pointing to the Astro logo
 keywords: nextjs, astro, frontend, performance, lighthouse
 layout: ../../layouts/BlogLayout.astro
