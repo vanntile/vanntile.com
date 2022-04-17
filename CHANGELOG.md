@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.1.0](https://github.com/vanntile/vanntile.com/compare/v3.0.0...v3.1.0) (2022-04-17)
+
+
+### Features
+
+* :star2: add keywords to articles ([d8168b3](https://github.com/vanntile/vanntile.com/commit/d8168b32d74a9e448664523cead405135d4b7f5a))
+
+
+### Bug Fixes
+
+* **review:** :bug: rebuild package-lock.json ([88b3612](https://github.com/vanntile/vanntile.com/commit/88b3612cb82297c86e2a6247e67b442b17d33001))
+* **seo:** :bug: add Astro to texh stack ([3a8e614](https://github.com/vanntile/vanntile.com/commit/3a8e6147a2777919599ea720a82eccad87c7c200))
+* **seo:** :bug: add Astro to texh stack ([8108ece](https://github.com/vanntile/vanntile.com/commit/8108eced8a1f05d96070243191546f58abed95d4))
+* **uiux:** :bug: add some horizontal padding ([feb1227](https://github.com/vanntile/vanntile.com/commit/feb1227d75398ffcccf69cdddf366a3cbce55645))
+
 ## [3.0.0](https://github.com/vanntile/vanntile.com/compare/v2.4.2...v3.0.0) (2022-04-10)
 
 
