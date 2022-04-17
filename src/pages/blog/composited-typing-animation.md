@@ -5,6 +5,7 @@ summary: Creating beautiful animations using Tailwind can also be efficient, by 
 image: blog/banner-composited-typing-animation.png
 imageAlt: Banner image with vanntile, tailwindcss and CSS3 logos
 keywords: css, tailwind, compositing, animation, keyframes, transform property
+nextArticle: next-to-astro
 layout: ../../layouts/BlogLayout.astro
 setup: |
   import AnimatedHeader from '../../components/AnimatedHeader.astro'

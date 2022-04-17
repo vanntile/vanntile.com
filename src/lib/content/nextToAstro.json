@@ -1,0 +1,9 @@
+{
+  "reasons": [
+    "Reducing client load time by not loading a rendering framework",
+    "Reducing data usage by sending as little as possible",
+    "Making a website instead of a web app",
+    "Making a website that can function without JavaScript",
+    "Reducing development chores by removing dependencies"
+  ]
+}

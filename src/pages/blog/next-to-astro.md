@@ -1,0 +1,128 @@
+---
+title: From NextJS to Astro
+publishedAt: 2022-04-17
+summary: Migrating vanntile.com from NextJS to Astro and how I let go of React in favor of static site generation.
+image: blog/next-to-astro.png
+imageAlt: Banner image with NextJS logo and an arrow emoji pointing to the Astro logo
+keywords: nextjs, astro, frontend, performance, lighthouse
+layout: ../../layouts/BlogLayout.astro
+setup: |
+  import ReasonList from '../../components/ReasonList.astro'
+  import content from '../../lib/content/nextToAstro.json'
+---
+
+## Motivation
+
+In April 2022, I have decided to remove JavaScript from my own personal website
+(yes, the one you're on right now). This does not mean I had to not use a single
+line of the web programming language, but that I had to make my website work
+without the need of a client-side, SPA framework. A few reasons might come in
+mind for this:
+
+<ReasonList title="Why use server-side web frameworks?" items={content.reasons} />
+
+At that point, I knew I had to either use a tried and tested static generator or
+cutting edge web frameworks. I couldn't find the first option very welcoming, as
+I was aware that the classig SSG approach involved either using programming
+languages different from JavaScript or templating engines with their own syntax
+and, for all its worth and React controversy, JSX feels pretty natural right now.
+
+## The experiment
+
+So I looked into the second solution. But while I was only learning to navigate
+the [Deno](https://deno.land/) 🦕 space, I wasn't ready to jump ship into the
+complete unknown in production (no harm meant for Deno, I think it's great and
+has the potential of being a major part in the ecosystem, through its security
+and compatibility with the browser). That left me with going to the extreme
+landscape edge, straight to [Remix](https://remix.run),
+[Marko](https://markojs.com) or [Astro](https://astro.build), all which I
+thought could cover my needs and more. I have to be honest, I actually got on
+the Remix hype train, gave it a try, experimenteed locally and ... didn't get it.
+It felt unpolished, over-engineered (yes, a hot take) and very capable of
+amazing things ... in the future. For me, and especially for this endless
+blog-like project, this was not needed. What I actually wanted was not a
+hyperactive edge server, but:
+
+1. Static file serving
+2. Build support to help me keep it DRY
+3. Markdown or, even better, MDX integration with [remark](https://remark.js.org/)
+
+So I had to let Remix go, but I promise 🙏 I'll come back for the next project.
+I just have to test those error boundaries better (yes, I think that's a great
+feature and I am aware it's in React since v16, but it wasn't promoted to its
+capabilities, which Remix actually does).
+
+I had, in my endless choice, to pick between Marko and Astro, and the third
+criteria, along with the native `<Markdown />` component, made all the
+difference. `Astro` is a beta-level open-source framework (it was pre-beta when
+I started tinkering with it) and it feels, among others, unstable. The docs are
+lately out of date, with conflicting instructions because they cover multiple
+versions, and a few things are just in the plans, not in the works (like a
+stable `<Image />` component that uses build-time magic and still works without
+JavaScript). But enough with the negative, let's see why I actually switched.
+
+## Welcome the new: astro.build
+
+First of all, it has markdown, remark and components in markdown as first-class
+citizens, and that is a core part of a simple blog. I just migrated my
+remark-rehype plugin settings into the Astro configuration and it was haflway
+ready to be used. The other half is the *second advantage*, easy Tailwind
+integration (and later Tailwind as a favored integration through the
+`@astrojs/tailwind`). *Third reason*, their data interpolation syntax is as
+close you can get to JSX without being JSX, but wait, it gets better, you use
+plain HTML attributes, so no more `className` 🎉 or camel-case shenanigans. This
+is actually the hardest part in the migration from NextJS to Astro: renaming the
+messed up attributes in React components into normal `HTML`. Talking about that,
+Astro supports components from major frontend frameworls (React, Vue, Angular,
+Preact, Svelte), but I have discovered that their plain `.astro` components,
+which can use build time data and have no client-side JavaScript, were all I
+actually needed. And if I ever need something that is dynamic and needs state
+management, I can use their island architecture and client-side loading
+directives to delay the loading of any fancy framework.
+
+That being said, the migration felt easy, but had a few hurdles. I had to let go
+of the communication form whose backend was also managed by NextJS and of the
+page loading animation, because pages are not loaded now, you actually navigate
+to a new `HTML` document. And I had to make a decision: do I change my design
+and remove the experience section tabs on the
+[homepage](https://vanntile.com#section-experience) or do I integrate React on
+the homepage just to use `react-tabs`? I actually did neither and wrote a fully
+[accessible](http://web-accessibility.carnegiemuseums.org/code/tabs/) tabs
+implementation in 60 lines. It's simple and achieves
+feature parity with `react-tabs` if I use it on a single table (I won't code
+in extensibility into the code unless I needed). More than this, the `<script>`
+is only loaded with the component and could be bundled, if I decided to.
+Finally, I added a small script that is loaded on every page to manage the
+light-dark theme preference (based on my choice that dark mode should be default
+on my website, but I can offer the light theme option on the blog) and another
+one for the theme switcher button in the navigation bar. And that was pretty
+much the transition (if I were to forget with my experiemnts with
+[astro-imagetools](https://astro-imagetools-docs.vercel.app/en/introduction) and
+[tailwind typography](https://tailwindcss.com/docs/typography-plugin) which I
+abandoned by the end).
+
+## The results
+
+In the end, I was completely delighted with the results. As you can see in the
+[Lighthouse](https://github.com/GoogleChrome/lighthouse) comparison below, the
+overall performance increased by 13 points, to 99, I shaved **200ms** from
+the blocking time and halved the time-to-interactive to **1.4s**.
+
+![NextJS vs Astro Lighthouse comparison](/assets/blog/next-to-astro/lighthouse-comparison.png)
+
+The above are measured in the deployed versions, on the mobile test. To be
+honest, part of the difference is the simultaneous transition to
+[render.com](https://render.com/) from [Heroku](https://www.heroku.com/). But to
+add some hard numbers to the above stats, the NextJS version was loading
+initially `184kB (435kB of data)`, while the improved Astro version is only
+`68kB (143kB data)`, which is a 65% network usage reduction. So the Lighthouse
+test must be getting something out of this reduction. This is not to say that
+Next is bad, but that I am not in need of their offering (although I miss their
+`<Image />` component).
+
+At the time of writing this article, Astro is at the 12th beta version and has
+decided on a stable API, while launching SSR and their first hackathon for v1.0.
+I currently am excited for their future and can't wait to see where this
+community will end up with. The ability to integrate component frameworks seems
+crucial to me, but building things in their own way will be what pushes them
+forward.
