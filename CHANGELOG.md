@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.2.0](https://github.com/vanntile/vanntile.com/compare/v3.1.0...v3.2.0) (2022-04-20)
+
+
+### Features
+
+* :star2: add contact form ([a2f0835](https://github.com/vanntile/vanntile.com/commit/a2f08358936fb30083fe0f9fc80d47c9b2d49b18))
+
+
+### Bug Fixes
+
+* **typos:** :bug: change banner image path ([026d710](https://github.com/vanntile/vanntile.com/commit/026d7101638eed756a353d2e29aff193c6ad7323))
+
 ## [3.1.0](https://github.com/vanntile/vanntile.com/compare/v3.0.0...v3.1.0) (2022-04-17)
 
 
