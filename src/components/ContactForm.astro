@@ -1,0 +1,48 @@
+---
+const homepage = Astro.canonicalURL.href
+---
+
+<form action="https://submit-form.com/AF25jUc0" class="p-4 pt-0 my-4 border border-current">
+  <h3>Send me a message</h3>
+  <div class="flex flex-col mb-4">
+    <label for="name">Your name *</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      placeholder="A curious person"
+      auto-complete="on"
+      required
+      class="w-full px-4 py-2 bg-gray-800 border-2 border-gray-900 focus:border-current focus:outline-none"
+    />
+  </div>
+  <div class="flex flex-col mb-4">
+    <label for="email">Email *</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      placeholder="curious@acme.com"
+      auto-complete="on"
+      required
+      class="w-full px-4 py-2 bg-gray-800 border-2 border-gray-900 focus:border-current focus:outline-none"
+    />
+  </div>
+  <div class="flex flex-col mb-4">
+    <label for="message">Message *</label>
+    <textarea
+      rows={5}
+      id="message"
+      name="message"
+      required
+      class="w-full px-4 py-2 bg-gray-800 border-2 border-gray-900 focus:border-current focus:outline-none"></textarea>
+  </div>
+  <input type="hidden" name="_redirect" value={homepage} />
+  <input type="hidden" name="_append" value="false" />
+  <button
+    type="submit"
+    class="w-full px-4 py-2 mt-4 text-xl font-semibold transition border-2 border-current cursor-pointer duration-50 focus:outline-none hover:bg-brand-accent hover:text-gray-900"
+  >
+    Send
+  </button>
+</form>
