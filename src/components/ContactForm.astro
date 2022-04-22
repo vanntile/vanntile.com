@@ -1,8 +1,35 @@
 ---
-const homepage = Astro.canonicalURL.href
+const homepage = (new URL(Astro.request.url)).href
 ---
 
-<form action="https://submit-form.com/AF25jUc0" class="p-4 pt-0 my-4 border border-current">
+<script>
+  import '@botpoison/browser'
+
+  const checkForm = (event) => {
+    const form = document.querySelector("#contactForm")
+    const btn = document.querySelector(`#contactForm > button[type="submit"]`)
+
+    form.addEventListener("botpoison-challenge-start", () => {
+      btn.setAttribute("disabled", "disabled")
+    })
+    form.addEventListener("botpoison-challenge-success", () => {
+      btn.removeAttribute("disabled")
+    })
+    form.addEventListener("botpoison-challenge-error", () => {
+      btn.removeAttribute("disabled")
+    })
+  }
+
+  window.addEventListener('DOMContentLoaded', checkForm)
+</script>
+
+<form
+  id="contactForm"
+  action="https://submit-form.com/AF25jUc0"
+  method="POST"
+  data-botpoison-public-key="pk_84f1e813-2282-41cb-b3cd-bdbed4bc6153"
+  class="p-4 pt-0 my-4 border border-current"
+>
   <h3>Send me a message</h3>
   <div class="flex flex-col mb-4">
     <label for="name">Your name *</label>

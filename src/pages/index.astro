@@ -40,7 +40,7 @@ const latestPosts = (await Astro.glob<PageMeta>('./blog/*.md'))
   .slice(0, 3)
 ---
 
-<script is:inline>
+<script>
   const options = {
     root: null,
     rootMargin: '0px',
@@ -240,7 +240,7 @@ const latestPosts = (await Astro.glob<PageMeta>('./blog/*.md'))
           </a>
         ))}
       </div>
-      <ContactForm />
+      <ContactForm client:idle />
     </section>
   </main>
   <footer class="border-t-2 hSection py-14 border-brand-accent">Designed &amp; built by vanntile</footer>
