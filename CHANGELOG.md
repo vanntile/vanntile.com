@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.4.0](https://github.com/vanntile/vanntile.com/compare/v3.3.0...v3.4.0) (2022-08-20)
+
+
+### Features
+
+* **style:** :star2: add scrollbar style ([f149c91](https://github.com/vanntile/vanntile.com/commit/f149c9130232d5036a166e863fe3326a25116cdd))
+
 ## [3.3.0](https://github.com/vanntile/vanntile.com/compare/v3.2.1...v3.3.0) (2022-04-22)
 
 
