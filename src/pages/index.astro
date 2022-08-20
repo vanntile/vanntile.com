@@ -35,7 +35,17 @@ const socialMedia: ExternalSVG[] = [
   },
 ]
 
-const latestPosts = (await Astro.glob<PageMeta>('./blog/*.md'))
+const props = {
+  title: 'vanntile - frontend developer and graphic designer',
+  publishedAt: new Date().toISOString(),
+  summary: 'Developer by choice and designer for fun. I speak the languages of both engineering and aesthetics and can help with your next project.',
+  image: 'banner.png',
+  imageAlt: 'Banner image with logo and "Good design is invisible" motto',
+  keywords: '',
+  withNav: false,
+}
+
+const latestPosts = (await Astro.glob<PageMeta>('./blog/*.mdx'))
   .sort((a, b) => new Date(b.frontmatter.publishedAt).valueOf() - new Date(a.frontmatter.publishedAt).valueOf())
   .slice(0, 3)
 ---
@@ -63,7 +73,7 @@ const latestPosts = (await Astro.glob<PageMeta>('./blog/*.md'))
   })
 </script>
 
-<BaseLayout withNav="false">
+<BaseLayout {...props}>
   <main class="w-full pt-8 pb-32 mx-auto xl:px-6 xl:text-lg 2xl:text-xl max-w-prose 2xl:max-w-6xl">
     <section class="flex flex-col justify-center min-h-screen px-6 py-16 text-left hSection">
       <div>
@@ -240,7 +250,7 @@ const latestPosts = (await Astro.glob<PageMeta>('./blog/*.md'))
           </a>
         ))}
       </div>
-      <ContactForm client:idle />
+      <ContactForm />
     </section>
   </main>
   <footer class="border-t-2 hSection py-14 border-brand-accent">Designed &amp; built by vanntile</footer>

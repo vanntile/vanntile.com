@@ -1,8 +1,18 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
+
+const props = {
+  title: 'vanntile - brand book',
+  publishedAt: new Date().toISOString(),
+  summary: 'Design brand book for vanntiles aesthetics',
+  image: 'deck/banner-deck.png',
+  imageAlt: 'Banner image for the brand book',
+  keywords: 'design, branding, graphic design, brand book, design deck',
+  withNav: false,
+}
 ---
 
-<BaseLayout>
+<BaseLayout {...props}>
   <main class="relative w-screen h-[calc(100vh-84px)] mt-2 bottom-0 px-4 overflow-y-scroll bg-gray-900 snap-center snap-y snap-mandatory">
     <div class="flex items-center justify-center h-full pb-4 snap-center">
       <img

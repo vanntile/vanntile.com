@@ -2,20 +2,21 @@
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import Tags from '../../components/Tags.astro'
 
-const content = {
+const props = {
   title: `Blog - twigs and thoughts`,
-  description: `Articles on tech, software development, design and case studies.`,
+  publishedAt: new Date().toISOString(),
+  summary: `Articles on tech, software development, design and case studies.`,
   image: 'banner.png',
   imageAlt: 'Banner image with logo and "Good design is invisible" motto',
-  type: 'website',
+  keywords: '',
 }
 
-const posts = (await Astro.glob<PageMeta>('./*.md')).sort(
+const posts = (await Astro.glob<PageMeta>('./*.mdx')).sort(
   (a, b) => new Date(b.frontmatter.publishedAt).valueOf() - new Date(a.frontmatter.publishedAt).valueOf(),
 )
 ---
 
-<BaseLayout {content}>
+<BaseLayout {...props}>
   <main class="w-full px-6 pt-8 pb-32 mx-auto xl:text-lg 2xl:text-xl max-w-prose 2xl:max-w-6xl">
     <h1>Blog posts</h1>
     {posts.map((post) => (

@@ -5,6 +5,7 @@ interface PageMeta {
   image: string
   imageAlt: string
   keywords: string
+  readingTime?: string
   nextArticle?: string
 }
 

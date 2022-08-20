@@ -3,6 +3,7 @@
   "version": "3.3.0",
   "private": true,
   "scripts": {
+    "astro": "astro",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
@@ -12,15 +13,17 @@
     "release": "standard-version --no-verify --sign"
   },
   "devDependencies": {
-    "@astrojs/tailwind": "^0.2.0",
+    "@astrojs/mdx": "^0.10.0",
+    "@astrojs/tailwind": "^1.0.0",
     "@botpoison/browser": "^0.1.30",
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
     "@types/tailwindcss": "^3.0.10",
-    "astro": "^1.0.0-beta.17",
+    "astro": "^1.0.6",
     "husky": "^7.0.4",
     "lint-staged": "^12.4.0",
-    "prettier-plugin-astro": "^0.0.12",
+    "mdast-util-to-string": "^3.1.0",
+    "prettier-plugin-astro": "^0.5.0",
     "reading-time": "^1.5.0",
     "rehype-autolink-headings": "^6.1.1",
     "remark-code-titles": "^0.1.2",
@@ -37,8 +40,8 @@
     ]
   },
   "engines": {
-    "node": "16.14.x",
-    "npm": "8.6.x"
+    "node": "18.7.x",
+    "npm": "8.18.x"
   },
   "repository": {
     "type": "git",

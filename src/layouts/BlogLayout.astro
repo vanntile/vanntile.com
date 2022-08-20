@@ -1,33 +1,27 @@
 ---
 import '../styles/prism-theme.css'
-import readingTime from 'reading-time'
 import BaseLayout from '../layouts/BaseLayout.astro'
 import NextArticle from '../components/NextArticle.astro'
 import Tags from '../components/Tags.astro'
 
-interface Props {
-  content: PageMeta & { url: string, astro: any }
-}
+const frontmatter =  Astro.props.frontmatter as PageMeta
+const { title, publishedAt, nextArticle, keywords, readingTime } = frontmatter
 
-const { content } = Astro.props as Props
-const { title, publishedAt, nextArticle, keywords } = content
-
-const articles = await Astro.glob<PageMeta>('../pages/blog/*.md')
+const articles = await Astro.glob<PageMeta>('../pages/blog/*.mdx')
 
 const nextArticleTitle = nextArticle ? articles.find((e) => e.url.split('/')[2] === nextArticle).frontmatter.title : ''
 
 const dateFormat = { year: 'numeric', month: 'long', day: '2-digit' } as Intl.DateTimeFormatOptions
-const reading = readingTime(content.astro.source)
 ---
 
-<BaseLayout {content}>
+<BaseLayout {...frontmatter}>
   <main class="w-full px-6 pt-8 pb-32 mx-auto xl:text-lg 2xl:text-xl max-w-prose 2xl:max-w-6xl">
     <article>
       <h1>{title}</h1>
       <div class="-mt-8 font-bold text-gray-500 dark:text-brand-secondary">
         <time datetime={publishedAt}>
           {new Intl.DateTimeFormat('en', dateFormat).format(new Date(publishedAt))}
-        </time>, {reading.text}
+        </time>, {readingTime}
       </div>
       <div class="py-4">
         <Tags
