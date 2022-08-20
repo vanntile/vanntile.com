@@ -16,12 +16,11 @@
     "@astrojs/mdx": "^0.10.0",
     "@astrojs/tailwind": "^1.0.0",
     "@botpoison/browser": "^0.1.30",
-    "@commitlint/cli": "^16.2.3",
-    "@commitlint/config-conventional": "^16.2.1",
-    "@types/tailwindcss": "^3.0.10",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
     "astro": "^1.0.6",
-    "husky": "^7.0.4",
-    "lint-staged": "^12.4.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "mdast-util-to-string": "^3.1.0",
     "prettier-plugin-astro": "^0.5.0",
     "reading-time": "^1.5.0",
@@ -31,8 +30,8 @@
     "remark-html": "^15.0.1",
     "remark-slug": "^7.0.1",
     "remark-toc": "^8.0.1",
-    "standard-version": "^9.3.2",
-    "stylelint-config-recommended": "^7.0.0"
+    "standard-version": "^9.5.0",
+    "stylelint-config-recommended": "^9.0.0"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
