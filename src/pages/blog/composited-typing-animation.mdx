@@ -19,8 +19,6 @@ animation is the one below.
   <AnimatedHeader />
 </div>
 
-## Table of Contents
-
 ## The starting point
 
 We all need to start somewhere, and this is where I have started. First of all, I am using
@@ -71,7 +69,7 @@ is hovered. Both are custom animations written by myself and change small detail
 direction for a base set of keyframes, which you can see below. Yes, I went through a painstaking work of matching
 keyframe percentages to element width in characters.
 
-```js:tailwind.config.js
+```js title="tailwind.config.js"
 module.exports = {
   // ...
   theme: {
@@ -162,7 +160,7 @@ wouldn't it's display wouldn't be block, in order to have some width without con
 You can see in the snippet below the keyframes to the one and only animation (we have removed the complex logic that
 would change on hover because sometimes it's better to _keep it simple, stupid_).
 
-```js:tailwind.config.js
+```js title="tailwind.config.js" showLineNumbers {2,4-7,9-11} /type/
 module.exports = {
   // ...
   theme: {

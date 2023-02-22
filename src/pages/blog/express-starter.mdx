@@ -15,14 +15,12 @@ In this article I am describing a list of comprehensive steps, configurations an
 a NodeJS project that is developed in a Docker container. This is going to be a long path to completion, but at the end
 of the rainbow I have a special tool that would make things fairly easier.
 
-## Table of Contents
-
 ## Setting the package
 
 For the initial step we will create a basic configuration in the project directory. This includes a standard
 `package.json` and a license.
 
-```json:package.json
+```json title="package.json"
 {
   "main": "src/index.mjs",
   "type": "module",
@@ -54,13 +52,13 @@ You can find the [MIT license](https://mit-license.org/) which should be the tem
 We will add a set of configurations for environment variables, ESLint and Prettier. A Node-specific
 [.gitignore](https://www.toptal.com/developers/gitignore/api/node,vscode,macos) can be generated using Toptal's tool.
 
-```:.env.example
+```plaintext title=".env.example"
 NODE_ENV=development
 PORT=8080
 MY_SECRET=sosecret
 ```
 
-```:.eslintignore
+```plaintext title=".eslintignore"
 !**/.eslintrc*
 **/build*
 **/node_modules*
@@ -76,7 +74,7 @@ coverage
 dist
 ```
 
-```json:.eslintrc
+```json title=".eslintrc"
 {
   "root": true,
   "env": {
@@ -104,7 +102,7 @@ dist
 }
 ```
 
-```json:.prettierrc
+```json title=".prettierrc"
 {
   "printWidth": 120,
   "tabWidth": 2,
@@ -131,7 +129,7 @@ interfaces inside a project and between projects. I tend to use OpenAPIs as a re
 can be used even as the first step of any API, at the conceptual phase. We start our project with a basic,
 undifferentiated spec.
 
-```yaml:./src/api/openapi.yml
+```yaml title="./src/api/openapi.yml"
 openapi: 3.0.0
 info:
   title: project name
@@ -160,7 +158,7 @@ your work later, so we create a set of files that are sufficient for a small bac
 can be extended by adding external loggin, API gateways using [Kong](https://konghq.com/) or databases, making the
 project almost ready for deployment.
 
-```:.dockerignore
+```plaintext title=".dockerignore"
 node_modules/
 *.rest
 .env.example
@@ -174,7 +172,7 @@ README.md
 docker-compose.yml
 ```
 
-```docker:Dockerfile
+```docker title="Dockerfile"
 FROM node:14.16.0-alpine
 
 WORKDIR /home/node/app
@@ -191,7 +189,7 @@ HEALTHCHECK --interval=2m --timeout=10s --retries=5 \
   CMD node ./src/healthcheck.mjs
 ```
 
-```yaml:docker-compose.yml
+```yaml title="docker-compose.yml"
 version: '3.8'
 
 services:
@@ -287,7 +285,7 @@ previous steps.
 First we get some utilities set up, like `config.mjs` and `logger.mjs` for reading configurations from environment
 variables and logging events respecively.
 
-```js:src/utils/config.mjs
+```js title="src/utils/config.mjs"
 import getSecret from 'docker-secret'
 
 // constants
@@ -305,7 +303,7 @@ export default {
 }
 ```
 
-```js:src/utils/logger.mjs
+```js title="src/utils/logger.mjs"
 import { Logger } from 'tslog'
 
 const logger = new Logger({
@@ -321,7 +319,7 @@ export default logger
 Both `ServerError.mjs` and `middleware.mjs` refer to error handling, either being a base error class or a set of
 Express middleware functions to inject directly into our pipeline.
 
-```js:src/utils/ServerError.mjs
+```js title="src/utils/ServerError.mjs"
 class ServerError extends Error {
   constructor(message, httpStatus) {
     super(message)
@@ -334,7 +332,7 @@ class ServerError extends Error {
 export default ServerError
 ```
 
-```js:src/utils/middleware.mjs
+```js title="src/utils/middleware.mjs"
 import logger from './logger.mjs'
 
 export const unknownEndpoint = (_req, res) => {
@@ -360,7 +358,7 @@ export default {
 
 Finally, some short utility functions to ease the use of fetch calls.
 
-```js:src/utils/utils.mjs
+```js title="src/utils/utils.mjs"
 import fetch from 'node-fetch'
 import ServerError from './ServerError.mjs'
 
@@ -385,7 +383,7 @@ Before we actually start the app, we will set up a healthcheck script that was p
 Its use might not be obvious in the normal case, but it manages to answer status requests and verify that the state of
 our server is still running.
 
-```js:src/healthcheck.mjs
+```js title="src/healthcheck.mjs"
 /* eslint-disable no-console */
 import http from 'http'
 
@@ -414,7 +412,7 @@ request.end()
 
 In our main script, we create an Express app and start an HTTP server running that app.
 
-```js:src/index.mjs
+```js title="src/index.mjs"
 import http from 'http'
 import app from './app.mjs'
 import config from './utils/config.mjs'
@@ -433,7 +431,7 @@ Our app uses the common middleware for HTTP headers, parsing request bodies into
 connect the OpenAPIValidator running with the spec defined above and use a set of routes defined in our router module.
 Finally, we declare an endpoint that answers the liveliness probe and catch all other async errors.
 
-```js:src/app.mjs
+```js title="src/app.mjs"
 import cors from 'cors'
 import express from 'express'
 import 'express-async-errors'
@@ -489,7 +487,7 @@ export default app
 For the routes themselves, we just introduce a standard `/hello` route to test in the most general way that a `GET`
 request works properly.
 
-```js:src/routes.mjs
+```js title="src/routes.mjs"
 import { Router } from 'express'
 
 const router = Router()

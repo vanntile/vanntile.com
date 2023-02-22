@@ -1,6 +1,7 @@
 {
   "files.associations": {
     ".czrc": "jsonc",
+    ".mdx": "markdown",
     ".stylelintrc": "jsonc"
   },
   "tailwindCSS.includeLanguages": {

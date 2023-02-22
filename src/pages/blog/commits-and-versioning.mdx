@@ -68,7 +68,7 @@ Let's put the above into action. First, install the below packages.
 
 I personally use the below commitlint configuration.
 
-```js:.commitlintrc.cjs
+```js title=".commitlintrc.cjs"
 module.exports = {
   extends: ['@commitlint/config-conventional'],
   rules: {
@@ -99,7 +99,7 @@ module.exports = {
 Many projects have various code checking or linting tasks, and mine are no different. I always add a prettier configuration
 such as the `.prettierrc` below and hook in the pre-commit step using [Husky 🐶](https://github.com/typicode/husky).
 
-```json:.prettierrc
+```json title=".prettierrc"
 {
   "printWidth": 120,
   "tabWidth": 2,
@@ -115,7 +115,7 @@ It can be a pain to run some tasks on the complete codebase, so we can use [lint
 in order to check only the files staged since the last commit. You can see below, my only task is linting (and
 fixing errors) with prettier, on _JavaScript-like_ files.
 
-```json:package.json
+```json title="package.json"
 {
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
@@ -154,7 +154,7 @@ Install it and add the **npm script** for quick access.
 𝝺 npm i -D standard-version
 ```
 
-```json:package.json
+```json title="package.json"
 {
   "scripts": {
     //...
@@ -200,7 +200,7 @@ cz-emoji defaults). Specifically:
 I have tried getting my own list and, after a few iterations, I end up with the below scopes and types, both ordered
 mostly by frequency of use.
 
-```json:.czrc
+```json title=".czrc"
 {
   "path": "cz-emoji",
   "config": {
