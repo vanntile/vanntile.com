@@ -2,6 +2,18 @@
   "name": "vanntile-portfolio",
   "version": "3.4.0",
   "private": true,
+  "author": "vanntile",
+  "license": "(MIT OR CC-BY-NC-SA-4.0)",
+  "keywords": [
+    "blog",
+    "portfolio",
+    "astro",
+    "mdx"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanntile/vanntile.com.git"
+  },
   "scripts": {
     "astro": "astro",
     "dev": "astro dev",
@@ -33,20 +45,14 @@
     "standard-version": "^9.5.0",
     "stylelint-config-recommended": "^9.0.0"
   },
+  "engines": {
+    "node": "18.7.x",
+    "npm": "8.18.x"
+  },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "prettier --staged --write"
     ]
   },
-  "engines": {
-    "node": "18.7.x",
-    "npm": "8.18.x"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vanntile/vanntile.com.git"
-  },
-  "keywords": [],
-  "author": "vanntile",
   "typings": "types/index.d.ts"
 }

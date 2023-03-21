@@ -31,3 +31,10 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview` | Preview your build locally, before deploying |
 | `npm run format`  | Format code using prettier                   |
 | `npm run release` | Release using standard-version               |
+
+## License
+
+The content of this project itself is licensed under the
+[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/),
+and the underlying source code used to format and display that content is
+licensed under the [MIT license](LICENSE.md).
