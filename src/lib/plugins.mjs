@@ -9,3 +9,13 @@ export function remarkReadingTime() {
     data.astro.frontmatter.readingTime = readingTime.text
   }
 }
+
+export function replaceCSSVariablesForShikiTheme(theme, colors) {
+  let themeStr = JSON.stringify(theme)
+
+  Object.entries(colors).forEach(([k, v]) => {
+    themeStr = themeStr.replaceAll(v, k)
+  })
+
+  return JSON.parse(themeStr)
+}

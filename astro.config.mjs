@@ -7,11 +7,14 @@ import rehypeSlug from 'rehype-slug'
 import rehypeSortAttributes from 'rehype-sort-attributes'
 import rehypeToc from 'rehype-toc'
 import remarkHint from 'remark-hint'
-import { remarkReadingTime } from './src/lib/plugins.mjs'
+import { getHighlighter } from 'shiki'
+import { remarkReadingTime, replaceCSSVariablesForShikiTheme } from './src/lib/plugins.mjs'
+import moonlightColors from './src/styles/moonlight-ii-color-replacement.json'
+import moonlightTheme from './src/styles/moonlight-ii.json'
 
 // https://rehype-pretty-code.netlify.app/
 const prettyCodeOptions = {
-  theme: 'one-dark-pro',
+  theme: replaceCSSVariablesForShikiTheme(moonlightTheme, moonlightColors), // 'material-palenight'
   keepBackground: false,
 
   onVisitLine(node) {
@@ -27,6 +30,16 @@ const prettyCodeOptions = {
 
   onVisitHighlightedWord(node) {
     node.properties.className = ['word']
+  },
+
+  getHighlighter: async (options) => {
+    const highlighter = await getHighlighter(options)
+
+    highlighter.setColorReplacements(
+      Object.fromEntries(Object.entries(moonlightColors).map(([k, v]) => [k, `var(${v})`])),
+    )
+
+    return Promise.resolve(highlighter)
   },
 }
 

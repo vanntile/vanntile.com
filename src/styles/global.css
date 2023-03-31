@@ -3,6 +3,37 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --moonlight-desaturated-gray: #7f85a3;
+    --moonlight-dark-blue: #3e68d7;
+    --moonlight-blue: #82aaff;
+    --moonlight-sky-blue: #65bcff;
+    --moonlight-cyan: #86e1fc;
+    --moonlight-red: #ff757f;
+    --moonlight-dark-red: #ff5370;
+    --moonlight-light-red: #ff98a4;
+    --moonlight-yellow: #ffc777;
+    --moonlight-orange: #ff966c;
+    --moonlight-dark-orange: #fc7b7b;
+    --moonlight-teal: #4fd6be;
+    --moonlight-green: #c3e88d;
+    --moonlight-purple: #c099ff;
+    --moonlight-pink: #fca7ea;
+    --moonlight-indigo: #7a88cf;
+    --moonlight-bright-cyan: #b4f9f8;
+    --moonlight-gray-10-alt: #bcc4d6;
+    --moonlight-gray-10: #c8d3f5;
+    --moonlight-gray-9: #b4c2f0;
+    --moonlight-gray-8: #a9b8e8;
+    --moonlight-gray-7: #828bb8;
+    --moonlight-gray-6: #444a73;
+    --moonlight-gray-5: #2f334d;
+    --moonlight-gray-4: #222436;
+    --moonlight-gray-3: #1e2030;
+    --moonlight-gray-2: #191a2a;
+    --moonlight-gray-1: #131421;
+  }
+
   @font-face {
     font-family: 'Objectivity';
     font-style: normal;
@@ -102,21 +133,60 @@
     @apply origin-left scale-x-100;
   }
 
-  /* Quotes, pre, code */
-
+  /* Quotes */
   blockquote {
     @apply pl-4 my-6 italic font-medium text-gray-900 border-l-4 border-gray-200 dark:border-gray-700 dark:text-gray-300 md:my-8 2xl:my-16 md:pl-5 2xl:pl-8;
     quotes: '\\201C''\\201D''\\2018''\\2019';
   }
 
+  /* pre, code */
+  [data-rehype-pretty-code-fragment] {
+    @apply -mx-16;
+  }
+
+  [data-rehype-pretty-code-title] {
+    @apply px-3 py-2 font-mono text-sm font-bold text-gray-200 bg-gray-800 border border-b-0 border-gray-600 rounded-t 2xl:text-lg md:px-4 md:py-3 2xl:px-8 2xl:py-7;
+  }
+
   pre {
-    @apply px-3 py-2 my-5 overflow-x-auto text-gray-800 border border-gray-200 rounded dark:border-gray-600 dark:bg-gray-900 dark:text-gray-200 bg-gray-50 md:my-6 2xl:my-8 md:px-4 md:py-3 2xl:px-8 2xl:py-7;
+    @apply px-3 py-2 my-8 overflow-x-auto text-gray-200 bg-gray-900 border border-gray-600 rounded md:my-6 2xl:my-8 md:px-4 md:py-3 2xl:px-8 2xl:py-7;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
+	  white-space: pre-wrap;
+  }
+
+  [data-rehype-pretty-code-title] + pre {
+    @apply mt-0 rounded-t-none;
   }
 
   code {
-    @apply text-xs font-medium text-gray-900 bg-gray-200 rounded 2xl:font-semibold dark:bg-gray-900 dark:text-gray-200 md:text-base 2xl:text-xl;
+    @apply grid mx-16 text-xs font-medium rounded 2xl:font-semibold md:text-base 2xl:text-xl;
+    counter-reset: line;
+  }
+
+  code > .line {
+  }
+
+  .highlighted {
+  }
+
+  code[data-line-numbers-max-digits="2"] > .line::before {
+    @apply w-8;
+  }
+  code[data-line-numbers-max-digits="3"] > .line::before {
+    @apply w-12;
+  }
+
+  [data-rehype-pretty-code-fragment] code[data-line-numbers] > .line::before {
+    counter-increment: line;
+    content: counter(line);
+    user-select: none;
+    @apply relative w-4 mr-4 text-right text-gray-400 right-12;
+  }
+
+  [data-rehype-pretty-code-fragment] code[data-line-numbers] > .highlighted::before {
+    @apply border-l-4 border-blue-400 border-solid;
+
   }
 
   a code {
@@ -342,5 +412,47 @@
   .scrollbar::-webkit-scrollbar-track:hover,
   .scrollbar::-webkit-scrollbar-track:active {
     @apply bg-gray-50 dark:bg-gray-900;
+  }
+
+  /*** remark-hint styling ***/
+  .hint {
+    @apply p-4 my-4 border;
+  }
+
+  .hint.tip {
+    @apply text-blue-900 border-blue-300 dark:text-blue-200 dark:border-blue-500 bg-blue-50 dark:bg-blue-900;
+  }
+
+  .hint.tip::selection {
+    @apply bg-blue-900 text-gray-50 dark:bg-gray-50 dark:text-blue-900;
+  }
+
+  .hint.warn {
+    @apply text-yellow-900 border-yellow-300 dark:text-gray-900 bg-yellow-50 dark:bg-yellow-500;
+  }
+
+  .hint.warn::selection {
+    @apply bg-yellow-500 text-gray-50 dark:bg-gray-50 dark:text-gray-900;
+  }
+
+  .hint.error {
+    @apply text-red-500 border-red-200 dark:text-red-200 dark:border-red-900 bg-red-50 dark:bg-red-800;
+  }
+
+  .hint.error::selection {
+    @apply bg-red-900 text-gray-50 dark:bg-gray-50 dark:text-red-900;
+  }
+
+  /*** remark-autolink-headings - link hash, similar to GitHub ones ***/
+  .icon-link {
+    @apply absolute -ml-6 text-gray-400 no-underline shadow-none opacity-0 2xl:-ml-12 hover:text-gray-400 hover:no-underline;
+  }
+
+  :is(h1, h2, h3, h4):hover > .icon-link {
+    @apply opacity-100;
+  }
+
+  .icon-link::before {
+    content: '#';
   }
 }
