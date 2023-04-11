@@ -32,7 +32,7 @@ But first, requirements – the animation needs:
 - to be able to have an emoji (that's because of my own copy)
 - to be responsive (to look just as good on different screen sizes)
 
-```html
+```html showLineNumbers
 <header className="mb-16 group">
   <h1 className="mb-1 font-mono text-4xl text-gray-100 md:text-6xl">
     hi, I'm <br className="block md:hidden" />
@@ -57,7 +57,7 @@ stage in the render cycle.
 x> It's essential that we don't overdo it (you can but shouldn't promote everything as it takes processing power from
 the browser's allowed CPU time).
 
-```css
+```css showLineNumbers
 .will-change-transform {
   will-change: transform;
 }
@@ -69,7 +69,7 @@ is hovered. Both are custom animations written by myself and change small detail
 direction for a base set of keyframes, which you can see below. Yes, I went through a painstaking work of matching
 keyframe percentages to element width in characters.
 
-```js title="tailwind.config.js"
+```js title="tailwind.config.js" showLineNumbers
 module.exports = {
   // ...
   theme: {
@@ -102,7 +102,7 @@ module.exports = {
 At the end of it all, there is a `span` element that is animated as a blinking cursor. For this, we'll animate the
 opacity of it's after `pseudo-element`, with a linear timing and an alternate direction (back and forward).
 
-```css
+```css showLineNumbers
 .cursor::after {
   display: block;
   content: '';
@@ -137,7 +137,7 @@ recalculated).
 After several iterations I have reached the following version. First, let's address the irrelevant, but necessary
 changes: we're changing the single quote into a `&apos;` and the emoji is resized depending on the screen size.
 
-```html
+```html showLineNumbers
 <h1 className="mb-2 font-mono text-4xl text-gray-100 md:text-6xl">
   hi, I&apos;m <br className="block md:hidden" />
   <span className="relative">
@@ -160,7 +160,7 @@ wouldn't it's display wouldn't be block, in order to have some width without con
 You can see in the snippet below the keyframes to the one and only animation (we have removed the complex logic that
 would change on hover because sometimes it's better to _keep it simple, stupid_).
 
-```js title="tailwind.config.js" showLineNumbers {2,4-7,9-11} /type/
+```js title="tailwind.config.js" showLineNumbers {6}
 module.exports = {
   // ...
   theme: {

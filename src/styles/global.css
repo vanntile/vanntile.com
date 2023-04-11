@@ -141,15 +141,15 @@
 
   /* pre, code */
   [data-rehype-pretty-code-fragment] {
-    @apply -mx-4 md:-mx-6 xl:-mx-16;
+    @apply w-screen mx-[calc(min(calc((-100vw+65ch)/2),0px)-1.5rem)] xl:w-[initial] xl:-mx-16 my-4 xl:my-6 2xl:my-8;
   }
 
   [data-rehype-pretty-code-title] {
-    @apply px-3 py-2 font-mono text-sm font-bold text-gray-200 bg-gray-800 border border-b-0 border-gray-800 rounded-t 2xl:text-lg md:px-4 md:py-3 2xl:px-8 2xl:py-7;
+    @apply px-16 py-2 font-mono text-sm font-bold text-gray-200 transition-colors bg-gray-800 border border-b-0 border-gray-800 border-x-0 xl:border-x xl:rounded-t-lg xl:py-4 2xl:text-lg 2xl:py-8;
   }
 
   pre {
-    @apply py-4 overflow-x-auto text-gray-200 bg-gray-900 border border-gray-800 rounded 2xl:py-8;
+    @apply py-4 overflow-x-auto text-gray-200 transition-colors bg-gray-900 border border-gray-800 border-x-0 xl:border-x xl:rounded-lg 2xl:py-8;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
@@ -163,8 +163,24 @@
   }
 
   code {
-    @apply box-border grid min-w-full px-16 text-sm font-medium rounded 2xl:font-semibold md:text-base 2xl:text-xl;
+    @apply text-xs font-medium text-gray-900 bg-gray-200 rounded 2xl:font-semibold dark:bg-gray-900 dark:text-gray-200 md:text-base 2xl:text-xl;
+  }
+
+  a code {
+    @apply text-brand dark:text-brand-accent;
+  }
+
+  h2 code, h3 code {
+    font-size: inherit;
+  }
+
+  [data-rehype-pretty-code-fragment] code {
+    @apply box-border grid min-w-full pl-16 pr-4 text-base bg-transparent dark:bg-transparent;
     counter-reset: line;
+  }
+
+  [data-rehype-pretty-code-fragment] code[data-language="bash"] {
+    --counter-content: "$";
   }
 
   code > .line {
@@ -175,28 +191,20 @@
     @apply relative transition-colors;
   }
 
+  /* TODO: fix when :has() support comes to Firefox */
   [data-rehype-pretty-code-fragment]:not(:hover) :is(.line:not(.highlighted):has(+ .highlighted), .highlighted ~ .line:not(.highlighted)) > span {
     @apply !text-gray-700;
   }
 
   code[data-line-numbers] > .line::before {
     counter-increment: line;
-    content: counter(line);
+    content: var(--counter-content, counter(line));
     user-select: none;
-    @apply absolute inline-block pl-2 text-gray-600 transition-colors border-l-4 border-transparent border-solid -left-16 w-[calc(100%+8rem)];
+    @apply absolute inline-block pl-2 text-gray-600 transition-colors border-l-4 border-transparent border-solid -left-16 w-[calc(100%+5rem)];
   }
 
   [data-rehype-pretty-code-fragment]:hover code[data-line-numbers] > .highlighted::before {
-    @apply border-blue-400 bg-slate-800;
-  }
-
-  a code {
-    @apply text-brand dark:text-brand-accent;
-  }
-
-  h2 code,
-  h3 code {
-    font-size: inherit;
+    @apply bg-blue-900 bg-opacity-25 border-blue-400;
   }
 
   /* Lists */
@@ -320,6 +328,48 @@
   }
 }
 
+/*** remark-hint styling ***/
+.hint {
+  @apply px-4 py-4 border xl:-mx-16 xl:px-16 max-w-none xl:rounded-lg;
+}
+
+.hint.tip {
+  @apply text-blue-900 border-blue-300 dark:text-blue-200 dark:border-blue-500 bg-blue-50 dark:bg-blue-900;
+}
+
+.hint.tip::selection {
+  @apply bg-blue-900 text-gray-50 dark:bg-gray-50 dark:text-blue-900;
+}
+
+.hint.warn {
+  @apply text-yellow-900 border-yellow-300 dark:text-gray-900 bg-yellow-50 dark:bg-yellow-500;
+}
+
+.hint.warn::selection {
+  @apply bg-yellow-500 text-gray-50 dark:bg-gray-50 dark:text-gray-900;
+}
+
+.hint.error {
+  @apply text-red-500 border-red-200 dark:text-red-200 dark:border-red-900 bg-red-50 dark:bg-red-800;
+}
+
+.hint.error::selection {
+  @apply bg-red-900 text-gray-50 dark:bg-gray-50 dark:text-red-900;
+}
+
+/*** remark-autolink-headings - link hash, similar to GitHub ones ***/
+.icon-link {
+  @apply absolute -ml-6 text-gray-400 no-underline shadow-none opacity-0 2xl:-ml-12 hover:text-gray-400 hover:no-underline;
+}
+
+:is(h1, h2, h3, h4):hover > .icon-link {
+  @apply opacity-100;
+}
+
+.icon-link::before {
+  content: '#';
+}
+
 
 @layer utilities {
   .pseudo-none::before,
@@ -413,47 +463,5 @@
   .scrollbar::-webkit-scrollbar-track:hover,
   .scrollbar::-webkit-scrollbar-track:active {
     @apply bg-gray-50 dark:bg-gray-900;
-  }
-
-  /*** remark-hint styling ***/
-  .hint {
-    @apply p-4 my-4 border;
-  }
-
-  .hint.tip {
-    @apply text-blue-900 border-blue-300 dark:text-blue-200 dark:border-blue-500 bg-blue-50 dark:bg-blue-900;
-  }
-
-  .hint.tip::selection {
-    @apply bg-blue-900 text-gray-50 dark:bg-gray-50 dark:text-blue-900;
-  }
-
-  .hint.warn {
-    @apply text-yellow-900 border-yellow-300 dark:text-gray-900 bg-yellow-50 dark:bg-yellow-500;
-  }
-
-  .hint.warn::selection {
-    @apply bg-yellow-500 text-gray-50 dark:bg-gray-50 dark:text-gray-900;
-  }
-
-  .hint.error {
-    @apply text-red-500 border-red-200 dark:text-red-200 dark:border-red-900 bg-red-50 dark:bg-red-800;
-  }
-
-  .hint.error::selection {
-    @apply bg-red-900 text-gray-50 dark:bg-gray-50 dark:text-red-900;
-  }
-
-  /*** remark-autolink-headings - link hash, similar to GitHub ones ***/
-  .icon-link {
-    @apply absolute -ml-6 text-gray-400 no-underline shadow-none opacity-0 2xl:-ml-12 hover:text-gray-400 hover:no-underline;
-  }
-
-  :is(h1, h2, h3, h4):hover > .icon-link {
-    @apply opacity-100;
-  }
-
-  .icon-link::before {
-    content: '#';
   }
 }

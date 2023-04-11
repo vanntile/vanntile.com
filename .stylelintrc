@@ -4,7 +4,15 @@
     "at-rule-no-unknown": [
       true,
       {
-        "ignoreAtRules": ["extends", "tailwind", "layer", "screen", "variants", "media"]
+        "ignoreAtRules": [
+          "extends",
+          "tailwind",
+          "layer",
+          "screen",
+          "variants",
+          "media",
+          "supports"
+        ]
       }
     ],
     "block-no-empty": null,

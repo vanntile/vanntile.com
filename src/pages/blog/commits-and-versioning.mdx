@@ -33,7 +33,7 @@ pitfalls are actually manageable in today's industry.
 advantages for everyone. Spec or no spec, as everyone starts using this properly it will get better to jump into
 someone's project. It's structure is supposed to look like:
 
-```
+```text
 <type>[optional scope]: <description>
 
 [optional body]
@@ -59,16 +59,16 @@ with your own scopes and types.
 
 Let's put the above into action. First, install the below packages.
 
-?> In all shell blocks below, the "𝝺" (lambda) symbol stands for a prompt.
+?> In all shell blocks below, the "$" (dollar) symbol stands for a prompt.
 
-```bash
-𝝺 npm i -D @commitlint/cli @commitlint/config-conventional
-𝝺 npm i -D lint-staged husky prettier
+```bash showLineNumbers
+npm i -D @commitlint/cli @commitlint/config-conventional
+npm i -D lint-staged husky prettier
 ```
 
 I personally use the below commitlint configuration.
 
-```js title=".commitlintrc.cjs"
+```js title=".commitlintrc.cjs" showLineNumbers
 module.exports = {
   extends: ['@commitlint/config-conventional'],
   rules: {
@@ -99,7 +99,7 @@ module.exports = {
 Many projects have various code checking or linting tasks, and mine are no different. I always add a prettier configuration
 such as the `.prettierrc` below and hook in the pre-commit step using [Husky 🐶](https://github.com/typicode/husky).
 
-```json title=".prettierrc"
+```json title=".prettierrc" showLineNumbers
 {
   "printWidth": 120,
   "tabWidth": 2,
@@ -115,7 +115,7 @@ It can be a pain to run some tasks on the complete codebase, so we can use [lint
 in order to check only the files staged since the last commit. You can see below, my only task is linting (and
 fixing errors) with prettier, on _JavaScript-like_ files.
 
-```json title="package.json"
+```json title="package.json" showLineNumbers
 {
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
@@ -130,10 +130,10 @@ Now we only need to set up husky and its [commit hooks](https://git-scm.com/book
 - on **pre-commit** we will run lint-staged which will use out `package.json` configuration and trigger prettier
 - we will use commitlint on our **commit message**
 
-```bash
-𝝺 npm set-script prepare "husky install" && npm run prepare
-𝝺 npx husky add .husky/pre-commit "npx lint-staged"
-𝝺 npx husky add .husky/commit-msg "npx commitlint --config .commitlintrc.cjs --edit"
+```bash showLineNumbers
+npm set-script prepare "husky install" && npm run prepare
+npx husky add .husky/pre-commit "npx lint-staged"
+npx husky add .husky/commit-msg "npx commitlint --config .commitlintrc.cjs --edit"
 ```
 
 ### Semantic versioning
@@ -150,8 +150,8 @@ ones until now), I choose [standard-version](https://www.npmjs.com/package/stand
 
 Install it and add the **npm script** for quick access.
 
-```bash
-𝝺 npm i -D standard-version
+```bash showLineNumbers
+npm i -D standard-version
 ```
 
 ```json title="package.json"
@@ -178,9 +178,9 @@ but an image is worth a thousand words, so an emoji about 1 word). To combine th
 [cz-emoji](https://www.npmjs.com/package/cz-emoji) adapter and it will add an emoji code at the beggining of your
 descriptions. Install both packages globally with npm, and you will now be able to run `git cz` to run the **CLI**.
 
-```bash
-𝝺 npm i -g commitizen cz-emoji
-𝝺 touch ~/.czrc
+```bash showLineNumbers
+npm i -g commitizen cz-emoji
+touch ~/.czrc
 ```
 
 ### What's your type?
@@ -200,7 +200,7 @@ cz-emoji defaults). Specifically:
 I have tried getting my own list and, after a few iterations, I end up with the below scopes and types, both ordered
 mostly by frequency of use.
 
-```json title=".czrc"
+```json title=".czrc" showLineNumbers
 {
   "path": "cz-emoji",
   "config": {
