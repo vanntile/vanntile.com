@@ -141,52 +141,53 @@
 
   /* pre, code */
   [data-rehype-pretty-code-fragment] {
-    @apply -mx-16;
+    @apply -mx-4 md:-mx-6 xl:-mx-16;
   }
 
   [data-rehype-pretty-code-title] {
-    @apply px-3 py-2 font-mono text-sm font-bold text-gray-200 bg-gray-800 border border-b-0 border-gray-600 rounded-t 2xl:text-lg md:px-4 md:py-3 2xl:px-8 2xl:py-7;
+    @apply px-3 py-2 font-mono text-sm font-bold text-gray-200 bg-gray-800 border border-b-0 border-gray-800 rounded-t 2xl:text-lg md:px-4 md:py-3 2xl:px-8 2xl:py-7;
   }
 
   pre {
-    @apply px-3 py-2 my-8 overflow-x-auto text-gray-200 bg-gray-900 border border-gray-600 rounded md:my-6 2xl:my-8 md:px-4 md:py-3 2xl:px-8 2xl:py-7;
+    @apply py-4 overflow-x-auto text-gray-200 bg-gray-900 border border-gray-800 rounded 2xl:py-8;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
-	  white-space: pre-wrap;
   }
 
   [data-rehype-pretty-code-title] + pre {
     @apply mt-0 rounded-t-none;
   }
 
+  [data-rehype-pretty-code-fragment]:hover :is([data-rehype-pretty-code-title], pre) {
+    @apply border-gray-600;
+  }
+
   code {
-    @apply grid mx-16 text-xs font-medium rounded 2xl:font-semibold md:text-base 2xl:text-xl;
+    @apply box-border grid min-w-full px-16 text-sm font-medium rounded 2xl:font-semibold md:text-base 2xl:text-xl;
     counter-reset: line;
   }
 
   code > .line {
+    @apply relative;
   }
 
-  .highlighted {
+  code > .line > span {
+    @apply relative transition-colors;
   }
 
-  code[data-line-numbers-max-digits="2"] > .line::before {
-    @apply w-8;
-  }
-  code[data-line-numbers-max-digits="3"] > .line::before {
-    @apply w-12;
+  [data-rehype-pretty-code-fragment]:not(:hover) :is(.line:not(.highlighted):has(+ .highlighted), .highlighted ~ .line:not(.highlighted)) > span {
+    @apply !text-gray-700;
   }
 
-  [data-rehype-pretty-code-fragment] code[data-line-numbers] > .line::before {
+  code[data-line-numbers] > .line::before {
     counter-increment: line;
     content: counter(line);
     user-select: none;
-    @apply relative w-4 mr-4 text-right text-gray-400 right-12;
+    @apply absolute inline-block pl-2 text-gray-600 transition-colors border-l-4 border-transparent border-solid -left-16 w-[calc(100%+8rem)];
   }
 
-  [data-rehype-pretty-code-fragment] code[data-line-numbers] > .highlighted::before {
-    @apply border-l-4 border-blue-400 border-solid;
-
+  [data-rehype-pretty-code-fragment]:hover code[data-line-numbers] > .highlighted::before {
+    @apply border-blue-400 bg-slate-800;
   }
 
   a code {
