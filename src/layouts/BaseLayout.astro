@@ -1,21 +1,51 @@
 ---
 import '../styles/global.css'
 import Navigation from '../components/Navigation.astro'
+import socialMedia from '../lib/social.js'
 
 interface Props extends PageMeta {
   withNav?: boolean
   type?: string
 }
 
-const { title, publishedAt, summary, image, imageAlt, keywords, withNav = true, type = 'website' } = Astro.props as Props
+const {
+  title,
+  publishedAt,
+  summary,
+  image,
+  imageAlt,
+  keywords,
+  withNav = true,
+  type = 'website',
+} = Astro.props as Props
 const url = new URL(Astro.url.pathname, Astro.site)
 const origin = url.origin
+
+const me = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'vanntile',
+  url: Astro.site,
+  image: `${Astro.site}assets/logo.svg`,
+  sameAs: socialMedia.map((e) => e.href),
+}
+
+const blogSEO = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  url: url,
+  headline: title,
+  keywords: keywords,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+  publisher: me,
+  author: me,
+}
 ---
 
 <html lang="en" class="dark">
   <head>
     <title>{title}</title>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     <link rel="canonical" href={url} />
     <meta name="robots" content="index, follow" />
@@ -26,6 +56,7 @@ const origin = url.origin
 
     <meta property="article:published_time" content={new Date(publishedAt).toISOString()} />
     <meta property="og:type" content={type} />
+    <meta property="og:site_name" content="vanntile's portfolio" />
     <meta property="og:url" content={url} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={summary} />
@@ -50,6 +81,8 @@ const origin = url.origin
     <meta name="color-scheme" content="dark light" />
     <link rel="preload" href="/fonts/Objectivity-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
     <link rel="preload" href="/fonts/Objectivity-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+
+    <script is:inline set:html={JSON.stringify(blogSEO)} type="application/ld+json"></script>
 
     <script is:inline>
       window.addEventListener('DOMContentLoaded', (event) => {

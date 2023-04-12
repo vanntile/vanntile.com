@@ -5,35 +5,8 @@ import Experience from '../components/Experience.astro'
 import SectionDivider from '../components/SectionDivider.astro'
 import Tags from '../components/Tags.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
+import socialMedia from '../lib/social.js'
 import svg from '../lib/svgPaths.json'
-
-const socialMedia: ExternalSVG[] = [
-  {
-    href: 'https://github.com/vanntile',
-    name: 'vanntile on GitHub',
-    d: svg.github,
-  },
-  {
-    href: 'https://www.aedin.com/in/valentin-ionita',
-    name: 'vanntile on aedin',
-    d: svg.linkedin,
-  },
-  {
-    href: 'https://stackoverflow.com/users/4679160/vanntile-ianito',
-    name: 'vanntile on StackOverflow',
-    d: svg.stackoverflow,
-  },
-  {
-    href: 'https://gitlab.com/vanntile',
-    name: 'vanntile on GitLab',
-    d: svg.gitlab,
-  },
-  {
-    href: 'https://dribbble.com/vanntile',
-    name: 'vanntile on Dribbble',
-    d: svg.dribbble,
-  },
-]
 
 const props = {
   title: 'vanntile - frontend developer and graphic designer',
@@ -41,7 +14,7 @@ const props = {
   summary: 'Developer by choice and designer for fun. I speak the languages of both engineering and aesthetics and can help with your next project.',
   image: 'banner.png',
   imageAlt: 'Banner image with logo and "Good design is invisible" motto',
-  keywords: '',
+  keywords: 'vanntile, portfolio, developer, graphic designer',
   withNav: false,
 }
 
@@ -227,13 +200,14 @@ const latestPosts = (await Astro.glob<PageMeta>('./blog/*.mdx'))
     </section>
     <section class="mb-24 hSection">
       <h2 id="section-contact">./public/contact</h2>
-      <p>You can find me here and there.</p>
+      <p>You can find me here and there. I recommend you message me 📨 on Mastodon. </p>
       <div class="flex flex-row flex-wrap mb-8 gap-x-4 md:gap-x-8">
         {socialMedia.map((e) => (
           <a
             href={e.href}
             target="_blank"
-            rel="noreferrer"
+            rel="me"
+            referrerpolicy="same-origin"
             title={e.name}
             class="w-12 h-12 bg-transparent rounded-full rotateScaleUp pseudo-none dark:bg-gray-900 focus:outline-none focus:ring-8 ring-brand-accent will-change-transform"
           >
