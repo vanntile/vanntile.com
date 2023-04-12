@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.5.0](https://github.com/vanntile/vanntile.com/compare/v3.4.0...v3.5.0) (2023-04-12)
+
+
+### Features
+
+* update code blocks and other elements ([fea0bbe](https://github.com/vanntile/vanntile.com/commit/fea0bbecad708d6d037ae4496e738131f51e760d))
+
+
+### Bug Fixes
+
+* **seo:** :bug: update seo tags and social media links ([4e93805](https://github.com/vanntile/vanntile.com/commit/4e938052471a54654ffb778be84f72ac2bd67237))
+
 ## [3.4.0](https://github.com/vanntile/vanntile.com/compare/v3.3.0...v3.4.0) (2022-08-20)
 
 
