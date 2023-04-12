@@ -1,11 +1,28 @@
 {
-  "extends": "astro/tsconfigs/base",
+  "$schema": "https://json.schemastore.org/tsconfig",
+  // FIXME: when astro/tsconfigs/base is going to be valid, switch to
+  // "extends": "astro/tsconfigs/base"
   "compilerOptions": {
     "strict": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
     "noImplicitOverride": true,
     "noUnusedLocals": true,
     "allowUnreachableCode": false,
-    "allowUnusedLabels": false
+    "allowUnusedLabels": false,
+    "baseUrl": ".",
+    "paths": {
+      "~/assets/*": [
+        "src/assets/*"
+      ]
+    }
   },
   "exclude": [
     ".vscode",

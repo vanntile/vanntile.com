@@ -1,3 +1,4 @@
+import markdoc from '@astrojs/markdoc'
 import mdx from '@astrojs/mdx'
 import tailwind from '@astrojs/tailwind'
 import { defineConfig } from 'astro/config'
@@ -12,8 +13,8 @@ import { remarkReadingTime, replaceCSSVariablesForShikiTheme } from './src/lib/p
 import moonlightColors from './src/styles/moonlight-ii-color-replacement.json'
 import moonlightTheme from './src/styles/moonlight-ii.json'
 
-// https://rehype-pretty-code.netlify.app/
 const prettyCodeOptions = {
+  // docs: https://rehype-pretty-code.netlify.app/
   theme: replaceCSSVariablesForShikiTheme(moonlightTheme, moonlightColors), // 'material-palenight'
   keepBackground: false,
 
@@ -34,11 +35,9 @@ const prettyCodeOptions = {
 
   getHighlighter: async (options) => {
     const highlighter = await getHighlighter(options)
-
     highlighter.setColorReplacements(
       Object.fromEntries(Object.entries(moonlightColors).map(([k, v]) => [k, `var(${v})`])),
     )
-
     return Promise.resolve(highlighter)
   },
 }
@@ -77,5 +76,5 @@ export default defineConfig({
       rehypeSortAttributes,
     ],
   },
-  integrations: [tailwind({ config: { applyBaseStyles: false } }), mdx()],
+  integrations: [tailwind({ config: { applyBaseStyles: false } }), mdx(), markdoc()],
 })

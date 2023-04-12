@@ -25,15 +25,16 @@
     "release": "standard-version --no-verify --sign"
   },
   "devDependencies": {
-    "@astrojs/mdx": "^0.17.0",
-    "@astrojs/tailwind": "^3.0.1",
+    "@astrojs/markdoc": "^0.1.1",
+    "@astrojs/mdx": "^0.18.3",
+    "@astrojs/tailwind": "^3.1.1",
     "@botpoison/browser": "^0.1.30",
-    "@commitlint/cli": "^17.4.4",
+    "@commitlint/cli": "^17.5.1",
     "@commitlint/config-conventional": "^17.4.4",
-    "astro": "^2.0.14",
+    "astro": "^2.2.2",
     "husky": "^8.0.3",
-    "lint-staged": "^13.1.2",
-    "mdast-util-to-string": "^3.1.1",
+    "lint-staged": "^13.2.1",
+    "mdast-util-to-string": "^3.2.0",
     "prettier-plugin-astro": "^0.8.0",
     "reading-time": "^1.5.0",
     "rehype-autolink-headings": "^6.1.1",
@@ -43,11 +44,11 @@
     "rehype-toc": "^3.0.2",
     "remark-hint": "^1.0.10",
     "standard-version": "^9.5.0",
-    "stylelint-config-recommended": "^10.0.1"
+    "stylelint-config-recommended": "^11.0.0"
   },
   "engines": {
     "node": "18.7.x",
-    "npm": "8.18.x"
+    "npm": "9.6.x"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
