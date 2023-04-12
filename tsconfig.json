@@ -1,23 +1,15 @@
 {
+  "extends": "astro/tsconfigs/base",
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true, // Astro will directly run your TypeScript code, no transpilation needed.
-    "types": [
-      "astro/client"
-    ]
+    "strict": true,
+    "noImplicitOverride": true,
+    "noUnusedLocals": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false
   },
   "exclude": [
     ".vscode",
     "node_modules",
     "public"
-  ],
-  "include": [
-    "**/**.astro",
-    "types/index.d.ts",
-    "types/modules.d.ts"
   ]
 }

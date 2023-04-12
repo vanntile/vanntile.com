@@ -1,3 +1,5 @@
+/// <reference types="astro/client" />
+
 interface PageMeta {
   title: string
   publishedAt: string

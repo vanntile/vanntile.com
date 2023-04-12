@@ -54,5 +54,5 @@
       "prettier --staged --write"
     ]
   },
-  "typings": "types/index.d.ts"
+  "typings": "src/env.d.ts"
 }
