@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.5.2](https://github.com/vanntile/vanntile.com/compare/v3.5.1...v3.5.2) (2023-04-13)
+
+
+### Bug Fixes
+
+* **uiux:** :bug: chromium bases vw wrong computation overflow scroll ([8ec0c96](https://github.com/vanntile/vanntile.com/commit/8ec0c96a9b004c2e60ddd3e82134376f15b3e3b3))
+
 ### [3.5.1](https://github.com/vanntile/vanntile.com/compare/v3.5.0...v3.5.1) (2023-04-13)
 
 
