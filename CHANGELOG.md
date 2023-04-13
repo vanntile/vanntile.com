@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.5.1](https://github.com/vanntile/vanntile.com/compare/v3.5.0...v3.5.1) (2023-04-13)
+
+
+### Bug Fixes
+
+* :bug: use classes instead of styles for rehype-pretty-code ([358143d](https://github.com/vanntile/vanntile.com/commit/358143d8bccbaf7b85b2c69fea6607e1d588b557))
+
 ## [3.5.0](https://github.com/vanntile/vanntile.com/compare/v3.4.0...v3.5.0) (2023-04-12)
 
 
