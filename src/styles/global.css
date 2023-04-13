@@ -110,7 +110,7 @@
 
   /* pre, code */
   [data-rehype-pretty-code-fragment] {
-    @apply w-screen mx-[calc(min(calc((-100vw+65ch)/2),0px)-1.5rem)] xl:w-[initial] xl:-mx-16 my-4 xl:my-6 2xl:my-8;
+    @apply mx-[calc(min(calc((-100vw+65ch)/2),0px)-1.5rem)] xl:-mx-16 my-4 xl:my-6 2xl:my-8;
   }
 
   [data-rehype-pretty-code-title] {
