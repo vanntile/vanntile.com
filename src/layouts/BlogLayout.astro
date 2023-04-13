@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro'
 import NextArticle from '../components/NextArticle.astro'
 import Tags from '../components/Tags.astro'
+import '../styles/moonlight.css'
 
 const frontmatter =  Astro.props.frontmatter as PageMeta
 const { title, publishedAt, nextArticle, keywords, readingTime } = frontmatter

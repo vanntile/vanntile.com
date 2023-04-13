@@ -9,7 +9,11 @@ import rehypeSortAttributes from 'rehype-sort-attributes'
 import rehypeToc from 'rehype-toc'
 import remarkHint from 'remark-hint'
 import { getHighlighter } from 'shiki'
-import { remarkReadingTime, replaceCSSVariablesForShikiTheme } from './src/lib/plugins.mjs'
+import {
+  rehypePrettyCodeStyleToClass,
+  remarkReadingTime,
+  replaceCSSVariablesForShikiTheme,
+} from './src/lib/plugins.mjs'
 import moonlightColors from './src/styles/moonlight-ii-color-replacement.json'
 import moonlightTheme from './src/styles/moonlight-ii.json'
 
@@ -50,6 +54,7 @@ export default defineConfig({
     remarkPlugins: [remarkHint, remarkReadingTime],
     rehypePlugins: [
       [rehypePrettyCode, prettyCodeOptions],
+      [rehypePrettyCodeStyleToClass, { stylesMap: [['font-style: italic', 'italic']] }],
       [
         rehypeToc,
         {

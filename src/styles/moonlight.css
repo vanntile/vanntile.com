@@ -1,0 +1,114 @@
+:root {
+  --moonlight-desaturated-gray: #7f85a3;
+  --moonlight-dark-blue: #3e68d7;
+  --moonlight-blue: #82aaff;
+  --moonlight-sky-blue: #65bcff;
+  --moonlight-cyan: #86e1fc;
+  --moonlight-red: #ff757f;
+  --moonlight-dark-red: #ff5370;
+  --moonlight-light-red: #ff98a4;
+  --moonlight-yellow: #ffc777;
+  --moonlight-orange: #ff966c;
+  --moonlight-dark-orange: #fc7b7b;
+  --moonlight-teal: #4fd6be;
+  --moonlight-green: #c3e88d;
+  --moonlight-purple: #c099ff;
+  --moonlight-pink: #fca7ea;
+  --moonlight-indigo: #7a88cf;
+  --moonlight-bright-cyan: #b4f9f8;
+  --moonlight-gray-10-alt: #bcc4d6;
+  --moonlight-gray-10: #c8d3f5;
+  --moonlight-gray-9: #b4c2f0;
+  --moonlight-gray-8: #a9b8e8;
+  --moonlight-gray-7: #828bb8;
+  --moonlight-gray-6: #444a73;
+  --moonlight-gray-5: #2f334d;
+  --moonlight-gray-4: #222436;
+  --moonlight-gray-3: #1e2030;
+  --moonlight-gray-2: #191a2a;
+  --moonlight-gray-1: #131421;
+}
+.moonlight-desaturated-gray {
+  color: var(--moonlight-desaturated-gray);
+}
+.moonlight-dark-blue {
+  color: var(--moonlight-dark-blue);
+}
+.moonlight-blue {
+  color: var(--moonlight-blue);
+}
+.moonlight-sky-blue {
+  color: var(--moonlight-sky-blue);
+}
+.moonlight-cyan {
+  color: var(--moonlight-cyan);
+}
+.moonlight-red {
+  color: var(--moonlight-red);
+}
+.moonlight-dark-red {
+  color: var(--moonlight-dark-red);
+}
+.moonlight-light-red {
+  color: var(--moonlight-light-red);
+}
+.moonlight-yellow {
+  color: var(--moonlight-yellow);
+}
+.moonlight-orange {
+  color: var(--moonlight-orange);
+}
+.moonlight-dark-orange {
+  color: var(--moonlight-dark-orange);
+}
+.moonlight-teal {
+  color: var(--moonlight-teal);
+}
+.moonlight-green {
+  color: var(--moonlight-green);
+}
+.moonlight-purple {
+  color: var(--moonlight-purple);
+}
+.moonlight-pink {
+  color: var(--moonlight-pink);
+}
+.moonlight-indigo {
+  color: var(--moonlight-indigo);
+}
+.moonlight-bright-cyan {
+  color: var(--moonlight-bright-cyan);
+}
+.moonlight-gray-10-alt {
+  color: var(--moonlight-gray-10-alt);
+}
+.moonlight-gray-10 {
+  color: var(--moonlight-gray-10);
+}
+.moonlight-gray-9 {
+  color: var(--moonlight-gray-9);
+}
+.moonlight-gray-8 {
+  color: var(--moonlight-gray-8);
+}
+.moonlight-gray-7 {
+  color: var(--moonlight-gray-7);
+}
+.moonlight-gray-6 {
+  color: var(--moonlight-gray-6);
+}
+.moonlight-gray-5 {
+  color: var(--moonlight-gray-5);
+}
+.moonlight-gray-4 {
+  color: var(--moonlight-gray-4);
+}
+.moonlight-gray-3 {
+  color: var(--moonlight-gray-3);
+}
+.moonlight-gray-2 {
+  color: var(--moonlight-gray-2);
+}
+.moonlight-gray-1 {
+  color: var(--moonlight-gray-1);
+}
