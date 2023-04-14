@@ -12,12 +12,11 @@ It currently integrates the following:
 
 - commitizen, cz-emoji, commitlint
 - standard-version
-- husky
-- Prettier configuration
+- husky, lint-staged
+- Prettier
 - TypeScript
-- Module alias
 - TailwindCSS
-- MDX, remark, rehype, mdx-prism
+- MDX, remark, rehype, mdast, shiki
 
 ## 🧞 Commands
 
