@@ -48,7 +48,7 @@
   }
 
   h1 {
-    @apply mt-0 text-6xl font-extrabold text-gray-900 dark:text-gray-100 xl:text-7xl 2xl:leading-none 2xl:text-9xl;
+    @apply mt-0 text-3xl font-extrabold text-gray-900 md:text-5xl dark:text-gray-100 xl:text-7xl 2xl:leading-none 2xl:text-9xl;
     margin-bottom: 0.875em;
   }
 
@@ -144,7 +144,7 @@
   }
 
   [data-rehype-pretty-code-fragment] code {
-    @apply box-border grid min-w-full pl-16 pr-4 text-base bg-transparent dark:bg-transparent;
+    @apply box-border grid min-w-full pl-16 pr-4 text-sm bg-transparent md:text-base dark:bg-transparent;
     counter-reset: line;
   }
 
