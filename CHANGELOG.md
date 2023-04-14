@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.1.0](https://github.com/vanntile/vanntile.com/compare/v4.0.0...v4.1.0) (2023-04-14)
+
+
+### Features
+
+* :star2: add global footer ([02d069a](https://github.com/vanntile/vanntile.com/commit/02d069a6f191fbd3323645c97b0bfda03ebced0c))
+
+
+### Bug Fixes
+
+* **style:** :bug: update size styling ([21d5cee](https://github.com/vanntile/vanntile.com/commit/21d5ceec1cb63a7179d716ca32c4384908321af0))
+
 ## [4.0.0](https://github.com/vanntile/vanntile.com/compare/v3.5.2...v4.0.0) (2023-04-14)
 
 
