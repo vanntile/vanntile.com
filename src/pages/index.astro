@@ -7,7 +7,7 @@ import SectionDivider from '../components/SectionDivider.astro'
 import Tags from '../components/Tags.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
 import svg from '../lib/svgPaths.json'
-import { READABLE_FORMAT, socialMedia } from '../lib/utils'
+import { READABLE_FORMAT, blogCompareFn, socialMedia } from '../lib/utils'
 
 const props = {
   title: 'vanntile - frontend developer and graphic designer',
@@ -20,9 +20,7 @@ const props = {
   keywords: ['vanntile', 'portfolio', 'developer', 'graphic designer'],
 }
 
-const latestPosts = (await getCollection('blog'))
-  .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf())
-  .slice(0, 3)
+const latestPosts = (await getCollection('blog')).sort(blogCompareFn).slice(0, 3)
 ---
 
 <script>
@@ -246,5 +244,4 @@ const latestPosts = (await getCollection('blog'))
       <ContactForm />
     </section>
   </main>
-  <footer class="border-t-2 hSection py-14 border-brand-accent">Designed &amp; built by vanntile</footer>
 </BaseLayout>
