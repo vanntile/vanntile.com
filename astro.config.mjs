@@ -1,12 +1,12 @@
 import markdoc from '@astrojs/markdoc'
 import mdx from '@astrojs/mdx'
 import tailwind from '@astrojs/tailwind'
+import rehypeToc from '@jsdevtools/rehype-toc'
 import { defineConfig } from 'astro/config'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypePrettyCode from 'rehype-pretty-code'
 import rehypeSlug from 'rehype-slug'
 import rehypeSortAttributes from 'rehype-sort-attributes'
-import rehypeToc from 'rehype-toc'
 import remarkHint from 'remark-hint'
 import { getHighlighter } from 'shiki'
 import {
@@ -55,17 +55,6 @@ export default defineConfig({
     rehypePlugins: [
       [rehypePrettyCode, prettyCodeOptions],
       [rehypePrettyCodeStyleToClass, { stylesMap: [['font-style: italic', 'italic']] }],
-      [
-        rehypeToc,
-        {
-          nav: false,
-          cssClasses: {
-            list: '',
-            listItem: '',
-            link: '',
-          },
-        },
-      ],
       rehypeSlug,
       [
         rehypeAutolinkHeadings,
@@ -78,6 +67,7 @@ export default defineConfig({
           },
         },
       ],
+      [rehypeToc, { nav: false, cssClasses: { list: '', listItem: '', link: '' } }],
       rehypeSortAttributes,
     ],
   },
