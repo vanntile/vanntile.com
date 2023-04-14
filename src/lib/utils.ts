@@ -1,6 +1,14 @@
 import svg from './svgPaths.json'
 
-const socialMedia = [
+export const READABLE_FORMAT = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'long', day: '2-digit' })
+
+interface ExternalSVG {
+  href: string
+  name: string
+  d: string
+}
+
+export const socialMedia: ExternalSVG[] = [
   {
     href: 'https://github.com/vanntile',
     name: 'vanntile on GitHub',
@@ -32,5 +40,3 @@ const socialMedia = [
     d: svg.dribbble,
   },
 ]
-
-export default socialMedia

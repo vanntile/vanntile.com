@@ -1,15 +1,42 @@
 ---
-import { getCollection } from 'astro:content'
+import { CollectionEntry, getCollection, getEntryBySlug } from 'astro:content'
+import NextArticle from '../../components/NextArticle.astro'
+import Tags from '../../components/Tags.astro'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { READABLE_FORMAT } from '../../lib/utils'
+import '../../styles/moonlight.css'
 
-export async function getStaticPaths() {
-  const blogEntries = await getCollection('blog')
-  return blogEntries.map((entry) => ({
+export const getStaticPaths = async () =>
+  (await getCollection('blog')).map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },
   }))
-}
-const { entry } = Astro.props
-const { Content } = await entry.render()
+
+const entry = Astro.props.entry as CollectionEntry<'blog'>
+const { Content, remarkPluginFrontmatter } = await entry.render()
+const { title, publishedAt, nextArticle, keywords } = entry.data
+const { readingTime } = remarkPluginFrontmatter
+const nextArticleTitle = nextArticle ? (await getEntryBySlug('blog', nextArticle))?.data.title : ''
 ---
 
-<Content />
+<BaseLayout frontmatter={entry.data}>
+  <main class="w-full px-6 pt-8 pb-32 mx-auto xl:text-lg 2xl:text-xl max-w-prose 2xl:max-w-6xl">
+    <article>
+      <h1>{title}</h1>
+      <div class="-mt-8 font-bold text-gray-500 dark:text-brand-secondary">
+        <time datetime={publishedAt.toISOString().slice(0, 10)}>{READABLE_FORMAT.format(publishedAt)}</time>, {
+          readingTime
+        }
+      </div>
+      <div class="py-4">
+        <Tags
+          tags={keywords}
+          size="lg"
+          class="tracking-wide bg-transparent border-2 border-current text-brand dark:text-brand-tint"
+        />
+      </div>
+      <Content />
+      {nextArticle && <NextArticle title={nextArticleTitle} link={nextArticle} />}
+    </article>
+  </main>
+</BaseLayout>
