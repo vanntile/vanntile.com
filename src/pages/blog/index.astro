@@ -38,7 +38,8 @@ const posts = await getCollection('blog')
             <div class="inline-block px-4">
               <Tags
                 tags={post.data.keywords.slice(0, 3)}
-                class="py-1 text-xs tracking-widest bg-transparent border-2 border-current text-brand dark:text-brand-tint rounded-2xl"
+                size="lg"
+                class="py-1 tracking-widest bg-transparent border-2 border-current text-brand dark:text-brand-tint"
               />
             </div>
           </div>
