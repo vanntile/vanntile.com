@@ -165,14 +165,14 @@
     @apply !text-gray-700;
   }
 
-  code[data-line-numbers] > .line::before {
+  [data-rehype-pretty-code-fragment] code > .line::before {
     counter-increment: line;
     content: var(--counter-content, counter(line));
     user-select: none;
     @apply absolute inline-block pl-2 text-gray-600 transition-colors border-l-4 border-transparent border-solid -left-16 w-[calc(100%+5rem)];
   }
 
-  [data-rehype-pretty-code-fragment]:hover code[data-line-numbers] > .highlighted::before {
+  [data-rehype-pretty-code-fragment]:hover code > .line.highlighted::before {
     @apply bg-blue-900 bg-opacity-25 border-blue-400;
   }
 
