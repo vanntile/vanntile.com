@@ -7,7 +7,6 @@ imageAlt: Banner image with NextJS logo and an arrow emoji pointing to the Astro
 keywords: nextjs, astro, frontend, performance, lighthouse
 ---
 import ReasonList from '../../components/ReasonList.astro'
-import content from '../../lib/content/nextToAstro.json'
 
 ## Motivation
 
@@ -17,7 +16,13 @@ line of the web programming language, but that I had to make my website work
 without the need of a client-side, SPA framework. A few reasons might come in
 mind for this:
 
-<ReasonList title="Why use server-side web frameworks?" items={content.reasons} />
+<ReasonList title="Why use server-side web frameworks?" items={[
+  "Reducing client load time by not loading a rendering framework",
+  "Reducing data usage by sending as little as possible",
+  "Making a website instead of a web app",
+  "Making a website that can function without JavaScript",
+  "Reducing development chores by removing dependencies"
+]} />
 
 At that point, I knew I had to either use a tried and tested static generator or
 cutting edge web frameworks. I couldn't find the first option very welcoming, as

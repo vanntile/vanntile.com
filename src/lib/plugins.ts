@@ -1,9 +1,10 @@
-import getReadingTime from 'reading-time'
+import type { RehypePlugin, RemarkPlugin } from '@astrojs/markdown-remark'
 import { toString } from 'mdast-util-to-string'
+import getReadingTime from 'reading-time'
 import { visit } from 'unist-util-visit'
 
-export function remarkReadingTime() {
-  return function (tree, { data }) {
+export function remarkReadingTime(): RemarkPlugin {
+  return function (tree, { data }: any) {
     const textOnPage = toString(tree)
     const readingTime = getReadingTime(textOnPage)
 
@@ -11,7 +12,7 @@ export function remarkReadingTime() {
   }
 }
 
-export function replaceCSSVariablesForShikiTheme(theme, colors) {
+export function replaceCSSVariablesForShikiTheme(theme: Record<string, any>, colors: Record<string, string>) {
   let themeStr = JSON.stringify(theme)
 
   Object.entries(colors).forEach(([k, v]) => {
@@ -21,9 +22,9 @@ export function replaceCSSVariablesForShikiTheme(theme, colors) {
   return JSON.parse(themeStr)
 }
 
-export function rehypePrettyCodeStyleToClass(options = { stylesMap: [] }) {
+export function rehypePrettyCodeStyleToClass(options = { stylesMap: [] }): RehypePlugin {
   const MOONLIGHT_COLOR = 'color: var(--moonlight-'
-  const hardcodedStyles = new Map(options.stylesMap)
+  const hardcodedStyles = new Map<string, string>(options.stylesMap)
 
   return (tree) => {
     visit(tree, 'element', (node, index, parent) => {
@@ -32,13 +33,13 @@ export function rehypePrettyCodeStyleToClass(options = { stylesMap: [] }) {
       const style = node.properties.style
 
       if (isInsideLine && isSpan && style != undefined) {
-        const className = []
+        const className: string[] = []
 
-        style.split('; ').forEach((k) => {
+        style.split('; ').forEach((k: string) => {
           if (k.startsWith(MOONLIGHT_COLOR)) {
             className.push(`moonlight-${k.slice(MOONLIGHT_COLOR.length, -1)}`)
           } else if (hardcodedStyles.has(k)) {
-            className.push(hardcodedStyles.get(k))
+            className.push(hardcodedStyles.get(k) as string)
           }
         })
 

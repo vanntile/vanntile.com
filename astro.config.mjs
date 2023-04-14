@@ -9,11 +9,7 @@ import rehypeSlug from 'rehype-slug'
 import rehypeSortAttributes from 'rehype-sort-attributes'
 import remarkHint from 'remark-hint'
 import { getHighlighter } from 'shiki'
-import {
-  rehypePrettyCodeStyleToClass,
-  remarkReadingTime,
-  replaceCSSVariablesForShikiTheme,
-} from './src/lib/plugins.mjs'
+import { rehypePrettyCodeStyleToClass, remarkReadingTime, replaceCSSVariablesForShikiTheme } from './src/lib/plugins'
 import moonlightColors from './src/styles/moonlight-ii-color-replacement.json'
 import moonlightTheme from './src/styles/moonlight-ii.json'
 
