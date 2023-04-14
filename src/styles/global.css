@@ -328,7 +328,7 @@
 
 /*** rehype-autolink-headings ***/
 .icon-link-anchor {
-  @apply absolute -ml-6 text-gray-400 no-underline shadow-none opacity-0 xl:-ml-10 hover:no-underline;
+  @apply absolute -ml-8 text-gray-400 no-underline scale-75 shadow-none opacity-0 xl:-ml-10 hover:no-underline md:transform-none;
 }
 
 .icon-link-anchor:hover {
