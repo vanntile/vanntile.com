@@ -1,4 +1,3 @@
-import markdoc from '@astrojs/markdoc'
 import mdx from '@astrojs/mdx'
 import tailwind from '@astrojs/tailwind'
 import rehypeToc from '@jsdevtools/rehype-toc'
@@ -67,5 +66,5 @@ export default defineConfig({
       rehypeSortAttributes,
     ],
   },
-  integrations: [tailwind({ config: { applyBaseStyles: false } }), mdx(), markdoc()],
+  integrations: [tailwind({ config: { applyBaseStyles: false } }), mdx()],
 })
