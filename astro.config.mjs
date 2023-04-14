@@ -74,7 +74,7 @@ export default defineConfig({
           properties: {
             ariaLabel: 'Anchor',
             tabIndex: -1,
-            className: ['icon-link'],
+            className: ['icon-link-anchor'],
           },
         },
       ],

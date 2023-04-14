@@ -326,12 +326,16 @@
   @apply bg-red-900 text-gray-50 dark:bg-gray-50 dark:text-red-900;
 }
 
-/*** remark-autolink-headings - link hash, similar to GitHub ones ***/
-.icon-link {
-  @apply absolute -ml-6 text-gray-400 no-underline shadow-none opacity-0 2xl:-ml-12 hover:text-gray-400 hover:no-underline;
+/*** rehype-autolink-headings ***/
+.icon-link-anchor {
+  @apply absolute -ml-6 text-gray-400 no-underline shadow-none opacity-0 xl:-ml-10 hover:no-underline;
 }
 
-:is(h1, h2, h3, h4):hover > .icon-link {
+.icon-link-anchor:hover {
+  @apply text-brand dark:text-brand-accent;
+}
+
+:is(h1, h2, h3, h4):hover > .icon-link-anchor {
   @apply opacity-100;
 }
 
