@@ -8,7 +8,6 @@ const blogCollection = defineCollection({
     image: z.string(),
     imageAlt: z.string(),
     keywords: z.string().transform((str) => str.split(',')),
-    nextArticle: z.string().optional(),
   }),
 })
 

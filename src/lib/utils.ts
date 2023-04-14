@@ -1,3 +1,4 @@
+import type { CollectionEntry } from 'astro:content'
 import svg from './svgPaths.json'
 
 export const READABLE_FORMAT = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'long', day: '2-digit' })
@@ -40,3 +41,6 @@ export const socialMedia: ExternalSVG[] = [
     d: svg.dribbble,
   },
 ]
+
+export const blogCompareFn = (a: CollectionEntry<'blog'>, b: CollectionEntry<'blog'>) =>
+  b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf()

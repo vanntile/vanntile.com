@@ -1,9 +1,9 @@
 ---
-import { CollectionEntry, getCollection, getEntryBySlug } from 'astro:content'
-import NextArticle from '../../components/NextArticle.astro'
+import { CollectionEntry, getCollection } from 'astro:content'
+import ArrowLink, { DIRECTION } from '../../components/ArrowLink.astro'
 import Tags from '../../components/Tags.astro'
 import BaseLayout from '../../layouts/BaseLayout.astro'
-import { READABLE_FORMAT } from '../../lib/utils'
+import { READABLE_FORMAT, blogCompareFn } from '../../lib/utils'
 import '../../styles/moonlight.css'
 
 export const getStaticPaths = async () =>
@@ -14,9 +14,13 @@ export const getStaticPaths = async () =>
 
 const entry = Astro.props.entry as CollectionEntry<'blog'>
 const { Content, remarkPluginFrontmatter } = await entry.render()
-const { title, publishedAt, nextArticle, keywords } = entry.data
+const { title, publishedAt, keywords } = entry.data
 const { readingTime } = remarkPluginFrontmatter
-const nextArticleTitle = nextArticle ? (await getEntryBySlug('blog', nextArticle))?.data.title : ''
+
+const posts = (await getCollection('blog')).sort(blogCompareFn)
+const entryIdx = posts.findIndex((e) => e.slug == entry.slug)
+const prevPost = posts[entryIdx + 1]
+const nextPost = posts[entryIdx - 1]
 ---
 
 <BaseLayout frontmatter={entry.data}>
@@ -36,7 +40,18 @@ const nextArticleTitle = nextArticle ? (await getEntryBySlug('blog', nextArticle
         />
       </div>
       <Content />
-      {nextArticle && <NextArticle title={nextArticleTitle} link={nextArticle} />}
+      <div class="pt-6 my-12 border-t-2 border-gray-700 dark:border-brand-secondary">
+        {
+          prevPost && (
+            <ArrowLink title={prevPost.data.title} direction={DIRECTION.LEFT} link={`/blog/${prevPost.slug}`} />
+          )
+        }
+        {
+          nextPost && (
+            <ArrowLink title={nextPost.data.title} direction={DIRECTION.RIGHT} link={`/blog/${nextPost.slug}`} />
+          )
+        }
+      </div>
     </article>
   </main>
 </BaseLayout>
