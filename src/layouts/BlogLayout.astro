@@ -1,4 +1,5 @@
 ---
+import { getEntryBySlug } from 'astro:content'
 import BaseLayout from '../layouts/BaseLayout.astro'
 import NextArticle from '../components/NextArticle.astro'
 import Tags from '../components/Tags.astro'
@@ -6,10 +7,7 @@ import '../styles/moonlight.css'
 
 const frontmatter =  Astro.props.frontmatter as PageMeta
 const { title, publishedAt, nextArticle, keywords, readingTime } = frontmatter
-
-const articles = await Astro.glob<PageMeta>('../pages/blog/*.mdx')
-
-const nextArticleTitle = nextArticle ? articles.find((e) => e.url.split('/')[2] === nextArticle).frontmatter.title : ''
+const nextArticleTitle = nextArticle ? (await getEntryBySlug('blog', nextArticle))?.data.title : ''
 
 const dateFormat = { year: 'numeric', month: 'long', day: '2-digit' } as Intl.DateTimeFormatOptions
 ---

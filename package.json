@@ -45,6 +45,7 @@
     "remark-hint": "^1.0.10",
     "standard-version": "^9.5.0",
     "stylelint-config-recommended": "^11.0.0",
+    "typescript": "^5.0.4",
     "unist-util-visit": "^4.1.2"
   },
   "engines": {

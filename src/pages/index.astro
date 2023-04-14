@@ -1,4 +1,5 @@
 ---
+import { getCollection } from 'astro:content'
 import AnimatedHeader from '../components/AnimatedHeader.astro'
 import ContactForm from '../components/ContactForm.astro'
 import Experience from '../components/Experience.astro'
@@ -18,8 +19,8 @@ const props = {
   withNav: false,
 }
 
-const latestPosts = (await Astro.glob<PageMeta>('./blog/*.mdx'))
-  .sort((a, b) => new Date(b.frontmatter.publishedAt).valueOf() - new Date(a.frontmatter.publishedAt).valueOf())
+const latestPosts = (await getCollection('blog'))
+  .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf())
   .slice(0, 3)
 ---
 
@@ -30,8 +31,10 @@ const latestPosts = (await Astro.glob<PageMeta>('./blog/*.mdx'))
     threshold: 0.4,
   }
 
-  const setObserver = (target, element) => {
-    const callback = (entries, observer) => {
+  const setObserver = (target: Element | null, element: Element | null) => {
+    if (!target || !element) return
+
+    const callback: IntersectionObserverCallback = (entries, observer) => {
       if (entries[0].intersectionRatio > 0.4) element.classList.add('active')
       else element.classList.remove('active')
     }
@@ -40,7 +43,7 @@ const latestPosts = (await Astro.glob<PageMeta>('./blog/*.mdx'))
     observer.observe(target)
   }
 
-  window.addEventListener('DOMContentLoaded', (event) => {
+  window.addEventListener('DOMContentLoaded', (_event) => {
     setObserver(document.querySelector('#section-tech'), document.querySelector('#logoSvg'))
     setObserver(document.querySelector('#section-experience'), document.querySelector('#logotypeSvg'))
   })
@@ -167,14 +170,14 @@ const latestPosts = (await Astro.glob<PageMeta>('./blog/*.mdx'))
         {latestPosts.map((post) => (
           <div class="py-4">
             <p class="my-0">
-              <time datetime={post.frontmatter.publishedAt}>
+              <time datetime={`${post.data.publishedAt}`}>
                 {new Intl.DateTimeFormat('en', { year: 'numeric', month: 'long', day: '2-digit' }).format(
-                  new Date(post.frontmatter.publishedAt),
+                  post.data.publishedAt,
                 )}
               </time>
             </p>
-            <a href={post.url}>{post.frontmatter.title}</a>
-            <p class="my-1">{post.frontmatter.summary}</p>
+            <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+            <p class="my-1">{post.data.summary}</p>
           </div>
         ))}
       </div>

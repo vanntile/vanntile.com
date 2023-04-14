@@ -1,6 +1,10 @@
+# Created by https://www.toptal.com/developers/gitignore/api/node,macos,visualstudiocode,astro
+# Edit at https://www.toptal.com/developers/gitignore?templates=node,macos,visualstudiocode,astro
 
-# Created by https://www.toptal.com/developers/gitignore/api/macos,node,visualstudiocode
-# Edit at https://www.toptal.com/developers/gitignore?templates=macos,node,visualstudiocode
+### Astro ###
+# Gitignore template for Astro projects
+# Ignore content collection generated files
+.astro
 
 ### macOS ###
 # General
@@ -30,6 +34,10 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+### macOS Patch ###
+# iCloud generated files
+*.icloud
 
 ### Node ###
 # Logs
@@ -190,6 +198,4 @@ dist
 .history
 .ionide
 
-# Support for Project snippet scope
-
-# End of https://www.toptal.com/developers/gitignore/api/macos,node,visualstudiocode
+# End of https://www.toptal.com/developers/gitignore/api/node,macos,visualstudiocode,astro
