@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0](https://github.com/vanntile/vanntile.com/compare/v3.5.2...v4.0.0) (2023-04-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* Move mdx files to the content/blog folder and start transitioning
+
+### Features
+
+* :star2: use Astro Content Collections ([3de3740](https://github.com/vanntile/vanntile.com/commit/3de37404f5da8c088da080619c905ccb3f116e44))
+
+
+### Bug Fixes
+
+* :bug: turn ReasonList to an HTML ul ([8f40d09](https://github.com/vanntile/vanntile.com/commit/8f40d091fc46da901d3cbbbd831edbc01d563aac))
+* **uiux:** :bug: add size Tags parameter ([4439e43](https://github.com/vanntile/vanntile.com/commit/4439e43f99c4794614f279b255772fdac1ca92e0))
+* **uiux:** :bug: deduplicate rehype-autolink-headings ::before ([8409e5a](https://github.com/vanntile/vanntile.com/commit/8409e5a5c2983ee476750e565078257103d9b16a))
+* **uiux:** :bug: fix code block highlighted line ([733c189](https://github.com/vanntile/vanntile.com/commit/733c189dd5eb65c9ecf9b195bda83abe0423e5e8))
+* **uiux:** :bug: icon-link-anchor ([6268f18](https://github.com/vanntile/vanntile.com/commit/6268f1837e576b4586868b094d35da981e6d619c))
+
+
+* :fire: use astro content collections ([3fe00cd](https://github.com/vanntile/vanntile.com/commit/3fe00cd145e6f583b6c6c645bc91920d922e1fee))
+
 ### [3.5.2](https://github.com/vanntile/vanntile.com/compare/v3.5.1...v3.5.2) (2023-04-13)
 
 
