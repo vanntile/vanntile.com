@@ -20,7 +20,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "format": "prettier -w .",
+    "format": "prettier -w 'src/**/*.{astro,js,jsx,ts,tsx}'",
     "prepare": "husky install",
     "release": "standard-version --no-verify --sign"
   },
@@ -53,7 +53,7 @@
     "npm": "9.6.x"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
+    "*.{astro,js,jsx,ts,tsx}": [
       "prettier --staged --write"
     ]
   },

@@ -1,22 +1,24 @@
 ---
-const homepage = (new URL(Astro.request.url)).href
+const homepage = new URL(Astro.request.url).href
 ---
 
 <script>
   import '@botpoison/browser'
 
-  const checkForm = (event) => {
-    const form = document.querySelector("#contactForm")
+  const checkForm = (_event: Event) => {
+    const form = document.querySelector('#contactForm')
     const btn = document.querySelector(`#contactForm > button[type="submit"]`)
 
-    form.addEventListener("botpoison-challenge-start", () => {
-      btn.setAttribute("disabled", "disabled")
+    if (!form || !btn) return
+
+    form.addEventListener('botpoison-challenge-start', () => {
+      btn.setAttribute('disabled', 'disabled')
     })
-    form.addEventListener("botpoison-challenge-success", () => {
-      btn.removeAttribute("disabled")
+    form.addEventListener('botpoison-challenge-success', () => {
+      btn.removeAttribute('disabled')
     })
-    form.addEventListener("botpoison-challenge-error", () => {
-      btn.removeAttribute("disabled")
+    form.addEventListener('botpoison-challenge-error', () => {
+      btn.removeAttribute('disabled')
     })
   }
 

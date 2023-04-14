@@ -8,28 +8,30 @@ const tabNames: string[] = ['Education', 'Volunteering', 'AScI', 'Postis', 'GSoC
 <script type="module">
   let idx = 0
 
-  const setTabFocus = (tabs, tabpanels, tab, styles = { active: [], inactive: [] }) => (event) => {
-    if (tab.getAttribute('aria-disabled') === 'true' || tab.getAttribute('aria-selected') === 'true') return
+  const setTabFocus =
+    (tabs, tabpanels, tab, styles = { active: [], inactive: [] }) =>
+    (event) => {
+      if (tab.getAttribute('aria-disabled') === 'true' || tab.getAttribute('aria-selected') === 'true') return
 
-    const controlledPanel = document.querySelector(`#${tab.getAttribute('aria-controls')}`)
+      const controlledPanel = document.querySelector(`#${tab.getAttribute('aria-controls')}`)
 
-    idx = Array.from(tabs).findIndex((e) => e === tab)
+      idx = Array.from(tabs).findIndex((e) => e === tab)
 
-    // Handle the tabs
-    tabs.forEach((e) => {
-      styles.active.forEach((cls) => e === tab ? e.classList.add(cls) : e.classList.remove(cls))
-      styles.inactive.forEach((cls) => e !== tab ? e.classList.add(cls) : e.classList.remove(cls))
-      e.setAttribute('aria-selected', e === tab)
-      e.setAttribute('tabindex', e === tab ? 0 : -1)
-    })
+      // Handle the tabs
+      tabs.forEach((e) => {
+        styles.active.forEach((cls) => (e === tab ? e.classList.add(cls) : e.classList.remove(cls)))
+        styles.inactive.forEach((cls) => (e !== tab ? e.classList.add(cls) : e.classList.remove(cls)))
+        e.setAttribute('aria-selected', e === tab)
+        e.setAttribute('tabindex', e === tab ? 0 : -1)
+      })
 
-    // Handle the tab panels
-    tabpanels.forEach((e) => {
-      e === controlledPanel ? e.classList.remove('hidden') : e.classList.add('hidden')
-    })
+      // Handle the tab panels
+      tabpanels.forEach((e) => {
+        e === controlledPanel ? e.classList.remove('hidden') : e.classList.add('hidden')
+      })
 
-    event.preventDefault()
-  }
+      event.preventDefault()
+    }
 
   const setKeyChange = (tabs, tab) => (event) => {
     const LEFT_ARROW = 37
@@ -52,7 +54,7 @@ const tabNames: string[] = ['Education', 'Volunteering', 'AScI', 'Postis', 'GSoC
     const prefix = 'experience'
     const styles = {
       active: ['bg-brand'],
-      inactive: ['border-b-2']
+      inactive: ['border-b-2'],
     }
     const tabs = document.querySelectorAll(`[aria-controls^="${prefix}-tabpanel-"]`)
     const tabpanels = document.querySelectorAll(`[id^="${prefix}-tabpanel-"]`)
@@ -63,7 +65,9 @@ const tabNames: string[] = ['Education', 'Volunteering', 'AScI', 'Postis', 'GSoC
     })
 
     // Hide all tabs
-    Array.from(tabpanels).slice(1).forEach((e) => e.classList.add('hidden'))
+    Array.from(tabpanels)
+      .slice(1)
+      .forEach((e) => e.classList.add('hidden'))
   })
 </script>
 
@@ -72,21 +76,23 @@ const tabNames: string[] = ['Education', 'Volunteering', 'AScI', 'Postis', 'GSoC
     class="flex m-0 overflow-x-scroll text-gray-100 bg-indigo-900 border-2 border-b-0 cursor-pointer md:overflow-hidden"
     role="tablist"
   >
-    {tabNames.map((tabName, idx) => (
-      <li
-        class={`${
-          idx === 0 ? 'bg-brand' : 'border-b-2'
-        } list-none ml-0 mb-0 py-2 px-5 font-bold focus:outline-white mt-0`}
-        role="tab"
-        id={`${prefix}-tab-${idx * 2}`}
-        aria-selected={idx === 0}
-        aria-disabled="false"
-        aria-controls={`${prefix}-tabpanel-${idx * 2 + 1}`}
-        tabindex={idx === 0 ? 0 : -1}
-      >
-        {tabName}
-      </li>
-    ))}
+    {
+      tabNames.map((tabName, idx) => (
+        <li
+          class={`${
+            idx === 0 ? 'bg-brand' : 'border-b-2'
+          } list-none ml-0 mb-0 py-2 px-5 font-bold focus:outline-white mt-0`}
+          role="tab"
+          id={`${prefix}-tab-${idx * 2}`}
+          aria-selected={idx === 0}
+          aria-disabled="false"
+          aria-controls={`${prefix}-tabpanel-${idx * 2 + 1}`}
+          tabindex={idx === 0 ? 0 : -1}
+        >
+          {tabName}
+        </li>
+      ))
+    }
     <div class="flex-grow block border-b-2"></div>
   </ul>
   <div
@@ -214,9 +220,9 @@ const tabNames: string[] = ['Education', 'Volunteering', 'AScI', 'Postis', 'GSoC
     <p>
       Managed a delivery tracking web application of over <strong>50 000 orders</strong>, using Git versioning,
       AngularJS, Bootstrap, Grunt and proprietary REST APIs. Fixed interface bugs,{' '}
-      <strong>shortened the load time </strong> by removing 7 unused dependencies and added 5 new client functionalities
-      while pushing over 75 commits. <strong>Reduced main app size by 20%</strong> and an order tracking page by 90% by using
-      ES6 instead of jQuery.
+      <strong>shortened the load time</strong> by removing 7 unused dependencies and added 5 new client functionalities while
+      pushing over 75 commits. <strong>Reduced main app size by 20%</strong> and an order tracking page by 90% by using ES6
+      instead of jQuery.
     </p>
     <Tags tags={['AngularJS', 'Bootstrap', 'REST APIs', 'ES6']} class="bg-indigo-900" />
   </div>

@@ -11,21 +11,23 @@ const { title, items = [], negative } = Astro.props
 >
   <span>{title}</span>
   <div class="mt-4">
-    {items.map((s: string) => (
-      <div class="flex items-baseline mb-2 font-medium">
-        <div class="w-4 h-4 pt-0.5 mr-2">
-          <svg
-            class={`w-4 h-4 ${negative ? 'text-red-500 dark:text-red-200' : 'text-green-500 dark:text-green-300'}`}
-            viewBox="0 0 24 24"
-          >
-            <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
-              <path d="M22 4L12 14.01l-3-3" />
-            </g>
-          </svg>
+    {
+      items.map((s: string) => (
+        <div class="flex items-baseline mb-2 font-medium">
+          <div class="w-4 h-4 pt-0.5 mr-2">
+            <svg
+              class={`w-4 h-4 ${negative ? 'text-red-500 dark:text-red-200' : 'text-green-500 dark:text-green-300'}`}
+              viewBox="0 0 24 24"
+            >
+              <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                <path d="M22 4L12 14.01l-3-3" />
+              </g>
+            </svg>
+          </div>
+          <span>{s}</span>
         </div>
-        <span>{s}</span>
-      </div>
-    ))}
+      ))
+    }
   </div>
 </div>

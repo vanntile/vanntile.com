@@ -12,7 +12,9 @@ import svg from '../lib/svgPaths.json'
 const props = {
   title: 'vanntile - frontend developer and graphic designer',
   publishedAt: new Date().toISOString(),
-  summary: 'Developer by choice and designer for fun. I speak the languages of both engineering and aesthetics and can help with your next project.',
+  summary:
+    'Developer by choice and designer for fun. I speak the languages of both engineering and aesthetics and ' +
+    'can help with your next project.',
   image: 'banner.png',
   imageAlt: 'Banner image with logo and "Good design is invisible" motto',
   keywords: 'vanntile, portfolio, developer, graphic designer',
@@ -57,7 +59,7 @@ const latestPosts = (await getCollection('blog'))
           <AnimatedHeader />
           <div class="text-xl font-semibold md:text-3xl">developer by choice and designer for fun</div>
         </header>
-        <a class="sr-only" href="#section-tech"> Skip to main content </a>
+        <a class="sr-only" href="#section-tech">Skip to main content</a>
         <p class="md:text-lg 2xl:text-2xl">
           Are you searching for a practical enthusiast for your <span class="highlight">project</span>?
         </p>
@@ -105,8 +107,8 @@ const latestPosts = (await getCollection('blog'))
       </div>
       <h2 class="text-gray-900 dark:text-gray-900">./about/tech</h2>
       <p>
-        I am an in-progress computer engineer with a deep passion for the worlds of frontend, design and deployment. Keep
-        scrolling if you wanna know why, how and what I work on!
+        I am an in-progress computer engineer with a deep passion for the worlds of frontend, design and deployment.
+        Keep scrolling if you wanna know why, how and what I work on!
       </p>
       <h3>What is my tech stack?</h3>
       <span class="block font-bold">Languages</span>
@@ -117,16 +119,25 @@ const latestPosts = (await getCollection('blog'))
       <span class="block font-bold">Frameworks</span>
       <Tags
         tags={[
-          'NextJS 🇳', 'React ⚛️', 'Astro 🚀', 'Angular 🛡️', 'Vue 🇻', 'Tailwind CSS 🍃',
-          'FastAPI ⚡', 'Express', 'Django', 'Flask ⚗️', 'Cypress', 'Jest 🃏', 'JUnit', 'GTK+ (gtkmm)'
+          'NextJS 🇳',
+          'React ⚛️',
+          'Astro 🚀',
+          'Angular 🛡️',
+          'Vue 🇻',
+          'Tailwind CSS 🍃',
+          'FastAPI ⚡',
+          'Express',
+          'Django',
+          'Flask ⚗️',
+          'Cypress',
+          'Jest 🃏',
+          'JUnit',
+          'GTK+ (gtkmm)',
         ]}
         class="bg-gray-800 text-brand-accent"
       />
       <span class="block font-bold">Tools</span>
-      <Tags
-        tags={['Deno 🦕', 'NodeJS 🟩', 'npm 📦', 'git', 'Docker 🐳']}
-        class="bg-gray-800 text-brand-accent"
-      />
+      <Tags tags={['Deno 🦕', 'NodeJS 🟩', 'npm 📦', 'git', 'Docker 🐳']} class="bg-gray-800 text-brand-accent" />
       <span class="block font-bold">Standards &amp; paradigms</span>
       <Tags tags={['OpenAPI', 'REST', 'GraphQL', 'semantic web']} class="bg-gray-800 text-brand-accent" />
       <span class="block font-bold">Design tools &amp; knowledge</span>
@@ -167,34 +178,40 @@ const latestPosts = (await getCollection('blog'))
     <section class="my-16 hSection">
       <h2 id="section-blog">./blog/coding/latest</h2>
       <div>
-        {latestPosts.map((post) => (
-          <div class="py-4">
-            <p class="my-0">
-              <time datetime={`${post.data.publishedAt}`}>
-                {new Intl.DateTimeFormat('en', { year: 'numeric', month: 'long', day: '2-digit' }).format(
-                  post.data.publishedAt,
-                )}
-              </time>
-            </p>
-            <a href={`/blog/${post.slug}`}>{post.data.title}</a>
-            <p class="my-1">{post.data.summary}</p>
-          </div>
-        ))}
+        {
+          latestPosts.map((post) => (
+            <div class="py-4">
+              <p class="my-0">
+                <time datetime={`${post.data.publishedAt}`}>
+                  {new Intl.DateTimeFormat('en', { year: 'numeric', month: 'long', day: '2-digit' }).format(
+                    post.data.publishedAt,
+                  )}
+                </time>
+              </p>
+              <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+              <p class="my-1">{post.data.summary}</p>
+            </div>
+          ))
+        }
       </div>
       <div class="my-6">
-        <span class="pr-4 md:text-xl">...or </span>
-        <a class="cta" href="/blog">Check all blog posts </a>
+        <span class="pr-4 md:text-xl">...or</span>
+        <a class="cta" href="/blog">Check all blog posts</a>
       </div>
     </section>
     <section class="mb-24 hSection">
       <h2 id="section-design">./blog/design</h2>
       <a href="/design/brand-book">
         <div class="relative cursor-pointer md:-mx-6 group bg-brand">
-          <div class="transition-transform scale-100 blur-none group-hover:blur-sm group-hover:scale-90 group-hover:mix-blend-lighten">
+          <div
+            class="transition-transform scale-100 blur-none group-hover:blur-sm group-hover:scale-90 group-hover:mix-blend-lighten"
+          >
             <img loading="lazy" src="/assets/deck/page.1.webp" alt="vanntile brand deck cover page" />
           </div>
           <div class="absolute top-0 left-0 grid items-center justify-center w-full h-full">
-            <h3 class="pt-2 pl-4 my-0 text-2xl text-gray-100 border-l-8 opacity-0 md:text-5xl group-hover:opacity-100 border-brand-accent">
+            <h3
+              class="pt-2 pl-4 my-0 text-2xl text-gray-100 border-l-8 opacity-0 md:text-5xl group-hover:opacity-100 border-brand-accent"
+            >
               Brand book
             </h3>
           </div>
@@ -203,29 +220,31 @@ const latestPosts = (await getCollection('blog'))
     </section>
     <section class="mb-24 hSection">
       <h2 id="section-contact">./public/contact</h2>
-      <p>You can find me here and there. I recommend you message me 📨 on Mastodon. </p>
+      <p>You can find me here and there. I recommend you message me 📨 on Mastodon.</p>
       <div class="flex flex-row flex-wrap mb-8 gap-x-4 md:gap-x-8">
-        {socialMedia.map((e) => (
-          <a
-            href={e.href}
-            target="_blank"
-            rel="me"
-            referrerpolicy="same-origin"
-            title={e.name}
-            class="w-12 h-12 bg-transparent rounded-full rotateScaleUp pseudo-none dark:bg-gray-900 focus:outline-none focus:ring-8 ring-brand-accent will-change-transform"
-          >
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              width="48"
-              height="48"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
+        {
+          socialMedia.map((e) => (
+            <a
+              href={e.href}
+              target="_blank"
+              rel="me"
+              referrerpolicy="same-origin"
+              title={e.name}
+              class="w-12 h-12 bg-transparent rounded-full rotateScaleUp pseudo-none dark:bg-gray-900 focus:outline-none focus:ring-8 ring-brand-accent will-change-transform"
             >
-              <path d={e.d} fill="currentColor" class="text-gray-900 dark:text-gray-100" />
-            </svg>
-          </a>
-        ))}
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d={e.d} fill="currentColor" class="text-gray-900 dark:text-gray-100" />
+              </svg>
+            </a>
+          ))
+        }
       </div>
       <ContactForm />
     </section>

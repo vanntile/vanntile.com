@@ -5,7 +5,7 @@ import NextArticle from '../components/NextArticle.astro'
 import Tags from '../components/Tags.astro'
 import '../styles/moonlight.css'
 
-const frontmatter =  Astro.props.frontmatter as PageMeta
+const frontmatter = Astro.props.frontmatter as PageMeta
 const { title, publishedAt, nextArticle, keywords, readingTime } = frontmatter
 const nextArticleTitle = nextArticle ? (await getEntryBySlug('blog', nextArticle))?.data.title : ''
 

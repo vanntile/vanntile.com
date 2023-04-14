@@ -35,17 +35,14 @@ import svg from '../lib/svgPaths.json'
   })
 </script>
 
-<nav class="sticky top-0 z-10 flex flex-row items-center justify-end w-full gap-8 py-4 mx-auto bg-white xl:max-w-5xl rounded-b-md 2xl:max-w-6xl dark:bg-gray-900 ring-4 ring-white dark:ring-gray-900">
+<nav
+  class="sticky top-0 z-10 flex flex-row items-center justify-end w-full gap-8 py-4 mx-auto bg-white xl:max-w-5xl rounded-b-md 2xl:max-w-6xl dark:bg-gray-900 ring-4 ring-white dark:ring-gray-900"
+>
   <a href="/">Home</a>
   <a href="/blog">Blog</a>
   <div id="themeToggler" class="flex items-center justify-center px-4 py-2 cursor-pointer">
     <svg id="lightThemeBtn" class="w-6 h-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d={svg.sunIcon}
-      ></path>
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={svg.sunIcon}></path>
     </svg>
     <button
       id="switch"
@@ -57,12 +54,7 @@ import svg from '../lib/svgPaths.json'
       <div class="w-5 h-5 transition-transform bg-white rounded-full shadow-md translate-x-7"></div>
     </button>
     <svg id="darkThemeBtn" class="w-6 h-6 text-gray-500" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d={svg.moonIcon}
-      ></path>
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={svg.moonIcon}></path>
     </svg>
   </div>
 </nav>
