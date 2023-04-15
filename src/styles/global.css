@@ -36,7 +36,7 @@
   }
 
   body {
-    @apply min-h-screen text-sm leading-6 text-gray-700 bg-gray-50 dark:text-brand-tint md:text-base md:leading-7 2xl:text-2xl 2xl:leading-relaxed selection:bg-brand selection:text-gray-50 dark:selection:bg-gray-100 dark:selection:text-brand dark:bg-gray-900;
+    @apply min-h-screen text-base leading-6 text-gray-700 bg-gray-50 dark:text-brand-tint md:leading-7 xl:text-xl 2xl:text-2xl 2xl:leading-relaxed selection:bg-brand selection:text-gray-50 dark:selection:bg-gray-100 dark:selection:text-brand dark:bg-gray-900;
   }
 
   /* Remove Safari input shadow on mobile */
@@ -48,7 +48,7 @@
   }
 
   h1 {
-    @apply mt-0 text-3xl font-extrabold text-gray-900 md:text-5xl dark:text-gray-100 xl:text-7xl 2xl:leading-none 2xl:text-9xl;
+    @apply mt-0 text-3xl font-extrabold text-gray-900 md:text-5xl dark:text-gray-100 xl:text-7xl 2xl:leading-none 2xl:text-7xl;
     margin-bottom: 0.875em;
   }
 
@@ -114,7 +114,7 @@
   }
 
   [data-rehype-pretty-code-title] {
-    @apply px-16 py-2 font-mono text-sm font-bold text-gray-200 transition-colors bg-gray-800 border border-b-0 border-gray-800 border-x-0 xl:border-x xl:rounded-t-lg xl:py-4 2xl:text-lg 2xl:py-8;
+    @apply px-16 py-2 font-mono font-bold text-gray-200 transition-colors bg-gray-800 border border-b-0 border-gray-800 border-x-0 xl:border-x xl:rounded-t-lg xl:py-4 2xl:py-8;
   }
 
   pre {
@@ -132,7 +132,7 @@
   }
 
   code {
-    @apply text-xs font-medium text-gray-900 bg-gray-200 rounded 2xl:font-semibold dark:bg-gray-900 dark:text-gray-200 md:text-base 2xl:text-xl;
+    @apply font-medium text-gray-900 bg-gray-200 rounded dark:bg-gray-900 dark:text-gray-200;
   }
 
   a code {
@@ -144,7 +144,7 @@
   }
 
   [data-rehype-pretty-code-fragment] code {
-    @apply box-border grid min-w-full pl-16 pr-4 text-sm bg-transparent md:text-base dark:bg-transparent;
+    @apply box-border grid min-w-full pl-16 pr-4 bg-transparent dark:bg-transparent;
     counter-reset: line;
   }
 
@@ -328,7 +328,7 @@
 
 /*** rehype-autolink-headings ***/
 .icon-link-anchor {
-  @apply absolute -ml-8 text-gray-400 no-underline scale-75 shadow-none opacity-0 xl:-ml-10 hover:no-underline md:transform-none;
+  @apply absolute -ml-8 text-gray-400 no-underline scale-75 shadow-none opacity-0 xl:-ml-10 2xl:-ml-20 hover:no-underline md:transform-none;
 }
 
 .icon-link-anchor:hover {
