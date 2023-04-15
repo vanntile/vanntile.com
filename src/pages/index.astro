@@ -110,41 +110,54 @@ const latestPosts = (await getCollection('blog')).sort(blogCompareFn).slice(0, 3
       <h3>What is my tech stack?</h3>
       <span class="block font-bold">Languages</span>
       <Tags
-        tags={['JavaScript (ES2021)', 'TypeScript ⌨️', 'Python 3 🐍', 'C/C++', 'Haskell']}
+        tags={['JavaScript (ES2021)', 'TypeScript', 'Go 🇬', 'Python 3 🐍', 'C/C++', 'Haskell λ']}
         class="bg-gray-800 text-brand-accent"
       />
+      <span class="block font-bold">Markup</span>
+      <Tags tags={['JSON', 'YAML', 'HTML', 'Markdown', 'MDX']} class="bg-gray-800 text-brand-accent" />
       <span class="block font-bold">Frameworks</span>
       <Tags
         tags={[
+          'Astro 🚀',
           'NextJS 🇳',
           'React ⚛️',
-          'Astro 🚀',
-          'Angular 🛡️',
           'Vue 🇻',
+          'Angular 🛡️',
           'Tailwind CSS 🍃',
           'FastAPI ⚡',
           'Express',
           'Django',
-          'Flask ⚗️',
-          'Cypress',
-          'Jest 🃏',
-          'JUnit',
-          'GTK+ (gtkmm)',
+          'Flask',
+          'GTK/gtkmm',
+          'unified',
         ]}
         class="bg-gray-800 text-brand-accent"
       />
+      <span class="block font-bold">Testing</span>
+      <Tags tags={['Robot 🤖', 'Cypress', 'Jest 🃏', 'JUnit']} class="bg-gray-800 text-brand-accent" />
       <span class="block font-bold">Tools</span>
-      <Tags tags={['Deno 🦕', 'NodeJS 🟩', 'npm 📦', 'git', 'Docker 🐳']} class="bg-gray-800 text-brand-accent" />
+      <Tags
+        tags={['Deno 🦕', 'NodeJS 🟩', 'npm 📦', 'Docker 🐳', 'Jenkins 🎩']}
+        class="bg-gray-800 text-brand-accent"
+      />
+      <span class="block font-bold">Platforms</span>
+      <Tags
+        tags={['GitHub 🐙', 'GitLab 🦊', 'Bitbucket 🪣', 'Heroku', 'Linode', 'Mastodon 🐘']}
+        class="bg-gray-800 text-brand-accent"
+      />
       <span class="block font-bold">Standards &amp; paradigms</span>
-      <Tags tags={['OpenAPI', 'REST', 'GraphQL', 'semantic web']} class="bg-gray-800 text-brand-accent" />
+      <Tags
+        tags={['FOSS', 'OpenAPI', 'REST', 'GraphQL', 'semantic web', 'functional programming']}
+        class="bg-gray-800 text-brand-accent"
+      />
       <span class="block font-bold">Design tools &amp; knowledge</span>
       <Tags
-        tags={['Figma', 'Inkscape', 'SVG', 'Typography', 'Layout', 'Visual idenitities']}
+        tags={['Inkscape', 'Figma', 'GIMP', 'SVG', 'Typography', 'Layout', 'Visual idenitities']}
         class="bg-gray-800 text-brand-accent"
       />
       <span class="block font-bold">Other snappy stuff</span>
       <Tags
-        tags={['Linux', 'VSCode', 'vim', 'Prettier', 'Jupyter', 'Markdown']}
+        tags={['git', 'Linux', 'GNOME', 'Obsidian', 'VSCodium', 'vim', 'Jupyter', 'Prettier']}
         class="bg-gray-800 text-brand-accent"
       />
       <SectionDivider color="text-brand" />
