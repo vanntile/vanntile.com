@@ -10,7 +10,7 @@ interface Props {
   type?: string
 }
 
-const { frontmatter, withNav = true, type = 'website' } = Astro.props
+const { frontmatter, withNav = true, type = 'website' } = Astro.props as Props
 const { title, publishedAt, summary, image, imageAlt, keywords } = frontmatter
 const url = new URL(Astro.url.pathname, Astro.site)
 const origin = url.origin
@@ -85,10 +85,10 @@ const blogSEO = {
     </script>
   </head>
 
-  <body class="overflow-x-hidden scrollbar">
+  <body class="scrollbar overflow-x-hidden">
     {withNav && <Navigation />}
     <slot />
-    <footer class="px-6 mx-auto border-t-2 py-14 max-w-prose 2xl:max-w-7xl border-brand-accent">
+    <footer class="mx-auto max-w-prose border-t-2 border-brand-accent px-6 py-14 2xl:max-w-7xl">
       Designed &amp; built by <span class="font-bold text-brand-accent">vanntile</span> under <a
         href="https://choosealicense.com/licenses/mit/"
         target="_blank"

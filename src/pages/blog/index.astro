@@ -17,7 +17,7 @@ const posts = await getCollection('blog')
 ---
 
 <BaseLayout frontmatter={props}>
-  <main class="w-full px-6 pt-8 pb-32 mx-auto xl:text-lg 2xl:text-xl max-w-prose 2xl:max-w-6xl">
+  <main class="mx-auto w-full max-w-prose px-6 pt-8 pb-32 xl:text-lg 2xl:max-w-6xl 2xl:text-xl">
     <h1>Blog posts</h1>
     {
       posts.sort(blogCompareFn).map((post) => (
@@ -29,14 +29,14 @@ const posts = await getCollection('blog')
           </p>
           <a href={`/blog/${post.slug}`}>{post.data.title}</a>
           <p class="my-1">{post.data.summary}</p>
-          <a href={`/blog/${post.slug}`} class="inline-block mt-2 cta">
+          <a href={`/blog/${post.slug}`} class="cta mt-2 inline-block">
             Read more
           </a>
-          <div class="flex pt-4 md:pt-0 md:inline-block md:px-4">
+          <div class="flex pt-4 md:inline-block md:px-4 md:pt-0">
             <Tags
               tags={post.data.keywords.slice(0, 3)}
               size="lg"
-              class="py-1 tracking-widest bg-transparent border-2 border-current text-brand dark:text-brand-tint"
+              class="border-2 border-current bg-transparent py-1 tracking-widest text-brand dark:text-brand-tint"
             />
           </div>
         </div>

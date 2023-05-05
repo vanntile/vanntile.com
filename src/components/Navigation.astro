@@ -36,12 +36,12 @@ import svg from '../lib/svgPaths.json'
 </script>
 
 <nav
-  class="sticky top-0 z-10 flex flex-row items-center justify-end w-full gap-8 py-4 mx-auto bg-white xl:max-w-5xl rounded-b-md 2xl:max-w-6xl dark:bg-gray-900 ring-4 ring-white dark:ring-gray-900"
+  class="sticky top-0 z-10 mx-auto flex w-full flex-row items-center justify-end gap-8 rounded-b-md bg-white py-4 ring-4 ring-white dark:bg-gray-900 dark:ring-gray-900 xl:max-w-5xl 2xl:max-w-6xl"
 >
   <a href="/">Home</a>
   <a href="/blog">Blog</a>
-  <div id="themeToggler" class="flex items-center justify-center px-4 py-2 cursor-pointer">
-    <svg id="lightThemeBtn" class="w-6 h-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <div id="themeToggler" class="flex cursor-pointer items-center justify-center px-4 py-2">
+    <svg id="lightThemeBtn" class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={svg.sunIcon}></path>
     </svg>
     <button
@@ -49,11 +49,11 @@ import svg from '../lib/svgPaths.json'
       role="switch"
       aria-pressed="true"
       aria-label="Toggle dark mode"
-      class="flex items-center px-1 mx-3 rounded-full w-14 h-7 focus:outline-none focus:ring-2 ring-gray-700 dark:ring-gray-100 dark:ring-offset-2 bg-brand-tint"
+      class="mx-3 flex h-7 w-14 items-center rounded-full bg-brand-tint px-1 ring-gray-700 focus:outline-none focus:ring-2 dark:ring-gray-100 dark:ring-offset-2"
     >
-      <div class="w-5 h-5 transition-transform bg-white rounded-full shadow-md translate-x-7"></div>
+      <div class="h-5 w-5 translate-x-7 rounded-full bg-white shadow-md transition-transform"></div>
     </button>
-    <svg id="darkThemeBtn" class="w-6 h-6 text-gray-500" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
+    <svg id="darkThemeBtn" class="h-6 w-6 text-gray-500" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={svg.moonIcon}></path>
     </svg>
   </div>
