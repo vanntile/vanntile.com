@@ -20,7 +20,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "format": "prettier -w 'src/**/*.{astro,js,jsx,ts,tsx}'",
+    "format": "prettier -w 'src/**/*.{astro,js,ts}'",
+    "prettier": "prettier",
     "prepare": "husky install",
     "release": "standard-version --no-verify --sign"
   },
@@ -35,7 +36,9 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.2.1",
     "mdast-util-to-string": "^3.2.0",
+    "prettier": "^2.8.8",
     "prettier-plugin-astro": "^0.8.0",
+    "prettier-plugin-tailwindcss": "^0.2.8",
     "reading-time": "^1.5.0",
     "rehype-autolink-headings": "^6.1.1",
     "rehype-pretty-code": "^0.9.4",
@@ -53,7 +56,7 @@
     "npm": "9.6.x"
   },
   "lint-staged": {
-    "*.{astro,js,jsx,ts,tsx}": [
+    "*.{astro,js,ts}": [
       "prettier --staged --write"
     ]
   },

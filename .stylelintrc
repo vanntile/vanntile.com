@@ -16,6 +16,16 @@
       }
     ],
     "block-no-empty": null,
-    "unit-allowed-list": ["em", "rem", "s", "px", "%", "vh", "deg", "ms"]
+    "unit-allowed-list": [
+      "em",
+      "rem",
+      "s",
+      "px",
+      "%",
+      "vh",
+      "deg",
+      "ms",
+      "mm"
+    ]
   }
 }
