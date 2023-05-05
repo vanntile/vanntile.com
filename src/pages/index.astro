@@ -49,7 +49,7 @@ const latestPosts = (await getCollection('blog')).sort(blogCompareFn).slice(0, 3
 </script>
 
 <BaseLayout frontmatter={props} withNav={false}>
-  <main class="mx-auto w-full max-w-prose pt-8 pb-32 xl:px-6 xl:text-lg 2xl:max-w-6xl 2xl:text-xl">
+  <main class="mx-auto w-full max-w-prose pb-32 pt-8 xl:px-6 xl:text-lg 2xl:max-w-6xl 2xl:text-xl">
     <section class="hSection flex min-h-screen flex-col justify-center px-6 py-16 text-left">
       <div>
         <header class="mb-16">
@@ -82,7 +82,7 @@ const latestPosts = (await getCollection('blog')).sort(blogCompareFn).slice(0, 3
       </div>
       <SectionDivider color="text-brand-accent" />
     </section>
-    <section id="section-tech" class="hSection bg-brand-accent pt-12 pb-24 font-bold text-gray-800">
+    <section id="section-tech" class="hSection bg-brand-accent pb-24 pt-12 font-bold text-gray-800">
       <div class="-my-12 flex w-full flex-col items-center justify-center">
         <svg
           id="logoSvg"
@@ -216,9 +216,9 @@ const latestPosts = (await getCollection('blog')).sort(blogCompareFn).slice(0, 3
           >
             <img loading="lazy" src="/assets/deck/page.1.webp" alt="vanntile brand deck cover page" />
           </div>
-          <div class="absolute top-0 left-0 grid h-full w-full items-center justify-center">
+          <div class="absolute left-0 top-0 grid h-full w-full items-center justify-center">
             <h3
-              class="my-0 border-l-8 border-brand-accent pt-2 pl-4 text-2xl text-gray-100 opacity-0 group-hover:opacity-100 md:text-5xl"
+              class="my-0 border-l-8 border-brand-accent pl-4 pt-2 text-2xl text-gray-100 opacity-0 group-hover:opacity-100 md:text-5xl"
             >
               Brand book
             </h3>

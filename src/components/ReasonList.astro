@@ -15,7 +15,7 @@ const { title, items = [], negative } = Astro.props
       items.map((s: string) => (
         <li class="m-0 mb-2 flex items-baseline font-medium">
           <svg
-            class={`mr-2 !mt-0 h-4 w-4 pt-0.5 ${
+            class={`!mt-0 mr-2 h-4 w-4 pt-0.5 ${
               negative ? 'text-red-500 dark:text-red-200' : 'text-green-500 dark:text-green-300'
             }`}
             viewBox="0 0 24 24"
