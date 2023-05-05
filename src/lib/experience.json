@@ -1,0 +1,238 @@
+{
+  "education": {
+    "aalto": {
+      "title": "Aalto University",
+      "position": "Master of Science, Security and Cloud Computing",
+      "interval": "Sep 2021 - Present",
+      "organization": "School of Science",
+      "location": "Espoo, Uusimaa, Finland"
+    },
+    "upb": {
+      "title": "University Politehnica of Bucharest",
+      "position": "Bachelor of Engineering, Computer Engineering",
+      "interval": "Sep 2017 - Jul 2021",
+      "organization": "Faculty of Automatic Control and Computer Science",
+      "location": "Bucharest, Romania"
+    },
+    "abo": {
+      "title": "Åbo Akademi University",
+      "position": "Exchange Student",
+      "interval": "Aug 2019 - May 2020",
+      "organization": "Erasmus+ in School of Computer Science",
+      "location": "Turku, Finland"
+    },
+    "sava": {
+      "title": "National College \"Saint Sava\"",
+      "position": "High School",
+      "location": "Bucharest, Romania",
+      "content": [
+        "Specialization: Mathematics and Computer Science",
+        "Baccalaureate Exam: 9.83/10"
+      ]
+    }
+  },
+  "volunteering": {
+    "codette": {
+      "title": "Codette",
+      "position": "Technical Trainer",
+      "interval": "Sep 2018 - Jun 2020",
+      "duration": "1 year 10 months",
+      "location": "Bucharest, Romania",
+      "skills": [
+        "designing",
+        "training",
+        "documenting"
+      ],
+      "content": []
+    },
+    "lsac": {
+      "title": "LSAC - UPB university guild",
+      "position": "Graphic Designer",
+      "interval": "Feb 2018 - Jan 2019",
+      "duration": "1 year",
+      "organization": "Liga Studentilor din Facultatea de Automatica si Calculatoare",
+      "location": "Bucharest, Romania",
+      "skills": [
+        "designing",
+        "managing",
+        "mentoring"
+      ],
+      "content": []
+    },
+    "coderdojo": {
+      "title": "Coder Dojo",
+      "position": "Educator",
+      "type": "Bi-weekly",
+      "interval": "Sep 2018 - Jun 2019",
+      "duration": "10 months",
+      "location": "Bucharest, Romania",
+      "content": []
+    }
+  },
+  "job": {
+    "privx23": {
+      "title": "",
+      "position": "Junior Software Engineer",
+      "type": "Thesis Worker, Full-time",
+      "interval": "",
+      "organization": "",
+      "location": "",
+      "skills": [],
+      "content": []
+    },
+    "privx22": {
+      "title": "",
+      "position": "Backend Software Developer",
+      "type": "Internship, Full-time",
+      "interval": "",
+      "duration": "",
+      "organization": "",
+      "location": "",
+      "skills": [],
+      "content": []
+    },
+    "phoenix": {
+      "title": "Aalto University",
+      "position": "Research Assistant",
+      "type": "Part-time",
+      "interval": "Dec 2021 - May 2022",
+      "duration": "6 months",
+      "location": "Espoo, Uusimaa, Finland",
+      "skills": [
+        "Performance testing",
+        "Docker",
+        "Blockchain",
+        "Python"
+      ],
+      "content": [
+        "Performance testing in a complex client-server application using pubsub queues and private blockchain."
+      ]
+    },
+    "asci": {
+      "title": "Aalto Science Institute",
+      "position": "Research Assistant",
+      "type": "Full-time",
+      "interval": "Jun 2021 - Aug 2021",
+      "duration": "3 months",
+      "organization": "Human Computer Interaction department",
+      "location": "Espoo, Uusimaa, Finland",
+      "skills": [
+        "Vue",
+        "Preact",
+        "tornado",
+        "FastAPI",
+        "Figma API"
+      ],
+      "content": []
+    },
+    "postis20": {
+      "title": "Postis",
+      "position": "Junior Software Engineer",
+      "type": "Part-time",
+      "interval": "Sep 2020 - May 2021",
+      "duration": "9 months",
+      "location": "Bucharest, Romania",
+      "skills": [
+        "AngularJS",
+        "Svelte",
+        "NLP",
+        "Python"
+      ],
+      "content": []
+    },
+    "inkscape20": {
+      "title": "Inkscape",
+      "position": "Software Developer",
+      "type": "Full-time",
+      "interval": "Jun 2020 - Aug 2020",
+      "duration": "3 months",
+      "organization": "Google Summer of Code participant",
+      "location": "Remote",
+      "skills": [
+        "C++",
+        "GTK+",
+        "gtkmm",
+        "UX",
+        "refactoring"
+      ],
+      "content": [
+        "Participated to GSoC as a developer for Inkscape, an open-source vector design desktop application that follows the SVG standards.",
+        "Implemented a major UI refactoring in 20 sub-features, consisting of removing old dependencies, standardising a design pattern and propagating document state.",
+        "Eliminated more than 12 active UX issues by rewriting the C++ dialog system in over 120 commits, 6000 lines changed and reducing code length by 10%."
+      ]
+    },
+    "etsimo20": {
+      "title": "Etsimo Healthcare",
+      "position": "Junior Software Engineer",
+      "type": "Intership, Full-time",
+      "interval": "Jan 2020 - Jun 2020",
+      "duration": "6 months",
+      "location": "Turku, Finland",
+      "skills": [
+        "API",
+        "Angular",
+        "RxJS",
+        "Preact",
+        "Flask",
+        "NodeJS",
+        "TypeScript"
+      ],
+      "content": [
+        "Improved RxJS state in an Angular user-facing app of the certified Diagnosis Engine.",
+        "Integrated dynamic translations with an existing Flask REST backend, reducing load time by 20%.",
+        "Developed, in a team of two, over 12 iterations, an intended-use conversational workflow demo of the Etsimo service capabilities, deployed from a Node.js server with a Preact chat interface.",
+        "Written from the bottom up a new TypeScript library that exposes Etsimo’s API for developer use, helps with type checking for JavaScript apps and has automated unit tests."
+      ]
+    },
+    "inkscape19": {
+      "title": "Inkscape",
+      "position": "Software Developer",
+      "type": "Full-time",
+      "interval": "May 2019 - Aug 2019",
+      "duration": "4 months",
+      "organization": "Google Summer of Code participant",
+      "location": "Remote",
+      "skills": [
+        "JavaScript",
+        "polyfills",
+        "SVG",
+        "GTK+"
+      ],
+      "content": [
+        "Implemented JavaScript polyfills that reproduce, in browsers, SVG functionality which exists in Inkscape but has been dropped by the SVG2 specification draft.",
+        "Had over 60 commits in 4 feature branches over 4 months, using JavaScript and the GTK+ toolkit.",
+        "Developed new functionality (paint servers preview dialog) as a starter point for future fill and stroke paint servers unification."
+      ]
+    },
+    "postis18": {
+      "title": "Postis",
+      "position": "Front-End Developer",
+      "type": "Internship, Part-time",
+      "interval": "Jul 2018 - Sep 2018",
+      "duration": "3 months",
+      "location": "Bucharest, Romania",
+      "skills": [
+        "AngularJS",
+        "Bootstrap",
+        "REST APIs",
+        "JavaScript"
+      ],
+      "content": [
+        "Managed a delivery tracking web application of over 50 000 orders, using AngularJS, Bootstrap, Grunt, Git versioning and proprietary REST APIs.",
+        "Fixed interface bugs, shortened the load time by removing 7 unused dependencies and added 5 new client functionalities while pushing over 75 commits.",
+        "Reduced main app size by 20% and an order tracking page by 90% by using ES6 instead of jQuery."
+      ]
+    }
+  },
+  "template": {
+    "title": "",
+    "position": "",
+    "type": "",
+    "interval": "",
+    "duration": "",
+    "organization": "",
+    "location": "",
+    "skills": [],
+    "content": []
+  }
+}

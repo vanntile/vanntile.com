@@ -1,0 +1,38 @@
+---
+import Tags from './Tags.astro'
+
+let { title, position, type, interval, duration, organization, location, skills } = Astro.props
+---
+
+<div class="ee-entry">
+  <h3 class="ee-title">{title}</h3>
+  {
+    (position || type || interval) && (
+      <div class="ee-subtitle">
+        {position && <span class="ee-position">{position}</span>}
+        {position && type && <span class="ee-separator"> · </span>}
+        {type && <span class="ee-type">{type}</span>}
+      </div>
+    )
+  }
+  {
+    interval && (
+      <div class="ee-subtitle">
+        {interval && <span class="ee-interval">{interval}</span>}
+        {interval && duration && <span class="ee-separator"> · </span>}
+        {duration && <span class="ee-duration">{duration}</span>}
+      </div>
+    )
+  }
+  {
+    (organization || location) && (
+      <div class="ee-subtitle">
+        {organization && <span class="ee-organisation">{organization}</span>}
+        {organization && location && <span class="ee-separator"> · </span>}
+        {location && <span class="ee-location">{location}</span>}
+      </div>
+    )
+  }
+  <div class="ee-content"><slot /></div>
+  {skills && <Tags tags={skills} class="ee-skill bg-indigo-900" />}
+</div>

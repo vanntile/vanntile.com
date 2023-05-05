@@ -49,8 +49,8 @@ const latestPosts = (await getCollection('blog')).sort(blogCompareFn).slice(0, 3
 </script>
 
 <BaseLayout frontmatter={props} withNav={false}>
-  <main class="w-full pt-8 pb-32 mx-auto xl:px-6 xl:text-lg 2xl:text-xl max-w-prose 2xl:max-w-6xl">
-    <section class="flex flex-col justify-center min-h-screen px-6 py-16 text-left hSection">
+  <main class="mx-auto w-full max-w-prose pt-8 pb-32 xl:px-6 xl:text-lg 2xl:max-w-6xl 2xl:text-xl">
+    <section class="hSection flex min-h-screen flex-col justify-center px-6 py-16 text-left">
       <div>
         <header class="mb-16">
           <AnimatedHeader />
@@ -72,7 +72,7 @@ const latestPosts = (await getCollection('blog')).sort(blogCompareFn).slice(0, 3
           <span class="highlight">balance</span> between a maintainable implementation and
           <br class="hidden md:inline-block 2xl:hidden" /> user-focused functionality.
         </p>
-        <div class="flex flex-row flex-wrap mt-8 gap-x-2">
+        <div class="mt-8 flex flex-row flex-wrap gap-x-2">
           <a class="cta" href="#section-tech">techstack</a>
           <a class="cta" href="#section-experience">experience</a>
           <a class="cta" href="#section-blog">blog</a>
@@ -82,8 +82,8 @@ const latestPosts = (await getCollection('blog')).sort(blogCompareFn).slice(0, 3
       </div>
       <SectionDivider color="text-brand-accent" />
     </section>
-    <section id="section-tech" class="pt-12 pb-24 font-bold text-gray-800 hSection bg-brand-accent">
-      <div class="flex flex-col items-center justify-center w-full -my-12">
+    <section id="section-tech" class="hSection bg-brand-accent pt-12 pb-24 font-bold text-gray-800">
+      <div class="-my-12 flex w-full flex-col items-center justify-center">
         <svg
           id="logoSvg"
           aria-hidden="true"
@@ -99,7 +99,7 @@ const latestPosts = (await getCollection('blog')).sort(blogCompareFn).slice(0, 3
             fill-rule="evenodd"
             clip-rule="evenodd"
             d={svg.logomark}
-            class="text-gray-900 stroke-current will-change-transform logoSvg"></path>
+            class="logoSvg stroke-current text-gray-900 will-change-transform"></path>
         </svg>
       </div>
       <h2 class="text-gray-900 dark:text-gray-900">./about/tech</h2>
@@ -162,8 +162,8 @@ const latestPosts = (await getCollection('blog')).sort(blogCompareFn).slice(0, 3
       />
       <SectionDivider color="text-brand" />
     </section>
-    <section id="section-experience" class="pb-24 text-gray-100 hSection bg-brand">
-      <div class="flex flex-col items-center justify-center w-full mt-12">
+    <section id="section-experience" class="hSection bg-brand pb-24 text-gray-100">
+      <div class="mt-12 flex w-full flex-col items-center justify-center">
         <svg
           id="logotypeSvg"
           aria-hidden="true"
@@ -178,14 +178,14 @@ const latestPosts = (await getCollection('blog')).sort(blogCompareFn).slice(0, 3
           <path
             d={svg.logotype}
             fill="currentColor"
-            class="text-gray-100 stroke-current will-change-transform logoSvg logotypeSvg"></path>
+            class="logoSvg logotypeSvg stroke-current text-gray-100 will-change-transform"></path>
         </svg>
       </div>
       <h2 class="text-gray-100 dark:text-gray-100">./about/experience</h2>
       <Experience />
       <SectionDivider color="text-white dark:text-gray-900" />
     </section>
-    <section class="my-16 hSection">
+    <section class="hSection my-16">
       <h2 id="section-blog">./blog/coding/latest</h2>
       <div>
         {
@@ -207,18 +207,18 @@ const latestPosts = (await getCollection('blog')).sort(blogCompareFn).slice(0, 3
         <a class="cta" href="/blog">Check all blog posts</a>
       </div>
     </section>
-    <section class="mb-24 hSection">
+    <section class="hSection mb-24">
       <h2 id="section-design">./blog/design</h2>
       <a href="/design/brand-book">
-        <div class="relative cursor-pointer md:-mx-6 group bg-brand">
+        <div class="group relative cursor-pointer bg-brand md:-mx-6">
           <div
-            class="transition-transform scale-100 blur-none group-hover:blur-sm group-hover:scale-90 group-hover:mix-blend-lighten"
+            class="scale-100 blur-none transition-transform group-hover:scale-90 group-hover:mix-blend-lighten group-hover:blur-sm"
           >
             <img loading="lazy" src="/assets/deck/page.1.webp" alt="vanntile brand deck cover page" />
           </div>
-          <div class="absolute top-0 left-0 grid items-center justify-center w-full h-full">
+          <div class="absolute top-0 left-0 grid h-full w-full items-center justify-center">
             <h3
-              class="pt-2 pl-4 my-0 text-2xl text-gray-100 border-l-8 opacity-0 md:text-5xl group-hover:opacity-100 border-brand-accent"
+              class="my-0 border-l-8 border-brand-accent pt-2 pl-4 text-2xl text-gray-100 opacity-0 group-hover:opacity-100 md:text-5xl"
             >
               Brand book
             </h3>
@@ -226,10 +226,10 @@ const latestPosts = (await getCollection('blog')).sort(blogCompareFn).slice(0, 3
         </div>
       </a>
     </section>
-    <section class="mb-24 hSection">
+    <section class="hSection mb-24">
       <h2 id="section-contact">./public/contact</h2>
       <p>You can find me here and there. I recommend you message me 📨 on Mastodon.</p>
-      <div class="flex flex-row flex-wrap mb-8 gap-x-4 md:gap-x-8">
+      <div class="mb-8 flex flex-row flex-wrap gap-x-4 md:gap-x-8">
         {
           socialMedia.map((e) => (
             <a
@@ -238,7 +238,7 @@ const latestPosts = (await getCollection('blog')).sort(blogCompareFn).slice(0, 3
               rel="me"
               referrerpolicy="same-origin"
               title={e.name}
-              class="w-12 h-12 bg-transparent rounded-full rotateScaleUp pseudo-none dark:bg-gray-900 focus:outline-none focus:ring-8 ring-brand-accent will-change-transform"
+              class="rotateScaleUp pseudo-none h-12 w-12 rounded-full bg-transparent ring-brand-accent will-change-transform focus:outline-none focus:ring-8 dark:bg-gray-900"
             >
               <svg
                 aria-hidden="true"

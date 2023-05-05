@@ -227,20 +227,20 @@
 }
 
 @layer components {
-  .experience-section h3:first-child {
+  .experience .ee-entry:first-child .ee-title {
     @apply my-0;
   }
 
-  .experience-section h3:not(:first-child) {
+  .experience .ee-entry:not(:first-child) .ee-title {
     @apply mt-5 mb-0;
+  }
+
+  .experience .ee-subtitle {
+    @apply mt-0 mb-2 font-semibold leading-4 text-brand-tint;
   }
 
   .cta {
     @apply px-4 py-2 mb-2 border-2 border-current text-brand dark:text-brand-accent hover:text-brand dark:hover:text-brand-accent;
-  }
-
-  .p-experience {
-    @apply mt-0 mb-2 font-semibold leading-4 text-brand-tint;
   }
 
   .highlight {
