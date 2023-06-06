@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.2.0](https://github.com/vanntile/vanntile.com/compare/v4.1.0...v4.2.0) (2023-06-06)
+
+
+### Features
+
+* :star2: update tech stack ([231962d](https://github.com/vanntile/vanntile.com/commit/231962dd0ad91db2ea09f88211e8f943173f9dc5))
+
+
+### Bug Fixes
+
+* **style:** :bug: format with prettier using updated tailwind package ([f976255](https://github.com/vanntile/vanntile.com/commit/f976255348af49f1167cdb20141c26d87e707017))
+* **style:** :bug: increase sizing for legibility ([7067752](https://github.com/vanntile/vanntile.com/commit/7067752dfd1d3a353eecb29ebef3e8ae3dc18b32))
+
 ## [4.1.0](https://github.com/vanntile/vanntile.com/compare/v4.0.0...v4.1.0) (2023-04-14)
 
 
