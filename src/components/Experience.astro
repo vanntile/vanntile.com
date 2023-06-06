@@ -117,7 +117,7 @@ const tabNames: string[] = ['Education', 'Volunteering', 'AScI', 'Postis', 'GSoC
     id={`${prefix}-tabpanel-3`}
     aria-labelledby={`${prefix}-tab-2`}
   >
-    <ExperienceEntry {...experience.volunteering.codette}>
+    <ExperienceEntry {...experience.volunteering.codette} content={null}>
       <ul>
         <li>
           Contributed as a technical trainer by creating resources and delivering presentations at{' '}
@@ -131,7 +131,7 @@ const tabNames: string[] = ['Education', 'Volunteering', 'AScI', 'Postis', 'GSoC
         <li>Contributed as a technical trainer at a mobile development workshop for 20 young children.</li>
       </ul>
     </ExperienceEntry>
-    <ExperienceEntry {...experience.volunteering.lsac}>
+    <ExperienceEntry {...experience.volunteering.lsac} content={null}>
       <ul>
         <li>
           Created posters and graphics for the student association events, with a{' '}
@@ -144,7 +144,7 @@ const tabNames: string[] = ['Education', 'Volunteering', 'AScI', 'Postis', 'GSoC
         <li>Mentored new members and trained them through an Introduction to design workshop.</li>
       </ul>
     </ExperienceEntry>
-    <ExperienceEntry {...experience.volunteering.coderdojo}>
+    <ExperienceEntry {...experience.volunteering.coderdojo} content={null}>
       <p>
         Participated twice a month as a trainer at workshops for primary-school children where we taught basic
         programming using online tools, mainly Scratch.
@@ -157,7 +157,7 @@ const tabNames: string[] = ['Education', 'Volunteering', 'AScI', 'Postis', 'GSoC
     id={`${prefix}-tabpanel-5`}
     aria-labelledby={`${prefix}-tab-4`}
   >
-    <ExperienceEntry {...experience.job.asci}>
+    <ExperienceEntry {...experience.job.asci} content={null}>
       <ul>
         <li>
           Worked on a <strong>Vue</strong> app, that scores a given website (screenshot or URL) on a set of UIX design metrics
@@ -180,7 +180,7 @@ const tabNames: string[] = ['Education', 'Volunteering', 'AScI', 'Postis', 'GSoC
     id={`${prefix}-tabpanel-7`}
     aria-labelledby={`${prefix}-tab-6`}
   >
-    <ExperienceEntry {...experience.job.postis20}>
+    <ExperienceEntry {...experience.job.postis20} content={null}>
       <ul>
         <li>
           Analyzing customer post-delivery text reviews in order to discover trends and associate them with business
@@ -191,7 +191,7 @@ const tabNames: string[] = ['Education', 'Volunteering', 'AScI', 'Postis', 'GSoC
         </li>
       </ul>
     </ExperienceEntry>
-    <ExperienceEntry {...experience.job.postis18} title={null}>
+    <ExperienceEntry {...experience.job.postis18} title={null} content={null}>
       <p>
         Managed a delivery tracking web application of over <strong>50 000 orders</strong>, using Git versioning,
         AngularJS, Bootstrap, Grunt and proprietary REST APIs. Fixed interface bugs,{' '}
@@ -207,25 +207,8 @@ const tabNames: string[] = ['Education', 'Volunteering', 'AScI', 'Postis', 'GSoC
     id={`${prefix}-tabpanel-9`}
     aria-labelledby={`${prefix}-tab-8`}
   >
-    <ExperienceEntry {...experience.job.inkscape20}>
-      <p>
-        Developer for <strong>Inkscape</strong>, a vector design desktop application that follows the{' '}
-        <strong>SVG</strong> standards. Worked on a <strong>C++</strong> dialog system refactoring project, with over 120
-        commits,
-        <strong>6000 lines changed</strong>, reducing code length by 10%. The resulting change eliminated more than 12
-        active UX issues. Implementing the new dialog system consisted of removing old dependencies, standardising a
-        design pattern and propagating document state. Specifically, this included <strong>over 20 features</strong>.
-      </p>
-    </ExperienceEntry>
-
-    <ExperienceEntry {...experience.job.inkscape19} title={null}>
-      <p>
-        Implemented <strong>JavaScript polyfills</strong> that reproduce, in browsers, SVG functionality which exists in
-        Inkscape but has been dropped by the <strong>SVG2 specification</strong> draft. Had over 60 commits in 4 feature
-        branches over 4 months, using JavaScript and the GTK+ toolkit. Implemented new functionality (paint servers preview
-        dialog) as a starter point for future fill and stroke paint servers unification.
-      </p>
-    </ExperienceEntry>
+    <ExperienceEntry {...experience.job.inkscape20} />
+    <ExperienceEntry {...experience.job.inkscape19} title={null} />
   </div>
   <div
     class="w-full border-2 border-t-0 p-4 pt-8"
@@ -233,15 +216,6 @@ const tabNames: string[] = ['Education', 'Volunteering', 'AScI', 'Postis', 'GSoC
     id={`${prefix}-tabpanel-11`}
     aria-labelledby={`${prefix}-tab-10`}
   >
-    <ExperienceEntry {...experience.job.etsimo20}>
-      <p>
-        Worked on improving RxJS state in an Angular user-facing app of the cer- tified Diagnosis Engine. Integrated
-        dynamic translations with an existing Flask REST backend, <strong>reducing load time by 20%</strong>. Created,
-        in a team of two, over 12 iterations, an intended-use <strong>conversational workflow</strong> demo of the Etsimo
-        service capabilities, deployed from a <strong>Node.js server</strong> with a Preact chat interface. Written from
-        the bottom up a new <strong>TypeScript library</strong> that exposes Etsimo’s API for developer use, helps with type
-        checking for JavaScript apps and has automated <strong>unit tests</strong>.
-      </p>
-    </ExperienceEntry>
+    <ExperienceEntry {...experience.job.etsimo20} />
   </div>
 </div>

@@ -1,7 +1,7 @@
 ---
 import Tags from './Tags.astro'
 
-let { title, position, type, interval, duration, organization, location, skills } = Astro.props
+let { title, position, type, interval, duration, organization, location, content, skills } = Astro.props
 ---
 
 <div class="ee-entry">
@@ -33,6 +33,24 @@ let { title, position, type, interval, duration, organization, location, skills 
       </div>
     )
   }
-  <div class="ee-content"><slot /></div>
+  <div class="ee-content">
+    {
+      content ? (
+        content.length > 1 ? (
+          <ul>
+            {content.map((e: string) => (
+              <li>
+                <Fragment set:html={e} />
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p>{content[0]}</p>
+        )
+      ) : (
+        <slot />
+      )
+    }
+  </div>
   {skills && <Tags tags={skills} class="ee-skill bg-indigo-900" />}
 </div>

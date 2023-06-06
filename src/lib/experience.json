@@ -156,9 +156,9 @@
         "refactoring"
       ],
       "content": [
-        "Participated to GSoC as a developer for Inkscape, an open-source vector design desktop application that follows the SVG standards.",
-        "Implemented a major UI refactoring in 20 sub-features, consisting of removing old dependencies, standardising a design pattern and propagating document state.",
-        "Eliminated more than 12 active UX issues by rewriting the C++ dialog system in over 120 commits, 6000 lines changed and reducing code length by 10%."
+        "Participated to GSoC as a developer for <strong>Inkscape</strong>, an open-source vector design desktop application that follows the <strong>SVG standards</strong>.",
+        "Implemented a <strong>major UI refactoring</strong> in 20 sub-features, consisting of removing old dependencies, standardising a design pattern and propagating document state.",
+        "Eliminated more than 12 active UX issues by rewriting the C++ dialog system in over <strong>120 commits, 6000 lines</strong> changed and reducing code length by 10%."
       ]
     },
     "etsimo20": {
@@ -179,9 +179,9 @@
       ],
       "content": [
         "Improved RxJS state in an Angular user-facing app of the certified Diagnosis Engine.",
-        "Integrated dynamic translations with an existing Flask REST backend, reducing load time by 20%.",
-        "Developed, in a team of two, over 12 iterations, an intended-use conversational workflow demo of the Etsimo service capabilities, deployed from a Node.js server with a Preact chat interface.",
-        "Written from the bottom up a new TypeScript library that exposes Etsimo’s API for developer use, helps with type checking for JavaScript apps and has automated unit tests."
+        "Integrated dynamic translations with an existing Flask REST backend, <strong>reducing load time by 20%.</strong>",
+        "Developed, in a team of two, over 12 iterations, an intended-use <strong>conversational workflow</strong> demo of the Etsimo service capabilities, deployed from a <strong>Node.js server</strong> with a Preact chat interface.",
+        "Written from the bottom up a new <strong>TypeScript library</strong> that exposes Etsimo’s API for developer use, helps with type checking for JavaScript apps and has automated <strong>unit tests</strong>."
       ]
     },
     "inkscape19": {
@@ -199,7 +199,7 @@
         "GTK+"
       ],
       "content": [
-        "Implemented JavaScript polyfills that reproduce, in browsers, SVG functionality which exists in Inkscape but has been dropped by the SVG2 specification draft.",
+        "Implemented <strong>JavaScript polyfills</strong> that reproduce, in browsers, SVG functionality which exists in Inkscape but has been dropped by the <strong>SVG2 specification draft</strong>.",
         "Had over 60 commits in 4 feature branches over 4 months, using JavaScript and the GTK+ toolkit.",
         "Developed new functionality (paint servers preview dialog) as a starter point for future fill and stroke paint servers unification."
       ]
