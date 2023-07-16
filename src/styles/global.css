@@ -117,17 +117,25 @@
     @apply px-16 py-2 font-mono font-bold text-gray-200 transition-colors bg-gray-800 border border-b-0 border-gray-800 border-x-0 xl:border-x xl:rounded-t-lg xl:py-4 2xl:py-8;
   }
 
+  [data-rehype-pretty-code-caption] {
+    @apply px-6 py-2 text-gray-200 transition-colors bg-gray-800 border border-t-0 border-gray-800 border-x-0 xl:border-x xl:rounded-b-lg xl:py-4 2xl:py-8 xl:px-16;
+  }
+
   pre {
     @apply py-4 overflow-x-auto text-gray-200 transition-colors bg-gray-900 border border-gray-800 border-x-0 xl:border-x xl:rounded-lg 2xl:py-8;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
 
-  [data-rehype-pretty-code-title] + pre {
+  [data-rehype-pretty-code-fragment] pre:not(:first-child) {
     @apply mt-0 rounded-t-none;
   }
 
-  [data-rehype-pretty-code-fragment]:hover :is([data-rehype-pretty-code-title], pre) {
+  [data-rehype-pretty-code-fragment] pre:not(:last-child) {
+    @apply mb-0 rounded-b-none;
+  }
+
+  [data-rehype-pretty-code-fragment]:hover :is([data-rehype-pretty-code-title], [data-rehype-pretty-code-caption], pre) {
     @apply border-gray-600;
   }
 
@@ -152,27 +160,31 @@
     --counter-content: "$";
   }
 
-  code > .line {
+  code > [data-line] {
     @apply relative;
   }
 
-  code > .line > span {
+  code > [data-line] > span {
     @apply relative transition-colors;
   }
 
-  /* TODO: fix when :has() support comes to Firefox */
-  [data-rehype-pretty-code-fragment]:not(:hover) :is(.line:not(.highlighted):has(+ .highlighted), .highlighted ~ .line:not(.highlighted)) > span {
+  /* TODO: remove when :has() support comes to Firefox */
+  [data-rehype-pretty-code-fragment]:not(:hover) [data-highlighted-line] ~ :not([data-highlighted-line]) > span {
     @apply !text-gray-700;
   }
 
-  [data-rehype-pretty-code-fragment] code > .line::before {
+  [data-rehype-pretty-code-fragment]:not(:hover):has( [data-highlighted-line]) :not([data-highlighted-line]) > span {
+    @apply !text-gray-700;
+  }
+
+  [data-rehype-pretty-code-fragment] code > [data-line]::before {
     counter-increment: line;
     content: var(--counter-content, counter(line));
     user-select: none;
     @apply absolute inline-block pl-2 text-gray-600 transition-colors border-l-4 border-transparent border-solid -left-16 w-[calc(100%+5rem)];
   }
 
-  [data-rehype-pretty-code-fragment]:hover code > .line.highlighted::before {
+  [data-rehype-pretty-code-fragment]:hover code > [data-highlighted-line]::before {
     @apply bg-blue-900 bg-opacity-25 border-blue-400;
   }
 

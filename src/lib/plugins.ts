@@ -28,7 +28,7 @@ export function rehypePrettyCodeStyleToClass(options = { stylesMap: [] }): Rehyp
 
   return (tree) => {
     visit(tree, 'element', (node, index, parent) => {
-      const isInsideLine = parent.tagName === 'span' && parent.properties.className.includes('line')
+      const isInsideLine = parent.tagName === 'span' && parent.properties['data-line'] == ''
       const isSpan = node.tagName === 'span'
       const style = node.properties.style
 
