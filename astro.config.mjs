@@ -51,5 +51,5 @@ export default defineConfig({
       rehypeSortAttributes,
     ],
   },
-  integrations: [tailwind({ config: { applyBaseStyles: false } }), mdx()],
+  integrations: [tailwind({ applyBaseStyles: false }), mdx()],
 })
