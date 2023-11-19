@@ -28,7 +28,7 @@ const posts = await getCollection('blog')
             </time>
           </p>
           <a href={`/blog/${post.slug}`}>{post.data.title}</a>
-          <p class="my-1">{post.data.summary}</p>
+          <p class="my-1 break-words">{post.data.summary}</p>
           <a href={`/blog/${post.slug}`} class="cta mt-2 inline-block">
             Read more
           </a>

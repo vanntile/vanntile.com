@@ -75,7 +75,6 @@ const latestPosts = (await getCollection('blog')).sort(blogCompareFn).slice(0, 3
           <a class="cta" href="#section-tech">techstack</a>
           <a class="cta" href="#section-experience">experience</a>
           <a class="cta" href="#section-blog">blog</a>
-          <a class="cta" href="#section-design">design</a>
           <a class="cta" href="#section-contact">contact</a>
         </div>
       </div>
@@ -205,25 +204,6 @@ const latestPosts = (await getCollection('blog')).sort(blogCompareFn).slice(0, 3
         <span class="pr-4 md:text-xl">...or</span>
         <a class="cta" href="/blog">Check all blog posts</a>
       </div>
-    </section>
-    <section class="hSection mb-24">
-      <h2 id="section-design">./blog/design</h2>
-      <a href="/design/brand-book">
-        <div class="group relative cursor-pointer bg-brand md:-mx-6">
-          <div
-            class="scale-100 blur-none transition-transform group-hover:scale-90 group-hover:mix-blend-lighten group-hover:blur-sm"
-          >
-            <img loading="lazy" src="/assets/deck/page.1.webp" alt="vanntile brand deck cover page" />
-          </div>
-          <div class="absolute left-0 top-0 grid h-full w-full items-center justify-center">
-            <h3
-              class="my-0 border-l-8 border-brand-accent pl-4 pt-2 text-2xl text-gray-100 opacity-0 group-hover:opacity-100 md:text-5xl"
-            >
-              Brand book
-            </h3>
-          </div>
-        </div>
-      </a>
     </section>
     <section class="hSection mb-24">
       <h2 id="section-contact">./public/contact</h2>

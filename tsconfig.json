@@ -4,11 +4,7 @@
     "noImplicitOverride": true,
     "noUnusedLocals": true,
     "allowUnreachableCode": false,
-    "allowUnusedLabels": false,
+    "allowUnusedLabels": false
   },
-  "exclude": [
-    ".vscode",
-    "node_modules",
-    "public"
-  ]
+  "exclude": [".vscode", "node_modules", "public"]
 }
