@@ -3,5 +3,19 @@
   "semi": false,
   "singleQuote": true,
   "plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
+  "overrides": [
+    {
+      "files": "*.prettierrc",
+      "options": {
+        "parser": "json"
+      }
+    },
+    {
+      "files": "*.astro",
+      "options": {
+        "parser": "astro"
+      }
+    }
+  ],
   "embeddedLanguageFormatting": "off"
 }

@@ -1,7 +1,6 @@
 ---
-import type { CollectionEntry } from 'astro:content'
+import { type CollectionEntry, getCollection } from 'astro:content'
 import Navigation from '../components/Navigation.astro'
-import { socialMedia } from '../lib/utils'
 import '../styles/global.css'
 
 interface Props {
@@ -15,13 +14,15 @@ const { title, publishedAt, summary, image, imageAlt, keywords } = frontmatter
 const url = new URL(Astro.url.pathname, Astro.site)
 const origin = url.origin
 
+const socialMedia = (await getCollection('icons'))
+
 const me = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'vanntile',
   url: Astro.site,
   image: `${Astro.site}assets/logo.svg`,
-  sameAs: socialMedia.map((e) => e.href),
+  sameAs: socialMedia.map((e) => e.data.url),
 }
 
 const blogSEO = {
