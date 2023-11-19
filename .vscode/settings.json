@@ -2,12 +2,12 @@
   "files.associations": {
     ".stylelintrc": "jsonc",
     "*.astro": "astro",
-    "*.css": "tailwindcss",
+    "*.css": "tailwindcss"
   },
   "tailwindCSS.includeLanguages": {
     "typescript": "javascript",
     "astro": "html",
-    "mdx": "html",
+    "mdx": "html"
   },
   "css.validate": false,
   "stylelint.enable": true,
@@ -23,5 +23,5 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
     "editor.formatOnSaveMode": "file"
-  },
+  }
 }

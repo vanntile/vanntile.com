@@ -6,7 +6,8 @@ image: blog/banner-next-to-astro.png
 imageAlt: Banner image with NextJS logo and an arrow emoji pointing to the Astro logo
 keywords: nextjs, astro, frontend, performance, lighthouse
 ---
-import ReasonList from '../../components/ReasonList.astro'
+
+import ReasonList from "../../components/ReasonList.astro"
 
 ## Motivation
 
@@ -69,9 +70,9 @@ JavaScript). But enough with the negative, let's see why I actually switched.
 First of all, it has markdown, remark and components in markdown as first-class
 citizens, and that is a core part of a simple blog. I just migrated my
 remark-rehype plugin settings into the Astro configuration and it was haflway
-ready to be used. The other half is the *second advantage*, easy Tailwind
+ready to be used. The other half is the _second advantage_, easy Tailwind
 integration (and later Tailwind as a favored integration through the
-`@astrojs/tailwind`). *Third reason*, their data interpolation syntax is as
+`@astrojs/tailwind`). _Third reason_, their data interpolation syntax is as
 close you can get to JSX without being JSX, but wait, it gets better, you use
 plain HTML attributes, so no more `className` 🎉 or camel-case shenanigans. This
 is actually the hardest part in the migration from NextJS to Astro: renaming the
