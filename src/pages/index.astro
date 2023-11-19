@@ -1,7 +1,6 @@
 ---
 import { getCollection } from 'astro:content'
 import AnimatedHeader from '../components/AnimatedHeader.astro'
-import ContactForm from '../components/ContactForm.astro'
 import Experience from '../components/Experience.astro'
 import SectionDivider from '../components/SectionDivider.astro'
 import Tags from '../components/Tags.astro'
@@ -62,8 +61,8 @@ const latestPosts = (await getCollection('blog')).sort(blogCompareFn).slice(0, 3
         </p>
         <p class="max-w-2xl md:text-lg 2xl:max-w-5xl 2xl:text-2xl">
           I speak the languages of both <span class="highlight">engineering and aesthetics</span>, being
-          <br class="hidden md:inline-block 2xl:hidden" /> perfectly positioned to formulate the path of a feasible product
-          with customer experience in mind. My preferred work is{' '}
+          <br class="hidden md:inline-block 2xl:hidden" /> perfectly positioned to formulate the path of a feasible
+          product with customer experience in mind. My preferred work is{' '}
           <span class="highlight">fullstack development</span>. I&apos;m using the best tool for the job, be it a
           reliable framework or the latest web features.
         </p>
@@ -228,7 +227,7 @@ const latestPosts = (await getCollection('blog')).sort(blogCompareFn).slice(0, 3
     </section>
     <section class="hSection mb-24">
       <h2 id="section-contact">./public/contact</h2>
-      <p>You can find me here and there. I recommend you message me 📨 on Mastodon.</p>
+      <p>You can find me here and there. I recommend you message me 📨 on Mastodon or LinkedIn.</p>
       <div class="mb-8 flex flex-row flex-wrap gap-x-4 md:gap-x-8">
         {
           socialMedia.map((e) => (
@@ -254,7 +253,6 @@ const latestPosts = (await getCollection('blog')).sort(blogCompareFn).slice(0, 3
           ))
         }
       </div>
-      <ContactForm />
     </section>
   </main>
 </BaseLayout>
