@@ -5,10 +5,12 @@ const blogCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     publishedAt: z.date(),
-    summary: z.string(),
-    image: z.string(),
-    imageAlt: z.string(),
-    keywords: z.string().transform((str) => str.split(',')),
+    description: z.string().min(50).max(160),
+    image: z.object({
+      src: z.string(),
+      alt: z.string(),
+    }),
+    keywords: z.array(z.string()),
   }),
 })
 

@@ -10,11 +10,10 @@ import { READABLE_FORMAT, blogCompareFn } from '../lib/utils'
 const props = {
   title: 'vanntile - frontend developer and graphic designer',
   publishedAt: new Date(),
-  summary:
+  description:
     'Developer by choice and designer for fun. I speak the languages of both engineering and aesthetics and ' +
     'can help with your next project.',
-  image: 'banner.png',
-  imageAlt: 'Banner image with logo and "Good design is invisible" motto',
+  image: { src: 'banner.png', alt: 'Banner image with logo and "Good design is invisible" motto' },
   keywords: ['vanntile', 'portfolio', 'developer', 'graphic designer'],
 }
 
@@ -22,6 +21,7 @@ const latestPosts = (await getCollection('blog')).sort(blogCompareFn).slice(0, 3
 
 const socialMedia = (await getCollection('icons')).sort((a, b) => a.data.index - b.data.index)
 ---
+
 <script>
   const options = {
     root: null,
@@ -195,7 +195,7 @@ const socialMedia = (await getCollection('icons')).sort((a, b) => a.data.index -
                 </time>
               </p>
               <a href={`/blog/${post.slug}`}>{post.data.title}</a>
-              <p class="my-1">{post.data.summary}</p>
+              <p class="my-1">{post.data.description}</p>
             </div>
           ))
         }

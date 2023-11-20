@@ -1,4 +1,5 @@
 import mdx from '@astrojs/mdx'
+import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
 import rehypeToc from '@jsdevtools/rehype-toc'
 import { defineConfig } from 'astro/config'
@@ -13,10 +14,10 @@ import moonlightColors from './src/styles/moonlight-ii-color-replacement.json'
 import moonlightTheme from './src/styles/moonlight-ii.json'
 
 const prettyCodeOptions = {
-  // docs: https://rehype-pretty-code.netlify.app/
-  theme: replaceCSSVariablesForShikiTheme(moonlightTheme, moonlightColors), // 'material-palenight'
+  // 'material-palenight'
+  theme: replaceCSSVariablesForShikiTheme(moonlightTheme, moonlightColors),
   keepBackground: false,
-
+  // docs: https://rehype-pretty-code.netlify.app/
   getHighlighter: async (options) => {
     const highlighter = await getHighlighter(options)
     highlighter.setColorReplacements(
@@ -34,7 +35,12 @@ export default defineConfig({
     remarkPlugins: [remarkHint, remarkReadingTime],
     rehypePlugins: [
       [rehypePrettyCode, prettyCodeOptions],
-      [rehypePrettyCodeStyleToClass, { stylesMap: [['font-style: italic', 'italic']] }],
+      [
+        rehypePrettyCodeStyleToClass,
+        {
+          stylesMap: [['font-style: italic', 'italic']],
+        },
+      ],
       rehypeSlug,
       [
         rehypeAutolinkHeadings,
@@ -47,9 +53,25 @@ export default defineConfig({
           },
         },
       ],
-      [rehypeToc, { nav: false, cssClasses: { list: '', listItem: '', link: '' } }],
+      [
+        rehypeToc,
+        {
+          nav: false,
+          cssClasses: {
+            list: '',
+            listItem: '',
+            link: '',
+          },
+        },
+      ],
       rehypeSortAttributes,
     ],
   },
-  integrations: [tailwind({ applyBaseStyles: false }), mdx()],
+  integrations: [
+    tailwind({
+      applyBaseStyles: false,
+    }),
+    mdx(),
+    sitemap(),
+  ],
 })

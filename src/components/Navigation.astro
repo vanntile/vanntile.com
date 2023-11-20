@@ -1,16 +1,34 @@
 <script is:inline>
-  window.addEventListener('DOMContentLoaded', (event) => { const html = document.querySelector('html') const
-  lightThemeBtn = document.querySelector('#lightThemeBtn') const darkThemeBtn = document.querySelector('#darkThemeBtn')
-  const switchBtn = document.querySelector('#switch') const savedTheme = window.localStorage.getItem('theme') if
-  (savedTheme === 'light') { switchBtn.setAttribute('aria-checked', true) switchBtn.classList.remove('bg-brand-tint')
-  switchBtn.classList.add('bg-gray-300') switchBtn.children[0].classList.remove('translate-x-7')
-  lightThemeBtn.setAttribute('fill', 'currentColor') darkThemeBtn.setAttribute('fill', 'none') }
-  document.querySelector('#themeToggler').addEventListener('click', (event) => { const isDarkTheme =
-  html.classList.value.includes('dark') switchBtn.setAttribute('aria-checked', !isDarkTheme)
-  switchBtn.classList.toggle('bg-brand-tint') switchBtn.classList.toggle('bg-gray-300')
-  switchBtn.children[0].classList.toggle('translate-x-7') lightThemeBtn.setAttribute('fill', isDarkTheme ?
-  'currentColor' : 'none') darkThemeBtn.setAttribute('fill', isDarkTheme ? 'none' : 'currentColor')
-  html.classList.toggle('dark') window.localStorage.setItem('theme', isDarkTheme ? 'light' : 'dark') }) })
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const html = document.querySelector('html')
+    const lightThemeBtn = document.querySelector('#lightThemeBtn')
+    const darkThemeBtn = document.querySelector('#darkThemeBtn')
+    const switchBtn = document.querySelector('#switch')
+
+    const savedTheme = window.localStorage.getItem('theme')
+    if (savedTheme === 'light') {
+      switchBtn.setAttribute('aria-checked', true)
+      switchBtn.classList.remove('bg-brand-tint')
+      switchBtn.classList.add('bg-gray-300')
+      switchBtn.children[0].classList.remove('translate-x-7')
+      lightThemeBtn.setAttribute('fill', 'currentColor')
+      darkThemeBtn.setAttribute('fill', 'none')
+    }
+
+    document.querySelector('#themeToggler').addEventListener('click', (event) => {
+      const isDarkTheme = html.classList.value.includes('dark')
+
+      switchBtn.setAttribute('aria-checked', !isDarkTheme)
+      switchBtn.classList.toggle('bg-brand-tint')
+      switchBtn.classList.toggle('bg-gray-300')
+      switchBtn.children[0].classList.toggle('translate-x-7')
+      lightThemeBtn.setAttribute('fill', isDarkTheme ? 'currentColor' : 'none')
+      darkThemeBtn.setAttribute('fill', isDarkTheme ? 'none' : 'currentColor')
+
+      html.classList.toggle('dark')
+      window.localStorage.setItem('theme', isDarkTheme ? 'light' : 'dark')
+    })
+  })
 </script>
 
 <nav

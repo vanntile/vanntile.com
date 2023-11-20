@@ -7,9 +7,8 @@ import { READABLE_FORMAT, blogCompareFn } from '../../lib/utils'
 const props = {
   title: 'Blog - twigs and thoughts',
   publishedAt: new Date(),
-  summary: 'Articles on tech, software development, design and case studies.',
-  image: 'banner.png',
-  imageAlt: 'Banner image with logo and "Good design is invisible" motto',
+  description: 'Articles on tech, software development, design and case studies.',
+  image: { src: 'banner.png', alt: 'Banner image with logo and "Good design is invisible" motto' },
   keywords: ['blog', 'posts'],
 }
 
@@ -28,7 +27,7 @@ const posts = await getCollection('blog')
             </time>
           </p>
           <a href={`/blog/${post.slug}`}>{post.data.title}</a>
-          <p class="my-1 break-words">{post.data.summary}</p>
+          <p class="my-1 break-words">{post.data.description}</p>
           <a href={`/blog/${post.slug}`} class="cta mt-2 inline-block">
             Read more
           </a>

@@ -15,7 +15,12 @@
       "options": {
         "parser": "astro"
       }
+    },
+    {
+      "files": "*.mdx",
+      "options": {
+        "embeddedLanguageFormatting": "off"
+      }
     }
-  ],
-  "embeddedLanguageFormatting": "off"
+  ]
 }

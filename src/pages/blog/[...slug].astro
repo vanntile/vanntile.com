@@ -23,7 +23,7 @@ const prevPost = posts[entryIdx + 1]
 const nextPost = posts[entryIdx - 1]
 ---
 
-<BaseLayout frontmatter={entry.data}>
+<BaseLayout frontmatter={entry.data} type="article">
   <main class="mx-auto w-full max-w-prose px-6 pb-32 pt-8 2xl:max-w-7xl">
     <article>
       <h1>{title}</h1>
