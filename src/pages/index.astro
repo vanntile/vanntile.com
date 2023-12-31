@@ -8,13 +8,19 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 import { READABLE_FORMAT, blogCompareFn } from '../lib/utils'
 
 const props = {
-  title: 'vanntile - frontend developer and graphic designer',
+  title: 'vanntile.com - software engineering blog',
   publishedAt: new Date(),
   description:
-    'Developer by choice and designer for fun. I speak the languages of both engineering and aesthetics and ' +
-    'can help with your next project.',
-  image: { src: 'banner.png', alt: 'Banner image with logo and "Good design is invisible" motto' },
-  keywords: ['vanntile', 'portfolio', 'developer', 'graphic designer'],
+    'vanntile - Software Engineer | Privacy Advocate | Open Source supporter | M.S. in Security & Cloud Computing ',
+  image: { src: 'banner.png', alt: 'Banner image with logo and text "Privacy. FOSS. Cybersecurity.' },
+  keywords: [
+    'vanntile',
+    'software engineer',
+    'privacy advocate',
+    'free open source software',
+    'tech blog',
+    'graphic design portfolio',
+  ],
 }
 
 const latestPosts = (await getCollection('blog')).sort(blogCompareFn).slice(0, 3)
@@ -61,8 +67,8 @@ const socialMedia = (await getCollection('icons')).sort((a, b) => a.data.index -
         </p>
         <p class="max-w-2xl md:text-lg 2xl:max-w-5xl 2xl:text-2xl">
           I speak the languages of both <span class="highlight">engineering and aesthetics</span>, being
-          <br class="hidden md:inline-block 2xl:hidden" /> perfectly positioned to formulate the path of a feasible
-          product with customer experience in mind. My preferred work is{' '}
+          <br class="hidden md:inline-block 2xl:hidden" /> perfectly positioned to formulate the path of a feasible product
+          with customer experience in mind. My preferred work is{' '}
           <span class="highlight">fullstack development</span>. I&apos;m using the best tool for the job, be it a
           reliable framework or the latest web features.
         </p>

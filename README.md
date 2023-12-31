@@ -1,10 +1,10 @@
-# vanntile's portfolio
+# vanntile.com
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![npm type definitions](https://img.shields.io/npm/types/typescript)](https://github.com/Microsoft/TypeScript)
 
-A personal [portfolio site](https://vanntile.com) built with [Astro 🚀](https://astro.build/).
+A personal [site](https://vanntile.com) built with [Astro 🚀](https://astro.build/).
 
 ## Contains
 

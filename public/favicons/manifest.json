@@ -1,6 +1,6 @@
 {
-  "name": "vanntile's portfolio",
-  "short_name": "vanntile's portfolio",
+  "name": "vanntile.com",
+  "short_name": "vanntile.com",
   "icons": [
     {
       "src": "/favicons/android-chrome-192x192.png",
@@ -19,5 +19,5 @@
   "display": "standalone",
   "start_url": "/",
   "scope": "/",
-  "description": "vanntile's portfolio - Frontend developer and graphic designer."
+  "description": "vanntile.com - software engineering blog"
 }

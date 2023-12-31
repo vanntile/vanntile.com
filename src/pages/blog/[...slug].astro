@@ -4,7 +4,6 @@ import ArrowLink, { DIRECTION } from '../../components/ArrowLink.astro'
 import Tags from '../../components/Tags.astro'
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import { READABLE_FORMAT, blogCompareFn } from '../../lib/utils'
-import '../../styles/moonlight.css'
 
 export const getStaticPaths = async () =>
   (await getCollection('blog')).map((entry) => ({
@@ -27,7 +26,7 @@ const nextPost = posts[entryIdx - 1]
   <main class="mx-auto w-full max-w-prose px-6 pb-32 pt-8 2xl:max-w-7xl">
     <article>
       <h1>{title}</h1>
-      <div class="-mt-4 font-bold text-gray-500 dark:text-brand-secondary xl:-mt-8">
+      <div class="-mt-4 font-bold text-gray-500 xl:-mt-8 dark:text-brand-secondary">
         <time datetime={publishedAt.toISOString().slice(0, 10)}>{READABLE_FORMAT.format(publishedAt)}</time>, {
           readingTime
         }
