@@ -106,7 +106,7 @@ const socialMedia = (await getCollection('icons')).sort((a, b) => a.data.index -
             class="logoSvg stroke-current text-gray-900 will-change-transform"></path>
         </svg>
       </div>
-      <h2 class="text-gray-900 dark:text-gray-900">./about/tech</h2>
+      <h2 class="text-gray-900">./about/tech</h2>
       <p>
         I am an in-progress computer engineer with a deep passion for the worlds of frontend, design and deployment.
         Keep scrolling if you wanna know why, how and what I work on!
@@ -185,9 +185,9 @@ const socialMedia = (await getCollection('icons')).sort((a, b) => a.data.index -
             class="logoSvg logotypeSvg stroke-current text-gray-100 will-change-transform"></path>
         </svg>
       </div>
-      <h2 class="text-gray-100 dark:text-gray-100">./about/experience</h2>
+      <h2 class="text-gray-100">./about/experience</h2>
       <Experience />
-      <SectionDivider color="text-white dark:text-gray-900" />
+      <SectionDivider color="text-gray-900" />
     </section>
     <section class="hSection my-16">
       <h2 id="section-blog">./blog/coding/latest</h2>
@@ -223,7 +223,7 @@ const socialMedia = (await getCollection('icons')).sort((a, b) => a.data.index -
               rel="me"
               referrerpolicy="same-origin"
               title={e.data.alt}
-              class="rotateScaleUp pseudo-none h-12 w-12 rounded-full bg-transparent ring-brand-accent will-change-transform focus:outline-none focus:ring-8 dark:bg-gray-900"
+              class="rotateScaleUp pseudo-none h-12 w-12 rounded-full bg-gray-900 bg-transparent ring-brand-accent will-change-transform focus:outline-none focus:ring-8"
             >
               <svg
                 aria-hidden="true"
@@ -233,7 +233,7 @@ const socialMedia = (await getCollection('icons')).sort((a, b) => a.data.index -
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path d={e.data.path} fill="currentColor" class="text-gray-900 dark:text-gray-100" />
+                <path d={e.data.path} fill="currentColor" class="text-gray-100" />
               </svg>
             </a>
           ))

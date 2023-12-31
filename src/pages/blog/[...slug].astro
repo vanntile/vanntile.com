@@ -26,20 +26,16 @@ const nextPost = posts[entryIdx - 1]
   <main class="mx-auto w-full max-w-prose px-6 pb-32 pt-8 2xl:max-w-7xl">
     <article>
       <h1>{title}</h1>
-      <div class="-mt-4 font-bold text-gray-500 xl:-mt-8 dark:text-brand-secondary">
+      <div class="-mt-4 font-bold text-brand-secondary xl:-mt-8">
         <time datetime={publishedAt.toISOString().slice(0, 10)}>{READABLE_FORMAT.format(publishedAt)}</time>, {
           readingTime
         }
       </div>
       <div class="py-4">
-        <Tags
-          tags={keywords}
-          size="lg"
-          class="border-2 border-current bg-transparent tracking-wide text-brand dark:text-brand-tint"
-        />
+        <Tags tags={keywords} size="lg" class="border-2 border-current bg-transparent tracking-wide text-brand-tint" />
       </div>
       <Content />
-      <div class="my-12 border-t-2 border-gray-700 pt-6 dark:border-brand-secondary">
+      <div class="my-12 border-t-2 border-brand-secondary pt-6">
         {
           prevPost && (
             <ArrowLink title={prevPost.data.title} direction={DIRECTION.LEFT} link={`/blog/${prevPost.slug}`} />

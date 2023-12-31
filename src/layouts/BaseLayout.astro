@@ -17,7 +17,7 @@ const origin = url.origin
 const socialMedia = await getCollection('icons')
 ---
 
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <title>{title}</title>
     <meta charset="utf-8" />
@@ -49,17 +49,11 @@ const socialMedia = await getCollection('icons')
     <meta name="apple-mobile-web-app-title" content="vanntile.com" />
     <meta name="application-name" content="vanntile.com" />
     <meta name="theme-color" content="#3429aa" />
-    <meta name="color-scheme" content="dark light" />
+    <meta name="color-scheme" content="dark" />
     <link rel="preload" href="/fonts/Objectivity-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
     <link rel="preload" href="/fonts/Objectivity-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
 
     {socialMedia.map((e) => <link href={e.data.url} rel="me" />)}
-
-    <script is:inline>
-      window.addEventListener('DOMContentLoaded', (event) => {
-        if (window.localStorage.getItem('theme') === 'light') document.querySelector('html').classList.remove('dark')
-      })
-    </script>
   </head>
 
   <body class="scrollbar overflow-x-hidden">

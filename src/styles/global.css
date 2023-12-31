@@ -36,7 +36,7 @@
   }
 
   body {
-    @apply min-h-screen bg-gray-50 text-base leading-6 text-gray-700 selection:bg-brand selection:text-gray-50 md:leading-7 xl:text-xl 2xl:text-2xl 2xl:leading-relaxed dark:bg-gray-900 dark:text-brand-tint dark:selection:bg-gray-100 dark:selection:text-brand;
+    @apply min-h-screen bg-gray-900 text-base leading-6 text-brand-tint selection:bg-gray-100 selection:text-brand md:leading-7 xl:text-xl 2xl:text-2xl 2xl:leading-relaxed;
   }
 
   /* Remove Safari input shadow on mobile */
@@ -48,12 +48,12 @@
   }
 
   h1 {
-    @apply mt-0 text-3xl font-extrabold text-gray-900 md:text-5xl xl:text-7xl 2xl:text-7xl 2xl:leading-none dark:text-gray-100;
+    @apply mt-0 text-3xl font-extrabold text-gray-100 md:text-5xl xl:text-7xl 2xl:text-7xl 2xl:leading-none;
     margin-bottom: 0.875em;
   }
 
   h2 {
-    @apply text-3xl font-bold text-gray-900 xl:text-4xl 2xl:text-7xl 2xl:leading-none dark:text-brand-tint;
+    @apply text-3xl font-bold text-brand-tint xl:text-4xl 2xl:text-7xl 2xl:leading-none;
     margin-top: 1.6em;
     margin-bottom: 0.75em;
   }
@@ -102,9 +102,13 @@
     @apply origin-left scale-x-100;
   }
 
+  nav {
+    @apply sticky top-0 z-10 mx-auto flex w-full flex-row items-center justify-end gap-8 rounded-b-md bg-gray-900 py-4 ring-4 ring-gray-900 xl:max-w-5xl 2xl:max-w-6xl;
+  }
+
   /* Quotes */
   blockquote {
-    @apply my-6 border-l-4 border-gray-200 pl-4 font-medium italic text-gray-900 md:my-8 md:pl-5 2xl:my-16 2xl:pl-8 dark:border-gray-700 dark:text-gray-300;
+    @apply my-6 border-l-4 border-gray-700 pl-4 font-medium italic text-gray-300 md:my-8 md:pl-5 2xl:my-16 2xl:pl-8;
     quotes: '\\201C' '\\201D' '\\2018' '\\2019';
   }
 
@@ -140,11 +144,11 @@
   }
 
   code {
-    @apply rounded bg-gray-200 font-medium text-gray-900 dark:bg-gray-900 dark:text-gray-200;
+    @apply rounded bg-gray-900 font-medium text-gray-200;
   }
 
   a code {
-    @apply text-brand dark:text-brand-accent;
+    @apply text-brand-accent;
   }
 
   h2 code,
@@ -153,7 +157,7 @@
   }
 
   [data-rehype-pretty-code-figure] code {
-    @apply box-border grid min-w-full bg-transparent pl-16 pr-4 dark:bg-transparent;
+    @apply box-border grid min-w-full bg-transparent pl-16 pr-4;
     counter-reset: line;
   }
 
@@ -253,7 +257,7 @@
   }
 
   .cta {
-    @apply mb-2 border-2 border-current px-4 py-2 text-brand hover:text-brand dark:text-brand-accent dark:hover:text-brand-accent;
+    @apply mb-2 border-2 border-current px-4 py-2 text-brand-accent hover:text-brand-accent;
   }
 
   .highlight {
@@ -317,27 +321,27 @@
 }
 
 .hint.tip {
-  @apply border-blue-300 bg-blue-50 text-blue-900 dark:border-blue-500 dark:bg-blue-900 dark:text-blue-200;
+  @apply border-blue-500 bg-blue-900 text-blue-200;
 }
 
 .hint.tip::selection {
-  @apply bg-blue-900 text-gray-50 dark:bg-gray-50 dark:text-blue-900;
+  @apply bg-gray-50 text-blue-900;
 }
 
 .hint.warn {
-  @apply border-yellow-300 bg-yellow-50 text-yellow-900 dark:bg-yellow-500 dark:text-gray-900;
+  @apply border-yellow-300  bg-yellow-500 text-gray-900;
 }
 
 .hint.warn::selection {
-  @apply bg-yellow-500 text-gray-50 dark:bg-gray-50 dark:text-gray-900;
+  @apply bg-gray-50 text-gray-900;
 }
 
 .hint.error {
-  @apply border-red-200 bg-red-50 text-red-500 dark:border-red-900 dark:bg-red-800 dark:text-red-200;
+  @apply border-red-900 bg-red-800 text-red-200;
 }
 
 .hint.error::selection {
-  @apply bg-red-900 text-gray-50 dark:bg-gray-50 dark:text-red-900;
+  @apply bg-gray-50 text-red-900;
 }
 
 /*** rehype-autolink-headings ***/
@@ -346,7 +350,7 @@
 }
 
 .icon-link-anchor:hover {
-  @apply text-brand dark:text-brand-accent;
+  @apply text-brand-accent;
 }
 
 :is(h1, h2, h3, h4):hover > .icon-link-anchor {
@@ -426,7 +430,7 @@
   }
 
   .scrollbar {
-    scrollbar-color: bg-gray-600 bg-gray-900;
+    scrollbar-color: rgb(75 85 99) rgb(17 24 39);
   }
 
   /* Scroll thumb styles */
@@ -437,18 +441,18 @@
     @apply rounded bg-gray-600;
   }
   .scrollbar::-webkit-scrollbar-thumb:active {
-    @apply bg-gray-700 dark:text-brand-tint;
+    @apply bg-gray-700 text-brand-tint;
   }
   .scrollbar::-webkit-scrollbar-thumb:hover {
-    @apply bg-gray-700 dark:text-brand-tint;
+    @apply bg-gray-700 text-brand-tint;
   }
 
   /* Scroll track styles (Background) */
   .scrollbar::-webkit-scrollbar-track {
-    @apply rounded bg-gray-50 dark:bg-gray-900;
+    @apply rounded bg-gray-900;
   }
   .scrollbar::-webkit-scrollbar-track:hover,
   .scrollbar::-webkit-scrollbar-track:active {
-    @apply bg-gray-50 dark:bg-gray-900;
+    @apply bg-gray-900;
   }
 }
