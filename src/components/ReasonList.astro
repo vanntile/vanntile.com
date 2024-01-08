@@ -2,27 +2,19 @@
 const { title, items = [], negative } = Astro.props
 ---
 
-<div
-  class={`px-6 my-6 border rounded xl:-mx-16 xl:px-16 max-w-none text-gray-100 ${
-    negative ? 'border-red-900 bg-red-800' : 'border-green-900 bg-green-800'
-  }`}
->
+<div class={`reason-list ${negative ? 'negative' : ''}`}>
   <p>{title}</p>
-  <ul class="">
+  <ul>
     {
       items.map((s: string) => (
-        <li class="m-0 mb-2 flex items-baseline font-medium">
-          <svg
-            class={`!mt-0 mr-2 h-4 w-4 pt-0.5 ${negative ? 'text-red-200' : 'text-green-300'}`}
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
+        <li>
+          <svg class={`${negative ? 'negative' : ''}`} viewBox="0 0 24 24" aria-hidden="true">
             <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
               <path d="M22 4L12 14.01l-3-3" />
             </g>
           </svg>
-          <span class="!mb-0">{s}</span>
+          <span>{s}</span>
         </li>
       ))
     }

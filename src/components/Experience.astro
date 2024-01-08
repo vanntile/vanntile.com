@@ -72,17 +72,12 @@ const tabNames: string[] = ['Education', 'Volunteering', 'AScI', 'Postis', 'GSoC
   })
 </script>
 
-<div class="experience-section experience">
-  <ul
-    class="m-0 flex cursor-pointer overflow-x-scroll border-2 border-b-0 bg-indigo-900 text-gray-100 md:overflow-hidden"
-    role="tablist"
-  >
+<div class="experience">
+  <ul role="tablist">
     {
       tabNames.map((tabName, idx) => (
         <li
-          class={`${
-            idx === 0 ? 'bg-brand' : 'border-b-2'
-          } mb-0 ml-0 mt-0 list-none px-5 py-2 font-bold focus:outline-white`}
+          class={`${idx === 0 ? 'bg-brand' : 'border-b-2'}`}
           role="tab"
           id={`${prefix}-tab-${idx * 2}`}
           aria-selected={idx === 0}
@@ -94,14 +89,9 @@ const tabNames: string[] = ['Education', 'Volunteering', 'AScI', 'Postis', 'GSoC
         </li>
       ))
     }
-    <div class="block flex-grow border-b-2"></div>
+    <div></div>
   </ul>
-  <div
-    class="w-full border-2 border-t-0 p-4 pt-8"
-    role="tabpanel"
-    id={`${prefix}-tabpanel-1`}
-    aria-labelledby={`${prefix}-tab-0`}
-  >
+  <div role="tabpanel" id={`${prefix}-tabpanel-1`} aria-labelledby={`${prefix}-tab-0`}>
     <ExperienceEntry {...experience.education.aalto} />
     <ExperienceEntry {...experience.education.upb}>
       <ul>
@@ -111,12 +101,7 @@ const tabNames: string[] = ['Education', 'Volunteering', 'AScI', 'Postis', 'GSoC
     </ExperienceEntry>
     <ExperienceEntry {...experience.education.abo}><p>GPA: 5/5</p></ExperienceEntry>
   </div>
-  <div
-    class="w-full border-2 border-t-0 p-4 pt-8"
-    role="tabpanel"
-    id={`${prefix}-tabpanel-3`}
-    aria-labelledby={`${prefix}-tab-2`}
-  >
+  <div role="tabpanel" id={`${prefix}-tabpanel-3`} aria-labelledby={`${prefix}-tab-2`}>
     <ExperienceEntry {...experience.volunteering.codette} content={null}>
       <ul>
         <li>
@@ -151,12 +136,7 @@ const tabNames: string[] = ['Education', 'Volunteering', 'AScI', 'Postis', 'GSoC
       </p>
     </ExperienceEntry>
   </div>
-  <div
-    class="w-full border-2 border-t-0 p-4 pt-8"
-    role="tabpanel"
-    id={`${prefix}-tabpanel-5`}
-    aria-labelledby={`${prefix}-tab-4`}
-  >
+  <div role="tabpanel" id={`${prefix}-tabpanel-5`} aria-labelledby={`${prefix}-tab-4`}>
     <ExperienceEntry {...experience.job.asci} content={null}>
       <ul>
         <li>
@@ -174,12 +154,7 @@ const tabNames: string[] = ['Education', 'Volunteering', 'AScI', 'Postis', 'GSoC
       </ul>
     </ExperienceEntry>
   </div>
-  <div
-    class="w-full border-2 border-t-0 p-4 pt-8"
-    role="tabpanel"
-    id={`${prefix}-tabpanel-7`}
-    aria-labelledby={`${prefix}-tab-6`}
-  >
+  <div role="tabpanel" id={`${prefix}-tabpanel-7`} aria-labelledby={`${prefix}-tab-6`}>
     <ExperienceEntry {...experience.job.postis20} content={null}>
       <ul>
         <li>
@@ -201,21 +176,11 @@ const tabNames: string[] = ['Education', 'Volunteering', 'AScI', 'Postis', 'GSoC
       </p>
     </ExperienceEntry>
   </div>
-  <div
-    class="w-full border-2 border-t-0 p-4 pt-8"
-    role="tabpanel"
-    id={`${prefix}-tabpanel-9`}
-    aria-labelledby={`${prefix}-tab-8`}
-  >
+  <div role="tabpanel" id={`${prefix}-tabpanel-9`} aria-labelledby={`${prefix}-tab-8`}>
     <ExperienceEntry {...experience.job.inkscape20} />
     <ExperienceEntry {...experience.job.inkscape19} title={null} />
   </div>
-  <div
-    class="w-full border-2 border-t-0 p-4 pt-8"
-    role="tabpanel"
-    id={`${prefix}-tabpanel-11`}
-    aria-labelledby={`${prefix}-tab-10`}
-  >
+  <div role="tabpanel" id={`${prefix}-tabpanel-11`} aria-labelledby={`${prefix}-tab-10`}>
     <ExperienceEntry {...experience.job.etsimo20} />
   </div>
 </div>

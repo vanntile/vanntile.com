@@ -56,11 +56,11 @@ const socialMedia = await getCollection('icons')
     {socialMedia.map((e) => <link href={e.data.url} rel="me" />)}
   </head>
 
-  <body class="scrollbar overflow-x-hidden">
+  <body>
     {withNav && <Navigation />}
     <slot />
-    <footer class="mx-auto max-w-prose border-t-2 border-brand-accent px-6 py-14 2xl:max-w-7xl">
-      Designed &amp; built by <span class="font-bold text-brand-accent">vanntile</span> under <a
+    <footer>
+      Designed &amp; built by <span class="footer-highlight">vanntile</span> under <a
         href="https://choosealicense.com/licenses/mit/"
         target="_blank"
         referrerpolicy="same-origin">MIT</a

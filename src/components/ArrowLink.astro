@@ -14,12 +14,11 @@ const { direction, link, title } = Astro.props as Props
 const description = direction === DIRECTION.LEFT ? 'Previous article' : 'Next article'
 ---
 
-<div class="flex w-full flex-row justify-between pb-4">
+<div class="arrow-link">
   <span>{description}</span>
   <span>
     <a href={link}>{title}</a>
     <svg
-      class="ml-2 inline-block animate-pulse"
       aria-hidden="true"
       focusable="false"
       xmlns="http://www.w3.org/2000/svg"

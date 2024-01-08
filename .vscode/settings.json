@@ -1,24 +1,12 @@
 {
   "files.associations": {
-    ".stylelintrc": "jsonc",
-    "*.astro": "astro",
-    "*.css": "tailwindcss"
+    "*.astro": "astro"
   },
-  "tailwindCSS.includeLanguages": {
-    "typescript": "javascript",
-    "astro": "html",
-    "mdx": "html"
-  },
-  "css.validate": false,
-  "stylelint.enable": true,
   "editor.quickSuggestions": {
     "strings": true
   },
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
-  "[markdown]": {
-    "tailwindCSS.validate": false
-  },
   "[astro]": {
     "editor.defaultFormatter": "astro-build.astro-vscode",
     "editor.formatOnSave": true,

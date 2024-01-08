@@ -1,7 +1,6 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content'
 import ArrowLink, { DIRECTION } from '../../components/ArrowLink.astro'
-import Tags from '../../components/Tags.astro'
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import { READABLE_FORMAT, blogCompareFn } from '../../lib/utils'
 
@@ -23,30 +22,24 @@ const nextPost = posts[entryIdx - 1]
 ---
 
 <BaseLayout frontmatter={entry.data} type="article">
-  <main class="mx-auto w-full max-w-prose px-6 pb-32 pt-8 2xl:max-w-7xl">
-    <article>
-      <h1>{title}</h1>
-      <div class="-mt-4 font-bold text-brand-secondary xl:-mt-8">
-        <time datetime={publishedAt.toISOString().slice(0, 10)}>{READABLE_FORMAT.format(publishedAt)}</time>, {
-          readingTime
-        }
-      </div>
-      <div class="py-4">
-        <Tags tags={keywords} size="lg" class="border-2 border-current bg-transparent tracking-wide text-brand-tint" />
-      </div>
-      <Content />
-      <div class="my-12 border-t-2 border-brand-secondary pt-6">
-        {
-          prevPost && (
-            <ArrowLink title={prevPost.data.title} direction={DIRECTION.LEFT} link={`/blog/${prevPost.slug}`} />
-          )
-        }
-        {
-          nextPost && (
-            <ArrowLink title={nextPost.data.title} direction={DIRECTION.RIGHT} link={`/blog/${nextPost.slug}`} />
-          )
-        }
-      </div>
-    </article>
-  </main>
+  <article>
+    <h1>{title}</h1>
+    <div class="article-time">
+      <time datetime={publishedAt.toISOString().slice(0, 10)}>{READABLE_FORMAT.format(publishedAt)}</time>, {
+        readingTime
+      }
+    </div>
+    <div class="tags">
+      {keywords.map((s: string) => <span class="tag-article">{s}</span>)}
+    </div>
+    <Content />
+    <div class="arrow-links">
+      {prevPost && <ArrowLink title={prevPost.data.title} direction={DIRECTION.LEFT} link={`/blog/${prevPost.slug}`} />}
+      {
+        nextPost && (
+          <ArrowLink title={nextPost.data.title} direction={DIRECTION.RIGHT} link={`/blog/${nextPost.slug}`} />
+        )
+      }
+    </div>
+  </article>
 </BaseLayout>

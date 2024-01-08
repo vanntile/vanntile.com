@@ -1,6 +1,4 @@
 ---
-import Tags from './Tags.astro'
-
 let { title, position, type, interval, duration, organization, location, content, skills } = Astro.props
 ---
 
@@ -52,5 +50,13 @@ let { title, position, type, interval, duration, organization, location, content
       )
     }
   </div>
-  {skills && <Tags tags={skills} class="ee-skill bg-indigo-900" />}
+  {
+    skills && (
+      <div class="tags">
+        {skills.map((s: string) => (
+          <span class="ee-skill">{s}</span>
+        ))}
+      </div>
+    )
+  }
 </div>

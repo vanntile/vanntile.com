@@ -15,8 +15,7 @@ It currently integrates the following:
 - husky, lint-staged
 - Prettier
 - TypeScript
-- TailwindCSS
-- MDX, remark, rehype, mdast, shiki
+- MDX, remark, rehype, mdast, shikiji
 
 ## 🧞 Commands
 

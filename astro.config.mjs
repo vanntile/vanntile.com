@@ -1,8 +1,8 @@
 import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
-import tailwind from '@astrojs/tailwind'
 import rehypeToc from '@jsdevtools/rehype-toc'
 import { defineConfig } from 'astro/config'
+import purgecss from 'astro-purgecss'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypePrettyCode from 'rehype-pretty-code'
 import rehypeSlug from 'rehype-slug'
@@ -30,7 +30,7 @@ export default defineConfig({
         {
           behavior: 'prepend',
           properties: {
-            ariaLabel: 'Anchor',
+            ariaHidden: 'true',
             tabIndex: -1,
             className: ['icon-link-anchor'],
           },
@@ -51,10 +51,11 @@ export default defineConfig({
     ],
   },
   integrations: [
-    tailwind({
-      applyBaseStyles: false,
-    }),
     mdx(),
+    purgecss({
+      fontFace: false,
+      content: [process.cwd() + '/src/**/*.{astro,mdx,md}'],
+    }),
     sitemap(),
   ],
 })

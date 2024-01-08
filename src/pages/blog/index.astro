@@ -1,6 +1,5 @@
 ---
 import { getCollection } from 'astro:content'
-import Tags from '../../components/Tags.astro'
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import { READABLE_FORMAT, blogCompareFn } from '../../lib/utils'
 
@@ -16,27 +15,27 @@ const posts = await getCollection('blog')
 ---
 
 <BaseLayout frontmatter={props}>
-  <main class="mx-auto w-full max-w-prose px-6 pb-32 pt-8 xl:text-lg 2xl:max-w-6xl 2xl:text-xl">
+  <main class="blog">
     <h1>Blog posts</h1>
     {
       posts.sort(blogCompareFn).map((post) => (
-        <div class="py-4">
-          <p class="my-0">
+        <div class="blog-post">
+          <div>
             <time datetime={post.data.publishedAt.toISOString().slice(0, 10)}>
               {READABLE_FORMAT.format(post.data.publishedAt)}
             </time>
-          </p>
+          </div>
           <a href={`/blog/${post.slug}`}>{post.data.title}</a>
-          <p class="my-1 break-words">{post.data.description}</p>
-          <a href={`/blog/${post.slug}`} class="cta mt-2 inline-block">
+          <p>{post.data.description}</p>
+          <a href={`/blog/${post.slug}`} class="cta inline-block">
             Read more
           </a>
-          <div class="flex pt-4 md:inline-block md:px-4 md:pt-0">
-            <Tags
-              tags={post.data.keywords.slice(0, 3)}
-              size="lg"
-              class="border-2 border-current bg-transparent py-1 tracking-widest text-brand-tint"
-            />
+          <div class="blog-tags">
+            <div class="tags">
+              {post.data.keywords.slice(0, 3).map((s: string) => (
+                <span class="tag-blog">{s}</span>
+              ))}
+            </div>
           </div>
         </div>
       ))
