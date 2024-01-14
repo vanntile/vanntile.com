@@ -1,8 +1,9 @@
 ---
+import { getImage } from 'astro:assets'
 import { type CollectionEntry, getCollection } from 'astro:content'
 import ArrowLink, { DIRECTION } from '../../components/ArrowLink.astro'
 import BaseLayout from '../../layouts/BaseLayout.astro'
-import { READABLE_FORMAT, blogCompareFn } from '../../lib/utils'
+import { READABLE_FORMAT, blogCompareFn, getImageURL } from '../../lib/utils'
 
 export const getStaticPaths = async () =>
   (await getCollection('blog')).map((entry) => ({
@@ -19,9 +20,16 @@ const posts = (await getCollection('blog')).sort(blogCompareFn)
 const entryIdx = posts.findIndex((e) => e.slug == entry.slug)
 const prevPost = posts[entryIdx + 1]
 const nextPost = posts[entryIdx - 1]
+
+// Set dynamic image path
+const { src, alt } = entry.data.image
+const remoteImgURL = await getImageURL(src)
+const resultingImage = await getImage({ src: remoteImgURL, width: 1600, height: 800 })
+// Update frontmatter
+const frontmatter = { ...entry.data, image: { src: resultingImage.src, alt } }
 ---
 
-<BaseLayout frontmatter={entry.data} type="article">
+<BaseLayout frontmatter={frontmatter} type="article">
   <article>
     <h1>{title}</h1>
     <div class="article-time">

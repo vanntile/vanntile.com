@@ -1,17 +1,18 @@
 ---
+import { getImage } from 'astro:assets'
 import { getCollection } from 'astro:content'
 import AnimatedHeader from '../components/AnimatedHeader.astro'
 import Experience from '../components/Experience.astro'
 import SectionDivider from '../components/SectionDivider.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
-import { READABLE_FORMAT, blogCompareFn } from '../lib/utils'
+import { READABLE_FORMAT, blogCompareFn, getImageURL } from '../lib/utils'
 
 const props = {
   title: 'vanntile.com - software engineering blog',
   publishedAt: new Date(),
   description:
     'vanntile - Software Engineer | Privacy Advocate | Open Source supporter | M.S. in Security & Cloud Computing ',
-  image: { src: 'banner.png', alt: 'Banner image with logo and text "Privacy. FOSS. Cybersecurity.' },
+  image: { src: '/assets/banner.png', alt: 'Banner image with logo and text "Privacy. FOSS. Cybersecurity."' },
   keywords: [
     'vanntile',
     'software engineer',
@@ -21,6 +22,13 @@ const props = {
     'graphic design portfolio',
   ],
 }
+
+// Set dynamic image path
+const { src, alt } = props.image
+const remoteImgURL = await getImageURL(src)
+const resultingImage = await getImage({ src: remoteImgURL, width: 1600, height: 800 })
+// Update frontmatter
+const frontmatter = { ...props, image: { src: resultingImage.src, alt } }
 
 const latestPosts = (await getCollection('blog')).sort(blogCompareFn).slice(0, 3)
 
@@ -52,7 +60,7 @@ const socialMedia = (await getCollection('icons')).sort((a, b) => a.data.index -
   })
 </script>
 
-<BaseLayout frontmatter={props} withNav={false}>
+<BaseLayout frontmatter={frontmatter} withNav={false}>
   <main class="home">
     <section class="section-fold">
       <div>

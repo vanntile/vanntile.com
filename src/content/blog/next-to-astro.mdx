@@ -3,7 +3,7 @@ title: From NextJS to Astro
 publishedAt: 2022-04-17
 description: Migrating vanntile.com from NextJS to Astro and how I let go of React in favor of static site generation.
 image:
-  src: blog/banner-next-to-astro.png
+  src: /assets/blog/banner-next-to-astro.png
   alt: Banner image with NextJS logo and an arrow emoji pointing to the Astro logo
 keywords:
 - nextjs
@@ -13,7 +13,9 @@ keywords:
 - lighthouse
 ---
 
-import ReasonList from "../../components/ReasonList.astro"
+import { Image } from 'astro:assets';
+import { getImageURL } from '../../lib/utils';
+import ReasonList from '../../components/ReasonList.astro';
 
 ## Motivation
 
@@ -118,7 +120,12 @@ In the end, I was completely delighted with the results. As you can see in the
 overall performance increased by 13 points, to 99, I shaved **200ms** from
 the blocking time and halved the time-to-interactive to **1.4s**.
 
-![NextJS vs Astro Lighthouse comparison](/assets/blog/next-to-astro/lighthouse-comparison.png)
+<Image
+  alt="NextJS vs Astro Lighthouse comparison"
+  width="1080"
+  height="2136"
+  src={getImageURL('/assets/blog/next-to-astro/lighthouse-comparison.png')}
+/>
 
 The above are measured in the deployed versions, on the mobile test. To be
 honest, part of the difference is the simultaneous transition to

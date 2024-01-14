@@ -1,14 +1,19 @@
 import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
 import rehypeToc from '@jsdevtools/rehype-toc'
-import { defineConfig } from 'astro/config'
 import purgecss from 'astro-purgecss'
+import { defineConfig } from 'astro/config'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypePrettyCode from 'rehype-pretty-code'
 import rehypeSlug from 'rehype-slug'
 import rehypeSortAttributes from 'rehype-sort-attributes'
 import remarkHint from 'remark-hint'
+import { loadEnv } from 'vite'
 import { remarkReadingTime } from './src/lib/plugins'
+import { initializeCloudinary } from './src/lib/utils'
+
+const { IMG_CLOUD_NAME, IMG_API_KEY, IMG_API_SECRET } = loadEnv(process.env.NODE_ENV, process.cwd(), '')
+initializeCloudinary(IMG_CLOUD_NAME, IMG_API_KEY, IMG_API_SECRET)
 
 // https://astro.build/config
 export default defineConfig({
@@ -48,6 +53,15 @@ export default defineConfig({
         },
       ],
       rehypeSortAttributes,
+    ],
+  },
+  image: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        pathname: `/${IMG_CLOUD_NAME}/image/authenticated/**`,
+      },
     ],
   },
   integrations: [
