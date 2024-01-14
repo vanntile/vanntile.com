@@ -3,6 +3,7 @@ import { join } from 'node:path'
 import { AstroFont } from 'astro-font'
 import { type CollectionEntry, getCollection } from 'astro:content'
 import Navigation from '../components/Navigation.astro'
+import '../styles/global.css'
 
 interface Props {
   frontmatter: CollectionEntry<'blog'>['data']
