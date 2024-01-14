@@ -226,6 +226,16 @@
     outline: auto;
   }
 
+  /* Focusing with a keyboard will show a dashed black line. */
+  :focus-visible {
+    outline: 3px solid var(--brand-accent);
+  }
+
+  /* Focusing with a mouse, touch, or stylus will not show anything. */
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+
   /*
   Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
   */
@@ -568,6 +578,10 @@
 
   a:hover {
     color: var(--brand-accent);
+  }
+
+  a:focus-visible {
+    outline: none;
   }
 
   a::after {
@@ -1030,21 +1044,13 @@
       }
     }
 
-    .visually-hidden {
+    .visually-hidden:not(:focus):not(:active) {
       clip: rect(1px, 1px, 1px, 1px);
       position: absolute;
       width: 1px;
       height: 1px;
       overflow: hidden;
       white-space: nowrap;
-    }
-
-    .visually-hidden:focus {
-      clip: auto;
-      position: absolute;
-      width: auto;
-      height: auto;
-      overflow: auto;
     }
 
     .pseudo-none::before,
@@ -1284,7 +1290,7 @@
       }
     }
 
-    .animated-header .highlight {
+    .animated-header-highlight {
       padding-top: 0.5rem;
       overflow-x: hidden;
       color: var(--brand-accent);
@@ -1292,10 +1298,10 @@
     }
 
     .animated-header .emoji {
-      font-size: 1.875rem;
+      font-size: 2rem;
       line-height: 2.25rem;
     }
-    @media (min-width: 768px) {
+    @media (min-width: 1280px) {
       .animated-header .emoji {
         font-size: 3rem;
         line-height: 1;
@@ -1342,7 +1348,7 @@
       line-height: 1rem;
     }
 
-    .experience ul[role='tablist'] {
+    .experience [role='tablist'] {
       display: flex;
       cursor: pointer;
       margin: 0;
@@ -1353,25 +1359,28 @@
       color: var(--gray-100);
     }
     @media (min-width: 768px) {
-      .experience ul[role='tablist'] {
+      .experience [role='tablist'] {
         overflow: hidden;
       }
     }
-    .experience ul[role='tablist'] li {
+
+    .experience [role='tablist'] li {
       margin: 0;
+      border-bottom-width: 2px;
       padding: 0.5rem 1.25rem;
       font-weight: 700;
       list-style: none;
     }
-    .experience ul[role='tablist'] li:focus {
-      outline-color: #fff;
-    }
-    .experience ul[role='tablist'] li.bg-brand {
+    .experience [role='tablist'] li[aria-selected='true'] {
+      border-bottom-width: 0px;
       background-color: var(--brand);
     }
-    .experience ul[role='tablist'] li.border-b-2 {
-      border-bottom-width: 2px;
+
+    .experience [role='tablist'] li:focus-visible {
+      outline: 2px solid var(--gray-100);
+      background-color: var(--brand);
     }
+    /* Extra dummy visual tab to complete the tabbar */
     .experience [role='tablist'] > div {
       display: block;
       flex-grow: 1;
@@ -1383,6 +1392,9 @@
       border-top-width: 0;
       padding: 2rem 1rem 1rem;
       width: 100%;
+    }
+    .experience [role='tabpanel']:focus-visible {
+      border-color: var(--brand-accent);
     }
   }
 
@@ -1500,11 +1512,6 @@
 
 @layer pages {
   @layer homepage {
-    .highlight {
-      border-bottom-width: 2px;
-      border-color: var(--brand-accent);
-    }
-
     .tag-home {
       background-color: var(--gray-800);
       color: var(--brand-accent);
@@ -1559,6 +1566,11 @@
         font-size: 1.25rem;
         line-height: 1.75rem;
       }
+    }
+
+    .home .highlight {
+      border-bottom-width: 2px;
+      border-color: var(--brand-accent);
     }
 
     .home section {
@@ -1743,10 +1755,9 @@
       height: 3rem;
       color: var(--gray-100);
     }
-    .home section.section-social-media a:focus {
-      outline: 2px solid transparent;
-      outline-offset: 2px;
-      box-shadow: var(--brand-accent) 0px 0px 0px 8px;
+    .home section.section-contact a:is(:focus-visible, :hover) {
+      outline: 3px solid var(--brand-accent);
+      outline-offset: 5px;
     }
   }
 

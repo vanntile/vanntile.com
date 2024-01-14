@@ -7,43 +7,37 @@ const tabNames: string[] = ['Education', 'Volunteering', 'AScI', 'Postis', 'GSoC
 ---
 
 <script type="module">
+  const LEFT_ARROW = 37
+  const RIGHT_ARROW = 39
   let idx = 0
 
-  const setTabFocus =
-    (tabs, tabpanels, tab, styles = { active: [], inactive: [] }) =>
-    (event) => {
-      if (tab.getAttribute('aria-disabled') === 'true' || tab.getAttribute('aria-selected') === 'true') return
+  const setTabFocus = (tabs, tabpanels, tab) => (event) => {
+    if (tab.getAttribute('aria-selected') === 'true') return
 
-      const controlledPanel = document.querySelector(`#${tab.getAttribute('aria-controls')}`)
+    const controlledPanel = document.querySelector(`#${tab.getAttribute('aria-controls')}`)
 
-      idx = Array.from(tabs).findIndex((e) => e === tab)
+    idx = Array.from(tabs).findIndex((e) => e === tab)
 
-      // Handle the tabs
-      tabs.forEach((e) => {
-        styles.active.forEach((cls) => (e === tab ? e.classList.add(cls) : e.classList.remove(cls)))
-        styles.inactive.forEach((cls) => (e !== tab ? e.classList.add(cls) : e.classList.remove(cls)))
-        e.setAttribute('aria-selected', e === tab)
-        e.setAttribute('tabindex', e === tab ? 0 : -1)
-      })
+    // Handle the tabs
+    tabs.forEach((e) => {
+      e.setAttribute('aria-selected', e === tab)
+      e.setAttribute('tabindex', e === tab ? 0 : -1)
+    })
 
-      // Handle the tab panels
-      tabpanels.forEach((e) => {
-        e === controlledPanel ? e.classList.remove('hidden') : e.classList.add('hidden')
-      })
+    // Handle the tab panels
+    tabpanels.forEach((e) => {
+      e === controlledPanel ? e.classList.remove('hidden') : e.classList.add('hidden')
+    })
 
-      event.preventDefault()
-    }
+    event.preventDefault()
+  }
 
   const setKeyChange = (tabs, tab) => (event) => {
-    const LEFT_ARROW = 37
-    const UP_ARROW = 38
-    const RIGHT_ARROW = 39
-    const DOWN_ARROW = 40
     const k = event.which || event.keyCode
 
-    if (k >= LEFT_ARROW && k <= DOWN_ARROW) {
-      if (k == LEFT_ARROW || k == UP_ARROW) idx = idx > 0 ? idx - 1 : tabs.length - 1
-      else if (k == RIGHT_ARROW || k == DOWN_ARROW) idx = (idx + 1) % tabs.length
+    if (k == LEFT_ARROW || k == RIGHT_ARROW) {
+      if (k == LEFT_ARROW) idx = idx > 0 ? idx - 1 : tabs.length - 1
+      else if (k == RIGHT_ARROW) idx = (idx + 1) % tabs.length
 
       tabs[idx].focus()
       tabs[idx].click()
@@ -53,19 +47,15 @@ const tabNames: string[] = ['Education', 'Volunteering', 'AScI', 'Postis', 'GSoC
 
   window.addEventListener('DOMContentLoaded', (event) => {
     const prefix = 'experience'
-    const styles = {
-      active: ['bg-brand'],
-      inactive: ['border-b-2'],
-    }
     const tabs = document.querySelectorAll(`[aria-controls^="${prefix}-tabpanel-"]`)
     const tabpanels = document.querySelectorAll(`[id^="${prefix}-tabpanel-"]`)
 
     tabs.forEach((tab) => {
-      tab.addEventListener('click', setTabFocus(tabs, tabpanels, tab, styles))
+      tab.addEventListener('click', setTabFocus(tabs, tabpanels, tab))
       tab.addEventListener('keydown', setKeyChange(tabs))
     })
 
-    // Hide all tabs
+    // Hide all other tabs
     Array.from(tabpanels)
       .slice(1)
       .forEach((e) => e.classList.add('hidden'))
@@ -73,17 +63,17 @@ const tabNames: string[] = ['Education', 'Volunteering', 'AScI', 'Postis', 'GSoC
 </script>
 
 <div class="experience">
-  <ul role="tablist">
+  <ul role="tablist" aria-label="Professional experience tab list">
     {
       tabNames.map((tabName, idx) => (
         <li
-          class={`${idx === 0 ? 'bg-brand' : 'border-b-2'}`}
+          id={`${prefix}-tab-${idx}`}
           role="tab"
-          id={`${prefix}-tab-${idx * 2}`}
+          tabindex={idx === 0 ? '0' : '-1'}
+          aria-controls={`${prefix}-tabpanel-${idx}`}
           aria-selected={idx === 0}
-          aria-disabled="false"
-          aria-controls={`${prefix}-tabpanel-${idx * 2 + 1}`}
-          tabindex={idx === 0 ? 0 : -1}
+          aria-setsize={tabNames.length}
+          aria-posinset={idx}
         >
           {tabName}
         </li>
@@ -91,7 +81,7 @@ const tabNames: string[] = ['Education', 'Volunteering', 'AScI', 'Postis', 'GSoC
     }
     <div></div>
   </ul>
-  <div role="tabpanel" id={`${prefix}-tabpanel-1`} aria-labelledby={`${prefix}-tab-0`}>
+  <div id={`${prefix}-tabpanel-0`} role="tabpanel" tabindex="0" aria-labelledby={`${prefix}-tab-0`}>
     <ExperienceEntry {...experience.education.aalto} />
     <ExperienceEntry {...experience.education.upb}>
       <ul>
@@ -101,7 +91,7 @@ const tabNames: string[] = ['Education', 'Volunteering', 'AScI', 'Postis', 'GSoC
     </ExperienceEntry>
     <ExperienceEntry {...experience.education.abo}><p>GPA: 5/5</p></ExperienceEntry>
   </div>
-  <div role="tabpanel" id={`${prefix}-tabpanel-3`} aria-labelledby={`${prefix}-tab-2`}>
+  <div id={`${prefix}-tabpanel-1`} role="tabpanel" tabindex="0" aria-labelledby={`${prefix}-tab-1`}>
     <ExperienceEntry {...experience.volunteering.codette} content={null}>
       <ul>
         <li>
@@ -136,7 +126,7 @@ const tabNames: string[] = ['Education', 'Volunteering', 'AScI', 'Postis', 'GSoC
       </p>
     </ExperienceEntry>
   </div>
-  <div role="tabpanel" id={`${prefix}-tabpanel-5`} aria-labelledby={`${prefix}-tab-4`}>
+  <div id={`${prefix}-tabpanel-2`} role="tabpanel" tabindex="0" aria-labelledby={`${prefix}-tab-2`}>
     <ExperienceEntry {...experience.job.asci} content={null}>
       <ul>
         <li>
@@ -154,7 +144,7 @@ const tabNames: string[] = ['Education', 'Volunteering', 'AScI', 'Postis', 'GSoC
       </ul>
     </ExperienceEntry>
   </div>
-  <div role="tabpanel" id={`${prefix}-tabpanel-7`} aria-labelledby={`${prefix}-tab-6`}>
+  <div id={`${prefix}-tabpanel-3`} role="tabpanel" tabindex="0" aria-labelledby={`${prefix}-tab-3`}>
     <ExperienceEntry {...experience.job.postis20} content={null}>
       <ul>
         <li>
@@ -176,11 +166,11 @@ const tabNames: string[] = ['Education', 'Volunteering', 'AScI', 'Postis', 'GSoC
       </p>
     </ExperienceEntry>
   </div>
-  <div role="tabpanel" id={`${prefix}-tabpanel-9`} aria-labelledby={`${prefix}-tab-8`}>
+  <div id={`${prefix}-tabpanel-4`} role="tabpanel" tabindex="0" aria-labelledby={`${prefix}-tab-4`}>
     <ExperienceEntry {...experience.job.inkscape20} />
     <ExperienceEntry {...experience.job.inkscape19} title={null} />
   </div>
-  <div role="tabpanel" id={`${prefix}-tabpanel-11`} aria-labelledby={`${prefix}-tab-10`}>
+  <div id={`${prefix}-tabpanel-5`} role="tabpanel" tabindex="0" aria-labelledby={`${prefix}-tab-5`}>
     <ExperienceEntry {...experience.job.etsimo20} />
   </div>
 </div>
