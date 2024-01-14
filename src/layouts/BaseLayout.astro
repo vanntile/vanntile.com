@@ -1,7 +1,8 @@
 ---
+import { join } from 'node:path'
+import { AstroFont } from 'astro-font'
 import { type CollectionEntry, getCollection } from 'astro:content'
 import Navigation from '../components/Navigation.astro'
-import '../styles/global.css'
 
 interface Props {
   frontmatter: CollectionEntry<'blog'>['data']
@@ -49,8 +50,29 @@ const socialMedia = await getCollection('icons')
     <meta name="application-name" content="vanntile.com" />
     <meta name="theme-color" content="#3429aa" />
     <meta name="color-scheme" content="dark" />
-    <link rel="preload" href="/fonts/Objectivity-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
-    <link rel="preload" href="/fonts/Objectivity-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <AstroFont
+      config={[
+        {
+          name: 'Objectivity',
+          src: [
+            {
+              style: 'normal',
+              weight: 'normal',
+              path: join(process.cwd(), 'public', 'fonts', 'Objectivity-Regular.woff2'),
+            },
+            {
+              style: 'normal',
+              weight: 'bold',
+              path: join(process.cwd(), 'public', 'fonts', 'Objectivity-Bold.woff2'),
+            },
+          ],
+          preload: false,
+          display: 'swap',
+          selector: 'html',
+          fallback: 'sans-serif',
+        },
+      ]}
+    />
 
     {socialMedia.map((e) => <link href={e.data.url} rel="me" />)}
   </head>

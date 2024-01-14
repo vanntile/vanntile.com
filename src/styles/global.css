@@ -39,22 +39,6 @@
   --code-line-warning: rgba(244, 181, 63, 0.4);
 }
 
-@font-face {
-  font-style: normal;
-  font-weight: normal;
-  src: url('/fonts/Objectivity-Regular.woff2') format('woff2');
-  font-family: 'Objectivity';
-  font-display: swap;
-}
-
-@font-face {
-  font-style: normal;
-  font-weight: bold;
-  src: url('/fonts/Objectivity-Bold.woff2') format('woff2');
-  font-family: 'Objectivity';
-  font-display: swap;
-}
-
 @layer preflight {
   /*
   1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -439,8 +423,6 @@
     color: var(--brand-tint);
     font-size: 1rem;
     line-height: 1.5rem;
-    font-family: 'Objectivity', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-      'Segoe UI Symbol', 'Noto Color Emoji';
     font-variation-settings: normal;
     font-feature-settings: normal;
   }

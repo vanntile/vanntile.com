@@ -63,5 +63,8 @@
       "prettier --staged --write"
     ]
   },
-  "typings": "src/env.d.ts"
+  "typings": "src/env.d.ts",
+  "dependencies": {
+    "astro-font": "^0.0.72"
+  }
 }
