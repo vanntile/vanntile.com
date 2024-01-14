@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.3.0](https://github.com/vanntile/vanntile.com/compare/v4.2.4...v4.3.0) (2024-01-14)
+
+
+### Features
+
+* :star2: add shikiji code notes transformers ([763044e](https://github.com/vanntile/vanntile.com/commit/763044e49618c630fd0c2cacd70f8f6cd68fc488))
+* :star2: astro csp hash generator ([59c47c6](https://github.com/vanntile/vanntile.com/commit/59c47c6cc4171453995d7afe3ab887f88fa24d37))
+* **deps:** :star2: move images to cloudinary ([d33c1ca](https://github.com/vanntile/vanntile.com/commit/d33c1cae7c19f8cc72b5aa47d4bff7972ff12dc3))
+
+
+### Bug Fixes
+
+* **a11y:** :bug: experience tablist and focus-visible ([4160c97](https://github.com/vanntile/vanntile.com/commit/4160c97aab1621ec05b21ec0f102f8665cade364))
+
 ### [4.2.4](https://github.com/vanntile/vanntile.com/compare/v4.2.3...v4.2.4) (2024-01-08)
 
 ### [4.2.3](https://github.com/vanntile/vanntile.com/compare/v4.2.2...v4.2.3) (2023-11-20)
