@@ -8,6 +8,12 @@ import rehypePrettyCode from 'rehype-pretty-code'
 import rehypeSlug from 'rehype-slug'
 import rehypeSortAttributes from 'rehype-sort-attributes'
 import remarkHint from 'remark-hint'
+import {
+  transformerNotationDiff,
+  transformerNotationHighlight,
+  transformerNotationFocus,
+  transformerNotationErrorLevel,
+} from 'shikiji-transformers'
 import { loadEnv } from 'vite'
 import { remarkReadingTime } from './src/lib/plugins'
 import { initializeCloudinary } from './src/lib/utils'
@@ -15,7 +21,6 @@ import { initializeCloudinary } from './src/lib/utils'
 const { IMG_CLOUD_NAME, IMG_API_KEY, IMG_API_SECRET } = loadEnv(process.env.NODE_ENV, process.cwd(), '')
 initializeCloudinary(IMG_CLOUD_NAME, IMG_API_KEY, IMG_API_SECRET)
 
-// https://astro.build/config
 export default defineConfig({
   site: 'https://vanntile.com',
   markdown: {
@@ -27,6 +32,14 @@ export default defineConfig({
         {
           theme: 'material-theme-ocean',
           keepBackground: false,
+          transformers: [
+            transformerNotationDiff(),
+            transformerNotationHighlight(),
+            transformerNotationFocus(),
+            transformerNotationErrorLevel({
+              classActivePre: 'has-error',
+            }),
+          ],
         },
       ],
       rehypeSlug,

@@ -20,14 +20,23 @@
   --blue-500: rgb(59 130 246);
   --blue-900: rgb(30 58 138);
   --red-200: rgb(254 202 202);
+  --red-500: rgb(239 68 68);
   --red-800: rgb(153 27 27);
   --red-900: rgb(127 29 29);
   --yellow-300: rgb(253 224 71);
   --yellow-500: rgb(234 179 8);
   --green-300: rgb(134 239 172);
+  --green-500: rgb(34 197 94);
   --green-800: rgb(22 101 52);
   --green-900: rgb(20 83 45);
   --indigo-900: rgb(49 46 129);
+  --code-line-highlight: rgb(75 85 99 / 0.25);
+  --code-line-highlight-hover: rgb(30 58 138 / 0.25);
+  --code-line-focus: var(--code-line-highlight);
+  --code-line-diff-add: rgb(16 185 129 / 0.16);
+  --code-line-diff-remove: rgb(244 63 94 / 0.2);
+  --code-line-error: var(--code-line-diff-remove);
+  --code-line-warning: rgba(244, 181, 63, 0.4);
 }
 
 @font-face {
@@ -962,27 +971,11 @@
       --counter-content: '$';
     }
 
-    code > [data-line] {
+    [data-rehype-pretty-code-figure] [data-line] {
       position: relative;
     }
 
-    code > [data-line] > span {
-      position: relative;
-      transition-duration: 150ms;
-      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    /* TODO: remove when :has() support comes to Firefox */
-    [data-rehype-pretty-code-figure]:not(:hover) [data-highlighted-line] ~ :not([data-highlighted-line]) > span {
-      color: var(--gray-700) !important;
-    }
-
-    [data-rehype-pretty-code-figure]:not(:hover):has([data-highlighted-line]) :not([data-highlighted-line]) > span {
-      color: var(--gray-700) !important;
-    }
-
-    [data-rehype-pretty-code-figure] code > [data-line]::before {
+    [data-rehype-pretty-code-figure] [data-line]::before {
       display: inline-block;
       position: absolute;
       left: -4rem;
@@ -1000,13 +993,64 @@
       user-select: none;
     }
 
-    [data-rehype-pretty-code-figure] code > [data-highlighted-line]::before {
-      background-color: rgb(75 85 99 / 0.25);
+    [data-rehype-pretty-code-figure] [data-line] > span {
+      position: relative;
+      transition-duration: 150ms;
+      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    [data-rehype-pretty-code-figure]:hover code > [data-highlighted-line]::before {
-      border-color: var(--blue-400);
-      background-color: rgb(30 58 138 / 0.25);
+    /* Shikiji transformer styles */
+
+    /* append to line: `// [!code highlight]` */
+    [data-rehype-pretty-code-figure] .has-highlighted [data-line].highlighted::before {
+      background-color: var(--code-line-highlight);
+    }
+
+    [data-rehype-pretty-code-figure]:hover .has-highlighted [data-line].highlighted::before {
+      border-color: currentColor;
+      background-color: var(--code-line-highlight-hover);
+      color: var(--blue-400);
+    }
+
+    [data-rehype-pretty-code-figure]:not(:hover) .has-highlighted [data-line]:not(.highlighted) > span {
+      color: var(--gray-700) !important;
+    }
+
+    /* append to line: `[!code focus]` */
+    [data-rehype-pretty-code-figure] .has-focused [data-line].focused::before {
+      border-color: currentColor;
+      background-color: var(--code-line-focus);
+    }
+
+    [data-rehype-pretty-code-figure]:not(:hover) .has-focused [data-line]:not(.focused) {
+      filter: blur(0.095rem);
+    }
+
+    /* append to line: `// [!code ++]` */
+    [data-rehype-pretty-code-figure] .has-diff [data-line].add::before {
+      border-color: currentColor;
+      background-color: var(--code-line-diff-add);
+      color: var(--green-500);
+      --counter-content: '+';
+    }
+
+    /* append to line: `// [!code --]` */
+    [data-rehype-pretty-code-figure] .has-diff [data-line].remove::before {
+      border-color: currentColor;
+      background-color: var(--code-line-diff-remove);
+      color: var(--red-500);
+      --counter-content: '-';
+    }
+
+    /* append to line: `// [!code error]` or `// [!code warning]` */
+    [data-rehype-pretty-code-figure] .has-error [data-line].error::before {
+      background-color: var(--code-line-error);
+      color: var(--red-500);
+    }
+    [data-rehype-pretty-code-figure] .has-error [data-line].warning::before {
+      background-color: var(--code-line-warning);
+      color: var(--gray-100);
     }
   }
 }
