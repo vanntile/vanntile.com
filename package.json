@@ -36,6 +36,7 @@
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
     "mdast-util-to-string": "^4.0.0",
+    "node-html-parser": "^6.1.12",
     "postcss": "^8.4.33",
     "prettier": "^3.1.1",
     "prettier-plugin-astro": "^0.12.3",

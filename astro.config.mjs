@@ -10,13 +10,13 @@ import rehypeSortAttributes from 'rehype-sort-attributes'
 import remarkHint from 'remark-hint'
 import {
   transformerNotationDiff,
-  transformerNotationHighlight,
-  transformerNotationFocus,
   transformerNotationErrorLevel,
+  transformerNotationFocus,
+  transformerNotationHighlight,
 } from 'shikiji-transformers'
 import { loadEnv } from 'vite'
 import { remarkReadingTime } from './src/lib/plugins'
-import { initializeCloudinary } from './src/lib/utils'
+import { astroCSPHashGenerator, initializeCloudinary } from './src/lib/utils'
 
 const { IMG_CLOUD_NAME, IMG_API_KEY, IMG_API_SECRET } = loadEnv(process.env.NODE_ENV, process.cwd(), '')
 initializeCloudinary(IMG_CLOUD_NAME, IMG_API_KEY, IMG_API_SECRET)
@@ -83,6 +83,7 @@ export default defineConfig({
       fontFace: false,
       content: [process.cwd() + '/src/**/*.{astro,mdx,md}'],
     }),
+    astroCSPHashGenerator,
     sitemap(),
   ],
 })
