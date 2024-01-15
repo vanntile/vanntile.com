@@ -4,11 +4,21 @@ import BaseLayout from '../../layouts/BaseLayout.astro'
 import { READABLE_FORMAT, blogCompareFn } from '../../lib/utils'
 
 const props = {
-  title: 'Blog - twigs and thoughts',
+  title: `vanntile's blog on software, career and thoughts on society`,
   publishedAt: new Date(),
-  description: 'Articles on tech, software development, design and case studies.',
-  image: { src: 'banner.png', alt: 'Banner image with logo and "Good design is invisible" motto' },
-  keywords: ['blog', 'posts'],
+  description: 'Articles on tech, software engineering, design, career and society.',
+  image: { src: '/assets/banner.jpg', alt: 'Banner image with logo and text "Privacy. FOSS. Cybersecurity."' },
+  keywords: [
+    'tech blog',
+    'software engineering',
+    'software development',
+    'coding',
+    'privacy',
+    'free open source software',
+    'cybersecurity',
+    'career',
+    'graphic design',
+  ],
 }
 
 const posts = await getCollection('blog')
