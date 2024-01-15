@@ -44,7 +44,7 @@
   font-weight: normal;
   src: url('/fonts/Objectivity-Regular.woff2') format('woff2');
   font-family: 'Objectivity';
-  font-display: optional;
+  font-display: swap;
 }
 
 @font-face {
@@ -1331,8 +1331,9 @@
       margin-bottom: 0.5rem;
       overflow: hidden;
       color: var(--gray-100);
-      font-style: oblique 8deg;
-      font-stretch: 110%;
+      /* Although they look good, they mess the animation timing, so disabling temporarily */
+      /* font-style: oblique 8deg;
+      font-stretch: 110%; */
       font-size: 2.25rem;
       line-height: 2.5rem;
       font-family: 'Monaspace Argon', ui-monospace, SFMono-Regular, Menlo, monospace;
