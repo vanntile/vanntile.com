@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.4.1](https://github.com/vanntile/vanntile.com/compare/v4.4.0...v4.4.1) (2024-01-15)
+
+
+### Bug Fixes
+
+* **review:** :bug: styling and url issues ([85f4794](https://github.com/vanntile/vanntile.com/commit/85f4794c7328bf21afb0556ea13ad07a22959b4d))
+
 ## [4.4.0](https://github.com/vanntile/vanntile.com/compare/v4.3.0...v4.4.0) (2024-01-15)
 
 
