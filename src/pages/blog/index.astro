@@ -1,7 +1,8 @@
 ---
+import { getImage } from 'astro:assets'
 import { getCollection } from 'astro:content'
 import BaseLayout from '../../layouts/BaseLayout.astro'
-import { READABLE_FORMAT, blogCompareFn } from '../../lib/utils'
+import { READABLE_FORMAT, blogCompareFn, getImageURL } from '../../lib/utils'
 
 const props = {
   title: `vanntile's blog on software, career and thoughts on society`,
@@ -21,10 +22,17 @@ const props = {
   ],
 }
 
+// Set dynamic image path
+const { src, alt } = props.image
+const remoteImgURL = await getImageURL(src)
+const resultingImage = await getImage({ src: remoteImgURL, width: 1600, height: 800 })
+// Update frontmatter
+const frontmatter = { ...props, image: { src: resultingImage.src, alt } }
+
 const posts = await getCollection('blog')
 ---
 
-<BaseLayout frontmatter={props}>
+<BaseLayout frontmatter={frontmatter}>
   <main class="blog">
     <h1>Blog posts</h1>
     {

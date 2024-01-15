@@ -1,5 +1,7 @@
 ---
+import { getImage, Image } from 'astro:assets'
 import BaseLayout from '../../layouts/BaseLayout.astro'
+import { getImageURL } from '../../lib/utils'
 
 const props = {
   title: 'vanntile - brand book',
@@ -8,47 +10,232 @@ const props = {
   image: { src: '/assets/deck/banner-deck.png', alt: 'Banner image for the brand book' },
   keywords: ['design', 'branding', 'graphic design', 'brand book', 'design deck'],
 }
+
+// Set dynamic image path
+const { src, alt } = props.image
+const remoteImgURL = await getImageURL(src)
+const resultingImage = await getImage({ src: remoteImgURL, width: 1600, height: 800 })
+// Update frontmatter
+const frontmatter = { ...props, image: { src: resultingImage.src, alt } }
+
+const imageSources: Record<string, string> = {}
+for (let i = 1; i < 25; i++) {
+  const key = `/assets/deck/page.${i}.webp`
+  imageSources[key] = await getImageURL(key)
+}
 ---
 
-<BaseLayout frontmatter={props} withNav={false}>
+<BaseLayout frontmatter={frontmatter} withNav={false} withoutFooter={true}>
   <main class="brand-book">
-    <div class="page"><img loading="eager" src="/assets/deck/page.1.webp" alt="vanntile brand deck cover page" /></div>
-    <div class="page"><img loading="eager" src="/assets/deck/page.2.webp" alt="brand deck project description" /></div>
-    <div class="page"><img loading="lazy" src="/assets/deck/page.3.webp" alt="brand personality" /></div>
-    <div class="page"><img loading="lazy" src="/assets/deck/page.4.webp" alt="logo" /></div>
     <div class="page">
-      <img loading="lazy" src="/assets/deck/page.5.webp" alt="logo with primary version color scheme" />
+      <Image
+        loading="eager"
+        width="2560"
+        height="1440"
+        src={imageSources['/assets/deck/page.1.webp']}
+        alt="vanntile brand deck cover page"
+      />
     </div>
     <div class="page">
-      <img loading="lazy" src="/assets/deck/page.6.webp" alt="logomark with primary version color scheme" />
+      <Image
+        loading="eager"
+        width="2560"
+        height="1440"
+        src={imageSources['/assets/deck/page.2.webp']}
+        alt="brand deck project description"
+      />
     </div>
     <div class="page">
-      <img loading="lazy" src="/assets/deck/page.7.webp" alt="logo with monochrome color scheme" />
+      <Image
+        loading="lazy"
+        width="2560"
+        height="1440"
+        src={imageSources['/assets/deck/page.3.webp']}
+        alt="brand personality"
+      />
     </div>
-    <div class="page"><img loading="lazy" src="/assets/deck/page.8.webp" alt="logomark assembly from shapes" /></div>
-    <div class="page"><img loading="lazy" src="/assets/deck/page.9.webp" alt="logo grid overlap" /></div>
     <div class="page">
-      <img loading="lazy" src="/assets/deck/page.10.webp" alt="step by step visual refinement of logo" />
+      <Image loading="lazy" width="2560" height="1440" src={imageSources['/assets/deck/page.4.webp']} alt="logo" />
     </div>
-    <div class="page"><img loading="lazy" src="/assets/deck/page.11.webp" alt="adaptability of the logo" /></div>
     <div class="page">
-      <img loading="lazy" src="/assets/deck/page.12.webp" alt="logo construction: tyeface sizing" />
+      <Image
+        loading="lazy"
+        width="2560"
+        height="1440"
+        src={imageSources['/assets/deck/page.5.webp']}
+        alt="logo with primary version color scheme"
+      />
     </div>
-    <div class="page"><img loading="lazy" src="/assets/deck/page.13.webp" alt="logo construction: spacing" /></div>
-    <div class="page"><img loading="lazy" src="/assets/deck/page.14.webp" alt="logo construction: whitespace" /></div>
-    <div class="page"><img loading="lazy" src="/assets/deck/page.15.webp" alt="all logo versions" /></div>
-    <div class="page"><img loading="lazy" src="/assets/deck/page.16.webp" alt="brand color palette" /></div>
-    <div class="page"><img loading="lazy" src="/assets/deck/page.17.webp" alt="brand typography" /></div>
-    <div class="page"><img loading="lazy" src="/assets/deck/page.18.webp" alt="main shape pattern" /></div>
-    <div class="page"><img loading="lazy" src="/assets/deck/page.19.webp" alt="secondary brand patterns" /></div>
     <div class="page">
-      <img loading="lazy" src="/assets/deck/page.20.webp" alt="signs and expressions of the logo" />
+      <Image
+        loading="lazy"
+        width="2560"
+        height="1440"
+        src={imageSources['/assets/deck/page.6.webp']}
+        alt="logomark with primary version color scheme"
+      />
     </div>
-    <div class="page"><img loading="lazy" src="/assets/deck/page.21.webp" alt="iconography" /></div>
     <div class="page">
-      <img loading="lazy" src="/assets/deck/page.22.webp" alt="stationery usage of the brand elements" />
+      <Image
+        loading="lazy"
+        width="2560"
+        height="1440"
+        src={imageSources['/assets/deck/page.7.webp']}
+        alt="logo with monochrome color scheme"
+      />
     </div>
-    <div class="page"><img loading="lazy" src="/assets/deck/page.23.webp" alt="social media usage" /></div>
-    <div class="page"><img loading="lazy" src="/assets/deck/page.24.webp" alt="profile page mockup" /></div>
+    <div class="page">
+      <Image
+        loading="lazy"
+        width="2560"
+        height="1440"
+        src={imageSources['/assets/deck/page.8.webp']}
+        alt="logomark assembly from shapes"
+      />
+    </div>
+    <div class="page">
+      <Image
+        loading="lazy"
+        width="2560"
+        height="1440"
+        src={imageSources['/assets/deck/page.9.webp']}
+        alt="logo grid overlap"
+      />
+    </div>
+    <div class="page">
+      <Image
+        loading="lazy"
+        width="2560"
+        height="1440"
+        src={imageSources['/assets/deck/page.10.webp']}
+        alt="step by step visual refinement of logo"
+      />
+    </div>
+    <div class="page">
+      <Image
+        loading="lazy"
+        width="2560"
+        height="1440"
+        src={imageSources['/assets/deck/page.11.webp']}
+        alt="adaptability of the logo"
+      />
+    </div>
+    <div class="page">
+      <Image
+        loading="lazy"
+        width="2560"
+        height="1440"
+        src={imageSources['/assets/deck/page.12.webp']}
+        alt="logo construction: tyeface sizing"
+      />
+    </div>
+    <div class="page">
+      <Image
+        loading="lazy"
+        width="2560"
+        height="1440"
+        src={imageSources['/assets/deck/page.13.webp']}
+        alt="logo construction: spacing"
+      />
+    </div>
+    <div class="page">
+      <Image
+        loading="lazy"
+        width="2560"
+        height="1440"
+        src={imageSources['/assets/deck/page.14.webp']}
+        alt="logo construction: whitespace"
+      />
+    </div>
+    <div class="page">
+      <Image
+        loading="lazy"
+        width="2560"
+        height="1440"
+        src={imageSources['/assets/deck/page.15.webp']}
+        alt="all logo versions"
+      />
+    </div>
+    <div class="page">
+      <Image
+        loading="lazy"
+        width="2560"
+        height="1440"
+        src={imageSources['/assets/deck/page.16.webp']}
+        alt="brand color palette"
+      />
+    </div>
+    <div class="page">
+      <Image
+        loading="lazy"
+        width="2560"
+        height="1440"
+        src={imageSources['/assets/deck/page.17.webp']}
+        alt="brand typography"
+      />
+    </div>
+    <div class="page">
+      <Image
+        loading="lazy"
+        width="2560"
+        height="1440"
+        src={imageSources['/assets/deck/page.18.webp']}
+        alt="main shape pattern"
+      />
+    </div>
+    <div class="page">
+      <Image
+        loading="lazy"
+        width="2560"
+        height="1440"
+        src={imageSources['/assets/deck/page.19.webp']}
+        alt="secondary brand patterns"
+      />
+    </div>
+    <div class="page">
+      <Image
+        loading="lazy"
+        width="2560"
+        height="1440"
+        src={imageSources['/assets/deck/page.20.webp']}
+        alt="signs and expressions of the logo"
+      />
+    </div>
+    <div class="page">
+      <Image
+        loading="lazy"
+        width="2560"
+        height="1440"
+        src={imageSources['/assets/deck/page.21.webp']}
+        alt="iconography"
+      />
+    </div>
+    <div class="page">
+      <Image
+        loading="lazy"
+        width="2560"
+        height="1440"
+        src={imageSources['/assets/deck/page.22.webp']}
+        alt="stationery usage of the brand elements"
+      />
+    </div>
+    <div class="page">
+      <Image
+        loading="lazy"
+        width="2560"
+        height="1440"
+        src={imageSources['/assets/deck/page.23.webp']}
+        alt="social media usage"
+      />
+    </div>
+    <div class="page">
+      <Image
+        loading="lazy"
+        width="2560"
+        height="1440"
+        src={imageSources['/assets/deck/page.24.webp']}
+        alt="profile page mockup"
+      />
+    </div>
   </main>
 </BaseLayout>

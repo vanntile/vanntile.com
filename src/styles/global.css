@@ -1891,7 +1891,7 @@
       padding-right: 1rem;
       padding-left: 1rem;
       width: 100vw;
-      height: calc(100vh - 84px);
+      height: 100vh;
       overflow-y: scroll;
       scroll-snap-align: center;
       scroll-snap-type: y mandatory;

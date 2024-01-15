@@ -6,10 +6,11 @@ import '../styles/global.css'
 interface Props {
   frontmatter: CollectionEntry<'blog'>['data']
   withNav?: boolean
+  withoutFooter?: boolean
   type?: string
 }
 
-const { frontmatter, withNav = true, type = 'website' } = Astro.props as Props
+const { frontmatter, withNav = true, withoutFooter = false, type = 'website' } = Astro.props as Props
 const { title, publishedAt, description, image, keywords } = frontmatter
 const url = new URL(Astro.url.pathname, Astro.site)
 
@@ -59,16 +60,19 @@ const socialMedia = await getCollection('icons')
   <body>
     {withNav && <Navigation />}
     <slot />
-    <footer>
-      Designed &amp; built by <span class="footer-highlight">vanntile</span> under <a
-        href="https://choosealicense.com/licenses/mit/"
-        target="_blank"
-        referrerpolicy="same-origin">MIT</a
-      >, content licensed under <a
-        href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
-        target="_blank"
-        referrerpolicy="same-origin">CC BY-NC-SA 4.0</a
-      >
-    </footer>
+    {
+      !withoutFooter && (
+        <footer>
+          Designed &amp; built by <span class="footer-highlight">vanntile</span> under{' '}
+          <a href="https://choosealicense.com/licenses/mit/" target="_blank" referrerpolicy="same-origin">
+            MIT
+          </a>
+          , content licensed under{' '}
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" referrerpolicy="same-origin">
+            CC BY-NC-SA 4.0
+          </a>
+        </footer>
+      )
+    }
   </body>
 </html>
