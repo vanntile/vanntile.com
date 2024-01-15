@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.4.2](https://github.com/vanntile/vanntile.com/compare/v4.4.1...v4.4.2) (2024-01-15)
+
+
+### Bug Fixes
+
+* :bug: brand book ([aade138](https://github.com/vanntile/vanntile.com/commit/aade138fb5c6d7450be9971a9d28760e9b3de843))
+
 ### [4.4.1](https://github.com/vanntile/vanntile.com/compare/v4.4.0...v4.4.1) (2024-01-15)
 
 
