@@ -44,7 +44,7 @@
   font-weight: normal;
   src: url('/fonts/Objectivity-Regular.woff2') format('woff2');
   font-family: 'Objectivity';
-  font-display: swap;
+  font-display: optional;
 }
 
 @font-face {
@@ -52,6 +52,14 @@
   font-weight: bold;
   src: url('/fonts/Objectivity-Bold.woff2') format('woff2');
   font-family: 'Objectivity';
+  font-display: swap;
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 200 800;
+  src: url('/fonts/MonaspaceArgonVarVF.woff2') format('woff2');
+  font-family: 'Monaspace Argon';
   font-display: swap;
 }
 
@@ -848,7 +856,7 @@
     samp,
     pre {
       font-size: 1em;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+      font-family: 'Monaspace Argon', ui-monospace, SFMono-Regular, Menlo, monospace;
       font-variation-settings: normal;
       font-feature-settings: normal;
     }
@@ -866,8 +874,8 @@
       background-color: var(--gray-800);
       padding: 0.5rem 4rem;
       color: var(--gray-200);
-      font-weight: 700;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+      font-weight: 800;
+      font-family: 'Monaspace Argon', ui-monospace, SFMono-Regular, Menlo, monospace;
     }
 
     [data-rehype-pretty-code-caption] {
@@ -945,7 +953,7 @@
       border-radius: 0.25rem;
       background-color: var(--gray-900);
       color: var(--gray-200);
-      font-weight: 500;
+      font-weight: 400;
     }
 
     a code {
@@ -1323,13 +1331,15 @@
       margin-bottom: 0.5rem;
       overflow: hidden;
       color: var(--gray-100);
+      font-style: oblique 8deg;
+      font-stretch: 110%;
       font-size: 2.25rem;
       line-height: 2.5rem;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+      font-family: 'Monaspace Argon', ui-monospace, SFMono-Regular, Menlo, monospace;
     }
     @media (min-width: 1280px) {
       .animated-header {
-        font-size: 3.75rem;
+        font-size: 3.5rem;
         line-height: 1;
       }
     }
