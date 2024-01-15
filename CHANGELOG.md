@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.4.0](https://github.com/vanntile/vanntile.com/compare/v4.3.0...v4.4.0) (2024-01-15)
+
+
+### Features
+
+* :star2: add monaspace font ([3ec2d36](https://github.com/vanntile/vanntile.com/commit/3ec2d3627f4912c5623a5bdcee495148b768c49c))
+
+
+### Bug Fixes
+
+* :bug: og image path ([1a92eed](https://github.com/vanntile/vanntile.com/commit/1a92eedc9ebd04d4e815f33da2cee1c6ad33f766))
+
 ## [4.3.0](https://github.com/vanntile/vanntile.com/compare/v4.2.4...v4.3.0) (2024-01-14)
 
 
