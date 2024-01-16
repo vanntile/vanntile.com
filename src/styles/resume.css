@@ -1,0 +1,278 @@
+:root {
+  color-scheme: light dark;
+  --brand: rgb(52 41 170);
+  --brand-secondary: rgb(106 134 207);
+  --brand-tint: rgb(163 181 227);
+  --brand-accent: rgb(255 154 99);
+  --gray-100: rgb(243 244 246);
+  --gray-600: rgb(75 85 99);
+  --gray-700: rgb(55 65 81);
+  --gray-800: rgb(31 41 55);
+  --gray-900: rgb(17 24 39);
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  src: url('/fonts/Objectivity-Regular.woff2') format('woff2');
+  font-family: 'Objectivity';
+  font-display: swap;
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: bold;
+  src: url('/fonts/Objectivity-Bold.woff2') format('woff2');
+  font-family: 'Objectivity';
+  font-display: swap;
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 200 800;
+  src: url('/fonts/MonaspaceArgonVarVF.woff2') format('woff2');
+  font-family: 'Monaspace Argon';
+  font-display: swap;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0;
+  border-style: solid;
+  border-color: currentColor;
+}
+
+/* page size 210 x 297mm */
+html {
+  width: 100%;
+  min-width: 320px;
+  scroll-behavior: smooth;
+  font-size: 0.47619047vw; /* 100vw / 210 = 0.47619047vw (1mm = 1rem) */
+  font-family: 'Objectivity', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+  font-variation-settings: normal;
+  font-feature-settings: normal;
+  tab-size: 4;
+}
+
+body {
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  background-color: var(--gray-100);
+  padding: 18rem 22rem;
+  width: 100%;
+  min-height: 297rem;
+  color: var(--gray-800);
+  font-size: 3.05rem;
+  line-height: 1.25;
+}
+
+@media (prefers-color-scheme: dark) {
+}
+
+@media print {
+  html {
+    font-size: 0.545vw;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@page {
+  size: A4 portrait;
+  margin: 22mm;
+}
+
+@page :first {
+  margin-top: 22mm;
+}
+
+a {
+  position: relative;
+  transition: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--brand);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 0.2rem;
+  text-underline-offset: 0.2rem;
+}
+
+a:hover {
+  color: var(--brand-accent);
+  text-decoration-thickness: 0.4rem;
+  text-underline-offset: 0.5rem;
+}
+
+section {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 6rem;
+  break-inside: avoid-column;
+  margin-bottom: 8rem;
+}
+
+h1 {
+  margin: 0 0 2rem;
+  font-size: 8rem;
+}
+
+h2 {
+  margin: 4.4rem 0 1.2rem;
+  color: var(--brand);
+  font-variant: small-caps;
+  font-size: 5rem;
+}
+
+h3 {
+  margin: 0;
+  font-weight: 800;
+  font-size: 3.36rem;
+}
+
+ul {
+  margin: 1.2rem 0;
+  padding-left: 6.6rem;
+}
+
+p {
+  margin: 1.2rem 0;
+}
+
+strong {
+  transition: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 0.4rem;
+  text-underline-offset: 0.5rem;
+}
+
+strong:hover {
+  text-decoration-color: var(--brand-accent);
+}
+
+.subheader {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 2rem 0 6rem;
+  font-size: 3.52rem;
+  line-height: 1.35;
+}
+
+.subheader > div {
+  flex: 1;
+  align-self: flex-end;
+}
+
+.job-title {
+  color: var(--brand);
+  font-size: 5rem;
+}
+
+.email {
+  text-decoration-color: transparent;
+  text-decoration-thickness: 0;
+}
+
+.email:hover {
+  text-decoration-color: currentColor;
+}
+.resume-entry {
+  page-break-inside: avoid;
+}
+
+.resume-entry .header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 3.75rem;
+  line-height: 1.25;
+}
+:is(.resume-entry, .resume-multiple-entry) .header > div {
+  align-self: baseline;
+}
+:is(.resume-entry .header, .resume-multiple-entry .position-header) > div:nth-child(1) {
+  flex: 1;
+}
+
+.resume-entry h3 {
+  display: inline;
+  font-size: inherit;
+}
+
+.resume-multiple-entry h3 {
+  font-size: inherit;
+}
+
+.resume-multiple-entry .title {
+  font-size: 3.75rem;
+  line-height: 1.25;
+}
+
+.resume-multiple-entry .positions {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 4rem;
+  padding: 3rem 0 0 6rem;
+}
+
+.resume-multiple-entry .position-header {
+  display: flex;
+  font-size: 3.75rem;
+  line-height: 1.25;
+}
+
+.resume-multiple-entry .position-header::before {
+  display: inline-block;
+  position: relative;
+  top: 1rem;
+  transform: translateX(-120%);
+  border-top: 1.5rem solid transparent;
+  border-bottom: 1.5rem solid transparent;
+  border-left: 2.5rem solid var(--brand);
+  width: 2.5rem;
+  height: 2.5rem;
+  content: '';
+}
+
+.resume-entry :is(.position, .type) {
+  white-space: nowrap;
+}
+
+:is(.resume-entry, .resume-multiple-entry) .position {
+  font-weight: 800;
+}
+
+:is(.resume-entry, .resume-multiple-entry) .interval {
+  color: var(--brand);
+  font-variant: small-caps;
+  font-weight: bold;
+}
+
+:is(.resume-entry, .resume-multiple-entry) .location {
+  font-style: italic;
+}
+
+:is(.resume-entry, .resume-multiple-entry) .skills {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2rem;
+  color: var(--gray-600);
+  font-weight: bold;
+}
+
+.spacer {
+  display: block;
+  min-height: 20rem;
+}

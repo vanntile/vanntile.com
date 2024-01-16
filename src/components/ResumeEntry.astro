@@ -1,0 +1,55 @@
+---
+let { title, position, type, interval, duration, organization, location, content, skills } = Astro.props
+
+const shortTopRow = `${position} - ${position}`.length < 75
+duration = null
+type = null
+---
+
+<div class="resume-entry">
+  <div class="header">
+    <div>
+      <h3>{title}</h3>{shortTopRow ? ' - ' : ' '}<span class="position">{position}</span>
+    </div>
+    <div><span class="interval">{interval}</span></div>
+  </div>
+  <div class="header">
+    <div>
+      <span class="organization">{organization}</span>{organization && location && ', '}<span class="location"
+        >{location}</span
+      >
+    </div>
+    <div><span class="type">{type}</span>{type && duration && ', '}<span class="duration">{duration}</span></div>
+  </div>
+  <div class="content">
+    {
+      content && content.length > 1 && (
+        <ul>
+          {content.map((e: string) => (
+            <li>
+              <Fragment set:html={e} />
+            </li>
+          ))}
+        </ul>
+      )
+    }
+    {content && content.length == 1 && <p>{content[0]}</p>}
+    {!content && <slot />}
+
+    {
+      skills && skills.length > 0 && (
+        <div class="skills">
+          <Fragment>
+            <span>Skills: </span>
+            {skills.slice(0, 6).map((s: string, idx: number) => (
+              <Fragment>
+                <span>{s}</span>
+                {idx !== skills.slice(0, 6).length - 1 && <span> · </span>}
+              </Fragment>
+            ))}
+          </Fragment>
+        </div>
+      )
+    }
+  </div>
+</div>

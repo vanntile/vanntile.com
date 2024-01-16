@@ -1,0 +1,60 @@
+---
+let { title, location, positions } = Astro.props
+
+interface Position {
+  position: string
+  interval: string
+  duration: string
+  content: string[]
+  skills: string[]
+}
+---
+
+<div class="resume-multiple-entry">
+  <div class="title">
+    <h3>{title}</h3>
+    <span class="location">{location}</span>
+  </div>
+  <div class="positions">
+    {
+      positions.map((p: Position) => (
+        <div>
+          <div class="position-header">
+            <div>
+              <span class="position">{p.position}</span>
+            </div>
+            <div>
+              <span class="interval">{p.interval}</span>
+            </div>
+          </div>
+          <div class="content">
+            {p.content && p.content.length > 1 && (
+              <ul>
+                {p.content.map((e: string) => (
+                  <li>
+                    <Fragment set:html={e} />
+                  </li>
+                ))}
+              </ul>
+            )}
+            {p.content && p.content.length == 1 && <p>{p.content[0]}</p>}
+
+            {p.skills && p.skills.length > 0 && (
+              <div class="skills">
+                <Fragment>
+                  <span>Skills: </span>
+                  {p.skills.slice(0, 6).map((s: string, idx: number) => (
+                    <Fragment>
+                      <span>{s}</span>
+                      {idx !== p.skills.slice(0, 6).length - 1 && <span> · </span>}
+                    </Fragment>
+                  ))}
+                </Fragment>
+              </div>
+            )}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>
