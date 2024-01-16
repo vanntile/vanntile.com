@@ -3,7 +3,6 @@ import { getImage } from 'astro:assets'
 import { getCollection } from 'astro:content'
 import AnimatedHeader from '../components/AnimatedHeader.astro'
 import Experience from '../components/Experience.astro'
-import SectionDivider from '../components/SectionDivider.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
 import { READABLE_FORMAT, blogCompareFn, getImageURL } from '../lib/utils'
 
@@ -91,9 +90,8 @@ const socialMedia = (await getCollection('icons')).sort((a, b) => a.data.index -
           <a class="cta" href="#section-contact">contact</a>
         </div>
       </div>
-      <SectionDivider color="accent" />
     </section>
-    <section id="section-tech" class="section-tech">
+    <section id="section-tech" class="section-tech divider-before divider-after divider-accent">
       <div class="logo">
         <svg
           id="logoSvg"
@@ -194,9 +192,8 @@ const socialMedia = (await getCollection('icons')).sort((a, b) => a.data.index -
           ))
         }
       </div>
-      <SectionDivider color="brand" />
     </section>
-    <section id="section-experience" class="section-experience">
+    <section id="section-experience" class="section-experience divider-before divider-after">
       <div class="logo">
         <svg
           id="logotypeSvg"
@@ -217,10 +214,9 @@ const socialMedia = (await getCollection('icons')).sort((a, b) => a.data.index -
       </div>
       <h2>./about/experience</h2>
       <Experience />
-      <SectionDivider color="gray" />
     </section>
-    <section class="section-blog">
-      <h2 id="section-blog">./blog/coding/latest</h2>
+    <section id="section-blog" class="section-blog">
+      <h2>./blog/coding/latest</h2>
       <div>
         {
           latestPosts.map((post) => (
@@ -241,8 +237,8 @@ const socialMedia = (await getCollection('icons')).sort((a, b) => a.data.index -
         <a class="cta" href="/blog">Check all blog posts</a>
       </div>
     </section>
-    <section class="section-contact">
-      <h2 id="section-contact">./public/contact</h2>
+    <section id="section-contact" class="section-contact">
+      <h2>./public/contact</h2>
       <p>You can find me here and there. I recommend you message me 📨 on Mastodon or LinkedIn.</p>
       <div>
         {
