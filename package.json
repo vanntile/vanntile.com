@@ -26,20 +26,20 @@
     "release": "standard-version --no-verify --sign"
   },
   "devDependencies": {
-    "@astrojs/mdx": "^2.0.3",
-    "@astrojs/sitemap": "^3.0.4",
+    "@astrojs/mdx": "^2.0.5",
+    "@astrojs/sitemap": "^3.0.5",
     "@commitlint/cli": "^18.4.4",
     "@commitlint/config-conventional": "^18.4.4",
-    "astro": "^4.1.1",
-    "astro-purgecss": "^4.0.0",
-    "cloudinary": "^1.41.2",
+    "astro": "^4.2.1",
+    "astro-purgecss": "^4.1.0",
+    "cloudinary": "^1.41.3",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
     "mdast-util-to-string": "^4.0.0",
     "node-html-parser": "^6.1.12",
     "postcss": "^8.4.33",
-    "prettier": "^3.1.1",
-    "prettier-plugin-astro": "^0.12.3",
+    "prettier": "^3.2.4",
+    "prettier-plugin-astro": "^0.13.0",
     "prettier-plugin-css-order": "^2.0.1",
     "reading-time": "^1.5.0",
     "rehype-autolink-headings": "^7.1.0",
@@ -55,8 +55,8 @@
     "unist-util-visit": "^5.0.0"
   },
   "engines": {
-    "node": "20.9.0",
-    "npm": "10.2.4"
+    "node": "20.11.0",
+    "npm": "10.3.0"
   },
   "lint-staged": {
     "*.{astro,js,ts}": [
