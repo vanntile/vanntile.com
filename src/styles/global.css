@@ -1685,9 +1685,6 @@
       margin-bottom: 4rem;
     }
 
-    .section-fold p {
-      max-width: 42rem;
-    }
     @media (min-width: 768px) {
       .section-fold p {
         font-size: 1.125rem;
