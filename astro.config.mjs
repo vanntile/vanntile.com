@@ -13,7 +13,7 @@ import {
   transformerNotationErrorLevel,
   transformerNotationFocus,
   transformerNotationHighlight,
-} from 'shikiji-transformers'
+} from '@shikijs/transformers'
 import { loadEnv } from 'vite'
 import { remarkReadingTime } from './src/lib/plugins'
 import { astroCSPHashGenerator, initializeCloudinary } from './src/lib/utils'
