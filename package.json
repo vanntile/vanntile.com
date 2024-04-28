@@ -26,21 +26,21 @@
     "release": "standard-version --no-verify --sign"
   },
   "devDependencies": {
-    "@astrojs/mdx": "^2.0.5",
-    "@astrojs/sitemap": "^3.0.5",
+    "@astrojs/mdx": "^2.3.1",
+    "@astrojs/sitemap": "^3.1.4",
     "@commitlint/cli": "^18.4.4",
     "@commitlint/config-conventional": "^18.4.4",
-    "astro": "^4.2.1",
+    "astro": "^4.7.0",
     "astro-purgecss": "^4.1.0",
     "cloudinary": "^1.41.3",
     "husky": "^8.0.3",
-    "lint-staged": "^15.2.0",
+    "lint-staged": "^15.2.2",
     "mdast-util-to-string": "^4.0.0",
-    "node-html-parser": "^6.1.12",
-    "postcss": "^8.4.33",
-    "prettier": "^3.2.4",
+    "node-html-parser": "^6.1.13",
+    "postcss": "^8.4.38",
+    "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0",
-    "prettier-plugin-css-order": "^2.0.1",
+    "prettier-plugin-css-order": "^2.1.2",
     "reading-time": "^1.5.0",
     "rehype-autolink-headings": "^7.1.0",
     "rehype-pretty-code": "^0.12.3",
@@ -51,12 +51,12 @@
     "shikiji": "^0.9.18",
     "shikiji-transformers": "^0.10.0-beta.0",
     "standard-version": "^9.5.0",
-    "typescript": "^5.3.3",
+    "typescript": "^5.4.5",
     "unist-util-visit": "^5.0.0"
   },
   "engines": {
-    "node": "20.11.0",
-    "npm": "10.3.0"
+    "node": "22.0.0",
+    "npm": "10.6.0"
   },
   "lint-staged": {
     "*.{astro,js,ts}": [
