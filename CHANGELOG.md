@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.4.4](https://github.com/vanntile/vanntile.com/compare/v4.4.3...v4.4.4) (2024-04-28)
+
+
+### Bug Fixes
+
+* **style:** :bug: divider styling ([3e35f1d](https://github.com/vanntile/vanntile.com/commit/3e35f1d8c45818757f3ce722e5c808a396464ab4))
+
 ### [4.4.3](https://github.com/vanntile/vanntile.com/compare/v4.4.2...v4.4.3) (2024-01-21)
 
 
