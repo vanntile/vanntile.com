@@ -1,0 +1,99 @@
+---
+title: DnD Scaraoschi (0/n)
+publishedAt: 2024-05-11
+description: The first post in a series on building a Dungeons & Dragons platform in Go and showcasing the details of software architecture and trade-offs.
+image:
+  src: /assets/blog/banner-engineering.jpg
+  alt: Banner image with vanntile's logo and the text "Tech. Software Engineering."
+keywords:
+- tech
+- software architecture
+- golang
+- project structure
+- go programming language
+- unit testing
+- monitoring
+---
+
+## What's with all this ruckus?
+
+After 20 months of working in an established Go codebase at SSH Communications Security, it is time to evaluate my
+own experience. This will take the form of a medium-scale project in which I intend to explore new paradigms, libraries,
+tools and practices, as a baseline for my own mastery of the programming language. I will use and abuse various other
+aspects unrelated to the Go environment or community, such as monitoring, databases and cloud deployment,
+with the desire to get more touchpoints with DevOps or SysAdmin (_know thy enemy_, isn't that what they say?).
+The best part, I will be working on this openly, in a series of articles (which you have just started reading),
+documenting my decisions, experimental setup and supporting arguments. My intention is to create a trail for myself,
+not a tutorial for others, but I think a junior developer might find various interesting topics being introduced and
+a senior might pick up on a useful skill or two. Don't expect a publishing schedule or an end to this project, and
+definitely don't expect it to fully make sense.
+
+## The faces of D20
+
+What should one expect to get from reading this series? I have already been taking notes for a few months now of things
+I find interesting and now the pot has reached the boiling point. Here's what you might encounter on this journey (yes,
+I did apply [bogosort](https://en.wikipedia.org/wiki/Bogosort) to the list before publishing):
+
+- PostgreSQL or YugabyteDB
+- keyset paging (cursor on ordered indexes)
+- database migrations
+- [golangci-lint](https://golangci-lint.run/) and lots of configuration
+- microservices, not for scalability but for scope-isolation; this will be reflected in the project structure
+- [gin](https://github.com/gin-gonic/gin) or [fiber](https://github.com/gofiber/fiber) or
+  [Kit](https://github.com/go-kit/kit)
+- [JSON](https://github.com/json-iterator/go)
+- using the HTTP `Accept` [header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) to provide
+  responses as `text/html` using [HTMX](https://github.com/bigskysoftware/htmx) or `application/json`
+- live reloading with [Air](https://github.com/cosmtrek/air)
+- Makfiles
+- Go-style package documentation
+- structured logs: [zap](https://github.com/uber-go/zap) or [zerolog](https://github.com/rs/zerolog)
+- [OpenTelemetry](https://opentelemetry.io/)
+- graceful shutdown
+- live-reload of microservice configs
+- webhooks
+- [CRDTs](https://en.m.wikipedia.org/wiki/Conflict-free_replicated_data_type) (conflict-free replicated data types)
+- IDs, so many IDs (this is an exciting one)
+- OpenAPI specs
+- [oapi-codegen](https://github.com/deepmap/oapi-codegen)
+- AAA. Not [that AAA](https://en.wikipedia.org/wiki/Alcoholics_Anonymous), but this
+  [AAA](<https://en.wikipedia.org/wiki/AAA_(computer_security)>) (authentication, authorization and accounting)
+- API testing using [httpexpect](https://github.com/gavv/httpexpect) or [apitest](https://github.com/steinfletcher/apitest)
+- separation of unit tests in their own `_test` packages
+- GDPR compliance for an end-user: one should be able to download their data and delete all their identifiable data
+  automagically
+- Tauri desktop app
+- TUI (terminal UI) client using [Bubble Tea](https://github.com/charmbracelet/bubbletea)
+
+## Targets
+
+Although the above is an incomplete, overwhelmingly long list, I should focus on three targets:
+
+1. Learning vim motions and using neovim for the full duration of the development process. As a non-chad neovimmer, I
+   will likely find it stupid quite soon, bothersome and a road to mental insanity. Fortunately,
+   [Batman White Knight (2017)](https://www.dc.com/comics/batman-white-knight-2017/batman-white-knight-1) is one of my
+   favorite writings lately and that must send a message.
+2. Putting myself out there. This means I will have to document, highlight and fix mistakes I have made along the way,
+   from choices of libraries that affect performance or coding time to architecture and (especially) security problems.
+3. Learning load testing. When the project can handle a full user path, I will build a way of load-testing the app and
+   record the results. This will be used in monitoring later on.
+
+One stretch goal is to find 2 bugs with something I’m relying upon and provide a reasonable fix to the project’s
+maintainers. This sounds very elusive so it’s not a criterion.
+
+## Who's this Scara guy?
+
+By now you've probably got the point this is a learning exercise more than a showcase. To increase the difficulty to the
+next level (and certainly gain some enemies by the end of it), I will make DnD the topic of the project. Spoilers: I
+know what DnD is, but don't have the faintest idea about **how Dungeons and Dragons works**. And I refuse to learn until
+it is absolutely necessary. I expect to need to implement various permission levels, dice rolling, character
+cards, file upload (kids, don't try this one at home), note taking, leaderboards, a campaign event history, finding
+friends, custom maps and notifications.
+
+The name of the project is **DnD Scaraoschi**, which is meant to allude to _not disturbing Scaraoschi_, one of the
+depictions of the Devil in [Romanian mythology](https://www.ancient-origins.net/myths-legends/mythology-romania-exploring-beliefs-about-witchcraft-and-devil-004645).
+Other Slavic cultures have their own versions of the red-skinned, skinny daemon, so it should sound familiar to some.
+This should be a good enough setup for my storytelling platform, for as long as we don't actually meet him.
+**Oschi, Oschi, Scaraoschi, let my eyes not see you, let my code not log you!**
+
+We'll see later if the chant worked. 😉
