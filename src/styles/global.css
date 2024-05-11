@@ -1766,6 +1766,7 @@
     }
     .section-blog .post {
       padding-block: 1rem;
+      word-break: break-word;
     }
     .section-blog .post p:first-child {
       margin-block: 0;
