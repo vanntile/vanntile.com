@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.4.5](https://github.com/vanntile/vanntile.com/compare/v4.4.4...v4.4.5) (2024-05-11)
+
+
+### Bug Fixes
+
+* :bug: line length for article pages ([219d00e](https://github.com/vanntile/vanntile.com/commit/219d00e82dcd5f7c1fea2c3f4f9ada058ef78f0d))
+
 ### [4.4.4](https://github.com/vanntile/vanntile.com/compare/v4.4.3...v4.4.4) (2024-04-28)
 
 
