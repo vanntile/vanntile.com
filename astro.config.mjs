@@ -23,6 +23,9 @@ initializeCloudinary(IMG_CLOUD_NAME, IMG_API_KEY, IMG_API_SECRET)
 
 export default defineConfig({
   site: 'https://vanntile.com',
+  vite: {
+    assetsInclude: ['**/*.asc'],
+  },
   markdown: {
     syntaxHighlight: false,
     remarkPlugins: [remarkHint, remarkReadingTime],
