@@ -1,0 +1,166 @@
+---
+import { getImage } from 'astro:assets'
+import { getCollection } from 'astro:content'
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { getImageURL } from '../lib/utils'
+
+const props = {
+  title: `Contact vanntile`,
+  publishedAt: new Date(),
+  description: 'Contact and security keys',
+  image: { src: '/assets/banner.jpg', alt: 'Banner image with logo and text "Privacy. FOSS. Cybersecurity."' },
+  keywords: ['contact', 'PGP keys', 'security keys', 'code signing'],
+}
+
+// Set dynamic image path
+const { src, alt } = props.image
+const remoteImgURL = await getImageURL(src)
+const resultingImage = await getImage({ src: remoteImgURL, width: 1600, height: 800 })
+// Update frontmatter
+const frontmatter = { ...props, image: { src: resultingImage.src, alt } }
+
+const socialMedia = (await getCollection('icons')).sort((a, b) => a.data.index - b.data.index)
+
+const pkHello = 'publickey.hello@vanntile.com-3aebff9a6bc1e08cdd297d26c95faaecd3ce00af.asc'
+const pkCode = 'publickey.code@vanntile.com-5d142ec9f30002495de890dd875a4b55b2d5bfbf.asc'
+const pkGitHub = 'publickey.33692650+vanntile@users.noreply.github.com.asc'
+const pkGitLab = 'publickey.2052890-vanntile@users.noreply.gitlab.com.asc'
+const publicKeys = Object.fromEntries(
+  Object.entries(
+    import.meta.glob('/public/keys/publickey.*.asc', { import: 'default', query: '?raw', eager: true }),
+  ).map(([k, v]) => [k.split('/').slice(-1), v]),
+)
+---
+
+<BaseLayout frontmatter={frontmatter}>
+  <main class="base-layout">
+    <h1>Contact</h1>
+    <p>
+      Here you can find various communications channels which I have control over (more or less, as many are social
+      platforms) and even ways to <span class="highlight">securely and privately</span> contact me.
+    </p>
+    <p>
+      This page also serves as a cross-<span class="highlight">confirmation for my ownership</span> of social accounts. If
+      both a public page points back to my domain and my domain points to it, you can be sure I at least have had control
+      over it at a date in the past. In case of a hack, relevant dates will be posted.
+    </p>
+    <p>
+      Moreso, you can also find PGP keys I use for code signing (Git commit signatures). You can also find them on <a
+        href="https://keys.openpgp.org"
+        target="_blank"
+        referrerpolicy="same-origin">keys.openpgp.org</a
+      >.
+    </p>
+
+    <h2>Social Media & other accounts</h2>
+    <p>I recommend you message me 📨 on Mastodon.</p>
+
+    <ul class="contact-icons">
+      {
+        socialMedia
+          .filter((e) => e.data.type === 'social')
+          .map((e) => (
+            <li>
+              <a
+                href={e.data.url}
+                target="_blank"
+                rel="me"
+                referrerpolicy="same-origin"
+                title={e.data.alt}
+                class="pseudo-none"
+              >
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d={e.data.path} fill="currentColor" />
+                </svg>
+                <span>{e.data.alt}</span>
+              </a>
+              <span>: {e.data.details}</span>
+            </li>
+          ))
+      }
+    </ul>
+
+    <h2>Secure communication</h2>
+    <p>Secure messaging can happen though these channels:</p>
+    <ul class="contact-icons">
+      {
+        socialMedia
+          .filter((e) => e.data.type === 'messaging')
+          .map((e) => (
+            <li>
+              <a
+                href={e.data.url}
+                target="_blank"
+                rel="me"
+                referrerpolicy="same-origin"
+                title={e.data.alt}
+                class="pseudo-none"
+              >
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d={e.data.path} fill="currentColor" />
+                </svg>
+                <span>{e.data.alt}</span>
+              </a>
+              <span>: {e.data.details}</span>
+            </li>
+          ))
+      }
+    </ul>
+
+    <p>You can mail me securely and encrypt your message with the following public key.</p>
+    <figure data-rehype-pretty-code-figure="">
+      <div data-rehype-pretty-code-title="">
+        {pkHello}
+      </div>
+      <pre><code>{publicKeys[pkHello].split("\n").map((line: string) =>
+      <span data-line="">{line.length ? <span>{line}</span> : " "}</span>)}</code></pre>
+    </figure>
+
+    <h2>Code signing</h2>
+    <p>
+      For generic code, not present on GitHub or GitLab, I use <a
+        href="https://keys.openpgp.org/vks/v1/by-fingerprint/5D142EC9F30002495DE890DD875A4B55B2D5BFBF"
+        target="_blank"
+        referrerpolicy="same-origin">this key</a
+      >:
+    </p>
+    <figure data-rehype-pretty-code-figure="">
+      <div data-rehype-pretty-code-title="">
+        {pkCode}
+      </div>
+      <pre><code>{publicKeys[pkCode].split("\n").map((line: string) =>
+      <span data-line="">{line.length ? <span>{line}</span> : " "}</span>)}</code></pre>
+    </figure>
+
+    <p>For code present on GitHub, I use this key:</p>
+    <figure data-rehype-pretty-code-figure="">
+      <div data-rehype-pretty-code-title="">
+        {pkGitHub}
+      </div>
+      <pre><code>{publicKeys[pkGitHub].split("\n").map((line: string) =>
+      <span data-line="">{line.length ? <span>{line}</span> : " "}</span>)}</code></pre>
+    </figure>
+    <p>For code present on GitLab, I use this key:</p>
+    <figure data-rehype-pretty-code-figure="">
+      <div data-rehype-pretty-code-title="">
+        {pkGitLab}
+      </div>
+      <pre><code>{publicKeys[pkGitLab].split("\n").map((line: string) =>
+      <span data-line="">{line.length ? <span>{line}</span> : " "}</span>)}</code></pre>
+    </figure>
+  </main>
+</BaseLayout>

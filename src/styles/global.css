@@ -1201,6 +1201,11 @@
     .divider-accent {
       --divider-color: var(--brand-accent);
     }
+
+    .highlight {
+      border-bottom-width: 2px;
+      border-color: var(--brand-accent);
+    }
   }
 
   @layer animations {
@@ -1601,9 +1606,67 @@
       margin-left: 0.5rem;
     }
   }
+
+  @layer contact {
+    .contact-icons li {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      margin: 1rem 0;
+      list-style: none;
+    }
+    .contact-icons li > :is(:first-child, :last-child) {
+      margin: 0;
+    }
+    .contact-icons a {
+      display: flex;
+      flex: 0 1 1;
+      flex-flow: row nowrap;
+      align-items: center;
+      gap: 1rem;
+      color: var(--gray-100);
+    }
+    .contact-icons a:is(:focus-visible, :hover) {
+      color: var(--brand-accent);
+    }
+    .contact-icons a:is(:focus-visible, :hover) path {
+      fill: currentColor;
+    }
+  }
 }
 
 @layer pages {
+  @layer layout {
+    .base-layout {
+      margin: auto;
+      padding: 2rem 1.5rem 8rem;
+      width: 100%;
+      max-width: 65ch;
+    }
+    @media (min-width: 1280px) {
+      .base-layout {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+      }
+    }
+    @media (min-width: 2560px) {
+      .base-layout {
+        max-width: 72rem;
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+      }
+    }
+
+    .base-layout p {
+      margin: 0.25rem 0;
+      overflow-wrap: break-word;
+    }
+
+    .base-layout .cta {
+      margin-top: 0.5rem;
+    }
+  }
+
   @layer homepage {
     .tag-home {
       background-color: var(--gray-800);
@@ -1630,11 +1693,6 @@
         font-size: 1.25rem;
         line-height: 1.75rem;
       }
-    }
-
-    .home .highlight {
-      border-bottom-width: 2px;
-      border-color: var(--brand-accent);
     }
 
     .home section {
@@ -1788,65 +1846,9 @@
         line-height: 1.75rem;
       }
     }
-
-    .home section.section-contact {
-      margin-bottom: 6rem;
-    }
-    .home section.section-contact > div {
-      display: flex;
-      column-gap: 1rem;
-      flex-flow: row wrap;
-      margin-bottom: 2rem;
-    }
-    @media (min-width: 1280px) {
-      .home section.section-contact > div {
-        column-gap: 2rem;
-      }
-    }
-    .home section.section-contact a {
-      will-change: transform;
-      border-radius: 9999px;
-      background-color: var(--gray-900);
-      width: 3rem;
-      height: 3rem;
-      color: var(--gray-100);
-    }
-    .home section.section-contact a:is(:focus-visible, :hover) {
-      outline: 3px solid var(--brand-accent);
-      outline-offset: 5px;
-    }
   }
 
   @layer blog {
-    .blog {
-      margin: auto;
-      padding: 2rem 1.5rem 8rem;
-      width: 100%;
-      max-width: 65ch;
-    }
-    @media (min-width: 1280px) {
-      .blog {
-        font-size: 1.125rem;
-        line-height: 1.75rem;
-      }
-    }
-    @media (min-width: 2560px) {
-      .blog {
-        max-width: 72rem;
-        font-size: 1.25rem;
-        line-height: 1.75rem;
-      }
-    }
-
-    .blog p {
-      margin: 0.25rem 0;
-      overflow-wrap: break-word;
-    }
-
-    .blog .cta {
-      margin-top: 0.5rem;
-    }
-
     .blog-post {
       padding: 1rem 0;
     }

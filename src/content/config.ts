@@ -19,8 +19,11 @@ const iconCollection = defineCollection({
   schema: z.object({
     url: z.string().url(),
     alt: z.string(),
+    details: z.string(),
     path: z.string(),
     index: z.number(),
+    meta: z.boolean(),
+    type: z.enum(['social', 'messaging']),
   }),
 })
 

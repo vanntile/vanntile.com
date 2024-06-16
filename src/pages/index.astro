@@ -30,8 +30,6 @@ const resultingImage = await getImage({ src: remoteImgURL, width: 1600, height: 
 const frontmatter = { ...props, image: { src: resultingImage.src, alt } }
 
 const latestPosts = (await getCollection('blog')).sort(blogCompareFn).slice(0, 3)
-
-const socialMedia = (await getCollection('icons')).sort((a, b) => a.data.index - b.data.index)
 ---
 
 <script>
@@ -97,7 +95,7 @@ const socialMedia = (await getCollection('icons')).sort((a, b) => a.data.index -
           <a class="cta" href="#section-tech">techstack</a>
           <a class="cta" href="#section-experience">experience</a>
           <a class="cta" href="#section-blog">blog</a>
-          <a class="cta" href="#section-contact">contact</a>
+          <a class="cta" href="/contact">contact</a>
         </div>
       </div>
     </section>
@@ -245,36 +243,6 @@ const socialMedia = (await getCollection('icons')).sort((a, b) => a.data.index -
       <div class="additional">
         <span>...or</span>
         <a class="cta" href="/blog">Check all blog posts</a>
-      </div>
-    </section>
-    <section id="section-contact" class="section-contact">
-      <h2>./public/contact</h2>
-      <p>You can find me here and there. I recommend you message me 📨 on Mastodon or LinkedIn.</p>
-      <div>
-        {
-          socialMedia.map((e) => (
-            <a
-              href={e.data.url}
-              target="_blank"
-              rel="me"
-              referrerpolicy="same-origin"
-              title={e.data.alt}
-              class="pseudo-none"
-            >
-              <svg
-                aria-hidden="true"
-                focusable="false"
-                width="48"
-                height="48"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d={e.data.path} fill="currentColor" />
-              </svg>
-              <span class="visually-hidden">{e.data.alt}</span>
-            </a>
-          ))
-        }
       </div>
     </section>
   </main>

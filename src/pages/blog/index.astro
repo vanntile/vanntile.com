@@ -33,7 +33,7 @@ const posts = await getCollection('blog')
 ---
 
 <BaseLayout frontmatter={frontmatter}>
-  <main class="blog">
+  <main class="base-layout">
     <h1>Blog posts</h1>
     {
       posts.sort(blogCompareFn).map((post) => (

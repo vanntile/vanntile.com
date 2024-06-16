@@ -14,7 +14,9 @@ const { frontmatter, withNav = true, withoutFooter = false, type = 'website' } =
 const { title, publishedAt, description, image, keywords } = frontmatter
 const url = new URL(Astro.url.pathname, Astro.site)
 
-const socialMedia = await getCollection('icons')
+const socialMedia = (await getCollection('icons'))
+  .filter((e) => e.data.meta)
+  .sort((a, b) => a.data.index - b.data.index)
 ---
 
 <html lang="en">
