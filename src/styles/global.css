@@ -1162,7 +1162,7 @@
 
     .divider-before {
       --divider-color: var(--brand);
-      margin-top: 35px;
+      margin-top: 32px;
       border-top: 1px solid var(--divider-color);
     }
 
@@ -1181,7 +1181,7 @@
 
     .divider-after {
       --divider-color: var(--brand);
-      margin-bottom: 35px;
+      margin-bottom: 32px;
       border-bottom: 1px solid var(--divider-color);
     }
 
