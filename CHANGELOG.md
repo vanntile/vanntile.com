@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.5.0](https://github.com/vanntile/vanntile.com/compare/v4.4.5...v4.5.0) (2024-06-16)
+
+
+### Features
+
+* :star2: add security policy page ([6971010](https://github.com/vanntile/vanntile.com/commit/697101091123c7f688dd58c05fc31784dc634036))
+* :star2: add separate contact page ([dd68275](https://github.com/vanntile/vanntile.com/commit/dd6827526732a26a2af6b4e5c2319c35daee4a77))
+
+
+### Bug Fixes
+
+* :bug: logotype path and styling ([8fc5e59](https://github.com/vanntile/vanntile.com/commit/8fc5e59ddc3107c934d7a827a7ad5e2040095c52))
+* **style:** :bug: reason-list margins ([bef23dd](https://github.com/vanntile/vanntile.com/commit/bef23ddeb137f30bd85a53d2586ed9eaf53b2601))
+
 ### [4.4.5](https://github.com/vanntile/vanntile.com/compare/v4.4.4...v4.4.5) (2024-05-11)
 
 
