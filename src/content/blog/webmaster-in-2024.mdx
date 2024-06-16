@@ -1,0 +1,90 @@
+---
+title: Being a webmaster in 2024
+publishedAt: 2024-06-16
+description: Webmaster tools helping with SEO, security, robot indexing and public key signatures for communication encryption and code signing.
+image:
+  src: /assets/blog/banner-engineering.jpg
+  alt: Banner image with vanntile's logo and the text "Tech. Software Engineering."
+keywords:
+- webmaster
+- website best practices
+- .well-known
+- security.txt
+- robots.txt
+- PGP keys
+---
+
+This might sound hilarious to some, but my latest additions to this website are not in the land of web engineering,
+UI/UX design, or even content-focused SEO. But they fit like a glove to what I remember to have been called the job of
+a webmaster. Let's jump right in.
+
+## `.well-known`
+
+These are a set of semi-standard (some best-practices, some unused and some completely dropped, as any "good" web
+standard) URIs attached to any website behind a `/.well-known/` prefix. One that I have adopted is Electronic Frontier
+Foundation's [Do Not Track (DNT) Policy](https://www.eff.org/dnt-policy), found [here](/.well-known/dnt-policy.txt).
+This is a no-brainer, as it is a declaration of respecting client's `Do Not Track` preference (which I myself have
+enabled as we speak), and I had to put in zero work to adhere to as currently there is absolutely no tracking on this
+domain. If some kind of rate-limiting will be added in the future for some dynamic functionality, I'll make sure it is
+extensible enough to respect the user choice.
+
+## security.txt & PGP keys
+
+A second of those well-known URIs is [security.txt](/.well-known/security.txt). This is core for a public website which
+operates core infrastructure or holds user data. It is a welcome mat for any safe disclosure of vulnerabilities by
+white-hat hackers or security researchers. Once more, this domain does not manage the former and thankfully does not
+bother with the latter, so it's more of a practice time for me. The more interesting part is that one can declare a
+signature in the spec itself, like below, and sign the security spec itelf as an **OpenPGP** signed file
+[`security.txt.asc`](/.well-known/security.txt.asc).
+
+```txt title="/.well-known/security.txt" showLineNumbers{3}
+Encryption: openpgp4fpr:3aebff9a6bc1e08cdd297d26c95faaecd3ce00af
+```
+
+Add to this a key held on a public keyserver,
+like [keys.openpgp.org](https://keys.openpgp.org/search?q=3aebff9a6bc1e08cdd297d26c95faaecd3ce00af), and you have a
+combination of authentication and public keys destined for encrypting email communication. Actually, let's go _one step
+further_ and publish ownership of my social accounts, list secure messaging channels like Signal (using their new
+usernames that do not disclose your phone number), Threema and Matrix and PGP keys for code signing in Git. Find it all
+on my revamped [contact](/contact) page. While again, this is overkill, in time it might come in handy for that future
+TC-39 collusion disclosure 😉.
+
+## robots.txt
+
+Finally, while I had already been using `@astrojs/sitemap` to generate the website sitemap for base indexing, I thought
+to take example from Wired's [robots.txt](https://www.wired.com/robots.txt) and deny access to all AI scraper bots. If
+I plan to start posting here more code more often, it should come in handy to keep my contents' integrity from scraping
+automatically, along with the share-alike creative-commons license. It's actually not hard at all, you just have to list
+all the common offenders, like so:
+
+```txt title="robots.txt" showLineNumbers{13}
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+```
+
+and check every 15 minutes for any new AI startup with a $200M valuation. Who am I kidding? AI companies wouldn't dare
+respect intellectual property rights and are already in lawsuits with big players like the
+[New York Times](https://www.nytimes.com/2023/12/27/business/media/new-york-times-open-ai-microsoft-lawsuit.html).
+But more on that snake-oil in a future post.
+
+## See also
+
+- Well-Known Uniform Resource Identifiers [RFC-8615](https://www.rfc-editor.org/rfc/rfc8615)
+- [List of well-known URIs on Wikipedia](https://en.wikipedia.org/wiki/Well-known_URI)
+- [security.txt generator](https://securitytxt.org/)
+- list of SEO bots in [robots.txt](https://technicalseo.com/tools/robots-txt/)
