@@ -1,0 +1,30 @@
+---
+import { getImage } from 'astro:assets'
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { getImageURL } from '../lib/utils'
+
+const props = {
+  title: `Security policy`,
+  publishedAt: new Date(),
+  description: 'Security policy for vanntile.com',
+  image: { src: '/assets/banner.jpg', alt: 'Banner image with logo and text "Privacy. FOSS. Cybersecurity."' },
+  keywords: ['security policy', 'security issue disclosure'],
+}
+
+// Set dynamic image path
+const { src, alt } = props.image
+const remoteImgURL = await getImageURL(src)
+const resultingImage = await getImage({ src: remoteImgURL, width: 1600, height: 800 })
+// Update frontmatter
+const frontmatter = { ...props, image: { src: resultingImage.src, alt } }
+---
+
+<BaseLayout frontmatter={frontmatter}>
+  <main class="base-layout">
+    <h1>Security Policy</h1>
+    <p>
+      There's nothing fun on this domain, so use the general security issue disclosure practices, please. You might want
+      to check the info on the <a href="/contact">contact page</a> for that.
+    </p>
+  </main>
+</BaseLayout>
