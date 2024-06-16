@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.5.1](https://github.com/vanntile/vanntile.com/compare/v4.5.0...v4.5.1) (2024-06-16)
+
+
+### Bug Fixes
+
+* **style:** :bug: purgecss is selector bug on pseudoselectors ([7cd15dd](https://github.com/vanntile/vanntile.com/commit/7cd15dd88b742c19ad299015f53d62f01fde14a1))
+
 ## [4.5.0](https://github.com/vanntile/vanntile.com/compare/v4.4.5...v4.5.0) (2024-06-16)
 
 
