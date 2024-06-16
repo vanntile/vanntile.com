@@ -1615,21 +1615,20 @@
       margin: 1rem 0;
       list-style: none;
     }
-    .contact-icons li > :is(:first-child, :last-child) {
+    .contact-icons li > :is(a:first-child, span:last-child) {
       margin: 0;
     }
     .contact-icons a {
       display: flex;
-      flex: 0 1 1;
       flex-flow: row nowrap;
       align-items: center;
       gap: 1rem;
       color: var(--gray-100);
     }
-    .contact-icons a:is(:focus-visible, :hover) {
+    .contact-icons :is(a:focus-visible, a:hover) {
       color: var(--brand-accent);
     }
-    .contact-icons a:is(:focus-visible, :hover) path {
+    .contact-icons :is(a:focus-visible, a:hover) path {
       fill: currentColor;
     }
   }
