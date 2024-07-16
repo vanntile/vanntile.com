@@ -1,0 +1,573 @@
+---
+title: A rant on the AI craze written on a napkin
+publishedAt: 2024-07-16
+description: AI is the hot term for gaining investments in the current hype cycle. What will come out of this grift and how is it already affecting us
+image:
+  src: /assets/blog/banner-engineering.jpg
+  alt: Banner image with vanntile's logo and the text "Tech. Software Engineering."
+keywords:
+- generative AI
+- hype cycle
+- AI grifting
+- AI washing
+- copyright
+- dark forest theory
+---
+
+!> Written in collaboration with [Alona Nechytailo](https://www.linkedin.com/in/alonanechytailo/), who had the patience
+to listen and discuss with me (almost) all my complaints on the AI craze
+
+This article exists for a single reason: [Dan Olsen](https://www.youtube.com/channel/UCyNtlmLB73-7gtlBz00XOQQ) has not
+yet released a follow-up to his seminal documentary work "[Line goes up](https://youtu.be/YQ_xWvX1n9g)", this time not
+focused on the crypto market, but on the tech space flood with the mythical AI elixir, which will save us all and bring
+1000% efficiencies over any competitors for all the companies willing to pay. Okay, I'm being facetious, but I do have
+a point. Just like [Web3 is Going Just Great](https://www.web3isgoinggreat.com/), news aggregator run by journalist
+[Molly White](https://www.mollywhite.net/), we need a place to reference when pointing out that no, this technology is
+not the solution to all the problems you (privately) or your company (publicly) have not been looking for. It does not
+make you more replaceable at your workplace than you already were (that is a function of your boss and how much they
+want to move the work to a cheap-labor country); and we have no evidence or tangible reason to believe that the latest
+period marked by an apparent technological jump will continue ad infinitum. While many natural processes have
+exponential growth curves, they all must taper off at some point, otherwise we'd all be food for desert flies surrounded
+by seas of water lilies and oceans of algae. One single thing so far has not shown any signs of respecting this natural
+limit: the human hubris powering the ability of individuals in either powerful or disenfranchised positions to trade
+the long-term loss for the short-term gratification.
+
+The goal of this article is to serve as that reference for our discussions with people who are participating in this
+rapture of mind and thinking either how can they line their pockets or, even worse, believing we are on the cusp of
+incredible world change and that specialized tasks are all that matters in any complex human activity. We'll serve a
+lot of disparate evidence trying to tell a common story: the technology is real, the improvements are impressive,
+it's an "overnight success" decades in the making and the hype is completely and utterly wrong.
+
+As a person who understands technology slightly better than your peers (otherwise we have no idea why you are here
+reading this piece), you have a responsibility to remind them of one simple truth: short term gratification at scale is
+caused by monetary interests and hype is the best tool for inflated-egos to achieve those interests. Of course all these
+CEOs say AI will change \* **insert whatever your company was doing previously here** \* forever - they want to be the
+one who bet on the future and won. Or at least win themselves a hefty bonus while the hype is still on. And of course
+the experts of a hyper-specialized field have their own interest at heart when agreeing with any marketing/sales
+department messaging they don't even read. It gives them access to more funds they could have ever hoped for, for an
+undetermined period of time. The time for AI is now, the GPUs are on, and the business is magic and we have to invest
+resources and capital and everyone needs to know about it because what else are you going to do but compete with others
+having AI, with AI itself, chatbots, assistants, copilots!... \* **heavy breathing** \*
+
+After that long-winded intro, let's begin.
+
+## the Great AI Hype
+
+This article will use lots of confusing overlapping names, as marketing has washed away most of the technical nuance.
+Even if we are calling it AI, Generative AI, GPTs, copilots, agents, chatbots, we are referring almost every time to
+internet-based services running large-language models in the cloud. They do not have an understanding of the world, but
+have a statistical representation of the language particles (under the name of tokens) and are, philosophically, a
+practical representation of the structuralist movement.
+
+We have two large ideas we are trying to support. The first is that current LLM models are super-efficient search
+engines on their training datasets and fast summarizers. It can painstakingly shown that every successful application
+works because they average out their knowledge and search for the most common or relatively close answer. This is also
+the cause of them having hallucinations. The ability to prompt engineer and turn the least likely answer to be the most
+likely answer using [only a few tokens](https://arxiv.org/abs/2310.04444) is in inescapable trap of the way we build
+current successful AI products (underlined in [the Walluigi effect](https://www.lesswrong.com/posts/D7PumeYTDPfBTp3i7/the-waluigi-effect-mega-post)).
+The real world has sets of rules which are hardly transparent to language without logic and, on top of that, we have the
+physical reality governed, as far as we understand, by the known set of physical laws. The second idea is that the current
+LLM space is plagued by false promises and artificial solutions looking for a problem. In the startups' search for
+financing, corporations looking for market domination, unremarkable VCs craving attention and infrastructure giants
+wanting to raise prices and valuations, the market is prone to an overblown hype to which many fell for just because
+they have been unaware of the "overnight" breakthrough language models in parroting human language and later code.
+
+The Gartner Hype Cycle illustrates the progression of new technologies from conception to widespread adoption. Every
+emerging technology undergoes five stages, from early interest to inflated expectations, through disillusionment until
+it finally reaches a stage where the technology becomes genuinely beneficial.
+
+It's no surprise that AI has been at the peak of inflated expectations - the stage characterized by intense excitement,
+high expectations, overestimation of technology's capabilities, and the making of loud, false promises to attract
+investments. Given that regulations are lagging far behind the development of technology, many major companies have been
+doing everything they can to monopolize AI by exploiting [the global south](https://youtu.be/AaU6tI2pb3M?t=2479) and its
+resources, as well as abusing the data privacy and intellectual property of literally anyone on the internet. But this
+is a magic tool that will save the world, so it must be worth it, right? Right? Soon after they got away with an
+overbearing market presence (two months were enough for ChatGPT to have 100 million active users), it became useful to
+cry wolf and [lobby the regulators](https://www.nytimes.com/2023/06/07/technology/sam-altman-ai-regulations.html), of
+course, in the context of their needs.
+
+### the misconception olympics
+
+Humans easily fall for anthropomorphizing everything, but we especially confuse
+[dialogue systems](https://arxiv.org/abs/2305.09800) with the living, even as
+[software developers](https://edition.cnn.com/2022/07/23/business/google-ai-engineer-fired-sentient/index.html). Having
+our expectations lowered by this, the **claim that current AIs beat humans at regular tasks** doesn't seem so far
+fetched. ChatGPT [passes the bar exam](https://edition.cnn.com/2023/01/26/tech/chatgpt-passes-exams/index.html) after
+all, amirite people? Actually the results are skewed to the repeat test-takers of the bar exam who failed, and ChatGPT
+would actually score under the median and only in the
+[15th percentile](https://link.springer.com/article/10.1007/s10506-024-09396-9) on essays (at which it's supposed to be
+good according to every high-school student) if compared to those who passed the exam. AI targeting usage in the legal
+arena promising to be hallucination-free using RAG (retrieval-augmented generation) are hallucinating between 17% and
+33%, as reported by [this paper](https://arxiv.org/pdf/2405.20362), beating general-availability commercial tools like
+ChatGPT (at 43%), but not getting even close to their desired usage. Unfortunately, "_Legal queries, however, often do
+not admit a single, clear-cut answer_", and interpreting the law requires logic and understanding. And let's not forget
+when the [NYC chatbot](https://themarkup.org/news/2024/03/29/nycs-ai-chatbot-tells-businesses-to-break-the-law) guided
+businesses to break the law with wrong advice.
+
+To look at more generalized tasks, we have to use newer benchmarks, as the standard machine learning and research ones
+are laughably missing the mark of the claim. For this, the [GAIA benchmark](https://arxiv.org/pdf/2311.12983) for
+General AI assistants, created by AI engineers themselves, reports an average performance of 15% for ChatGPT using
+plugins customized by humans, compared to the 92% average human performance. Even if we take the top result at the
+current date (July 2024), that result only raises to 34%, which is still three times lower than the average reviewer's.
+For an even more in-depth analysis, we can look at the [BIG benchmark](https://arxiv.org/abs/2206.04615) (beyond the
+imitation game), with 450 authors, where it's shown that while models improve with size, they all "perform poorly in
+absolute terms", average human raters being three times better and the best human raters being five times better, with
+this being true on most tasks.
+
+Another popular claim is that **we have fully automated programming**. The story of Devin, the "AI software engineer"
+that does a job on Upwork, the gig economy website, is at this point beyond myth. After its
+[announcement](https://www.cognition.ai/blog/introducing-devin), and the original poster of the Upwork task
+[confirming it failed the task](https://www.youtube.com/watch?v=xE2fxcETP5E), an experienced software engineer took
+apart the freelancing demo and [debunked the](https://www.youtube.com/watch?v=tNmgmwEtoWE) announcement, along with
+actually coding what it was supposed to in only 35 minutes. The reality: Devin runs (very) slowly, solves a bug in a
+source file it hallucinated and does not actually solve the task. Switching to Claude 3, they claimed to have
+[near-human](https://arstechnica.com/information-technology/2024/03/the-ai-wars-heat-up-with-claude-3-claimed-to-have-near-human-abilities/)
+coding ability, and used [OpenAI's humanEval](https://github.com/openai/human-eval) benchmark results as proof. Taking a
+look at the benchmark, one can see these are very short introductory-course programming problems, aimed at the
+high-school level, some solvable in one-liners. And Claude managed only 85% on the benchmark, so it couldn't even ace
+that. If we take a real-world GitHub issues [SWE benchmark](https://www.swebench.com/), the same AI model is marked at
+3.79% resolved rate. I guess than that all these humans solving the GitHub issues must be in the top 15%, or hell, even
+superhuman. For reference, the best models on mentioned benchmark reach 19% resolved rate.
+
+Probably it would be best to end this section full of companies cherry-picking performance examples by even more
+outright statements. Tech demos are
+[generally fake](https://gizmodo.com/pretty-much-all-tech-demos-are-fake-as-hell-1826143494). And if Gizmodo, without
+referencing much proof, is not enough, the beans are spilled in the following
+[video (AI Hype is completely out of control)](https://youtu.be/VctsqOo8wsc) (Internet of Bugs, 2024-06-10), with full
+sources in the comments on how: Tesla faked a self-driving demo, Google faked two AI demos, Google's AI-improved search
+gives the most [outrageous suggestions](https://www.bbc.com/news/articles/cd11gzejgz4o), Amazon's self-checkout AI
+stores were slow to bill because they were issued by human remote workers, Facebook's M chatbot had 70% of the answers
+[answered by humans](https://www.technologyreview.com/2017/04/14/152563/facebooks-perfect-impossible-chatbot/)... You
+probably get the point. Oh, this set of lies when AI is (not even) used for a "fully-automated" service is called
+"**AI-washing**" and it is one, but not nearly the biggest problem we have.
+
+## who let the grift out?
+
+Access to artificial intelligence has been
+[democratized](https://www.goodreads.com/book/show/52290273-the-future-is-faster-than-you-think) by selling it as web
+services. Of course, most of them are just wrappers of one of the models the 4-10 companies that abused public content
+to train them offer. Putting into words the best application for the common folk of how can large language models help
+them, [Griftonomics: Why Scams are Everywhere Now](https://youtu.be/2bq3SdfzcA4), (Tom Nicholas, 2023-07-31) describes
+the rise of the class of "work" focused on one thing only: creating cash from as little actual work as possible — the
+passive income. These are minimalist, trying to reduce the target revenue, the FIRE movement, trying to reduce the years
+needed working, the productivity gurus improving your every process and digital nomads reducing their costs by moving to
+a cheaper country where your money can get you a higher-end lifestyle. Where does generative AI fits in this story?
+Well, the latest spin on all this schemes reveals how useful in not being useful ChatGPT and analogues are by aiming at
+creating content, ads, marketing messages, books to self-publish, pictures to (ironically) self-publish and not have any
+limits in the amount pushed onto platforms.
+
+The carrot at the end of the stick spells money, even though most people promoting these strategies are
+[not making money from applying them](https://youtu.be/biYciU1uiUw), but from selling the strategies themselves, either
+in the form of gathering attention and leveraging their following or by access to courses and communities. The money
+comes from automated ads (platforms that share a piece with their posters) or affiliate links to products that might
+help you on your journey to become your own boss! Back to those communities, they are aimed at implementing the
+strategies and supporting each other for the older members to gather the traction while explaining the practicalities to
+the ... newer. Wait a minute, it's a Ponzi! LLMs are perfect for ponzies, you don't have to even talk with a ghostwriter
+on a sketchy website and pay them _ so much money _ (under a livable wage) as a one-time fee! You can just pay a premium
+to OpenAI and engineer your prompt over and over and hey, here's a chapter! Publish under a pseudonym and you're done
+for your 4-hour workweek. Time for the beach! Hell, if you have an actual product, bam, now you have so much content at
+your fingertips you can dethrone all your competitors on the SEO game. You don't even need to worry about competition,
+if they're more established or trustworthy. Pull an
+[SEO heist](https://www.businessinsider.com/seo-heist-ai-generative-artificial-intelligence-google-2023-12) using AI
+content to retarget all their in-house domain URLs. They're down, you're up, and all the new buyers are yours for the
+taking!
+
+While **grifting** does not refer to actual illegal financial scams, it lives in the gray area at the intersection of
+unregulated and unethical activities. This is not Theranos, but it's not brick-and-mortar either. Is AI grifting
+everything that is going to be remembered after the hype is over? Not quite...
+
+## the ruins ahead of the tarnished
+
+A notable video recently gained some popularity on the topic —
+[AI is ruining the internet](https://youtu.be/UShsgCOzER4) by Drew Gooden and its many reactions and replies. While
+being only half an hour long, it is packed with various threads that we'll try to unravel for a more down-to-Earth,
+non-technical view of the space. The first and probably the most notable idea is that "_[...] the distance between what
+was happening 2 years ago to currently is orders of magnitude shorter than from the current state of gen-AI to something
+that is life-like and believable_". This tends to be the general consensus between technical experts actually. We are
+closing up on the [limits of the available data](https://arxiv.org/pdf/2211.04325) for the current architectures
+(multi-modal architectures require [exponentially more data](https://arxiv.org/abs/2404.04125) for linear improvements)
+and they are fundamentally flawed for the tasks they are promised to solve. However, the current hyper-focused models
+show promise and enough attention, money and research is being poured into the domain to seed future generations of
+much-different AI systems, maybe in the form of "safe super intelligence" (but not from
+[Safe SuperIntelligence Inc.](https://ssi.inc/), because they currently come with their credibility and background only).
+
+"_Any argument on the quality of the generated content will be invalid at some point_"
+([this reply](https://youtu.be/zop3HAQ72a8)). This is a biased view as it takes for granted, like most of the software
+space, that all problems are solvable and there is an infinite potential growth. We'll tackle this point later in more
+detail.
+
+"_Nobody outside the entertainment industry ever cared about copyright_" ([this reply](https://youtu.be/zop3HAQ72a8)).
+We consider this to be false, one particular group that cared was that of software engineers. Their failure to prevent
+breaking copyright and protect the spirit of open-source was letting the first version of GitHub Copilot
+[get away](https://githubcopilotinvestigation.com/) with training on public copyleft code. This was the green flag for
+all following models to be released after they already used licensed data. Their failure to push for copyleft adoption,
+their failure to keep up with technological development trends and update licenses to protect against being turned into
+datasets is going to be seen as the biggest stain on the FOSS movement's history. Of course, in the end, Microsoft
+[claims it has fair use rights on everything that is public on the internet](https://www.xda-developers.com/microsoft-claims-okay-train-ai-models-online-content-fair-use/),
+and even on pages which tell crawlers they should only scan the content for indexing and not training, waiting for
+courts to decide after the fact. We, of course, do not agree. How dare Mustafa Suleyman invoke terms such as
+"[social contract](https://www.theverge.com/2024/6/28/24188391/microsoft-ai-suleyman-social-contract-freeware)"?
+Rousseau would laugh at such a simpleton twisting his words: the social contract implies that both party offer something
+for the better functioning of society. I have not seen any legal contracts binding Microsoft's AI division to offer free
+services to all bureaucracies and students around the world as a return to them getting their training data for free!
+Well, they never had a track record of not abusing the world
+[whenever possible](https://en.wiktionary.org/wiki/embrace,_extend_and_extinguish). We are not the only ones to disagree
+— neither do [a nonprofit](https://www.motherjones.com/press-releases/cir-sues-openai/), a little newspaper called the
+[New York Times](https://www.nytimes.com/2023/12/27/business/media/new-york-times-open-ai-microsoft-lawsuit.html),
+actually [eight newspapers](https://www.nytimes.com/2024/04/30/business/media/newspapers-sued-microsoft-openai.html),
+[Forbes](https://www.forbes.com/sites/randalllane/2024/06/11/why-perplexitys-cynical-theft-represents-everything-that-could-go-wrong-with-ai/),
+[Wired](https://www.fastcompany.com/91144894/perplexity-ai-ceo-aravind-srinivas-on-plagiarism-accusations), the
+[French government](https://arstechnica.com/tech-policy/2024/03/google-to-pay-270m-after-secretly-training-ai-on-french-publishers-content/),
+even [Reddit](https://www.engadget.com/reddit-puts-ai-scrapers-on-notice-205734539.html) who is so ready to license
+their user data over and over for AI training. After all, sometimes AI unicorns can license or even pay for their data
+(maybe retroactively, after they have been judicially threatened), as they did with
+[TIME](https://openai.com/index/strategic-content-partnership-with-time/),
+[StackOverflow](https://stackoverflow.co/company/press/archive/openai-partnership),
+[Financial TImes](https://openai.com/index/content-partnership-with-financial-times/).
+
+One type of free promotion that AI companies have access to is news websites and individual promoters praising them any
+time they release anything under the guise of a free and open source license (FOSS). However, that is more often than
+not just a strong marketing move and a way to protect themselves from regulator scrutiny and avoid investing in complex
+technical analysis to be able to comply with corporate-level strictness imposed by the EU AI Act (et co.). This
+regulation gives unspecified exemptions for models which are released under FOSS, which is well intentioned, but largely
+a mistake. This [2024 paper](https://pure.mpg.de/rest/items/item_3588217_2/component/file_3588218/content) comes in
+handy in describing they open-washing big corporate entities (like Meta and Mistral) undergo by releasing runtime
+scripts and model weights, but no training scripts, training data, architecture description, scientific papers, analysis
+of the learning process, versioned code or even public access (Meta holding Llama behind a "privacy defying sign-up
+form").
+
+It is only shocking to have clones of one's character when it happens to you. [character.ai](https://character.ai/) is
+probably one of the most shocking and useless consequences of language models. By training on content that has been
+posted publicly, gaming lines, voicelines, YouTube videos and anything present in large enough quantities, they offer
+the chance for you to chat, private-messaging style, with fictional characters or digital "clones" of real people. In
+the most eerie [reaction video](https://youtu.be/jLJWYFV-VTI) to the one in question, we get a glimpse of how shocking
+this can be and have some semblance of identity crisis when a "character" representing yourself claims to be your
+identity. From the melange of sandboxing restrictions, prompting and the caustic style of the public persona of the
+streamer in question, an aggressive, depressed, attention seeker parrot has been born, who has no understanding of the
+real world and no agency for that fact (they cannot stop conversing with you because that is their only purpose). Would
+you want to talk to a "self" trained on your private texts? On your drone work emails? On your Discord messages? On the
+inferences of your likes on a clickbait visual platform (Instagram/TikTok/YouTube)?
+
+"There is no way to stop or regulate this." That is indeed true, putting the genie back in the bottle without incentives
+changing is not possible, and outlawing some practices will move the supply to other countries or outside the purview of
+the law. As it's apparent to everyone, deepfakes are between frowned upon to illegal depending on where you live, but
+they are still used to extort the reputation or emotionally damage people, leading up to
+[teen suicide](https://metro.co.uk/2024/01/24/teen-took-life-online-bullying-shared-fake-nudes-20162284/). Grifting from
+cheap AI content is not undesireable because it uses AI, but because it is grifting. Adding LLMs into the mix raised the
+quality bar for spam, scams and content manipulation, and it only makes it more effective (read: dangerous), as people
+are only numb to the low quality, human-written version.
+
+"What is the purpose of this?" Why do we have people releasing low quality audio on Spotify, low quality images and
+videos on stock footage websites, why does Adobe say they will
+[increase efficiency](https://news.adobe.com/news/news-details/2023/Adobe-Unveils-Firefly-a-Family-of-new-Creative-Generative-AI/default.aspx)
+and "give all creators superpowers to work at the speed of their imaginations"? The answer is double: the cost
+apparently seems to be zero because the
+[externalities are moved to the global south](https://ia801400.us.archive.org/12/items/work-without-the-worker-labour-in-the-age-of-platform-capitalism-by-phil-jones-2021/Work%20Without%20The%20Worker%EF%BC%9ALabour%20In%20The%20Age%20Of%20Platform%20Capitalism%20by%20Phil%20Jones%20%282021%29.pdf),
+nobody counts climate effects in the costs of building the hardware or running the tech and the free market was never
+built to equate labor with pennies. Quite often it's raw materials and human labor which are the most expensive in a
+supply chain (and they could arguably be valued much higher to reduce both poverty and
+[planetary boundary damage](https://www.stockholmresilience.org/research/planetary-boundaries.html)), and if you devalue
+both, then the system does not work. The problem is not AI per se, but AI is one supercharged acceleration of the
+symptoms.
+
+## no risk, no reward. all risk, no reward
+
+Somehow, the problem is larger than ever shifting sands, with
+[terms of service changes to allow for AI training](https://www.nytimes.com/2024/06/26/technology/terms-service-ai-training.html)
+lately being as common as terms of service changes themselves. After public backlash,
+[Adobe tweaked their terms a second time](https://www.theverge.com/2024/6/18/24181001/adobe-updated-terms-of-service-wont-train-ai-on-work)
+to confirm it will not use local or cloud customer content to train generative AI. Although, considering the online
+public response, more likely they changed their minds because people started closing their accounts en masse, not for
+the good of their copyright-respecting heart. In other creative news, Figma's tool to generate UIs, Make Designs, was
+[pulled back into its unreleased beta](https://www.theverge.com/2024/7/2/24190823/figma-ai-tool-apple-weather-app-copy)
+after it has shown it quite literally copied Apple app designs. They claim it was not trained on those, so it must have
+been one of their two actual providers, Amazon or OpenAI. Isn't it nice to just be a failure-prone wrapper of ChatGPT?
+Anyway, they don't shy away from training on user data, and one must choose to opt out if they're not on company plans
+by August 15th. You might pay to Figma, but they feel they deserve more. Glad to see they learned such strategies during
+the temporary acquisition period from their foster parent and
+[king of dark patterns](https://www.ftc.gov/news-events/news/press-releases/2024/06/ftc-takes-action-against-adobe-executives-hiding-fees-preventing-consumers-easily-cancelling),
+Adobe.
+
+The **real risks** are societal change birthed by this potent, but mediocre tool for confusion.
+[AI on presidential elections](https://www.inc.com/kit-eaton/dont-trust-ais-on-copilot-chatgpt-misinfo-on-first-presidential-debate-swirled.html)
+spreads lies by claiming there was a 1 to 2 minute delay in the CNN transmission of the 2024 presidential debate used
+for correcting and clipping facts. That can't be good in a country where in the latest decade the elections have been
+claimed to have been stolen by both parties.
+[Questionable US local new sites](https://edition.cnn.com/2024/05/30/media/ai-bylines-local-news-hoodline/index.html)
+with AI written content about local events, claiming to be just using AI writing tools while having dozens of editors
+and journalists. And if those empty promises are not enough, a
+[BBC investigation](https://www.bbc.com/news/articles/c72ver6172do.amp) reveals that there are dozen English-language
+high-profile stories targeting influencing American politics, written on fake news websites masquerading as local
+newspapers (Who doesn't read the _Boston Times,_ after all?). They claim that only Russian influence can back up such an
+extensive effort, but I tend to believe any group of non-English native energy-drinks-pumping trolls could do the same,
+considering the access to low-safeguards models which can spit generous quantities of text and images once you've
+prompt-engineered them.
+
+Just like it has been said that Meta
+[knew the risks](https://www.nytimes.com/2023/11/25/technology/instagram-meta-children-privacy.html) when changing
+social media algorithms against teenagers, a paper from Google outlines new ways Generative AI can damage the current
+societal landscape
+
+> Our data shows that GenAI tools are primarily exploited to manipulate human likeness (through Impersonation [...]) and
+> falsify evidence. The prevalence of these tactics may be due to the fact that sources of human data (e.g. images,
+> audio, video) abound online, making it relatively easy for bad-faith actors to feed this information into generative
+> AI systems. However, it is also possible that these types of misuses simply attract more media attention than others,
+> due to their broad societal impact. These cases of misuse primarily aimed to shape public opinion, especially through
+> defamation and manipulation of political perceptions, and to facilitate scams, fraud and quick monetization schemes.
+
+[Generative AI Misuse: A Taxonomy of Tactics and Insights from Real-World Data](https://arxiv.org/pdf/2406.13843), 2024-06-05
+
+Likely the problem is that these organizations are so large that, while plenty of skilled, ethical researchers are on
+their payroll, the leadership is slowly moving away from asking for assessments from them to asking confirmation for
+their own ideas. Funnily enough, this sounds similar to how a regular person ends up excessively using an AI chatbot.
+For example, Eric Schmidt (former Google CEO) shows his lack of understanding of the scientific process in a 2023
+statement and assumes that the next-word prediction capabilities is much akin to predicting the next scientific
+discovery in physics or biology. The article going into the problem says it best:
+
+> If you know the facts, you don’t need an LLM. If you don’t know the facts, you can’t trust an LLM.
+
+[AI can't replace science](https://www.fastcompany.com/91146281/why-ai-wont-swallow-science)
+
+Yes, [science](https://www.experimental-history.com/p/science-is-a-strong-link-problem) has a problem, but it's not in
+the scientific process, but in
+[the academic one](https://www.experimental-history.com/p/the-rise-and-fall-of-peer-review). AI will at most help
+surface unknown papers in an industry where papers are being written at a neck-breaking pace.
+[Sabine Hossenfelder considers](https://youtu.be/xm1B3Y3ypoE?si=gqKYovwdKGQvb4Tw&t=351) there is a lot of wasted
+knowledge in these papers which do not end up being read by the relevant people in their field. Hopefully not the
+[paper](https://quantum-journal.org/papers/q-2023-09-14-1112/) where authors think about putting a general artificial
+intelligence which does not exist on a universal quantum computer which does not exist to prove that reality does not
+exist (metaphysics has always been a good topic for tea time and philosophical discussion, but "experimental
+metaphysics" makes my skin crawl). But enough of fly-high for now. Okay, maybe one more thing. When the professor starts
+the lecture supporting the paper above, they say "Okay, we should do some physics!", to which we could not agree more.
+
+Another example of predicting infinite scale by current trends is in expecting each model training will reach the scale
+of 100GW electrical power by 2030 (approx 20% of the US grid power at the current moment, according to the author and
+[Our world in data](https://ourworldindata.org/grapher/electricity-generation)). That is, when electricity generation is
+predicted to rise by 5.4% (7.6% if high economic growth) in the US and 12.3% (16.8% if high economic growth) worldwide
+[by 2030](https://www.eia.gov/outlooks/ieo/data.php), according to the International Energy Outlook 2023 report, by the
+US Energy Information Administration. And, of course, that results into an $8T annual investment prediction, which is a
+measly 16% of the current total value of the US stock market. Per year, every year after that point. Honestly, it would
+be a fun time to go through all the levels of this "AGI-pilled" (author's words) document and make bets on how many
+counts it sounds like vaporware.
+
+> American big business is gearing up to pour trillions of dollars into a long-unseen mobilization of American
+> industrial might.
+
+Leopold Aschenbrenner, [SITUATIONAL AWARENESS](https://situational-awareness.ai/wp-content/uploads/2024/06/situationalawareness.pdf)
+
+There is probably no more damning counter-evidence than Goldman Sachs'
+[latest report](https://www.goldmansachs.com/intelligence/pages/gs-research/gen-ai-too-much-spend-too-little-benefit/report.pdf)
+titled "Gen AI: Too Much Spend, Too Little Benefit?", outlining how the AI preachers have "so far little to show for
+it", touching and disagreeing basically on the exact points invoked by Aschenbrenner
+
+> We are very sympathetic to Acemoglu’s argument that automation of many AI-exposed tasks is not cost effective today,
+> and may not become so even within the next ten years. [...] adoption rates are likely to remain below levels necessary
+> to achieve large aggregate productivity gains for the next few years
+
+## the human price for artificial promises
+
+The selling point of AI-powered recruitment tools is that AI can quickly review a large number of job applications and
+find the best match, even from non-traditional backgrounds. However, while AI is capable of quick reviews, it can also
+perpetuate existing biases or introduce new ones, essentially enabling
+[discrimination on a large scale](https://www.technologyreview.com/2018/10/10/139858/amazon-ditched-ai-recruitment-software-because-it-was-biased-against-women/).
+Hilke Schellmann, the author of "The Algorithm: How AI Decides Who Gets Hired, Monitored, Promoted, and Fired and Why We
+Need to Fight Back Now," did a study on recruitment tools that claimed to identify ideal candidates without bias and
+more efficiently than human recruiters. [The study](https://link.springer.com/article/10.1007/s10618-022-00861-0) found
+that none of the tools lived up to these claims, and the companies behind the tools didn't understand how their
+technology worked or how AI made decisions about candidates. For example, she tested video interviewing software that
+identified her as a good fit for a role, even when she repeated the phrase “I love teamwork” or spoke entirely in
+German.
+
+> a job seeker could reasonably conclude from the present audit that _Humantic AI_ and _Crystal_ are both likely to
+> judge their job-worthiness unfairly, letting meaningless criteria dictate their outcomes
+
+The rush on automating as many hiring situations as possible shows the importance the employer puts on the candidates
+and the future employee. Someone with choices will see this as a complete disregard of their time and the skills they
+are promoting, while someone without will be forced to take part in a power play against a machine that lacks both
+understanding and empathy. I don't know about others, but if I see [micro1](https://www.micro1.ai/gpt-vetting)'s
+(possibly the only name worse than microsoft) unresponsive, cold, dystopian, artificial face in my interview call,
+I'd instantly close the call. If you don't care for the interview, don't interview me, just give me the job.
+
+Many companies developing HR tools are currently riding the AI-hype train and making money by selling false promises of
+a better, fairer world. In the midst of this, it's important to consider the role of humans in the process. Recruitment
+heavily relies on human judgment for factors like cultural fit and soft skills, which can be difficult for AI to
+accurately evaluate. For instance, simply stating "I love teamwork" can earn a high score in an AI interview, but human
+recruiters typically will ask for more evidence. Additionally, AI lacks a full understanding of the context required to
+effectively assess candidates (god forbid you have a gap in your CV during Covid years, _you lazy couch potato_).
+
+## in the jungle, the mighty jungle, the agent sleeps tonight
+
+What is the difference between interacting with internet trolls who do not care about anything but being infuriating on
+any type of post, be it harmless self-promotion to social activism, and a hive of automatic bots which create and
+comment on forum posts? How long until the meaninglessness of this becomes too oppressive even for the most
+self-absorbed narcissist of us?
+
+[Ed Zitron](https://www.wheresyoured.at/about/), tech journalist, states a few observations in one recent
+[interview](https://youtu.be/T8ByoAt5gCA), like how Facebook has become a product that has deteriorated so much that it
+isn't clear if accounts responding to posts are real, that much of the engagement is around fanatical or scam content
+and that the demographic is severely shifted to only the oldest of the internet users whose experience online feels
+eerie indifferent of content. This is present too in Drew Gooden's video mentioned in the previous section, but we dare
+people with Facebook accounts to try to deny this by scrolling the main feed. Just kidding, wouldn't want anyone to get
+hurt by going to Facebook. Furthermore, Zitron claims a central cause is the incentive of anything in the investor tech
+space that can be classified as a platform — the proof of usage is not as important as the proof of infinite growth:
+Google shows that people have more queries (although that could show it takes them more searches to find answers),
+Facebook reports FDAP,
+[family daily active people](https://investor.fb.com/investor-news/press-release-details/2023/Meta-Reports-Fourth-Quarter-and-Full-Year-2022-Results/default.aspx)
+(this would rock as a punk band name). Anything for them to say that **line goes up**. And just like crypto before it,
+generative AI is the current vehicle for hype, and unlike crypto, AI has its uses and the feel of the future, according
+to Zitron — "people investing in it can't even show what it does today, so they have to talk about the future".
+
+[The Dark Forest Theory of the Internet](https://youtu.be/VXkDaDDJjoA) (also in
+[text form](https://maggieappleton.com/ai-dark-forest), Maggie Appleton, 2023, and the
+[original idea](https://ystrickler.medium.com/the-dark-forest-theory-of-the-internet-7dc3e68a7cb1)) proposes that we are
+currently in a process of dilution of internet spaces where everything feels more realistic at a certain level but is
+less life-like in the big picture. The democratization of generative AI and access to them as automated services lead
+to non-human AI constructs interacting on content that is not generated by humans to give the semblance of living
+platforms and squeeze every last drop of interaction from the individuals using it. We could embrace it and join
+[Butterflies](https://techcrunch.com/2024/06/18/former-snap-engineer-launches-butterflies-a-social-network-where-ais-and-humans-coexist/),
+the social network where AIs have accounts and you can "coexist" with them. Yes, it was built by an engineer from Snap,
+because one social experiment / misused sexting platform was not enough. And yes, it is their personal experiment
+sandbox to study humans. Quick, if we don't stop this, the engineers at snap might become human!
+
+> At Snap, I did a lot of user research, but the behavior on Butterflies is just so new.
+
+[Vu Tran](https://techcrunch.com/2024/06/18/former-snap-engineer-launches-butterflies-a-social-network-where-ais-and-humans-coexist/), 2024-06-18
+
+The only protection against these digital predators and way to recognize fellow humans will be relegated in a sub-refuge
+of lingo and internet culture jargon, under the name of the Reverse Turing Test. AI agents are seen to be encroaching
+on the free internet communication and, more generally, on the perceived library of knowledge it has been perceived as
+so far, and people will slowly move to more isolated spaces, silos of private communication making true knowledge
+dissemination impossible while common culture is partitioned in these spaces. One won't be able to use personality 3
+with group friend 4 not because they will see you as a different person, but because they will see you as a non-person,
+an AI agent infiltrating their bubble of human. This is just a grim description of something already in progress, as
+more and more content online is AI generated. At this point, at least the chronically online groups start signaling they
+feel more and more anonymous comments to be regurgitating ideas, be off-topic or repeat someone else's comment. In the
+latter case, they're getting boosted by the algorithms when gaining engagement from the network they are part of, thus
+shadowing the original poster.
+
+## wait, we're prisoners?
+
+That's quite a [dilemma](https://en.wikipedia.org/wiki/Prisoner's_dilemma), one might say. If nobody buys into current
+generative AI technology, it's business as usual. If only the ones you are interacting with are taking that approach
+head on, they might incur a monetary loss (the subscription price to Big Tech and especially Big Hardware) and a time
+loss in using it, but then you suffer the bigger challenge.
+
+- If you're in recruitment, you get flooded by bland, ineffective and unverified resumes that do not fit your search for
+  candidates. If you're applying to jobs, the competition for online application has increased (see previous sentence)
+  and the ads have been getting longer and longer. No,
+  [Katherine](https://www.linkedin.com/pulse/using-chatgpt-write-job-applications-katherine-street/), we do not want to
+  read 1000 words of meaningless criteria for a job that will require you to add data into a spreadsheet!
+- If you're in entertainment arts, the idea of copyright being
+  [a joke for OpenAI's CTO](https://fortune.com/2024/04/04/openai-youtube-clear-violation-terms-service-ai-sora-training/)
+  is not a good omen and you have to spend so much time reporting theft, try to make your art include what can only be
+  considered as an anti-gen-AI virus against the current generation, or hell, make it ephemeral and nobody will remember
+  you because if it's one-time experience, you essentially have no voice in a world of platforms.
+- If you're in open-source, you get all the helpful script kiddies in your issues trying to gain those bug bounties and
+  show how helpful they are (_please pay right here_), but even the
+  [conversations are automated and nonsensical](https://daniel.haxx.se/blog/2024/01/02/the-i-in-llm-stands-for-intelligence/)
+  and drive me **insane**. Seriously, let the curl people alone, they have
+  [real CVEs](https://curl.se/docs/CVE-2023-38545.html) to fix!
+- If you're just trying to use the internet in the way that it gained the appreciation of a whole generation and
+  actually go down a rabbit whole of unspecific knowledge, sike, now you can't. There is a
+  [tsunami of science spam](https://youtu.be/McM3CfDjGs0) (as science communicator Kyle Hill underlines) of fully
+  generated videos, with regurgitated scripts, audio, clickbait thumbnails and stolen background footage that is not
+  licensed and which gain the more views than original posters. They spread disinformation, misinformation, outright
+  lies, pseudoscience, mysticism and reheated conspiracy theories wrapped into a coat of pseudo-scientific lingo and
+  are made by the powerful advancements of AI, used in cheap-electricity countries. But YouTube, as the prime long-term
+  content-platform that thrives on advertising, has no problem with letting them parasitically thrive and waste
+  everyone's time and [confuse kids](https://www.youtube.com/watch?v=GdJKwrUxDiU). That's why we can't have nice things.
+- ... (We should stop before somebody's mind explodes with nonsense)
+
+And finally, the worst outcome, if we all play the game and jump on the bandwagon now, we get the trifecta of
+"what have we done?". Most companies which do not have a clear cut usage for AI (read as: the overwhelming majority of
+all companies) have made a time or money investment and a people divestment that can hardly be added in the
+"amortization" column of the financial sheet before they go belly up. Most proponents who started businesses based on
+somebody else's AI finally found out that attitude is not going to be enough when you go from being a
+[wrapper to being an integrated feature of the OpenAI's suite](https://www.businessinsider.com/chatgpt-wrapper-startup-founders-see-risks-of-openai-2023-11).
+Most people which started using AI to save time in communication, because they were bad at communication incentivized
+the people they were communicating with to also use AI to cope with this verbosity so now Zoom has proposed everyone
+should [send their AI clone on meetings](https://www.theverge.com/2024/6/3/24168733/zoom-ceo-ai-clones-digital-twins-videoconferencing-decoder-interview)
+to talk to other AI clones. (This last one is so hilariously out of touch with reality that even theoretical physicist
+usually rambling about string theorists [dropped their hat in](https://youtu.be/dKmAg4S2KeE) the exhausting ring to
+complain. Fortunately, Zoom is nowhere near finding out what that would even entail that we shouldn't need to think
+about it for a while). Hope you did not sign the right of attorney yet, bucko! Rich getting richer, poor getting poorer,
+the middle class paying for it all.
+
+## fire round
+
+Before we get to a proper ending, let's quickly go through a few more problems with how AI chatbots are being marketed
+and used right now. First off, integrating any product, especially one as complex as this, into every facet of
+technology is inherently unsafe. This is not a core computer primitive, this is using the network to call into the
+system of companies with fast turnover, without the guarantee they will be in the same business or in any business at
+all in six months and with a set of workers who are researchers, not system administrators or cybersecurity experts.
+The [ChatGPT Mac app stored chats in plaintext](https://www.macrumors.com/2024/07/04/chatgpt-mac-app-stored-chats-plain-text/)
+for the convenience of no one. MacOS is not sandboxed like the iOS, so any other running process was able to read the
+contents. Microsoft [promises to fix the security issues in the upcoming Windows Recall feature](https://www.windowscentral.com/software-apps/windows-11/microsoft-addresses-windows-recall-backlash-promises-to-fix-security-issues-and-make-it-opt-in)
+as a result of the online backlash of the cybersecurity and privacy advocates communities. Hopefully, they'll fix it by
+dropping the feature. There has been a strong public backlash against Windows Recall, but nothing like it for Apple's
+and Google's public statements of integrating AI at the OS level on mobile devices. This does not tell much about the
+trust the public has in this duopoly (although Cupertino has tried really hard to have a hardened, safer system as a
+first option), but it does show how much distrust there is in Microsoft. So why would we believe the horse they back
+(OpenAI) is going to be the safest option? From the company whose CEO finally decided in
+[May 2024](https://blogs.microsoft.com/blog/2024/05/03/prioritizing-security-above-all-else/) to "prioritize security
+above all else". But who offers security (forensics for tracking infiltration in their systems) only for an extra
+price... to [government agencies](https://www.reuters.com/technology/microsoft-under-fire-after-hacks-us-state-commerce-departments-2023-07-13/)?
+Case in point, [OpenAI got their internal chat system hacked](https://www.tomshardware.com/tech-industry/artificial-intelligence/openai-was-hacked-revealing-internal-secrets-and-raising-national-security-concerns-year-old-breach-wasnt-reported-to-the-public),
+and of course they did not share that to the public, and even dismissed Leopold Aschenbrenner's security concerns
+(their "AI-pilled" technical program manager)
+
+> But AI companies represent a newer, younger, and potentially juicier target than your garden-variety poorly configured
+> enterprise server or irresponsible data broker. Even a hack like the one reported above, with no serious exfiltrations
+> that we know of, should worry anybody who does business with AI companies. They’ve painted the targets on their backs.
+> Don’t be surprised when anyone, or everyone, takes a shot.
+
+Devin Coldewey, [OpenAI breach is a reminder that AI companies are treasure troves for hackers](https://techcrunch.com/2024/07/05/openai-breach-is-a-reminder-that-ai-companies-are-treasure-troves-for-hackers), 2024-07-05
+
+Finally, you might have seen flying around ads for AI models to be used by artists to protect their art being trained
+upon by other AI models, such as Midjourney. Well, they only momentarily work. Talking about Glaze, one such project,
+the paper
+[Adversarial Perturbations Cannot Reliably Protect Artists From Generative AI](https://arxiv.org/abs/2406.12027) makes
+it clear that these are patched solutions and once the digital visual art is on the Internet, it cannot be protected
+from all future training attempts.
+
+> Glaze defense that aims to protect artists from having their images used to train machine learning models. This is a
+> noble goal. Unfortunately, the approach that Ben is taking is fundamentally flawed. [...] Once someone has published
+> their adversarially noised images, they've lost control of them---they can't update them after that
+
+Nicholas Carlini, [Why I attack](https://nicholas.carlini.com/writing/2024/why-i-attack.html), 2024-06-24
+
+These being the conditions, there isn't an easy way to trust the implementation itself. These are the same reason
+technical machine learning enthusiasts are looking for specialized hardware capable to run models at home, be trained
+on private data, but disconnected from the outside network.
+
+## now what?
+
+One really helpful action you should take is to read and understand
+[a checklist of eighteen pitfalls in AI journalism](https://www.cs.princeton.edu/~sayashk/ai-hype/ai-reporting-pitfalls.pdf).
+If you go through this list while reading AI-related journalism and press release announcements, you'll be able to
+discern potential problems and not fall for the more obvious scams. While one cannot claim lack of performance without
+testing a tool, looking into what the tool is for and how it's presented might change your approach to building your
+expectations about it.
+
+While it has been said already that "Generative AI is the nuclear bomb of the information age"
+([source](https://youtu.be/PaVjQFMg7L0)), I think it's quite more. After all, even if the nuclear arsenal of all dozen
+countries who have had access to them went over tens of thousands in number, it was not accessible through automation
+for every person with internet, time and a couple hundred of their preferred denomination. The scale of the problem
+created by unfettered access to flawed tools which could have stayed in research papers. After all, even if the code was
+available, nobody outside the scientific community had real interest for many years.
+
+Generative AI is not dangerous because it is the promised powerful tool, but because it isn't. Opportunists latch on a
+trend because they can show something for it and then make the same promises that have been in the pitch decks since
+Big Data was in the hype cycle. After all, it never was about the process technology, but about the data. Don't be
+fooled by empty promises, be critical when there is not a clear link between problem and solution or when the only
+purpose of such applications is to externalize work from some workers to some other, worse paid, "subcontractors".
+
+As a final request, take a look at your data trail. Do you want all these tools reading your email? Do you want any and
+all data scientists, engineers, students or gig-workers doing data annotation and content moderation to have access to
+your texts, library of images, interview transcripts, code and creative work? Because not only they can, but they need
+to, such that they can do their job in the pipeline of creating a product like the ones described. If the models end up
+duplicating your content, add any customers they have to the mix. Please take your privacy seriously, decide against
+posting content when it doesn't need to, move to a fully-encrypted, private storage or at least flip a few knobs in your
+cloud digital rent-seeking provider.
+
+And welcome to the dark forest, we have cookies 🍪🍪!
