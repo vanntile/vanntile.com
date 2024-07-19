@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.5.3](https://github.com/vanntile/vanntile.com/compare/v4.5.2...v4.5.3) (2024-07-19)
+
+
+### Bug Fixes
+
+* **typos:** :bug: fix some typos and formatting in the AI rant ([7d604d6](https://github.com/vanntile/vanntile.com/commit/7d604d68271200460a9b93b31feba45f86414e7b))
+
 ### [4.5.2](https://github.com/vanntile/vanntile.com/compare/v4.5.1...v4.5.2) (2024-07-16)
 
 ### [4.5.1](https://github.com/vanntile/vanntile.com/compare/v4.5.0...v4.5.1) (2024-06-16)
