@@ -1,0 +1,2860 @@
+.shiki-0-fg { color: var(--dynamic-shiki-0-fg) }
+.shiki-0-fs { font-style: var(--dynamic-shiki-0-fs) }
+.shiki-1-fs { font-style: var(--dynamic-shiki-1-fs) }
+.shiki-2-fg { color: var(--dynamic-shiki-2-fg) }
+.shiki-2-fs { font-style: var(--dynamic-shiki-2-fs) }
+.shiki-3-fs { font-style: var(--dynamic-shiki-3-fs) }
+.shiki-4-fg { color: var(--dynamic-shiki-4-fg) }
+.shiki-5-fg { color: var(--dynamic-shiki-5-fg) }
+.shiki-6-fg { color: var(--dynamic-shiki-6-fg) }
+.shiki-7-fg { color: var(--dynamic-shiki-7-fg) }
+.shiki-8-fg { color: var(--dynamic-shiki-8-fg) }
+.shiki-9-fg { color: var(--dynamic-shiki-9-fg) }
+.shiki-10-fg { color: var(--dynamic-shiki-10-fg) }
+.shiki-11-fg { color: var(--dynamic-shiki-11-fg) }
+.shiki-12-fg { color: var(--dynamic-shiki-12-fg) }
+.shiki-13-fg { color: var(--dynamic-shiki-13-fg) }
+.shiki-14-fg { color: var(--dynamic-shiki-14-fg) }
+.shiki-15-fg { color: var(--dynamic-shiki-15-fg) }
+.shiki-16-fg { color: var(--dynamic-shiki-16-fg) }
+.shiki-16-fs { font-style: var(--dynamic-shiki-16-fs) }
+.shiki-17-fg { color: var(--dynamic-shiki-17-fg) }
+.shiki-18-fg { color: var(--dynamic-shiki-18-fg) }
+.shiki-19-fg { color: var(--dynamic-shiki-19-fg) }
+.shiki-19-fs { font-style: var(--dynamic-shiki-19-fs) }
+.shiki-20-fg { color: var(--dynamic-shiki-20-fg) }
+.shiki-21-fg { color: var(--dynamic-shiki-21-fg) }
+.shiki-22-fg { color: var(--dynamic-shiki-22-fg) }
+.shiki-23-fg { color: var(--dynamic-shiki-23-fg) }
+.shiki-24-fg { color: var(--dynamic-shiki-24-fg) }
+.shiki-24-fs { font-style: var(--dynamic-shiki-24-fs) }
+.shiki-25-fg { color: var(--dynamic-shiki-25-fg) }
+.shiki-26-fg { color: var(--dynamic-shiki-26-fg) }
+.shiki-27-fg { color: var(--dynamic-shiki-27-fg) }
+.shiki-27-fs { font-style: var(--dynamic-shiki-27-fs) }
+.shiki-28-fg { color: var(--dynamic-shiki-28-fg) }
+.shiki-29-fg { color: var(--dynamic-shiki-29-fg) }
+.shiki-29-fs { font-style: var(--dynamic-shiki-29-fs) }
+.shiki-30-fg { color: var(--dynamic-shiki-30-fg) }
+.shiki-30-fs { font-style: var(--dynamic-shiki-30-fs) }
+.shiki-31-fg { color: var(--dynamic-shiki-31-fg) }
+.shiki-31-fs { font-style: var(--dynamic-shiki-31-fs) }
+.shiki-32-fg { color: var(--dynamic-shiki-32-fg) }
+.shiki-33-fg { color: var(--dynamic-shiki-33-fg) }
+.shiki-33-fs { font-style: var(--dynamic-shiki-33-fs) }
+.shiki-34-fg { color: var(--dynamic-shiki-34-fg) }
+.shiki-35-fg { color: var(--dynamic-shiki-35-fg) }
+.shiki-36-fg { color: var(--dynamic-shiki-36-fg) }
+.shiki-37-fg { color: var(--dynamic-shiki-37-fg) }
+.shiki-37-fs { font-style: var(--dynamic-shiki-37-fs) }
+.shiki-38-fg { color: var(--dynamic-shiki-38-fg) }
+.shiki-39-fg { color: var(--dynamic-shiki-39-fg) }
+.shiki-40-fg { color: var(--dynamic-shiki-40-fg) }
+.shiki-41-fg { color: var(--dynamic-shiki-41-fg) }
+.shiki-42-fg { color: var(--dynamic-shiki-42-fg) }
+.shiki-43-fg { color: var(--dynamic-shiki-43-fg) }
+.shiki-44-fg { color: var(--dynamic-shiki-44-fg) }
+.shiki-45-fg { color: var(--dynamic-shiki-45-fg) }
+.shiki-46-fg { color: var(--dynamic-shiki-46-fg) }
+.shiki-47-fg { color: var(--dynamic-shiki-47-fg) }
+.shiki-48-fg { color: var(--dynamic-shiki-48-fg) }
+.shiki-49-fg { color: var(--dynamic-shiki-49-fg) }
+.shiki-50-fg { color: var(--dynamic-shiki-50-fg) }
+.shiki-50-fs { font-style: var(--dynamic-shiki-50-fs) }
+.shiki-51-fg { color: var(--dynamic-shiki-51-fg) }
+.shiki-51-fs { font-style: var(--dynamic-shiki-51-fs) }
+.shiki-52-fg { color: var(--dynamic-shiki-52-fg) }
+.shiki-53-fg { color: var(--dynamic-shiki-53-fg) }
+.shiki-53-fs { font-style: var(--dynamic-shiki-53-fs) }
+.shiki-54-fg { color: var(--dynamic-shiki-54-fg) }
+.shiki-55-fg { color: var(--dynamic-shiki-55-fg) }
+.shiki-55-fs { font-style: var(--dynamic-shiki-55-fs) }
+.shiki-56-fg { color: var(--dynamic-shiki-56-fg) }
+.shiki-56-fs { font-style: var(--dynamic-shiki-56-fs) }
+.shiki-57-fg { color: var(--dynamic-shiki-57-fg) }
+.shiki-58-fg { color: var(--dynamic-shiki-58-fg) }
+.shiki-59-fg { color: var(--dynamic-shiki-59-fg) }
+.shiki-60-fg { color: var(--dynamic-shiki-60-fg) }
+.shiki-61-fg { color: var(--dynamic-shiki-61-fg) }
+.shiki-62-fg { color: var(--dynamic-shiki-62-fg) }
+.shiki-63-fg { color: var(--dynamic-shiki-63-fg) }
+.shiki-64-fg { color: var(--dynamic-shiki-64-fg) }
+.shiki-65-fg { color: var(--dynamic-shiki-65-fg) }
+.shiki-66-fg { color: var(--dynamic-shiki-66-fg) }
+.shiki-67-fg { color: var(--dynamic-shiki-67-fg) }
+.shiki-68-fg { color: var(--dynamic-shiki-68-fg) }
+.shiki-69-fg { color: var(--dynamic-shiki-69-fg) }
+.shiki-70-fg { color: var(--dynamic-shiki-70-fg) }
+.shiki-71-fg { color: var(--dynamic-shiki-71-fg) }
+.shiki-72-fg { color: var(--dynamic-shiki-72-fg) }
+.shiki-73-fg { color: var(--dynamic-shiki-73-fg) }
+.shiki-74-fg { color: var(--dynamic-shiki-74-fg) }
+.shiki-75-fg { color: var(--dynamic-shiki-75-fg) }
+.shiki-76-fg { color: var(--dynamic-shiki-76-fg) }
+.shiki-77-fg { color: var(--dynamic-shiki-77-fg) }
+.shiki-78-fg { color: var(--dynamic-shiki-78-fg) }
+.shiki-79-fg { color: var(--dynamic-shiki-79-fg) }
+.shiki-80-fg { color: var(--dynamic-shiki-80-fg) }
+.shiki-81-fg { color: var(--dynamic-shiki-81-fg) }
+.shiki-82-fg { color: var(--dynamic-shiki-82-fg) }
+.shiki-83-fg { color: var(--dynamic-shiki-83-fg) }
+.shiki-84-fg { color: var(--dynamic-shiki-84-fg) }
+.shiki-85-fg { color: var(--dynamic-shiki-85-fg) }
+.shiki-86-fg { color: var(--dynamic-shiki-86-fg) }
+.shiki-87-fg { color: var(--dynamic-shiki-87-fg) }
+.shiki-88-fg { color: var(--dynamic-shiki-88-fg) }
+.shiki-89-fg { color: var(--dynamic-shiki-89-fg) }
+.shiki-90-fg { color: var(--dynamic-shiki-90-fg) }
+.shiki-91-fg { color: var(--dynamic-shiki-91-fg) }
+.shiki-92-fg { color: var(--dynamic-shiki-92-fg) }
+.shiki-93-fg { color: var(--dynamic-shiki-93-fg) }
+.shiki-94-fg { color: var(--dynamic-shiki-94-fg) }
+.shiki-95-fg { color: var(--dynamic-shiki-95-fg) }
+.shiki-96-fg { color: var(--dynamic-shiki-96-fg) }
+.shiki-97-fg { color: var(--dynamic-shiki-97-fg) }
+.shiki-98-fg { color: var(--dynamic-shiki-98-fg) }
+.shiki-99-fg { color: var(--dynamic-shiki-99-fg) }
+.shiki-100-fg { color: var(--dynamic-shiki-100-fg) }
+.shiki-101-fg { color: var(--dynamic-shiki-101-fg) }
+.shiki-102-fg { color: var(--dynamic-shiki-102-fg) }
+.shiki-103-fg { color: var(--dynamic-shiki-103-fg) }
+.shiki-104-fg { color: var(--dynamic-shiki-104-fg) }
+.shiki-105-fg { color: var(--dynamic-shiki-105-fg) }
+.shiki-106-fg { color: var(--dynamic-shiki-106-fg) }
+.shiki-107-fg { color: var(--dynamic-shiki-107-fg) }
+.shiki-108-fg { color: var(--dynamic-shiki-108-fg) }
+.shiki-109-fg { color: var(--dynamic-shiki-109-fg) }
+.shiki-110-fg { color: var(--dynamic-shiki-110-fg) }
+.shiki-111-fg { color: var(--dynamic-shiki-111-fg) }
+.shiki-112-fg { color: var(--dynamic-shiki-112-fg) }
+.shiki-113-fg { color: var(--dynamic-shiki-113-fg) }
+.shiki-114-fg { color: var(--dynamic-shiki-114-fg) }
+.shiki-115-fg { color: var(--dynamic-shiki-115-fg) }
+.shiki-116-fg { color: var(--dynamic-shiki-116-fg) }
+.shiki-117-fg { color: var(--dynamic-shiki-117-fg) }
+.shiki-118-fg { color: var(--dynamic-shiki-118-fg) }
+.shiki-119-fg { color: var(--dynamic-shiki-119-fg) }
+.shiki-120-fg { color: var(--dynamic-shiki-120-fg) }
+.shiki-121-fg { color: var(--dynamic-shiki-121-fg) }
+.shiki-122-fg { color: var(--dynamic-shiki-122-fg) }
+.shiki-123-fg { color: var(--dynamic-shiki-123-fg) }
+.shiki-124-fg { color: var(--dynamic-shiki-124-fg) }
+.shiki-125-fg { color: var(--dynamic-shiki-125-fg) }
+.shiki-126-fg { color: var(--dynamic-shiki-126-fg) }
+.shiki-127-fg { color: var(--dynamic-shiki-127-fg) }
+.shiki-128-fg { color: var(--dynamic-shiki-128-fg) }
+.shiki-129-fg { color: var(--dynamic-shiki-129-fg) }
+.shiki-130-fg { color: var(--dynamic-shiki-130-fg) }
+.shiki-131-fg { color: var(--dynamic-shiki-131-fg) }
+.shiki-132-fg { color: var(--dynamic-shiki-132-fg) }
+.shiki-133-fg { color: var(--dynamic-shiki-133-fg) }
+.shiki-134-fg { color: var(--dynamic-shiki-134-fg) }
+.shiki-135-fg { color: var(--dynamic-shiki-135-fg) }
+.shiki-136-fg { color: var(--dynamic-shiki-136-fg) }
+.shiki-137-fg { color: var(--dynamic-shiki-137-fg) }
+.shiki-138-fg { color: var(--dynamic-shiki-138-fg) }
+.shiki-139-fg { color: var(--dynamic-shiki-139-fg) }
+.shiki-140-fg { color: var(--dynamic-shiki-140-fg) }
+.shiki-141-fg { color: var(--dynamic-shiki-141-fg) }
+.shiki-142-fg { color: var(--dynamic-shiki-142-fg) }
+.shiki-143-fg { color: var(--dynamic-shiki-143-fg) }
+.shiki-144-fg { color: var(--dynamic-shiki-144-fg) }
+.shiki-145-fg { color: var(--dynamic-shiki-145-fg) }
+.shiki-146-fg { color: var(--dynamic-shiki-146-fg) }
+.shiki-147-fg { color: var(--dynamic-shiki-147-fg) }
+.shiki-148-fg { color: var(--dynamic-shiki-148-fg) }
+.shiki-149-fg { color: var(--dynamic-shiki-149-fg) }
+.shiki-150-fg { color: var(--dynamic-shiki-150-fg) }
+.shiki-151-fg { color: var(--dynamic-shiki-151-fg) }
+.shiki-152-fg { color: var(--dynamic-shiki-152-fg) }
+.shiki-153-fg { color: var(--dynamic-shiki-153-fg) }
+.shiki-154-fg { color: var(--dynamic-shiki-154-fg) }
+.shiki-155-fg { color: var(--dynamic-shiki-155-fg) }
+.shiki-156-fg { color: var(--dynamic-shiki-156-fg) }
+.shiki-157-fg { color: var(--dynamic-shiki-157-fg) }
+.shiki-158-fg { color: var(--dynamic-shiki-158-fg) }
+.shiki-159-fg { color: var(--dynamic-shiki-159-fg) }
+.shiki-160-fg { color: var(--dynamic-shiki-160-fg) }
+.shiki-161-fg { color: var(--dynamic-shiki-161-fg) }
+.shiki-162-fg { color: var(--dynamic-shiki-162-fg) }
+.shiki-163-fg { color: var(--dynamic-shiki-163-fg) }
+.shiki-164-fg { color: var(--dynamic-shiki-164-fg) }
+.shiki-165-fg { color: var(--dynamic-shiki-165-fg) }
+.shiki-166-fg { color: var(--dynamic-shiki-166-fg) }
+.shiki-167-fg { color: var(--dynamic-shiki-167-fg) }
+.shiki-168-fg { color: var(--dynamic-shiki-168-fg) }
+.shiki-169-fg { color: var(--dynamic-shiki-169-fg) }
+.shiki-170-fg { color: var(--dynamic-shiki-170-fg) }
+.shiki-171-fg { color: var(--dynamic-shiki-171-fg) }
+.shiki-172-fg { color: var(--dynamic-shiki-172-fg) }
+.shiki-173-fg { color: var(--dynamic-shiki-173-fg) }
+.shiki-174-fg { color: var(--dynamic-shiki-174-fg) }
+.shiki-175-fg { color: var(--dynamic-shiki-175-fg) }
+.shiki-176-fg { color: var(--dynamic-shiki-176-fg) }
+.shiki-177-fg { color: var(--dynamic-shiki-177-fg) }
+.shiki-178-fg { color: var(--dynamic-shiki-178-fg) }
+.shiki-179-fg { color: var(--dynamic-shiki-179-fg) }
+.shiki-180-fg { color: var(--dynamic-shiki-180-fg) }
+.shiki-181-fg { color: var(--dynamic-shiki-181-fg) }
+.shiki-182-fg { color: var(--dynamic-shiki-182-fg) }
+.shiki-183-fg { color: var(--dynamic-shiki-183-fg) }
+.shiki-184-fg { color: var(--dynamic-shiki-184-fg) }
+.shiki-185-fg { color: var(--dynamic-shiki-185-fg) }
+.shiki-186-fg { color: var(--dynamic-shiki-186-fg) }
+.shiki-187-fg { color: var(--dynamic-shiki-187-fg) }
+.shiki-188-fg { color: var(--dynamic-shiki-188-fg) }
+.shiki-189-fg { color: var(--dynamic-shiki-189-fg) }
+.shiki-190-fg { color: var(--dynamic-shiki-190-fg) }
+.shiki-191-fg { color: var(--dynamic-shiki-191-fg) }
+.shiki-192-fg { color: var(--dynamic-shiki-192-fg) }
+.shiki-193-fg { color: var(--dynamic-shiki-193-fg) }
+.shiki-194-fg { color: var(--dynamic-shiki-194-fg) }
+.shiki-195-fg { color: var(--dynamic-shiki-195-fg) }
+.shiki-196-fg { color: var(--dynamic-shiki-196-fg) }
+.shiki-197-fg { color: var(--dynamic-shiki-197-fg) }
+.shiki-198-fg { color: var(--dynamic-shiki-198-fg) }
+.shiki-199-fg { color: var(--dynamic-shiki-199-fg) }
+.shiki-200-fg { color: var(--dynamic-shiki-200-fg) }
+.shiki-201-fg { color: var(--dynamic-shiki-201-fg) }
+.shiki-202-fg { color: var(--dynamic-shiki-202-fg) }
+.shiki-203-fg { color: var(--dynamic-shiki-203-fg) }
+.shiki-204-fg { color: var(--dynamic-shiki-204-fg) }
+.shiki-205-fg { color: var(--dynamic-shiki-205-fg) }
+.shiki-206-fg { color: var(--dynamic-shiki-206-fg) }
+.shiki-207-fg { color: var(--dynamic-shiki-207-fg) }
+.shiki-208-fg { color: var(--dynamic-shiki-208-fg) }
+.shiki-209-fg { color: var(--dynamic-shiki-209-fg) }
+.shiki-210-fg { color: var(--dynamic-shiki-210-fg) }
+.shiki-211-fg { color: var(--dynamic-shiki-211-fg) }
+.shiki-212-fg { color: var(--dynamic-shiki-212-fg) }
+.shiki-213-fg { color: var(--dynamic-shiki-213-fg) }
+.shiki-214-fg { color: var(--dynamic-shiki-214-fg) }
+.shiki-215-fg { color: var(--dynamic-shiki-215-fg) }
+.shiki-216-fg { color: var(--dynamic-shiki-216-fg) }
+.shiki-217-fg { color: var(--dynamic-shiki-217-fg) }
+.shiki-218-fg { color: var(--dynamic-shiki-218-fg) }
+.shiki-219-fg { color: var(--dynamic-shiki-219-fg) }
+.shiki-220-fg { color: var(--dynamic-shiki-220-fg) }
+.shiki-221-fg { color: var(--dynamic-shiki-221-fg) }
+.shiki-222-fg { color: var(--dynamic-shiki-222-fg) }
+.shiki-223-fg { color: var(--dynamic-shiki-223-fg) }
+.shiki-224-fg { color: var(--dynamic-shiki-224-fg) }
+.shiki-225-fg { color: var(--dynamic-shiki-225-fg) }
+.shiki-226-fg { color: var(--dynamic-shiki-226-fg) }
+.shiki-227-fg { color: var(--dynamic-shiki-227-fg) }
+.shiki-228-fg { color: var(--dynamic-shiki-228-fg) }
+.shiki-229-fg { color: var(--dynamic-shiki-229-fg) }
+.shiki-230-fg { color: var(--dynamic-shiki-230-fg) }
+.shiki-231-fg { color: var(--dynamic-shiki-231-fg) }
+.shiki-232-fg { color: var(--dynamic-shiki-232-fg) }
+.shiki-233-fg { color: var(--dynamic-shiki-233-fg) }
+.shiki-234-fg { color: var(--dynamic-shiki-234-fg) }
+.shiki-235-fg { color: var(--dynamic-shiki-235-fg) }
+.shiki-236-fg { color: var(--dynamic-shiki-236-fg) }
+.shiki-237-fg { color: var(--dynamic-shiki-237-fg) }
+.shiki-238-fg { color: var(--dynamic-shiki-238-fg) }
+.shiki-239-fg { color: var(--dynamic-shiki-239-fg) }
+.shiki-240-fg { color: var(--dynamic-shiki-240-fg) }
+.shiki-241-fg { color: var(--dynamic-shiki-241-fg) }
+.shiki-242-fg { color: var(--dynamic-shiki-242-fg) }
+.shiki-243-fg { color: var(--dynamic-shiki-243-fg) }
+.shiki-244-fg { color: var(--dynamic-shiki-244-fg) }
+.shiki-245-fg { color: var(--dynamic-shiki-245-fg) }
+.shiki-246-fg { color: var(--dynamic-shiki-246-fg) }
+.shiki-247-fg { color: var(--dynamic-shiki-247-fg) }
+.shiki-248-fg { color: var(--dynamic-shiki-248-fg) }
+.shiki-249-fg { color: var(--dynamic-shiki-249-fg) }
+.shiki-250-fg { color: var(--dynamic-shiki-250-fg) }
+.shiki-251-fg { color: var(--dynamic-shiki-251-fg) }
+.shiki-251-fs { font-style: var(--dynamic-shiki-251-fs) }
+.shiki-252-fg { color: var(--dynamic-shiki-252-fg) }
+.shiki-252-fs { font-style: var(--dynamic-shiki-252-fs) }
+.shiki-253-fg { color: var(--dynamic-shiki-253-fg) }
+.shiki-254-fg { color: var(--dynamic-shiki-254-fg) }
+.shiki-254-fs { font-style: var(--dynamic-shiki-254-fs) }
+.shiki-255-fg { color: var(--dynamic-shiki-255-fg) }
+.shiki-255-fs { font-style: var(--dynamic-shiki-255-fs) }
+.shiki-256-fg { color: var(--dynamic-shiki-256-fg) }
+.shiki-257-fg { color: var(--dynamic-shiki-257-fg) }
+.shiki-258-fg { color: var(--dynamic-shiki-258-fg) }
+.shiki-259-fg { color: var(--dynamic-shiki-259-fg) }
+.shiki-260-fg { color: var(--dynamic-shiki-260-fg) }
+.shiki-261-fg { color: var(--dynamic-shiki-261-fg) }
+.shiki-262-fg { color: var(--dynamic-shiki-262-fg) }
+.shiki-263-fg { color: var(--dynamic-shiki-263-fg) }
+.shiki-264-fg { color: var(--dynamic-shiki-264-fg) }
+.shiki-265-fg { color: var(--dynamic-shiki-265-fg) }
+.shiki-266-fg { color: var(--dynamic-shiki-266-fg) }
+.shiki-267-fg { color: var(--dynamic-shiki-267-fg) }
+.shiki-268-fg { color: var(--dynamic-shiki-268-fg) }
+.shiki-269-fg { color: var(--dynamic-shiki-269-fg) }
+.shiki-270-fg { color: var(--dynamic-shiki-270-fg) }
+.shiki-271-fg { color: var(--dynamic-shiki-271-fg) }
+.shiki-272-fg { color: var(--dynamic-shiki-272-fg) }
+.shiki-273-fg { color: var(--dynamic-shiki-273-fg) }
+.shiki-274-fg { color: var(--dynamic-shiki-274-fg) }
+.shiki-274-fs { font-style: var(--dynamic-shiki-274-fs) }
+.shiki-275-fg { color: var(--dynamic-shiki-275-fg) }
+.shiki-275-fs { font-style: var(--dynamic-shiki-275-fs) }
+.shiki-276-fg { color: var(--dynamic-shiki-276-fg) }
+.shiki-277-fg { color: var(--dynamic-shiki-277-fg) }
+.shiki-277-fs { font-style: var(--dynamic-shiki-277-fs) }
+.shiki-278-fg { color: var(--dynamic-shiki-278-fg) }
+.shiki-279-fg { color: var(--dynamic-shiki-279-fg) }
+.shiki-280-fg { color: var(--dynamic-shiki-280-fg) }
+.shiki-281-fg { color: var(--dynamic-shiki-281-fg) }
+.shiki-282-fg { color: var(--dynamic-shiki-282-fg) }
+.shiki-283-fg { color: var(--dynamic-shiki-283-fg) }
+.shiki-284-fg { color: var(--dynamic-shiki-284-fg) }
+.shiki-285-fg { color: var(--dynamic-shiki-285-fg) }
+.shiki-286-fg { color: var(--dynamic-shiki-286-fg) }
+.shiki-287-fg { color: var(--dynamic-shiki-287-fg) }
+.shiki-288-fg { color: var(--dynamic-shiki-288-fg) }
+.shiki-289-fg { color: var(--dynamic-shiki-289-fg) }
+.shiki-290-fg { color: var(--dynamic-shiki-290-fg) }
+.shiki-291-fg { color: var(--dynamic-shiki-291-fg) }
+.shiki-292-fg { color: var(--dynamic-shiki-292-fg) }
+.shiki-293-fg { color: var(--dynamic-shiki-293-fg) }
+.shiki-294-fg { color: var(--dynamic-shiki-294-fg) }
+.shiki-295-fg { color: var(--dynamic-shiki-295-fg) }
+.shiki-296-fg { color: var(--dynamic-shiki-296-fg) }
+.shiki-297-fg { color: var(--dynamic-shiki-297-fg) }
+.shiki-298-fg { color: var(--dynamic-shiki-298-fg) }
+.shiki-298-fs { font-style: var(--dynamic-shiki-298-fs) }
+.shiki-299-fg { color: var(--dynamic-shiki-299-fg) }
+.shiki-299-fs { font-style: var(--dynamic-shiki-299-fs) }
+.shiki-300-fg { color: var(--dynamic-shiki-300-fg) }
+.shiki-301-fg { color: var(--dynamic-shiki-301-fg) }
+.shiki-302-fg { color: var(--dynamic-shiki-302-fg) }
+.shiki-303-fg { color: var(--dynamic-shiki-303-fg) }
+.shiki-304-fg { color: var(--dynamic-shiki-304-fg) }
+.shiki-305-fg { color: var(--dynamic-shiki-305-fg) }
+.shiki-306-fg { color: var(--dynamic-shiki-306-fg) }
+.shiki-307-fg { color: var(--dynamic-shiki-307-fg) }
+.shiki-308-fg { color: var(--dynamic-shiki-308-fg) }
+.shiki-309-fg { color: var(--dynamic-shiki-309-fg) }
+.shiki-310-fg { color: var(--dynamic-shiki-310-fg) }
+.shiki-311-fg { color: var(--dynamic-shiki-311-fg) }
+.shiki-312-fg { color: var(--dynamic-shiki-312-fg) }
+.shiki-313-fg { color: var(--dynamic-shiki-313-fg) }
+.shiki-314-fg { color: var(--dynamic-shiki-314-fg) }
+.shiki-315-fg { color: var(--dynamic-shiki-315-fg) }
+.shiki-315-fs { font-style: var(--dynamic-shiki-315-fs) }
+.shiki-316-fg { color: var(--dynamic-shiki-316-fg) }
+.shiki-317-fg { color: var(--dynamic-shiki-317-fg) }
+.shiki-318-fg { color: var(--dynamic-shiki-318-fg) }
+.shiki-319-fg { color: var(--dynamic-shiki-319-fg) }
+.shiki-320-fg { color: var(--dynamic-shiki-320-fg) }
+.shiki-321-fg { color: var(--dynamic-shiki-321-fg) }
+.shiki-322-fg { color: var(--dynamic-shiki-322-fg) }
+.shiki-323-fg { color: var(--dynamic-shiki-323-fg) }
+.shiki-324-fg { color: var(--dynamic-shiki-324-fg) }
+.shiki-325-fg { color: var(--dynamic-shiki-325-fg) }
+.shiki-325-fs { font-style: var(--dynamic-shiki-325-fs) }
+.shiki-326-fg { color: var(--dynamic-shiki-326-fg) }
+.shiki-327-fg { color: var(--dynamic-shiki-327-fg) }
+.shiki-328-fg { color: var(--dynamic-shiki-328-fg) }
+.shiki-329-fg { color: var(--dynamic-shiki-329-fg) }
+.shiki-330-fg { color: var(--dynamic-shiki-330-fg) }
+.shiki-331-fg { color: var(--dynamic-shiki-331-fg) }
+.shiki-332-fg { color: var(--dynamic-shiki-332-fg) }
+.shiki-333-fg { color: var(--dynamic-shiki-333-fg) }
+.shiki-334-fg { color: var(--dynamic-shiki-334-fg) }
+.shiki-335-fg { color: var(--dynamic-shiki-335-fg) }
+.shiki-336-fg { color: var(--dynamic-shiki-336-fg) }
+.shiki-337-fg { color: var(--dynamic-shiki-337-fg) }
+.shiki-338-fg { color: var(--dynamic-shiki-338-fg) }
+.shiki-339-fg { color: var(--dynamic-shiki-339-fg) }
+.shiki-340-fg { color: var(--dynamic-shiki-340-fg) }
+.shiki-340-fs { font-style: var(--dynamic-shiki-340-fs) }
+.shiki-341-fg { color: var(--dynamic-shiki-341-fg) }
+.shiki-341-fs { font-style: var(--dynamic-shiki-341-fs) }
+.shiki-342-fg { color: var(--dynamic-shiki-342-fg) }
+.shiki-342-fs { font-style: var(--dynamic-shiki-342-fs) }
+.shiki-343-fg { color: var(--dynamic-shiki-343-fg) }
+.shiki-344-fg { color: var(--dynamic-shiki-344-fg) }
+.shiki-345-fg { color: var(--dynamic-shiki-345-fg) }
+.shiki-346-fg { color: var(--dynamic-shiki-346-fg) }
+.shiki-347-fg { color: var(--dynamic-shiki-347-fg) }
+.shiki-348-fg { color: var(--dynamic-shiki-348-fg) }
+.shiki-348-fs { font-style: var(--dynamic-shiki-348-fs) }
+.shiki-349-fg { color: var(--dynamic-shiki-349-fg) }
+.shiki-350-fg { color: var(--dynamic-shiki-350-fg) }
+.shiki-351-fg { color: var(--dynamic-shiki-351-fg) }
+.shiki-352-fg { color: var(--dynamic-shiki-352-fg) }
+.shiki-353-fg { color: var(--dynamic-shiki-353-fg) }
+.shiki-354-fg { color: var(--dynamic-shiki-354-fg) }
+.shiki-355-fg { color: var(--dynamic-shiki-355-fg) }
+.shiki-356-fg { color: var(--dynamic-shiki-356-fg) }
+.shiki-357-fg { color: var(--dynamic-shiki-357-fg) }
+.shiki-358-fg { color: var(--dynamic-shiki-358-fg) }
+.shiki-358-fs { font-style: var(--dynamic-shiki-358-fs) }
+.shiki-359-fg { color: var(--dynamic-shiki-359-fg) }
+.shiki-359-fs { font-style: var(--dynamic-shiki-359-fs) }
+.shiki-360-fg { color: var(--dynamic-shiki-360-fg) }
+.shiki-361-fg { color: var(--dynamic-shiki-361-fg) }
+.shiki-362-fg { color: var(--dynamic-shiki-362-fg) }
+.shiki-363-fg { color: var(--dynamic-shiki-363-fg) }
+.shiki-364-fg { color: var(--dynamic-shiki-364-fg) }
+.shiki-365-fg { color: var(--dynamic-shiki-365-fg) }
+.shiki-366-fg { color: var(--dynamic-shiki-366-fg) }
+.shiki-366-fs { font-style: var(--dynamic-shiki-366-fs) }
+.shiki-367-fg { color: var(--dynamic-shiki-367-fg) }
+.shiki-368-fg { color: var(--dynamic-shiki-368-fg) }
+.shiki-369-fg { color: var(--dynamic-shiki-369-fg) }
+.shiki-370-fg { color: var(--dynamic-shiki-370-fg) }
+.shiki-371-fg { color: var(--dynamic-shiki-371-fg) }
+.shiki-372-fg { color: var(--dynamic-shiki-372-fg) }
+.shiki-373-fg { color: var(--dynamic-shiki-373-fg) }
+.shiki-374-fg { color: var(--dynamic-shiki-374-fg) }
+.shiki-375-fg { color: var(--dynamic-shiki-375-fg) }
+.shiki-376-fg { color: var(--dynamic-shiki-376-fg) }
+.shiki-377-fg { color: var(--dynamic-shiki-377-fg) }
+.shiki-378-fg { color: var(--dynamic-shiki-378-fg) }
+.shiki-379-fg { color: var(--dynamic-shiki-379-fg) }
+.shiki-380-fg { color: var(--dynamic-shiki-380-fg) }
+.shiki-381-fg { color: var(--dynamic-shiki-381-fg) }
+.shiki-382-fg { color: var(--dynamic-shiki-382-fg) }
+.shiki-383-fg { color: var(--dynamic-shiki-383-fg) }
+.shiki-384-fg { color: var(--dynamic-shiki-384-fg) }
+.shiki-385-fg { color: var(--dynamic-shiki-385-fg) }
+.shiki-386-fg { color: var(--dynamic-shiki-386-fg) }
+.shiki-387-fg { color: var(--dynamic-shiki-387-fg) }
+.shiki-388-fg { color: var(--dynamic-shiki-388-fg) }
+.shiki-389-fg { color: var(--dynamic-shiki-389-fg) }
+.shiki-390-fg { color: var(--dynamic-shiki-390-fg) }
+.shiki-391-fg { color: var(--dynamic-shiki-391-fg) }
+.shiki-392-fg { color: var(--dynamic-shiki-392-fg) }
+.shiki-393-fg { color: var(--dynamic-shiki-393-fg) }
+.shiki-394-fg { color: var(--dynamic-shiki-394-fg) }
+.shiki-395-fg { color: var(--dynamic-shiki-395-fg) }
+.shiki-396-fg { color: var(--dynamic-shiki-396-fg) }
+.shiki-397-fg { color: var(--dynamic-shiki-397-fg) }
+.shiki-398-fg { color: var(--dynamic-shiki-398-fg) }
+.shiki-399-fg { color: var(--dynamic-shiki-399-fg) }
+.shiki-400-fg { color: var(--dynamic-shiki-400-fg) }
+.shiki-401-fg { color: var(--dynamic-shiki-401-fg) }
+.shiki-402-fg { color: var(--dynamic-shiki-402-fg) }
+.shiki-403-fg { color: var(--dynamic-shiki-403-fg) }
+.shiki-404-fg { color: var(--dynamic-shiki-404-fg) }
+.shiki-405-fg { color: var(--dynamic-shiki-405-fg) }
+.shiki-406-fg { color: var(--dynamic-shiki-406-fg) }
+.shiki-407-fg { color: var(--dynamic-shiki-407-fg) }
+.shiki-408-fg { color: var(--dynamic-shiki-408-fg) }
+.shiki-409-fg { color: var(--dynamic-shiki-409-fg) }
+.shiki-410-fg { color: var(--dynamic-shiki-410-fg) }
+.shiki-411-fg { color: var(--dynamic-shiki-411-fg) }
+.shiki-412-fg { color: var(--dynamic-shiki-412-fg) }
+.shiki-413-fg { color: var(--dynamic-shiki-413-fg) }
+.shiki-414-fg { color: var(--dynamic-shiki-414-fg) }
+.shiki-415-fg { color: var(--dynamic-shiki-415-fg) }
+.shiki-416-fg { color: var(--dynamic-shiki-416-fg) }
+.shiki-417-fg { color: var(--dynamic-shiki-417-fg) }
+.shiki-418-fg { color: var(--dynamic-shiki-418-fg) }
+.shiki-419-fg { color: var(--dynamic-shiki-419-fg) }
+.shiki-420-fg { color: var(--dynamic-shiki-420-fg) }
+.shiki-421-fg { color: var(--dynamic-shiki-421-fg) }
+.shiki-422-fg { color: var(--dynamic-shiki-422-fg) }
+.shiki-423-fg { color: var(--dynamic-shiki-423-fg) }
+.shiki-424-fg { color: var(--dynamic-shiki-424-fg) }
+.shiki-425-fg { color: var(--dynamic-shiki-425-fg) }
+.shiki-426-fg { color: var(--dynamic-shiki-426-fg) }
+.shiki-427-fg { color: var(--dynamic-shiki-427-fg) }
+.shiki-428-fg { color: var(--dynamic-shiki-428-fg) }
+.shiki-429-fg { color: var(--dynamic-shiki-429-fg) }
+.shiki-430-fg { color: var(--dynamic-shiki-430-fg) }
+.shiki-431-fg { color: var(--dynamic-shiki-431-fg) }
+.shiki-432-fg { color: var(--dynamic-shiki-432-fg) }
+.shiki-433-fg { color: var(--dynamic-shiki-433-fg) }
+.shiki-434-fg { color: var(--dynamic-shiki-434-fg) }
+.shiki-435-fg { color: var(--dynamic-shiki-435-fg) }
+.shiki-436-fg { color: var(--dynamic-shiki-436-fg) }
+.shiki-437-fg { color: var(--dynamic-shiki-437-fg) }
+.shiki-438-fg { color: var(--dynamic-shiki-438-fg) }
+.shiki-439-fg { color: var(--dynamic-shiki-439-fg) }
+.shiki-440-fg { color: var(--dynamic-shiki-440-fg) }
+.shiki-441-fg { color: var(--dynamic-shiki-441-fg) }
+.shiki-442-fg { color: var(--dynamic-shiki-442-fg) }
+.shiki-443-fg { color: var(--dynamic-shiki-443-fg) }
+.shiki-444-fg { color: var(--dynamic-shiki-444-fg) }
+.shiki-445-fg { color: var(--dynamic-shiki-445-fg) }
+.shiki-446-fg { color: var(--dynamic-shiki-446-fg) }
+.shiki-447-fg { color: var(--dynamic-shiki-447-fg) }
+.shiki-448-fg { color: var(--dynamic-shiki-448-fg) }
+.shiki-449-fg { color: var(--dynamic-shiki-449-fg) }
+.shiki-449-fs { font-style: var(--dynamic-shiki-449-fs) }
+.shiki-450-fg { color: var(--dynamic-shiki-450-fg) }
+.shiki-450-fs { font-style: var(--dynamic-shiki-450-fs) }
+.shiki-451-fg { color: var(--dynamic-shiki-451-fg) }
+.shiki-451-fs { font-style: var(--dynamic-shiki-451-fs) }
+.shiki-452-fg { color: var(--dynamic-shiki-452-fg) }
+.shiki-452-fs { font-style: var(--dynamic-shiki-452-fs) }
+.shiki-453-fg { color: var(--dynamic-shiki-453-fg) }
+.shiki-453-fs { font-style: var(--dynamic-shiki-453-fs) }
+.shiki-454-fg { color: var(--dynamic-shiki-454-fg) }
+.shiki-455-fg { color: var(--dynamic-shiki-455-fg) }
+.shiki-456-fg { color: var(--dynamic-shiki-456-fg) }
+.shiki-457-fg { color: var(--dynamic-shiki-457-fg) }
+.shiki-458-fg { color: var(--dynamic-shiki-458-fg) }
+.shiki-459-fg { color: var(--dynamic-shiki-459-fg) }
+.shiki-460-fg { color: var(--dynamic-shiki-460-fg) }
+.shiki-460-fs { font-style: var(--dynamic-shiki-460-fs) }
+.shiki-461-fg { color: var(--dynamic-shiki-461-fg) }
+.shiki-462-fg { color: var(--dynamic-shiki-462-fg) }
+.shiki-462-fs { font-style: var(--dynamic-shiki-462-fs) }
+.shiki-463-fg { color: var(--dynamic-shiki-463-fg) }
+.shiki-463-fs { font-style: var(--dynamic-shiki-463-fs) }
+.shiki-464-fg { color: var(--dynamic-shiki-464-fg) }
+.shiki-464-fs { font-style: var(--dynamic-shiki-464-fs) }
+.shiki-465-fg { color: var(--dynamic-shiki-465-fg) }
+.shiki-466-fg { color: var(--dynamic-shiki-466-fg) }
+.shiki-467-fg { color: var(--dynamic-shiki-467-fg) }
+.shiki-468-fg { color: var(--dynamic-shiki-468-fg) }
+.shiki-469-fg { color: var(--dynamic-shiki-469-fg) }
+.shiki-470-fg { color: var(--dynamic-shiki-470-fg) }
+.shiki-471-fg { color: var(--dynamic-shiki-471-fg) }
+.shiki-472-fg { color: var(--dynamic-shiki-472-fg) }
+.shiki-473-fg { color: var(--dynamic-shiki-473-fg) }
+.shiki-474-fg { color: var(--dynamic-shiki-474-fg) }
+.shiki-475-fg { color: var(--dynamic-shiki-475-fg) }
+.shiki-476-fg { color: var(--dynamic-shiki-476-fg) }
+.shiki-477-fg { color: var(--dynamic-shiki-477-fg) }
+.shiki-478-fg { color: var(--dynamic-shiki-478-fg) }
+.shiki-479-fg { color: var(--dynamic-shiki-479-fg) }
+.shiki-480-fg { color: var(--dynamic-shiki-480-fg) }
+.shiki-481-fg { color: var(--dynamic-shiki-481-fg) }
+.shiki-482-fg { color: var(--dynamic-shiki-482-fg) }
+.shiki-483-fg { color: var(--dynamic-shiki-483-fg) }
+.shiki-484-fg { color: var(--dynamic-shiki-484-fg) }
+.shiki-485-fg { color: var(--dynamic-shiki-485-fg) }
+.shiki-486-fg { color: var(--dynamic-shiki-486-fg) }
+.shiki-487-fg { color: var(--dynamic-shiki-487-fg) }
+.shiki-488-fg { color: var(--dynamic-shiki-488-fg) }
+.shiki-489-fg { color: var(--dynamic-shiki-489-fg) }
+.shiki-490-fg { color: var(--dynamic-shiki-490-fg) }
+.shiki-491-fg { color: var(--dynamic-shiki-491-fg) }
+.shiki-492-fg { color: var(--dynamic-shiki-492-fg) }
+.shiki-493-fg { color: var(--dynamic-shiki-493-fg) }
+.shiki-494-fg { color: var(--dynamic-shiki-494-fg) }
+.shiki-495-fg { color: var(--dynamic-shiki-495-fg) }
+.shiki-496-fg { color: var(--dynamic-shiki-496-fg) }
+.shiki-497-fg { color: var(--dynamic-shiki-497-fg) }
+.shiki-498-fg { color: var(--dynamic-shiki-498-fg) }
+.shiki-499-fg { color: var(--dynamic-shiki-499-fg) }
+.shiki-500-fg { color: var(--dynamic-shiki-500-fg) }
+.shiki-501-fg { color: var(--dynamic-shiki-501-fg) }
+.shiki-502-fg { color: var(--dynamic-shiki-502-fg) }
+.shiki-503-fg { color: var(--dynamic-shiki-503-fg) }
+.shiki-504-fg { color: var(--dynamic-shiki-504-fg) }
+.shiki-505-fg { color: var(--dynamic-shiki-505-fg) }
+.shiki-506-fg { color: var(--dynamic-shiki-506-fg) }
+.shiki-507-fg { color: var(--dynamic-shiki-507-fg) }
+.shiki-508-fg { color: var(--dynamic-shiki-508-fg) }
+.shiki-509-fg { color: var(--dynamic-shiki-509-fg) }
+.shiki-510-fg { color: var(--dynamic-shiki-510-fg) }
+.shiki-510-fs { font-style: var(--dynamic-shiki-510-fs) }
+.shiki-511-fg { color: var(--dynamic-shiki-511-fg) }
+.shiki-512-fg { color: var(--dynamic-shiki-512-fg) }
+.shiki-513-fg { color: var(--dynamic-shiki-513-fg) }
+.shiki-514-fg { color: var(--dynamic-shiki-514-fg) }
+.shiki-515-fg { color: var(--dynamic-shiki-515-fg) }
+.shiki-516-fg { color: var(--dynamic-shiki-516-fg) }
+.shiki-517-fg { color: var(--dynamic-shiki-517-fg) }
+.shiki-518-fg { color: var(--dynamic-shiki-518-fg) }
+.shiki-519-fg { color: var(--dynamic-shiki-519-fg) }
+.shiki-520-fg { color: var(--dynamic-shiki-520-fg) }
+.shiki-521-fg { color: var(--dynamic-shiki-521-fg) }
+.shiki-522-fg { color: var(--dynamic-shiki-522-fg) }
+.shiki-523-fg { color: var(--dynamic-shiki-523-fg) }
+.shiki-524-fg { color: var(--dynamic-shiki-524-fg) }
+.shiki-525-fg { color: var(--dynamic-shiki-525-fg) }
+.shiki-526-fg { color: var(--dynamic-shiki-526-fg) }
+.shiki-527-fg { color: var(--dynamic-shiki-527-fg) }
+.shiki-528-fg { color: var(--dynamic-shiki-528-fg) }
+.shiki-529-fg { color: var(--dynamic-shiki-529-fg) }
+.shiki-530-fg { color: var(--dynamic-shiki-530-fg) }
+.shiki-531-fg { color: var(--dynamic-shiki-531-fg) }
+.shiki-532-fg { color: var(--dynamic-shiki-532-fg) }
+.shiki-533-fg { color: var(--dynamic-shiki-533-fg) }
+.shiki-534-fg { color: var(--dynamic-shiki-534-fg) }
+.shiki-535-fg { color: var(--dynamic-shiki-535-fg) }
+.shiki-536-fg { color: var(--dynamic-shiki-536-fg) }
+.shiki-537-fg { color: var(--dynamic-shiki-537-fg) }
+.shiki-538-fg { color: var(--dynamic-shiki-538-fg) }
+.shiki-539-fg { color: var(--dynamic-shiki-539-fg) }
+.shiki-540-fg { color: var(--dynamic-shiki-540-fg) }
+.shiki-541-fg { color: var(--dynamic-shiki-541-fg) }
+.shiki-542-fg { color: var(--dynamic-shiki-542-fg) }
+.shiki-543-fg { color: var(--dynamic-shiki-543-fg) }
+.shiki-544-fg { color: var(--dynamic-shiki-544-fg) }
+.shiki-545-fg { color: var(--dynamic-shiki-545-fg) }
+.shiki-546-fg { color: var(--dynamic-shiki-546-fg) }
+.shiki-547-fg { color: var(--dynamic-shiki-547-fg) }
+.shiki-548-fg { color: var(--dynamic-shiki-548-fg) }
+.shiki-549-fg { color: var(--dynamic-shiki-549-fg) }
+.shiki-550-fg { color: var(--dynamic-shiki-550-fg) }
+.shiki-551-fg { color: var(--dynamic-shiki-551-fg) }
+.shiki-552-fg { color: var(--dynamic-shiki-552-fg) }
+.shiki-553-fg { color: var(--dynamic-shiki-553-fg) }
+.shiki-554-fg { color: var(--dynamic-shiki-554-fg) }
+.shiki-555-fg { color: var(--dynamic-shiki-555-fg) }
+.shiki-556-fg { color: var(--dynamic-shiki-556-fg) }
+.shiki-557-fg { color: var(--dynamic-shiki-557-fg) }
+.shiki-558-fg { color: var(--dynamic-shiki-558-fg) }
+.shiki-559-fg { color: var(--dynamic-shiki-559-fg) }
+.shiki-560-fg { color: var(--dynamic-shiki-560-fg) }
+.shiki-561-fg { color: var(--dynamic-shiki-561-fg) }
+.shiki-562-fg { color: var(--dynamic-shiki-562-fg) }
+.shiki-563-fg { color: var(--dynamic-shiki-563-fg) }
+.shiki-564-fg { color: var(--dynamic-shiki-564-fg) }
+.shiki-565-fg { color: var(--dynamic-shiki-565-fg) }
+.shiki-566-fg { color: var(--dynamic-shiki-566-fg) }
+.shiki-567-fg { color: var(--dynamic-shiki-567-fg) }
+.shiki-568-fg { color: var(--dynamic-shiki-568-fg) }
+.shiki-569-fg { color: var(--dynamic-shiki-569-fg) }
+.shiki-570-fg { color: var(--dynamic-shiki-570-fg) }
+.shiki-571-fg { color: var(--dynamic-shiki-571-fg) }
+.shiki-572-fg { color: var(--dynamic-shiki-572-fg) }
+.shiki-573-fg { color: var(--dynamic-shiki-573-fg) }
+.shiki-574-fg { color: var(--dynamic-shiki-574-fg) }
+.shiki-575-fg { color: var(--dynamic-shiki-575-fg) }
+.shiki-576-fg { color: var(--dynamic-shiki-576-fg) }
+.shiki-577-fg { color: var(--dynamic-shiki-577-fg) }
+.shiki-578-fg { color: var(--dynamic-shiki-578-fg) }
+.shiki-579-fg { color: var(--dynamic-shiki-579-fg) }
+.shiki-580-fg { color: var(--dynamic-shiki-580-fg) }
+.shiki-581-fg { color: var(--dynamic-shiki-581-fg) }
+.shiki-582-fg { color: var(--dynamic-shiki-582-fg) }
+.shiki-583-fg { color: var(--dynamic-shiki-583-fg) }
+.shiki-584-fg { color: var(--dynamic-shiki-584-fg) }
+.shiki-585-fg { color: var(--dynamic-shiki-585-fg) }
+.shiki-586-fg { color: var(--dynamic-shiki-586-fg) }
+.shiki-587-fg { color: var(--dynamic-shiki-587-fg) }
+.shiki-588-fg { color: var(--dynamic-shiki-588-fg) }
+.shiki-589-fg { color: var(--dynamic-shiki-589-fg) }
+.shiki-590-fg { color: var(--dynamic-shiki-590-fg) }
+.shiki-591-fg { color: var(--dynamic-shiki-591-fg) }
+.shiki-592-fg { color: var(--dynamic-shiki-592-fg) }
+.shiki-593-fg { color: var(--dynamic-shiki-593-fg) }
+.shiki-594-fg { color: var(--dynamic-shiki-594-fg) }
+.shiki-595-fg { color: var(--dynamic-shiki-595-fg) }
+.shiki-596-fg { color: var(--dynamic-shiki-596-fg) }
+.shiki-597-fg { color: var(--dynamic-shiki-597-fg) }
+.shiki-598-fg { color: var(--dynamic-shiki-598-fg) }
+.shiki-599-fg { color: var(--dynamic-shiki-599-fg) }
+.shiki-600-fg { color: var(--dynamic-shiki-600-fg) }
+.shiki-601-fg { color: var(--dynamic-shiki-601-fg) }
+.shiki-602-fg { color: var(--dynamic-shiki-602-fg) }
+.shiki-603-fg { color: var(--dynamic-shiki-603-fg) }
+.shiki-604-fg { color: var(--dynamic-shiki-604-fg) }
+.shiki-605-fg { color: var(--dynamic-shiki-605-fg) }
+.shiki-606-fg { color: var(--dynamic-shiki-606-fg) }
+.shiki-607-fg { color: var(--dynamic-shiki-607-fg) }
+.shiki-608-fg { color: var(--dynamic-shiki-608-fg) }
+.shiki-609-fg { color: var(--dynamic-shiki-609-fg) }
+.shiki-610-fg { color: var(--dynamic-shiki-610-fg) }
+.shiki-611-fg { color: var(--dynamic-shiki-611-fg) }
+.shiki-612-fg { color: var(--dynamic-shiki-612-fg) }
+.shiki-613-fg { color: var(--dynamic-shiki-613-fg) }
+.shiki-614-fg { color: var(--dynamic-shiki-614-fg) }
+.shiki-615-fg { color: var(--dynamic-shiki-615-fg) }
+.shiki-616-fg { color: var(--dynamic-shiki-616-fg) }
+.shiki-617-fg { color: var(--dynamic-shiki-617-fg) }
+.shiki-618-fg { color: var(--dynamic-shiki-618-fg) }
+.shiki-619-fg { color: var(--dynamic-shiki-619-fg) }
+.shiki-620-fg { color: var(--dynamic-shiki-620-fg) }
+.shiki-621-fg { color: var(--dynamic-shiki-621-fg) }
+.shiki-622-fg { color: var(--dynamic-shiki-622-fg) }
+.shiki-623-fg { color: var(--dynamic-shiki-623-fg) }
+.shiki-624-fg { color: var(--dynamic-shiki-624-fg) }
+.shiki-625-fg { color: var(--dynamic-shiki-625-fg) }
+.shiki-626-fg { color: var(--dynamic-shiki-626-fg) }
+.shiki-627-fg { color: var(--dynamic-shiki-627-fg) }
+.shiki-628-fg { color: var(--dynamic-shiki-628-fg) }
+.shiki-629-fg { color: var(--dynamic-shiki-629-fg) }
+.shiki-630-fg { color: var(--dynamic-shiki-630-fg) }
+.shiki-631-fg { color: var(--dynamic-shiki-631-fg) }
+.shiki-632-fg { color: var(--dynamic-shiki-632-fg) }
+.shiki-633-fg { color: var(--dynamic-shiki-633-fg) }
+.shiki-634-fg { color: var(--dynamic-shiki-634-fg) }
+.shiki-635-fg { color: var(--dynamic-shiki-635-fg) }
+.shiki-636-fg { color: var(--dynamic-shiki-636-fg) }
+.shiki-637-fg { color: var(--dynamic-shiki-637-fg) }
+.shiki-638-fg { color: var(--dynamic-shiki-638-fg) }
+.shiki-639-fg { color: var(--dynamic-shiki-639-fg) }
+.shiki-640-fg { color: var(--dynamic-shiki-640-fg) }
+.shiki-641-fg { color: var(--dynamic-shiki-641-fg) }
+.shiki-642-fg { color: var(--dynamic-shiki-642-fg) }
+.shiki-643-fg { color: var(--dynamic-shiki-643-fg) }
+.shiki-644-fg { color: var(--dynamic-shiki-644-fg) }
+.shiki-645-fg { color: var(--dynamic-shiki-645-fg) }
+.shiki-646-fg { color: var(--dynamic-shiki-646-fg) }
+.shiki-647-fg { color: var(--dynamic-shiki-647-fg) }
+.shiki-648-fg { color: var(--dynamic-shiki-648-fg) }
+.shiki-649-fg { color: var(--dynamic-shiki-649-fg) }
+.shiki-650-fg { color: var(--dynamic-shiki-650-fg) }
+.shiki-651-fg { color: var(--dynamic-shiki-651-fg) }
+.shiki-652-fg { color: var(--dynamic-shiki-652-fg) }
+.shiki-653-fg { color: var(--dynamic-shiki-653-fg) }
+.shiki-654-fg { color: var(--dynamic-shiki-654-fg) }
+.shiki-655-fg { color: var(--dynamic-shiki-655-fg) }
+.shiki-656-fg { color: var(--dynamic-shiki-656-fg) }
+.shiki-657-fg { color: var(--dynamic-shiki-657-fg) }
+.shiki-658-fg { color: var(--dynamic-shiki-658-fg) }
+.shiki-659-fg { color: var(--dynamic-shiki-659-fg) }
+.shiki-660-fg { color: var(--dynamic-shiki-660-fg) }
+.shiki-661-fg { color: var(--dynamic-shiki-661-fg) }
+.shiki-662-fg { color: var(--dynamic-shiki-662-fg) }
+.shiki-663-fg { color: var(--dynamic-shiki-663-fg) }
+.shiki-664-fg { color: var(--dynamic-shiki-664-fg) }
+.shiki-665-fg { color: var(--dynamic-shiki-665-fg) }
+.shiki-666-fg { color: var(--dynamic-shiki-666-fg) }
+.shiki-667-fg { color: var(--dynamic-shiki-667-fg) }
+.shiki-668-fg { color: var(--dynamic-shiki-668-fg) }
+.shiki-669-fg { color: var(--dynamic-shiki-669-fg) }
+.shiki-670-fg { color: var(--dynamic-shiki-670-fg) }
+.shiki-671-fg { color: var(--dynamic-shiki-671-fg) }
+.shiki-672-fg { color: var(--dynamic-shiki-672-fg) }
+.shiki-673-fg { color: var(--dynamic-shiki-673-fg) }
+.shiki-673-fs { font-style: var(--dynamic-shiki-673-fs) }
+.shiki-674-fg { color: var(--dynamic-shiki-674-fg) }
+.shiki-675-fg { color: var(--dynamic-shiki-675-fg) }
+.shiki-676-fg { color: var(--dynamic-shiki-676-fg) }
+.shiki-677-fg { color: var(--dynamic-shiki-677-fg) }
+.shiki-678-fg { color: var(--dynamic-shiki-678-fg) }
+.shiki-678-fs { font-style: var(--dynamic-shiki-678-fs) }
+.shiki-679-fg { color: var(--dynamic-shiki-679-fg) }
+.shiki-680-fg { color: var(--dynamic-shiki-680-fg) }
+.shiki-681-fg { color: var(--dynamic-shiki-681-fg) }
+.shiki-682-fg { color: var(--dynamic-shiki-682-fg) }
+.shiki-683-fg { color: var(--dynamic-shiki-683-fg) }
+.shiki-684-fg { color: var(--dynamic-shiki-684-fg) }
+.shiki-685-fg { color: var(--dynamic-shiki-685-fg) }
+.shiki-686-fg { color: var(--dynamic-shiki-686-fg) }
+.shiki-687-fg { color: var(--dynamic-shiki-687-fg) }
+.shiki-688-fg { color: var(--dynamic-shiki-688-fg) }
+.shiki-689-fg { color: var(--dynamic-shiki-689-fg) }
+.shiki-690-fg { color: var(--dynamic-shiki-690-fg) }
+.shiki-691-fg { color: var(--dynamic-shiki-691-fg) }
+.shiki-692-fg { color: var(--dynamic-shiki-692-fg) }
+.shiki-693-fg { color: var(--dynamic-shiki-693-fg) }
+.shiki-694-fg { color: var(--dynamic-shiki-694-fg) }
+.shiki-695-fg { color: var(--dynamic-shiki-695-fg) }
+.shiki-696-fg { color: var(--dynamic-shiki-696-fg) }
+.shiki-697-fg { color: var(--dynamic-shiki-697-fg) }
+.shiki-698-fg { color: var(--dynamic-shiki-698-fg) }
+.shiki-699-fg { color: var(--dynamic-shiki-699-fg) }
+.shiki-700-fg { color: var(--dynamic-shiki-700-fg) }
+.shiki-701-fg { color: var(--dynamic-shiki-701-fg) }
+.shiki-702-fg { color: var(--dynamic-shiki-702-fg) }
+.shiki-703-fg { color: var(--dynamic-shiki-703-fg) }
+.shiki-704-fg { color: var(--dynamic-shiki-704-fg) }
+.shiki-705-fg { color: var(--dynamic-shiki-705-fg) }
+.shiki-706-fg { color: var(--dynamic-shiki-706-fg) }
+.shiki-707-fg { color: var(--dynamic-shiki-707-fg) }
+.shiki-708-fg { color: var(--dynamic-shiki-708-fg) }
+.shiki-709-fg { color: var(--dynamic-shiki-709-fg) }
+.shiki-710-fg { color: var(--dynamic-shiki-710-fg) }
+.shiki-711-fg { color: var(--dynamic-shiki-711-fg) }
+.shiki-712-fg { color: var(--dynamic-shiki-712-fg) }
+.shiki-713-fg { color: var(--dynamic-shiki-713-fg) }
+.shiki-714-fg { color: var(--dynamic-shiki-714-fg) }
+.shiki-715-fg { color: var(--dynamic-shiki-715-fg) }
+.shiki-716-fg { color: var(--dynamic-shiki-716-fg) }
+.shiki-717-fg { color: var(--dynamic-shiki-717-fg) }
+.shiki-718-fg { color: var(--dynamic-shiki-718-fg) }
+.shiki-719-fg { color: var(--dynamic-shiki-719-fg) }
+.shiki-720-fg { color: var(--dynamic-shiki-720-fg) }
+.shiki-721-fg { color: var(--dynamic-shiki-721-fg) }
+.shiki-722-fg { color: var(--dynamic-shiki-722-fg) }
+.shiki-723-fg { color: var(--dynamic-shiki-723-fg) }
+.shiki-724-fg { color: var(--dynamic-shiki-724-fg) }
+.shiki-725-fg { color: var(--dynamic-shiki-725-fg) }
+.shiki-726-fg { color: var(--dynamic-shiki-726-fg) }
+.shiki-727-fg { color: var(--dynamic-shiki-727-fg) }
+.shiki-728-fg { color: var(--dynamic-shiki-728-fg) }
+.shiki-729-fg { color: var(--dynamic-shiki-729-fg) }
+.shiki-730-fg { color: var(--dynamic-shiki-730-fg) }
+.shiki-731-fg { color: var(--dynamic-shiki-731-fg) }
+.shiki-732-fg { color: var(--dynamic-shiki-732-fg) }
+.shiki-733-fg { color: var(--dynamic-shiki-733-fg) }
+.shiki-734-fg { color: var(--dynamic-shiki-734-fg) }
+.shiki-735-fg { color: var(--dynamic-shiki-735-fg) }
+.shiki-736-fg { color: var(--dynamic-shiki-736-fg) }
+.shiki-737-fg { color: var(--dynamic-shiki-737-fg) }
+.shiki-738-fg { color: var(--dynamic-shiki-738-fg) }
+.shiki-739-fg { color: var(--dynamic-shiki-739-fg) }
+.shiki-740-fg { color: var(--dynamic-shiki-740-fg) }
+.shiki-741-fg { color: var(--dynamic-shiki-741-fg) }
+.shiki-742-fg { color: var(--dynamic-shiki-742-fg) }
+.shiki-743-fg { color: var(--dynamic-shiki-743-fg) }
+.shiki-744-fg { color: var(--dynamic-shiki-744-fg) }
+.shiki-745-fg { color: var(--dynamic-shiki-745-fg) }
+.shiki-746-fg { color: var(--dynamic-shiki-746-fg) }
+.shiki-747-fg { color: var(--dynamic-shiki-747-fg) }
+.shiki-748-fg { color: var(--dynamic-shiki-748-fg) }
+.shiki-749-fg { color: var(--dynamic-shiki-749-fg) }
+.shiki-750-fg { color: var(--dynamic-shiki-750-fg) }
+.shiki-751-fg { color: var(--dynamic-shiki-751-fg) }
+.shiki-752-fg { color: var(--dynamic-shiki-752-fg) }
+.shiki-753-fg { color: var(--dynamic-shiki-753-fg) }
+.shiki-754-fg { color: var(--dynamic-shiki-754-fg) }
+.shiki-755-fg { color: var(--dynamic-shiki-755-fg) }
+.shiki-756-fg { color: var(--dynamic-shiki-756-fg) }
+.shiki-757-fg { color: var(--dynamic-shiki-757-fg) }
+.shiki-758-fg { color: var(--dynamic-shiki-758-fg) }
+.shiki-759-fg { color: var(--dynamic-shiki-759-fg) }
+.shiki-760-fg { color: var(--dynamic-shiki-760-fg) }
+.shiki-761-fg { color: var(--dynamic-shiki-761-fg) }
+.shiki-762-fg { color: var(--dynamic-shiki-762-fg) }
+.shiki-763-fg { color: var(--dynamic-shiki-763-fg) }
+.shiki-764-fg { color: var(--dynamic-shiki-764-fg) }
+.shiki-765-fg { color: var(--dynamic-shiki-765-fg) }
+.shiki-766-fg { color: var(--dynamic-shiki-766-fg) }
+.shiki-767-fg { color: var(--dynamic-shiki-767-fg) }
+.shiki-768-fg { color: var(--dynamic-shiki-768-fg) }
+.shiki-769-fg { color: var(--dynamic-shiki-769-fg) }
+.shiki-770-fg { color: var(--dynamic-shiki-770-fg) }
+.shiki-771-fg { color: var(--dynamic-shiki-771-fg) }
+.shiki-772-fg { color: var(--dynamic-shiki-772-fg) }
+.shiki-773-fg { color: var(--dynamic-shiki-773-fg) }
+.shiki-774-fg { color: var(--dynamic-shiki-774-fg) }
+.shiki-775-fg { color: var(--dynamic-shiki-775-fg) }
+.shiki-776-fg { color: var(--dynamic-shiki-776-fg) }
+.shiki-777-fg { color: var(--dynamic-shiki-777-fg) }
+.shiki-778-fg { color: var(--dynamic-shiki-778-fg) }
+.shiki-779-fg { color: var(--dynamic-shiki-779-fg) }
+.shiki-780-fg { color: var(--dynamic-shiki-780-fg) }
+.shiki-781-fg { color: var(--dynamic-shiki-781-fg) }
+.shiki-782-fg { color: var(--dynamic-shiki-782-fg) }
+.shiki-783-fg { color: var(--dynamic-shiki-783-fg) }
+.shiki-784-fg { color: var(--dynamic-shiki-784-fg) }
+.shiki-785-fg { color: var(--dynamic-shiki-785-fg) }
+.shiki-786-fg { color: var(--dynamic-shiki-786-fg) }
+.shiki-787-fg { color: var(--dynamic-shiki-787-fg) }
+.shiki-787-fs { font-style: var(--dynamic-shiki-787-fs) }
+.shiki-788-fg { color: var(--dynamic-shiki-788-fg) }
+.shiki-789-fg { color: var(--dynamic-shiki-789-fg) }
+.shiki-790-fg { color: var(--dynamic-shiki-790-fg) }
+.shiki-791-fg { color: var(--dynamic-shiki-791-fg) }
+.shiki-792-fg { color: var(--dynamic-shiki-792-fg) }
+.shiki-793-fg { color: var(--dynamic-shiki-793-fg) }
+.shiki-794-fg { color: var(--dynamic-shiki-794-fg) }
+.shiki-795-fg { color: var(--dynamic-shiki-795-fg) }
+.shiki-796-fg { color: var(--dynamic-shiki-796-fg) }
+.shiki-797-fg { color: var(--dynamic-shiki-797-fg) }
+.shiki-798-fg { color: var(--dynamic-shiki-798-fg) }
+.shiki-799-fg { color: var(--dynamic-shiki-799-fg) }
+.shiki-800-fg { color: var(--dynamic-shiki-800-fg) }
+.shiki-801-fg { color: var(--dynamic-shiki-801-fg) }
+.shiki-802-fg { color: var(--dynamic-shiki-802-fg) }
+.shiki-803-fg { color: var(--dynamic-shiki-803-fg) }
+.shiki-804-fg { color: var(--dynamic-shiki-804-fg) }
+.shiki-805-fg { color: var(--dynamic-shiki-805-fg) }
+.shiki-806-fg { color: var(--dynamic-shiki-806-fg) }
+.shiki-807-fg { color: var(--dynamic-shiki-807-fg) }
+.shiki-808-fg { color: var(--dynamic-shiki-808-fg) }
+.shiki-809-fg { color: var(--dynamic-shiki-809-fg) }
+.shiki-810-fg { color: var(--dynamic-shiki-810-fg) }
+.shiki-811-fg { color: var(--dynamic-shiki-811-fg) }
+.shiki-812-fg { color: var(--dynamic-shiki-812-fg) }
+.shiki-813-fg { color: var(--dynamic-shiki-813-fg) }
+.shiki-814-fg { color: var(--dynamic-shiki-814-fg) }
+.shiki-815-fg { color: var(--dynamic-shiki-815-fg) }
+.shiki-816-fg { color: var(--dynamic-shiki-816-fg) }
+.shiki-817-fg { color: var(--dynamic-shiki-817-fg) }
+.shiki-818-fg { color: var(--dynamic-shiki-818-fg) }
+.shiki-819-fg { color: var(--dynamic-shiki-819-fg) }
+.shiki-820-fg { color: var(--dynamic-shiki-820-fg) }
+.shiki-821-fg { color: var(--dynamic-shiki-821-fg) }
+.shiki-822-fg { color: var(--dynamic-shiki-822-fg) }
+.shiki-823-fg { color: var(--dynamic-shiki-823-fg) }
+.shiki-824-fg { color: var(--dynamic-shiki-824-fg) }
+.shiki-825-fg { color: var(--dynamic-shiki-825-fg) }
+.shiki-826-fg { color: var(--dynamic-shiki-826-fg) }
+.shiki-827-fg { color: var(--dynamic-shiki-827-fg) }
+.shiki-828-fg { color: var(--dynamic-shiki-828-fg) }
+.shiki-829-fg { color: var(--dynamic-shiki-829-fg) }
+.shiki-830-fg { color: var(--dynamic-shiki-830-fg) }
+.shiki-831-fg { color: var(--dynamic-shiki-831-fg) }
+.shiki-832-fg { color: var(--dynamic-shiki-832-fg) }
+.shiki-833-fg { color: var(--dynamic-shiki-833-fg) }
+.shiki-834-fg { color: var(--dynamic-shiki-834-fg) }
+.shiki-835-fg { color: var(--dynamic-shiki-835-fg) }
+.shiki-836-fg { color: var(--dynamic-shiki-836-fg) }
+.shiki-837-fg { color: var(--dynamic-shiki-837-fg) }
+.shiki-838-fg { color: var(--dynamic-shiki-838-fg) }
+.shiki-839-fg { color: var(--dynamic-shiki-839-fg) }
+.shiki-840-fg { color: var(--dynamic-shiki-840-fg) }
+.shiki-841-fg { color: var(--dynamic-shiki-841-fg) }
+.shiki-842-fg { color: var(--dynamic-shiki-842-fg) }
+.shiki-843-fg { color: var(--dynamic-shiki-843-fg) }
+.shiki-844-fg { color: var(--dynamic-shiki-844-fg) }
+.shiki-845-fg { color: var(--dynamic-shiki-845-fg) }
+.shiki-846-fg { color: var(--dynamic-shiki-846-fg) }
+.shiki-847-fg { color: var(--dynamic-shiki-847-fg) }
+.shiki-848-fg { color: var(--dynamic-shiki-848-fg) }
+.shiki-849-fg { color: var(--dynamic-shiki-849-fg) }
+.shiki-850-fg { color: var(--dynamic-shiki-850-fg) }
+.shiki-851-fg { color: var(--dynamic-shiki-851-fg) }
+.shiki-852-fg { color: var(--dynamic-shiki-852-fg) }
+.shiki-853-fg { color: var(--dynamic-shiki-853-fg) }
+.shiki-854-fg { color: var(--dynamic-shiki-854-fg) }
+.shiki-854-fs { font-style: var(--dynamic-shiki-854-fs) }
+.shiki-855-fg { color: var(--dynamic-shiki-855-fg) }
+.shiki-855-fs { font-style: var(--dynamic-shiki-855-fs) }
+.shiki-856-fg { color: var(--dynamic-shiki-856-fg) }
+.shiki-857-fg { color: var(--dynamic-shiki-857-fg) }
+.shiki-858-fg { color: var(--dynamic-shiki-858-fg) }
+.shiki-859-fg { color: var(--dynamic-shiki-859-fg) }
+.shiki-860-fg { color: var(--dynamic-shiki-860-fg) }
+.shiki-860-fs { font-style: var(--dynamic-shiki-860-fs) }
+.shiki-861-fg { color: var(--dynamic-shiki-861-fg) }
+.shiki-862-fg { color: var(--dynamic-shiki-862-fg) }
+.shiki-863-fg { color: var(--dynamic-shiki-863-fg) }
+.shiki-864-fg { color: var(--dynamic-shiki-864-fg) }
+.shiki-865-fg { color: var(--dynamic-shiki-865-fg) }
+.shiki-866-fg { color: var(--dynamic-shiki-866-fg) }
+.shiki-867-fg { color: var(--dynamic-shiki-867-fg) }
+.shiki-867-fs { font-style: var(--dynamic-shiki-867-fs) }
+.shiki-868-fg { color: var(--dynamic-shiki-868-fg) }
+.shiki-868-fs { font-style: var(--dynamic-shiki-868-fs) }
+.shiki-869-fg { color: var(--dynamic-shiki-869-fg) }
+.shiki-869-fs { font-style: var(--dynamic-shiki-869-fs) }
+.shiki-870-fg { color: var(--dynamic-shiki-870-fg) }
+.shiki-871-fg { color: var(--dynamic-shiki-871-fg) }
+.shiki-871-fs { font-style: var(--dynamic-shiki-871-fs) }
+.shiki-872-fg { color: var(--dynamic-shiki-872-fg) }
+.shiki-873-fg { color: var(--dynamic-shiki-873-fg) }
+.shiki-874-fg { color: var(--dynamic-shiki-874-fg) }
+.shiki-875-fg { color: var(--dynamic-shiki-875-fg) }
+.shiki-876-fg { color: var(--dynamic-shiki-876-fg) }
+.shiki-877-fg { color: var(--dynamic-shiki-877-fg) }
+.shiki-878-fg { color: var(--dynamic-shiki-878-fg) }
+.shiki-879-fg { color: var(--dynamic-shiki-879-fg) }
+.shiki-880-fg { color: var(--dynamic-shiki-880-fg) }
+.shiki-881-fg { color: var(--dynamic-shiki-881-fg) }
+.shiki-882-fg { color: var(--dynamic-shiki-882-fg) }
+.shiki-883-fg { color: var(--dynamic-shiki-883-fg) }
+.shiki-884-fg { color: var(--dynamic-shiki-884-fg) }
+.shiki-884-fs { font-style: var(--dynamic-shiki-884-fs) }
+.shiki-885-fg { color: var(--dynamic-shiki-885-fg) }
+.shiki-886-fg { color: var(--dynamic-shiki-886-fg) }
+.shiki-887-fg { color: var(--dynamic-shiki-887-fg) }
+.shiki-888-fg { color: var(--dynamic-shiki-888-fg) }
+.shiki-889-fg { color: var(--dynamic-shiki-889-fg) }
+.shiki-889-fs { font-style: var(--dynamic-shiki-889-fs) }
+.shiki-890-fg { color: var(--dynamic-shiki-890-fg) }
+.shiki-891-fg { color: var(--dynamic-shiki-891-fg) }
+.shiki-892-fg { color: var(--dynamic-shiki-892-fg) }
+.shiki-893-fg { color: var(--dynamic-shiki-893-fg) }
+.shiki-894-fg { color: var(--dynamic-shiki-894-fg) }
+.shiki-895-fg { color: var(--dynamic-shiki-895-fg) }
+.shiki-896-fg { color: var(--dynamic-shiki-896-fg) }
+.shiki-897-fg { color: var(--dynamic-shiki-897-fg) }
+.shiki-898-fg { color: var(--dynamic-shiki-898-fg) }
+.shiki-899-fg { color: var(--dynamic-shiki-899-fg) }
+.shiki-900-fg { color: var(--dynamic-shiki-900-fg) }
+.shiki-901-fg { color: var(--dynamic-shiki-901-fg) }
+.shiki-901-fs { font-style: var(--dynamic-shiki-901-fs) }
+.shiki-902-fg { color: var(--dynamic-shiki-902-fg) }
+.shiki-902-fs { font-style: var(--dynamic-shiki-902-fs) }
+.shiki-903-fg { color: var(--dynamic-shiki-903-fg) }
+.shiki-903-fs { font-style: var(--dynamic-shiki-903-fs) }
+.shiki-904-fg { color: var(--dynamic-shiki-904-fg) }
+.shiki-905-fg { color: var(--dynamic-shiki-905-fg) }
+.shiki-906-fg { color: var(--dynamic-shiki-906-fg) }
+.shiki-907-fg { color: var(--dynamic-shiki-907-fg) }
+.shiki-908-fg { color: var(--dynamic-shiki-908-fg) }
+.shiki-909-fg { color: var(--dynamic-shiki-909-fg) }
+.shiki-910-fg { color: var(--dynamic-shiki-910-fg) }
+.shiki-911-fg { color: var(--dynamic-shiki-911-fg) }
+.shiki-912-fg { color: var(--dynamic-shiki-912-fg) }
+.shiki-913-fg { color: var(--dynamic-shiki-913-fg) }
+.shiki-914-fg { color: var(--dynamic-shiki-914-fg) }
+.shiki-915-fg { color: var(--dynamic-shiki-915-fg) }
+.shiki-916-fg { color: var(--dynamic-shiki-916-fg) }
+.shiki-917-fg { color: var(--dynamic-shiki-917-fg) }
+.shiki-918-fg { color: var(--dynamic-shiki-918-fg) }
+.shiki-919-fg { color: var(--dynamic-shiki-919-fg) }
+.shiki-920-fg { color: var(--dynamic-shiki-920-fg) }
+.shiki-921-fg { color: var(--dynamic-shiki-921-fg) }
+.shiki-921-fs { font-style: var(--dynamic-shiki-921-fs) }
+.shiki-922-fg { color: var(--dynamic-shiki-922-fg) }
+.shiki-923-fg { color: var(--dynamic-shiki-923-fg) }
+.shiki-924-fg { color: var(--dynamic-shiki-924-fg) }
+.shiki-925-fg { color: var(--dynamic-shiki-925-fg) }
+.shiki-926-fg { color: var(--dynamic-shiki-926-fg) }
+.shiki-927-fg { color: var(--dynamic-shiki-927-fg) }
+.shiki-928-fg { color: var(--dynamic-shiki-928-fg) }
+.shiki-929-fg { color: var(--dynamic-shiki-929-fg) }
+.shiki-930-fs { font-style: var(--dynamic-shiki-930-fs) }
+.shiki-931-fs { font-style: var(--dynamic-shiki-931-fs) }
+.shiki-932-fs { font-style: var(--dynamic-shiki-932-fs) }
+.shiki-933-fs { font-style: var(--dynamic-shiki-933-fs) }
+.shiki-934-fs { font-style: var(--dynamic-shiki-934-fs) }
+.shiki-935-fs { font-style: var(--dynamic-shiki-935-fs) }
+.shiki-936-fs { font-style: var(--dynamic-shiki-936-fs) }
+.shiki-937-fs { font-style: var(--dynamic-shiki-937-fs) }
+.shiki-938-fs { font-style: var(--dynamic-shiki-938-fs) }
+.shiki-939-fs { font-style: var(--dynamic-shiki-939-fs) }
+.shiki-940-fs { font-style: var(--dynamic-shiki-940-fs) }
+.andromeeda {
+  --dynamic-shiki-0-fg: #A0A1A7cc;
+  --dynamic-shiki-54-fg: #A0A1A7cc;
+  --dynamic-shiki-55-fg: #A0A1A7cc;
+  --dynamic-shiki-56-fg: #A0A1A7cc;
+  --dynamic-shiki-57-fg: #D5CED9;
+  --dynamic-shiki-58-fg: #D5CED9;
+  --dynamic-shiki-59-fg: #D5CED9;
+  --dynamic-shiki-60-fg: #D5CED9;
+  --dynamic-shiki-61-fg: #D5CED9;
+  --dynamic-shiki-50-fg: #00e8c6;
+  --dynamic-shiki-49-fg: #00e8c6;
+  --dynamic-shiki-62-fg: #00e8c6;
+  --dynamic-shiki-63-fg: #00e8c6;
+  --dynamic-shiki-64-fg: #00e8c6;
+  --dynamic-shiki-65-fg: #00e8c6;
+  --dynamic-shiki-66-fg: #00e8c6;
+  --dynamic-shiki-67-fg: #00e8c6;
+  --dynamic-shiki-29-fg: #f39c12;
+  --dynamic-shiki-8-fg: #f39c12;
+  --dynamic-shiki-68-fg: #f39c12;
+  --dynamic-shiki-69-fg: #f39c12;
+  --dynamic-shiki-70-fg: #f39c12;
+  --dynamic-shiki-71-fg: #f39c12;
+  --dynamic-shiki-72-fg: #f39c12;
+  --dynamic-shiki-73-fg: #f39c12;
+  --dynamic-shiki-74-fg: #f39c12;
+  --dynamic-shiki-18-fg: #FFE66D;
+  --dynamic-shiki-75-fg: #f39c12;
+  --dynamic-shiki-76-fg: #f39c12;
+  --dynamic-shiki-77-fg: #f39c12;
+  --dynamic-shiki-78-fg: #f39c12;
+  --dynamic-shiki-32-fg: #FFE66D;
+  --dynamic-shiki-79-fg: #FFE66D;
+  --dynamic-shiki-15-fg: #FFE66D;
+  --dynamic-shiki-47-fg: #FFE66D;
+  --dynamic-shiki-80-fg: #FFE66D;
+  --dynamic-shiki-13-fg: #FFE66D;
+  --dynamic-shiki-19-fg: #FFE66D;
+  --dynamic-shiki-81-fg: #FFE66D;
+  --dynamic-shiki-82-fg: #FFE66D;
+  --dynamic-shiki-83-fg: #FFE66D;
+  --dynamic-shiki-84-fg: #FFE66D;
+  --dynamic-shiki-85-fg: #FFE66D;
+  --dynamic-shiki-86-fg: #FFE66D;
+  --dynamic-shiki-87-fg: #FFE66D;
+  --dynamic-shiki-30-fg: #ff00aa;
+  --dynamic-shiki-88-fg: #ff00aa;
+  --dynamic-shiki-89-fg: #ff00aa;
+  --dynamic-shiki-90-fg: #f92672;
+  --dynamic-shiki-91-fg: #f92672;
+  --dynamic-shiki-92-fg: #f92672;
+  --dynamic-shiki-93-fg: #f92672;
+  --dynamic-shiki-94-fg: #f92672;
+  --dynamic-shiki-95-fg: #f92672;
+  --dynamic-shiki-14-fg: #f92672;
+  --dynamic-shiki-37-fg: #c74ded;
+  --dynamic-shiki-23-fg: #c74ded;
+  --dynamic-shiki-96-fg: #c74ded;
+  --dynamic-shiki-97-fg: #c74ded;
+  --dynamic-shiki-31-fg: #c74ded;
+  --dynamic-shiki-98-fg: #c74ded;
+  --dynamic-shiki-44-fg: #7cb7ff;
+  --dynamic-shiki-99-fg: #7cb7ff;
+  --dynamic-shiki-4-fg: #ee5d43;
+  --dynamic-shiki-45-fg: #ee5d43;
+  --dynamic-shiki-25-fg: #ee5d43;
+  --dynamic-shiki-46-fg: #ee5d43;
+  --dynamic-shiki-100-fg: #ee5d43;
+  --dynamic-shiki-101-fg: #ee5d43;
+  --dynamic-shiki-102-fg: #ee5d43;
+  --dynamic-shiki-103-fg: #ee5d43;
+  --dynamic-shiki-104-fg: #ee5d43;
+  --dynamic-shiki-105-fg: #ee5d43;
+  --dynamic-shiki-41-fg: #96E072;
+  --dynamic-shiki-106-fg: #96E072;
+  --dynamic-shiki-107-fg: #96E072;
+  --dynamic-shiki-108-fg: #96E072;
+  --dynamic-shiki-109-fg: #96E072;
+  --dynamic-shiki-110-fg: #96E072;
+  --dynamic-shiki-111-fg: #96E072;
+  --dynamic-shiki-112-fg: #96E072;
+  --dynamic-shiki-113-fg: #96E072;
+  --dynamic-shiki-114-fg: #96E072;
+  --dynamic-shiki-115-fg: #96E072;
+  --dynamic-shiki-19-fs: underline;
+}
+.dark-plus {
+  --dynamic-shiki-34-fg: #D4D4D4;
+  --dynamic-shiki-116-fg: #D4D4D4;
+  --dynamic-shiki-117-fg: #D4D4D4;
+  --dynamic-shiki-118-fg: #D4D4D4;
+  --dynamic-shiki-119-fg: #000080;
+  --dynamic-shiki-0-fg: #6A9955;
+  --dynamic-shiki-7-fg: #569cd6;
+  --dynamic-shiki-8-fg: #b5cea8;
+  --dynamic-shiki-120-fg: #4FC1FF;
+  --dynamic-shiki-121-fg: #b5cea8;
+  --dynamic-shiki-122-fg: #b5cea8;
+  --dynamic-shiki-123-fg: #646695;
+  --dynamic-shiki-14-fg: #569cd6;
+  --dynamic-shiki-124-fg: #d7ba7d;
+  --dynamic-shiki-18-fg: #9cdcfe;
+  --dynamic-shiki-125-fg: #d7ba7d;
+  --dynamic-shiki-126-fg: #d7ba7d;
+  --dynamic-shiki-127-fg: #d7ba7d;
+  --dynamic-shiki-128-fg: #d7ba7d;
+  --dynamic-shiki-129-fg: #d7ba7d;
+  --dynamic-shiki-130-fg: #d7ba7d;
+  --dynamic-shiki-131-fg: #d7ba7d;
+  --dynamic-shiki-132-fg: #d7ba7d;
+  --dynamic-shiki-20-fg: #f44747;
+  --dynamic-shiki-29-fg: #569cd6;
+  --dynamic-shiki-30-fg: #569cd6;
+  --dynamic-shiki-108-fg: #b5cea8;
+  --dynamic-shiki-105-fg: #ce9178;
+  --dynamic-shiki-99-fg: #569cd6;
+  --dynamic-shiki-133-fg: #6A9955;
+  --dynamic-shiki-134-fg: #6796e6;
+  --dynamic-shiki-107-fg: #ce9178;
+  --dynamic-shiki-135-fg: #808080;
+  --dynamic-shiki-35-fg: #569cd6;
+  --dynamic-shiki-136-fg: #569cd6;
+  --dynamic-shiki-137-fg: #ce9178;
+  --dynamic-shiki-138-fg: #b5cea8;
+  --dynamic-shiki-139-fg: #9cdcfe;
+  --dynamic-shiki-56-fg: #569cd6;
+  --dynamic-shiki-37-fg: #569cd6;
+  --dynamic-shiki-38-fg: #569cd6;
+  --dynamic-shiki-40-fg: #569cd6;
+  --dynamic-shiki-140-fg: #569cd6;
+  --dynamic-shiki-41-fg: #ce9178;
+  --dynamic-shiki-141-fg: #ce9178;
+  --dynamic-shiki-142-fg: #ce9178;
+  --dynamic-shiki-143-fg: #ce9178;
+  --dynamic-shiki-44-fg: #d16969;
+  --dynamic-shiki-144-fg: #569cd6;
+  --dynamic-shiki-145-fg: #569cd6;
+  --dynamic-shiki-146-fg: #569cd6;
+  --dynamic-shiki-147-fg: #d4d4d4;
+  --dynamic-shiki-148-fg: #9cdcfe;
+  --dynamic-shiki-149-fg: #9cdcfe;
+  --dynamic-shiki-150-fg: #9cdcfe;
+  --dynamic-shiki-151-fg: #9cdcfe;
+  --dynamic-shiki-152-fg: #9cdcfe;
+  --dynamic-shiki-153-fg: #9cdcfe;
+  --dynamic-shiki-23-fg: #569cd6;
+  --dynamic-shiki-24-fg: #C586C0;
+  --dynamic-shiki-25-fg: #d4d4d4;
+  --dynamic-shiki-154-fg: #569cd6;
+  --dynamic-shiki-155-fg: #569cd6;
+  --dynamic-shiki-156-fg: #569cd6;
+  --dynamic-shiki-157-fg: #569cd6;
+  --dynamic-shiki-158-fg: #569cd6;
+  --dynamic-shiki-159-fg: #569cd6;
+  --dynamic-shiki-160-fg: #569cd6;
+  --dynamic-shiki-161-fg: #569cd6;
+  --dynamic-shiki-162-fg: #569cd6;
+  --dynamic-shiki-163-fg: #569cd6;
+  --dynamic-shiki-164-fg: #b5cea8;
+  --dynamic-shiki-93-fg: #569cd6;
+  --dynamic-shiki-91-fg: #569cd6;
+  --dynamic-shiki-165-fg: #9cdcfe;
+  --dynamic-shiki-166-fg: #b5cea8;
+  --dynamic-shiki-167-fg: #d4d4d4;
+  --dynamic-shiki-168-fg: #d4d4d4;
+  --dynamic-shiki-169-fg: #d4d4d4;
+  --dynamic-shiki-51-fg: #569cd6;
+  --dynamic-shiki-13-fg: #DCDCAA;
+  --dynamic-shiki-47-fg: #DCDCAA;
+  --dynamic-shiki-170-fg: #DCDCAA;
+  --dynamic-shiki-171-fg: #DCDCAA;
+  --dynamic-shiki-172-fg: #DCDCAA;
+  --dynamic-shiki-45-fg: #4EC9B0;
+  --dynamic-shiki-48-fg: #4EC9B0;
+  --dynamic-shiki-15-fg: #4EC9B0;
+  --dynamic-shiki-173-fg: #4EC9B0;
+  --dynamic-shiki-174-fg: #4EC9B0;
+  --dynamic-shiki-175-fg: #4EC9B0;
+  --dynamic-shiki-176-fg: #4EC9B0;
+  --dynamic-shiki-177-fg: #4EC9B0;
+  --dynamic-shiki-178-fg: #4EC9B0;
+  --dynamic-shiki-179-fg: #4EC9B0;
+  --dynamic-shiki-180-fg: #4EC9B0;
+  --dynamic-shiki-181-fg: #4EC9B0;
+  --dynamic-shiki-182-fg: #4EC9B0;
+  --dynamic-shiki-183-fg: #4EC9B0;
+  --dynamic-shiki-184-fg: #4EC9B0;
+  --dynamic-shiki-185-fg: #4EC9B0;
+  --dynamic-shiki-186-fg: #4EC9B0;
+  --dynamic-shiki-187-fg: #4EC9B0;
+  --dynamic-shiki-188-fg: #4EC9B0;
+  --dynamic-shiki-189-fg: #4EC9B0;
+  --dynamic-shiki-190-fg: #4EC9B0;
+  --dynamic-shiki-191-fg: #4EC9B0;
+  --dynamic-shiki-192-fg: #4EC9B0;
+  --dynamic-shiki-193-fg: #4EC9B0;
+  --dynamic-shiki-194-fg: #4EC9B0;
+  --dynamic-shiki-195-fg: #4EC9B0;
+  --dynamic-shiki-196-fg: #4EC9B0;
+  --dynamic-shiki-197-fg: #4EC9B0;
+  --dynamic-shiki-198-fg: #4EC9B0;
+  --dynamic-shiki-199-fg: #4EC9B0;
+  --dynamic-shiki-200-fg: #4EC9B0;
+  --dynamic-shiki-201-fg: #4EC9B0;
+  --dynamic-shiki-202-fg: #4EC9B0;
+  --dynamic-shiki-203-fg: #4EC9B0;
+  --dynamic-shiki-204-fg: #4EC9B0;
+  --dynamic-shiki-205-fg: #4EC9B0;
+  --dynamic-shiki-206-fg: #4EC9B0;
+  --dynamic-shiki-19-fg: #4EC9B0;
+  --dynamic-shiki-207-fg: #C586C0;
+  --dynamic-shiki-208-fg: #C586C0;
+  --dynamic-shiki-209-fg: #C586C0;
+  --dynamic-shiki-210-fg: #C586C0;
+  --dynamic-shiki-211-fg: #C586C0;
+  --dynamic-shiki-212-fg: #C586C0;
+  --dynamic-shiki-50-fg: #9CDCFE;
+  --dynamic-shiki-213-fg: #9CDCFE;
+  --dynamic-shiki-49-fg: #9CDCFE;
+  --dynamic-shiki-214-fg: #9CDCFE;
+  --dynamic-shiki-215-fg: #9CDCFE;
+  --dynamic-shiki-216-fg: #4FC1FF;
+  --dynamic-shiki-217-fg: #9CDCFE;
+  --dynamic-shiki-218-fg: #CE9178;
+  --dynamic-shiki-219-fg: #CE9178;
+  --dynamic-shiki-220-fg: #CE9178;
+  --dynamic-shiki-221-fg: #CE9178;
+  --dynamic-shiki-222-fg: #CE9178;
+  --dynamic-shiki-223-fg: #CE9178;
+  --dynamic-shiki-224-fg: #CE9178;
+  --dynamic-shiki-225-fg: #CE9178;
+  --dynamic-shiki-226-fg: #CE9178;
+  --dynamic-shiki-227-fg: #CE9178;
+  --dynamic-shiki-228-fg: #CE9178;
+  --dynamic-shiki-229-fg: #CE9178;
+  --dynamic-shiki-230-fg: #CE9178;
+  --dynamic-shiki-231-fg: #CE9178;
+  --dynamic-shiki-232-fg: #d16969;
+  --dynamic-shiki-233-fg: #d16969;
+  --dynamic-shiki-234-fg: #d16969;
+  --dynamic-shiki-235-fg: #d16969;
+  --dynamic-shiki-236-fg: #DCDCAA;
+  --dynamic-shiki-237-fg: #DCDCAA;
+  --dynamic-shiki-238-fg: #d7ba7d;
+  --dynamic-shiki-5-fg: #569cd6;
+  --dynamic-shiki-239-fg: #569cd6;
+  --dynamic-shiki-6-fg: #d7ba7d;
+  --dynamic-shiki-240-fg: #C8C8C8;
+  --dynamic-shiki-930-fs: italic;
+  --dynamic-shiki-340-fs: bold;
+  --dynamic-shiki-27-fs: underline;
+  --dynamic-shiki-29-fs: bold;
+  --dynamic-shiki-30-fs: bold;
+  --dynamic-shiki-31-fs: italic;
+  --dynamic-shiki-931-fs: strikethrough;
+}
+.material-theme-lighter {
+  --dynamic-shiki-41-fg: #91B859;
+  --dynamic-shiki-241-fg: #39ADB5;
+  --dynamic-shiki-242-fg: #39ADB5;
+  --dynamic-shiki-6-fg: #90A4AE;
+  --dynamic-shiki-243-fg: #90A4AE;
+  --dynamic-shiki-244-fg: #FF5370;
+  --dynamic-shiki-8-fg: #F76D47;
+  --dynamic-shiki-50-fg: #90A4AE;
+  --dynamic-shiki-53-fg: #90A4AE;
+  --dynamic-shiki-49-fg: #90A4AE;
+  --dynamic-shiki-51-fg: #90A4AE;
+  --dynamic-shiki-46-fg: #90A4AE;
+  --dynamic-shiki-245-fg: #90A4AE;
+  --dynamic-shiki-246-fg: #6182B8;
+  --dynamic-shiki-26-fg: #F76D47;
+  --dynamic-shiki-23-fg: #39ADB5;
+  --dynamic-shiki-247-fg: #39ADB5;
+  --dynamic-shiki-248-fg: #39ADB5;
+  --dynamic-shiki-249-fg: #39ADB5;
+  --dynamic-shiki-7-fg: #39ADB5;
+  --dynamic-shiki-13-fg: #6182B8;
+  --dynamic-shiki-47-fg: #6182B8;
+  --dynamic-shiki-38-fg: #9C3EDA;
+  --dynamic-shiki-40-fg: #9C3EDA;
+  --dynamic-shiki-250-fg: #9C3EDA;
+  --dynamic-shiki-251-fg: #E53935;
+  --dynamic-shiki-252-fg: #E53935;
+  --dynamic-shiki-48-fg: #E2931D;
+  --dynamic-shiki-253-fg: #E2931D;
+  --dynamic-shiki-15-fg: #E2931D;
+  --dynamic-shiki-19-fg: #E2931D;
+  --dynamic-shiki-17-fg: #E2931D;
+  --dynamic-shiki-0-fg: #90A4AE;
+  --dynamic-shiki-254-fg: #90A4AE;
+  --dynamic-shiki-255-fg: #90A4AE;
+  --dynamic-shiki-12-fg: #E2931D;
+  --dynamic-shiki-256-fg: #E2931D;
+  --dynamic-shiki-45-fg: #E2931D;
+  --dynamic-shiki-257-fg: #E2931D;
+  --dynamic-shiki-258-fg: #E53935;
+  --dynamic-shiki-259-fg: #E53935;
+  --dynamic-shiki-260-fg: #E53935;
+  --dynamic-shiki-261-fg: #6182B8;
+  --dynamic-shiki-262-fg: #39ADB5;
+  --dynamic-shiki-263-fg: #39ADB5;
+  --dynamic-shiki-144-fg: #39ADB5;
+  --dynamic-shiki-145-fg: #39ADB5;
+  --dynamic-shiki-34-fg: #90A4AE;
+  --dynamic-shiki-116-fg: #90A4AE;
+  --dynamic-shiki-147-fg: #90A4AE;
+  --dynamic-shiki-62-fg: #E53935;
+  --dynamic-shiki-217-fg: #E53935;
+  --dynamic-shiki-264-fg: #E53935;
+  --dynamic-shiki-265-fg: #E53935;
+  --dynamic-shiki-266-fg: #39ADB5;
+  --dynamic-shiki-267-fg: #E2931D;
+  --dynamic-shiki-104-fg: #F76D47;
+  --dynamic-shiki-268-fg: #E2931D;
+  --dynamic-shiki-269-fg: #8796B0;
+  --dynamic-shiki-36-fg: #39ADB5;
+  --dynamic-shiki-135-fg: #39ADB5;
+  --dynamic-shiki-14-fg: #E53935;
+  --dynamic-shiki-18-fg: #9C3EDA;
+  --dynamic-shiki-270-fg: #90A4AE;
+  --dynamic-shiki-30-fg: #39ADB5;
+  --dynamic-shiki-271-fg: #E53935;
+  --dynamic-shiki-272-fg: #E53935;
+  --dynamic-shiki-273-fg: #39ADB5;
+  --dynamic-shiki-31-fg: #E53935;
+  --dynamic-shiki-29-fg: #E53935;
+  --dynamic-shiki-274-fg: #E53935;
+  --dynamic-shiki-275-fg: #E53935;
+  --dynamic-shiki-276-fg: #91B859;
+  --dynamic-shiki-277-fg: #91B859;
+  --dynamic-shiki-278-fg: #E53935;
+  --dynamic-shiki-279-fg: #39ADB5;
+  --dynamic-shiki-280-fg: #E2931D;
+  --dynamic-shiki-281-fg: #E53935;
+  --dynamic-shiki-282-fg: #6182B8;
+  --dynamic-shiki-283-fg: #6182B8;
+  --dynamic-shiki-284-fg: #E2931D;
+  --dynamic-shiki-285-fg: #E2931D;
+  --dynamic-shiki-286-fg: #90A4AE;
+  --dynamic-shiki-287-fg: #90A4AE;
+  --dynamic-shiki-288-fg: #90A4AE;
+  --dynamic-shiki-289-fg: #90A4AE;
+  --dynamic-shiki-290-fg: #E2931D;
+  --dynamic-shiki-291-fg: #90A4AE;
+  --dynamic-shiki-292-fg: #E53935;
+  --dynamic-shiki-293-fg: #6182B8;
+  --dynamic-shiki-294-fg: #E53935;
+  --dynamic-shiki-295-fg: #6182B8;
+  --dynamic-shiki-296-fg: #90A4AE;
+  --dynamic-shiki-297-fg: #90A4AE;
+  --dynamic-shiki-298-fg: #39ADB5;
+  --dynamic-shiki-215-fg: #E53935;
+  --dynamic-shiki-105-fg: #E53935;
+  --dynamic-shiki-108-fg: #91B859;
+  --dynamic-shiki-24-fg: #39ADB5;
+  --dynamic-shiki-299-fg: #E53935;
+  --dynamic-shiki-300-fg: #F76D47;
+  --dynamic-shiki-33-fg: #39ADB5;
+  --dynamic-shiki-301-fg: #90A4AE90;
+  --dynamic-shiki-302-fg: #FF5370;
+  --dynamic-shiki-303-fg: #9C3EDA;
+  --dynamic-shiki-304-fg: #E2931D;
+  --dynamic-shiki-305-fg: #F76D47;
+  --dynamic-shiki-306-fg: #E53935;
+  --dynamic-shiki-307-fg: #916b53;
+  --dynamic-shiki-308-fg: #6182B8;
+  --dynamic-shiki-309-fg: #FF5370;
+  --dynamic-shiki-310-fg: #9C3EDA;
+  --dynamic-shiki-311-fg: #91B859;
+  --dynamic-shiki-251-fs: italic;
+  --dynamic-shiki-252-fs: italic;
+  --dynamic-shiki-0-fs: italic;
+  --dynamic-shiki-254-fs: italic;
+  --dynamic-shiki-255-fs: italic;
+  --dynamic-shiki-31-fs: italic;
+  --dynamic-shiki-29-fs: bold;
+  --dynamic-shiki-274-fs: italic bold;
+  --dynamic-shiki-275-fs: italic bold;
+  --dynamic-shiki-298-fs: italic;
+  --dynamic-shiki-27-fs: underline;
+  --dynamic-shiki-24-fs: italic;
+  --dynamic-shiki-53-fs: italic;
+  --dynamic-shiki-299-fs: italic;
+  --dynamic-shiki-33-fs: italic;
+}
+.material-theme-ocean {
+  --dynamic-shiki-41-fg: #C3E88D;
+  --dynamic-shiki-241-fg: #89DDFF;
+  --dynamic-shiki-242-fg: #89DDFF;
+  --dynamic-shiki-6-fg: #babed8;
+  --dynamic-shiki-243-fg: #babed8;
+  --dynamic-shiki-244-fg: #ff9cac;
+  --dynamic-shiki-8-fg: #F78C6C;
+  --dynamic-shiki-50-fg: #babed8;
+  --dynamic-shiki-53-fg: #babed8;
+  --dynamic-shiki-49-fg: #babed8;
+  --dynamic-shiki-51-fg: #babed8;
+  --dynamic-shiki-46-fg: #babed8;
+  --dynamic-shiki-245-fg: #babed8;
+  --dynamic-shiki-246-fg: #82AAFF;
+  --dynamic-shiki-26-fg: #F78C6C;
+  --dynamic-shiki-23-fg: #89DDFF;
+  --dynamic-shiki-247-fg: #89DDFF;
+  --dynamic-shiki-248-fg: #89DDFF;
+  --dynamic-shiki-249-fg: #89DDFF;
+  --dynamic-shiki-7-fg: #89DDFF;
+  --dynamic-shiki-13-fg: #82AAFF;
+  --dynamic-shiki-47-fg: #82AAFF;
+  --dynamic-shiki-38-fg: #C792EA;
+  --dynamic-shiki-40-fg: #C792EA;
+  --dynamic-shiki-250-fg: #C792EA;
+  --dynamic-shiki-251-fg: #f07178;
+  --dynamic-shiki-252-fg: #f07178;
+  --dynamic-shiki-48-fg: #FFCB6B;
+  --dynamic-shiki-253-fg: #FFCB6B;
+  --dynamic-shiki-15-fg: #FFCB6B;
+  --dynamic-shiki-19-fg: #FFCB6B;
+  --dynamic-shiki-17-fg: #FFCB6B;
+  --dynamic-shiki-0-fg: #464B5D;
+  --dynamic-shiki-254-fg: #464B5D;
+  --dynamic-shiki-255-fg: #464B5D;
+  --dynamic-shiki-12-fg: #FFCB6B;
+  --dynamic-shiki-256-fg: #FFCB6B;
+  --dynamic-shiki-45-fg: #FFCB6B;
+  --dynamic-shiki-257-fg: #FFCB6B;
+  --dynamic-shiki-258-fg: #f07178;
+  --dynamic-shiki-259-fg: #f07178;
+  --dynamic-shiki-260-fg: #f07178;
+  --dynamic-shiki-261-fg: #82AAFF;
+  --dynamic-shiki-262-fg: #89DDFF;
+  --dynamic-shiki-263-fg: #89DDFF;
+  --dynamic-shiki-144-fg: #89DDFF;
+  --dynamic-shiki-145-fg: #89DDFF;
+  --dynamic-shiki-34-fg: #babed8;
+  --dynamic-shiki-116-fg: #babed8;
+  --dynamic-shiki-147-fg: #babed8;
+  --dynamic-shiki-62-fg: #f07178;
+  --dynamic-shiki-217-fg: #f07178;
+  --dynamic-shiki-264-fg: #f07178;
+  --dynamic-shiki-265-fg: #f07178;
+  --dynamic-shiki-266-fg: #89DDFF;
+  --dynamic-shiki-267-fg: #FFCB6B;
+  --dynamic-shiki-104-fg: #F78C6C;
+  --dynamic-shiki-268-fg: #FFCB6B;
+  --dynamic-shiki-269-fg: #B2CCD6;
+  --dynamic-shiki-36-fg: #89DDFF;
+  --dynamic-shiki-135-fg: #89DDFF;
+  --dynamic-shiki-14-fg: #f07178;
+  --dynamic-shiki-18-fg: #C792EA;
+  --dynamic-shiki-270-fg: #babed8;
+  --dynamic-shiki-30-fg: #89DDFF;
+  --dynamic-shiki-271-fg: #f07178;
+  --dynamic-shiki-272-fg: #f07178;
+  --dynamic-shiki-273-fg: #89DDFF;
+  --dynamic-shiki-31-fg: #f07178;
+  --dynamic-shiki-29-fg: #f07178;
+  --dynamic-shiki-274-fg: #f07178;
+  --dynamic-shiki-275-fg: #f07178;
+  --dynamic-shiki-276-fg: #C3E88D;
+  --dynamic-shiki-277-fg: #C3E88D;
+  --dynamic-shiki-278-fg: #f07178;
+  --dynamic-shiki-279-fg: #89DDFF;
+  --dynamic-shiki-280-fg: #FFCB6B;
+  --dynamic-shiki-281-fg: #f07178;
+  --dynamic-shiki-282-fg: #82AAFF;
+  --dynamic-shiki-283-fg: #82AAFF;
+  --dynamic-shiki-284-fg: #FFCB6B;
+  --dynamic-shiki-285-fg: #FFCB6B;
+  --dynamic-shiki-286-fg: #464B5D;
+  --dynamic-shiki-287-fg: #babed8;
+  --dynamic-shiki-288-fg: #babed8;
+  --dynamic-shiki-289-fg: #babed8;
+  --dynamic-shiki-290-fg: #FFCB6B;
+  --dynamic-shiki-291-fg: #babed8;
+  --dynamic-shiki-292-fg: #f07178;
+  --dynamic-shiki-293-fg: #82AAFF;
+  --dynamic-shiki-294-fg: #f07178;
+  --dynamic-shiki-295-fg: #82AAFF;
+  --dynamic-shiki-296-fg: #babed8;
+  --dynamic-shiki-297-fg: #babed8;
+  --dynamic-shiki-298-fg: #89DDFF;
+  --dynamic-shiki-215-fg: #f07178;
+  --dynamic-shiki-105-fg: #f07178;
+  --dynamic-shiki-108-fg: #C3E88D;
+  --dynamic-shiki-24-fg: #89DDFF;
+  --dynamic-shiki-299-fg: #f07178;
+  --dynamic-shiki-300-fg: #F78C6C;
+  --dynamic-shiki-33-fg: #89DDFF;
+  --dynamic-shiki-301-fg: #babed890;
+  --dynamic-shiki-302-fg: #ff9cac;
+  --dynamic-shiki-303-fg: #C792EA;
+  --dynamic-shiki-304-fg: #FFCB6B;
+  --dynamic-shiki-305-fg: #F78C6C;
+  --dynamic-shiki-306-fg: #f07178;
+  --dynamic-shiki-307-fg: #916b53;
+  --dynamic-shiki-308-fg: #82AAFF;
+  --dynamic-shiki-309-fg: #ff9cac;
+  --dynamic-shiki-310-fg: #C792EA;
+  --dynamic-shiki-311-fg: #C3E88D;
+  --dynamic-shiki-251-fs: italic;
+  --dynamic-shiki-252-fs: italic;
+  --dynamic-shiki-0-fs: italic;
+  --dynamic-shiki-254-fs: italic;
+  --dynamic-shiki-255-fs: italic;
+  --dynamic-shiki-31-fs: italic;
+  --dynamic-shiki-29-fs: bold;
+  --dynamic-shiki-274-fs: italic bold;
+  --dynamic-shiki-275-fs: italic bold;
+  --dynamic-shiki-298-fs: italic;
+  --dynamic-shiki-27-fs: underline;
+  --dynamic-shiki-24-fs: italic;
+  --dynamic-shiki-53-fs: italic;
+  --dynamic-shiki-299-fs: italic;
+  --dynamic-shiki-33-fs: italic;
+}
+.material-theme-palenight {
+  --dynamic-shiki-41-fg: #C3E88D;
+  --dynamic-shiki-241-fg: #89DDFF;
+  --dynamic-shiki-242-fg: #89DDFF;
+  --dynamic-shiki-6-fg: #babed8;
+  --dynamic-shiki-243-fg: #babed8;
+  --dynamic-shiki-244-fg: #ff9cac;
+  --dynamic-shiki-8-fg: #F78C6C;
+  --dynamic-shiki-50-fg: #babed8;
+  --dynamic-shiki-53-fg: #babed8;
+  --dynamic-shiki-49-fg: #babed8;
+  --dynamic-shiki-51-fg: #babed8;
+  --dynamic-shiki-46-fg: #babed8;
+  --dynamic-shiki-245-fg: #babed8;
+  --dynamic-shiki-246-fg: #82AAFF;
+  --dynamic-shiki-26-fg: #F78C6C;
+  --dynamic-shiki-23-fg: #89DDFF;
+  --dynamic-shiki-247-fg: #89DDFF;
+  --dynamic-shiki-248-fg: #89DDFF;
+  --dynamic-shiki-249-fg: #89DDFF;
+  --dynamic-shiki-7-fg: #89DDFF;
+  --dynamic-shiki-13-fg: #82AAFF;
+  --dynamic-shiki-47-fg: #82AAFF;
+  --dynamic-shiki-38-fg: #C792EA;
+  --dynamic-shiki-40-fg: #C792EA;
+  --dynamic-shiki-250-fg: #C792EA;
+  --dynamic-shiki-251-fg: #f07178;
+  --dynamic-shiki-252-fg: #f07178;
+  --dynamic-shiki-48-fg: #FFCB6B;
+  --dynamic-shiki-253-fg: #FFCB6B;
+  --dynamic-shiki-15-fg: #FFCB6B;
+  --dynamic-shiki-19-fg: #FFCB6B;
+  --dynamic-shiki-17-fg: #FFCB6B;
+  --dynamic-shiki-0-fg: #676E95;
+  --dynamic-shiki-254-fg: #676E95;
+  --dynamic-shiki-255-fg: #676E95;
+  --dynamic-shiki-12-fg: #FFCB6B;
+  --dynamic-shiki-256-fg: #FFCB6B;
+  --dynamic-shiki-45-fg: #FFCB6B;
+  --dynamic-shiki-257-fg: #FFCB6B;
+  --dynamic-shiki-258-fg: #f07178;
+  --dynamic-shiki-259-fg: #f07178;
+  --dynamic-shiki-260-fg: #f07178;
+  --dynamic-shiki-261-fg: #82AAFF;
+  --dynamic-shiki-262-fg: #89DDFF;
+  --dynamic-shiki-263-fg: #89DDFF;
+  --dynamic-shiki-144-fg: #89DDFF;
+  --dynamic-shiki-145-fg: #89DDFF;
+  --dynamic-shiki-34-fg: #babed8;
+  --dynamic-shiki-116-fg: #babed8;
+  --dynamic-shiki-147-fg: #babed8;
+  --dynamic-shiki-62-fg: #f07178;
+  --dynamic-shiki-217-fg: #f07178;
+  --dynamic-shiki-264-fg: #f07178;
+  --dynamic-shiki-265-fg: #f07178;
+  --dynamic-shiki-266-fg: #89DDFF;
+  --dynamic-shiki-267-fg: #FFCB6B;
+  --dynamic-shiki-104-fg: #F78C6C;
+  --dynamic-shiki-268-fg: #FFCB6B;
+  --dynamic-shiki-269-fg: #B2CCD6;
+  --dynamic-shiki-36-fg: #89DDFF;
+  --dynamic-shiki-135-fg: #89DDFF;
+  --dynamic-shiki-14-fg: #f07178;
+  --dynamic-shiki-18-fg: #C792EA;
+  --dynamic-shiki-270-fg: #babed8;
+  --dynamic-shiki-30-fg: #89DDFF;
+  --dynamic-shiki-271-fg: #f07178;
+  --dynamic-shiki-272-fg: #f07178;
+  --dynamic-shiki-273-fg: #89DDFF;
+  --dynamic-shiki-31-fg: #f07178;
+  --dynamic-shiki-29-fg: #f07178;
+  --dynamic-shiki-274-fg: #f07178;
+  --dynamic-shiki-275-fg: #f07178;
+  --dynamic-shiki-276-fg: #C3E88D;
+  --dynamic-shiki-277-fg: #C3E88D;
+  --dynamic-shiki-278-fg: #f07178;
+  --dynamic-shiki-279-fg: #89DDFF;
+  --dynamic-shiki-280-fg: #FFCB6B;
+  --dynamic-shiki-281-fg: #f07178;
+  --dynamic-shiki-282-fg: #82AAFF;
+  --dynamic-shiki-283-fg: #82AAFF;
+  --dynamic-shiki-284-fg: #FFCB6B;
+  --dynamic-shiki-285-fg: #FFCB6B;
+  --dynamic-shiki-286-fg: #676E95;
+  --dynamic-shiki-287-fg: #babed8;
+  --dynamic-shiki-288-fg: #babed8;
+  --dynamic-shiki-289-fg: #babed8;
+  --dynamic-shiki-290-fg: #FFCB6B;
+  --dynamic-shiki-291-fg: #babed8;
+  --dynamic-shiki-292-fg: #f07178;
+  --dynamic-shiki-293-fg: #82AAFF;
+  --dynamic-shiki-294-fg: #f07178;
+  --dynamic-shiki-295-fg: #82AAFF;
+  --dynamic-shiki-296-fg: #babed8;
+  --dynamic-shiki-297-fg: #babed8;
+  --dynamic-shiki-298-fg: #89DDFF;
+  --dynamic-shiki-215-fg: #f07178;
+  --dynamic-shiki-105-fg: #f07178;
+  --dynamic-shiki-108-fg: #C3E88D;
+  --dynamic-shiki-24-fg: #89DDFF;
+  --dynamic-shiki-299-fg: #f07178;
+  --dynamic-shiki-300-fg: #F78C6C;
+  --dynamic-shiki-33-fg: #89DDFF;
+  --dynamic-shiki-301-fg: #babed890;
+  --dynamic-shiki-302-fg: #ff9cac;
+  --dynamic-shiki-303-fg: #C792EA;
+  --dynamic-shiki-304-fg: #FFCB6B;
+  --dynamic-shiki-305-fg: #F78C6C;
+  --dynamic-shiki-306-fg: #f07178;
+  --dynamic-shiki-307-fg: #916b53;
+  --dynamic-shiki-308-fg: #82AAFF;
+  --dynamic-shiki-309-fg: #ff9cac;
+  --dynamic-shiki-310-fg: #C792EA;
+  --dynamic-shiki-311-fg: #C3E88D;
+  --dynamic-shiki-251-fs: italic;
+  --dynamic-shiki-252-fs: italic;
+  --dynamic-shiki-0-fs: italic;
+  --dynamic-shiki-254-fs: italic;
+  --dynamic-shiki-255-fs: italic;
+  --dynamic-shiki-31-fs: italic;
+  --dynamic-shiki-29-fs: bold;
+  --dynamic-shiki-274-fs: italic bold;
+  --dynamic-shiki-275-fs: italic bold;
+  --dynamic-shiki-298-fs: italic;
+  --dynamic-shiki-27-fs: underline;
+  --dynamic-shiki-24-fs: italic;
+  --dynamic-shiki-53-fs: italic;
+  --dynamic-shiki-299-fs: italic;
+  --dynamic-shiki-33-fs: italic;
+}
+.min-light {
+  --dynamic-shiki-312-fg: #24292eff;
+  --dynamic-shiki-313-fg: #24292eff;
+  --dynamic-shiki-147-fg: #24292eff;
+  --dynamic-shiki-314-fg: #24292eff;
+  --dynamic-shiki-315-fg: #1976D2;
+  --dynamic-shiki-41-fg: #2b5581;
+  --dynamic-shiki-316-fg: #2b5581;
+  --dynamic-shiki-317-fg: #2b5581;
+  --dynamic-shiki-0-fg: #c2c3c5;
+  --dynamic-shiki-318-fg: #c2c3c5;
+  --dynamic-shiki-8-fg: #1976D2;
+  --dynamic-shiki-7-fg: #1976D2;
+  --dynamic-shiki-215-fg: #1976D2;
+  --dynamic-shiki-319-fg: #1976D2;
+  --dynamic-shiki-248-fg: #1976D2;
+  --dynamic-shiki-320-fg: #1976D2;
+  --dynamic-shiki-321-fg: #1976D2;
+  --dynamic-shiki-216-fg: #1976D2;
+  --dynamic-shiki-322-fg: #1976D2;
+  --dynamic-shiki-323-fg: #1976D2;
+  --dynamic-shiki-324-fg: #1976D2;
+  --dynamic-shiki-23-fg: #D32F2F;
+  --dynamic-shiki-40-fg: #D32F2F;
+  --dynamic-shiki-38-fg: #D32F2F;
+  --dynamic-shiki-325-fg: #D32F2F;
+  --dynamic-shiki-326-fg: #D32F2F;
+  --dynamic-shiki-62-fg: #D32F2F;
+  --dynamic-shiki-327-fg: #D32F2F;
+  --dynamic-shiki-265-fg: #D32F2F;
+  --dynamic-shiki-328-fg: #D32F2F;
+  --dynamic-shiki-95-fg: #D32F2F;
+  --dynamic-shiki-329-fg: #FF9800;
+  --dynamic-shiki-47-fg: #6f42c1;
+  --dynamic-shiki-15-fg: #6f42c1;
+  --dynamic-shiki-19-fg: #6f42c1;
+  --dynamic-shiki-330-fg: #6f42c1;
+  --dynamic-shiki-331-fg: #6f42c1;
+  --dynamic-shiki-18-fg: #6f42c1;
+  --dynamic-shiki-13-fg: #6f42c1;
+  --dynamic-shiki-332-fg: #6f42c1;
+  --dynamic-shiki-14-fg: #22863a;
+  --dynamic-shiki-42-fg: #22863a;
+  --dynamic-shiki-44-fg: #22863a;
+  --dynamic-shiki-43-fg: #22863a;
+  --dynamic-shiki-333-fg: #22863a;
+  --dynamic-shiki-334-fg: #22863a;
+  --dynamic-shiki-335-fg: #22863a;
+  --dynamic-shiki-336-fg: #316bcd;
+  --dynamic-shiki-337-fg: #cd9731;
+  --dynamic-shiki-338-fg: #cd3131;
+  --dynamic-shiki-339-fg: #800080;
+  --dynamic-shiki-340-fg: #6f42c1;
+  --dynamic-shiki-341-fg: #6f42c1;
+  --dynamic-shiki-342-fg: #6f42c1;
+  --dynamic-shiki-343-fg: #212121;
+  --dynamic-shiki-344-fg: #212121;
+  --dynamic-shiki-345-fg: #212121;
+  --dynamic-shiki-246-fg: #212121;
+  --dynamic-shiki-28-fg: #22863a;
+  --dynamic-shiki-59-fg: #22863a;
+  --dynamic-shiki-65-fg: #6f42c1;
+  --dynamic-shiki-61-fg: #d32f2f;
+  --dynamic-shiki-60-fg: #d32f2f;
+  --dynamic-shiki-346-fg: #d32f2f;
+  --dynamic-shiki-347-fg: #d32f2f;
+  --dynamic-shiki-930-fs: italic;
+  --dynamic-shiki-340-fs: bold;
+  --dynamic-shiki-341-fs: bold;
+  --dynamic-shiki-342-fs: bold;
+  --dynamic-shiki-921-fs: italic;
+  --dynamic-shiki-315-fs: underline;
+}
+.moonlight-ii {
+  --dynamic-shiki-0-fg: #858aa6;
+  --dynamic-shiki-348-fg: #858aa6;
+  --dynamic-shiki-255-fg: #858aa6;
+  --dynamic-shiki-50-fg: #c8d3f5;
+  --dynamic-shiki-49-fg: #c8d3f5;
+  --dynamic-shiki-349-fg: #c8d3f5;
+  --dynamic-shiki-350-fg: #c8d3f5;
+  --dynamic-shiki-351-fg: #ffc777;
+  --dynamic-shiki-204-fg: #ffc777;
+  --dynamic-shiki-352-fg: #ffc777;
+  --dynamic-shiki-353-fg: #ffc777;
+  --dynamic-shiki-206-fg: #ffc777;
+  --dynamic-shiki-354-fg: #7f85a3;
+  --dynamic-shiki-355-fg: #7f85a3;
+  --dynamic-shiki-69-fg: #ffc777;
+  --dynamic-shiki-356-fg: #86e1fc;
+  --dynamic-shiki-20-fg: #ff5370;
+  --dynamic-shiki-21-fg: #ff5370;
+  --dynamic-shiki-22-fg: #c099ff;
+  --dynamic-shiki-23-fg: #c099ff;
+  --dynamic-shiki-38-fg: #c099ff;
+  --dynamic-shiki-40-fg: #c099ff;
+  --dynamic-shiki-357-fg: #c099ff;
+  --dynamic-shiki-95-fg: #86e1fc;
+  --dynamic-shiki-146-fg: #86e1fc;
+  --dynamic-shiki-358-fg: #ff757f;
+  --dynamic-shiki-359-fg: #ff757f;
+  --dynamic-shiki-25-fg: #86e1fc;
+  --dynamic-shiki-24-fg: #86e1fc;
+  --dynamic-shiki-241-fg: #86e1fc;
+  --dynamic-shiki-109-fg: #86e1fc;
+  --dynamic-shiki-360-fg: #86e1fc;
+  --dynamic-shiki-361-fg: #86e1fc;
+  --dynamic-shiki-362-fg: #86e1fc;
+  --dynamic-shiki-363-fg: #86e1fc;
+  --dynamic-shiki-364-fg: #86e1fc;
+  --dynamic-shiki-36-fg: #ff757f;
+  --dynamic-shiki-135-fg: #86e1fc;
+  --dynamic-shiki-365-fg: #86e1fc;
+  --dynamic-shiki-366-fg: #86e1fc;
+  --dynamic-shiki-367-fg: #86e1fc;
+  --dynamic-shiki-368-fg: #86e1fc;
+  --dynamic-shiki-369-fg: #86e1fc;
+  --dynamic-shiki-370-fg: #86e1fc;
+  --dynamic-shiki-371-fg: #86e1fc;
+  --dynamic-shiki-335-fg: #86e1fc;
+  --dynamic-shiki-372-fg: #86e1fc;
+  --dynamic-shiki-14-fg: #ff757f;
+  --dynamic-shiki-373-fg: #ff757f;
+  --dynamic-shiki-13-fg: #82aaff;
+  --dynamic-shiki-374-fg: #82aaff;
+  --dynamic-shiki-375-fg: #82aaff;
+  --dynamic-shiki-47-fg: #65bcff;
+  --dynamic-shiki-376-fg: #65bcff;
+  --dynamic-shiki-291-fg: #ff757f;
+  --dynamic-shiki-377-fg: #ff757f;
+  --dynamic-shiki-378-fg: #ff757f;
+  --dynamic-shiki-216-fg: #ff98a4;
+  --dynamic-shiki-7-fg: #ff98a4;
+  --dynamic-shiki-379-fg: #ff98a4;
+  --dynamic-shiki-380-fg: #ff98a4;
+  --dynamic-shiki-46-fg: #ff98a4;
+  --dynamic-shiki-5-fg: #ff98a4;
+  --dynamic-shiki-381-fg: #ff98a4;
+  --dynamic-shiki-164-fg: #fc7b7b;
+  --dynamic-shiki-8-fg: #ff966c;
+  --dynamic-shiki-244-fg: #ff966c;
+  --dynamic-shiki-266-fg: #ff966c;
+  --dynamic-shiki-382-fg: #ff966c;
+  --dynamic-shiki-383-fg: #ff966c;
+  --dynamic-shiki-384-fg: #fca7ea;
+  --dynamic-shiki-53-fg: #fca7ea;
+  --dynamic-shiki-385-fg: #fca7ea;
+  --dynamic-shiki-41-fg: #c3e88d;
+  --dynamic-shiki-242-fg: #c3e88d;
+  --dynamic-shiki-253-fg: #c3e88d;
+  --dynamic-shiki-19-fg: #c3e88d;
+  --dynamic-shiki-30-fg: #c3e88d;
+  --dynamic-shiki-386-fg: #c3e88d;
+  --dynamic-shiki-387-fg: #c3e88d;
+  --dynamic-shiki-388-fg: #c3e88d;
+  --dynamic-shiki-320-fg: #ffc777;
+  --dynamic-shiki-217-fg: #4fd6be;
+  --dynamic-shiki-389-fg: #4fd6be;
+  --dynamic-shiki-390-fg: #4fd6be;
+  --dynamic-shiki-391-fg: #4fd6be;
+  --dynamic-shiki-392-fg: #4fd6be;
+  --dynamic-shiki-258-fg: #4fd6be;
+  --dynamic-shiki-393-fg: #a9b8e8;
+  --dynamic-shiki-394-fg: #a9b8e8;
+  --dynamic-shiki-395-fg: #a9b8e8;
+  --dynamic-shiki-396-fg: #a9b8e8;
+  --dynamic-shiki-397-fg: #a9b8e8;
+  --dynamic-shiki-398-fg: #ff98a4;
+  --dynamic-shiki-399-fg: #c8d3f5;
+  --dynamic-shiki-400-fg: #ffc777;
+  --dynamic-shiki-401-fg: #ffc777;
+  --dynamic-shiki-402-fg: #ffc777;
+  --dynamic-shiki-39-fg: #c099ff;
+  --dynamic-shiki-12-fg: #ffc777;
+  --dynamic-shiki-48-fg: #ff966c;
+  --dynamic-shiki-45-fg: #ffc777;
+  --dynamic-shiki-403-fg: #ffc777;
+  --dynamic-shiki-404-fg: #ffc777;
+  --dynamic-shiki-405-fg: #ffc777;
+  --dynamic-shiki-406-fg: #ffc777;
+  --dynamic-shiki-407-fg: #ffc777;
+  --dynamic-shiki-408-fg: #82aaff;
+  --dynamic-shiki-409-fg: #82aaff;
+  --dynamic-shiki-410-fg: #82aaff;
+  --dynamic-shiki-411-fg: #82aaff;
+  --dynamic-shiki-412-fg: #82aaff;
+  --dynamic-shiki-413-fg: #82aaff;
+  --dynamic-shiki-269-fg: #82aaff;
+  --dynamic-shiki-148-fg: #82aaff;
+  --dynamic-shiki-414-fg: #ff757f;
+  --dynamic-shiki-415-fg: #ff757f;
+  --dynamic-shiki-416-fg: #ff757f;
+  --dynamic-shiki-51-fg: #ff757f;
+  --dynamic-shiki-417-fg: #82aaff;
+  --dynamic-shiki-418-fg: #82aaff;
+  --dynamic-shiki-419-fg: #82aaff;
+  --dynamic-shiki-18-fg: #c099ff;
+  --dynamic-shiki-420-fg: #ffc777;
+  --dynamic-shiki-421-fg: #ffc777;
+  --dynamic-shiki-422-fg: #c099ff;
+  --dynamic-shiki-423-fg: #c099ff;
+  --dynamic-shiki-267-fg: #ffc777;
+  --dynamic-shiki-424-fg: #82aaff;
+  --dynamic-shiki-425-fg: #4fd6be;
+  --dynamic-shiki-426-fg: #4fd6be;
+  --dynamic-shiki-218-fg: #fca7ea;
+  --dynamic-shiki-108-fg: #c3e88d;
+  --dynamic-shiki-105-fg: #ff757f;
+  --dynamic-shiki-99-fg: #c099ff;
+  --dynamic-shiki-44-fg: #b4f9f8;
+  --dynamic-shiki-427-fg: #ff757f;
+  --dynamic-shiki-234-fg: #c099ff;
+  --dynamic-shiki-237-fg: #c099ff;
+  --dynamic-shiki-233-fg: #ffc777;
+  --dynamic-shiki-238-fg: #fca7ea;
+  --dynamic-shiki-6-fg: #86e1fc;
+  --dynamic-shiki-428-fg: #82aaff;
+  --dynamic-shiki-429-fg: #82aaff;
+  --dynamic-shiki-430-fg: #ff757f;
+  --dynamic-shiki-431-fg: #82aaff;
+  --dynamic-shiki-432-fg: #65bcff;
+  --dynamic-shiki-433-fg: #ff757f;
+  --dynamic-shiki-434-fg: #fca7ea;
+  --dynamic-shiki-435-fg: #ffc777;
+  --dynamic-shiki-436-fg: #4fd6be;
+  --dynamic-shiki-437-fg: #82aaff;
+  --dynamic-shiki-438-fg: #828bb8;
+  --dynamic-shiki-294-fg: #b4c2f0;
+  --dynamic-shiki-439-fg: #b4c2f0;
+  --dynamic-shiki-440-fg: #b4c2f0;
+  --dynamic-shiki-441-fg: #b4c2f0;
+  --dynamic-shiki-442-fg: #b4c2f0;
+  --dynamic-shiki-288-fg: #b4c2f0;
+  --dynamic-shiki-443-fg: #b4c2f0;
+  --dynamic-shiki-444-fg: #c099ff;
+  --dynamic-shiki-445-fg: #86e1fc;
+  --dynamic-shiki-446-fg: #86e1fc;
+  --dynamic-shiki-447-fg: #86e1fc;
+  --dynamic-shiki-448-fg: #86e1fc;
+  --dynamic-shiki-31-fg: #ff757f;
+  --dynamic-shiki-29-fg: #ff757f;
+  --dynamic-shiki-449-fg: #ff757f;
+  --dynamic-shiki-274-fg: #ff757f;
+  --dynamic-shiki-275-fg: #ff757f;
+  --dynamic-shiki-450-fg: #ff757f;
+  --dynamic-shiki-451-fg: #ff757f;
+  --dynamic-shiki-452-fg: #ff757f;
+  --dynamic-shiki-453-fg: #ff757f;
+  --dynamic-shiki-27-fg: #ff966c;
+  --dynamic-shiki-454-fg: #86e1fc;
+  --dynamic-shiki-346-fg: #82aaff;
+  --dynamic-shiki-455-fg: #c099ff;
+  --dynamic-shiki-456-fg: #ffc777;
+  --dynamic-shiki-457-fg: #c099ff;
+  --dynamic-shiki-458-fg: #86e1fc;
+  --dynamic-shiki-277-fg: #86e1fc;
+  --dynamic-shiki-459-fg: #86e1fc;
+  --dynamic-shiki-460-fg: #86e1fc;
+  --dynamic-shiki-461-fg: #828bb8;
+  --dynamic-shiki-336-fg: #65bcff;
+  --dynamic-shiki-337-fg: #ffc777;
+  --dynamic-shiki-338-fg: #ff757f;
+  --dynamic-shiki-339-fg: #c099ff;
+  --dynamic-shiki-358-fs: bold;
+  --dynamic-shiki-359-fs: bold;
+  --dynamic-shiki-932-fs: underline;
+  --dynamic-shiki-933-fs: underline;
+  --dynamic-shiki-934-fs: underline;
+  --dynamic-shiki-31-fs: italic;
+  --dynamic-shiki-29-fs: bold;
+  --dynamic-shiki-449-fs: bold;
+  --dynamic-shiki-274-fs: bold;
+  --dynamic-shiki-275-fs: bold;
+  --dynamic-shiki-450-fs: bold;
+  --dynamic-shiki-451-fs: bold;
+  --dynamic-shiki-452-fs: bold;
+  --dynamic-shiki-453-fs: bold;
+  --dynamic-shiki-27-fs: underline;
+  --dynamic-shiki-33-fs: italic;
+  --dynamic-shiki-460-fs: bold;
+}
+.my-eyes-please {
+  --dynamic-shiki-0-fg: #333942;
+  --dynamic-shiki-2-fg: #333942;
+  --dynamic-shiki-348-fg: #333942;
+  --dynamic-shiki-255-fg: #333942;
+  --dynamic-shiki-462-fg: #333942;
+  --dynamic-shiki-463-fg: #333942;
+  --dynamic-shiki-464-fg: #333942;
+  --dynamic-shiki-366-fg: #333942;
+  --dynamic-shiki-465-fg: #384457;
+  --dynamic-shiki-466-fg: #384457;
+  --dynamic-shiki-467-fg: #384457;
+  --dynamic-shiki-468-fg: #384457;
+  --dynamic-shiki-469-fg: #384457;
+  --dynamic-shiki-470-fg: #384457;
+  --dynamic-shiki-471-fg: #384457;
+  --dynamic-shiki-472-fg: #384457;
+  --dynamic-shiki-50-fg: #df5e65;
+  --dynamic-shiki-349-fg: #df5e65;
+  --dynamic-shiki-473-fg: #df5e65;
+  --dynamic-shiki-474-fg: #df5e65;
+  --dynamic-shiki-356-fg: #68a6e0;
+  --dynamic-shiki-20-fg: #FF5370;
+  --dynamic-shiki-21-fg: #FF5370;
+  --dynamic-shiki-23-fg: #f0cc62;
+  --dynamic-shiki-475-fg: #f0cc62;
+  --dynamic-shiki-25-fg: #f0cc62;
+  --dynamic-shiki-38-fg: #f0cc62;
+  --dynamic-shiki-40-fg: #f0cc62;
+  --dynamic-shiki-476-fg: #68a6e0;
+  --dynamic-shiki-36-fg: #68a6e0;
+  --dynamic-shiki-135-fg: #68a6e0;
+  --dynamic-shiki-365-fg: #68a6e0;
+  --dynamic-shiki-367-fg: #68a6e0;
+  --dynamic-shiki-368-fg: #68a6e0;
+  --dynamic-shiki-369-fg: #68a6e0;
+  --dynamic-shiki-146-fg: #68a6e0;
+  --dynamic-shiki-335-fg: #68a6e0;
+  --dynamic-shiki-372-fg: #68a6e0;
+  --dynamic-shiki-14-fg: #f0cc62;
+  --dynamic-shiki-477-fg: #f0cc62;
+  --dynamic-shiki-373-fg: #f0cc62;
+  --dynamic-shiki-13-fg: #5298d1;
+  --dynamic-shiki-17-fg: #5298d1;
+  --dynamic-shiki-330-fg: #5298d1;
+  --dynamic-shiki-374-fg: #5298d1;
+  --dynamic-shiki-47-fg: #5298d1;
+  --dynamic-shiki-375-fg: #5298d1;
+  --dynamic-shiki-12-fg: #5298d1;
+  --dynamic-shiki-45-fg: #5298d1;
+  --dynamic-shiki-403-fg: #5298d1;
+  --dynamic-shiki-404-fg: #5298d1;
+  --dynamic-shiki-405-fg: #5298d1;
+  --dynamic-shiki-406-fg: #5298d1;
+  --dynamic-shiki-407-fg: #5298d1;
+  --dynamic-shiki-478-fg: #df5e65;
+  --dynamic-shiki-377-fg: #f07178;
+  --dynamic-shiki-378-fg: #f07178;
+  --dynamic-shiki-8-fg: #8fa866;
+  --dynamic-shiki-7-fg: #8fa866;
+  --dynamic-shiki-46-fg: #8fa866;
+  --dynamic-shiki-5-fg: #8fa866;
+  --dynamic-shiki-381-fg: #8fa866;
+  --dynamic-shiki-53-fg: #e2714e;
+  --dynamic-shiki-164-fg: #e2714e;
+  --dynamic-shiki-26-fg: #e2714e;
+  --dynamic-shiki-41-fg: #59b47c;
+  --dynamic-shiki-242-fg: #59b47c;
+  --dynamic-shiki-253-fg: #59b47c;
+  --dynamic-shiki-30-fg: #59b47c;
+  --dynamic-shiki-386-fg: #59b47c;
+  --dynamic-shiki-387-fg: #59b47c;
+  --dynamic-shiki-109-fg: #398b59;
+  --dynamic-shiki-48-fg: #C792EA;
+  --dynamic-shiki-408-fg: #df5e65;
+  --dynamic-shiki-409-fg: #df5e65;
+  --dynamic-shiki-410-fg: #df5e65;
+  --dynamic-shiki-411-fg: #df5e65;
+  --dynamic-shiki-412-fg: #df5e65;
+  --dynamic-shiki-413-fg: #df5e65;
+  --dynamic-shiki-414-fg: #FF5370;
+  --dynamic-shiki-415-fg: #FF5370;
+  --dynamic-shiki-416-fg: #FF5370;
+  --dynamic-shiki-51-fg: #e2854f;
+  --dynamic-shiki-417-fg: #82AAFF;
+  --dynamic-shiki-418-fg: #82AAFF;
+  --dynamic-shiki-419-fg: #82AAFF;
+  --dynamic-shiki-18-fg: #df5e65;
+  --dynamic-shiki-479-fg: #df5e65;
+  --dynamic-shiki-149-fg: #df5e65;
+  --dynamic-shiki-420-fg: #f0cc62;
+  --dynamic-shiki-421-fg: #f0cc62;
+  --dynamic-shiki-480-fg: #f0cc62;
+  --dynamic-shiki-424-fg: #f09b62;
+  --dynamic-shiki-104-fg: #f09b62;
+  --dynamic-shiki-481-fg: #f09b62;
+  --dynamic-shiki-267-fg: #f09b62;
+  --dynamic-shiki-482-fg: #f09b62;
+  --dynamic-shiki-108-fg: #C3E88D;
+  --dynamic-shiki-105-fg: #FF5370;
+  --dynamic-shiki-99-fg: #C792EA;
+  --dynamic-shiki-44-fg: #89DDFF;
+  --dynamic-shiki-6-fg: #89DDFF;
+  --dynamic-shiki-428-fg: #82AAFF;
+  --dynamic-shiki-429-fg: #82AAFF;
+  --dynamic-shiki-483-fg: #d1dae6;
+  --dynamic-shiki-484-fg: #d1dae6;
+  --dynamic-shiki-439-fg: #d1dae6;
+  --dynamic-shiki-485-fg: #d1dae6;
+  --dynamic-shiki-486-fg: #d1dae6;
+  --dynamic-shiki-61-fg: #d1dae6;
+  --dynamic-shiki-60-fg: #d1dae6;
+  --dynamic-shiki-487-fg: #d1dae6;
+  --dynamic-shiki-488-fg: #d1dae6;
+  --dynamic-shiki-489-fg: #d1dae6;
+  --dynamic-shiki-490-fg: #d1dae6;
+  --dynamic-shiki-491-fg: #d1dae6;
+  --dynamic-shiki-492-fg: #d1dae6;
+  --dynamic-shiki-493-fg: #d1dae6;
+  --dynamic-shiki-494-fg: #d1dae6;
+  --dynamic-shiki-495-fg: #d1dae6;
+  --dynamic-shiki-496-fg: #618c8f;
+  --dynamic-shiki-497-fg: #618c8f;
+  --dynamic-shiki-498-fg: #618c8f;
+  --dynamic-shiki-499-fg: #618c8f;
+  --dynamic-shiki-500-fg: #618c8f;
+  --dynamic-shiki-501-fg: #618c8f;
+  --dynamic-shiki-328-fg: #618c8f;
+  --dynamic-shiki-502-fg: #618c8f;
+  --dynamic-shiki-503-fg: #618c8f;
+  --dynamic-shiki-504-fg: #618c8f;
+  --dynamic-shiki-442-fg: #618c8f;
+  --dynamic-shiki-505-fg: #618c8f;
+  --dynamic-shiki-506-fg: #618c8f;
+  --dynamic-shiki-430-fg: #FF5370;
+  --dynamic-shiki-431-fg: #ae70d8;
+  --dynamic-shiki-432-fg: #f0cc62;
+  --dynamic-shiki-433-fg: #e2714e;
+  --dynamic-shiki-434-fg: #d35b6f;
+  --dynamic-shiki-435-fg: #3d95a5;
+  --dynamic-shiki-436-fg: #547dd6;
+  --dynamic-shiki-437-fg: #df6d73;
+  --dynamic-shiki-507-fg: #C792EA;
+  --dynamic-shiki-508-fg: #a0ca60;
+  --dynamic-shiki-509-fg: #EEFFFF;
+  --dynamic-shiki-438-fg: #EEFFFF;
+  --dynamic-shiki-444-fg: #C792EA;
+  --dynamic-shiki-445-fg: #65737E;
+  --dynamic-shiki-446-fg: #f0cc62;
+  --dynamic-shiki-510-fg: #f0cc62;
+  --dynamic-shiki-447-fg: #f0cc62;
+  --dynamic-shiki-448-fg: #f0cc62;
+  --dynamic-shiki-31-fg: #f07178;
+  --dynamic-shiki-29-fg: #f07178;
+  --dynamic-shiki-449-fg: #f07178;
+  --dynamic-shiki-274-fg: #f07178;
+  --dynamic-shiki-275-fg: #f07178;
+  --dynamic-shiki-450-fg: #f07178;
+  --dynamic-shiki-451-fg: #f07178;
+  --dynamic-shiki-452-fg: #f07178;
+  --dynamic-shiki-453-fg: #f07178;
+  --dynamic-shiki-27-fg: #cccbcb;
+  --dynamic-shiki-454-fg: #65737E;
+  --dynamic-shiki-346-fg: #86bae6;
+  --dynamic-shiki-455-fg: #C792EA;
+  --dynamic-shiki-456-fg: #FFCB6B;
+  --dynamic-shiki-457-fg: #C792EA;
+  --dynamic-shiki-511-fg: #EEFFFF;
+  --dynamic-shiki-512-fg: #00000050;
+  --dynamic-shiki-459-fg: #65737E;
+  --dynamic-shiki-513-fg: #EEFFFF;
+  --dynamic-shiki-460-fg: #65737E;
+  --dynamic-shiki-461-fg: #EEFFFF;
+  --dynamic-shiki-0-fs: italic;
+  --dynamic-shiki-2-fs: italic;
+  --dynamic-shiki-348-fs: italic;
+  --dynamic-shiki-255-fs: italic;
+  --dynamic-shiki-462-fs: italic;
+  --dynamic-shiki-463-fs: bold italic;
+  --dynamic-shiki-464-fs: bold italic;
+  --dynamic-shiki-366-fs: bold italic;
+  --dynamic-shiki-932-fs: underline;
+  --dynamic-shiki-933-fs: underline;
+  --dynamic-shiki-934-fs: underline;
+  --dynamic-shiki-31-fs: italic;
+  --dynamic-shiki-29-fs: bold;
+  --dynamic-shiki-449-fs: bold;
+  --dynamic-shiki-274-fs: bold;
+  --dynamic-shiki-275-fs: bold;
+  --dynamic-shiki-450-fs: bold;
+  --dynamic-shiki-451-fs: bold;
+  --dynamic-shiki-452-fs: bold;
+  --dynamic-shiki-453-fs: bold;
+  --dynamic-shiki-27-fs: underline;
+  --dynamic-shiki-33-fs: italic;
+  --dynamic-shiki-460-fs: bold;
+}
+.one-dark-pro {
+  --dynamic-shiki-34-fg: #abb2bf;
+  --dynamic-shiki-514-fg: #e06c75;
+  --dynamic-shiki-515-fg: #e06c75;
+  --dynamic-shiki-516-fg: #e06c75;
+  --dynamic-shiki-517-fg: #e06c75;
+  --dynamic-shiki-518-fg: #e06c75;
+  --dynamic-shiki-519-fg: #e06c75;
+  --dynamic-shiki-520-fg: #e06c75;
+  --dynamic-shiki-521-fg: #e06c75;
+  --dynamic-shiki-522-fg: #e06c75;
+  --dynamic-shiki-523-fg: #c678dd;
+  --dynamic-shiki-524-fg: #d19a66;
+  --dynamic-shiki-525-fg: #e06c75;
+  --dynamic-shiki-526-fg: #abb2bf;
+  --dynamic-shiki-527-fg: #abb2bf;
+  --dynamic-shiki-528-fg: #abb2bf;
+  --dynamic-shiki-529-fg: #abb2bf;
+  --dynamic-shiki-299-fg: #e5c07b;
+  --dynamic-shiki-530-fg: #e5c07b;
+  --dynamic-shiki-531-fg: #abb2bf;
+  --dynamic-shiki-532-fg: #61afef;
+  --dynamic-shiki-533-fg: #e5c07b;
+  --dynamic-shiki-534-fg: #e06c75;
+  --dynamic-shiki-535-fg: #c678dd;
+  --dynamic-shiki-234-fg: #e06c75;
+  --dynamic-shiki-536-fg: #c678dd;
+  --dynamic-shiki-238-fg: #d19a66;
+  --dynamic-shiki-329-fg: #abb2bf;
+  --dynamic-shiki-537-fg: #5c6370;
+  --dynamic-shiki-538-fg: #e5c07b;
+  --dynamic-shiki-539-fg: #61afef;
+  --dynamic-shiki-540-fg: #61afef;
+  --dynamic-shiki-541-fg: #61afef;
+  --dynamic-shiki-542-fg: #61afef;
+  --dynamic-shiki-543-fg: #98c379;
+  --dynamic-shiki-544-fg: #e06c75;
+  --dynamic-shiki-545-fg: #e06c75;
+  --dynamic-shiki-546-fg: #e06c75;
+  --dynamic-shiki-547-fg: #abb2bf;
+  --dynamic-shiki-548-fg: #abb2bf;
+  --dynamic-shiki-549-fg: #abb2bf;
+  --dynamic-shiki-550-fg: #abb2bf;
+  --dynamic-shiki-551-fg: #abb2bf;
+  --dynamic-shiki-552-fg: #abb2bf;
+  --dynamic-shiki-553-fg: #abb2bf;
+  --dynamic-shiki-554-fg: #abb2bf;
+  --dynamic-shiki-555-fg: #abb2bf;
+  --dynamic-shiki-328-fg: #abb2bf;
+  --dynamic-shiki-556-fg: #61afef;
+  --dynamic-shiki-204-fg: #e5c07b;
+  --dynamic-shiki-557-fg: #d19a66;
+  --dynamic-shiki-216-fg: #e5c07b;
+  --dynamic-shiki-188-fg: #e5c07b;
+  --dynamic-shiki-191-fg: #e5c07b;
+  --dynamic-shiki-558-fg: #e06c75;
+  --dynamic-shiki-559-fg: #abb2bf;
+  --dynamic-shiki-560-fg: #abb2bf;
+  --dynamic-shiki-561-fg: #abb2bf;
+  --dynamic-shiki-562-fg: #abb2bf;
+  --dynamic-shiki-563-fg: #abb2bf;
+  --dynamic-shiki-564-fg: #abb2bf;
+  --dynamic-shiki-565-fg: #abb2bf;
+  --dynamic-shiki-566-fg: #abb2bf;
+  --dynamic-shiki-567-fg: #abb2bf;
+  --dynamic-shiki-568-fg: #abb2bf;
+  --dynamic-shiki-569-fg: #abb2bf;
+  --dynamic-shiki-570-fg: #abb2bf;
+  --dynamic-shiki-571-fg: #abb2bf;
+  --dynamic-shiki-572-fg: #abb2bf;
+  --dynamic-shiki-573-fg: #abb2bf;
+  --dynamic-shiki-574-fg: #abb2bf;
+  --dynamic-shiki-575-fg: #abb2bf;
+  --dynamic-shiki-576-fg: #abb2bf;
+  --dynamic-shiki-577-fg: #abb2bf;
+  --dynamic-shiki-578-fg: #abb2bf;
+  --dynamic-shiki-474-fg: #abb2bf;
+  --dynamic-shiki-579-fg: #61afef;
+  --dynamic-shiki-167-fg: #e5c07b;
+  --dynamic-shiki-190-fg: #e5c07b;
+  --dynamic-shiki-189-fg: #e5c07b;
+  --dynamic-shiki-580-fg: #c678dd;
+  --dynamic-shiki-581-fg: #e06c75;
+  --dynamic-shiki-582-fg: #56b6c2;
+  --dynamic-shiki-583-fg: #56b6c2;
+  --dynamic-shiki-584-fg: #56b6c2;
+  --dynamic-shiki-585-fg: #d19a66;
+  --dynamic-shiki-586-fg: #d19a66;
+  --dynamic-shiki-587-fg: #56b6c2;
+  --dynamic-shiki-588-fg: #56b6c2;
+  --dynamic-shiki-589-fg: #d19a66;
+  --dynamic-shiki-590-fg: #d19a66;
+  --dynamic-shiki-591-fg: #d19a66;
+  --dynamic-shiki-592-fg: #abb2bf;
+  --dynamic-shiki-593-fg: #56b6c2;
+  --dynamic-shiki-594-fg: #e5c07b;
+  --dynamic-shiki-352-fg: #e5c07b;
+  --dynamic-shiki-595-fg: #e5c07b;
+  --dynamic-shiki-596-fg: #e06c75;
+  --dynamic-shiki-217-fg: #e06c75;
+  --dynamic-shiki-396-fg: #e06c75;
+  --dynamic-shiki-353-fg: #e06c75;
+  --dynamic-shiki-597-fg: #e06c75;
+  --dynamic-shiki-206-fg: #d19a66;
+  --dynamic-shiki-598-fg: #c678dd;
+  --dynamic-shiki-154-fg: #c678dd;
+  --dynamic-shiki-599-fg: #c678dd;
+  --dynamic-shiki-600-fg: #c678dd;
+  --dynamic-shiki-601-fg: #c678dd;
+  --dynamic-shiki-602-fg: #e06c75;
+  --dynamic-shiki-603-fg: #d19a66;
+  --dynamic-shiki-13-fg: #61afef;
+  --dynamic-shiki-604-fg: #61afef;
+  --dynamic-shiki-605-fg: #abb2bf;
+  --dynamic-shiki-606-fg: #c678dd;
+  --dynamic-shiki-208-fg: #c678dd;
+  --dynamic-shiki-607-fg: #56b6c2;
+  --dynamic-shiki-351-fg: #e06c75;
+  --dynamic-shiki-397-fg: #e06c75;
+  --dynamic-shiki-608-fg: #56b6c2;
+  --dynamic-shiki-609-fg: #56b6c2;
+  --dynamic-shiki-610-fg: #56b6c2;
+  --dynamic-shiki-611-fg: #56b6c2;
+  --dynamic-shiki-612-fg: #56b6c2;
+  --dynamic-shiki-613-fg: #c678dd;
+  --dynamic-shiki-614-fg: #c678dd;
+  --dynamic-shiki-615-fg: #c678dd;
+  --dynamic-shiki-616-fg: #c678dd;
+  --dynamic-shiki-617-fg: #c678dd;
+  --dynamic-shiki-618-fg: #c678dd;
+  --dynamic-shiki-619-fg: #c678dd;
+  --dynamic-shiki-620-fg: #c678dd;
+  --dynamic-shiki-621-fg: #c678dd;
+  --dynamic-shiki-622-fg: #c678dd;
+  --dynamic-shiki-623-fg: #c678dd;
+  --dynamic-shiki-624-fg: #c678dd;
+  --dynamic-shiki-490-fg: #abb2bf;
+  --dynamic-shiki-625-fg: #c678dd;
+  --dynamic-shiki-626-fg: #c678dd;
+  --dynamic-shiki-627-fg: #56b6c2;
+  --dynamic-shiki-628-fg: #56b6c2;
+  --dynamic-shiki-629-fg: #c678dd;
+  --dynamic-shiki-630-fg: #c678dd;
+  --dynamic-shiki-631-fg: #d19a66;
+  --dynamic-shiki-632-fg: #56b6c2;
+  --dynamic-shiki-162-fg: #c678dd;
+  --dynamic-shiki-633-fg: #d19a66;
+  --dynamic-shiki-634-fg: #abb2bf;
+  --dynamic-shiki-635-fg: #abb2bf;
+  --dynamic-shiki-636-fg: #abb2bf;
+  --dynamic-shiki-637-fg: #abb2bf;
+  --dynamic-shiki-638-fg: #abb2bf;
+  --dynamic-shiki-83-fg: #61afef;
+  --dynamic-shiki-300-fg: #d19a66;
+  --dynamic-shiki-25-fg: #abb2bf;
+  --dynamic-shiki-639-fg: #c678dd;
+  --dynamic-shiki-640-fg: #56b6c2;
+  --dynamic-shiki-641-fg: #56b6c2;
+  --dynamic-shiki-23-fg: #c678dd;
+  --dynamic-shiki-173-fg: #e5c07b;
+  --dynamic-shiki-50-fg: #e06c75;
+  --dynamic-shiki-642-fg: #abb2bf;
+  --dynamic-shiki-51-fg: #e5c07b;
+  --dynamic-shiki-643-fg: #abb2bf;
+  --dynamic-shiki-644-fg: #e5c07b;
+  --dynamic-shiki-645-fg: #c678dd;
+  --dynamic-shiki-646-fg: #abb2bf;
+  --dynamic-shiki-647-fg: #61afef;
+  --dynamic-shiki-648-fg: #61afef;
+  --dynamic-shiki-374-fg: #61afef;
+  --dynamic-shiki-649-fg: #e5c07b;
+  --dynamic-shiki-45-fg: #e5c07b;
+  --dynamic-shiki-256-fg: #e5c07b;
+  --dynamic-shiki-650-fg: #e5c07b;
+  --dynamic-shiki-176-fg: #e5c07b;
+  --dynamic-shiki-416-fg: #e5c07b;
+  --dynamic-shiki-651-fg: #e5c07b;
+  --dynamic-shiki-652-fg: #e06c75;
+  --dynamic-shiki-15-fg: #e5c07b;
+  --dynamic-shiki-24-fg: #c678dd;
+  --dynamic-shiki-653-fg: #d19a66;
+  --dynamic-shiki-375-fg: #61afef;
+  --dynamic-shiki-37-fg: #c678dd;
+  --dynamic-shiki-654-fg: #c678dd;
+  --dynamic-shiki-655-fg: #c678dd;
+  --dynamic-shiki-656-fg: #c678dd;
+  --dynamic-shiki-657-fg: #c678dd;
+  --dynamic-shiki-658-fg: #c678dd;
+  --dynamic-shiki-659-fg: #c678dd;
+  --dynamic-shiki-660-fg: #e5c07b;
+  --dynamic-shiki-47-fg: #56b6c2;
+  --dynamic-shiki-149-fg: #abb2bf;
+  --dynamic-shiki-661-fg: #e06c75;
+  --dynamic-shiki-662-fg: #e06c75;
+  --dynamic-shiki-663-fg: #e06c75;
+  --dynamic-shiki-218-fg: #abb2bf;
+  --dynamic-shiki-219-fg: #d19a66;
+  --dynamic-shiki-36-fg: #abb2bf;
+  --dynamic-shiki-41-fg: #98c379;
+  --dynamic-shiki-242-fg: #56b6c2;
+  --dynamic-shiki-8-fg: #d19a66;
+  --dynamic-shiki-4-fg: #d19a66;
+  --dynamic-shiki-664-fg: #d19a66;
+  --dynamic-shiki-14-fg: #e06c75;
+  --dynamic-shiki-18-fg: #d19a66;
+  --dynamic-shiki-104-fg: #61afef;
+  --dynamic-shiki-125-fg: #d19a66;
+  --dynamic-shiki-665-fg: #c678dd;
+  --dynamic-shiki-30-fg: #e06c75;
+  --dynamic-shiki-666-fg: #61afef;
+  --dynamic-shiki-16-fg: #61afef;
+  --dynamic-shiki-164-fg: #e06c75;
+  --dynamic-shiki-29-fg: #d19a66;
+  --dynamic-shiki-667-fg: #d19a66;
+  --dynamic-shiki-668-fg: #e5c07b;
+  --dynamic-shiki-31-fg: #c678dd;
+  --dynamic-shiki-669-fg: #c678dd;
+  --dynamic-shiki-670-fg: #c678dd;
+  --dynamic-shiki-671-fg: #c678dd;
+  --dynamic-shiki-510-fg: #e06c75;
+  --dynamic-shiki-672-fg: #e06c75;
+  --dynamic-shiki-134-fg: #e5c07b;
+  --dynamic-shiki-673-fg: #abb2bf;
+  --dynamic-shiki-674-fg: #d19a66;
+  --dynamic-shiki-675-fg: #98c379;
+  --dynamic-shiki-277-fg: #98c379;
+  --dynamic-shiki-676-fg: #e5c07b;
+  --dynamic-shiki-677-fg: #e5c07b;
+  --dynamic-shiki-61-fg: #e06c75;
+  --dynamic-shiki-60-fg: #e06c75;
+  --dynamic-shiki-59-fg: #e06c75;
+  --dynamic-shiki-65-fg: #e06c75;
+  --dynamic-shiki-678-fg: #c678dd;
+  --dynamic-shiki-679-fg: #c678dd;
+  --dynamic-shiki-346-fg: #61afef;
+  --dynamic-shiki-347-fg: #61afef;
+  --dynamic-shiki-680-fg: #98c379;
+  --dynamic-shiki-681-fg: #e5c07b;
+  --dynamic-shiki-682-fg: #e5c07b;
+  --dynamic-shiki-683-fg: #c678dd;
+  --dynamic-shiki-684-fg: #61afef;
+  --dynamic-shiki-685-fg: #61afef;
+  --dynamic-shiki-44-fg: #e06c75;
+  --dynamic-shiki-146-fg: #c678dd;
+  --dynamic-shiki-686-fg: #e06c75;
+  --dynamic-shiki-687-fg: #c678dd;
+  --dynamic-shiki-688-fg: #c678dd;
+  --dynamic-shiki-21-fg: #ffffff;
+  --dynamic-shiki-689-fg: #abb2bf;
+  --dynamic-shiki-690-fg: #e06c75;
+  --dynamic-shiki-691-fg: #ffffff;
+  --dynamic-shiki-22-fg: #ffffff;
+  --dynamic-shiki-692-fg: #d19a66;
+  --dynamic-shiki-693-fg: #ffffff;
+  --dynamic-shiki-694-fg: #e06c75;
+  --dynamic-shiki-695-fg: #e06c75;
+  --dynamic-shiki-696-fg: #98c379;
+  --dynamic-shiki-697-fg: #98c379;
+  --dynamic-shiki-698-fg: #98c379;
+  --dynamic-shiki-699-fg: #98c379;
+  --dynamic-shiki-700-fg: #56b6c2;
+  --dynamic-shiki-701-fg: #56b6c2;
+  --dynamic-shiki-265-fg: #e06c75;
+  --dynamic-shiki-702-fg: #e06c75;
+  --dynamic-shiki-703-fg: #c678dd;
+  --dynamic-shiki-704-fg: #c678dd;
+  --dynamic-shiki-705-fg: #e5c07b;
+  --dynamic-shiki-706-fg: #e5c07b;
+  --dynamic-shiki-707-fg: #e5c07b;
+  --dynamic-shiki-708-fg: #e5c07b;
+  --dynamic-shiki-709-fg: #c678dd;
+  --dynamic-shiki-710-fg: #c678dd;
+  --dynamic-shiki-711-fg: #abb2bf;
+  --dynamic-shiki-712-fg: #abb2bf;
+  --dynamic-shiki-713-fg: #f44747;
+  --dynamic-shiki-380-fg: #e5c07b;
+  --dynamic-shiki-714-fg: #e5c07b;
+  --dynamic-shiki-379-fg: #e5c07b;
+  --dynamic-shiki-715-fg: #e5c07b;
+  --dynamic-shiki-716-fg: #61afef;
+  --dynamic-shiki-717-fg: #61afef;
+  --dynamic-shiki-718-fg: #61afef;
+  --dynamic-shiki-719-fg: #abb2bf;
+  --dynamic-shiki-720-fg: #abb2bf;
+  --dynamic-shiki-721-fg: #abb2bf;
+  --dynamic-shiki-722-fg: #abb2bf;
+  --dynamic-shiki-723-fg: #abb2bf;
+  --dynamic-shiki-724-fg: #abb2bf;
+  --dynamic-shiki-725-fg: #abb2bf;
+  --dynamic-shiki-726-fg: #abb2bf;
+  --dynamic-shiki-727-fg: #abb2bf;
+  --dynamic-shiki-728-fg: #abb2bf;
+  --dynamic-shiki-729-fg: #abb2bf;
+  --dynamic-shiki-730-fg: #abb2bf;
+  --dynamic-shiki-731-fg: #abb2bf;
+  --dynamic-shiki-732-fg: #abb2bf;
+  --dynamic-shiki-733-fg: #abb2bf;
+  --dynamic-shiki-734-fg: #abb2bf;
+  --dynamic-shiki-735-fg: #abb2bf;
+  --dynamic-shiki-736-fg: #abb2bf;
+  --dynamic-shiki-737-fg: #abb2bf;
+  --dynamic-shiki-738-fg: #d19a66;
+  --dynamic-shiki-70-fg: #d19a66;
+  --dynamic-shiki-739-fg: #d19a66;
+  --dynamic-shiki-72-fg: #d19a66;
+  --dynamic-shiki-740-fg: #d19a66;
+  --dynamic-shiki-741-fg: #61afef;
+  --dynamic-shiki-742-fg: #61afef;
+  --dynamic-shiki-743-fg: #56b6c2;
+  --dynamic-shiki-744-fg: #56b6c2;
+  --dynamic-shiki-745-fg: #56b6c2;
+  --dynamic-shiki-746-fg: #c678dd;
+  --dynamic-shiki-747-fg: #56b6c2;
+  --dynamic-shiki-748-fg: #c678dd;
+  --dynamic-shiki-749-fg: #c678dd;
+  --dynamic-shiki-750-fg: #61afef;
+  --dynamic-shiki-751-fg: #56b6c2;
+  --dynamic-shiki-752-fg: #56b6c2;
+  --dynamic-shiki-753-fg: #abb2bf;
+  --dynamic-shiki-754-fg: #abb2bf;
+  --dynamic-shiki-755-fg: #abb2bf;
+  --dynamic-shiki-756-fg: #abb2bf;
+  --dynamic-shiki-757-fg: #56b6c2;
+  --dynamic-shiki-758-fg: #56b6c2;
+  --dynamic-shiki-759-fg: #56b6c2;
+  --dynamic-shiki-760-fg: #d19a66;
+  --dynamic-shiki-761-fg: #d19a66;
+  --dynamic-shiki-762-fg: #e06c75;
+  --dynamic-shiki-763-fg: #e5c07b;
+  --dynamic-shiki-764-fg: #e5c07b;
+  --dynamic-shiki-765-fg: #e5c07b;
+  --dynamic-shiki-766-fg: #e5c07b;
+  --dynamic-shiki-767-fg: #abb2bf;
+  --dynamic-shiki-768-fg: #abb2bf;
+  --dynamic-shiki-184-fg: #e5c07b;
+  --dynamic-shiki-769-fg: #e06c75;
+  --dynamic-shiki-336-fg: #61afef;
+  --dynamic-shiki-337-fg: #d19a66;
+  --dynamic-shiki-338-fg: #f44747;
+  --dynamic-shiki-339-fg: #c678dd;
+  --dynamic-shiki-144-fg: #c678dd;
+  --dynamic-shiki-145-fg: #c678dd;
+  --dynamic-shiki-147-fg: #abb2bf;
+  --dynamic-shiki-770-fg: #c678dd;
+  --dynamic-shiki-771-fg: #61afef;
+  --dynamic-shiki-772-fg: #e5c07b;
+  --dynamic-shiki-773-fg: #e06c75;
+  --dynamic-shiki-774-fg: #e06c75;
+  --dynamic-shiki-775-fg: #98c379;
+  --dynamic-shiki-776-fg: #98c379;
+  --dynamic-shiki-777-fg: #98c379;
+  --dynamic-shiki-778-fg: #98c379;
+  --dynamic-shiki-505-fg: #56b6c2;
+  --dynamic-shiki-779-fg: #e5c07b;
+  --dynamic-shiki-780-fg: #c678dd;
+  --dynamic-shiki-781-fg: #c678dd;
+  --dynamic-shiki-782-fg: #e5c07b;
+  --dynamic-shiki-783-fg: #56b6c2;
+  --dynamic-shiki-784-fg: #d19a66;
+  --dynamic-shiki-785-fg: #c678dd;
+  --dynamic-shiki-786-fg: #e06c75;
+  --dynamic-shiki-426-fg: #56b6c2;
+  --dynamic-shiki-425-fg: #56b6c2;
+  --dynamic-shiki-787-fg: #e5c07b;
+  --dynamic-shiki-788-fg: #e06c75;
+  --dynamic-shiki-332-fg: #56b6c2;
+  --dynamic-shiki-789-fg: #e06c75;
+  --dynamic-shiki-790-fg: #e06c75;
+  --dynamic-shiki-791-fg: #98c379;
+  --dynamic-shiki-792-fg: #e06c75;
+  --dynamic-shiki-793-fg: #e5c07b;
+  --dynamic-shiki-794-fg: #e5c07b;
+  --dynamic-shiki-795-fg: #61afef;
+  --dynamic-shiki-796-fg: #e06c75;
+  --dynamic-shiki-797-fg: #98c379;
+  --dynamic-shiki-798-fg: #e5c07b;
+  --dynamic-shiki-799-fg: #c678dd;
+  --dynamic-shiki-800-fg: #c678dd;
+  --dynamic-shiki-801-fg: #c678dd;
+  --dynamic-shiki-802-fg: #c678dd;
+  --dynamic-shiki-803-fg: #c678dd;
+  --dynamic-shiki-804-fg: #e06c75;
+  --dynamic-shiki-805-fg: #e06c75;
+  --dynamic-shiki-806-fg: #e5c07b;
+  --dynamic-shiki-807-fg: #e5c07b;
+  --dynamic-shiki-808-fg: #e5c07b;
+  --dynamic-shiki-809-fg: #56b6c2;
+  --dynamic-shiki-810-fg: #e06c75;
+  --dynamic-shiki-811-fg: #c678dd;
+  --dynamic-shiki-812-fg: #56b6c2;
+  --dynamic-shiki-813-fg: #abb2bf;
+  --dynamic-shiki-814-fg: #98c379;
+  --dynamic-shiki-815-fg: #7f848e;
+  --dynamic-shiki-816-fg: #61afef;
+  --dynamic-shiki-817-fg: #61afef;
+  --dynamic-shiki-818-fg: #d19a66;
+  --dynamic-shiki-819-fg: #ffffff;
+  --dynamic-shiki-820-fg: #5c6370;
+  --dynamic-shiki-821-fg: #e06c75;
+  --dynamic-shiki-822-fg: #e5c07b;
+  --dynamic-shiki-823-fg: #e5c07b;
+  --dynamic-shiki-824-fg: #e06c75;
+  --dynamic-shiki-825-fg: #e06c75;
+  --dynamic-shiki-371-fg: #abb2bf;
+  --dynamic-shiki-0-fg: #7f848e;
+  --dynamic-shiki-348-fg: #7f848e;
+  --dynamic-shiki-54-fg: #5c6370;
+  --dynamic-shiki-826-fg: #abb2bf;
+  --dynamic-shiki-827-fg: #56b6c2;
+  --dynamic-shiki-828-fg: #56b6c2;
+  --dynamic-shiki-829-fg: #e5c07b;
+  --dynamic-shiki-830-fg: #e06c75;
+  --dynamic-shiki-105-fg: #e06c75;
+  --dynamic-shiki-108-fg: #98c379;
+  --dynamic-shiki-93-fg: #BE5046;
+  --dynamic-shiki-91-fg: #BE5046;
+  --dynamic-shiki-405-fg: #abb2bf;
+  --dynamic-shiki-831-fg: #e06c75;
+  --dynamic-shiki-320-fg: #e5c07b;
+  --dynamic-shiki-832-fg: #e06c75;
+  --dynamic-shiki-19-fg: #e5c07b;
+  --dynamic-shiki-833-fg: #e06c75;
+  --dynamic-shiki-834-fg: #abb2bf;
+  --dynamic-shiki-835-fg: #abb2bf;
+  --dynamic-shiki-69-fg: #abb2bf;
+  --dynamic-shiki-836-fg: #c678dd;
+  --dynamic-shiki-231-fg: #d19a66;
+  --dynamic-shiki-6-fg: #56b6c2;
+  --dynamic-shiki-837-fg: #98c379;
+  --dynamic-shiki-838-fg: #e5c07b;
+  --dynamic-shiki-839-fg: #e06c75;
+  --dynamic-shiki-840-fg: #c678dd;
+  --dynamic-shiki-240-fg: #e06c75;
+  --dynamic-shiki-0-fs: italic;
+  --dynamic-shiki-348-fs: italic;
+  --dynamic-shiki-27-fs: underline;
+  --dynamic-shiki-935-fs: italic;
+  --dynamic-shiki-936-fs: italic;
+  --dynamic-shiki-937-fs: italic;
+  --dynamic-shiki-938-fs: italic;
+  --dynamic-shiki-53-fs: italic;
+  --dynamic-shiki-939-fs: italic;
+  --dynamic-shiki-1-fs: italic;
+  --dynamic-shiki-3-fs: italic;
+  --dynamic-shiki-921-fs: italic;
+}
+.red {
+  --dynamic-shiki-34-fg: #F8F8F8;
+  --dynamic-shiki-116-fg: #F8F8F8;
+  --dynamic-shiki-117-fg: #F8F8F8;
+  --dynamic-shiki-118-fg: #F8F8F8;
+  --dynamic-shiki-0-fg: #e7c0c0ff;
+  --dynamic-shiki-4-fg: #994646ff;
+  --dynamic-shiki-23-fg: #f12727ff;
+  --dynamic-shiki-11-fg: #fec758ff;
+  --dynamic-shiki-37-fg: #ff6262ff;
+  --dynamic-shiki-41-fg: #cd8d8dff;
+  --dynamic-shiki-324-fg: #9df39fff;
+  --dynamic-shiki-50-fg: #fb9a4bff;
+  --dynamic-shiki-20-fg: #ffffffff;
+  --dynamic-shiki-19-fg: #aa5507ff;
+  --dynamic-shiki-5-fg: #ec0d1e;
+  --dynamic-shiki-841-fg: #ffe862ff;
+  --dynamic-shiki-6-fg: #ffe862ff;
+  --dynamic-shiki-44-fg: #ffb454ff;
+  --dynamic-shiki-842-fg: #edef7dff;
+  --dynamic-shiki-47-fg: #ffb454ff;
+  --dynamic-shiki-46-fg: #eb939aff;
+  --dynamic-shiki-49-fg: #eb939aff;
+  --dynamic-shiki-843-fg: #73817dff;
+  --dynamic-shiki-844-fg: #73817dff;
+  --dynamic-shiki-845-fg: #73817dff;
+  --dynamic-shiki-846-fg: #73817dff;
+  --dynamic-shiki-847-fg: #73817dff;
+  --dynamic-shiki-848-fg: #73817dff;
+  --dynamic-shiki-10-fg: #ec0d1eff;
+  --dynamic-shiki-849-fg: #ec0d1eff;
+  --dynamic-shiki-36-fg: #ec0d1eff;
+  --dynamic-shiki-850-fg: #ec0d1eff;
+  --dynamic-shiki-851-fg: #aa5507ff;
+  --dynamic-shiki-852-fg: #fec758ff;
+  --dynamic-shiki-853-fg: #41a83eff;
+  --dynamic-shiki-269-fg: #96dd3bff;
+  --dynamic-shiki-854-fg: #ffe862ff;
+  --dynamic-shiki-855-fg: #ffe862ff;
+  --dynamic-shiki-856-fg: #ffe862ff;
+  --dynamic-shiki-857-fg: #ffe862ff;
+  --dynamic-shiki-858-fg: #fd6209ff;
+  --dynamic-shiki-859-fg: #ec9799ff;
+  --dynamic-shiki-55-fg: #f8f8f8ff;
+  --dynamic-shiki-56-fg: #f8f8f8ff;
+  --dynamic-shiki-105-fg: #ec9799ff;
+  --dynamic-shiki-99-fg: #f8f8f8ff;
+  --dynamic-shiki-108-fg: #41a83eff;
+  --dynamic-shiki-33-fg: #f12727ff;
+  --dynamic-shiki-32-fg: #ff6262ff;
+  --dynamic-shiki-29-fg: #fb9a4bff;
+  --dynamic-shiki-31-fg: #fb9a4bff;
+  --dynamic-shiki-107-fg: #cd8d8dff;
+  --dynamic-shiki-30-fg: #fec758ff;
+  --dynamic-shiki-673-fg: #fec758ff;
+  --dynamic-shiki-860-fg: #fec758ff;
+  --dynamic-shiki-16-fg: #fec758ff;
+  --dynamic-shiki-144-fg: #ec0d1e;
+  --dynamic-shiki-145-fg: #ec0d1e;
+  --dynamic-shiki-146-fg: #ec0d1e;
+  --dynamic-shiki-861-fg: #ec0d1e;
+  --dynamic-shiki-0-fs: italic;
+  --dynamic-shiki-37-fs: bold;
+  --dynamic-shiki-50-fs: italic;
+  --dynamic-shiki-19-fs: underline;
+  --dynamic-shiki-854-fs: italic;
+  --dynamic-shiki-855-fs: italic;
+  --dynamic-shiki-55-fs: italic;
+  --dynamic-shiki-56-fs: italic;
+  --dynamic-shiki-29-fs: bold;
+  --dynamic-shiki-31-fs: italic;
+  --dynamic-shiki-931-fs: strikethrough;
+  --dynamic-shiki-30-fs: bold;
+  --dynamic-shiki-673-fs: bold;
+  --dynamic-shiki-860-fs: bold;
+  --dynamic-shiki-16-fs: bold;
+}
+.solarized-light {
+  --dynamic-shiki-34-fg: #657B83;
+  --dynamic-shiki-116-fg: #657B83;
+  --dynamic-shiki-117-fg: #657B83;
+  --dynamic-shiki-118-fg: #657B83;
+  --dynamic-shiki-0-fg: #93A1A1;
+  --dynamic-shiki-41-fg: #2AA198;
+  --dynamic-shiki-44-fg: #DC322F;
+  --dynamic-shiki-8-fg: #D33682;
+  --dynamic-shiki-51-fg: #268BD2;
+  --dynamic-shiki-52-fg: #268BD2;
+  --dynamic-shiki-23-fg: #859900;
+  --dynamic-shiki-37-fg: #586E75;
+  --dynamic-shiki-176-fg: #CB4B16;
+  --dynamic-shiki-15-fg: #CB4B16;
+  --dynamic-shiki-173-fg: #CB4B16;
+  --dynamic-shiki-175-fg: #CB4B16;
+  --dynamic-shiki-13-fg: #268BD2;
+  --dynamic-shiki-862-fg: #859900;
+  --dynamic-shiki-687-fg: #DC322F;
+  --dynamic-shiki-688-fg: #DC322F;
+  --dynamic-shiki-7-fg: #B58900;
+  --dynamic-shiki-35-fg: #B58900;
+  --dynamic-shiki-863-fg: #CB4B16;
+  --dynamic-shiki-864-fg: #CB4B16;
+  --dynamic-shiki-5-fg: #CB4B16;
+  --dynamic-shiki-9-fg: #CB4B16;
+  --dynamic-shiki-19-fg: #6C71C4;
+  --dynamic-shiki-14-fg: #268BD2;
+  --dynamic-shiki-135-fg: #93A1A1;
+  --dynamic-shiki-18-fg: #93A1A1;
+  --dynamic-shiki-47-fg: #268BD2;
+  --dynamic-shiki-865-fg: #DC322F;
+  --dynamic-shiki-48-fg: #859900;
+  --dynamic-shiki-45-fg: #859900;
+  --dynamic-shiki-866-fg: #CB4B16;
+  --dynamic-shiki-20-fg: #DC322F;
+  --dynamic-shiki-55-fg: #268BD2;
+  --dynamic-shiki-56-fg: #268BD2;
+  --dynamic-shiki-105-fg: #DC322F;
+  --dynamic-shiki-99-fg: #CB4B16;
+  --dynamic-shiki-108-fg: #859900;
+  --dynamic-shiki-33-fg: #859900;
+  --dynamic-shiki-32-fg: #B58900;
+  --dynamic-shiki-29-fg: #D33682;
+  --dynamic-shiki-31-fg: #D33682;
+  --dynamic-shiki-107-fg: #2AA198;
+  --dynamic-shiki-30-fg: #268BD2;
+  --dynamic-shiki-673-fg: #268BD2;
+  --dynamic-shiki-0-fs: italic;
+  --dynamic-shiki-37-fs: bold;
+  --dynamic-shiki-55-fs: italic;
+  --dynamic-shiki-56-fs: italic;
+  --dynamic-shiki-29-fs: bold;
+  --dynamic-shiki-31-fs: italic;
+  --dynamic-shiki-931-fs: strikethrough;
+  --dynamic-shiki-30-fs: bold;
+}
+.synthwave-84 {
+  --dynamic-shiki-0-fg: #848bbd;
+  --dynamic-shiki-867-fg: #848bbd;
+  --dynamic-shiki-868-fg: #848bbd;
+  --dynamic-shiki-869-fg: #848bbd;
+  --dynamic-shiki-42-fg: #ff8b39;
+  --dynamic-shiki-333-fg: #ff8b39;
+  --dynamic-shiki-109-fg: #ff8b39;
+  --dynamic-shiki-870-fg: #b6b1b1;
+  --dynamic-shiki-50-fg: #ff7edb;
+  --dynamic-shiki-214-fg: #ff7edb;
+  --dynamic-shiki-51-fg: #fe4450;
+  --dynamic-shiki-38-fg: #fede5d;
+  --dynamic-shiki-40-fg: #fede5d;
+  --dynamic-shiki-4-fg: #f97e72;
+  --dynamic-shiki-44-fg: #f97e72;
+  --dynamic-shiki-8-fg: #f97e72;
+  --dynamic-shiki-7-fg: #f97e72;
+  --dynamic-shiki-6-fg: #36f9f6;
+  --dynamic-shiki-12-fg: #fe4450;
+  --dynamic-shiki-14-fg: #72f1b8;
+  --dynamic-shiki-135-fg: #36f9f6;
+  --dynamic-shiki-18-fg: #fede5d;
+  --dynamic-shiki-871-fg: #fede5d;
+  --dynamic-shiki-15-fg: #fe4450;
+  --dynamic-shiki-872-fg: #fe4450;
+  --dynamic-shiki-19-fg: #D50;
+  --dynamic-shiki-13-fg: #36f9f6;
+  --dynamic-shiki-374-fg: #36f9f6;
+  --dynamic-shiki-873-fg: #72f1b8;
+  --dynamic-shiki-874-fg: #72f1b8;
+  --dynamic-shiki-875-fg: #2EE2FA;
+  --dynamic-shiki-23-fg: #fede5d;
+  --dynamic-shiki-24-fg: #fede5d;
+  --dynamic-shiki-25-fg: #fede5d;
+  --dynamic-shiki-154-fg: #fede5d;
+  --dynamic-shiki-155-fg: #fede5d;
+  --dynamic-shiki-582-fg: #fede5d;
+  --dynamic-shiki-164-fg: #f97e72;
+  --dynamic-shiki-324-fg: #fe4450;
+  --dynamic-shiki-47-fg: #36f9f6;
+  --dynamic-shiki-49-fg: #ff7edb;
+  --dynamic-shiki-217-fg: #ff7edb;
+  --dynamic-shiki-149-fg: #ff7edb;
+  --dynamic-shiki-328-fg: #b6b1b1;
+  --dynamic-shiki-146-fg: #fede5d;
+  --dynamic-shiki-144-fg: #72f1b8;
+  --dynamic-shiki-145-fg: #72f1b8;
+  --dynamic-shiki-269-fg: #72f1b8;
+  --dynamic-shiki-265-fg: #72f1b8;
+  --dynamic-shiki-876-fg: #72f1b8;
+  --dynamic-shiki-877-fg: #2ee2fa;
+  --dynamic-shiki-878-fg: #2ee2fa;
+  --dynamic-shiki-356-fg: #f97e72;
+  --dynamic-shiki-219-fg: #f97e72;
+  --dynamic-shiki-104-fg: #36f9f6;
+  --dynamic-shiki-426-fg: #D50;
+  --dynamic-shiki-425-fg: #D50;
+  --dynamic-shiki-879-fg: #fe4450;
+  --dynamic-shiki-30-fg: #ff7edb;
+  --dynamic-shiki-16-fg: #ff7edb;
+  --dynamic-shiki-350-fg: #ffffffee;
+  --dynamic-shiki-505-fg: #ffffffee;
+  --dynamic-shiki-33-fg: #b6b1b1cc;
+  --dynamic-shiki-880-fg: #ff7edb;
+  --dynamic-shiki-28-fg: #D50;
+  --dynamic-shiki-881-fg: #f97e72;
+  --dynamic-shiki-83-fg: #36f9f6;
+  --dynamic-shiki-882-fg: #72f1b8;
+  --dynamic-shiki-184-fg: #fe4450;
+  --dynamic-shiki-769-fg: #ff7edb;
+  --dynamic-shiki-830-fg: #ff7edb;
+  --dynamic-shiki-883-fg: #ff7edb;
+  --dynamic-shiki-884-fg: #72f1b8;
+  --dynamic-shiki-885-fg: #72f1b8;
+  --dynamic-shiki-886-fg: #72f1b8;
+  --dynamic-shiki-887-fg: #fe4450;
+  --dynamic-shiki-888-fg: #fede5d;
+  --dynamic-shiki-889-fg: #72f1b8;
+  --dynamic-shiki-890-fg: #72f1b8;
+  --dynamic-shiki-891-fg: #72f1b8;
+  --dynamic-shiki-892-fg: #fe4450;
+  --dynamic-shiki-893-fg: #36f9f6;
+  --dynamic-shiki-894-fg: #36f9f6;
+  --dynamic-shiki-895-fg: #72f1b8;
+  --dynamic-shiki-896-fg: #36f9f6;
+  --dynamic-shiki-897-fg: #36f9f6;
+  --dynamic-shiki-898-fg: #72f1b8;
+  --dynamic-shiki-899-fg: #72f1b8;
+  --dynamic-shiki-900-fg: #72f1b8;
+  --dynamic-shiki-901-fg: #ff7edb;
+  --dynamic-shiki-787-fg: #36f9f6;
+  --dynamic-shiki-325-fg: #36f9f6;
+  --dynamic-shiki-902-fg: #fe4450;
+  --dynamic-shiki-903-fg: #fe4450;
+  --dynamic-shiki-788-fg: #ff7edbff;
+  --dynamic-shiki-904-fg: #ff7edbff;
+  --dynamic-shiki-905-fg: #36f9f6;
+  --dynamic-shiki-906-fg: #fede5d;
+  --dynamic-shiki-907-fg: #fede5d;
+  --dynamic-shiki-908-fg: #fede5d;
+  --dynamic-shiki-909-fg: #fede5d;
+  --dynamic-shiki-910-fg: #fede5d;
+  --dynamic-shiki-911-fg: #fede5d;
+  --dynamic-shiki-912-fg: #fede5d;
+  --dynamic-shiki-913-fg: #fede5d;
+  --dynamic-shiki-914-fg: #fede5d;
+  --dynamic-shiki-915-fg: #72f1b8;
+  --dynamic-shiki-916-fg: #72f1b8;
+  --dynamic-shiki-917-fg: #72f1b8;
+  --dynamic-shiki-918-fg: #2EE2FA;
+  --dynamic-shiki-919-fg: #2EE2FA;
+  --dynamic-shiki-920-fg: #2EE2FA;
+  --dynamic-shiki-678-fg: #72f1b8;
+  --dynamic-shiki-277-fg: #72f1b8;
+  --dynamic-shiki-346-fg: #fede5d;
+  --dynamic-shiki-341-fg: #ff7edb;
+  --dynamic-shiki-510-fg: #ff7edb;
+  --dynamic-shiki-921-fg: #2EE2FA;
+  --dynamic-shiki-342-fg: #2EE2FA;
+  --dynamic-shiki-133-fg: #72f1b8;
+  --dynamic-shiki-54-fg: #72f1b8;
+  --dynamic-shiki-922-fg: #ff7edbff;
+  --dynamic-shiki-923-fg: #ff7edbff;
+  --dynamic-shiki-924-fg: #ff7edbff;
+  --dynamic-shiki-925-fg: #f97e72;
+  --dynamic-shiki-926-fg: #72f1b8;
+  --dynamic-shiki-927-fg: #2EE2FA;
+  --dynamic-shiki-928-fg: #2EE2FA;
+  --dynamic-shiki-929-fg: #72f1b8;
+  --dynamic-shiki-0-fs: italic;
+  --dynamic-shiki-867-fs: italic;
+  --dynamic-shiki-868-fs: italic;
+  --dynamic-shiki-869-fs: italic;
+  --dynamic-shiki-51-fs: bold;
+  --dynamic-shiki-53-fs: italic;
+  --dynamic-shiki-871-fs: italic;
+  --dynamic-shiki-33-fs: italic;
+  --dynamic-shiki-884-fs: italic;
+  --dynamic-shiki-889-fs: italic;
+  --dynamic-shiki-901-fs: italic;
+  --dynamic-shiki-787-fs: bold;
+  --dynamic-shiki-325-fs: italic;
+  --dynamic-shiki-902-fs: italic;
+  --dynamic-shiki-903-fs: italic;
+  --dynamic-shiki-940-fs: italic;
+  --dynamic-shiki-678-fs: italic;
+  --dynamic-shiki-277-fs: italic;
+  --dynamic-shiki-341-fs: bold;
+  --dynamic-shiki-510-fs: bold;
+  --dynamic-shiki-921-fs: italic;
+  --dynamic-shiki-342-fs: bold;
+}
