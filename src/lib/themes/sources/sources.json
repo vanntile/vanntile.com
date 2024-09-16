@@ -1,0 +1,85 @@
+{
+  "sources": [
+    {
+      "git": {
+        "repositoryUrl": "https://github.com/EliverLara/Andromeda",
+        "commitHash": "a973890a8074c437b8949c3c917b170103609a33"
+      },
+      "themes": ["andromeeda"],
+      "version": "1.7.2"
+    },
+    {
+      "git": {
+        "repositoryUrl": "https://github.com/microsoft/vscode/blob/main/extensions/theme-defaults",
+        "commitHash": "b5a6aa14a8c5cb686379a716767788d55cded542"
+      },
+      "themes": ["dark-plus"],
+      "version": "1.0.0"
+    },
+    {
+      "git": {
+        "repositoryUrl": "https://github.com/antfu/vsc-material-theme",
+        "commitHash": "2727b73ef0b927bf8193cad0535da277c265ed83"
+      },
+      "themes": ["material-theme-lighter", "material-theme-ocean", "material-theme-palenight"],
+      "version": "34.4.0"
+    },
+    {
+      "git": {
+        "repositoryUrl": "https://github.com/miguelsolorio/min-theme",
+        "commitHash": "dd796c3f294daecfb7f10ed277ffdc30517d59cf"
+      },
+      "themes": ["min-light"],
+      "version": "1.5.0"
+    },
+    {
+      "git": {
+        "repositoryUrl": "https://github.com/atomiks/moonlight-vscode-theme",
+        "commitHash": "05c2cdb1fbd65b6e58ab0e8abdea0db7619f2acf"
+      },
+      "themes": ["moonlight-ii"],
+      "version": "0.11.1"
+    },
+    {
+      "git": {
+        "repositoryUrl": "https://github.com/quentinguidee/My-Eyes-Please",
+        "commitHash": "be5623a30dde532a742ac7060e72d72c46bbc9a3"
+      },
+      "themes": ["my-eyes-please"],
+      "version": "0.2.3"
+    },
+    {
+      "git": {
+        "repositoryUrl": "https://github.com/Binaryify/OneDark-Pro",
+        "commitHash": "3072916859666e0ec12555dd42109cf3d84aaf32"
+      },
+      "themes": ["one-dark-pro"],
+      "version": "3.17.3"
+    },
+    {
+      "git": {
+        "repositoryUrl": "https://github.com/Colorsublime/Colorsublime-Themes",
+        "commitHash": "56b1b09c4d63c61a9fbfdd4eeb517c023497b64c"
+      },
+      "themes": ["red", "solarized-light"],
+      "version": "0.1.0"
+    },
+    {
+      "git": {
+        "repositoryUrl": "https://github.com/robb0wen/synthwave-vscode",
+        "commitHash": "a7d6c7885aaaa24000d0cee928b01f20ab14ae05"
+      },
+      "themes": ["synthwave-84"],
+      "version": "0.1.15"
+    },
+    {
+      "git": {
+        "repositoryUrl": "https://github.com/shikijs/textmate-grammars-themes",
+        "commitHash": "41efe30d9c66b02f899bcbf20afa8e88a651ad4d"
+      },
+      "themes": ["*"],
+      "version": "1.8.2"
+    }
+  ],
+  "version": 1
+}
