@@ -7,85 +7,85 @@
     {
       "scope": "meta.embedded",
       "settings": {
-        "foreground": "--one-dark-pro-fg-0"
+        "foreground": "st-165"
       }
     },
     {
       "scope": "punctuation.definition.delayed.unison,punctuation.definition.list.begin.unison,punctuation.definition.list.end.unison,punctuation.definition.ability.begin.unison,punctuation.definition.ability.end.unison,punctuation.operator.assignment.as.unison,punctuation.separator.pipe.unison,punctuation.separator.delimiter.unison,punctuation.definition.hash.unison",
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
       "scope": "variable.other.generic-type.haskell",
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
       "scope": "storage.type.haskell",
       "settings": {
-        "foreground": "--one-dark-pro-fg-3"
+        "foreground": "st-168"
       }
     },
     {
       "scope": "support.variable.magic.python",
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
       "scope": "punctuation.separator.period.python,punctuation.separator.element.python,punctuation.parenthesis.begin.python,punctuation.parenthesis.end.python",
       "settings": {
-        "foreground": "--one-dark-pro-fg-0"
+        "foreground": "st-165"
       }
     },
     {
       "scope": "variable.parameter.function.language.special.self.python",
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
       "scope": "variable.parameter.function.language.special.cls.python",
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
       "scope": "storage.modifier.lifetime.rust",
       "settings": {
-        "foreground": "--one-dark-pro-fg-0"
+        "foreground": "st-165"
       }
     },
     {
       "scope": "support.function.std.rust",
       "settings": {
-        "foreground": "--one-dark-pro-fg-5"
+        "foreground": "st-170"
       }
     },
     {
       "scope": "entity.name.lifetime.rust",
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
       "scope": "variable.language.rust",
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
       "scope": "support.constant.edge",
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
       "scope": "constant.other.character-class.regexp",
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
@@ -93,91 +93,91 @@
         "keyword.operator.word"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
       "scope": "keyword.operator.quantifier.regexp",
       "settings": {
-        "foreground": "--one-dark-pro-fg-3"
+        "foreground": "st-168"
       }
     },
     {
       "scope": "variable.parameter.function",
       "settings": {
-        "foreground": "--one-dark-pro-fg-0"
+        "foreground": "st-165"
       }
     },
     {
       "scope": "comment markup.link",
       "settings": {
-        "foreground": "--one-dark-pro-fg-6"
+        "foreground": "st-171"
       }
     },
     {
       "scope": "markup.changed.diff",
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
       "scope": "meta.diff.header.from-file,meta.diff.header.to-file,punctuation.definition.from-file.diff,punctuation.definition.to-file.diff",
       "settings": {
-        "foreground": "--one-dark-pro-fg-5"
+        "foreground": "st-170"
       }
     },
     {
       "scope": "markup.inserted.diff",
       "settings": {
-        "foreground": "--one-dark-pro-fg-7"
+        "foreground": "st-172"
       }
     },
     {
       "scope": "markup.deleted.diff",
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
       "scope": "meta.function.c,meta.function.cpp",
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
       "scope": "punctuation.section.block.begin.bracket.curly.cpp,punctuation.section.block.end.bracket.curly.cpp,punctuation.terminator.statement.c,punctuation.section.block.begin.bracket.curly.c,punctuation.section.block.end.bracket.curly.c,punctuation.section.parens.begin.bracket.round.c,punctuation.section.parens.end.bracket.round.c,punctuation.section.parameters.begin.bracket.round.c,punctuation.section.parameters.end.bracket.round.c",
       "settings": {
-        "foreground": "--one-dark-pro-fg-0"
+        "foreground": "st-165"
       }
     },
     {
       "scope": "punctuation.separator.key-value",
       "settings": {
-        "foreground": "--one-dark-pro-fg-0"
+        "foreground": "st-165"
       }
     },
     {
       "scope": "keyword.operator.expression.import",
       "settings": {
-        "foreground": "--one-dark-pro-fg-5"
+        "foreground": "st-170"
       }
     },
     {
       "scope": "support.constant.math",
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
       "scope": "support.constant.property.math",
       "settings": {
-        "foreground": "--one-dark-pro-fg-3"
+        "foreground": "st-168"
       }
     },
     {
       "scope": "variable.other.constant",
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
@@ -186,121 +186,121 @@
         "storage.type.object.array.java"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
       "scope": "source.java",
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
       "scope": "punctuation.section.block.begin.java,punctuation.section.block.end.java,punctuation.definition.method-parameters.begin.java,punctuation.definition.method-parameters.end.java,meta.method.identifier.java,punctuation.section.method.begin.java,punctuation.section.method.end.java,punctuation.terminator.java,punctuation.section.class.begin.java,punctuation.section.class.end.java,punctuation.section.inner-class.begin.java,punctuation.section.inner-class.end.java,meta.method-call.java,punctuation.section.class.begin.bracket.curly.java,punctuation.section.class.end.bracket.curly.java,punctuation.section.method.begin.bracket.curly.java,punctuation.section.method.end.bracket.curly.java,punctuation.separator.period.java,punctuation.bracket.angle.java,punctuation.definition.annotation.java,meta.method.body.java",
       "settings": {
-        "foreground": "--one-dark-pro-fg-0"
+        "foreground": "st-165"
       }
     },
     {
       "scope": "meta.method.java",
       "settings": {
-        "foreground": "--one-dark-pro-fg-5"
+        "foreground": "st-170"
       }
     },
     {
       "scope": "storage.modifier.import.java,storage.type.java,storage.type.generic.java",
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
       "scope": "keyword.operator.instanceof.java",
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
       "scope": "meta.definition.variable.name.java",
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
       "scope": "keyword.operator.logical",
       "settings": {
-        "foreground": "--one-dark-pro-fg-8"
+        "foreground": "st-173"
       }
     },
     {
       "scope": "keyword.operator.bitwise",
       "settings": {
-        "foreground": "--one-dark-pro-fg-8"
+        "foreground": "st-173"
       }
     },
     {
       "scope": "keyword.operator.channel",
       "settings": {
-        "foreground": "--one-dark-pro-fg-8"
+        "foreground": "st-173"
       }
     },
     {
       "scope": "support.constant.property-value.scss,support.constant.property-value.css",
       "settings": {
-        "foreground": "--one-dark-pro-fg-3"
+        "foreground": "st-168"
       }
     },
     {
       "scope": "keyword.operator.css,keyword.operator.scss,keyword.operator.less",
       "settings": {
-        "foreground": "--one-dark-pro-fg-8"
+        "foreground": "st-173"
       }
     },
     {
       "scope": "support.constant.color.w3c-standard-color-name.css,support.constant.color.w3c-standard-color-name.scss",
       "settings": {
-        "foreground": "--one-dark-pro-fg-3"
+        "foreground": "st-168"
       }
     },
     {
       "scope": "punctuation.separator.list.comma.css",
       "settings": {
-        "foreground": "--one-dark-pro-fg-0"
+        "foreground": "st-165"
       }
     },
     {
       "scope": "support.constant.color.w3c-standard-color-name.css",
       "settings": {
-        "foreground": "--one-dark-pro-fg-3"
+        "foreground": "st-168"
       }
     },
     {
       "scope": "support.type.vendored.property-name.css",
       "settings": {
-        "foreground": "--one-dark-pro-fg-8"
+        "foreground": "st-173"
       }
     },
     {
       "scope": "support.module.node,support.type.object.module,support.module.node",
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
       "scope": "entity.name.type.module",
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
       "scope": "variable.other.readwrite,meta.object-literal.key,support.variable.property,support.variable.object.process,support.variable.object.node",
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
       "scope": "support.constant.json",
       "settings": {
-        "foreground": "--one-dark-pro-fg-3"
+        "foreground": "st-168"
       }
     },
     {
@@ -312,205 +312,205 @@
         "keyword.operator.expression.keyof"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
       "scope": "support.type.object.console",
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
       "scope": "support.variable.property.process",
       "settings": {
-        "foreground": "--one-dark-pro-fg-3"
+        "foreground": "st-168"
       }
     },
     {
       "scope": "entity.name.function,support.function.console",
       "settings": {
-        "foreground": "--one-dark-pro-fg-5"
+        "foreground": "st-170"
       }
     },
     {
       "scope": "keyword.operator.misc.rust",
       "settings": {
-        "foreground": "--one-dark-pro-fg-0"
+        "foreground": "st-165"
       }
     },
     {
       "scope": "keyword.operator.sigil.rust",
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
       "scope": "keyword.operator.delete",
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
       "scope": "support.type.object.dom",
       "settings": {
-        "foreground": "--one-dark-pro-fg-8"
+        "foreground": "st-173"
       }
     },
     {
       "scope": "support.variable.dom,support.variable.property.dom",
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
       "scope": "keyword.operator.arithmetic,keyword.operator.comparison,keyword.operator.decrement,keyword.operator.increment,keyword.operator.relational",
       "settings": {
-        "foreground": "--one-dark-pro-fg-8"
+        "foreground": "st-173"
       }
     },
     {
       "scope": "keyword.operator.assignment.c,keyword.operator.comparison.c,keyword.operator.c,keyword.operator.increment.c,keyword.operator.decrement.c,keyword.operator.bitwise.shift.c,keyword.operator.assignment.cpp,keyword.operator.comparison.cpp,keyword.operator.cpp,keyword.operator.increment.cpp,keyword.operator.decrement.cpp,keyword.operator.bitwise.shift.cpp",
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
       "scope": "punctuation.separator.delimiter",
       "settings": {
-        "foreground": "--one-dark-pro-fg-0"
+        "foreground": "st-165"
       }
     },
     {
       "scope": "punctuation.separator.c,punctuation.separator.cpp",
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
       "scope": "support.type.posix-reserved.c,support.type.posix-reserved.cpp",
       "settings": {
-        "foreground": "--one-dark-pro-fg-8"
+        "foreground": "st-173"
       }
     },
     {
       "scope": "keyword.operator.sizeof.c,keyword.operator.sizeof.cpp",
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
       "scope": "variable.parameter.function.language.python",
       "settings": {
-        "foreground": "--one-dark-pro-fg-3"
+        "foreground": "st-168"
       }
     },
     {
       "scope": "support.type.python",
       "settings": {
-        "foreground": "--one-dark-pro-fg-8"
+        "foreground": "st-173"
       }
     },
     {
       "scope": "keyword.operator.logical.python",
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
       "scope": "variable.parameter.function.python",
       "settings": {
-        "foreground": "--one-dark-pro-fg-3"
+        "foreground": "st-168"
       }
     },
     {
       "scope": "punctuation.definition.arguments.begin.python,punctuation.definition.arguments.end.python,punctuation.separator.arguments.python,punctuation.definition.list.begin.python,punctuation.definition.list.end.python",
       "settings": {
-        "foreground": "--one-dark-pro-fg-0"
+        "foreground": "st-165"
       }
     },
     {
       "scope": "meta.function-call.generic.python",
       "settings": {
-        "foreground": "--one-dark-pro-fg-5"
+        "foreground": "st-170"
       }
     },
     {
       "scope": "constant.character.format.placeholder.other.python",
       "settings": {
-        "foreground": "--one-dark-pro-fg-3"
+        "foreground": "st-168"
       }
     },
     {
       "scope": "keyword.operator",
       "settings": {
-        "foreground": "--one-dark-pro-fg-0"
+        "foreground": "st-165"
       }
     },
     {
       "scope": "keyword.operator.assignment.compound",
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
       "scope": "keyword.operator.assignment.compound.js,keyword.operator.assignment.compound.ts",
       "settings": {
-        "foreground": "--one-dark-pro-fg-8"
+        "foreground": "st-173"
       }
     },
     {
       "scope": "keyword",
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
       "scope": "entity.name.namespace",
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
       "scope": "variable",
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
       "scope": "variable.c",
       "settings": {
-        "foreground": "--one-dark-pro-fg-0"
+        "foreground": "st-165"
       }
     },
     {
       "scope": "variable.language",
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
       "scope": "token.variable.parameter.java",
       "settings": {
-        "foreground": "--one-dark-pro-fg-0"
+        "foreground": "st-165"
       }
     },
     {
       "scope": "import.storage.java",
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
       "scope": "token.package.keyword",
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
       "scope": "token.package",
       "settings": {
-        "foreground": "--one-dark-pro-fg-0"
+        "foreground": "st-165"
       }
     },
     {
@@ -521,25 +521,25 @@
         "variable.function"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-5"
+        "foreground": "st-170"
       }
     },
     {
       "scope": "entity.name.type.namespace",
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
       "scope": "support.class, entity.name.type.class",
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
       "scope": "entity.name.class.identifier.namespace.type",
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
@@ -549,253 +549,253 @@
         "variable.other.class.ts"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
       "scope": "variable.other.class.php",
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
       "scope": "entity.name.type",
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
       "scope": "keyword.control",
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
       "scope": "control.elements, keyword.operator.less",
       "settings": {
-        "foreground": "--one-dark-pro-fg-3"
+        "foreground": "st-168"
       }
     },
     {
       "scope": "keyword.other.special-method",
       "settings": {
-        "foreground": "--one-dark-pro-fg-5"
+        "foreground": "st-170"
       }
     },
     {
       "scope": "storage",
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
       "scope": "token.storage",
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
       "scope": "keyword.operator.expression.delete,keyword.operator.expression.in,keyword.operator.expression.of,keyword.operator.expression.instanceof,keyword.operator.new,keyword.operator.expression.typeof,keyword.operator.expression.void",
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
       "scope": "token.storage.type.java",
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
       "scope": "support.function",
       "settings": {
-        "foreground": "--one-dark-pro-fg-8"
+        "foreground": "st-173"
       }
     },
     {
       "scope": "support.type.property-name",
       "settings": {
-        "foreground": "--one-dark-pro-fg-0"
+        "foreground": "st-165"
       }
     },
     {
       "scope": "support.type.property-name.toml, support.type.property-name.table.toml, support.type.property-name.array.toml",
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
       "scope": "support.constant.property-value",
       "settings": {
-        "foreground": "--one-dark-pro-fg-0"
+        "foreground": "st-165"
       }
     },
     {
       "scope": "support.constant.font-name",
       "settings": {
-        "foreground": "--one-dark-pro-fg-3"
+        "foreground": "st-168"
       }
     },
     {
       "scope": "meta.tag",
       "settings": {
-        "foreground": "--one-dark-pro-fg-0"
+        "foreground": "st-165"
       }
     },
     {
       "scope": "string",
       "settings": {
-        "foreground": "--one-dark-pro-fg-7"
+        "foreground": "st-172"
       }
     },
     {
       "scope": "constant.other.symbol",
       "settings": {
-        "foreground": "--one-dark-pro-fg-8"
+        "foreground": "st-173"
       }
     },
     {
       "scope": "constant.numeric",
       "settings": {
-        "foreground": "--one-dark-pro-fg-3"
+        "foreground": "st-168"
       }
     },
     {
       "scope": "constant",
       "settings": {
-        "foreground": "--one-dark-pro-fg-3"
+        "foreground": "st-168"
       }
     },
     {
       "scope": "punctuation.definition.constant",
       "settings": {
-        "foreground": "--one-dark-pro-fg-3"
+        "foreground": "st-168"
       }
     },
     {
       "scope": "entity.name.tag",
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
       "scope": "entity.other.attribute-name",
       "settings": {
-        "foreground": "--one-dark-pro-fg-3"
+        "foreground": "st-168"
       }
     },
     {
       "scope": "entity.other.attribute-name.id",
       "settings": {
-        "foreground": "--one-dark-pro-fg-5"
+        "foreground": "st-170"
       }
     },
     {
       "scope": "entity.other.attribute-name.class.css",
       "settings": {
-        "foreground": "--one-dark-pro-fg-3"
+        "foreground": "st-168"
       }
     },
     {
       "scope": "meta.selector",
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
       "scope": "markup.heading",
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
       "scope": "markup.heading punctuation.definition.heading, entity.name.section",
       "settings": {
-        "foreground": "--one-dark-pro-fg-5"
+        "foreground": "st-170"
       }
     },
     {
       "scope": "keyword.other.unit",
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
       "scope": "markup.bold,todo.bold",
       "settings": {
-        "foreground": "--one-dark-pro-fg-3"
+        "foreground": "st-168"
       }
     },
     {
       "scope": "punctuation.definition.bold",
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
       "scope": "markup.italic, punctuation.definition.italic,todo.emphasis",
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
       "scope": "emphasis md",
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
       "scope": "entity.name.section.markdown",
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
       "scope": "punctuation.definition.heading.markdown",
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
       "scope": "punctuation.definition.list.begin.markdown",
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
       "scope": "markup.heading.setext",
       "settings": {
-        "foreground": "--one-dark-pro-fg-0"
+        "foreground": "st-165"
       }
     },
     {
       "scope": "punctuation.definition.bold.markdown",
       "settings": {
-        "foreground": "--one-dark-pro-fg-3"
+        "foreground": "st-168"
       }
     },
     {
       "scope": "markup.inline.raw.markdown",
       "settings": {
-        "foreground": "--one-dark-pro-fg-7"
+        "foreground": "st-172"
       }
     },
     {
       "scope": "markup.inline.raw.string.markdown",
       "settings": {
-        "foreground": "--one-dark-pro-fg-7"
+        "foreground": "st-172"
       }
     },
     {
       "scope": "punctuation.definition.raw.markdown",
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
       "scope": "punctuation.definition.list.markdown",
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
@@ -805,7 +805,7 @@
         "punctuation.definition.metadata.markdown"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
@@ -813,373 +813,373 @@
         "beginning.punctuation.definition.list.markdown"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
       "scope": "punctuation.definition.metadata.markdown",
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
       "scope": "markup.underline.link.markdown,markup.underline.link.image.markdown",
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
       "scope": "string.other.link.title.markdown,string.other.link.description.markdown",
       "settings": {
-        "foreground": "--one-dark-pro-fg-5"
+        "foreground": "st-170"
       }
     },
     {
       "scope": "markup.raw.monospace.asciidoc",
       "settings": {
-        "foreground": "--one-dark-pro-fg-7"
+        "foreground": "st-172"
       }
     },
     {
       "scope": "punctuation.definition.asciidoc",
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
       "scope": "markup.list.asciidoc",
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
       "scope": "markup.link.asciidoc,markup.other.url.asciidoc",
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
       "scope": "string.unquoted.asciidoc,markup.other.url.asciidoc",
       "settings": {
-        "foreground": "--one-dark-pro-fg-5"
+        "foreground": "st-170"
       }
     },
     {
       "scope": "string.regexp",
       "settings": {
-        "foreground": "--one-dark-pro-fg-8"
+        "foreground": "st-173"
       }
     },
     {
       "scope": "punctuation.section.embedded, variable.interpolation",
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
       "scope": "punctuation.section.embedded.begin,punctuation.section.embedded.end",
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
       "scope": "invalid.illegal",
       "settings": {
-        "foreground": "--one-dark-pro-fg-9"
+        "foreground": "st-174"
       }
     },
     {
       "scope": "invalid.illegal.bad-ampersand.html",
       "settings": {
-        "foreground": "--one-dark-pro-fg-0"
+        "foreground": "st-165"
       }
     },
     {
       "scope": "invalid.illegal.unrecognized-tag.html",
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
       "scope": "invalid.broken",
       "settings": {
-        "foreground": "--one-dark-pro-fg-9"
+        "foreground": "st-174"
       }
     },
     {
       "scope": "invalid.deprecated",
       "settings": {
-        "foreground": "--one-dark-pro-fg-9"
+        "foreground": "st-174"
       }
     },
     {
       "scope": "invalid.deprecated.entity.other.attribute-name.html",
       "settings": {
-        "foreground": "--one-dark-pro-fg-3"
+        "foreground": "st-168"
       }
     },
     {
       "scope": "invalid.unimplemented",
       "settings": {
-        "foreground": "--one-dark-pro-fg-9"
+        "foreground": "st-174"
       }
     },
     {
       "scope": "source.json meta.structure.dictionary.json > string.quoted.json",
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
       "scope": "source.json meta.structure.dictionary.json > string.quoted.json > punctuation.string",
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
       "scope": "source.json meta.structure.dictionary.json > value.json > string.quoted.json,source.json meta.structure.array.json > value.json > string.quoted.json,source.json meta.structure.dictionary.json > value.json > string.quoted.json > punctuation,source.json meta.structure.array.json > value.json > string.quoted.json > punctuation",
       "settings": {
-        "foreground": "--one-dark-pro-fg-7"
+        "foreground": "st-172"
       }
     },
     {
       "scope": "source.json meta.structure.dictionary.json > constant.language.json,source.json meta.structure.array.json > constant.language.json",
       "settings": {
-        "foreground": "--one-dark-pro-fg-8"
+        "foreground": "st-173"
       }
     },
     {
       "scope": "support.type.property-name.json",
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
       "scope": "support.type.property-name.json punctuation",
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
       "scope": "text.html.laravel-blade source.php.embedded.line.html entity.name.tag.laravel-blade",
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
       "scope": "text.html.laravel-blade source.php.embedded.line.html support.constant.laravel-blade",
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
       "scope": "support.other.namespace.use.php,support.other.namespace.use-as.php,entity.other.alias.php,meta.interface.php",
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
       "scope": "keyword.operator.error-control.php",
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
       "scope": "keyword.operator.type.php",
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
       "scope": "punctuation.section.array.begin.php",
       "settings": {
-        "foreground": "--one-dark-pro-fg-0"
+        "foreground": "st-165"
       }
     },
     {
       "scope": "punctuation.section.array.end.php",
       "settings": {
-        "foreground": "--one-dark-pro-fg-0"
+        "foreground": "st-165"
       }
     },
     {
       "scope": "invalid.illegal.non-null-typehinted.php",
       "settings": {
-        "foreground": "--one-dark-pro-fg-10"
+        "foreground": "st-175"
       }
     },
     {
       "scope": "storage.type.php,meta.other.type.phpdoc.php,keyword.other.type.php,keyword.other.array.phpdoc.php",
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
       "scope": "meta.function-call.php,meta.function-call.object.php,meta.function-call.static.php",
       "settings": {
-        "foreground": "--one-dark-pro-fg-5"
+        "foreground": "st-170"
       }
     },
     {
       "scope": "punctuation.definition.parameters.begin.bracket.round.php,punctuation.definition.parameters.end.bracket.round.php,punctuation.separator.delimiter.php,punctuation.section.scope.begin.php,punctuation.section.scope.end.php,punctuation.terminator.expression.php,punctuation.definition.arguments.begin.bracket.round.php,punctuation.definition.arguments.end.bracket.round.php,punctuation.definition.storage-type.begin.bracket.round.php,punctuation.definition.storage-type.end.bracket.round.php,punctuation.definition.array.begin.bracket.round.php,punctuation.definition.array.end.bracket.round.php,punctuation.definition.begin.bracket.round.php,punctuation.definition.end.bracket.round.php,punctuation.definition.begin.bracket.curly.php,punctuation.definition.end.bracket.curly.php,punctuation.definition.section.switch-block.end.bracket.curly.php,punctuation.definition.section.switch-block.start.bracket.curly.php,punctuation.definition.section.switch-block.begin.bracket.curly.php,punctuation.definition.section.switch-block.end.bracket.curly.php",
       "settings": {
-        "foreground": "--one-dark-pro-fg-0"
+        "foreground": "st-165"
       }
     },
     {
       "scope": "support.constant.core.rust",
       "settings": {
-        "foreground": "--one-dark-pro-fg-3"
+        "foreground": "st-168"
       }
     },
     {
       "scope": "support.constant.ext.php,support.constant.std.php,support.constant.core.php,support.constant.parser-token.php",
       "settings": {
-        "foreground": "--one-dark-pro-fg-3"
+        "foreground": "st-168"
       }
     },
     {
       "scope": "entity.name.goto-label.php,support.other.php",
       "settings": {
-        "foreground": "--one-dark-pro-fg-5"
+        "foreground": "st-170"
       }
     },
     {
       "scope": "keyword.operator.logical.php,keyword.operator.bitwise.php,keyword.operator.arithmetic.php",
       "settings": {
-        "foreground": "--one-dark-pro-fg-8"
+        "foreground": "st-173"
       }
     },
     {
       "scope": "keyword.operator.regexp.php",
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
       "scope": "keyword.operator.comparison.php",
       "settings": {
-        "foreground": "--one-dark-pro-fg-8"
+        "foreground": "st-173"
       }
     },
     {
       "scope": "keyword.operator.heredoc.php,keyword.operator.nowdoc.php",
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
       "scope": "meta.function.decorator.python",
       "settings": {
-        "foreground": "--one-dark-pro-fg-5"
+        "foreground": "st-170"
       }
     },
     {
       "scope": "support.token.decorator.python,meta.function.decorator.identifier.python",
       "settings": {
-        "foreground": "--one-dark-pro-fg-8"
+        "foreground": "st-173"
       }
     },
     {
       "scope": "function.parameter",
       "settings": {
-        "foreground": "--one-dark-pro-fg-0"
+        "foreground": "st-165"
       }
     },
     {
       "scope": "function.brace",
       "settings": {
-        "foreground": "--one-dark-pro-fg-0"
+        "foreground": "st-165"
       }
     },
     {
       "scope": "function.parameter.ruby, function.parameter.cs",
       "settings": {
-        "foreground": "--one-dark-pro-fg-0"
+        "foreground": "st-165"
       }
     },
     {
       "scope": "constant.language.symbol.ruby",
       "settings": {
-        "foreground": "--one-dark-pro-fg-8"
+        "foreground": "st-173"
       }
     },
     {
       "scope": "constant.language.symbol.hashkey.ruby",
       "settings": {
-        "foreground": "--one-dark-pro-fg-8"
+        "foreground": "st-173"
       }
     },
     {
       "scope": "rgb-value",
       "settings": {
-        "foreground": "--one-dark-pro-fg-8"
+        "foreground": "st-173"
       }
     },
     {
       "scope": "inline-color-decoration rgb-value",
       "settings": {
-        "foreground": "--one-dark-pro-fg-3"
+        "foreground": "st-168"
       }
     },
     {
       "scope": "less rgb-value",
       "settings": {
-        "foreground": "--one-dark-pro-fg-3"
+        "foreground": "st-168"
       }
     },
     {
       "scope": "selector.sass",
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
       "scope": "support.type.primitive.ts,support.type.builtin.ts,support.type.primitive.tsx,support.type.builtin.tsx",
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
       "scope": "block.scope.end,block.scope.begin",
       "settings": {
-        "foreground": "--one-dark-pro-fg-0"
+        "foreground": "st-165"
       }
     },
     {
       "scope": "storage.type.cs",
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
       "scope": "entity.name.variable.local.cs",
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
       "scope": "token.info-token",
       "settings": {
-        "foreground": "--one-dark-pro-fg-5"
+        "foreground": "st-170"
       }
     },
     {
       "scope": "token.warn-token",
       "settings": {
-        "foreground": "--one-dark-pro-fg-3"
+        "foreground": "st-168"
       }
     },
     {
       "scope": "token.error-token",
       "settings": {
-        "foreground": "--one-dark-pro-fg-10"
+        "foreground": "st-175"
       }
     },
     {
       "scope": "token.debug-token",
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
@@ -1189,7 +1189,7 @@
         "punctuation.section.embedded"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
@@ -1197,7 +1197,7 @@
         "meta.template.expression"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-0"
+        "foreground": "st-165"
       }
     },
     {
@@ -1205,7 +1205,7 @@
         "keyword.operator.module"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
@@ -1213,7 +1213,7 @@
         "support.type.type.flowtype"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-5"
+        "foreground": "st-170"
       }
     },
     {
@@ -1221,7 +1221,7 @@
         "support.type.primitive"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
@@ -1229,7 +1229,7 @@
         "meta.property.object"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
@@ -1237,7 +1237,7 @@
         "variable.parameter.function.js"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
@@ -1245,7 +1245,7 @@
         "keyword.other.template.begin"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-7"
+        "foreground": "st-172"
       }
     },
     {
@@ -1253,7 +1253,7 @@
         "keyword.other.template.end"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-7"
+        "foreground": "st-172"
       }
     },
     {
@@ -1261,7 +1261,7 @@
         "keyword.other.substitution.begin"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-7"
+        "foreground": "st-172"
       }
     },
     {
@@ -1269,7 +1269,7 @@
         "keyword.other.substitution.end"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-7"
+        "foreground": "st-172"
       }
     },
     {
@@ -1277,7 +1277,7 @@
         "keyword.operator.assignment"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-8"
+        "foreground": "st-173"
       }
     },
     {
@@ -1285,7 +1285,7 @@
         "keyword.operator.assignment.go"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
@@ -1294,7 +1294,7 @@
         "keyword.operator.address.go"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
@@ -1303,7 +1303,7 @@
         "keyword.operator.arithmetic.cpp"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
@@ -1311,7 +1311,7 @@
         "entity.name.package.go"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
@@ -1319,7 +1319,7 @@
         "support.type.prelude.elm"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-8"
+        "foreground": "st-173"
       }
     },
     {
@@ -1327,7 +1327,7 @@
         "support.constant.elm"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-3"
+        "foreground": "st-168"
       }
     },
     {
@@ -1335,7 +1335,7 @@
         "punctuation.quasi.element"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
@@ -1343,7 +1343,7 @@
         "constant.character.entity"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
@@ -1352,7 +1352,7 @@
         "entity.other.attribute-name.pseudo-class"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-8"
+        "foreground": "st-173"
       }
     },
     {
@@ -1360,7 +1360,7 @@
         "entity.global.clojure"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
@@ -1368,7 +1368,7 @@
         "meta.symbol.clojure"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
@@ -1376,7 +1376,7 @@
         "constant.keyword.clojure"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-8"
+        "foreground": "st-173"
       }
     },
     {
@@ -1385,7 +1385,7 @@
         "variable.parameter.function.coffee"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
@@ -1393,7 +1393,7 @@
         "source.ini"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-7"
+        "foreground": "st-172"
       }
     },
     {
@@ -1401,7 +1401,7 @@
         "meta.scope.prerequisites.makefile"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
@@ -1409,7 +1409,7 @@
         "source.makefile"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
@@ -1417,7 +1417,7 @@
         "storage.modifier.import.groovy"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
@@ -1425,7 +1425,7 @@
         "meta.method.groovy"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-5"
+        "foreground": "st-170"
       }
     },
     {
@@ -1433,7 +1433,7 @@
         "meta.definition.variable.name.groovy"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
@@ -1441,7 +1441,7 @@
         "meta.definition.class.inherited.classes.groovy"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-7"
+        "foreground": "st-172"
       }
     },
     {
@@ -1449,7 +1449,7 @@
         "support.variable.semantic.hlsl"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
@@ -1462,7 +1462,7 @@
         "support.type.object.hlsl"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
@@ -1471,7 +1471,7 @@
         "text.bracketed"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
@@ -1480,7 +1480,7 @@
         "support.type.vb.asp"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
@@ -1488,7 +1488,7 @@
         "entity.name.function.xi"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
@@ -1496,7 +1496,7 @@
         "entity.name.class.xi"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-8"
+        "foreground": "st-173"
       }
     },
     {
@@ -1504,7 +1504,7 @@
         "constant.character.character-class.regexp.xi"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
@@ -1512,7 +1512,7 @@
         "constant.regexp.xi"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
@@ -1520,7 +1520,7 @@
         "keyword.control.xi"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-8"
+        "foreground": "st-173"
       }
     },
     {
@@ -1528,7 +1528,7 @@
         "invalid.xi"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-0"
+        "foreground": "st-165"
       }
     },
     {
@@ -1536,7 +1536,7 @@
         "beginning.punctuation.definition.quote.markdown.xi"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-7"
+        "foreground": "st-172"
       }
     },
     {
@@ -1544,7 +1544,7 @@
         "beginning.punctuation.definition.list.markdown.xi"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-11"
+        "foreground": "st-176"
       }
     },
     {
@@ -1552,7 +1552,7 @@
         "constant.character.xi"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-5"
+        "foreground": "st-170"
       }
     },
     {
@@ -1560,7 +1560,7 @@
         "accent.xi"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-5"
+        "foreground": "st-170"
       }
     },
     {
@@ -1568,7 +1568,7 @@
         "wikiword.xi"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-3"
+        "foreground": "st-168"
       }
     },
     {
@@ -1576,7 +1576,7 @@
         "constant.other.color.rgb-value.xi"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-9"
+        "foreground": "st-174"
       }
     },
     {
@@ -1584,7 +1584,7 @@
         "punctuation.definition.tag.xi"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-6"
+        "foreground": "st-171"
       }
     },
     {
@@ -1594,7 +1594,7 @@
         "entity.name.scope-resolution.function.definition"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
@@ -1604,7 +1604,7 @@
         "markup.heading.setext.2.markdown"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
@@ -1612,26 +1612,26 @@
         " meta.brace.square"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-0"
+        "foreground": "st-165"
       }
     },
     {
       "scope": "comment, punctuation.definition.comment",
       "settings": {
-        "fontStyle": "--one-dark-pro-fs-0",
-        "foreground": "--one-dark-pro-fg-11"
+        "fontStyle": "st-178",
+        "foreground": "st-176"
       }
     },
     {
       "scope": "markup.quote.markdown",
       "settings": {
-        "foreground": "--one-dark-pro-fg-6"
+        "foreground": "st-171"
       }
     },
     {
       "scope": "punctuation.definition.block.sequence.item.yaml",
       "settings": {
-        "foreground": "--one-dark-pro-fg-0"
+        "foreground": "st-165"
       }
     },
     {
@@ -1640,7 +1640,7 @@
         "constant.language.symbol.double-quoted.elixir"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-8"
+        "foreground": "st-173"
       }
     },
     {
@@ -1648,7 +1648,7 @@
         "entity.name.variable.parameter.cs"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
@@ -1656,25 +1656,25 @@
         "entity.name.variable.field.cs"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
       "scope": "markup.deleted",
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
       "scope": "markup.inserted",
       "settings": {
-        "foreground": "--one-dark-pro-fg-7"
+        "foreground": "st-172"
       }
     },
     {
       "scope": "markup.underline",
       "settings": {
-        "fontStyle": "--one-dark-pro-fs-1"
+        "fontStyle": "st-179"
       }
     },
     {
@@ -1683,7 +1683,7 @@
         "punctuation.section.embedded.end.php"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-12"
+        "foreground": "st-177"
       }
     },
     {
@@ -1691,7 +1691,7 @@
         "support.other.namespace.php"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-0"
+        "foreground": "st-165"
       }
     },
     {
@@ -1699,7 +1699,7 @@
         "variable.parameter.function.latex"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
@@ -1707,7 +1707,7 @@
         "variable.other.object"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
@@ -1715,7 +1715,7 @@
         "variable.other.constant.property"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
@@ -1723,19 +1723,19 @@
         "entity.other.inherited-class"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
       "scope": "variable.other.readwrite.c",
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
       "scope": "entity.name.variable.parameter.php,punctuation.separator.colon.php,constant.other.php",
       "settings": {
-        "foreground": "--one-dark-pro-fg-0"
+        "foreground": "st-165"
       }
     },
     {
@@ -1743,7 +1743,7 @@
         "constant.numeric.decimal.asm.x86_64"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
@@ -1751,7 +1751,7 @@
         "support.other.parenthesis.regexp"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-3"
+        "foreground": "st-168"
       }
     },
     {
@@ -1759,7 +1759,7 @@
         "constant.character.escape"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-8"
+        "foreground": "st-173"
       }
     },
     {
@@ -1767,7 +1767,7 @@
         "string.regexp"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
@@ -1775,7 +1775,7 @@
         "log.info"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-7"
+        "foreground": "st-172"
       }
     },
     {
@@ -1783,7 +1783,7 @@
         "log.warning"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-4"
+        "foreground": "st-169"
       }
     },
     {
@@ -1791,37 +1791,37 @@
         "log.error"
       ],
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
       "scope": "keyword.operator.expression.is",
       "settings": {
-        "foreground": "--one-dark-pro-fg-2"
+        "foreground": "st-167"
       }
     },
     {
       "scope": "entity.name.label",
       "settings": {
-        "foreground": "--one-dark-pro-fg-1"
+        "foreground": "st-166"
       }
     },
     {
       "scope": "entity.other.attribute-name.js,entity.other.attribute-name.ts,entity.other.attribute-name.jsx,entity.other.attribute-name.tsx,variable.parameter,variable.language.super",
       "settings": {
-        "fontStyle": "--one-dark-pro-fs-0"
+        "fontStyle": "st-178"
       }
     },
     {
       "scope": "comment.line.double-slash,comment.block.documentation",
       "settings": {
-        "fontStyle": "--one-dark-pro-fs-0"
+        "fontStyle": "st-178"
       }
     },
     {
       "scope": "markup.italic.markdown",
       "settings": {
-        "fontStyle": "--one-dark-pro-fs-0"
+        "fontStyle": "st-178"
       }
     }
   ]

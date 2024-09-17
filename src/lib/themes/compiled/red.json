@@ -6,7 +6,7 @@
   "tokenColors": [
     {
       "settings": {
-        "foreground": "--red-foreground"
+        "foreground": "st-fg"
       }
     },
     {
@@ -17,82 +17,82 @@
         "variable.legacy.builtin.python"
       ],
       "settings": {
-        "foreground": "--red-fg-0"
+        "foreground": "st-180"
       }
     },
     {
       "scope": "comment",
       "settings": {
-        "fontStyle": "--red-fs-0",
-        "foreground": "--red-fg-1"
+        "fontStyle": "st-203",
+        "foreground": "st-181"
       }
     },
     {
       "scope": "constant",
       "settings": {
         "fontStyle": "",
-        "foreground": "--red-fg-2"
+        "foreground": "st-182"
       }
     },
     {
       "scope": "keyword",
       "settings": {
         "fontStyle": "",
-        "foreground": "--red-fg-3"
+        "foreground": "st-183"
       }
     },
     {
       "scope": "entity",
       "settings": {
         "fontStyle": "",
-        "foreground": "--red-fg-4"
+        "foreground": "st-184"
       }
     },
     {
       "scope": "storage",
       "settings": {
-        "fontStyle": "--red-fs-1",
-        "foreground": "--red-fg-5"
+        "fontStyle": "st-204",
+        "foreground": "st-185"
       }
     },
     {
       "scope": "string",
       "settings": {
         "fontStyle": "",
-        "foreground": "--red-fg-6"
+        "foreground": "st-186"
       }
     },
     {
       "scope": "support",
       "settings": {
         "fontStyle": "",
-        "foreground": "--red-fg-7"
+        "foreground": "st-187"
       }
     },
     {
       "scope": "variable",
       "settings": {
-        "fontStyle": "--red-fs-0",
-        "foreground": "--red-fg-8"
+        "fontStyle": "st-203",
+        "foreground": "st-188"
       }
     },
     {
       "scope": "invalid",
       "settings": {
-        "foreground": "--red-fg-9"
+        "foreground": "st-189"
       }
     },
     {
       "scope": "entity.other.inherited-class",
       "settings": {
-        "fontStyle": "--red-fs-2",
-        "foreground": "--red-fg-10"
+        "fontStyle": "st-205",
+        "foreground": "st-190"
       }
     },
     {
       "scope": "constant.character",
       "settings": {
-        "foreground": "--red-fg-11"
+        "foreground": "st-191"
       }
     },
     {
@@ -102,26 +102,26 @@
       ],
       "settings": {
         "fontStyle": "",
-        "foreground": "--red-fg-12"
+        "foreground": "st-192"
       }
     },
     {
       "scope": "string.regexp",
       "settings": {
-        "foreground": "--red-fg-13"
+        "foreground": "st-193"
       }
     },
     {
       "scope": "string variable",
       "settings": {
-        "foreground": "--red-fg-14"
+        "foreground": "st-194"
       }
     },
     {
       "scope": "support.function",
       "settings": {
         "fontStyle": "",
-        "foreground": "--red-fg-13"
+        "foreground": "st-193"
       }
     },
     {
@@ -131,7 +131,7 @@
       ],
       "settings": {
         "fontStyle": "",
-        "foreground": "--red-fg-15"
+        "foreground": "st-195"
       }
     },
     {
@@ -145,7 +145,7 @@
       ],
       "settings": {
         "fontStyle": "",
-        "foreground": "--red-fg-16"
+        "foreground": "st-196"
       }
     },
     {
@@ -157,34 +157,34 @@
       ],
       "settings": {
         "fontStyle": "",
-        "foreground": "--red-fg-17"
+        "foreground": "st-197"
       }
     },
     {
       "scope": "meta.selector.css entity.name.tag",
       "settings": {
         "fontStyle": "",
-        "foreground": "--red-fg-10"
+        "foreground": "st-190"
       }
     },
     {
       "scope": "meta.selector.css entity.other.attribute-name.id",
       "settings": {
-        "foreground": "--red-fg-4"
+        "foreground": "st-184"
       }
     },
     {
       "scope": "meta.selector.css entity.other.attribute-name.class",
       "settings": {
         "fontStyle": "",
-        "foreground": "--red-fg-18"
+        "foreground": "st-198"
       }
     },
     {
       "scope": "support.type.property-name.css",
       "settings": {
         "fontStyle": "",
-        "foreground": "--red-fg-19"
+        "foreground": "st-199"
       }
     },
     {
@@ -193,8 +193,8 @@
         "meta.property-value support.constant.property-value.css"
       ],
       "settings": {
-        "fontStyle": "--red-fs-0",
-        "foreground": "--red-fg-12"
+        "fontStyle": "st-203",
+        "foreground": "st-192"
       }
     },
     {
@@ -204,20 +204,20 @@
       ],
       "settings": {
         "fontStyle": "",
-        "foreground": "--red-fg-12"
+        "foreground": "st-192"
       }
     },
     {
       "scope": "meta.preprocessor.at-rule keyword.control.at-rule",
       "settings": {
-        "foreground": "--red-fg-20"
+        "foreground": "st-200"
       }
     },
     {
       "scope": "meta.constructor.argument.css",
       "settings": {
         "fontStyle": "",
-        "foreground": "--red-fg-21"
+        "foreground": "st-201"
       }
     },
     {
@@ -226,38 +226,38 @@
         "meta.diff.header"
       ],
       "settings": {
-        "fontStyle": "--red-fs-0",
-        "foreground": "--red-fg-22"
+        "fontStyle": "st-203",
+        "foreground": "st-202"
       }
     },
     {
       "scope": "markup.deleted",
       "settings": {
-        "foreground": "--red-fg-21"
+        "foreground": "st-201"
       }
     },
     {
       "scope": "markup.changed",
       "settings": {
-        "foreground": "--red-fg-22"
+        "foreground": "st-202"
       }
     },
     {
       "scope": "markup.inserted",
       "settings": {
-        "foreground": "--red-fg-18"
+        "foreground": "st-198"
       }
     },
     {
       "scope": "markup.quote",
       "settings": {
-        "foreground": "--red-fg-3"
+        "foreground": "st-183"
       }
     },
     {
       "scope": "markup.list",
       "settings": {
-        "foreground": "--red-fg-5"
+        "foreground": "st-185"
       }
     },
     {
@@ -266,32 +266,32 @@
         "markup.italic"
       ],
       "settings": {
-        "foreground": "--red-fg-8"
+        "foreground": "st-188"
       }
     },
     {
       "scope": "markup.bold",
       "settings": {
-        "fontStyle": "--red-fs-1"
+        "fontStyle": "st-204"
       }
     },
     {
       "scope": "markup.italic",
       "settings": {
-        "fontStyle": "--red-fs-0"
+        "fontStyle": "st-203"
       }
     },
     {
       "scope": "markup.strikethrough",
       "settings": {
-        "fontStyle": "--red-fs-3"
+        "fontStyle": "st-206"
       }
     },
     {
       "scope": "markup.inline.raw",
       "settings": {
         "fontStyle": "",
-        "foreground": "--red-fg-6"
+        "foreground": "st-186"
       }
     },
     {
@@ -302,8 +302,8 @@
         "entity.name.section"
       ],
       "settings": {
-        "fontStyle": "--red-fs-1",
-        "foreground": "--red-fg-4"
+        "fontStyle": "st-204",
+        "foreground": "st-184"
       }
     },
     {
@@ -314,7 +314,7 @@
         ".format.placeholder"
       ],
       "settings": {
-        "foreground": "--red-fg-11"
+        "foreground": "st-191"
       }
     }
   ]

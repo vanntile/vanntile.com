@@ -16,7 +16,7 @@ import rehypeSortAttributes from 'rehype-sort-attributes'
 import remarkHint from 'remark-hint'
 import { createHighlighter } from 'shiki'
 import { loadEnv } from 'vite'
-import { remarkReadingTime } from './src/lib/plugins'
+import { rehypeShikiStylesToClasses, remarkReadingTime } from './src/lib/plugins'
 import shikiThemes from './src/lib/shikiThemes'
 import { astroCSPHashGenerator, initializeCloudinary } from './src/lib/utils'
 
@@ -36,6 +36,7 @@ export default defineConfig({
         rehypePrettyCode,
         {
           keepBackground: true,
+          theme: false,
           transformers: [
             transformerNotationDiff(),
             transformerNotationHighlight(),
@@ -50,29 +51,16 @@ export default defineConfig({
             highlighter.codeToHtml = (code, options) =>
               codeToHtml(code, {
                 ...options,
-                themes: {
-                  0: shikiThemes.andromeedaTheme,
-                  1: shikiThemes.darkPlusTheme,
-                  2: shikiThemes.materialLighterTheme,
-                  3: shikiThemes.materialOceanTheme,
-                  4: shikiThemes.materialPalenightTheme,
-                  5: shikiThemes.minLightTheme,
-                  6: shikiThemes.moonlightIITheme,
-                  7: shikiThemes.myEyesPleaseTheme,
-                  8: shikiThemes.oneDarkProTheme,
-                  9: shikiThemes.redTheme,
-                  10: shikiThemes.solarizedLightTheme,
-                  11: shikiThemes.synthwave84Theme,
-                },
-                defaultColor: '6',
-                cssVariablePrefix: '--st',
+                themes: shikiThemes,
+                defaultColor: false,
+                cssVariablePrefix: '--st-',
               })
 
             return highlighter
           },
         },
       ],
-      // [rehypeShikiStylesToClasses, { stylePrefix: '--dynamic-shiki-', classPrefix: 'shiki-' }],
+      [rehypeShikiStylesToClasses, { classPrefix: 'st-', themeNames: Object.keys(shikiThemes) }],
       rehypeSlug,
       [
         rehypeAutolinkHeadings,

@@ -12,16 +12,16 @@ import solarizedLightTheme from './themes/compiled/solarized-light.json'
 import synthwave84Theme from './themes/compiled/synthwave-84.json'
 
 export default {
-  andromeedaTheme,
-  darkPlusTheme,
-  materialLighterTheme,
-  materialOceanTheme,
-  materialPalenightTheme,
-  minLightTheme,
-  moonlightIITheme,
-  myEyesPleaseTheme,
-  oneDarkProTheme,
-  redTheme,
-  solarizedLightTheme,
-  synthwave84Theme,
+  andromeeda: andromeedaTheme,
+  'dark-plus': darkPlusTheme,
+  'material-theme-lighter': materialLighterTheme,
+  'material-theme-ocean': materialOceanTheme,
+  'material-theme-palenight': materialPalenightTheme,
+  'min-light': minLightTheme,
+  'moonlight-ii': moonlightIITheme,
+  'my-eyes-please': myEyesPleaseTheme,
+  'one-dark-pro': oneDarkProTheme,
+  red: redTheme,
+  'solarized-light': solarizedLightTheme,
+  'synthwave-84': synthwave84Theme,
 }

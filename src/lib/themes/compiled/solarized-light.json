@@ -6,7 +6,7 @@
   "tokenColors": [
     {
       "settings": {
-        "foreground": "--solarized-light-foreground"
+        "foreground": "st-fg"
       }
     },
     {
@@ -17,32 +17,32 @@
         "variable.legacy.builtin.python"
       ],
       "settings": {
-        "foreground": "--solarized-light-fg-0"
+        "foreground": "st-207"
       }
     },
     {
       "scope": "comment",
       "settings": {
-        "fontStyle": "--solarized-light-fs-0",
-        "foreground": "--solarized-light-fg-1"
+        "fontStyle": "st-218",
+        "foreground": "st-208"
       }
     },
     {
       "scope": "string",
       "settings": {
-        "foreground": "--solarized-light-fg-2"
+        "foreground": "st-209"
       }
     },
     {
       "scope": "string.regexp",
       "settings": {
-        "foreground": "--solarized-light-fg-3"
+        "foreground": "st-210"
       }
     },
     {
       "scope": "constant.numeric",
       "settings": {
-        "foreground": "--solarized-light-fg-4"
+        "foreground": "st-211"
       }
     },
     {
@@ -51,20 +51,20 @@
         "variable.other"
       ],
       "settings": {
-        "foreground": "--solarized-light-fg-5"
+        "foreground": "st-212"
       }
     },
     {
       "scope": "keyword",
       "settings": {
-        "foreground": "--solarized-light-fg-6"
+        "foreground": "st-213"
       }
     },
     {
       "scope": "storage",
       "settings": {
-        "fontStyle": "--solarized-light-fs-1",
-        "foreground": "--solarized-light-fg-7"
+        "fontStyle": "st-219",
+        "foreground": "st-214"
       }
     },
     {
@@ -76,19 +76,19 @@
       ],
       "settings": {
         "fontStyle": "",
-        "foreground": "--solarized-light-fg-8"
+        "foreground": "st-215"
       }
     },
     {
       "scope": "entity.name.function",
       "settings": {
-        "foreground": "--solarized-light-fg-5"
+        "foreground": "st-212"
       }
     },
     {
       "scope": "punctuation.definition.variable",
       "settings": {
-        "foreground": "--solarized-light-fg-6"
+        "foreground": "st-213"
       }
     },
     {
@@ -97,7 +97,7 @@
         "punctuation.section.embedded.end"
       ],
       "settings": {
-        "foreground": "--solarized-light-fg-3"
+        "foreground": "st-210"
       }
     },
     {
@@ -106,7 +106,7 @@
         "meta.preprocessor"
       ],
       "settings": {
-        "foreground": "--solarized-light-fg-9"
+        "foreground": "st-216"
       }
     },
     {
@@ -115,7 +115,7 @@
         "keyword.other.new"
       ],
       "settings": {
-        "foreground": "--solarized-light-fg-8"
+        "foreground": "st-215"
       }
     },
     {
@@ -124,13 +124,13 @@
         "constant.other"
       ],
       "settings": {
-        "foreground": "--solarized-light-fg-8"
+        "foreground": "st-215"
       }
     },
     {
       "scope": "entity.other.inherited-class",
       "settings": {
-        "foreground": "--solarized-light-fg-10"
+        "foreground": "st-217"
       }
     },
     {
@@ -140,31 +140,31 @@
     {
       "scope": "entity.name.tag",
       "settings": {
-        "foreground": "--solarized-light-fg-5"
+        "foreground": "st-212"
       }
     },
     {
       "scope": "punctuation.definition.tag",
       "settings": {
-        "foreground": "--solarized-light-fg-1"
+        "foreground": "st-208"
       }
     },
     {
       "scope": "entity.other.attribute-name",
       "settings": {
-        "foreground": "--solarized-light-fg-1"
+        "foreground": "st-208"
       }
     },
     {
       "scope": "support.function",
       "settings": {
-        "foreground": "--solarized-light-fg-5"
+        "foreground": "st-212"
       }
     },
     {
       "scope": "punctuation.separator.continuation",
       "settings": {
-        "foreground": "--solarized-light-fg-3"
+        "foreground": "st-210"
       }
     },
     {
@@ -180,13 +180,13 @@
         "support.class"
       ],
       "settings": {
-        "foreground": "--solarized-light-fg-6"
+        "foreground": "st-213"
       }
     },
     {
       "scope": "support.type.exception",
       "settings": {
-        "foreground": "--solarized-light-fg-8"
+        "foreground": "st-215"
       }
     },
     {
@@ -196,7 +196,7 @@
     {
       "scope": "invalid",
       "settings": {
-        "foreground": "--solarized-light-fg-3"
+        "foreground": "st-210"
       }
     },
     {
@@ -205,40 +205,40 @@
         "meta.diff.header"
       ],
       "settings": {
-        "fontStyle": "--solarized-light-fs-0",
-        "foreground": "--solarized-light-fg-5"
+        "fontStyle": "st-218",
+        "foreground": "st-212"
       }
     },
     {
       "scope": "markup.deleted",
       "settings": {
         "fontStyle": "",
-        "foreground": "--solarized-light-fg-3"
+        "foreground": "st-210"
       }
     },
     {
       "scope": "markup.changed",
       "settings": {
         "fontStyle": "",
-        "foreground": "--solarized-light-fg-8"
+        "foreground": "st-215"
       }
     },
     {
       "scope": "markup.inserted",
       "settings": {
-        "foreground": "--solarized-light-fg-6"
+        "foreground": "st-213"
       }
     },
     {
       "scope": "markup.quote",
       "settings": {
-        "foreground": "--solarized-light-fg-6"
+        "foreground": "st-213"
       }
     },
     {
       "scope": "markup.list",
       "settings": {
-        "foreground": "--solarized-light-fg-9"
+        "foreground": "st-216"
       }
     },
     {
@@ -247,46 +247,46 @@
         "markup.italic"
       ],
       "settings": {
-        "foreground": "--solarized-light-fg-4"
+        "foreground": "st-211"
       }
     },
     {
       "scope": "markup.bold",
       "settings": {
-        "fontStyle": "--solarized-light-fs-1"
+        "fontStyle": "st-219"
       }
     },
     {
       "scope": "markup.italic",
       "settings": {
-        "fontStyle": "--solarized-light-fs-0"
+        "fontStyle": "st-218"
       }
     },
     {
       "scope": "markup.strikethrough",
       "settings": {
-        "fontStyle": "--solarized-light-fs-2"
+        "fontStyle": "st-220"
       }
     },
     {
       "scope": "markup.inline.raw",
       "settings": {
         "fontStyle": "",
-        "foreground": "--solarized-light-fg-2"
+        "foreground": "st-209"
       }
     },
     {
       "scope": "markup.heading",
       "settings": {
-        "fontStyle": "--solarized-light-fs-1",
-        "foreground": "--solarized-light-fg-5"
+        "fontStyle": "st-219",
+        "foreground": "st-212"
       }
     },
     {
       "scope": "markup.heading.setext",
       "settings": {
         "fontStyle": "",
-        "foreground": "--solarized-light-fg-5"
+        "foreground": "st-212"
       }
     }
   ]

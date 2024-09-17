@@ -6,381 +6,381 @@
   "tokenColors": [
     {
       "settings": {
-        "background": "--material-theme-palenight-background",
-        "foreground": "--material-theme-palenight-foreground"
+        "background": "st-bg",
+        "foreground": "st-fg"
       }
     },
     {
       "scope": "string",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-0"
+        "foreground": "st-71"
       }
     },
     {
       "scope": "punctuation, constant.other.symbol",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-1"
+        "foreground": "st-72"
       }
     },
     {
       "scope": "constant.character.escape, text.html constant.character.entity.named",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-2"
+        "foreground": "st-70"
       }
     },
     {
       "scope": "constant.language.boolean",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-3"
+        "foreground": "st-73"
       }
     },
     {
       "scope": "constant.numeric",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-4"
+        "foreground": "st-74"
       }
     },
     {
       "scope": "variable, variable.parameter, support.variable, variable.language, support.constant, meta.definition.variable entity.name.function, meta.function-call.arguments",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-2"
+        "foreground": "st-70"
       }
     },
     {
       "scope": "keyword.other",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-4"
+        "foreground": "st-74"
       }
     },
     {
       "scope": "keyword, modifier, variable.language.this, support.type.object, constant.language",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-1"
+        "foreground": "st-72"
       }
     },
     {
       "scope": "entity.name.function, support.function",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-5"
+        "foreground": "st-75"
       }
     },
     {
       "scope": "storage.type, storage.modifier, storage.control",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-6"
+        "foreground": "st-76"
       }
     },
     {
       "scope": "support.module, support.node",
       "settings": {
-        "fontStyle": "--material-theme-palenight-fs-0",
-        "foreground": "--material-theme-palenight-fg-7"
+        "fontStyle": "st-83",
+        "foreground": "st-77"
       }
     },
     {
       "scope": "support.type, constant.other.key",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-8"
+        "foreground": "st-78"
       }
     },
     {
       "scope": "entity.name.type, entity.other.inherited-class, entity.other",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-8"
+        "foreground": "st-78"
       }
     },
     {
       "scope": "comment",
       "settings": {
-        "fontStyle": "--material-theme-palenight-fs-0",
-        "foreground": "--material-theme-palenight-fg-9"
+        "fontStyle": "st-83",
+        "foreground": "st-79"
       }
     },
     {
       "scope": "comment punctuation.definition.comment, string.quoted.docstring",
       "settings": {
-        "fontStyle": "--material-theme-palenight-fs-0",
-        "foreground": "--material-theme-palenight-fg-9"
+        "fontStyle": "st-83",
+        "foreground": "st-79"
       }
     },
     {
       "scope": "punctuation",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-1"
+        "foreground": "st-72"
       }
     },
     {
       "scope": "entity.name, entity.name.type.class, support.type, support.class, meta.use",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-8"
+        "foreground": "st-78"
       }
     },
     {
       "scope": "variable.object.property, meta.field.declaration entity.name.function",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-7"
+        "foreground": "st-77"
       }
     },
     {
       "scope": "meta.definition.method entity.name.function",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-7"
+        "foreground": "st-77"
       }
     },
     {
       "scope": "meta.function entity.name.function",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-5"
+        "foreground": "st-75"
       }
     },
     {
       "scope": "template.expression.begin, template.expression.end, punctuation.definition.template-expression.begin, punctuation.definition.template-expression.end",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-1"
+        "foreground": "st-72"
       }
     },
     {
       "scope": "meta.embedded, source.groovy.embedded, meta.template.expression",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-2"
+        "foreground": "st-70"
       }
     },
     {
       "scope": "entity.name.tag.yaml",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-7"
+        "foreground": "st-77"
       }
     },
     {
       "scope": "meta.object-literal.key, meta.object-literal.key string, support.type.property-name.json",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-7"
+        "foreground": "st-77"
       }
     },
     {
       "scope": "constant.language.json",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-1"
+        "foreground": "st-72"
       }
     },
     {
       "scope": "entity.other.attribute-name.class",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-8"
+        "foreground": "st-78"
       }
     },
     {
       "scope": "entity.other.attribute-name.id",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-4"
+        "foreground": "st-74"
       }
     },
     {
       "scope": "source.css entity.name.tag",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-8"
+        "foreground": "st-78"
       }
     },
     {
       "scope": "support.type.property-name.css",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-10"
+        "foreground": "st-80"
       }
     },
     {
       "scope": "meta.tag, punctuation.definition.tag",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-1"
+        "foreground": "st-72"
       }
     },
     {
       "scope": "entity.name.tag",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-7"
+        "foreground": "st-77"
       }
     },
     {
       "scope": "entity.other.attribute-name",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-6"
+        "foreground": "st-76"
       }
     },
     {
       "scope": "punctuation.definition.entity.html",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-2"
+        "foreground": "st-70"
       }
     },
     {
       "scope": "markup.heading",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-1"
+        "foreground": "st-72"
       }
     },
     {
       "scope": "text.html.markdown meta.link.inline, meta.link.reference",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-7"
+        "foreground": "st-77"
       }
     },
     {
       "scope": "text.html.markdown beginning.punctuation.definition.list",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-1"
+        "foreground": "st-72"
       }
     },
     {
       "scope": "markup.italic",
       "settings": {
-        "fontStyle": "--material-theme-palenight-fs-0",
-        "foreground": "--material-theme-palenight-fg-7"
+        "fontStyle": "st-83",
+        "foreground": "st-77"
       }
     },
     {
       "scope": "markup.bold",
       "settings": {
-        "fontStyle": "--material-theme-palenight-fs-1",
-        "foreground": "--material-theme-palenight-fg-7"
+        "fontStyle": "st-84",
+        "foreground": "st-77"
       }
     },
     {
       "scope": "markup.bold markup.italic, markup.italic markup.bold",
       "settings": {
-        "fontStyle": "--material-theme-palenight-fs-2",
-        "foreground": "--material-theme-palenight-fg-7"
+        "fontStyle": "st-85",
+        "foreground": "st-77"
       }
     },
     {
       "scope": "markup.fenced_code.block.markdown punctuation.definition.markdown",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-0"
+        "foreground": "st-71"
       }
     },
     {
       "scope": "markup.inline.raw.string.markdown",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-0"
+        "foreground": "st-71"
       }
     },
     {
       "scope": "keyword.other.definition.ini",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-7"
+        "foreground": "st-77"
       }
     },
     {
       "scope": "entity.name.section.group-title.ini",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-1"
+        "foreground": "st-72"
       }
     },
     {
       "scope": "source.cs meta.class.identifier storage.type",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-8"
+        "foreground": "st-78"
       }
     },
     {
       "scope": "source.cs meta.method.identifier entity.name.function",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-7"
+        "foreground": "st-77"
       }
     },
     {
       "scope": "source.cs meta.method-call meta.method, source.cs entity.name.function",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-5"
+        "foreground": "st-75"
       }
     },
     {
       "scope": "source.cs storage.type",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-8"
+        "foreground": "st-78"
       }
     },
     {
       "scope": "source.cs meta.method.return-type",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-8"
+        "foreground": "st-78"
       }
     },
     {
       "scope": "source.cs meta.preprocessor",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-9"
+        "foreground": "st-79"
       }
     },
     {
       "scope": "source.cs entity.name.type.namespace",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-2"
+        "foreground": "st-70"
       }
     },
     {
       "scope": "meta.jsx.children, SXNested",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-2"
+        "foreground": "st-70"
       }
     },
     {
       "scope": "support.class.component",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-8"
+        "foreground": "st-78"
       }
     },
     {
       "scope": "source.cpp meta.block variable.other",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-2"
+        "foreground": "st-70"
       }
     },
     {
       "scope": "source.python meta.member.access.python",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-7"
+        "foreground": "st-77"
       }
     },
     {
       "scope": "source.python meta.function-call.python, meta.function-call.arguments",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-5"
+        "foreground": "st-75"
       }
     },
     {
       "scope": "meta.block",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-7"
+        "foreground": "st-77"
       }
     },
     {
       "scope": "entity.name.function.call",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-5"
+        "foreground": "st-75"
       }
     },
     {
       "scope": "source.php support.other.namespace, source.php meta.use support.class",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-2"
+        "foreground": "st-70"
       }
     },
     {
       "scope": "constant.keyword",
       "settings": {
-        "fontStyle": "--material-theme-palenight-fs-0",
-        "foreground": "--material-theme-palenight-fg-1"
+        "fontStyle": "st-83",
+        "foreground": "st-72"
       }
     },
     {
       "scope": "entity.name.function",
       "settings": {
-        "foreground": "--material-theme-palenight-fg-5"
+        "foreground": "st-75"
       }
     },
     {
       "settings": {
-        "background": "--material-theme-palenight-background",
-        "foreground": "--material-theme-palenight-foreground"
+        "background": "st-bg",
+        "foreground": "st-fg"
       }
     },
     {
@@ -388,7 +388,7 @@
         "constant.other.placeholder"
       ],
       "settings": {
-        "foreground": "--material-theme-palenight-fg-7"
+        "foreground": "st-77"
       }
     },
     {
@@ -396,7 +396,7 @@
         "markup.deleted"
       ],
       "settings": {
-        "foreground": "--material-theme-palenight-fg-7"
+        "foreground": "st-77"
       }
     },
     {
@@ -404,7 +404,7 @@
         "markup.inserted"
       ],
       "settings": {
-        "foreground": "--material-theme-palenight-fg-0"
+        "foreground": "st-71"
       }
     },
     {
@@ -412,7 +412,7 @@
         "markup.underline"
       ],
       "settings": {
-        "fontStyle": "--material-theme-palenight-fs-3"
+        "fontStyle": "st-86"
       }
     },
     {
@@ -420,8 +420,8 @@
         "keyword.control"
       ],
       "settings": {
-        "fontStyle": "--material-theme-palenight-fs-0",
-        "foreground": "--material-theme-palenight-fg-1"
+        "fontStyle": "st-83",
+        "foreground": "st-72"
       }
     },
     {
@@ -429,7 +429,7 @@
         "variable.parameter"
       ],
       "settings": {
-        "fontStyle": "--material-theme-palenight-fs-0"
+        "fontStyle": "st-83"
       }
     },
     {
@@ -437,8 +437,8 @@
         "variable.parameter.function.language.special.self.python"
       ],
       "settings": {
-        "fontStyle": "--material-theme-palenight-fs-0",
-        "foreground": "--material-theme-palenight-fg-7"
+        "fontStyle": "st-83",
+        "foreground": "st-77"
       }
     },
     {
@@ -446,7 +446,7 @@
         "constant.character.format.placeholder.other.python"
       ],
       "settings": {
-        "foreground": "--material-theme-palenight-fg-4"
+        "foreground": "st-74"
       }
     },
     {
@@ -454,8 +454,8 @@
         "markup.quote"
       ],
       "settings": {
-        "fontStyle": "--material-theme-palenight-fs-0",
-        "foreground": "--material-theme-palenight-fg-1"
+        "fontStyle": "st-83",
+        "foreground": "st-72"
       }
     },
     {
@@ -463,7 +463,7 @@
         "markup.fenced_code.block"
       ],
       "settings": {
-        "foreground": "--material-theme-palenight-fg-11"
+        "foreground": "st-81"
       }
     },
     {
@@ -471,7 +471,7 @@
         "punctuation.definition.quote"
       ],
       "settings": {
-        "foreground": "--material-theme-palenight-fg-3"
+        "foreground": "st-73"
       }
     },
     {
@@ -479,7 +479,7 @@
         "meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "--material-theme-palenight-fg-6"
+        "foreground": "st-76"
       }
     },
     {
@@ -487,7 +487,7 @@
         "meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "--material-theme-palenight-fg-8"
+        "foreground": "st-78"
       }
     },
     {
@@ -495,7 +495,7 @@
         "meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "--material-theme-palenight-fg-4"
+        "foreground": "st-74"
       }
     },
     {
@@ -503,7 +503,7 @@
         "meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "--material-theme-palenight-fg-7"
+        "foreground": "st-77"
       }
     },
     {
@@ -511,7 +511,7 @@
         "meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "--material-theme-palenight-fg-12"
+        "foreground": "st-82"
       }
     },
     {
@@ -519,7 +519,7 @@
         "meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "--material-theme-palenight-fg-5"
+        "foreground": "st-75"
       }
     },
     {
@@ -527,7 +527,7 @@
         "meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "--material-theme-palenight-fg-3"
+        "foreground": "st-73"
       }
     },
     {
@@ -535,7 +535,7 @@
         "meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "--material-theme-palenight-fg-6"
+        "foreground": "st-76"
       }
     },
     {
@@ -543,7 +543,7 @@
         "meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "--material-theme-palenight-fg-0"
+        "foreground": "st-71"
       }
     }
   ]

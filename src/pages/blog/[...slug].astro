@@ -1,9 +1,10 @@
 ---
 import { getImage } from 'astro:assets'
-import { type CollectionEntry, getCollection } from 'astro:content'
+import { getCollection, type CollectionEntry } from 'astro:content'
 import ArrowLink, { DIRECTION } from '../../components/ArrowLink.astro'
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import { READABLE_FORMAT, blogCompareFn, getImageURL } from '../../lib/utils'
+import '../../styles/shikiThemesDynamicVariables.css'
 
 export const getStaticPaths = async () =>
   (await getCollection('blog')).map((entry) => ({

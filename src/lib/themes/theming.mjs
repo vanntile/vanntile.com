@@ -1,5 +1,5 @@
+import { readFile, readdir, stat, writeFile } from 'node:fs/promises'
 import { join } from 'node:path'
-import { stat, readdir, readFile, writeFile } from 'node:fs/promises'
 import { exit } from 'node:process'
 
 const getThemes = async (sourceDir = 'sources') => {
@@ -29,25 +29,37 @@ const getThemes = async (sourceDir = 'sources') => {
 
 const convertThemes = (themes = [], classPrefix = 'st') => {
   for (const theme of themes) {
-    const compiled = {}
-
-    const foregroundColors = new Set()
-    const fontStyles = new Set()
+    theme.foregroundColors = new Set()
+    theme.fontStyles = new Set()
     for (const x of theme.tokenColors) {
-      if (!x.scope) {
-        compiled.default = { ...x.settings }
-        continue
-      }
+      if (x.settings.foreground) theme.foregroundColors.add(x.settings.foreground)
+      if (x.settings.fontStyle) theme.fontStyles.add(x.settings.fontStyle)
+    }
+  }
 
-      if (x.settings.foreground) foregroundColors.add(x.settings.foreground)
-      if (x.settings.fontStyle) fontStyles.add(x.settings.fontStyle)
+  let styleIdx = 0
+  for (const theme of themes) {
+    const compiled = {
+      colorMap: new Map(),
+      styleMap: new Map(),
     }
 
-    compiled.colorMapping = new Map([...foregroundColors].map((x, i) => [x, `${theme.name}-fg-${i}`]))
-    compiled.styleMapping = new Map([...fontStyles].map((x, i) => [x, `${theme.name}-fs-${i}`]))
+    // use a single index for all output shiki variables
+    for (const x of [...theme.foregroundColors]) {
+      compiled.colorMap.set(x, styleIdx)
+      styleIdx += 1
+    }
+    for (const x of [...theme.fontStyles]) {
+      compiled.styleMap.set(x, styleIdx)
+      styleIdx += 1
+    }
 
     for (const x of theme.tokenColors) {
+      // debatably, this should be removed from output
       if (!x.scope) {
+        compiled.default = { ...x.settings }
+
+        // use a single class for foreground and background
         if (x.settings.background) {
           x.settings.background = `${classPrefix}-bg`
         }
@@ -58,10 +70,10 @@ const convertThemes = (themes = [], classPrefix = 'st') => {
       }
 
       if (x.settings.foreground) {
-        x.settings.foreground = `${classPrefix}-${compiled.colorMapping.get(x.settings.foreground)}`
+        x.settings.foreground = `${classPrefix}-${compiled.colorMap.get(x.settings.foreground)}`
       }
       if (x.settings.fontStyle) {
-        x.settings.fontStyle = `${classPrefix}-${compiled.styleMapping.get(x.settings.fontStyle)}`
+        x.settings.fontStyle = `${classPrefix}-${compiled.styleMap.get(x.settings.fontStyle)}`
       }
     }
 
@@ -92,21 +104,27 @@ const writeStylesheet = async (themes = [], file = 'shikiThemes.css', classPrefi
   try {
     const out = []
     for (const theme of themes) {
-      // default fg and background styles
+      out.push(`/*** ${theme.name} styles ***/`)
+
+      // default fg and bg styles from shiki
+      let background = theme.type === 'light' ? '#fffffe' : '#1e1e1e'
+      let foreground = theme.type === 'light' ? '#333333' : '#bbbbbb'
       if (theme.compiled.default) {
         if (theme.compiled.default.background) {
-          out.push(`.${theme.name} .${classPrefix}-bg {\n  background-color: ${theme.compiled.default.background};\n}`)
+          background = theme.compiled.default.background
         }
         if (theme.compiled.default.foreground) {
-          out.push(`.${theme.name} .${classPrefix}-fg {\n  color: ${theme.compiled.default.foreground};\n}`)
+          foreground = theme.compiled.default.foreground
         }
       }
+      out.push(`.${theme.name} .${classPrefix}-bg {\n  background-color: ${background};\n}`)
+      out.push(`.${theme.name} .${classPrefix}-fg {\n  color: ${foreground};\n}`)
 
       // classes using these variables
-      for (const [v, k] of theme.compiled.colorMapping.entries()) {
+      for (const [v, k] of theme.compiled.colorMap.entries()) {
         out.push(`.${theme.name} .${classPrefix}-${k} {\n  color: ${v};\n}`)
       }
-      for (const [v, k] of theme.compiled.styleMapping.entries()) {
+      for (const [v, k] of theme.compiled.styleMap.entries()) {
         out.push(`.${theme.name} .${classPrefix}-${k} {\n  font-style: ${v};\n}`)
       }
     }

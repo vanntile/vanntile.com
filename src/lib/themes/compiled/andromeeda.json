@@ -6,8 +6,8 @@
   "tokenColors": [
     {
       "settings": {
-        "background": "--andromeeda-background",
-        "foreground": "--andromeeda-foreground"
+        "background": "st-bg",
+        "foreground": "st-fg"
       }
     },
     {
@@ -18,7 +18,7 @@
         "meta.diff.header"
       ],
       "settings": {
-        "foreground": "--andromeeda-fg-0"
+        "foreground": "st-1"
       }
     },
     {
@@ -30,7 +30,7 @@
         "punctuation.definition.string.begin.markdown"
       ],
       "settings": {
-        "foreground": "--andromeeda-fg-1"
+        "foreground": "st-0"
       }
     },
     {
@@ -45,7 +45,7 @@
         "meta.structure.dictionary.json support.type.property-name"
       ],
       "settings": {
-        "foreground": "--andromeeda-fg-2"
+        "foreground": "st-2"
       }
     },
     {
@@ -66,7 +66,7 @@
         "variable.other.object.js"
       ],
       "settings": {
-        "foreground": "--andromeeda-fg-3"
+        "foreground": "st-3"
       }
     },
     {
@@ -88,7 +88,7 @@
         "text.xml punctuation.definition.string"
       ],
       "settings": {
-        "foreground": "--andromeeda-fg-4"
+        "foreground": "st-4"
       }
     },
     {
@@ -98,7 +98,7 @@
         "variable.language.special.self.python"
       ],
       "settings": {
-        "foreground": "--andromeeda-fg-5"
+        "foreground": "st-5"
       }
     },
     {
@@ -112,7 +112,7 @@
         "entity.name.tag"
       ],
       "settings": {
-        "foreground": "--andromeeda-fg-6"
+        "foreground": "st-6"
       }
     },
     {
@@ -125,7 +125,7 @@
         "source.js support.type"
       ],
       "settings": {
-        "foreground": "--andromeeda-fg-7"
+        "foreground": "st-7"
       }
     },
     {
@@ -134,7 +134,7 @@
         "markup.changed"
       ],
       "settings": {
-        "foreground": "--andromeeda-fg-8"
+        "foreground": "st-8"
       }
     },
     {
@@ -151,7 +151,7 @@
         "markup.deleted"
       ],
       "settings": {
-        "foreground": "--andromeeda-fg-9"
+        "foreground": "st-9"
       }
     },
     {
@@ -169,7 +169,7 @@
         "text.html string"
       ],
       "settings": {
-        "foreground": "--andromeeda-fg-10"
+        "foreground": "st-10"
       }
     },
     {
@@ -177,7 +177,7 @@
         "entity.other.inherited-class"
       ],
       "settings": {
-        "fontStyle": "--andromeeda-fs-0"
+        "fontStyle": "st-11"
       }
     }
   ]

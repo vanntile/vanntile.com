@@ -12,7 +12,7 @@
         "string.quoted.docstring"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-0"
+        "foreground": "st-104"
       }
     },
     {
@@ -24,7 +24,7 @@
         "text.html"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-1"
+        "foreground": "st-105"
       }
     },
     {
@@ -37,7 +37,7 @@
         "support.constant.json"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-2"
+        "foreground": "st-106"
       }
     },
     {
@@ -47,7 +47,7 @@
         "constant.language.null"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-3"
+        "foreground": "st-107"
       }
     },
     {
@@ -56,7 +56,7 @@
         "constant.other.php"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-2"
+        "foreground": "st-106"
       }
     },
     {
@@ -65,7 +65,7 @@
         "constant.other.color"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-4"
+        "foreground": "st-108"
       }
     },
     {
@@ -75,7 +75,7 @@
         "invalid.illegal"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-5"
+        "foreground": "st-109"
       }
     },
     {
@@ -84,7 +84,7 @@
         "invalid.deprecated"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-6"
+        "foreground": "st-110"
       }
     },
     {
@@ -96,7 +96,7 @@
         "keyword.other.important"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-6"
+        "foreground": "st-110"
       }
     },
     {
@@ -114,7 +114,7 @@
         "punctuation.section.embedded"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-7"
+        "foreground": "st-111"
       }
     },
     {
@@ -124,8 +124,8 @@
         "keyword.operator.rest"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-8",
-        "fontStyle": "--moonlight-ii-fs-0"
+        "foreground": "st-112",
+        "fontStyle": "st-125"
       }
     },
     {
@@ -154,7 +154,7 @@
         "keyword.other.substitution"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-7"
+        "foreground": "st-111"
       }
     },
     {
@@ -172,7 +172,7 @@
         "markup.deleted.git_gutter"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-8"
+        "foreground": "st-112"
       }
     },
     {
@@ -183,7 +183,7 @@
         "keyword.other.special-method"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-9"
+        "foreground": "st-113"
       }
     },
     {
@@ -193,7 +193,7 @@
         "meta.function-call entity.name.function"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-10"
+        "foreground": "st-114"
       }
     },
     {
@@ -202,7 +202,7 @@
         "source.cpp meta.block variable.other"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-8"
+        "foreground": "st-112"
       }
     },
     {
@@ -212,7 +212,7 @@
         "string.other.link"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-8"
+        "foreground": "st-112"
       }
     },
     {
@@ -228,7 +228,7 @@
         "keyword.other.unit"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-11"
+        "foreground": "st-115"
       }
     },
     {
@@ -241,7 +241,7 @@
         "constant.language.nan"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-12"
+        "foreground": "st-116"
       }
     },
     {
@@ -252,7 +252,7 @@
         "meta.function.parameter variable"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-13"
+        "foreground": "st-117"
       }
     },
     {
@@ -269,7 +269,7 @@
       ],
       "settings": {
         "fontStyle": "",
-        "foreground": "--moonlight-ii-fg-14"
+        "foreground": "st-118"
       }
     },
     {
@@ -278,7 +278,7 @@
         "variable.other.object"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-2"
+        "foreground": "st-106"
       }
     },
     {
@@ -292,7 +292,7 @@
         "variable.object.property"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-15"
+        "foreground": "st-119"
       }
     },
     {
@@ -302,7 +302,7 @@
         "variable.other.object.property"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-16"
+        "foreground": "st-120"
       }
     },
     {
@@ -313,7 +313,7 @@
         "support.variable.property.dom"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-16"
+        "foreground": "st-120"
       }
     },
     {
@@ -322,7 +322,7 @@
         "source.haskell constant.other.haskell"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-11"
+        "foreground": "st-115"
       }
     },
     {
@@ -331,7 +331,7 @@
         "source.haskell meta.import.haskell entity.name.namespace"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-1"
+        "foreground": "st-105"
       }
     },
     {
@@ -342,7 +342,7 @@
         "source.java storage.type"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-2"
+        "foreground": "st-106"
       }
     },
     {
@@ -351,7 +351,7 @@
         "storage.type.function"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-6"
+        "foreground": "st-110"
       }
     },
     {
@@ -367,7 +367,7 @@
         "support.type.sys-types"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-2"
+        "foreground": "st-106"
       }
     },
     {
@@ -376,7 +376,7 @@
         "support.type"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-12"
+        "foreground": "st-116"
       }
     },
     {
@@ -392,7 +392,7 @@
         "support.type.vendored.property-name"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-9"
+        "foreground": "st-113"
       }
     },
     {
@@ -403,7 +403,7 @@
         "variable.other.class.js"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-8"
+        "foreground": "st-112"
       }
     },
     {
@@ -412,7 +412,7 @@
         "variable.language"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-8"
+        "foreground": "st-112"
       }
     },
     {
@@ -421,7 +421,7 @@
         "entity.name.method.js"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-9"
+        "foreground": "st-113"
       }
     },
     {
@@ -431,7 +431,7 @@
         "variable.function.constructor"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-9"
+        "foreground": "st-113"
       }
     },
     {
@@ -440,7 +440,7 @@
         "entity.other.attribute-name"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-6"
+        "foreground": "st-110"
       }
     },
     {
@@ -450,7 +450,7 @@
         "text.html.basic entity.other.attribute-name"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-2"
+        "foreground": "st-106"
       }
     },
     {
@@ -460,7 +460,7 @@
         "meta.tag.metadata.doctype entity.other.attribute-name"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-6"
+        "foreground": "st-110"
       }
     },
     {
@@ -469,7 +469,7 @@
         "entity.other.attribute-name.class"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-2"
+        "foreground": "st-106"
       }
     },
     {
@@ -478,7 +478,7 @@
         "source.sass keyword.control"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-9"
+        "foreground": "st-113"
       }
     },
     {
@@ -488,7 +488,7 @@
         "entity.other.attribute-name.pseudo-element"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-15"
+        "foreground": "st-119"
       }
     },
     {
@@ -497,7 +497,7 @@
         "support.constant.property-value"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-13"
+        "foreground": "st-117"
       }
     },
     {
@@ -506,7 +506,7 @@
         "markup.inserted"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-14"
+        "foreground": "st-118"
       }
     },
     {
@@ -515,7 +515,7 @@
         "markup.deleted"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-8"
+        "foreground": "st-112"
       }
     },
     {
@@ -524,7 +524,7 @@
         "markup.changed"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-6"
+        "foreground": "st-110"
       }
     },
     {
@@ -533,7 +533,7 @@
         "string.regexp"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-17"
+        "foreground": "st-121"
       }
     },
     {
@@ -542,7 +542,7 @@
         "punctuation.definition.group"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-8"
+        "foreground": "st-112"
       }
     },
     {
@@ -552,7 +552,7 @@
         "keyword.control.anchor.regexp"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-6"
+        "foreground": "st-110"
       }
     },
     {
@@ -561,7 +561,7 @@
         "constant.other.character-class.set.regexp"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-2"
+        "foreground": "st-106"
       }
     },
     {
@@ -570,7 +570,7 @@
         "keyword.operator.quantifier.regexp"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-13"
+        "foreground": "st-117"
       }
     },
     {
@@ -579,7 +579,7 @@
         "constant.character.escape"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-7"
+        "foreground": "st-111"
       }
     },
     {
@@ -590,7 +590,7 @@
         "*uri*"
       ],
       "settings": {
-        "fontStyle": "--moonlight-ii-fs-1"
+        "fontStyle": "st-126"
       }
     },
     {
@@ -600,7 +600,7 @@
         "tag.decorator.js punctuation.definition.tag.js"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-9"
+        "foreground": "st-113"
       }
     },
     {
@@ -609,7 +609,7 @@
         "keyword.other.unit"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-18"
+        "foreground": "st-122"
       }
     },
     {
@@ -618,7 +618,7 @@
         "source.js constant.other.object.key.js string.unquoted.label.js"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-8"
+        "foreground": "st-112"
       }
     },
     {
@@ -627,7 +627,7 @@
         "source.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-9"
+        "foreground": "st-113"
       }
     },
     {
@@ -636,7 +636,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-10"
+        "foreground": "st-114"
       }
     },
     {
@@ -645,7 +645,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-8"
+        "foreground": "st-112"
       }
     },
     {
@@ -654,7 +654,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-13"
+        "foreground": "st-117"
       }
     },
     {
@@ -663,7 +663,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-2"
+        "foreground": "st-106"
       }
     },
     {
@@ -672,7 +672,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-15"
+        "foreground": "st-119"
       }
     },
     {
@@ -681,7 +681,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-9"
+        "foreground": "st-113"
       }
     },
     {
@@ -690,7 +690,7 @@
         "punctuation.definition.list_item.markdown"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-19"
+        "foreground": "st-123"
       }
     },
     {
@@ -703,7 +703,7 @@
         "punctuation.section.function"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-20"
+        "foreground": "st-124"
       }
     },
     {
@@ -713,7 +713,7 @@
         "meta.embedded.block"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-20"
+        "foreground": "st-124"
       }
     },
     {
@@ -722,7 +722,7 @@
         "text.html.markdown markup.inline.raw.markdown"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-6"
+        "foreground": "st-110"
       }
     },
     {
@@ -731,7 +731,7 @@
         "text.html.markdown markup.inline.raw.markdown punctuation.definition.raw.markdown"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-7"
+        "foreground": "st-111"
       }
     },
     {
@@ -742,7 +742,7 @@
         "markup.heading.markdown punctuation.definition.heading.markdown"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-7"
+        "foreground": "st-111"
       }
     },
     {
@@ -751,8 +751,8 @@
         "markup.italic"
       ],
       "settings": {
-        "fontStyle": "--moonlight-ii-fs-2",
-        "foreground": "--moonlight-ii-fg-8"
+        "fontStyle": "st-127",
+        "foreground": "st-112"
       }
     },
     {
@@ -762,8 +762,8 @@
         "markup.bold string"
       ],
       "settings": {
-        "fontStyle": "--moonlight-ii-fs-0",
-        "foreground": "--moonlight-ii-fg-8"
+        "fontStyle": "st-125",
+        "foreground": "st-112"
       }
     },
     {
@@ -777,8 +777,8 @@
         "markup.quote markup.bold string"
       ],
       "settings": {
-        "fontStyle": "--moonlight-ii-fs-0",
-        "foreground": "--moonlight-ii-fg-8"
+        "fontStyle": "st-125",
+        "foreground": "st-112"
       }
     },
     {
@@ -787,8 +787,8 @@
         "markup.underline"
       ],
       "settings": {
-        "fontStyle": "--moonlight-ii-fs-1",
-        "foreground": "--moonlight-ii-fg-12"
+        "fontStyle": "st-126",
+        "foreground": "st-116"
       }
     },
     {
@@ -797,7 +797,7 @@
         "markup.quote punctuation.definition.blockquote.markdown"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-7"
+        "foreground": "st-111"
       }
     },
     {
@@ -806,7 +806,7 @@
         "markup.quote"
       ],
       "settings": {
-        "fontStyle": "--moonlight-ii-fs-2"
+        "fontStyle": "st-127"
       }
     },
     {
@@ -815,7 +815,7 @@
         "string.other.link.title.markdown"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-9"
+        "foreground": "st-113"
       }
     },
     {
@@ -824,7 +824,7 @@
         "string.other.link.description.title.markdown"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-6"
+        "foreground": "st-110"
       }
     },
     {
@@ -833,7 +833,7 @@
         "constant.other.reference.link.markdown"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-2"
+        "foreground": "st-106"
       }
     },
     {
@@ -842,7 +842,7 @@
         "markup.raw.block"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-6"
+        "foreground": "st-110"
       }
     },
     {
@@ -852,7 +852,7 @@
         "markup.inline.raw.string.markdown"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-7"
+        "foreground": "st-111"
       }
     },
     {
@@ -861,7 +861,7 @@
         "variable.language.fenced.markdown"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-7"
+        "foreground": "st-111"
       }
     },
     {
@@ -870,8 +870,8 @@
         "meta.separator"
       ],
       "settings": {
-        "fontStyle": "--moonlight-ii-fs-0",
-        "foreground": "--moonlight-ii-fg-7"
+        "fontStyle": "st-125",
+        "foreground": "st-111"
       }
     },
     {
@@ -880,31 +880,31 @@
         "markup.table"
       ],
       "settings": {
-        "foreground": "--moonlight-ii-fg-19"
+        "foreground": "st-123"
       }
     },
     {
       "scope": "token.info-token",
       "settings": {
-        "foreground": "--moonlight-ii-fg-10"
+        "foreground": "st-114"
       }
     },
     {
       "scope": "token.warn-token",
       "settings": {
-        "foreground": "--moonlight-ii-fg-2"
+        "foreground": "st-106"
       }
     },
     {
       "scope": "token.error-token",
       "settings": {
-        "foreground": "--moonlight-ii-fg-8"
+        "foreground": "st-112"
       }
     },
     {
       "scope": "token.debug-token",
       "settings": {
-        "foreground": "--moonlight-ii-fg-6"
+        "foreground": "st-110"
       }
     }
   ]

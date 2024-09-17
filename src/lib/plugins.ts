@@ -1,7 +1,8 @@
 import type { RehypePlugin, RemarkPlugin } from '@astrojs/markdown-remark'
+import type { Element } from 'hast'
 import { toString } from 'mdast-util-to-string'
-import { visit } from 'unist-util-visit'
 import getReadingTime from 'reading-time'
+import { visit } from 'unist-util-visit'
 
 export function remarkReadingTime(): RemarkPlugin {
   return function (tree, { data }: any) {
@@ -12,34 +13,45 @@ export function remarkReadingTime(): RemarkPlugin {
   }
 }
 
-export function rehypeShikiStylesToClasses(
-  options = { stylePrefix: '', classPrefix: '', hardcodedStyles: [] },
-): RehypePlugin {
-  const colorPrefix = `color:${options.stylePrefix}`
-  const fontStylePrefix = `fontStyle:${options.stylePrefix}`
-  const hardcodedStyles = new Map<string, string>(options.hardcodedStyles)
-
+export function rehypeShikiStylesToClasses({
+  classPrefix = '',
+  themeNames = [],
+}: {
+  classPrefix?: string
+  themeNames?: string[]
+}): RehypePlugin {
   return (tree) => {
-    visit(tree, 'element', (node, index, parent) => {
-      const isInsideLine = parent.tagName === 'span' && parent.properties['data-line'] == ''
-      const isSpan = node.tagName === 'span'
-      const style = node.properties.style
+    visit(tree, 'element', (node: Element, _index, parent: Element) => {
+      // remove classes of all themes from the pre element (why are they even there?)
+      // add classes for styles
+      if (
+        node.tagName === 'pre' &&
+        themeNames.length > 0 &&
+        Array.isArray(node.properties.className) &&
+        node.properties.className.length > 0
+      ) {
+        if ((node.properties.className as string[]).some((x: string) => themeNames.includes(x))) {
+          node.properties.className = 'st-fg st-bg'
+          node.properties.style = undefined
+        }
 
-      if (isInsideLine && isSpan && style != undefined) {
-        const className: string[] = []
+        return
+      }
 
-        style.split('; ').forEach((k: string) => {
-          if (k.endsWith('-fs')) console.log(k)
-          if (k.startsWith(colorPrefix)) {
-            className.push(`${options.classPrefix}${k.slice(colorPrefix.length)}`)
-          } else if (k.startsWith(fontStylePrefix)) {
-            className.push(`${options.classPrefix}${k.slice(fontStylePrefix.length)}`)
-          } else if (hardcodedStyles.has(k)) {
-            className.push(hardcodedStyles.get(k) as string)
-          }
-        })
+      // all spans with styles inside data-lines
+      if (node.tagName !== 'span') return
+      if (node.properties.style == undefined || typeof node.properties.style != 'string') return
+      if (parent.tagName !== 'span' || parent.properties['data-line'] != '') return
 
-        node.properties = { className }
+      // turn known styles into theme-specific classes
+      node.properties = {
+        className: node.properties.style
+          .split(';')
+          .map((mapping: string) => {
+            let color = mapping.split(':')[1]
+            return color.startsWith(classPrefix) ? color : undefined // probably over-cautious check
+          })
+          .filter((x?: string) => x != undefined) as string[],
       }
     })
   }

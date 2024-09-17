@@ -2,7 +2,6 @@
 import { type CollectionEntry, getCollection } from 'astro:content'
 import Navigation from '../components/Navigation.astro'
 import '../styles/global.css'
-import '../styles/shikiThemesDynamicVariables.css'
 
 interface Props {
   frontmatter: CollectionEntry<'blog'>['data']
@@ -20,7 +19,7 @@ const socialMedia = (await getCollection('icons'))
   .sort((a, b) => a.data.index - b.data.index)
 ---
 
-<html lang="en">
+<html lang="en" class="moonlight-ii">
   <head>
     <title>{title}</title>
     <meta charset="utf-8" />

@@ -14,8 +14,8 @@
         "string.quoted.docstring punctuation.definition.string"
       ],
       "settings": {
-        "fontStyle": "--my-eyes-please-fs-0",
-        "foreground": "--my-eyes-please-fg-0"
+        "fontStyle": "st-161",
+        "foreground": "st-128"
       }
     },
     {
@@ -26,8 +26,8 @@
         "punctuation.definition.block.tag"
       ],
       "settings": {
-        "fontStyle": "--my-eyes-please-fs-1",
-        "foreground": "--my-eyes-please-fg-0"
+        "fontStyle": "st-162",
+        "foreground": "st-128"
       }
     },
     {
@@ -43,7 +43,7 @@
         "meta.package punctuation.terminator"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-1"
+        "foreground": "st-129"
       }
     },
     {
@@ -55,7 +55,7 @@
         "meta.method.body.java"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-2"
+        "foreground": "st-130"
       }
     },
     {
@@ -64,7 +64,7 @@
         "constant.other.color"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-3"
+        "foreground": "st-131"
       }
     },
     {
@@ -74,7 +74,7 @@
         "invalid.illegal"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-4"
+        "foreground": "st-132"
       }
     },
     {
@@ -84,7 +84,7 @@
         "storage.type.class"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-5"
+        "foreground": "st-133"
       }
     },
     {
@@ -93,7 +93,7 @@
         "keyword.operator"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-5"
+        "foreground": "st-133"
       }
     },
     {
@@ -102,7 +102,7 @@
         "storage.type"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-5"
+        "foreground": "st-133"
       }
     },
     {
@@ -111,7 +111,7 @@
         "storage.modifier"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-5"
+        "foreground": "st-133"
       }
     },
     {
@@ -130,7 +130,7 @@
         "keyword.other.substitution"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-6"
+        "foreground": "st-134"
       }
     },
     {
@@ -141,7 +141,7 @@
         "markup.deleted.git_gutter"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-5"
+        "foreground": "st-133"
       }
     },
     {
@@ -162,7 +162,7 @@
         "support.type.sys-types"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-7"
+        "foreground": "st-135"
       }
     },
     {
@@ -171,7 +171,7 @@
         "meta.block variable.other"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-2"
+        "foreground": "st-130"
       }
     },
     {
@@ -181,7 +181,7 @@
         "string.other.link"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-8"
+        "foreground": "st-136"
       }
     },
     {
@@ -194,7 +194,7 @@
         "constant.escape"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-9"
+        "foreground": "st-137"
       }
     },
     {
@@ -205,7 +205,7 @@
         "keyword.other"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-10"
+        "foreground": "st-138"
       }
     },
     {
@@ -219,7 +219,7 @@
         "meta.group.braces.curly constant.other.object.key.js string.unquoted.label.js"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-11"
+        "foreground": "st-139"
       }
     },
     {
@@ -228,7 +228,7 @@
         "punctuation.definition.string"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-12"
+        "foreground": "st-140"
       }
     },
     {
@@ -237,7 +237,7 @@
         "support.type"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-13"
+        "foreground": "st-141"
       }
     },
     {
@@ -251,7 +251,7 @@
         "source.postcss support.type.property-name"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-2"
+        "foreground": "st-130"
       }
     },
     {
@@ -262,7 +262,7 @@
         "variable.other.class.js"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-4"
+        "foreground": "st-132"
       }
     },
     {
@@ -271,7 +271,7 @@
         "variable.language"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-14"
+        "foreground": "st-142"
       }
     },
     {
@@ -280,7 +280,7 @@
         "entity.name.method.js"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-15"
+        "foreground": "st-143"
       }
     },
     {
@@ -290,7 +290,7 @@
         "variable.function.constructor"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-15"
+        "foreground": "st-143"
       }
     },
     {
@@ -301,7 +301,7 @@
         "support.type.property-name"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-2"
+        "foreground": "st-130"
       }
     },
     {
@@ -312,7 +312,7 @@
         "keyword.control.at-rule.media punctuation.definition.keyword"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-5"
+        "foreground": "st-133"
       }
     },
     {
@@ -325,7 +325,7 @@
         "entity.other.attribute-name.class punctuation.definition.entity.css"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-16"
+        "foreground": "st-144"
       }
     },
     {
@@ -334,7 +334,7 @@
         "markup.inserted"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-17"
+        "foreground": "st-145"
       }
     },
     {
@@ -343,7 +343,7 @@
         "markup.deleted"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-4"
+        "foreground": "st-132"
       }
     },
     {
@@ -352,7 +352,7 @@
         "markup.changed"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-13"
+        "foreground": "st-141"
       }
     },
     {
@@ -361,7 +361,7 @@
         "string.regexp"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-18"
+        "foreground": "st-146"
       }
     },
     {
@@ -370,7 +370,7 @@
         "constant.character.escape"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-18"
+        "foreground": "st-146"
       }
     },
     {
@@ -381,7 +381,7 @@
         "*uri*"
       ],
       "settings": {
-        "fontStyle": "--my-eyes-please-fs-2"
+        "fontStyle": "st-163"
       }
     },
     {
@@ -391,7 +391,7 @@
         "tag.decorator.js punctuation.definition.tag.js"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-15"
+        "foreground": "st-143"
       }
     },
     {
@@ -415,7 +415,7 @@
         "punctuation.section.function.end.bracket"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-19"
+        "foreground": "st-147"
       }
     },
     {
@@ -436,7 +436,7 @@
         "keyword.control.ternary"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-20"
+        "foreground": "st-148"
       }
     },
     {
@@ -445,7 +445,7 @@
         "source.js constant.other.object.key.js string.unquoted.label.js"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-4"
+        "foreground": "st-132"
       }
     },
     {
@@ -454,7 +454,7 @@
         "source.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-21"
+        "foreground": "st-149"
       }
     },
     {
@@ -463,7 +463,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-5"
+        "foreground": "st-133"
       }
     },
     {
@@ -472,7 +472,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-10"
+        "foreground": "st-138"
       }
     },
     {
@@ -481,7 +481,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-22"
+        "foreground": "st-150"
       }
     },
     {
@@ -490,7 +490,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-23"
+        "foreground": "st-151"
       }
     },
     {
@@ -499,7 +499,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-24"
+        "foreground": "st-152"
       }
     },
     {
@@ -508,7 +508,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-25"
+        "foreground": "st-153"
       }
     },
     {
@@ -517,7 +517,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-13"
+        "foreground": "st-141"
       }
     },
     {
@@ -526,7 +526,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-26"
+        "foreground": "st-154"
       }
     },
     {
@@ -536,7 +536,7 @@
         "punctuation.definition.list_item.markdown"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-27"
+        "foreground": "st-155"
       }
     },
     {
@@ -545,7 +545,7 @@
         "text.html.markdown markup.inline.raw.markdown"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-13"
+        "foreground": "st-141"
       }
     },
     {
@@ -554,7 +554,7 @@
         "text.html.markdown markup.inline.raw.markdown punctuation.definition.raw.markdown"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-28"
+        "foreground": "st-156"
       }
     },
     {
@@ -566,7 +566,7 @@
         "markup.heading.markdown punctuation.definition.heading.markdown"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-5"
+        "foreground": "st-133"
       }
     },
     {
@@ -575,8 +575,8 @@
         "markup.italic"
       ],
       "settings": {
-        "fontStyle": "--my-eyes-please-fs-0",
-        "foreground": "--my-eyes-please-fg-8"
+        "fontStyle": "st-161",
+        "foreground": "st-136"
       }
     },
     {
@@ -586,8 +586,8 @@
         "markup.bold string"
       ],
       "settings": {
-        "fontStyle": "--my-eyes-please-fs-3",
-        "foreground": "--my-eyes-please-fg-8"
+        "fontStyle": "st-164",
+        "foreground": "st-136"
       }
     },
     {
@@ -601,8 +601,8 @@
         "markup.quote markup.bold string"
       ],
       "settings": {
-        "fontStyle": "--my-eyes-please-fs-3",
-        "foreground": "--my-eyes-please-fg-8"
+        "fontStyle": "st-164",
+        "foreground": "st-136"
       }
     },
     {
@@ -611,8 +611,8 @@
         "markup.underline"
       ],
       "settings": {
-        "fontStyle": "--my-eyes-please-fs-2",
-        "foreground": "--my-eyes-please-fg-29"
+        "fontStyle": "st-163",
+        "foreground": "st-157"
       }
     },
     {
@@ -621,7 +621,7 @@
         "markup.quote punctuation.definition.blockquote.markdown"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-28"
+        "foreground": "st-156"
       }
     },
     {
@@ -630,7 +630,7 @@
         "markup.quote"
       ],
       "settings": {
-        "fontStyle": "--my-eyes-please-fs-0"
+        "fontStyle": "st-161"
       }
     },
     {
@@ -639,7 +639,7 @@
         "string.other.link.title.markdown"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-30"
+        "foreground": "st-158"
       }
     },
     {
@@ -648,7 +648,7 @@
         "string.other.link.description.title.markdown"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-13"
+        "foreground": "st-141"
       }
     },
     {
@@ -657,7 +657,7 @@
         "constant.other.reference.link.markdown"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-31"
+        "foreground": "st-159"
       }
     },
     {
@@ -666,7 +666,7 @@
         "markup.raw.block"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-13"
+        "foreground": "st-141"
       }
     },
     {
@@ -675,7 +675,7 @@
         "markup.raw.block.fenced.markdown"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-32"
+        "foreground": "st-160"
       }
     },
     {
@@ -684,7 +684,7 @@
         "punctuation.definition.fenced.markdown"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-32"
+        "foreground": "st-160"
       }
     },
     {
@@ -695,7 +695,7 @@
         "punctuation.section.class.end"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-27"
+        "foreground": "st-155"
       }
     },
     {
@@ -704,7 +704,7 @@
         "variable.language.fenced.markdown"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-28"
+        "foreground": "st-156"
       }
     },
     {
@@ -713,8 +713,8 @@
         "meta.separator"
       ],
       "settings": {
-        "fontStyle": "--my-eyes-please-fs-3",
-        "foreground": "--my-eyes-please-fg-28"
+        "fontStyle": "st-164",
+        "foreground": "st-156"
       }
     },
     {
@@ -723,7 +723,7 @@
         "markup.table"
       ],
       "settings": {
-        "foreground": "--my-eyes-please-fg-27"
+        "foreground": "st-155"
       }
     }
   ]

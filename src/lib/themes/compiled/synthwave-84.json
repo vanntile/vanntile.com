@@ -12,8 +12,8 @@
         "string.quoted.docstring.multi.python punctuation.definition.string.end.python"
       ],
       "settings": {
-        "fontStyle": "--synthwave-84-fs-0",
-        "foreground": "--synthwave-84-fg-0"
+        "fontStyle": "st-236",
+        "foreground": "st-221"
       }
     },
     {
@@ -23,13 +23,13 @@
         "punctuation.definition.string"
       ],
       "settings": {
-        "foreground": "--synthwave-84-fg-1"
+        "foreground": "st-222"
       }
     },
     {
       "scope": "string.template meta.embedded.line",
       "settings": {
-        "foreground": "--synthwave-84-fg-2"
+        "foreground": "st-223"
       }
     },
     {
@@ -38,20 +38,20 @@
         "entity.name.variable"
       ],
       "settings": {
-        "foreground": "--synthwave-84-fg-3"
+        "foreground": "st-224"
       }
     },
     {
       "scope": "variable.language",
       "settings": {
-        "fontStyle": "--synthwave-84-fs-1",
-        "foreground": "--synthwave-84-fg-4"
+        "fontStyle": "st-237",
+        "foreground": "st-225"
       }
     },
     {
       "scope": "variable.parameter",
       "settings": {
-        "fontStyle": "--synthwave-84-fs-0"
+        "fontStyle": "st-236"
       }
     },
     {
@@ -60,49 +60,49 @@
         "storage.modifier"
       ],
       "settings": {
-        "foreground": "--synthwave-84-fg-5"
+        "foreground": "st-226"
       }
     },
     {
       "scope": "constant",
       "settings": {
-        "foreground": "--synthwave-84-fg-6"
+        "foreground": "st-227"
       }
     },
     {
       "scope": "string.regexp",
       "settings": {
-        "foreground": "--synthwave-84-fg-6"
+        "foreground": "st-227"
       }
     },
     {
       "scope": "constant.numeric",
       "settings": {
-        "foreground": "--synthwave-84-fg-6"
+        "foreground": "st-227"
       }
     },
     {
       "scope": "constant.language",
       "settings": {
-        "foreground": "--synthwave-84-fg-6"
+        "foreground": "st-227"
       }
     },
     {
       "scope": "constant.character.escape",
       "settings": {
-        "foreground": "--synthwave-84-fg-7"
+        "foreground": "st-228"
       }
     },
     {
       "scope": "entity.name",
       "settings": {
-        "foreground": "--synthwave-84-fg-4"
+        "foreground": "st-225"
       }
     },
     {
       "scope": "entity.name.tag",
       "settings": {
-        "foreground": "--synthwave-84-fg-8"
+        "foreground": "st-229"
       }
     },
     {
@@ -110,20 +110,20 @@
         "punctuation.definition.tag"
       ],
       "settings": {
-        "foreground": "--synthwave-84-fg-7"
+        "foreground": "st-228"
       }
     },
     {
       "scope": "entity.other.attribute-name",
       "settings": {
-        "foreground": "--synthwave-84-fg-5"
+        "foreground": "st-226"
       }
     },
     {
       "scope": "entity.other.attribute-name.html",
       "settings": {
-        "fontStyle": "--synthwave-84-fs-0",
-        "foreground": "--synthwave-84-fg-5"
+        "fontStyle": "st-236",
+        "foreground": "st-226"
       }
     },
     {
@@ -132,13 +132,13 @@
         "meta.attribute.class.html"
       ],
       "settings": {
-        "foreground": "--synthwave-84-fg-4"
+        "foreground": "st-225"
       }
     },
     {
       "scope": "entity.other.inherited-class",
       "settings": {
-        "foreground": "--synthwave-84-fg-9"
+        "foreground": "st-230"
       }
     },
     {
@@ -147,7 +147,7 @@
         "variable.function"
       ],
       "settings": {
-        "foreground": "--synthwave-84-fg-7"
+        "foreground": "st-228"
       }
     },
     {
@@ -156,7 +156,7 @@
         "keyword.control.import.js"
       ],
       "settings": {
-        "foreground": "--synthwave-84-fg-8"
+        "foreground": "st-229"
       }
     },
     {
@@ -164,25 +164,25 @@
         "constant.numeric.decimal.js"
       ],
       "settings": {
-        "foreground": "--synthwave-84-fg-10"
+        "foreground": "st-231"
       }
     },
     {
       "scope": "keyword",
       "settings": {
-        "foreground": "--synthwave-84-fg-5"
+        "foreground": "st-226"
       }
     },
     {
       "scope": "keyword.control",
       "settings": {
-        "foreground": "--synthwave-84-fg-5"
+        "foreground": "st-226"
       }
     },
     {
       "scope": "keyword.operator",
       "settings": {
-        "foreground": "--synthwave-84-fg-5"
+        "foreground": "st-226"
       }
     },
     {
@@ -192,31 +192,31 @@
         "keyword.operator.logical"
       ],
       "settings": {
-        "foreground": "--synthwave-84-fg-5"
+        "foreground": "st-226"
       }
     },
     {
       "scope": "keyword.other.unit",
       "settings": {
-        "foreground": "--synthwave-84-fg-6"
+        "foreground": "st-227"
       }
     },
     {
       "scope": "support",
       "settings": {
-        "foreground": "--synthwave-84-fg-4"
+        "foreground": "st-225"
       }
     },
     {
       "scope": "support.function",
       "settings": {
-        "foreground": "--synthwave-84-fg-7"
+        "foreground": "st-228"
       }
     },
     {
       "scope": "support.variable",
       "settings": {
-        "foreground": "--synthwave-84-fg-3"
+        "foreground": "st-224"
       }
     },
     {
@@ -225,19 +225,19 @@
         "support.type.property-name"
       ],
       "settings": {
-        "foreground": "--synthwave-84-fg-3"
+        "foreground": "st-224"
       }
     },
     {
       "scope": "punctuation.separator.key-value",
       "settings": {
-        "foreground": "--synthwave-84-fg-2"
+        "foreground": "st-223"
       }
     },
     {
       "scope": "punctuation.section.embedded",
       "settings": {
-        "foreground": "--synthwave-84-fg-5"
+        "foreground": "st-226"
       }
     },
     {
@@ -246,7 +246,7 @@
         "punctuation.definition.template-expression.end"
       ],
       "settings": {
-        "foreground": "--synthwave-84-fg-8"
+        "foreground": "st-229"
       }
     },
     {
@@ -255,37 +255,37 @@
         "support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "--synthwave-84-fg-8"
+        "foreground": "st-229"
       }
     },
     {
       "scope": "switch-block.expr.js",
       "settings": {
-        "foreground": "--synthwave-84-fg-8"
+        "foreground": "st-229"
       }
     },
     {
       "scope": "variable.other.constant.property.js, variable.other.property.js",
       "settings": {
-        "foreground": "--synthwave-84-fg-11"
+        "foreground": "st-232"
       }
     },
     {
       "scope": "constant.other.color",
       "settings": {
-        "foreground": "--synthwave-84-fg-6"
+        "foreground": "st-227"
       }
     },
     {
       "scope": "support.constant.font-name",
       "settings": {
-        "foreground": "--synthwave-84-fg-6"
+        "foreground": "st-227"
       }
     },
     {
       "scope": "entity.other.attribute-name.id",
       "settings": {
-        "foreground": "--synthwave-84-fg-7"
+        "foreground": "st-228"
       }
     },
     {
@@ -294,13 +294,13 @@
         "entity.other.attribute-name.pseudo-class"
       ],
       "settings": {
-        "foreground": "--synthwave-84-fg-9"
+        "foreground": "st-230"
       }
     },
     {
       "scope": "support.function.misc.css",
       "settings": {
-        "foreground": "--synthwave-84-fg-4"
+        "foreground": "st-225"
       }
     },
     {
@@ -309,7 +309,7 @@
         "entity.name.section"
       ],
       "settings": {
-        "foreground": "--synthwave-84-fg-3"
+        "foreground": "st-224"
       }
     },
     {
@@ -318,56 +318,56 @@
         "keyword.operator.assignment"
       ],
       "settings": {
-        "foreground": "--synthwave-84-fg-12"
+        "foreground": "st-233"
       }
     },
     {
       "scope": "markup.quote",
       "settings": {
-        "fontStyle": "--synthwave-84-fs-0",
-        "foreground": "--synthwave-84-fg-13"
+        "fontStyle": "st-236",
+        "foreground": "st-234"
       }
     },
     {
       "scope": "beginning.punctuation.definition.list",
       "settings": {
-        "foreground": "--synthwave-84-fg-3"
+        "foreground": "st-224"
       }
     },
     {
       "scope": "markup.underline.link",
       "settings": {
-        "foreground": "--synthwave-84-fg-9"
+        "foreground": "st-230"
       }
     },
     {
       "scope": "string.other.link.description",
       "settings": {
-        "foreground": "--synthwave-84-fg-6"
+        "foreground": "st-227"
       }
     },
     {
       "scope": "meta.function-call.generic.python",
       "settings": {
-        "foreground": "--synthwave-84-fg-7"
+        "foreground": "st-228"
       }
     },
     {
       "scope": "variable.parameter.function-call.python",
       "settings": {
-        "foreground": "--synthwave-84-fg-8"
+        "foreground": "st-229"
       }
     },
     {
       "scope": "storage.type.cs",
       "settings": {
-        "foreground": "--synthwave-84-fg-4"
+        "foreground": "st-225"
       }
     },
     {
       "scope": "entity.name.variable.local.cs",
       "settings": {
-        "foreground": "--synthwave-84-fg-3"
+        "foreground": "st-224"
       }
     },
     {
@@ -376,14 +376,14 @@
         "entity.name.variable.property.cs"
       ],
       "settings": {
-        "foreground": "--synthwave-84-fg-3"
+        "foreground": "st-224"
       }
     },
     {
       "scope": "constant.other.placeholder.c",
       "settings": {
-        "fontStyle": "--synthwave-84-fs-0",
-        "foreground": "--synthwave-84-fg-8"
+        "fontStyle": "st-236",
+        "foreground": "st-229"
       }
     },
     {
@@ -392,26 +392,26 @@
         "keyword.control.directive.define.c"
       ],
       "settings": {
-        "foreground": "--synthwave-84-fg-8"
+        "foreground": "st-229"
       }
     },
     {
       "scope": "storage.modifier.c",
       "settings": {
-        "foreground": "--synthwave-84-fg-4"
+        "foreground": "st-225"
       }
     },
     {
       "scope": "source.cpp keyword.operator",
       "settings": {
-        "foreground": "--synthwave-84-fg-5"
+        "foreground": "st-226"
       }
     },
     {
       "scope": "constant.other.placeholder.cpp",
       "settings": {
-        "fontStyle": "--synthwave-84-fs-0",
-        "foreground": "--synthwave-84-fg-8"
+        "fontStyle": "st-236",
+        "foreground": "st-229"
       }
     },
     {
@@ -420,13 +420,13 @@
         "keyword.control.directive.define.cpp"
       ],
       "settings": {
-        "foreground": "--synthwave-84-fg-8"
+        "foreground": "st-229"
       }
     },
     {
       "scope": "storage.modifier.specifier.const.cpp",
       "settings": {
-        "foreground": "--synthwave-84-fg-4"
+        "foreground": "st-225"
       }
     },
     {
@@ -435,13 +435,13 @@
         "source.elixir meta.module.elixir entity.name.class.elixir"
       ],
       "settings": {
-        "foreground": "--synthwave-84-fg-7"
+        "foreground": "st-228"
       }
     },
     {
       "scope": "source.elixir entity.name.function",
       "settings": {
-        "foreground": "--synthwave-84-fg-8"
+        "foreground": "st-229"
       }
     },
     {
@@ -450,13 +450,13 @@
         "source.elixir constant.other.keywords.elixir"
       ],
       "settings": {
-        "foreground": "--synthwave-84-fg-7"
+        "foreground": "st-228"
       }
     },
     {
       "scope": "source.elixir punctuation.definition.string",
       "settings": {
-        "foreground": "--synthwave-84-fg-8"
+        "foreground": "st-229"
       }
     },
     {
@@ -465,14 +465,14 @@
         "source.elixir variable.other.readwrite.module.elixir punctuation.definition.variable.elixir"
       ],
       "settings": {
-        "foreground": "--synthwave-84-fg-8"
+        "foreground": "st-229"
       }
     },
     {
       "scope": "source.elixir .punctuation.binary.elixir",
       "settings": {
-        "fontStyle": "--synthwave-84-fs-0",
-        "foreground": "--synthwave-84-fg-3"
+        "fontStyle": "st-236",
+        "foreground": "st-224"
       }
     },
     {
@@ -480,8 +480,8 @@
         "entity.global.clojure"
       ],
       "settings": {
-        "fontStyle": "--synthwave-84-fs-1",
-        "foreground": "--synthwave-84-fg-7"
+        "fontStyle": "st-237",
+        "foreground": "st-228"
       }
     },
     {
@@ -489,8 +489,8 @@
         "storage.control.clojure"
       ],
       "settings": {
-        "fontStyle": "--synthwave-84-fs-0",
-        "foreground": "--synthwave-84-fg-7"
+        "fontStyle": "st-236",
+        "foreground": "st-228"
       }
     },
     {
@@ -499,8 +499,8 @@
         "meta.metadata.map.clojure"
       ],
       "settings": {
-        "fontStyle": "--synthwave-84-fs-0",
-        "foreground": "--synthwave-84-fg-4"
+        "fontStyle": "st-236",
+        "foreground": "st-225"
       }
     },
     {
@@ -508,7 +508,7 @@
         "meta.quoted-expression.clojure"
       ],
       "settings": {
-        "fontStyle": "--synthwave-84-fs-0"
+        "fontStyle": "st-236"
       }
     },
     {
@@ -516,19 +516,19 @@
         "meta.symbol.clojure"
       ],
       "settings": {
-        "foreground": "--synthwave-84-fg-14"
+        "foreground": "st-235"
       }
     },
     {
       "scope": "source.go",
       "settings": {
-        "foreground": "--synthwave-84-fg-14"
+        "foreground": "st-235"
       }
     },
     {
       "scope": "source.go meta.function-call.go",
       "settings": {
-        "foreground": "--synthwave-84-fg-7"
+        "foreground": "st-228"
       }
     },
     {
@@ -544,7 +544,7 @@
         "source.go keyword.control.go"
       ],
       "settings": {
-        "foreground": "--synthwave-84-fg-5"
+        "foreground": "st-226"
       }
     },
     {
@@ -554,7 +554,7 @@
         "source.go keyword.interface.go"
       ],
       "settings": {
-        "foreground": "--synthwave-84-fg-8"
+        "foreground": "st-229"
       }
     },
     {
@@ -564,7 +564,7 @@
         "source.go variable"
       ],
       "settings": {
-        "foreground": "--synthwave-84-fg-10"
+        "foreground": "st-231"
       }
     },
     {
@@ -573,8 +573,8 @@
         "markup.inline.raw.string.markdown"
       ],
       "settings": {
-        "fontStyle": "--synthwave-84-fs-0",
-        "foreground": "--synthwave-84-fg-8"
+        "fontStyle": "st-236",
+        "foreground": "st-229"
       }
     },
     {
@@ -582,7 +582,7 @@
         "string.other.link.title.markdown"
       ],
       "settings": {
-        "foreground": "--synthwave-84-fg-5"
+        "foreground": "st-226"
       }
     },
     {
@@ -591,8 +591,8 @@
         "entity.name.section.markdown"
       ],
       "settings": {
-        "fontStyle": "--synthwave-84-fs-1",
-        "foreground": "--synthwave-84-fg-3"
+        "fontStyle": "st-237",
+        "foreground": "st-224"
       }
     },
     {
@@ -600,8 +600,8 @@
         "markup.italic.markdown"
       ],
       "settings": {
-        "fontStyle": "--synthwave-84-fs-0",
-        "foreground": "--synthwave-84-fg-10"
+        "fontStyle": "st-236",
+        "foreground": "st-231"
       }
     },
     {
@@ -609,8 +609,8 @@
         "markup.bold.markdown"
       ],
       "settings": {
-        "fontStyle": "--synthwave-84-fs-1",
-        "foreground": "--synthwave-84-fg-10"
+        "fontStyle": "st-237",
+        "foreground": "st-231"
       }
     },
     {
@@ -619,7 +619,7 @@
         "markup.quote.markdown"
       ],
       "settings": {
-        "foreground": "--synthwave-84-fg-8"
+        "foreground": "st-229"
       }
     },
     {
@@ -629,7 +629,7 @@
         "source.scala"
       ],
       "settings": {
-        "foreground": "--synthwave-84-fg-14"
+        "foreground": "st-235"
       }
     },
     {
@@ -637,7 +637,7 @@
         "string.interpolated.single.dart"
       ],
       "settings": {
-        "foreground": "--synthwave-84-fg-6"
+        "foreground": "st-227"
       }
     },
     {
@@ -645,7 +645,7 @@
         "variable.parameter.dart"
       ],
       "settings": {
-        "foreground": "--synthwave-84-fg-8"
+        "foreground": "st-229"
       }
     },
     {
@@ -653,7 +653,7 @@
         "constant.numeric.dart"
       ],
       "settings": {
-        "foreground": "--synthwave-84-fg-10"
+        "foreground": "st-231"
       }
     },
     {
@@ -661,7 +661,7 @@
         "variable.parameter.scala"
       ],
       "settings": {
-        "foreground": "--synthwave-84-fg-10"
+        "foreground": "st-231"
       }
     },
     {
@@ -669,7 +669,7 @@
         "meta.template.expression.scala"
       ],
       "settings": {
-        "foreground": "--synthwave-84-fg-8"
+        "foreground": "st-229"
       }
     }
   ]
