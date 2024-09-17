@@ -27,7 +27,7 @@ const getThemes = async (sourceDir = 'sources') => {
   }
 }
 
-const convertThemes = (themes = []) => {
+const convertThemes = (themes = [], classPrefix = 'st') => {
   for (const theme of themes) {
     const compiled = {}
 
@@ -43,22 +43,26 @@ const convertThemes = (themes = []) => {
       if (x.settings.fontStyle) fontStyles.add(x.settings.fontStyle)
     }
 
-    compiled.colorMapping = new Map([...foregroundColors].map((x, i) => [x, `--${theme.name}-fg-${i}`]))
-    compiled.styleMapping = new Map([...fontStyles].map((x, i) => [x, `--${theme.name}-fs-${i}`]))
+    compiled.colorMapping = new Map([...foregroundColors].map((x, i) => [x, `${theme.name}-fg-${i}`]))
+    compiled.styleMapping = new Map([...fontStyles].map((x, i) => [x, `${theme.name}-fs-${i}`]))
 
     for (const x of theme.tokenColors) {
       if (!x.scope) {
         if (x.settings.background) {
-          x.settings.background = `--${theme.name}-background`
+          x.settings.background = `${classPrefix}-bg`
         }
         if (x.settings.foreground) {
-          x.settings.foreground = `--${theme.name}-foreground`
+          x.settings.foreground = `${classPrefix}-fg`
         }
         continue
       }
 
-      if (x.settings.foreground) x.settings.foreground = compiled.colorMapping.get(x.settings.foreground)
-      if (x.settings.fontStyle) x.settings.fontStyle = compiled.styleMapping.get(x.settings.fontStyle)
+      if (x.settings.foreground) {
+        x.settings.foreground = `${classPrefix}-${compiled.colorMapping.get(x.settings.foreground)}`
+      }
+      if (x.settings.fontStyle) {
+        x.settings.fontStyle = `${classPrefix}-${compiled.styleMapping.get(x.settings.fontStyle)}`
+      }
     }
 
     theme.compiled = compiled
@@ -84,27 +88,27 @@ const writeThemes = async (themes = [], destDir = 'compiled') => {
   }
 }
 
-const writeStylesheet = async (themes = [], file = 'shikiThemes.css') => {
+const writeStylesheet = async (themes = [], file = 'shikiThemes.css', classPrefix = 'st') => {
   try {
     const out = []
     for (const theme of themes) {
-      out.push(`.${theme.name} {`)
+      // default fg and background styles
       if (theme.compiled.default) {
         if (theme.compiled.default.background) {
-          out.push(`  --${theme.name}-background: ${theme.compiled.default.background};`)
+          out.push(`.${theme.name} .${classPrefix}-bg {\n  background-color: ${theme.compiled.default.background};\n}`)
         }
         if (theme.compiled.default.foreground) {
-          out.push(`  --${theme.name}-foreground: ${theme.compiled.default.foreground};`)
+          out.push(`.${theme.name} .${classPrefix}-fg {\n  color: ${theme.compiled.default.foreground};\n}`)
         }
       }
 
+      // classes using these variables
       for (const [v, k] of theme.compiled.colorMapping.entries()) {
-        out.push(`  ${k}: ${v};`)
+        out.push(`.${theme.name} .${classPrefix}-${k} {\n  color: ${v};\n}`)
       }
       for (const [v, k] of theme.compiled.styleMapping.entries()) {
-        out.push(`  ${k}: ${v};`)
+        out.push(`.${theme.name} .${classPrefix}-${k} {\n  font-style: ${v};\n}`)
       }
-      out.push('}')
     }
 
     await writeFile(file, out.join('\n'))
