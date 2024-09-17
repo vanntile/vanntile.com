@@ -1,0 +1,217 @@
+{
+  "displayName": "Min Light",
+  "name": "min-light",
+  "type": "light",
+  "semanticHighlighting": false,
+  "tokenColors": [
+    {
+      "settings": {
+        "foreground": "--min-light-foreground"
+      }
+    },
+    {
+      "scope": [
+        "keyword.operator.accessor",
+        "meta.group.braces.round.function.arguments",
+        "meta.template.expression",
+        "markup.fenced_code meta.embedded.block"
+      ],
+      "settings": {
+        "foreground": "--min-light-fg-0"
+      }
+    },
+    {
+      "scope": "emphasis",
+      "settings": {
+        "fontStyle": "--min-light-fs-0"
+      }
+    },
+    {
+      "scope": [
+        "strong",
+        "markup.heading.markdown",
+        "markup.bold.markdown"
+      ],
+      "settings": {
+        "fontStyle": "--min-light-fs-1"
+      }
+    },
+    {
+      "scope": [
+        "markup.italic.markdown"
+      ],
+      "settings": {
+        "fontStyle": "--min-light-fs-0"
+      }
+    },
+    {
+      "scope": "meta.link.inline.markdown",
+      "settings": {
+        "fontStyle": "--min-light-fs-2",
+        "foreground": "--min-light-fg-1"
+      }
+    },
+    {
+      "scope": [
+        "string",
+        "markup.fenced_code",
+        "markup.inline"
+      ],
+      "settings": {
+        "foreground": "--min-light-fg-2"
+      }
+    },
+    {
+      "scope": [
+        "comment",
+        "string.quoted.docstring.multi"
+      ],
+      "settings": {
+        "foreground": "--min-light-fg-3"
+      }
+    },
+    {
+      "scope": [
+        "constant.numeric",
+        "constant.language",
+        "constant.other.placeholder",
+        "constant.character.format.placeholder",
+        "variable.language.this",
+        "variable.other.object",
+        "variable.other.class",
+        "variable.other.constant",
+        "meta.property-name",
+        "meta.property-value",
+        "support"
+      ],
+      "settings": {
+        "foreground": "--min-light-fg-1"
+      }
+    },
+    {
+      "scope": [
+        "keyword",
+        "storage.modifier",
+        "storage.type",
+        "storage.control.clojure",
+        "entity.name.function.clojure",
+        "entity.name.tag.yaml",
+        "support.function.node",
+        "support.type.property-name.json",
+        "punctuation.separator.key-value",
+        "punctuation.definition.template-expression"
+      ],
+      "settings": {
+        "foreground": "--min-light-fg-4"
+      }
+    },
+    {
+      "scope": "variable.parameter.function",
+      "settings": {
+        "foreground": "--min-light-fg-5"
+      }
+    },
+    {
+      "scope": [
+        "support.function",
+        "entity.name.type",
+        "entity.other.inherited-class",
+        "meta.function-call",
+        "meta.instance.constructor",
+        "entity.other.attribute-name",
+        "entity.name.function",
+        "constant.keyword.clojure"
+      ],
+      "settings": {
+        "foreground": "--min-light-fg-6"
+      }
+    },
+    {
+      "scope": [
+        "entity.name.tag",
+        "string.quoted",
+        "string.regexp",
+        "string.interpolated",
+        "string.template",
+        "string.unquoted.plain.out.yaml",
+        "keyword.other.template"
+      ],
+      "settings": {
+        "foreground": "--min-light-fg-7"
+      }
+    },
+    {
+      "scope": "token.info-token",
+      "settings": {
+        "foreground": "--min-light-fg-8"
+      }
+    },
+    {
+      "scope": "token.warn-token",
+      "settings": {
+        "foreground": "--min-light-fg-9"
+      }
+    },
+    {
+      "scope": "token.error-token",
+      "settings": {
+        "foreground": "--min-light-fg-10"
+      }
+    },
+    {
+      "scope": "token.debug-token",
+      "settings": {
+        "foreground": "--min-light-fg-11"
+      }
+    },
+    {
+      "scope": [
+        "strong",
+        "markup.heading.markdown",
+        "markup.bold.markdown"
+      ],
+      "settings": {
+        "foreground": "--min-light-fg-6"
+      }
+    },
+    {
+      "scope": [
+        "punctuation.definition.arguments",
+        "punctuation.definition.dict",
+        "punctuation.separator",
+        "meta.function-call.arguments"
+      ],
+      "settings": {
+        "foreground": "--min-light-fg-12"
+      }
+    },
+    {
+      "scope": [
+        "markup.underline.link",
+        "punctuation.definition.metadata.markdown"
+      ],
+      "settings": {
+        "foreground": "--min-light-fg-7"
+      }
+    },
+    {
+      "scope": [
+        "beginning.punctuation.definition.list.markdown"
+      ],
+      "settings": {
+        "foreground": "--min-light-fg-6"
+      }
+    },
+    {
+      "scope": [
+        "punctuation.definition.string.begin.markdown",
+        "punctuation.definition.string.end.markdown",
+        "string.other.link.title.markdown",
+        "string.other.link.description.markdown"
+      ],
+      "settings": {
+        "foreground": "--min-light-fg-13"
+      }
+    }
+  ]
+}

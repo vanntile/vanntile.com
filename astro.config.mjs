@@ -16,8 +16,8 @@ import rehypeSortAttributes from 'rehype-sort-attributes'
 import remarkHint from 'remark-hint'
 import { createHighlighter } from 'shiki'
 import { loadEnv } from 'vite'
-import dynamicShikiTheme from './src/lib/dynamic-shiki-material.json'
-import { rehypeShikiStylesToClasses, remarkReadingTime } from './src/lib/plugins'
+import { remarkReadingTime } from './src/lib/plugins'
+import shikiThemes from './src/lib/shikiThemes'
 import { astroCSPHashGenerator, initializeCloudinary } from './src/lib/utils'
 
 const { IMG_CLOUD_NAME, IMG_API_KEY, IMG_API_SECRET } = loadEnv(process.env.NODE_ENV, process.cwd(), '')
@@ -35,8 +35,7 @@ export default defineConfig({
       [
         rehypePrettyCode,
         {
-          theme: 'dynamic-shiki-material',
-          keepBackground: false,
+          keepBackground: true,
           transformers: [
             transformerNotationDiff(),
             transformerNotationHighlight(),
@@ -45,10 +44,35 @@ export default defineConfig({
               classActivePre: 'has-error',
             }),
           ],
-          getHighlighter: async (options) => createHighlighter({ ...options, themes: [dynamicShikiTheme] }),
+          getHighlighter: async (options) => {
+            const highlighter = await createHighlighter({ ...options })
+            const codeToHtml = highlighter.codeToHtml
+            highlighter.codeToHtml = (code, options) =>
+              codeToHtml(code, {
+                ...options,
+                themes: {
+                  0: shikiThemes.andromeedaTheme,
+                  1: shikiThemes.darkPlusTheme,
+                  2: shikiThemes.materialLighterTheme,
+                  3: shikiThemes.materialOceanTheme,
+                  4: shikiThemes.materialPalenightTheme,
+                  5: shikiThemes.minLightTheme,
+                  6: shikiThemes.moonlightIITheme,
+                  7: shikiThemes.myEyesPleaseTheme,
+                  8: shikiThemes.oneDarkProTheme,
+                  9: shikiThemes.redTheme,
+                  10: shikiThemes.solarizedLightTheme,
+                  11: shikiThemes.synthwave84Theme,
+                },
+                defaultColor: '6',
+                cssVariablePrefix: '--st',
+              })
+
+            return highlighter
+          },
         },
       ],
-      [rehypeShikiStylesToClasses, { stylePrefix: '--dynamic-shiki-', classPrefix: 'shiki-' }],
+      // [rehypeShikiStylesToClasses, { stylePrefix: '--dynamic-shiki-', classPrefix: 'shiki-' }],
       rehypeSlug,
       [
         rehypeAutolinkHeadings,

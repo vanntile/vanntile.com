@@ -1,0 +1,676 @@
+{
+  "displayName": "Synthwave '84",
+  "name": "synthwave-84",
+  "type": "dark",
+  "semanticHighlighting": true,
+  "tokenColors": [
+    {
+      "scope": [
+        "comment",
+        "string.quoted.docstring.multi.python",
+        "string.quoted.docstring.multi.python punctuation.definition.string.begin.python",
+        "string.quoted.docstring.multi.python punctuation.definition.string.end.python"
+      ],
+      "settings": {
+        "fontStyle": "--synthwave-84-fs-0",
+        "foreground": "--synthwave-84-fg-0"
+      }
+    },
+    {
+      "scope": [
+        "string.quoted",
+        "string.template",
+        "punctuation.definition.string"
+      ],
+      "settings": {
+        "foreground": "--synthwave-84-fg-1"
+      }
+    },
+    {
+      "scope": "string.template meta.embedded.line",
+      "settings": {
+        "foreground": "--synthwave-84-fg-2"
+      }
+    },
+    {
+      "scope": [
+        "variable",
+        "entity.name.variable"
+      ],
+      "settings": {
+        "foreground": "--synthwave-84-fg-3"
+      }
+    },
+    {
+      "scope": "variable.language",
+      "settings": {
+        "fontStyle": "--synthwave-84-fs-1",
+        "foreground": "--synthwave-84-fg-4"
+      }
+    },
+    {
+      "scope": "variable.parameter",
+      "settings": {
+        "fontStyle": "--synthwave-84-fs-0"
+      }
+    },
+    {
+      "scope": [
+        "storage.type",
+        "storage.modifier"
+      ],
+      "settings": {
+        "foreground": "--synthwave-84-fg-5"
+      }
+    },
+    {
+      "scope": "constant",
+      "settings": {
+        "foreground": "--synthwave-84-fg-6"
+      }
+    },
+    {
+      "scope": "string.regexp",
+      "settings": {
+        "foreground": "--synthwave-84-fg-6"
+      }
+    },
+    {
+      "scope": "constant.numeric",
+      "settings": {
+        "foreground": "--synthwave-84-fg-6"
+      }
+    },
+    {
+      "scope": "constant.language",
+      "settings": {
+        "foreground": "--synthwave-84-fg-6"
+      }
+    },
+    {
+      "scope": "constant.character.escape",
+      "settings": {
+        "foreground": "--synthwave-84-fg-7"
+      }
+    },
+    {
+      "scope": "entity.name",
+      "settings": {
+        "foreground": "--synthwave-84-fg-4"
+      }
+    },
+    {
+      "scope": "entity.name.tag",
+      "settings": {
+        "foreground": "--synthwave-84-fg-8"
+      }
+    },
+    {
+      "scope": [
+        "punctuation.definition.tag"
+      ],
+      "settings": {
+        "foreground": "--synthwave-84-fg-7"
+      }
+    },
+    {
+      "scope": "entity.other.attribute-name",
+      "settings": {
+        "foreground": "--synthwave-84-fg-5"
+      }
+    },
+    {
+      "scope": "entity.other.attribute-name.html",
+      "settings": {
+        "fontStyle": "--synthwave-84-fs-0",
+        "foreground": "--synthwave-84-fg-5"
+      }
+    },
+    {
+      "scope": [
+        "entity.name.type",
+        "meta.attribute.class.html"
+      ],
+      "settings": {
+        "foreground": "--synthwave-84-fg-4"
+      }
+    },
+    {
+      "scope": "entity.other.inherited-class",
+      "settings": {
+        "foreground": "--synthwave-84-fg-9"
+      }
+    },
+    {
+      "scope": [
+        "entity.name.function",
+        "variable.function"
+      ],
+      "settings": {
+        "foreground": "--synthwave-84-fg-7"
+      }
+    },
+    {
+      "scope": [
+        "keyword.control.export.js",
+        "keyword.control.import.js"
+      ],
+      "settings": {
+        "foreground": "--synthwave-84-fg-8"
+      }
+    },
+    {
+      "scope": [
+        "constant.numeric.decimal.js"
+      ],
+      "settings": {
+        "foreground": "--synthwave-84-fg-10"
+      }
+    },
+    {
+      "scope": "keyword",
+      "settings": {
+        "foreground": "--synthwave-84-fg-5"
+      }
+    },
+    {
+      "scope": "keyword.control",
+      "settings": {
+        "foreground": "--synthwave-84-fg-5"
+      }
+    },
+    {
+      "scope": "keyword.operator",
+      "settings": {
+        "foreground": "--synthwave-84-fg-5"
+      }
+    },
+    {
+      "scope": [
+        "keyword.operator.new",
+        "keyword.operator.expression",
+        "keyword.operator.logical"
+      ],
+      "settings": {
+        "foreground": "--synthwave-84-fg-5"
+      }
+    },
+    {
+      "scope": "keyword.other.unit",
+      "settings": {
+        "foreground": "--synthwave-84-fg-6"
+      }
+    },
+    {
+      "scope": "support",
+      "settings": {
+        "foreground": "--synthwave-84-fg-4"
+      }
+    },
+    {
+      "scope": "support.function",
+      "settings": {
+        "foreground": "--synthwave-84-fg-7"
+      }
+    },
+    {
+      "scope": "support.variable",
+      "settings": {
+        "foreground": "--synthwave-84-fg-3"
+      }
+    },
+    {
+      "scope": [
+        "meta.object-literal.key",
+        "support.type.property-name"
+      ],
+      "settings": {
+        "foreground": "--synthwave-84-fg-3"
+      }
+    },
+    {
+      "scope": "punctuation.separator.key-value",
+      "settings": {
+        "foreground": "--synthwave-84-fg-2"
+      }
+    },
+    {
+      "scope": "punctuation.section.embedded",
+      "settings": {
+        "foreground": "--synthwave-84-fg-5"
+      }
+    },
+    {
+      "scope": [
+        "punctuation.definition.template-expression.begin",
+        "punctuation.definition.template-expression.end"
+      ],
+      "settings": {
+        "foreground": "--synthwave-84-fg-8"
+      }
+    },
+    {
+      "scope": [
+        "support.type.property-name.css",
+        "support.type.property-name.json"
+      ],
+      "settings": {
+        "foreground": "--synthwave-84-fg-8"
+      }
+    },
+    {
+      "scope": "switch-block.expr.js",
+      "settings": {
+        "foreground": "--synthwave-84-fg-8"
+      }
+    },
+    {
+      "scope": "variable.other.constant.property.js, variable.other.property.js",
+      "settings": {
+        "foreground": "--synthwave-84-fg-11"
+      }
+    },
+    {
+      "scope": "constant.other.color",
+      "settings": {
+        "foreground": "--synthwave-84-fg-6"
+      }
+    },
+    {
+      "scope": "support.constant.font-name",
+      "settings": {
+        "foreground": "--synthwave-84-fg-6"
+      }
+    },
+    {
+      "scope": "entity.other.attribute-name.id",
+      "settings": {
+        "foreground": "--synthwave-84-fg-7"
+      }
+    },
+    {
+      "scope": [
+        "entity.other.attribute-name.pseudo-element",
+        "entity.other.attribute-name.pseudo-class"
+      ],
+      "settings": {
+        "foreground": "--synthwave-84-fg-9"
+      }
+    },
+    {
+      "scope": "support.function.misc.css",
+      "settings": {
+        "foreground": "--synthwave-84-fg-4"
+      }
+    },
+    {
+      "scope": [
+        "markup.heading",
+        "entity.name.section"
+      ],
+      "settings": {
+        "foreground": "--synthwave-84-fg-3"
+      }
+    },
+    {
+      "scope": [
+        "text.html",
+        "keyword.operator.assignment"
+      ],
+      "settings": {
+        "foreground": "--synthwave-84-fg-12"
+      }
+    },
+    {
+      "scope": "markup.quote",
+      "settings": {
+        "fontStyle": "--synthwave-84-fs-0",
+        "foreground": "--synthwave-84-fg-13"
+      }
+    },
+    {
+      "scope": "beginning.punctuation.definition.list",
+      "settings": {
+        "foreground": "--synthwave-84-fg-3"
+      }
+    },
+    {
+      "scope": "markup.underline.link",
+      "settings": {
+        "foreground": "--synthwave-84-fg-9"
+      }
+    },
+    {
+      "scope": "string.other.link.description",
+      "settings": {
+        "foreground": "--synthwave-84-fg-6"
+      }
+    },
+    {
+      "scope": "meta.function-call.generic.python",
+      "settings": {
+        "foreground": "--synthwave-84-fg-7"
+      }
+    },
+    {
+      "scope": "variable.parameter.function-call.python",
+      "settings": {
+        "foreground": "--synthwave-84-fg-8"
+      }
+    },
+    {
+      "scope": "storage.type.cs",
+      "settings": {
+        "foreground": "--synthwave-84-fg-4"
+      }
+    },
+    {
+      "scope": "entity.name.variable.local.cs",
+      "settings": {
+        "foreground": "--synthwave-84-fg-3"
+      }
+    },
+    {
+      "scope": [
+        "entity.name.variable.field.cs",
+        "entity.name.variable.property.cs"
+      ],
+      "settings": {
+        "foreground": "--synthwave-84-fg-3"
+      }
+    },
+    {
+      "scope": "constant.other.placeholder.c",
+      "settings": {
+        "fontStyle": "--synthwave-84-fs-0",
+        "foreground": "--synthwave-84-fg-8"
+      }
+    },
+    {
+      "scope": [
+        "keyword.control.directive.include.c",
+        "keyword.control.directive.define.c"
+      ],
+      "settings": {
+        "foreground": "--synthwave-84-fg-8"
+      }
+    },
+    {
+      "scope": "storage.modifier.c",
+      "settings": {
+        "foreground": "--synthwave-84-fg-4"
+      }
+    },
+    {
+      "scope": "source.cpp keyword.operator",
+      "settings": {
+        "foreground": "--synthwave-84-fg-5"
+      }
+    },
+    {
+      "scope": "constant.other.placeholder.cpp",
+      "settings": {
+        "fontStyle": "--synthwave-84-fs-0",
+        "foreground": "--synthwave-84-fg-8"
+      }
+    },
+    {
+      "scope": [
+        "keyword.control.directive.include.cpp",
+        "keyword.control.directive.define.cpp"
+      ],
+      "settings": {
+        "foreground": "--synthwave-84-fg-8"
+      }
+    },
+    {
+      "scope": "storage.modifier.specifier.const.cpp",
+      "settings": {
+        "foreground": "--synthwave-84-fg-4"
+      }
+    },
+    {
+      "scope": [
+        "source.elixir support.type.elixir",
+        "source.elixir meta.module.elixir entity.name.class.elixir"
+      ],
+      "settings": {
+        "foreground": "--synthwave-84-fg-7"
+      }
+    },
+    {
+      "scope": "source.elixir entity.name.function",
+      "settings": {
+        "foreground": "--synthwave-84-fg-8"
+      }
+    },
+    {
+      "scope": [
+        "source.elixir constant.other.symbol.elixir",
+        "source.elixir constant.other.keywords.elixir"
+      ],
+      "settings": {
+        "foreground": "--synthwave-84-fg-7"
+      }
+    },
+    {
+      "scope": "source.elixir punctuation.definition.string",
+      "settings": {
+        "foreground": "--synthwave-84-fg-8"
+      }
+    },
+    {
+      "scope": [
+        "source.elixir variable.other.readwrite.module.elixir",
+        "source.elixir variable.other.readwrite.module.elixir punctuation.definition.variable.elixir"
+      ],
+      "settings": {
+        "foreground": "--synthwave-84-fg-8"
+      }
+    },
+    {
+      "scope": "source.elixir .punctuation.binary.elixir",
+      "settings": {
+        "fontStyle": "--synthwave-84-fs-0",
+        "foreground": "--synthwave-84-fg-3"
+      }
+    },
+    {
+      "scope": [
+        "entity.global.clojure"
+      ],
+      "settings": {
+        "fontStyle": "--synthwave-84-fs-1",
+        "foreground": "--synthwave-84-fg-7"
+      }
+    },
+    {
+      "scope": [
+        "storage.control.clojure"
+      ],
+      "settings": {
+        "fontStyle": "--synthwave-84-fs-0",
+        "foreground": "--synthwave-84-fg-7"
+      }
+    },
+    {
+      "scope": [
+        "meta.metadata.simple.clojure",
+        "meta.metadata.map.clojure"
+      ],
+      "settings": {
+        "fontStyle": "--synthwave-84-fs-0",
+        "foreground": "--synthwave-84-fg-4"
+      }
+    },
+    {
+      "scope": [
+        "meta.quoted-expression.clojure"
+      ],
+      "settings": {
+        "fontStyle": "--synthwave-84-fs-0"
+      }
+    },
+    {
+      "scope": [
+        "meta.symbol.clojure"
+      ],
+      "settings": {
+        "foreground": "--synthwave-84-fg-14"
+      }
+    },
+    {
+      "scope": "source.go",
+      "settings": {
+        "foreground": "--synthwave-84-fg-14"
+      }
+    },
+    {
+      "scope": "source.go meta.function-call.go",
+      "settings": {
+        "foreground": "--synthwave-84-fg-7"
+      }
+    },
+    {
+      "scope": [
+        "source.go keyword.package.go",
+        "source.go keyword.import.go",
+        "source.go keyword.function.go",
+        "source.go keyword.type.go",
+        "source.go keyword.const.go",
+        "source.go keyword.var.go",
+        "source.go keyword.map.go",
+        "source.go keyword.channel.go",
+        "source.go keyword.control.go"
+      ],
+      "settings": {
+        "foreground": "--synthwave-84-fg-5"
+      }
+    },
+    {
+      "scope": [
+        "source.go storage.type",
+        "source.go keyword.struct.go",
+        "source.go keyword.interface.go"
+      ],
+      "settings": {
+        "foreground": "--synthwave-84-fg-8"
+      }
+    },
+    {
+      "scope": [
+        "source.go constant.language.go",
+        "source.go constant.other.placeholder.go",
+        "source.go variable"
+      ],
+      "settings": {
+        "foreground": "--synthwave-84-fg-10"
+      }
+    },
+    {
+      "scope": [
+        "markup.underline.link.markdown",
+        "markup.inline.raw.string.markdown"
+      ],
+      "settings": {
+        "fontStyle": "--synthwave-84-fs-0",
+        "foreground": "--synthwave-84-fg-8"
+      }
+    },
+    {
+      "scope": [
+        "string.other.link.title.markdown"
+      ],
+      "settings": {
+        "foreground": "--synthwave-84-fg-5"
+      }
+    },
+    {
+      "scope": [
+        "markup.heading.markdown",
+        "entity.name.section.markdown"
+      ],
+      "settings": {
+        "fontStyle": "--synthwave-84-fs-1",
+        "foreground": "--synthwave-84-fg-3"
+      }
+    },
+    {
+      "scope": [
+        "markup.italic.markdown"
+      ],
+      "settings": {
+        "fontStyle": "--synthwave-84-fs-0",
+        "foreground": "--synthwave-84-fg-10"
+      }
+    },
+    {
+      "scope": [
+        "markup.bold.markdown"
+      ],
+      "settings": {
+        "fontStyle": "--synthwave-84-fs-1",
+        "foreground": "--synthwave-84-fg-10"
+      }
+    },
+    {
+      "scope": [
+        "punctuation.definition.quote.begin.markdown",
+        "markup.quote.markdown"
+      ],
+      "settings": {
+        "foreground": "--synthwave-84-fg-8"
+      }
+    },
+    {
+      "scope": [
+        "source.dart",
+        "source.python",
+        "source.scala"
+      ],
+      "settings": {
+        "foreground": "--synthwave-84-fg-14"
+      }
+    },
+    {
+      "scope": [
+        "string.interpolated.single.dart"
+      ],
+      "settings": {
+        "foreground": "--synthwave-84-fg-6"
+      }
+    },
+    {
+      "scope": [
+        "variable.parameter.dart"
+      ],
+      "settings": {
+        "foreground": "--synthwave-84-fg-8"
+      }
+    },
+    {
+      "scope": [
+        "constant.numeric.dart"
+      ],
+      "settings": {
+        "foreground": "--synthwave-84-fg-10"
+      }
+    },
+    {
+      "scope": [
+        "variable.parameter.scala"
+      ],
+      "settings": {
+        "foreground": "--synthwave-84-fg-10"
+      }
+    },
+    {
+      "scope": [
+        "meta.template.expression.scala"
+      ],
+      "settings": {
+        "foreground": "--synthwave-84-fg-8"
+      }
+    }
+  ]
+}

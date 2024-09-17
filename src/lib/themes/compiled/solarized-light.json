@@ -1,0 +1,293 @@
+{
+  "displayName": "Solarized Light",
+  "name": "solarized-light",
+  "type": "light",
+  "semanticHighlighting": true,
+  "tokenColors": [
+    {
+      "settings": {
+        "foreground": "--solarized-light-foreground"
+      }
+    },
+    {
+      "scope": [
+        "meta.embedded",
+        "source.groovy.embedded",
+        "string meta.image.inline.markdown",
+        "variable.legacy.builtin.python"
+      ],
+      "settings": {
+        "foreground": "--solarized-light-fg-0"
+      }
+    },
+    {
+      "scope": "comment",
+      "settings": {
+        "fontStyle": "--solarized-light-fs-0",
+        "foreground": "--solarized-light-fg-1"
+      }
+    },
+    {
+      "scope": "string",
+      "settings": {
+        "foreground": "--solarized-light-fg-2"
+      }
+    },
+    {
+      "scope": "string.regexp",
+      "settings": {
+        "foreground": "--solarized-light-fg-3"
+      }
+    },
+    {
+      "scope": "constant.numeric",
+      "settings": {
+        "foreground": "--solarized-light-fg-4"
+      }
+    },
+    {
+      "scope": [
+        "variable.language",
+        "variable.other"
+      ],
+      "settings": {
+        "foreground": "--solarized-light-fg-5"
+      }
+    },
+    {
+      "scope": "keyword",
+      "settings": {
+        "foreground": "--solarized-light-fg-6"
+      }
+    },
+    {
+      "scope": "storage",
+      "settings": {
+        "fontStyle": "--solarized-light-fs-1",
+        "foreground": "--solarized-light-fg-7"
+      }
+    },
+    {
+      "scope": [
+        "entity.name.class",
+        "entity.name.type",
+        "entity.name.namespace",
+        "entity.name.scope-resolution"
+      ],
+      "settings": {
+        "fontStyle": "",
+        "foreground": "--solarized-light-fg-8"
+      }
+    },
+    {
+      "scope": "entity.name.function",
+      "settings": {
+        "foreground": "--solarized-light-fg-5"
+      }
+    },
+    {
+      "scope": "punctuation.definition.variable",
+      "settings": {
+        "foreground": "--solarized-light-fg-6"
+      }
+    },
+    {
+      "scope": [
+        "punctuation.section.embedded.begin",
+        "punctuation.section.embedded.end"
+      ],
+      "settings": {
+        "foreground": "--solarized-light-fg-3"
+      }
+    },
+    {
+      "scope": [
+        "constant.language",
+        "meta.preprocessor"
+      ],
+      "settings": {
+        "foreground": "--solarized-light-fg-9"
+      }
+    },
+    {
+      "scope": [
+        "support.function.construct",
+        "keyword.other.new"
+      ],
+      "settings": {
+        "foreground": "--solarized-light-fg-8"
+      }
+    },
+    {
+      "scope": [
+        "constant.character",
+        "constant.other"
+      ],
+      "settings": {
+        "foreground": "--solarized-light-fg-8"
+      }
+    },
+    {
+      "scope": "entity.other.inherited-class",
+      "settings": {
+        "foreground": "--solarized-light-fg-10"
+      }
+    },
+    {
+      "scope": "variable.parameter",
+      "settings": {}
+    },
+    {
+      "scope": "entity.name.tag",
+      "settings": {
+        "foreground": "--solarized-light-fg-5"
+      }
+    },
+    {
+      "scope": "punctuation.definition.tag",
+      "settings": {
+        "foreground": "--solarized-light-fg-1"
+      }
+    },
+    {
+      "scope": "entity.other.attribute-name",
+      "settings": {
+        "foreground": "--solarized-light-fg-1"
+      }
+    },
+    {
+      "scope": "support.function",
+      "settings": {
+        "foreground": "--solarized-light-fg-5"
+      }
+    },
+    {
+      "scope": "punctuation.separator.continuation",
+      "settings": {
+        "foreground": "--solarized-light-fg-3"
+      }
+    },
+    {
+      "scope": [
+        "support.constant",
+        "support.variable"
+      ],
+      "settings": {}
+    },
+    {
+      "scope": [
+        "support.type",
+        "support.class"
+      ],
+      "settings": {
+        "foreground": "--solarized-light-fg-6"
+      }
+    },
+    {
+      "scope": "support.type.exception",
+      "settings": {
+        "foreground": "--solarized-light-fg-8"
+      }
+    },
+    {
+      "scope": "support.other.variable",
+      "settings": {}
+    },
+    {
+      "scope": "invalid",
+      "settings": {
+        "foreground": "--solarized-light-fg-3"
+      }
+    },
+    {
+      "scope": [
+        "meta.diff",
+        "meta.diff.header"
+      ],
+      "settings": {
+        "fontStyle": "--solarized-light-fs-0",
+        "foreground": "--solarized-light-fg-5"
+      }
+    },
+    {
+      "scope": "markup.deleted",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "--solarized-light-fg-3"
+      }
+    },
+    {
+      "scope": "markup.changed",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "--solarized-light-fg-8"
+      }
+    },
+    {
+      "scope": "markup.inserted",
+      "settings": {
+        "foreground": "--solarized-light-fg-6"
+      }
+    },
+    {
+      "scope": "markup.quote",
+      "settings": {
+        "foreground": "--solarized-light-fg-6"
+      }
+    },
+    {
+      "scope": "markup.list",
+      "settings": {
+        "foreground": "--solarized-light-fg-9"
+      }
+    },
+    {
+      "scope": [
+        "markup.bold",
+        "markup.italic"
+      ],
+      "settings": {
+        "foreground": "--solarized-light-fg-4"
+      }
+    },
+    {
+      "scope": "markup.bold",
+      "settings": {
+        "fontStyle": "--solarized-light-fs-1"
+      }
+    },
+    {
+      "scope": "markup.italic",
+      "settings": {
+        "fontStyle": "--solarized-light-fs-0"
+      }
+    },
+    {
+      "scope": "markup.strikethrough",
+      "settings": {
+        "fontStyle": "--solarized-light-fs-2"
+      }
+    },
+    {
+      "scope": "markup.inline.raw",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "--solarized-light-fg-2"
+      }
+    },
+    {
+      "scope": "markup.heading",
+      "settings": {
+        "fontStyle": "--solarized-light-fs-1",
+        "foreground": "--solarized-light-fg-5"
+      }
+    },
+    {
+      "scope": "markup.heading.setext",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "--solarized-light-fg-5"
+      }
+    }
+  ]
+}
