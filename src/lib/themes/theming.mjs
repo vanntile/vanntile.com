@@ -28,36 +28,16 @@ const getThemes = async (sourceDir = 'sources') => {
 }
 
 const convertThemes = (themes = [], classPrefix = 'st') => {
+  let idx = 0 // use a single index for all output shiki variables
   for (const theme of themes) {
-    theme.foregroundColors = new Set()
-    theme.fontStyles = new Set()
-    for (const x of theme.tokenColors) {
-      if (x.settings.foreground) theme.foregroundColors.add(x.settings.foreground)
-      if (x.settings.fontStyle) theme.fontStyles.add(x.settings.fontStyle)
-    }
-  }
-
-  let styleIdx = 0
-  for (const theme of themes) {
-    const compiled = {
-      colorMap: new Map(),
-      styleMap: new Map(),
-    }
-
-    // use a single index for all output shiki variables
-    for (const x of [...theme.foregroundColors]) {
-      compiled.colorMap.set(x, styleIdx)
-      styleIdx += 1
-    }
-    for (const x of [...theme.fontStyles]) {
-      compiled.styleMap.set(x, styleIdx)
-      styleIdx += 1
-    }
+    theme.colorMap = new Map()
+    theme.fontStyleMap = new Map()
+    theme.colorAndFontMap = new Map()
 
     for (const x of theme.tokenColors) {
       // debatably, this should be removed from output
       if (!x.scope) {
-        compiled.default = { ...x.settings }
+        theme.default = { ...x.settings }
 
         // use a single class for foreground and background
         if (x.settings.background) {
@@ -69,15 +49,39 @@ const convertThemes = (themes = [], classPrefix = 'st') => {
         continue
       }
 
-      if (x.settings.foreground) {
-        x.settings.foreground = `${classPrefix}-${compiled.colorMap.get(x.settings.foreground)}`
-      }
-      if (x.settings.fontStyle) {
-        x.settings.fontStyle = `${classPrefix}-${compiled.styleMap.get(x.settings.fontStyle)}`
+      if (x.settings.foreground && x.settings.fontStyle) {
+        const key = `${x.settings.foreground}-${x.settings.fontStyle}`
+        if (theme.colorAndFontMap.has(key)) {
+          // exiting foreground && fontStyle combination
+          x.settings.foreground = `${classPrefix}-${theme.colorAndFontMap.get(key)}`
+        } else {
+          // new foreground && fontStyle combination
+          x.settings.foreground = `${classPrefix}-${idx}`
+          theme.colorAndFontMap.set(key, idx)
+          idx += 1
+        }
+      } else if (x.settings.foreground) {
+        const key = x.settings.foreground
+        if (theme.colorMap.has(key)) {
+          x.settings.foreground = `${classPrefix}-${theme.colorMap.get(key)}`
+        } else {
+          x.settings.foreground = `${classPrefix}-${idx}`
+          theme.colorMap.set(key, idx)
+          idx += 1
+        }
+      } else if (x.settings.fontStyle) {
+        // using foreground because we can't use unknown values for fontStyle in textmate themes
+        const key = x.settings.fontStyle
+        x.settings.fontStyle = undefined
+        if (theme.fontStyleMap.has(key)) {
+          x.settings.foreground = `${classPrefix}-${theme.fontStyleMap.get(key)}`
+        } else {
+          x.settings.foreground = `${classPrefix}-${idx}`
+          theme.fontStyleMap.set(key, idx)
+          idx += 1
+        }
       }
     }
-
-    theme.compiled = compiled
   }
 }
 
@@ -102,31 +106,35 @@ const writeThemes = async (themes = [], destDir = 'compiled') => {
 
 const writeStylesheet = async (themes = [], file = 'shikiThemes.css', classPrefix = 'st') => {
   try {
-    const out = []
+    let out = []
     for (const theme of themes) {
       out.push(`/*** ${theme.name} styles ***/`)
 
       // default fg and bg styles from shiki
       let background = theme.type === 'light' ? '#fffffe' : '#1e1e1e'
       let foreground = theme.type === 'light' ? '#333333' : '#bbbbbb'
-      if (theme.compiled.default) {
-        if (theme.compiled.default.background) {
-          background = theme.compiled.default.background
-        }
-        if (theme.compiled.default.foreground) {
-          foreground = theme.compiled.default.foreground
-        }
+      if (theme.default) {
+        if (theme.default.background) background = theme.default.background
+        if (theme.default.foreground) foreground = theme.default.foreground
       }
       out.push(`.${theme.name} .${classPrefix}-bg {\n  background-color: ${background};\n}`)
       out.push(`.${theme.name} .${classPrefix}-fg {\n  color: ${foreground};\n}`)
 
       // classes using these variables
-      for (const [v, k] of theme.compiled.colorMap.entries()) {
-        out.push(`.${theme.name} .${classPrefix}-${k} {\n  color: ${v};\n}`)
+      let temp = []
+      for (const [v, k] of theme.colorAndFontMap.entries()) {
+        const [color, font] = v.split('-')
+        temp.push([k, `.${theme.name} .${classPrefix}-${k} {\n  color: ${color};\n  font-style: ${font};\n}`])
       }
-      for (const [v, k] of theme.compiled.styleMap.entries()) {
-        out.push(`.${theme.name} .${classPrefix}-${k} {\n  font-style: ${v};\n}`)
+      for (const [v, k] of theme.colorMap.entries()) {
+        temp.push([k, `.${theme.name} .${classPrefix}-${k} {\n  color: ${v};\n}`])
       }
+      for (const [v, k] of theme.fontStyleMap.entries()) {
+        temp.push([k, `.${theme.name} .${classPrefix}-${k} {\n  font-style: ${v};\n}`])
+      }
+
+      // the sorting is unnecessary, but aesthetic
+      out = out.concat(temp.sort((a, b) => a[0] - b[0]).map(([_, x]) => x))
     }
 
     await writeFile(file, out.join('\n'))

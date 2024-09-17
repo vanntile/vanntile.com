@@ -25,31 +25,31 @@
     {
       "scope": "constant.character.escape, text.html constant.character.entity.named",
       "settings": {
-        "foreground": "st-37"
+        "foreground": "st-40"
       }
     },
     {
       "scope": "constant.language.boolean",
       "settings": {
-        "foreground": "st-40"
+        "foreground": "st-41"
       }
     },
     {
       "scope": "constant.numeric",
       "settings": {
-        "foreground": "st-41"
+        "foreground": "st-42"
       }
     },
     {
       "scope": "variable, variable.parameter, support.variable, variable.language, support.constant, meta.definition.variable entity.name.function, meta.function-call.arguments",
       "settings": {
-        "foreground": "st-37"
+        "foreground": "st-40"
       }
     },
     {
       "scope": "keyword.other",
       "settings": {
-        "foreground": "st-41"
+        "foreground": "st-42"
       }
     },
     {
@@ -61,46 +61,46 @@
     {
       "scope": "entity.name.function, support.function",
       "settings": {
-        "foreground": "st-42"
+        "foreground": "st-43"
       }
     },
     {
       "scope": "storage.type, storage.modifier, storage.control",
       "settings": {
-        "foreground": "st-43"
+        "foreground": "st-44"
       }
     },
     {
       "scope": "support.module, support.node",
       "settings": {
-        "fontStyle": "st-49",
-        "foreground": "st-44"
+        "fontStyle": "italic",
+        "foreground": "st-45"
       }
     },
     {
       "scope": "support.type, constant.other.key",
       "settings": {
-        "foreground": "st-45"
+        "foreground": "st-46"
       }
     },
     {
       "scope": "entity.name.type, entity.other.inherited-class, entity.other",
       "settings": {
-        "foreground": "st-45"
+        "foreground": "st-46"
       }
     },
     {
       "scope": "comment",
       "settings": {
-        "fontStyle": "st-49",
-        "foreground": "st-37"
+        "fontStyle": "italic",
+        "foreground": "st-47"
       }
     },
     {
       "scope": "comment punctuation.definition.comment, string.quoted.docstring",
       "settings": {
-        "fontStyle": "st-49",
-        "foreground": "st-37"
+        "fontStyle": "italic",
+        "foreground": "st-47"
       }
     },
     {
@@ -112,25 +112,25 @@
     {
       "scope": "entity.name, entity.name.type.class, support.type, support.class, meta.use",
       "settings": {
-        "foreground": "st-45"
+        "foreground": "st-46"
       }
     },
     {
       "scope": "variable.object.property, meta.field.declaration entity.name.function",
       "settings": {
-        "foreground": "st-44"
+        "foreground": "st-48"
       }
     },
     {
       "scope": "meta.definition.method entity.name.function",
       "settings": {
-        "foreground": "st-44"
+        "foreground": "st-48"
       }
     },
     {
       "scope": "meta.function entity.name.function",
       "settings": {
-        "foreground": "st-42"
+        "foreground": "st-43"
       }
     },
     {
@@ -142,19 +142,19 @@
     {
       "scope": "meta.embedded, source.groovy.embedded, meta.template.expression",
       "settings": {
-        "foreground": "st-37"
+        "foreground": "st-40"
       }
     },
     {
       "scope": "entity.name.tag.yaml",
       "settings": {
-        "foreground": "st-44"
+        "foreground": "st-48"
       }
     },
     {
       "scope": "meta.object-literal.key, meta.object-literal.key string, support.type.property-name.json",
       "settings": {
-        "foreground": "st-44"
+        "foreground": "st-48"
       }
     },
     {
@@ -166,25 +166,25 @@
     {
       "scope": "entity.other.attribute-name.class",
       "settings": {
-        "foreground": "st-45"
+        "foreground": "st-46"
       }
     },
     {
       "scope": "entity.other.attribute-name.id",
       "settings": {
-        "foreground": "st-41"
+        "foreground": "st-42"
       }
     },
     {
       "scope": "source.css entity.name.tag",
       "settings": {
-        "foreground": "st-45"
+        "foreground": "st-46"
       }
     },
     {
       "scope": "support.type.property-name.css",
       "settings": {
-        "foreground": "st-46"
+        "foreground": "st-49"
       }
     },
     {
@@ -196,19 +196,19 @@
     {
       "scope": "entity.name.tag",
       "settings": {
-        "foreground": "st-44"
+        "foreground": "st-48"
       }
     },
     {
       "scope": "entity.other.attribute-name",
       "settings": {
-        "foreground": "st-43"
+        "foreground": "st-44"
       }
     },
     {
       "scope": "punctuation.definition.entity.html",
       "settings": {
-        "foreground": "st-37"
+        "foreground": "st-40"
       }
     },
     {
@@ -220,7 +220,7 @@
     {
       "scope": "text.html.markdown meta.link.inline, meta.link.reference",
       "settings": {
-        "foreground": "st-44"
+        "foreground": "st-48"
       }
     },
     {
@@ -232,22 +232,22 @@
     {
       "scope": "markup.italic",
       "settings": {
-        "fontStyle": "st-49",
-        "foreground": "st-44"
+        "fontStyle": "italic",
+        "foreground": "st-45"
       }
     },
     {
       "scope": "markup.bold",
       "settings": {
-        "fontStyle": "st-50",
-        "foreground": "st-44"
+        "fontStyle": "bold",
+        "foreground": "st-50"
       }
     },
     {
       "scope": "markup.bold markup.italic, markup.italic markup.bold",
       "settings": {
-        "fontStyle": "st-51",
-        "foreground": "st-44"
+        "fontStyle": "italic bold",
+        "foreground": "st-51"
       }
     },
     {
@@ -265,7 +265,7 @@
     {
       "scope": "keyword.other.definition.ini",
       "settings": {
-        "foreground": "st-44"
+        "foreground": "st-48"
       }
     },
     {
@@ -277,104 +277,104 @@
     {
       "scope": "source.cs meta.class.identifier storage.type",
       "settings": {
-        "foreground": "st-45"
+        "foreground": "st-46"
       }
     },
     {
       "scope": "source.cs meta.method.identifier entity.name.function",
       "settings": {
-        "foreground": "st-44"
+        "foreground": "st-48"
       }
     },
     {
       "scope": "source.cs meta.method-call meta.method, source.cs entity.name.function",
       "settings": {
-        "foreground": "st-42"
+        "foreground": "st-43"
       }
     },
     {
       "scope": "source.cs storage.type",
       "settings": {
-        "foreground": "st-45"
+        "foreground": "st-46"
       }
     },
     {
       "scope": "source.cs meta.method.return-type",
       "settings": {
-        "foreground": "st-45"
+        "foreground": "st-46"
       }
     },
     {
       "scope": "source.cs meta.preprocessor",
       "settings": {
-        "foreground": "st-37"
+        "foreground": "st-40"
       }
     },
     {
       "scope": "source.cs entity.name.type.namespace",
       "settings": {
-        "foreground": "st-37"
+        "foreground": "st-40"
       }
     },
     {
       "scope": "meta.jsx.children, SXNested",
       "settings": {
-        "foreground": "st-37"
+        "foreground": "st-40"
       }
     },
     {
       "scope": "support.class.component",
       "settings": {
-        "foreground": "st-45"
+        "foreground": "st-46"
       }
     },
     {
       "scope": "source.cpp meta.block variable.other",
       "settings": {
-        "foreground": "st-37"
+        "foreground": "st-40"
       }
     },
     {
       "scope": "source.python meta.member.access.python",
       "settings": {
-        "foreground": "st-44"
+        "foreground": "st-48"
       }
     },
     {
       "scope": "source.python meta.function-call.python, meta.function-call.arguments",
       "settings": {
-        "foreground": "st-42"
+        "foreground": "st-43"
       }
     },
     {
       "scope": "meta.block",
       "settings": {
-        "foreground": "st-44"
+        "foreground": "st-48"
       }
     },
     {
       "scope": "entity.name.function.call",
       "settings": {
-        "foreground": "st-42"
+        "foreground": "st-43"
       }
     },
     {
       "scope": "source.php support.other.namespace, source.php meta.use support.class",
       "settings": {
-        "foreground": "st-37"
+        "foreground": "st-40"
       }
     },
     {
       "scope": "constant.keyword",
       "settings": {
-        "fontStyle": "st-49",
-        "foreground": "st-39"
+        "fontStyle": "italic",
+        "foreground": "st-52"
       }
     },
     {
       "scope": "entity.name.function",
       "settings": {
-        "foreground": "st-42"
+        "foreground": "st-43"
       }
     },
     {
@@ -388,7 +388,7 @@
         "constant.other.placeholder"
       ],
       "settings": {
-        "foreground": "st-44"
+        "foreground": "st-48"
       }
     },
     {
@@ -396,7 +396,7 @@
         "markup.deleted"
       ],
       "settings": {
-        "foreground": "st-44"
+        "foreground": "st-48"
       }
     },
     {
@@ -412,7 +412,7 @@
         "markup.underline"
       ],
       "settings": {
-        "fontStyle": "st-52"
+        "foreground": "st-53"
       }
     },
     {
@@ -420,8 +420,8 @@
         "keyword.control"
       ],
       "settings": {
-        "fontStyle": "st-49",
-        "foreground": "st-39"
+        "fontStyle": "italic",
+        "foreground": "st-52"
       }
     },
     {
@@ -429,7 +429,7 @@
         "variable.parameter"
       ],
       "settings": {
-        "fontStyle": "st-49"
+        "foreground": "st-54"
       }
     },
     {
@@ -437,8 +437,8 @@
         "variable.parameter.function.language.special.self.python"
       ],
       "settings": {
-        "fontStyle": "st-49",
-        "foreground": "st-44"
+        "fontStyle": "italic",
+        "foreground": "st-45"
       }
     },
     {
@@ -446,7 +446,7 @@
         "constant.character.format.placeholder.other.python"
       ],
       "settings": {
-        "foreground": "st-41"
+        "foreground": "st-42"
       }
     },
     {
@@ -454,8 +454,8 @@
         "markup.quote"
       ],
       "settings": {
-        "fontStyle": "st-49",
-        "foreground": "st-39"
+        "fontStyle": "italic",
+        "foreground": "st-52"
       }
     },
     {
@@ -463,7 +463,7 @@
         "markup.fenced_code.block"
       ],
       "settings": {
-        "foreground": "st-47"
+        "foreground": "st-55"
       }
     },
     {
@@ -471,7 +471,7 @@
         "punctuation.definition.quote"
       ],
       "settings": {
-        "foreground": "st-40"
+        "foreground": "st-41"
       }
     },
     {
@@ -479,7 +479,7 @@
         "meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "st-43"
+        "foreground": "st-44"
       }
     },
     {
@@ -487,7 +487,7 @@
         "meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "st-45"
+        "foreground": "st-46"
       }
     },
     {
@@ -495,7 +495,7 @@
         "meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "st-41"
+        "foreground": "st-42"
       }
     },
     {
@@ -503,7 +503,7 @@
         "meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "st-44"
+        "foreground": "st-48"
       }
     },
     {
@@ -511,7 +511,7 @@
         "meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "st-48"
+        "foreground": "st-56"
       }
     },
     {
@@ -519,7 +519,7 @@
         "meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "st-42"
+        "foreground": "st-43"
       }
     },
     {
@@ -527,7 +527,7 @@
         "meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "st-40"
+        "foreground": "st-41"
       }
     },
     {
@@ -535,7 +535,7 @@
         "meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "st-43"
+        "foreground": "st-44"
       }
     },
     {

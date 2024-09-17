@@ -14,8 +14,8 @@
         "string.quoted.docstring punctuation.definition.string"
       ],
       "settings": {
-        "fontStyle": "st-161",
-        "foreground": "st-128"
+        "fontStyle": "italic",
+        "foreground": "st-141"
       }
     },
     {
@@ -26,8 +26,8 @@
         "punctuation.definition.block.tag"
       ],
       "settings": {
-        "fontStyle": "st-162",
-        "foreground": "st-128"
+        "fontStyle": "bold italic",
+        "foreground": "st-142"
       }
     },
     {
@@ -43,7 +43,7 @@
         "meta.package punctuation.terminator"
       ],
       "settings": {
-        "foreground": "st-129"
+        "foreground": "st-143"
       }
     },
     {
@@ -55,7 +55,7 @@
         "meta.method.body.java"
       ],
       "settings": {
-        "foreground": "st-130"
+        "foreground": "st-144"
       }
     },
     {
@@ -64,7 +64,7 @@
         "constant.other.color"
       ],
       "settings": {
-        "foreground": "st-131"
+        "foreground": "st-145"
       }
     },
     {
@@ -74,7 +74,7 @@
         "invalid.illegal"
       ],
       "settings": {
-        "foreground": "st-132"
+        "foreground": "st-146"
       }
     },
     {
@@ -84,7 +84,7 @@
         "storage.type.class"
       ],
       "settings": {
-        "foreground": "st-133"
+        "foreground": "st-147"
       }
     },
     {
@@ -93,7 +93,7 @@
         "keyword.operator"
       ],
       "settings": {
-        "foreground": "st-133"
+        "foreground": "st-147"
       }
     },
     {
@@ -102,7 +102,7 @@
         "storage.type"
       ],
       "settings": {
-        "foreground": "st-133"
+        "foreground": "st-147"
       }
     },
     {
@@ -111,7 +111,7 @@
         "storage.modifier"
       ],
       "settings": {
-        "foreground": "st-133"
+        "foreground": "st-147"
       }
     },
     {
@@ -130,7 +130,7 @@
         "keyword.other.substitution"
       ],
       "settings": {
-        "foreground": "st-134"
+        "foreground": "st-148"
       }
     },
     {
@@ -141,7 +141,7 @@
         "markup.deleted.git_gutter"
       ],
       "settings": {
-        "foreground": "st-133"
+        "foreground": "st-147"
       }
     },
     {
@@ -162,7 +162,7 @@
         "support.type.sys-types"
       ],
       "settings": {
-        "foreground": "st-135"
+        "foreground": "st-149"
       }
     },
     {
@@ -171,7 +171,7 @@
         "meta.block variable.other"
       ],
       "settings": {
-        "foreground": "st-130"
+        "foreground": "st-144"
       }
     },
     {
@@ -181,7 +181,7 @@
         "string.other.link"
       ],
       "settings": {
-        "foreground": "st-136"
+        "foreground": "st-150"
       }
     },
     {
@@ -194,7 +194,7 @@
         "constant.escape"
       ],
       "settings": {
-        "foreground": "st-137"
+        "foreground": "st-151"
       }
     },
     {
@@ -205,7 +205,7 @@
         "keyword.other"
       ],
       "settings": {
-        "foreground": "st-138"
+        "foreground": "st-152"
       }
     },
     {
@@ -219,7 +219,7 @@
         "meta.group.braces.curly constant.other.object.key.js string.unquoted.label.js"
       ],
       "settings": {
-        "foreground": "st-139"
+        "foreground": "st-153"
       }
     },
     {
@@ -228,7 +228,7 @@
         "punctuation.definition.string"
       ],
       "settings": {
-        "foreground": "st-140"
+        "foreground": "st-154"
       }
     },
     {
@@ -237,7 +237,7 @@
         "support.type"
       ],
       "settings": {
-        "foreground": "st-141"
+        "foreground": "st-155"
       }
     },
     {
@@ -251,7 +251,7 @@
         "source.postcss support.type.property-name"
       ],
       "settings": {
-        "foreground": "st-130"
+        "foreground": "st-144"
       }
     },
     {
@@ -262,7 +262,7 @@
         "variable.other.class.js"
       ],
       "settings": {
-        "foreground": "st-132"
+        "foreground": "st-146"
       }
     },
     {
@@ -271,7 +271,7 @@
         "variable.language"
       ],
       "settings": {
-        "foreground": "st-142"
+        "foreground": "st-156"
       }
     },
     {
@@ -280,7 +280,7 @@
         "entity.name.method.js"
       ],
       "settings": {
-        "foreground": "st-143"
+        "foreground": "st-157"
       }
     },
     {
@@ -290,7 +290,7 @@
         "variable.function.constructor"
       ],
       "settings": {
-        "foreground": "st-143"
+        "foreground": "st-157"
       }
     },
     {
@@ -301,7 +301,7 @@
         "support.type.property-name"
       ],
       "settings": {
-        "foreground": "st-130"
+        "foreground": "st-144"
       }
     },
     {
@@ -312,7 +312,7 @@
         "keyword.control.at-rule.media punctuation.definition.keyword"
       ],
       "settings": {
-        "foreground": "st-133"
+        "foreground": "st-147"
       }
     },
     {
@@ -325,7 +325,7 @@
         "entity.other.attribute-name.class punctuation.definition.entity.css"
       ],
       "settings": {
-        "foreground": "st-144"
+        "foreground": "st-158"
       }
     },
     {
@@ -334,7 +334,7 @@
         "markup.inserted"
       ],
       "settings": {
-        "foreground": "st-145"
+        "foreground": "st-159"
       }
     },
     {
@@ -343,7 +343,7 @@
         "markup.deleted"
       ],
       "settings": {
-        "foreground": "st-132"
+        "foreground": "st-146"
       }
     },
     {
@@ -352,7 +352,7 @@
         "markup.changed"
       ],
       "settings": {
-        "foreground": "st-141"
+        "foreground": "st-155"
       }
     },
     {
@@ -361,7 +361,7 @@
         "string.regexp"
       ],
       "settings": {
-        "foreground": "st-146"
+        "foreground": "st-160"
       }
     },
     {
@@ -370,7 +370,7 @@
         "constant.character.escape"
       ],
       "settings": {
-        "foreground": "st-146"
+        "foreground": "st-160"
       }
     },
     {
@@ -381,7 +381,7 @@
         "*uri*"
       ],
       "settings": {
-        "fontStyle": "st-163"
+        "foreground": "st-161"
       }
     },
     {
@@ -391,7 +391,7 @@
         "tag.decorator.js punctuation.definition.tag.js"
       ],
       "settings": {
-        "foreground": "st-143"
+        "foreground": "st-157"
       }
     },
     {
@@ -415,7 +415,7 @@
         "punctuation.section.function.end.bracket"
       ],
       "settings": {
-        "foreground": "st-147"
+        "foreground": "st-162"
       }
     },
     {
@@ -436,7 +436,7 @@
         "keyword.control.ternary"
       ],
       "settings": {
-        "foreground": "st-148"
+        "foreground": "st-163"
       }
     },
     {
@@ -445,7 +445,7 @@
         "source.js constant.other.object.key.js string.unquoted.label.js"
       ],
       "settings": {
-        "foreground": "st-132"
+        "foreground": "st-146"
       }
     },
     {
@@ -454,7 +454,7 @@
         "source.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "st-149"
+        "foreground": "st-164"
       }
     },
     {
@@ -463,7 +463,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "st-133"
+        "foreground": "st-147"
       }
     },
     {
@@ -472,7 +472,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "st-138"
+        "foreground": "st-152"
       }
     },
     {
@@ -481,7 +481,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "st-150"
+        "foreground": "st-165"
       }
     },
     {
@@ -490,7 +490,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "st-151"
+        "foreground": "st-166"
       }
     },
     {
@@ -499,7 +499,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "st-152"
+        "foreground": "st-167"
       }
     },
     {
@@ -508,7 +508,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "st-153"
+        "foreground": "st-168"
       }
     },
     {
@@ -517,7 +517,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "st-141"
+        "foreground": "st-155"
       }
     },
     {
@@ -526,7 +526,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "st-154"
+        "foreground": "st-169"
       }
     },
     {
@@ -536,7 +536,7 @@
         "punctuation.definition.list_item.markdown"
       ],
       "settings": {
-        "foreground": "st-155"
+        "foreground": "st-170"
       }
     },
     {
@@ -545,7 +545,7 @@
         "text.html.markdown markup.inline.raw.markdown"
       ],
       "settings": {
-        "foreground": "st-141"
+        "foreground": "st-155"
       }
     },
     {
@@ -554,7 +554,7 @@
         "text.html.markdown markup.inline.raw.markdown punctuation.definition.raw.markdown"
       ],
       "settings": {
-        "foreground": "st-156"
+        "foreground": "st-171"
       }
     },
     {
@@ -566,7 +566,7 @@
         "markup.heading.markdown punctuation.definition.heading.markdown"
       ],
       "settings": {
-        "foreground": "st-133"
+        "foreground": "st-147"
       }
     },
     {
@@ -575,8 +575,8 @@
         "markup.italic"
       ],
       "settings": {
-        "fontStyle": "st-161",
-        "foreground": "st-136"
+        "fontStyle": "italic",
+        "foreground": "st-172"
       }
     },
     {
@@ -586,8 +586,8 @@
         "markup.bold string"
       ],
       "settings": {
-        "fontStyle": "st-164",
-        "foreground": "st-136"
+        "fontStyle": "bold",
+        "foreground": "st-173"
       }
     },
     {
@@ -601,8 +601,8 @@
         "markup.quote markup.bold string"
       ],
       "settings": {
-        "fontStyle": "st-164",
-        "foreground": "st-136"
+        "fontStyle": "bold",
+        "foreground": "st-173"
       }
     },
     {
@@ -611,8 +611,8 @@
         "markup.underline"
       ],
       "settings": {
-        "fontStyle": "st-163",
-        "foreground": "st-157"
+        "fontStyle": "underline",
+        "foreground": "st-174"
       }
     },
     {
@@ -621,7 +621,7 @@
         "markup.quote punctuation.definition.blockquote.markdown"
       ],
       "settings": {
-        "foreground": "st-156"
+        "foreground": "st-171"
       }
     },
     {
@@ -630,7 +630,7 @@
         "markup.quote"
       ],
       "settings": {
-        "fontStyle": "st-161"
+        "foreground": "st-175"
       }
     },
     {
@@ -639,7 +639,7 @@
         "string.other.link.title.markdown"
       ],
       "settings": {
-        "foreground": "st-158"
+        "foreground": "st-176"
       }
     },
     {
@@ -648,7 +648,7 @@
         "string.other.link.description.title.markdown"
       ],
       "settings": {
-        "foreground": "st-141"
+        "foreground": "st-155"
       }
     },
     {
@@ -657,7 +657,7 @@
         "constant.other.reference.link.markdown"
       ],
       "settings": {
-        "foreground": "st-159"
+        "foreground": "st-177"
       }
     },
     {
@@ -666,7 +666,7 @@
         "markup.raw.block"
       ],
       "settings": {
-        "foreground": "st-141"
+        "foreground": "st-155"
       }
     },
     {
@@ -675,7 +675,7 @@
         "markup.raw.block.fenced.markdown"
       ],
       "settings": {
-        "foreground": "st-160"
+        "foreground": "st-178"
       }
     },
     {
@@ -684,7 +684,7 @@
         "punctuation.definition.fenced.markdown"
       ],
       "settings": {
-        "foreground": "st-160"
+        "foreground": "st-178"
       }
     },
     {
@@ -695,7 +695,7 @@
         "punctuation.section.class.end"
       ],
       "settings": {
-        "foreground": "st-155"
+        "foreground": "st-170"
       }
     },
     {
@@ -704,7 +704,7 @@
         "variable.language.fenced.markdown"
       ],
       "settings": {
-        "foreground": "st-156"
+        "foreground": "st-171"
       }
     },
     {
@@ -713,8 +713,8 @@
         "meta.separator"
       ],
       "settings": {
-        "fontStyle": "st-164",
-        "foreground": "st-156"
+        "fontStyle": "bold",
+        "foreground": "st-179"
       }
     },
     {
@@ -723,7 +723,7 @@
         "markup.table"
       ],
       "settings": {
-        "foreground": "st-155"
+        "foreground": "st-170"
       }
     }
   ]

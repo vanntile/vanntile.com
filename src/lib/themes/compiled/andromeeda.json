@@ -18,7 +18,7 @@
         "meta.diff.header"
       ],
       "settings": {
-        "foreground": "st-1"
+        "foreground": "st-0"
       }
     },
     {
@@ -30,7 +30,7 @@
         "punctuation.definition.string.begin.markdown"
       ],
       "settings": {
-        "foreground": "st-0"
+        "foreground": "st-1"
       }
     },
     {
@@ -177,7 +177,7 @@
         "entity.other.inherited-class"
       ],
       "settings": {
-        "fontStyle": "st-11"
+        "foreground": "st-11"
       }
     }
   ]
