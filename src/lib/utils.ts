@@ -45,23 +45,28 @@ export const astroCSPHashGenerator: AstroIntegration = {
   name: 'astro-csp-hash-generator',
   hooks: {
     'astro:build:done': async ({ dir, pages, logger }) => {
-      let hashes = ''
-      for (let i = 0; i < pages.length; i++) {
-        const filePath = fileURLToPath(`${dir.href}${pages[i].pathname}index.html`)
+      const hashes = new Map()
+      const paths = Array.from({ length: pages.length }, (_, i) =>
+        fileURLToPath(`${dir.href}${pages[i].pathname}index.html`),
+      )
+      let files: string[] = []
+      try {
+        files = await Promise.all(paths.map(async (filePath) => readFile(filePath, { encoding: 'utf-8' })))
+      } catch (e) {
+        logger.error(`Cannot read files: ${e}`)
+      }
+      logger.info(`Found ${files.length} files`)
 
-        try {
-          const root = parse(await readFile(filePath, { encoding: 'utf-8' }))
-          const scripts = root.querySelectorAll('script')
+      for (const file of files) {
+        if (!file.includes('<script')) continue
+        const scripts = parse(file).querySelectorAll('script')
 
-          for (let j = 0; j < scripts.length; j++) {
-            const hash = await createCspHash(scripts[j].textContent)
-            hashes += hash + ' '
-          }
-        } catch (e) {
-          logger.error(`Cannot read file ${filePath}: ${e}`)
+        for (let i = 0; i < scripts.length; i++) {
+          hashes.set(await createCspHash(scripts[i].textContent), true)
         }
       }
-      logger.info(hashes)
+
+      logger.info('CSP script hashes: `' + [...hashes.keys()].join(' ') + '`')
     },
   },
 }
