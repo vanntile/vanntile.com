@@ -111,12 +111,19 @@ const writeStylesheet = async (themes = [], file = 'shikiThemes.css', classPrefi
       out.push(`/*** ${theme.name} styles ***/`)
 
       // default fg and bg styles from shiki
-      let background = theme.type === 'light' ? '#fffffe' : '#1e1e1e'
-      let foreground = theme.type === 'light' ? '#333333' : '#bbbbbb'
+      let background, foreground
       if (theme.default) {
         if (theme.default.background) background = theme.default.background
         if (theme.default.foreground) foreground = theme.default.foreground
       }
+      if (background == undefined && theme.colors['editor.background']) {
+        background = theme.colors['editor.background']
+      }
+      if (foreground == undefined && theme.colors['editor.foreground']) {
+        foreground = theme.colors['editor.foreground']
+      }
+      if (background === undefined) background = theme.type === 'light' ? '#fffffe' : '#1e1e1e'
+      if (foreground === undefined) foreground = theme.type === 'light' ? '#333333' : '#bbbbbb'
       out.push(`.${theme.name} .${classPrefix}-bg {\n  background-color: ${background};\n}`)
       out.push(`.${theme.name} .${classPrefix}-fg {\n  color: ${foreground};\n}`)
 
@@ -151,5 +158,11 @@ await writeStylesheet(themes, '../../styles/shikiThemesDynamicVariables.css')
 
 console.log(
   'Compiled themes: ',
-  themes.map((x) => x.name),
+  themes
+    .sort((a, b) => {
+      if (a.type == b.type) return 0
+      if (a.type == 'light' && b.type == 'dark') return -1
+      if (a.type == 'dark' && b.type == 'light') return 2
+    })
+    .map((x) => `${x.name}: ${x.type}`),
 )

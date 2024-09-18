@@ -43,10 +43,10 @@
 }
 /*** dark-plus styles ***/
 .dark-plus .st-bg {
-  background-color: #1e1e1e;
+  background-color: #1E1E1E;
 }
 .dark-plus .st-fg {
-  color: #bbbbbb;
+  color: #D4D4D4;
 }
 .dark-plus .st-12 {
   color: #D4D4D4;
@@ -342,7 +342,7 @@
 }
 /*** min-light styles ***/
 .min-light .st-bg {
-  background-color: #fffffe;
+  background-color: #ffffff;
 }
 .min-light .st-fg {
   color: #24292eff;
@@ -401,10 +401,10 @@
 }
 /*** moonlight-ii styles ***/
 .moonlight-ii .st-bg {
-  background-color: #1e1e1e;
+  background-color: #1F2028;
 }
 .moonlight-ii .st-fg {
-  color: #bbbbbb;
+  color: #c8d3f5;
 }
 .moonlight-ii .st-114 {
   color: #858aa6;
@@ -493,10 +493,10 @@
 }
 /*** my-eyes-please styles ***/
 .my-eyes-please .st-bg {
-  background-color: #1e1e1e;
+  background-color: #14161a;
 }
 .my-eyes-please .st-fg {
-  color: #bbbbbb;
+  color: #eeffff;
 }
 .my-eyes-please .st-141 {
   color: #333942;
@@ -623,10 +623,10 @@
 }
 /*** one-dark-pro styles ***/
 .one-dark-pro .st-bg {
-  background-color: #1e1e1e;
+  background-color: #282c34;
 }
 .one-dark-pro .st-fg {
-  color: #bbbbbb;
+  color: #abb2bf;
 }
 .one-dark-pro .st-180 {
   color: #abb2bf;
@@ -679,7 +679,7 @@
 }
 /*** red styles ***/
 .red .st-bg {
-  background-color: #1e1e1e;
+  background-color: #390000;
 }
 .red .st-fg {
   color: #F8F8F8;
@@ -789,7 +789,7 @@
 }
 /*** solarized-light styles ***/
 .solarized-light .st-bg {
-  background-color: #fffffe;
+  background-color: #FDF6E3;
 }
 .solarized-light .st-fg {
   color: #657B83;
@@ -851,7 +851,7 @@
 }
 /*** synthwave-84 styles ***/
 .synthwave-84 .st-bg {
-  background-color: #1e1e1e;
+  background-color: #262335;
 }
 .synthwave-84 .st-fg {
   color: #bbbbbb;

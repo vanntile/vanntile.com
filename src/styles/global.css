@@ -968,6 +968,7 @@
       padding-right: 1rem;
       padding-left: 4rem;
       min-width: 100%;
+      color: inherit;
     }
 
     [data-rehype-pretty-code-figure] code[data-language='bash'] {
@@ -992,7 +993,6 @@
       padding-left: 0.5rem;
       width: calc(100% + 5rem);
       content: var(--counter-content, counter(line));
-      color: var(--gray-600);
       user-select: none;
     }
 
