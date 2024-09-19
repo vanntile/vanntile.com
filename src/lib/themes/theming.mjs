@@ -1,6 +1,7 @@
 import { readFile, readdir, stat, writeFile } from 'node:fs/promises'
 import { join } from 'node:path'
 import { exit } from 'node:process'
+import * as prettier from 'prettier'
 
 const getThemes = async (sourceDir = 'sources') => {
   try {
@@ -32,11 +33,12 @@ const convertThemes = (themes = [], classPrefix = 'st') => {
   for (const theme of themes) {
     theme.ansiColorsMap = new Map() // Map of colorName and color
     theme.colorMap = new Map() // Map of color and index
-    theme.fontStyleMap = new Map() // Map of color and index
-    theme.colorAndFontMap = new Map() // Map of color and index
 
     if (theme.colors != undefined) {
-      const colors = {}
+      const colors = {
+        'editor.background': theme.colors['editor.background'],
+        'editor.foreground': theme.colors['editor.foreground'],
+      }
       for (const [k, v] of Object.entries(theme.colors)) {
         if (!k.startsWith('terminal.ansi')) continue
         colors[k] = `${classPrefix}-${k.slice('terminal.'.length)}`
@@ -62,35 +64,17 @@ const convertThemes = (themes = [], classPrefix = 'st') => {
         continue
       }
 
-      if (x.settings.foreground && x.settings.fontStyle) {
-        const key = `${x.settings.foreground}-${x.settings.fontStyle}`
-        if (theme.colorAndFontMap.has(key)) {
-          // exiting foreground && fontStyle combination
-          x.settings.foreground = `${classPrefix}-${theme.colorAndFontMap.get(key)}`
-        } else {
-          // new foreground && fontStyle combination
-          x.settings.foreground = `${classPrefix}-${idx}`
-          theme.colorAndFontMap.set(key, idx)
-          idx += 1
-        }
-      } else if (x.settings.foreground) {
+      if (x.settings.fontStyle == '') {
+        x.settings.fontStyle = undefined
+      }
+
+      if (x.settings.foreground != undefined) {
         const key = x.settings.foreground
         if (theme.colorMap.has(key)) {
           x.settings.foreground = `${classPrefix}-${theme.colorMap.get(key)}`
         } else {
           x.settings.foreground = `${classPrefix}-${idx}`
           theme.colorMap.set(key, idx)
-          idx += 1
-        }
-      } else if (x.settings.fontStyle) {
-        // using foreground because we can't use unknown values for fontStyle in textmate themes
-        const key = x.settings.fontStyle
-        x.settings.fontStyle = undefined
-        if (theme.fontStyleMap.has(key)) {
-          x.settings.foreground = `${classPrefix}-${theme.fontStyleMap.get(key)}`
-        } else {
-          x.settings.foreground = `${classPrefix}-${idx}`
-          theme.fontStyleMap.set(key, idx)
           idx += 1
         }
       }
@@ -110,7 +94,10 @@ const writeThemes = async (themes = [], destDir = 'compiled') => {
     }))
 
     for (const theme of themes) {
-      await writeFile(join(destDir, `${theme.name}.json`), JSON.stringify(theme, null, '  '))
+      await writeFile(
+        join(destDir, `${theme.name}.json`),
+        await prettier.format(JSON.stringify(theme), { printWidth: 120, parser: 'json' }),
+      )
     }
   } catch (err) {
     console.error(err)
@@ -145,17 +132,14 @@ const writeStylesheet = async (themes = [], file = 'shikiThemes.css', classPrefi
         out.push(`.${theme.name} .${k} {\n  color: ${v};\n}`)
       }
 
+      out.push(`.${theme.name} .${classPrefix}-${theme.name}-italic {\n  font-style: italic;\n}`)
+      out.push(`.${theme.name} .${classPrefix}-${theme.name}-bold {\n  font-weight: bold;\n}`)
+      out.push(`.${theme.name} .${classPrefix}-${theme.name}-underline {\n  text-decoration: underline;\n}`)
+
       // classes using these variables
       let temp = []
-      for (const [v, k] of theme.colorAndFontMap.entries()) {
-        const [color, font] = v.split('-')
-        temp.push([k, `.${theme.name} .${classPrefix}-${k} {\n  color: ${color};\n  font-style: ${font};\n}`])
-      }
       for (const [v, k] of theme.colorMap.entries()) {
         temp.push([k, `.${theme.name} .${classPrefix}-${k} {\n  color: ${v};\n}`])
-      }
-      for (const [v, k] of theme.fontStyleMap.entries()) {
-        temp.push([k, `.${theme.name} .${classPrefix}-${k} {\n  font-style: ${v};\n}`])
       }
 
       // the sorting is unnecessary, but aesthetic

@@ -13,10 +13,14 @@ export function remarkReadingTime(): RemarkPlugin {
   }
 }
 
+const FONT_STYLE_SUFFIX_LEN = 11 // 11 = '-font-style'.length
+
 export function rehypeShikiStylesToClasses({
+  propertyPrefix = '--shiki-',
   classPrefix = '',
   themeNames = [],
 }: {
+  propertyPrefix?: string
   classPrefix?: string
   themeNames?: string[]
 }): RehypePlugin {
@@ -27,14 +31,18 @@ export function rehypeShikiStylesToClasses({
       if (
         node.tagName === 'pre' &&
         themeNames.length > 0 &&
-        Array.isArray(node.properties.className) &&
-        node.properties.className.length > 0
+        typeof node.properties['data-theme'] == 'string' &&
+        node.properties['data-theme'].length > 0 &&
+        node.children.length > 0
       ) {
-        if ((node.properties.className as string[]).some((x: string) => themeNames.includes(x))) {
-          node.properties.className = 'st-fg st-bg'
-          node.properties.style = undefined
-        }
+        node.properties.className = ['st-fg', 'st-bg', ...((node.properties.className as string[]) || [])]
+        node.properties['data-theme'] = undefined
+        node.properties.style = undefined
 
+        if (node.children[0].type == 'element') {
+          node.children[0].properties['data-theme'] = undefined
+          node.children[0].properties.style = undefined
+        }
         return
       }
 
@@ -46,12 +54,16 @@ export function rehypeShikiStylesToClasses({
       // turn known styles into theme-specific classes
       const className: Set<string> = new Set()
       for (const mapping of node.properties.style.split(';')) {
-        let color = mapping.split(':')[1]
-        if (color.startsWith(classPrefix)) className.add(color)
+        let [property, value] = mapping.split(':')
+        if (value.startsWith(classPrefix)) className.add(value)
+        else if (property.endsWith('-font-style')) {
+          className.add(`${classPrefix}${property.slice(propertyPrefix.length, -1 * FONT_STYLE_SUFFIX_LEN)}-${value}`)
+        }
       }
 
       // Final classes
-      if (className.size > 0) node.properties = { className: [...className] }
+      if (className.size > 0)
+        node.properties = { className: [...((node.properties.className as string[]) || []), ...className] }
     })
   }
 }

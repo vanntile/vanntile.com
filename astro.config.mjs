@@ -36,7 +36,7 @@ export default defineConfig({
         rehypePrettyCode,
         {
           keepBackground: true,
-          theme: false,
+          theme: shikiThemes,
           transformers: [
             transformerNotationDiff(),
             transformerNotationHighlight(),
@@ -45,19 +45,6 @@ export default defineConfig({
               classActivePre: 'has-error',
             }),
           ],
-          getHighlighter: async (options) => {
-            const highlighter = await createHighlighter({ ...options })
-            const codeToHtml = highlighter.codeToHtml
-            highlighter.codeToHtml = (code, options) =>
-              codeToHtml(code, {
-                ...options,
-                themes: shikiThemes,
-                defaultColor: false,
-                cssVariablePrefix: '--st-',
-              })
-
-            return highlighter
-          },
         },
       ],
       [rehypeShikiStylesToClasses, { classPrefix: 'st-', themeNames: Object.keys(shikiThemes) }],
