@@ -44,15 +44,14 @@ export function rehypeShikiStylesToClasses({
       if (parent.tagName !== 'span' || parent.properties['data-line'] != '') return
 
       // turn known styles into theme-specific classes
-      node.properties = {
-        className: node.properties.style
-          .split(';')
-          .map((mapping: string) => {
-            let color = mapping.split(':')[1]
-            return color.startsWith(classPrefix) ? color : undefined // probably over-cautious check
-          })
-          .filter((x?: string) => x != undefined) as string[],
+      const className: Set<string> = new Set()
+      for (const mapping of node.properties.style.split(';')) {
+        let color = mapping.split(':')[1]
+        if (color.startsWith(classPrefix)) className.add(color)
       }
+
+      // Final classes
+      if (className.size > 0) node.properties = { className: [...className] }
     })
   }
 }

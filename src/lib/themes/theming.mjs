@@ -30,9 +30,22 @@ const getThemes = async (sourceDir = 'sources') => {
 const convertThemes = (themes = [], classPrefix = 'st') => {
   let idx = 0 // use a single index for all output shiki variables
   for (const theme of themes) {
-    theme.colorMap = new Map()
-    theme.fontStyleMap = new Map()
-    theme.colorAndFontMap = new Map()
+    theme.ansiColorsMap = new Map() // Map of colorName and color
+    theme.colorMap = new Map() // Map of color and index
+    theme.fontStyleMap = new Map() // Map of color and index
+    theme.colorAndFontMap = new Map() // Map of color and index
+
+    if (theme.colors != undefined) {
+      const colors = {}
+      for (const [k, v] of Object.entries(theme.colors)) {
+        if (!k.startsWith('terminal.ansi')) continue
+        colors[k] = `${classPrefix}-${k.slice('terminal.'.length)}`
+        theme.ansiColorsMap.set(colors[k], v)
+      }
+
+      // only use ansi colors from the dynamic colors in the compiled them
+      theme.colors = colors
+    }
 
     for (const x of theme.tokenColors) {
       // debatably, this should be removed from output
@@ -92,6 +105,7 @@ const writeThemes = async (themes = [], destDir = 'compiled') => {
       name: t.name,
       type: t.type || 'css',
       semanticHighlighting: t.semanticHighlighting || false,
+      colors: t.colors || {},
       tokenColors: t.tokenColors || [],
     }))
 
@@ -126,6 +140,10 @@ const writeStylesheet = async (themes = [], file = 'shikiThemes.css', classPrefi
       if (foreground === undefined) foreground = theme.type === 'light' ? '#333333' : '#bbbbbb'
       out.push(`.${theme.name} .${classPrefix}-bg {\n  background-color: ${background};\n}`)
       out.push(`.${theme.name} .${classPrefix}-fg {\n  color: ${foreground};\n}`)
+
+      for (const [k, v] of theme.ansiColorsMap.entries()) {
+        out.push(`.${theme.name} .${k} {\n  color: ${v};\n}`)
+      }
 
       // classes using these variables
       let temp = []

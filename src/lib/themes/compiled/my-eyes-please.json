@@ -3,6 +3,24 @@
   "name": "my-eyes-please",
   "type": "dark",
   "semanticHighlighting": false,
+  "colors": {
+    "terminal.ansiBlack": "st-ansiBlack",
+    "terminal.ansiBrightBlack": "st-ansiBrightBlack",
+    "terminal.ansiGreen": "st-ansiGreen",
+    "terminal.ansiBrightGreen": "st-ansiBrightGreen",
+    "terminal.ansiYellow": "st-ansiYellow",
+    "terminal.ansiBrightYellow": "st-ansiBrightYellow",
+    "terminal.ansiBlue": "st-ansiBlue",
+    "terminal.ansiBrightBlue": "st-ansiBrightBlue",
+    "terminal.ansiMagenta": "st-ansiMagenta",
+    "terminal.ansiBrightMagenta": "st-ansiBrightMagenta",
+    "terminal.ansiCyan": "st-ansiCyan",
+    "terminal.ansiBrightCyan": "st-ansiBrightCyan",
+    "terminal.ansiWhite": "st-ansiWhite",
+    "terminal.ansiBrightWhite": "st-ansiBrightWhite",
+    "terminal.ansiRed": "st-ansiRed",
+    "terminal.ansiBrightRed": "st-ansiBrightRed"
+  },
   "tokenColors": [
     {
       "name": "Comment",

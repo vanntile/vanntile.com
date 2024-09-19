@@ -5,6 +5,42 @@
 .andromeeda .st-fg {
   color: #D5CED9;
 }
+.andromeeda .st-ansiBlue {
+  color: #7cb7ff;
+}
+.andromeeda .st-ansiBrightBlue {
+  color: #7cb7ff;
+}
+.andromeeda .st-ansiBrightCyan {
+  color: #00e8c6;
+}
+.andromeeda .st-ansiBrightGreen {
+  color: #96E072;
+}
+.andromeeda .st-ansiBrightMagenta {
+  color: #ff00aa;
+}
+.andromeeda .st-ansiBrightRed {
+  color: #ee5d43;
+}
+.andromeeda .st-ansiBrightYellow {
+  color: #FFE66D;
+}
+.andromeeda .st-ansiCyan {
+  color: #00e8c6;
+}
+.andromeeda .st-ansiGreen {
+  color: #96E072;
+}
+.andromeeda .st-ansiMagenta {
+  color: #ff00aa;
+}
+.andromeeda .st-ansiRed {
+  color: #ee5d43;
+}
+.andromeeda .st-ansiYellow {
+  color: #FFE66D;
+}
 .andromeeda .st-0 {
   color: #A0A1A7cc;
 }
@@ -43,10 +79,10 @@
 }
 /*** dark-plus styles ***/
 .dark-plus .st-bg {
-  background-color: #1E1E1E;
+  background-color: #1e1e1e;
 }
 .dark-plus .st-fg {
-  color: #D4D4D4;
+  color: #bbbbbb;
 }
 .dark-plus .st-12 {
   color: #D4D4D4;
@@ -134,6 +170,54 @@
 .material-theme-lighter .st-fg {
   color: #90A4AE;
 }
+.material-theme-lighter .st-ansiBlack {
+  color: #000000;
+}
+.material-theme-lighter .st-ansiBlue {
+  color: #6182B8;
+}
+.material-theme-lighter .st-ansiBrightBlack {
+  color: #90A4AE;
+}
+.material-theme-lighter .st-ansiBrightBlue {
+  color: #6182B8;
+}
+.material-theme-lighter .st-ansiBrightCyan {
+  color: #39ADB5;
+}
+.material-theme-lighter .st-ansiBrightGreen {
+  color: #91B859;
+}
+.material-theme-lighter .st-ansiBrightMagenta {
+  color: #9C3EDA;
+}
+.material-theme-lighter .st-ansiBrightRed {
+  color: #E53935;
+}
+.material-theme-lighter .st-ansiBrightWhite {
+  color: #FFFFFF;
+}
+.material-theme-lighter .st-ansiBrightYellow {
+  color: #E2931D;
+}
+.material-theme-lighter .st-ansiCyan {
+  color: #39ADB5;
+}
+.material-theme-lighter .st-ansiGreen {
+  color: #91B859;
+}
+.material-theme-lighter .st-ansiMagenta {
+  color: #9C3EDA;
+}
+.material-theme-lighter .st-ansiRed {
+  color: #E53935;
+}
+.material-theme-lighter .st-ansiWhite {
+  color: #FFFFFF;
+}
+.material-theme-lighter .st-ansiYellow {
+  color: #E2931D;
+}
 .material-theme-lighter .st-38 {
   color: #91B859;
 }
@@ -202,6 +286,54 @@
 }
 .material-theme-ocean .st-fg {
   color: #babed8;
+}
+.material-theme-ocean .st-ansiBlack {
+  color: #000000;
+}
+.material-theme-ocean .st-ansiBlue {
+  color: #82AAFF;
+}
+.material-theme-ocean .st-ansiBrightBlack {
+  color: #464B5D;
+}
+.material-theme-ocean .st-ansiBrightBlue {
+  color: #82AAFF;
+}
+.material-theme-ocean .st-ansiBrightCyan {
+  color: #89DDFF;
+}
+.material-theme-ocean .st-ansiBrightGreen {
+  color: #C3E88D;
+}
+.material-theme-ocean .st-ansiBrightMagenta {
+  color: #C792EA;
+}
+.material-theme-ocean .st-ansiBrightRed {
+  color: #f07178;
+}
+.material-theme-ocean .st-ansiBrightWhite {
+  color: #ffffff;
+}
+.material-theme-ocean .st-ansiBrightYellow {
+  color: #FFCB6B;
+}
+.material-theme-ocean .st-ansiCyan {
+  color: #89DDFF;
+}
+.material-theme-ocean .st-ansiGreen {
+  color: #C3E88D;
+}
+.material-theme-ocean .st-ansiMagenta {
+  color: #C792EA;
+}
+.material-theme-ocean .st-ansiRed {
+  color: #f07178;
+}
+.material-theme-ocean .st-ansiWhite {
+  color: #ffffff;
+}
+.material-theme-ocean .st-ansiYellow {
+  color: #FFCB6B;
 }
 .material-theme-ocean .st-57 {
   color: #C3E88D;
@@ -275,6 +407,54 @@
 .material-theme-palenight .st-fg {
   color: #babed8;
 }
+.material-theme-palenight .st-ansiBlack {
+  color: #000000;
+}
+.material-theme-palenight .st-ansiBlue {
+  color: #82AAFF;
+}
+.material-theme-palenight .st-ansiBrightBlack {
+  color: #676E95;
+}
+.material-theme-palenight .st-ansiBrightBlue {
+  color: #82AAFF;
+}
+.material-theme-palenight .st-ansiBrightCyan {
+  color: #89DDFF;
+}
+.material-theme-palenight .st-ansiBrightGreen {
+  color: #C3E88D;
+}
+.material-theme-palenight .st-ansiBrightMagenta {
+  color: #C792EA;
+}
+.material-theme-palenight .st-ansiBrightRed {
+  color: #f07178;
+}
+.material-theme-palenight .st-ansiBrightWhite {
+  color: #ffffff;
+}
+.material-theme-palenight .st-ansiBrightYellow {
+  color: #FFCB6B;
+}
+.material-theme-palenight .st-ansiCyan {
+  color: #89DDFF;
+}
+.material-theme-palenight .st-ansiGreen {
+  color: #C3E88D;
+}
+.material-theme-palenight .st-ansiMagenta {
+  color: #C792EA;
+}
+.material-theme-palenight .st-ansiRed {
+  color: #f07178;
+}
+.material-theme-palenight .st-ansiWhite {
+  color: #ffffff;
+}
+.material-theme-palenight .st-ansiYellow {
+  color: #FFCB6B;
+}
 .material-theme-palenight .st-77 {
   color: #C3E88D;
 }
@@ -342,10 +522,58 @@
 }
 /*** min-light styles ***/
 .min-light .st-bg {
-  background-color: #ffffff;
+  background-color: #fffffe;
 }
 .min-light .st-fg {
   color: #24292eff;
+}
+.min-light .st-ansiBlack {
+  color: #333;
+}
+.min-light .st-ansiBlue {
+  color: #e0e0e0;
+}
+.min-light .st-ansiBrightBlack {
+  color: #a1a1a1;
+}
+.min-light .st-ansiBrightBlue {
+  color: #6871ff;
+}
+.min-light .st-ansiBrightCyan {
+  color: #57d9ad;
+}
+.min-light .st-ansiBrightGreen {
+  color: #a3d900;
+}
+.min-light .st-ansiBrightMagenta {
+  color: #a37acc;
+}
+.min-light .st-ansiBrightRed {
+  color: #d6656a;
+}
+.min-light .st-ansiBrightWhite {
+  color: #7E7E7E;
+}
+.min-light .st-ansiBrightYellow {
+  color: #e7c547;
+}
+.min-light .st-ansiCyan {
+  color: #4dbf99;
+}
+.min-light .st-ansiGreen {
+  color: #77cc00;
+}
+.min-light .st-ansiMagenta {
+  color: #9966cc;
+}
+.min-light .st-ansiRed {
+  color: #D32F2F;
+}
+.min-light .st-ansiWhite {
+  color: #c7c7c7;
+}
+.min-light .st-ansiYellow {
+  color: #f29718;
 }
 .min-light .st-97 {
   color: #24292eff;
@@ -401,10 +629,58 @@
 }
 /*** moonlight-ii styles ***/
 .moonlight-ii .st-bg {
-  background-color: #1F2028;
+  background-color: #1e1e1e;
 }
 .moonlight-ii .st-fg {
+  color: #bbbbbb;
+}
+.moonlight-ii .st-ansiWhite {
   color: #c8d3f5;
+}
+.moonlight-ii .st-ansiBlack {
+  color: #000000;
+}
+.moonlight-ii .st-ansiBlue {
+  color: #82aaff;
+}
+.moonlight-ii .st-ansiCyan {
+  color: #86e1fc;
+}
+.moonlight-ii .st-ansiGreen {
+  color: #c3e88d;
+}
+.moonlight-ii .st-ansiMagenta {
+  color: #fca7ea;
+}
+.moonlight-ii .st-ansiRed {
+  color: #ff757f;
+}
+.moonlight-ii .st-ansiYellow {
+  color: #ffc777;
+}
+.moonlight-ii .st-ansiBrightWhite {
+  color: #c8d3f5;
+}
+.moonlight-ii .st-ansiBrightBlack {
+  color: #828bb8;
+}
+.moonlight-ii .st-ansiBrightBlue {
+  color: #82aaff;
+}
+.moonlight-ii .st-ansiBrightCyan {
+  color: #86e1fc;
+}
+.moonlight-ii .st-ansiBrightGreen {
+  color: #c3e88d;
+}
+.moonlight-ii .st-ansiBrightMagenta {
+  color: #fca7ea;
+}
+.moonlight-ii .st-ansiBrightRed {
+  color: #ff757f;
+}
+.moonlight-ii .st-ansiBrightYellow {
+  color: #ffc777;
 }
 .moonlight-ii .st-114 {
   color: #858aa6;
@@ -493,10 +769,58 @@
 }
 /*** my-eyes-please styles ***/
 .my-eyes-please .st-bg {
-  background-color: #14161a;
+  background-color: #1e1e1e;
 }
 .my-eyes-please .st-fg {
-  color: #eeffff;
+  color: #bbbbbb;
+}
+.my-eyes-please .st-ansiBlack {
+  color: #21252b;
+}
+.my-eyes-please .st-ansiBrightBlack {
+  color: #21252b;
+}
+.my-eyes-please .st-ansiGreen {
+  color: #a0ca60;
+}
+.my-eyes-please .st-ansiBrightGreen {
+  color: #a0ca60;
+}
+.my-eyes-please .st-ansiYellow {
+  color: #f0cc62;
+}
+.my-eyes-please .st-ansiBrightYellow {
+  color: #f0cc62;
+}
+.my-eyes-please .st-ansiBlue {
+  color: #5298d1;
+}
+.my-eyes-please .st-ansiBrightBlue {
+  color: #5298d1;
+}
+.my-eyes-please .st-ansiMagenta {
+  color: #a573c6;
+}
+.my-eyes-please .st-ansiBrightMagenta {
+  color: #a573c6;
+}
+.my-eyes-please .st-ansiCyan {
+  color: #4ba5b6;
+}
+.my-eyes-please .st-ansiBrightCyan {
+  color: #4ba5b6;
+}
+.my-eyes-please .st-ansiWhite {
+  color: #abb2bf;
+}
+.my-eyes-please .st-ansiBrightWhite {
+  color: #abb2bf;
+}
+.my-eyes-please .st-ansiRed {
+  color: #d35b6f;
+}
+.my-eyes-please .st-ansiBrightRed {
+  color: #d35b6f;
 }
 .my-eyes-please .st-141 {
   color: #333942;
@@ -623,10 +947,58 @@
 }
 /*** one-dark-pro styles ***/
 .one-dark-pro .st-bg {
-  background-color: #282c34;
+  background-color: #1e1e1e;
 }
 .one-dark-pro .st-fg {
-  color: #abb2bf;
+  color: #bbbbbb;
+}
+.one-dark-pro .st-ansiBlack {
+  color: #3f4451;
+}
+.one-dark-pro .st-ansiBlue {
+  color: #4aa5f0;
+}
+.one-dark-pro .st-ansiBrightBlack {
+  color: #4f5666;
+}
+.one-dark-pro .st-ansiBrightBlue {
+  color: #4dc4ff;
+}
+.one-dark-pro .st-ansiBrightCyan {
+  color: #4cd1e0;
+}
+.one-dark-pro .st-ansiBrightGreen {
+  color: #a5e075;
+}
+.one-dark-pro .st-ansiBrightMagenta {
+  color: #de73ff;
+}
+.one-dark-pro .st-ansiBrightRed {
+  color: #ff616e;
+}
+.one-dark-pro .st-ansiBrightWhite {
+  color: #e6e6e6;
+}
+.one-dark-pro .st-ansiBrightYellow {
+  color: #f0a45d;
+}
+.one-dark-pro .st-ansiCyan {
+  color: #42b3c2;
+}
+.one-dark-pro .st-ansiGreen {
+  color: #8cc265;
+}
+.one-dark-pro .st-ansiMagenta {
+  color: #c162de;
+}
+.one-dark-pro .st-ansiRed {
+  color: #e05561;
+}
+.one-dark-pro .st-ansiWhite {
+  color: #d7dae0;
+}
+.one-dark-pro .st-ansiYellow {
+  color: #d18f52;
 }
 .one-dark-pro .st-180 {
   color: #abb2bf;
@@ -679,7 +1051,7 @@
 }
 /*** red styles ***/
 .red .st-bg {
-  background-color: #390000;
+  background-color: #1e1e1e;
 }
 .red .st-fg {
   color: #F8F8F8;
@@ -789,10 +1161,58 @@
 }
 /*** solarized-light styles ***/
 .solarized-light .st-bg {
-  background-color: #FDF6E3;
+  background-color: #fffffe;
 }
 .solarized-light .st-fg {
   color: #657B83;
+}
+.solarized-light .st-ansiBlack {
+  color: #073642;
+}
+.solarized-light .st-ansiBlue {
+  color: #268bd2;
+}
+.solarized-light .st-ansiBrightBlack {
+  color: #002b36;
+}
+.solarized-light .st-ansiBrightBlue {
+  color: #839496;
+}
+.solarized-light .st-ansiBrightCyan {
+  color: #93a1a1;
+}
+.solarized-light .st-ansiBrightGreen {
+  color: #586e75;
+}
+.solarized-light .st-ansiBrightMagenta {
+  color: #6c71c4;
+}
+.solarized-light .st-ansiBrightRed {
+  color: #cb4b16;
+}
+.solarized-light .st-ansiBrightWhite {
+  color: #fdf6e3;
+}
+.solarized-light .st-ansiBrightYellow {
+  color: #657b83;
+}
+.solarized-light .st-ansiCyan {
+  color: #2aa198;
+}
+.solarized-light .st-ansiGreen {
+  color: #859900;
+}
+.solarized-light .st-ansiMagenta {
+  color: #d33682;
+}
+.solarized-light .st-ansiRed {
+  color: #dc322f;
+}
+.solarized-light .st-ansiWhite {
+  color: #eee8d5;
+}
+.solarized-light .st-ansiYellow {
+  color: #b58900;
 }
 .solarized-light .st-228 {
   color: #657B83;
@@ -851,10 +1271,46 @@
 }
 /*** synthwave-84 styles ***/
 .synthwave-84 .st-bg {
-  background-color: #262335;
+  background-color: #1e1e1e;
 }
 .synthwave-84 .st-fg {
   color: #bbbbbb;
+}
+.synthwave-84 .st-ansiBlue {
+  color: #03edf9;
+}
+.synthwave-84 .st-ansiBrightBlue {
+  color: #03edf9;
+}
+.synthwave-84 .st-ansiBrightCyan {
+  color: #03edf9;
+}
+.synthwave-84 .st-ansiBrightGreen {
+  color: #72f1b8;
+}
+.synthwave-84 .st-ansiBrightMagenta {
+  color: #ff7edb;
+}
+.synthwave-84 .st-ansiBrightRed {
+  color: #fe4450;
+}
+.synthwave-84 .st-ansiBrightYellow {
+  color: #fede5d;
+}
+.synthwave-84 .st-ansiCyan {
+  color: #03edf9;
+}
+.synthwave-84 .st-ansiGreen {
+  color: #72f1b8;
+}
+.synthwave-84 .st-ansiMagenta {
+  color: #ff7edb;
+}
+.synthwave-84 .st-ansiRed {
+  color: #fe4450;
+}
+.synthwave-84 .st-ansiYellow {
+  color: #f3e70f;
 }
 .synthwave-84 .st-245 {
   color: #848bbd;

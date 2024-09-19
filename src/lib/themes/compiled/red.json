@@ -3,6 +3,7 @@
   "name": "red",
   "type": "dark",
   "semanticHighlighting": true,
+  "colors": {},
   "tokenColors": [
     {
       "settings": {

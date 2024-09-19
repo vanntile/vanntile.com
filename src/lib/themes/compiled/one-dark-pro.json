@@ -3,6 +3,24 @@
   "name": "one-dark-pro",
   "type": "dark",
   "semanticHighlighting": true,
+  "colors": {
+    "terminal.ansiBlack": "st-ansiBlack",
+    "terminal.ansiBlue": "st-ansiBlue",
+    "terminal.ansiBrightBlack": "st-ansiBrightBlack",
+    "terminal.ansiBrightBlue": "st-ansiBrightBlue",
+    "terminal.ansiBrightCyan": "st-ansiBrightCyan",
+    "terminal.ansiBrightGreen": "st-ansiBrightGreen",
+    "terminal.ansiBrightMagenta": "st-ansiBrightMagenta",
+    "terminal.ansiBrightRed": "st-ansiBrightRed",
+    "terminal.ansiBrightWhite": "st-ansiBrightWhite",
+    "terminal.ansiBrightYellow": "st-ansiBrightYellow",
+    "terminal.ansiCyan": "st-ansiCyan",
+    "terminal.ansiGreen": "st-ansiGreen",
+    "terminal.ansiMagenta": "st-ansiMagenta",
+    "terminal.ansiRed": "st-ansiRed",
+    "terminal.ansiWhite": "st-ansiWhite",
+    "terminal.ansiYellow": "st-ansiYellow"
+  },
   "tokenColors": [
     {
       "scope": "meta.embedded",

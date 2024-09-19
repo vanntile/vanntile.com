@@ -3,6 +3,7 @@
   "name": "dark-plus",
   "type": "dark",
   "semanticHighlighting": true,
+  "colors": {},
   "tokenColors": [
     {
       "scope": [
