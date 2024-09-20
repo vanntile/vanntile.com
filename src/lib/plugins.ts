@@ -13,7 +13,8 @@ export function remarkReadingTime(): RemarkPlugin {
   }
 }
 
-const FONT_STYLE_SUFFIX_LEN = 11 // 11 = '-font-style'.length
+const FONT_STYLE_SUFFIX_LEN = 11 // '-font-style'.length
+const COUNTER_STYLE_PREFIX_LEN = 18 // 'counter-set: line '.length
 
 export function rehypeShikiStylesToClasses({
   propertyPrefix = '--shiki-',
@@ -35,11 +36,20 @@ export function rehypeShikiStylesToClasses({
         node.properties['data-theme'].length > 0 &&
         node.children.length > 0
       ) {
+        // manage pre element properties
         node.properties.className = ['st-fg', 'st-bg', ...((node.properties.className as string[]) || [])]
         node.properties['data-theme'] = undefined
         node.properties.style = undefined
 
-        if (node.children[0].type == 'element') {
+        // manage code element properties
+        if (node.children[0].type == 'element' && node.children[0].tagName == 'code') {
+          if (typeof node.children[0].properties.style == 'string') {
+            for (const style of node.children[0].properties.style.split(';')) {
+              if (!style.startsWith('counter-set: line ')) continue
+              node.children[0].properties['data-line-counter'] = style.slice(COUNTER_STYLE_PREFIX_LEN)
+              break
+            }
+          }
           node.children[0].properties['data-theme'] = undefined
           node.children[0].properties.style = undefined
         }

@@ -971,6 +971,12 @@
       color: inherit;
     }
 
+    /*** currently unsupported usage of attr(x number, 0)
+    [data-rehype-pretty-code-figure] code[data-line-counter] {
+      counter-set: line attr(data-line-counter number, 0);
+    }
+    ***/
+
     [data-rehype-pretty-code-figure] code[data-language='bash'] {
       --counter-content: '$';
     }
