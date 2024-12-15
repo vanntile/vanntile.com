@@ -43,9 +43,9 @@ const posts = await getCollection('blog')
               {READABLE_FORMAT.format(post.data.publishedAt)}
             </time>
           </div>
-          <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+          <a href={`/blog/${post.id}`}>{post.data.title}</a>
           <p>{post.data.description}</p>
-          <a href={`/blog/${post.slug}`} class="cta inline-block">
+          <a href={`/blog/${post.id}`} class="cta inline-block">
             Read more
           </a>
           <div class="blog-tags">

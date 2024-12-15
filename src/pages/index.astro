@@ -234,7 +234,7 @@ const latestPosts = (await getCollection('blog')).sort(blogCompareFn).slice(0, 3
                   {READABLE_FORMAT.format(post.data.publishedAt)}
                 </time>
               </p>
-              <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+              <a href={`/blog/${post.id}`}>{post.data.title}</a>
               <p>{post.data.description}</p>
             </div>
           ))

@@ -8,7 +8,7 @@ import '../../styles/shikiThemesDynamicVariables.css'
 
 export const getStaticPaths = async () =>
   (await getCollection('blog')).map((entry) => ({
-    params: { slug: entry.slug },
+    params: { id: entry.id },
     props: { entry },
   }))
 
@@ -18,7 +18,7 @@ const { title, publishedAt, keywords } = entry.data
 const { readingTime } = remarkPluginFrontmatter
 
 const posts = (await getCollection('blog')).sort(blogCompareFn)
-const entryIdx = posts.findIndex((e) => e.slug == entry.slug)
+const entryIdx = posts.findIndex((e) => e.id == entry.id)
 const prevPost = posts[entryIdx + 1]
 const nextPost = posts[entryIdx - 1]
 
@@ -43,12 +43,8 @@ const frontmatter = { ...entry.data, image: { src: resultingImage.src, alt } }
     </div>
     <Content />
     <div class="arrow-links">
-      {prevPost && <ArrowLink title={prevPost.data.title} direction={DIRECTION.LEFT} link={`/blog/${prevPost.slug}`} />}
-      {
-        nextPost && (
-          <ArrowLink title={nextPost.data.title} direction={DIRECTION.RIGHT} link={`/blog/${nextPost.slug}`} />
-        )
-      }
+      {prevPost && <ArrowLink title={prevPost.data.title} direction={DIRECTION.LEFT} link={`/blog/${prevPost.id}`} />}
+      {nextPost && <ArrowLink title={nextPost.data.title} direction={DIRECTION.RIGHT} link={`/blog/${nextPost.id}`} />}
     </div>
   </article>
 </BaseLayout>
