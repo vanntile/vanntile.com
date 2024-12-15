@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.6.0](https://github.com/vanntile/vanntile.com/compare/v4.5.3...v4.6.0) (2024-12-15)
+
+
+### Features
+
+* :star2: add ANSI terminal colors ([c021ab4](https://github.com/vanntile/vanntile.com/commit/c021ab49ed9b00a4991bc5476035bd740840756c))
+* :star2: final touches on default theme colors ([b06f32c](https://github.com/vanntile/vanntile.com/commit/b06f32c201659bf6dcd6003e47ee76df6cb1fe07))
+* :star2: functional css classes shiki themes ([14d9d58](https://github.com/vanntile/vanntile.com/commit/14d9d586eb1b4a9358dedbcc758908aec536763d))
+* :star2: use prefixes and classes in compiled stylesheet ([6a59a6d](https://github.com/vanntile/vanntile.com/commit/6a59a6d27daa3828caefbb9cc52f8bdc7c356e0a))
+
+
+### Bug Fixes
+
+* :bug: add font-styles as colors to dynamic shiki themes ([90bf821](https://github.com/vanntile/vanntile.com/commit/90bf82116c7314b7c7ddc56171ef74c0f6848e18))
+* :bug: use data-line-counter as a code attribute ([dc22a5f](https://github.com/vanntile/vanntile.com/commit/dc22a5fda38d1311fbe6f0c73308d28a9290594d))
+* :bug: valid textMate fontStyle conversion ([af72f19](https://github.com/vanntile/vanntile.com/commit/af72f196323778131a5ffd41bf21e27ce52d393a))
+* **astro:** content layer migration ([6a0756d](https://github.com/vanntile/vanntile.com/commit/6a0756d9ea15620b82c552d41b304135491bdce1))
+
 ### [4.5.3](https://github.com/vanntile/vanntile.com/compare/v4.5.2...v4.5.3) (2024-07-19)
 
 
