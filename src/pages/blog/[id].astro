@@ -1,6 +1,6 @@
 ---
 import { getImage } from 'astro:assets'
-import { getCollection, type CollectionEntry } from 'astro:content'
+import { getCollection, render, type CollectionEntry } from 'astro:content'
 import ArrowLink, { DIRECTION } from '../../components/ArrowLink.astro'
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import { READABLE_FORMAT, blogCompareFn, getImageURL } from '../../lib/utils'
@@ -13,7 +13,7 @@ export const getStaticPaths = async () =>
   }))
 
 const entry = Astro.props.entry as CollectionEntry<'blog'>
-const { Content, remarkPluginFrontmatter } = await entry.render()
+const { Content, remarkPluginFrontmatter } = await render(entry)
 const { title, publishedAt, keywords } = entry.data
 const { readingTime } = remarkPluginFrontmatter
 
