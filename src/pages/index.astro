@@ -128,7 +128,7 @@ const latestPosts = (await getCollection('blog')).sort(blogCompareFn).slice(0, 3
       <span>Languages</span>
       <div class="tags">
         {
-          ['JavaScript (ES2021)', 'TypeScript', 'Go 🇬', 'Python 3 🐍', 'C/C++', 'Haskell λ'].map((s: string) => (
+          ['Go 🇬', 'Python 3 🐍', 'JavaScript', 'TypeScript', 'C/C++', 'Haskell λ'].map((s: string) => (
             <span class="tag-home">{s}</span>
           ))
         }
@@ -148,6 +148,7 @@ const latestPosts = (await getCollection('blog')).sort(blogCompareFn).slice(0, 3
             'Angular 🛡️',
             'Tailwind CSS 🍃',
             'FastAPI ⚡',
+            'echo',
             'Express',
             'Django',
             'Flask',
@@ -168,18 +169,18 @@ const latestPosts = (await getCollection('blog')).sort(blogCompareFn).slice(0, 3
           ))
         }
       </div>
-      <span>Platforms</span>
-      <div class="tags">
-        {
-          ['GitHub 🐙', 'GitLab 🦊', 'Bitbucket 🪣', 'Heroku', 'Linode', 'Mastodon 🐘'].map((s: string) => (
-            <span class="tag-home">{s}</span>
-          ))
-        }
-      </div>
       <span>Standards &amp; paradigms</span>
       <div class="tags">
         {
           ['FOSS', 'OpenAPI', 'REST', 'GraphQL', 'semantic web', 'functional programming'].map((s: string) => (
+            <span class="tag-home">{s}</span>
+          ))
+        }
+      </div>
+      <span>Platforms</span>
+      <div class="tags">
+        {
+          ['GitHub 🐙', 'GitLab 🦊', 'Bitbucket 🪣', 'Linode', 'Mastodon 🐘'].map((s: string) => (
             <span class="tag-home">{s}</span>
           ))
         }
@@ -195,7 +196,7 @@ const latestPosts = (await getCollection('blog')).sort(blogCompareFn).slice(0, 3
       <span>Other snappy stuff</span>
       <div class="tags">
         {
-          ['git', 'Linux', 'GNOME', 'Obsidian', 'VSCodium', 'vim', 'Jupyter', 'Prettier'].map((s: string) => (
+          ['git', 'Linux', 'neovim', 'GNOME', 'Obsidian', 'Jupyter'].map((s: string) => (
             <span class="tag-home">{s}</span>
           ))
         }
