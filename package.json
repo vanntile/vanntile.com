@@ -31,7 +31,7 @@
     "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.0",
     "@shikijs/transformers": "^1.24.2",
-    "astro": "^5.0.5",
+    "astro": "^5.1.0",
     "astro-purgecss": "^5.0.0",
     "cloudinary": "^2.5.1",
     "husky": "^9.1.7",
