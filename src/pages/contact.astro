@@ -22,7 +22,7 @@ const frontmatter = { ...props, image: { src: resultingImage.src, alt } }
 const socialMedia = (await getCollection('icons')).sort((a, b) => a.data.index - b.data.index)
 
 const pkHello = 'publickey.hello@vanntile.com-3aebff9a6bc1e08cdd297d26c95faaecd3ce00af.asc'
-const pkCode = 'publickey.code@vanntile.com-5d142ec9f30002495de890dd875a4b55b2d5bfbf.asc'
+const pkCode = 'publickey.code@vanntile.com-CF768287A7DA542A70FB0AF50166E123F1D2C791.asc'
 const pkGitHub = 'publickey.33692650+vanntile@users.noreply.github.com.asc'
 const pkGitLab = 'publickey.2052890-vanntile@users.noreply.gitlab.com.asc'
 const publicKeys = Object.fromEntries(
@@ -133,7 +133,7 @@ const publicKeys = Object.fromEntries(
     <h2>Code signing</h2>
     <p>
       For generic code, not present on GitHub or GitLab, I use <a
-        href="https://keys.openpgp.org/vks/v1/by-fingerprint/5D142EC9F30002495DE890DD875A4B55B2D5BFBF"
+        href="https://keys.openpgp.org/vks/v1/by-fingerprint/CF768287A7DA542A70FB0AF50166E123F1D2C791"
         target="_blank"
         referrerpolicy="same-origin">this key</a
       >:
