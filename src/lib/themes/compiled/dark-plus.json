@@ -3,7 +3,8 @@
   "name": "dark-plus",
   "type": "dark",
   "semanticHighlighting": true,
-  "colors": { "editor.background": "#1E1E1E", "editor.foreground": "#D4D4D4" },
+  "colorReplacements": {},
+  "colors": { "editor.background": "st-bg", "editor.foreground": "st-fg" },
   "tokenColors": [
     {
       "scope": [

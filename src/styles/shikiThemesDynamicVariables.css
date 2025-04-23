@@ -47,8 +47,17 @@
 .andromeeda .st-andromeeda-bold {
   font-weight: bold;
 }
+.andromeeda .st-andromeeda-inherit {
+  text-decoration: inherit;
+}
 .andromeeda .st-andromeeda-underline {
   text-decoration: underline;
+}
+.andromeeda .st-andromeeda-line-through {
+  text-decoration: line-through;
+}
+.andromeeda .st-andromeeda-line-through-underline {
+  text-decoration: line-through underline;
 }
 .andromeeda .st-0 {
   color: #A0A1A7cc;
@@ -96,8 +105,17 @@
 .dark-plus .st-dark-plus-bold {
   font-weight: bold;
 }
+.dark-plus .st-dark-plus-inherit {
+  text-decoration: inherit;
+}
 .dark-plus .st-dark-plus-underline {
   text-decoration: underline;
+}
+.dark-plus .st-dark-plus-line-through {
+  text-decoration: line-through;
+}
+.dark-plus .st-dark-plus-line-through-underline {
+  text-decoration: line-through underline;
 }
 .dark-plus .st-11 {
   color: #D4D4D4;
@@ -223,8 +241,17 @@
 .material-theme-lighter .st-material-theme-lighter-bold {
   font-weight: bold;
 }
+.material-theme-lighter .st-material-theme-lighter-inherit {
+  text-decoration: inherit;
+}
 .material-theme-lighter .st-material-theme-lighter-underline {
   text-decoration: underline;
+}
+.material-theme-lighter .st-material-theme-lighter-line-through {
+  text-decoration: line-through;
+}
+.material-theme-lighter .st-material-theme-lighter-line-through-underline {
+  text-decoration: line-through underline;
 }
 .material-theme-lighter .st-32 {
   color: #91B859;
@@ -323,8 +350,17 @@
 .material-theme-ocean .st-material-theme-ocean-bold {
   font-weight: bold;
 }
+.material-theme-ocean .st-material-theme-ocean-inherit {
+  text-decoration: inherit;
+}
 .material-theme-ocean .st-material-theme-ocean-underline {
   text-decoration: underline;
+}
+.material-theme-ocean .st-material-theme-ocean-line-through {
+  text-decoration: line-through;
+}
+.material-theme-ocean .st-material-theme-ocean-line-through-underline {
+  text-decoration: line-through underline;
 }
 .material-theme-ocean .st-44 {
   color: #C3E88D;
@@ -426,8 +462,17 @@
 .material-theme-palenight .st-material-theme-palenight-bold {
   font-weight: bold;
 }
+.material-theme-palenight .st-material-theme-palenight-inherit {
+  text-decoration: inherit;
+}
 .material-theme-palenight .st-material-theme-palenight-underline {
   text-decoration: underline;
+}
+.material-theme-palenight .st-material-theme-palenight-line-through {
+  text-decoration: line-through;
+}
+.material-theme-palenight .st-material-theme-palenight-line-through-underline {
+  text-decoration: line-through underline;
 }
 .material-theme-palenight .st-57 {
   color: #C3E88D;
@@ -529,8 +574,17 @@
 .min-light .st-min-light-bold {
   font-weight: bold;
 }
+.min-light .st-min-light-inherit {
+  text-decoration: inherit;
+}
 .min-light .st-min-light-underline {
   text-decoration: underline;
+}
+.min-light .st-min-light-line-through {
+  text-decoration: line-through;
+}
+.min-light .st-min-light-line-through-underline {
+  text-decoration: line-through underline;
 }
 .min-light .st-70 {
   color: #24292eff;
@@ -635,8 +689,17 @@
 .moonlight-ii .st-moonlight-ii-bold {
   font-weight: bold;
 }
+.moonlight-ii .st-moonlight-ii-inherit {
+  text-decoration: inherit;
+}
 .moonlight-ii .st-moonlight-ii-underline {
   text-decoration: underline;
+}
+.moonlight-ii .st-moonlight-ii-line-through {
+  text-decoration: line-through;
+}
+.moonlight-ii .st-moonlight-ii-line-through-underline {
+  text-decoration: line-through underline;
 }
 .moonlight-ii .st-84 {
   color: #858aa6;
@@ -762,8 +825,17 @@
 .my-eyes-please .st-my-eyes-please-bold {
   font-weight: bold;
 }
+.my-eyes-please .st-my-eyes-please-inherit {
+  text-decoration: inherit;
+}
 .my-eyes-please .st-my-eyes-please-underline {
   text-decoration: underline;
+}
+.my-eyes-please .st-my-eyes-please-line-through {
+  text-decoration: line-through;
+}
+.my-eyes-please .st-my-eyes-please-line-through-underline {
+  text-decoration: line-through underline;
 }
 .my-eyes-please .st-105 {
   color: #333942;
@@ -925,8 +997,17 @@
 .one-dark-pro .st-one-dark-pro-bold {
   font-weight: bold;
 }
+.one-dark-pro .st-one-dark-pro-inherit {
+  text-decoration: inherit;
+}
 .one-dark-pro .st-one-dark-pro-underline {
   text-decoration: underline;
+}
+.one-dark-pro .st-one-dark-pro-line-through {
+  text-decoration: line-through;
+}
+.one-dark-pro .st-one-dark-pro-line-through-underline {
+  text-decoration: line-through underline;
 }
 .one-dark-pro .st-138 {
   color: #abb2bf;
@@ -980,8 +1061,17 @@
 .red .st-red-bold {
   font-weight: bold;
 }
+.red .st-red-inherit {
+  text-decoration: inherit;
+}
 .red .st-red-underline {
   text-decoration: underline;
+}
+.red .st-red-line-through {
+  text-decoration: line-through;
+}
+.red .st-red-line-through-underline {
+  text-decoration: line-through underline;
 }
 .red .st-151 {
   color: #F8F8F8;
@@ -1113,8 +1203,17 @@
 .solarized-light .st-solarized-light-bold {
   font-weight: bold;
 }
+.solarized-light .st-solarized-light-inherit {
+  text-decoration: inherit;
+}
 .solarized-light .st-solarized-light-underline {
   text-decoration: underline;
+}
+.solarized-light .st-solarized-light-line-through {
+  text-decoration: line-through;
+}
+.solarized-light .st-solarized-light-line-through-underline {
+  text-decoration: line-through underline;
 }
 .solarized-light .st-174 {
   color: #657B83;
@@ -1198,8 +1297,17 @@
 .synthwave-84 .st-synthwave-84-bold {
   font-weight: bold;
 }
+.synthwave-84 .st-synthwave-84-inherit {
+  text-decoration: inherit;
+}
 .synthwave-84 .st-synthwave-84-underline {
   text-decoration: underline;
+}
+.synthwave-84 .st-synthwave-84-line-through {
+  text-decoration: line-through;
+}
+.synthwave-84 .st-synthwave-84-line-through-underline {
+  text-decoration: line-through underline;
 }
 .synthwave-84 .st-185 {
   color: #848bbd;

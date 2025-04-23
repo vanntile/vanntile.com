@@ -30,8 +30,44 @@ const resultingImage = await getImage({ src: remoteImgURL, width: 1600, height: 
 const frontmatter = { ...entry.data, image: { src: resultingImage.src, alt } }
 ---
 
+<script is:inline>
+  const DEFAULT_THEME = 'moonlight-ii'
+  const themes = [
+    'material-theme-lighter',
+    'min-light',
+    'solarized-light',
+    'andromeeda',
+    'dark-plus',
+    'material-theme-ocean',
+    'material-theme-palenight',
+    'moonlight-ii',
+    'my-eyes-please',
+    'one-dark-pro',
+    'red',
+    'synthwave-84',
+  ]
+
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const page = document.querySelector(`.${DEFAULT_THEME}`)
+    let timeoutID
+    window.addEventListener('keydown', (event) => {
+      if (timeoutID) return
+      if (event.code != 'KeyT') return
+
+      page.className = themes.filter((x) => x != page.className)[Math.floor(Math.random() * (themes.length - 1))]
+
+      timeoutID = setTimeout(() => (timeoutID = null), 320) // forbid calling again during the delay
+    })
+
+    for (const codeElem of document.querySelectorAll('code[data-line-counter]')) {
+      // direct manipulation of style property allowed by CSP
+      codeElem.style.counterSet = `line ${codeElem.getAttribute('data-line-counter')}`
+    }
+  })
+</script>
+
 <BaseLayout frontmatter={frontmatter} type="article">
-  <article>
+  <article class="moonlight-ii">
     <h1>{title}</h1>
     <div class="article-time">
       <time datetime={publishedAt.toISOString().slice(0, 10)}>{READABLE_FORMAT.format(publishedAt)}</time>, {

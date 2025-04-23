@@ -3,7 +3,8 @@
   "name": "red",
   "type": "dark",
   "semanticHighlighting": true,
-  "colors": { "editor.background": "#390000", "editor.foreground": "#F8F8F8" },
+  "colorReplacements": {},
+  "colors": { "editor.background": "st-bg", "editor.foreground": "st-fg" },
   "tokenColors": [
     { "settings": { "foreground": "st-fg" } },
     {

@@ -33,16 +33,22 @@ const convertThemes = (themes = [], classPrefix = 'st') => {
   for (const theme of themes) {
     theme.ansiColorsMap = new Map() // Map of colorName and color
     theme.colorMap = new Map() // Map of color and index
+    theme.colorReplacements = {}
 
     if (theme.colors != undefined) {
+      theme.default = {
+        background: theme.colors['editor.background'],
+        foreground: theme.colors['editor.foreground'],
+      }
       const colors = {
-        'editor.background': theme.colors['editor.background'],
-        'editor.foreground': theme.colors['editor.foreground'],
+        'editor.background': `${classPrefix}-bg`,
+        'editor.foreground': `${classPrefix}-fg`,
       }
       for (const [k, v] of Object.entries(theme.colors)) {
         if (!k.startsWith('terminal.ansi')) continue
-        colors[k] = `${classPrefix}-${k.slice('terminal.'.length)}`
-        theme.ansiColorsMap.set(colors[k], v)
+        colors[k] = v
+        theme.colorReplacements[v] = `${classPrefix}-${k.slice('terminal.'.length)}`
+        theme.ansiColorsMap.set(theme.colorReplacements[v], v)
       }
 
       // only use ansi colors from the dynamic colors in the compiled them
@@ -52,13 +58,13 @@ const convertThemes = (themes = [], classPrefix = 'st') => {
     for (const x of theme.tokenColors) {
       // debatably, this should be removed from output
       if (!x.scope) {
-        theme.default = { ...x.settings }
-
         // use a single class for foreground and background
         if (x.settings.background) {
+          theme.default.background = x.settings.background
           x.settings.background = `${classPrefix}-bg`
         }
         if (x.settings.foreground) {
+          theme.default.foreground = x.settings.foreground
           x.settings.foreground = `${classPrefix}-fg`
         }
         continue
@@ -89,6 +95,7 @@ const writeThemes = async (themes = [], destDir = 'compiled') => {
       name: t.name,
       type: t.type || 'css',
       semanticHighlighting: t.semanticHighlighting || false,
+      colorReplacements: t.colorReplacements || {},
       colors: t.colors || {},
       tokenColors: t.tokenColors || [],
     }))
@@ -117,12 +124,6 @@ const writeStylesheet = async (themes = [], file = 'shikiThemes.css', classPrefi
         if (theme.default.background) background = theme.default.background
         if (theme.default.foreground) foreground = theme.default.foreground
       }
-      if (background == undefined && theme.colors['editor.background']) {
-        background = theme.colors['editor.background']
-      }
-      if (foreground == undefined && theme.colors['editor.foreground']) {
-        foreground = theme.colors['editor.foreground']
-      }
       if (background === undefined) background = theme.type === 'light' ? '#fffffe' : '#1e1e1e'
       if (foreground === undefined) foreground = theme.type === 'light' ? '#333333' : '#bbbbbb'
       out.push(`.${theme.name} .${classPrefix}-bg {\n  background-color: ${background};\n}`)
@@ -134,7 +135,12 @@ const writeStylesheet = async (themes = [], file = 'shikiThemes.css', classPrefi
 
       out.push(`.${theme.name} .${classPrefix}-${theme.name}-italic {\n  font-style: italic;\n}`)
       out.push(`.${theme.name} .${classPrefix}-${theme.name}-bold {\n  font-weight: bold;\n}`)
+      out.push(`.${theme.name} .${classPrefix}-${theme.name}-inherit {\n  text-decoration: inherit;\n}`)
       out.push(`.${theme.name} .${classPrefix}-${theme.name}-underline {\n  text-decoration: underline;\n}`)
+      out.push(`.${theme.name} .${classPrefix}-${theme.name}-line-through {\n  text-decoration: line-through;\n}`)
+      out.push(
+        `.${theme.name} .${classPrefix}-${theme.name}-line-through-underline {\n  text-decoration: line-through underline;\n}`,
+      )
 
       // classes using these variables
       let temp = []
