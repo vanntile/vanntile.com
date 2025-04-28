@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.6.4](https://github.com/vanntile/vanntile.com/compare/v4.6.3...v4.6.4) (2025-04-28)
+
 ### [4.6.3](https://github.com/vanntile/vanntile.com/compare/v4.6.2...v4.6.3) (2025-04-28)
 
 ### [4.6.2](https://github.com/vanntile/vanntile.com/compare/v4.6.1...v4.6.2) (2025-04-23)
