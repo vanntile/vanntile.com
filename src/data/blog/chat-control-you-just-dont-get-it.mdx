@@ -1,0 +1,268 @@
+---
+title: Chat Control - you just don't get it
+publishedAt: 2025-09-30
+description: The latest proposed Chat Control EU regulation is severely undermining privacy and its own stated goals in favor of performative protection. Stop it now
+image:
+  src: /assets/banner.jpg
+  alt: Banner image with logo and text "Privacy. FOSS. Cybersecurity."
+keywords:
+- Chat Control
+- privacy
+- cybersecurity
+- end-to-end encryption
+- private communication
+- European Union
+- human rights
+---
+
+
+I think [last time][eu-is-for-encryption] I wasn't clear enough, so I will say it again:
+[Chat Control][tuta-chat-control], or any similarly misinformed legislation proposals, must not pass in the European
+Union or in the world at large. Once you get the bureaucratic apparatus moving, it becomes quite impossible to
+immediately stop a chaotic, badly designed, prone-to-abuse and ineffective in its goals surveillence system.
+
+## Why now?
+
+This time it's Denmark pushing it, actively holding the EU Council Presidency, and, as a country with experience in
+surveillence (member of the Nine Eyes as per various statements post the Snowden leaks of 2013), it is unsurprising how
+their Minister of Justice could very well fit in the orwellian Ministry of Love with statements like this:
+
+> we have to break with the totally erroneous view that it is every man's freedom to communicate on encrypted
+> messaging services
+> - Peter Hummelgaard, as per [Question 1426][danish-consultation-question-1426]
+
+And if you thought that wasn't clear enough, the answer to the question in the thread is quite revealing:
+
+> The Minister's statement reflects a concern that encrypted messaging services are being exploited for criminal
+> activities, such as the recruitment of young people into gangs and serious crimes. While the response does not
+> explicitly name iMessage or WhatsApp, the Minister’s position implies skepticism toward the idea that end-to-end
+> encryption in any form—regardless of platform—should be considered an absolute civil liberty, especially when it
+> hinders law enforcement.
+
+So yeah, in his opinion, the right to privacy exists only in relation to each other (for now) and not to the state, one
+of the two major forces most readily interested in capitalizing and controlling on all your information. Don't worry,
+Chat Control, if implemented as intended, will enlarge the group represented by the state to include a lot of
+inexistent infrastructure until you would be better communicating only publicly. Maybe the panopticon was the friends
+we made along the way.
+
+## You have the right to not say anything about it, or ever again
+
+Just for reference, the **EU Charter of Fundamental Rights** specifies in Article 7:
+
+> Everyone has the right to respect for his or her private and family life, home and communications.
+
+Wondering if this should be actually compulsory reading material to a Ministry of Justice. While this article includes
+provisions regarding the "interests of national security, public safety" and others, I would add that Article 8
+(Protection of personal data) specifies that:
+
+> Such data must be processed fairly for specified purposes and on the basis of the consent of the person concerned or
+some other legitimate basis laid down by law
+
+And is this lack of fairness and vaugeness of the Chat Control documents that I try to help you all understand that are
+complete overreach of institutional powers. Don't let yourself fooled, as a technical person, I am well aware that for
+any centralized system such as this, you will need an infrastructure (in people, servers and procedures) that far
+exceeds the abilities of the Union, but that doesn't matter at all when they do not understand that nobody possesses
+[such an automation][eu-commission-chat-control-does-not-exist] (and likely never will) and what even small error rates
+will do to the situations. The following is a fragment of my own message towards MEPs the last time this was on the
+table illustrating the numbers for an accuracy of 99.99% (the real rate being closer to 51.7% as seen from the optional
+German Chat Control 1.0 [implementation][german-implementation] for 2024 resulting in 99375 conversations or images of
+innocents sent to the police).
+
+With a population of 450 million, 90% using the Internet regularly (and 44% lacking basic digital skills) and 82% using
+instant messaging, if one is to assume 4 pieces of media sent daily (an significant understatement to the most prolific
+younger cohort of the population which could, on aggregate, send thousands of text messages and hundreds of pieces of
+media), and an error rate of 1 per 10000 (presented to you as 99.99% accurate/false positive rate), it would result in
+73 thousand false leads every day that police departments would need to investigate, taking time from the respective
+departments to go for real crime. To go into detail even more, simulating the scenario above, in a little a bit over a
+year (371 days), one percent of the whole population of EU would need to be investigated at least twice (repeated false
+accusations), which would not bode well with anyone. This (again, underwhelmingly low) estimate would result in so many
+false positives daily which would need to be contacted directly and urgently (and without alarming the suspects) by the
+police if the system is built in its most secure version and run completely on users' devices. If it doesn't and sends
+data to the investigative bodies (or whoever runs this infrastructure in your country), the police effort will be
+drastically reduced and the hacking and blackmail (when others will threaten to send or add illicit material to one's
+device even if that would pose no risk to the recipient) risks will be incalculably increased.
+
+Who is going to be the independent authority that shall verify the compliance of what each officer and clerk of each
+police department of every country in EU will be doing with this access. It wouldn't be the first time an EU
+institution forces another to pay up because they are not following data processing laws.
+
+Finally, remember this automatically turns you into a second class citizen, as organs of the state are exempt from this
+surveillence. Equality at its finest.
+
+## Act now
+
+I ask you to contact your MEPs, especially if you are represented in Germany, as they currently stand as the deciding
+power in the upcoming vote on October 14th. The effort is not that big, as you can use the
+[Fight Chat Control][fight-chat-control] website for the most general list of concerns and the email addresses and
+currently known positions of all EU representatives. In an ideal case, we would not need to get to the stage of
+parliementary vote and this worst version so far of the bill would be canceled by the EU Council vote, but we'd better
+prepare for the worst without panicking. This is an attack on rights during unfavourable times, and, beyond specific
+issues with this one project, the reason why nothing dangerous should be allowed without restraint to today's leaders
+"because they are the good guys" is that it becomes an invaluable asset for when "the bad guys" become in charge.
+
+## Let's get chatting
+
+I will be using  this section to express my very specific thoughts on actual excerpts from the
+[Interinstitutional File 2022/0155 (COD) from 1 July 2025 (pdf)][proposal-july-2025], which outlines the current state
+of the Chat Control, as per my own knowledge. What I want to underline is that under a well-intentioned veil we can
+find contradicting statements, lack of technological understanding, making of baseless expectations and, last of all,
+hypocrisy. Let's begin.
+
+> Detection in interpersonal communications services using end-to-end encryption is enabled prior to the transmission
+> of content requiring the users’ consent; Technologies used for detection have to be vetted with regard to their
+> effectiveness, their impact on fundamental rights and risks to cyber security, and be approved by implementing act
+> with specific safeguards applying to technologies for detection in services using end-to-end encryption;
+
+I totally agree, let's vet the detection methods according to those criteria: accuracy on small datasets (or small
+pilots) between 50 and 90%, and in existing implementations "only 25% of a quality the police can work on"
+([source - EU Commissioner Johansson][commissioner-johansson]), an unreasonable loss of fundamental rights for a
+non-effective outcome and a full undermining of cyber security. I guess by safeguards you would refer to the, again,
+**non-existent** infrastructure where all this would be reported, recorded or accessible on. If this is meant to be
+run by any … american tech giant… this would be in direct contradiction with the current aim of EU digital sovereignty.
+
+> The measures taken by providers of hosting services and providers of publicly available interpersonal communications
+> services to execute detection orders addressed to them should remain strictly limited to what is specified in this
+> Regulation and in the detection orders issued in accordance with this Regulation.
+
+And even if you do ensure they restrict themselves to this regulation, just imagine the glorious scale of the first
+time they have a security problem. What was before an end-to-end encrypted app becomes a large-scale, individually
+identifiable (did I mention this needs to fix identity at scale too), distributed database (so hard to track
+exfiltration from) of all your info.
+
+> In order to ensure the effectiveness of those measures, allow for tailored solutions, remain technologically neutral,
+> and avoid circumvention of the detection obligations, those measures should be taken regardless of the technologies
+> used by the providers concerned in connection to the provision of their services. Therefore, this Regulation leaves
+> to the provider concerned the choice of the technologies to be operated to comply effectively with detection orders
+> and should not be understood as incentivising or disincentivising the use of any given technology, provided that the
+> technologies and accompanying measures meet the requirements of this Regulation.
+
+Aaaaaah, I finally get it, you won't have one eye in the digital sky, you will have one of those biblically accurate
+angels - one eye with many eyes under it. Each corporate entity holding one of these services - Meta (three times, as
+it has multiple incompatible apps), Apple, Telegram, Signal, Discord, and at least a dozen smaller ones, each
+implementing whatever they see fit, under whatever guarantee they can prove follows arbitrary standards. If they can
+argument it as such, it shall pass.
+
+> That includes the use of end-to-end encryption technology, which is an important tool to guarantee the security and
+> confidentiality of the communications of users, including those of children.
+
+So true, but so misinterpreted. Once again, say it with me - if private communication is outlawed, only criminals will
+have private communication. This, if put in action, has dozens of ways of backfiring against the very children it wants
+to save: more shady, less secure apps becoming the target for groomers, malicious sharing of pictures between underage
+teens to intentionally trigger these algorithms and an increase distrust in authorities and desensitization against
+abuses of their own privacy. If it is normal for someone not invited in their texts to read them, then what harm can
+one more do? Again, all this automated scanning solution is fundamentally different from a reporting system, which
+several apps already have.
+
+> Having regard to the availability of technologies that can be used to meet the requirements of this Regulation whilst
+> still allowing for end-to-end encryption, nothing in this Regulation should be interpreted as prohibiting, weakening
+> or circumventing, requiring to disable, or making end-to-end encryption impossible.
+
+I reserve my right to interpret what you say as it is. This is not a denial of circumventing security, but a denial of
+your right to call it so.
+
+> Providers should remain free to offer services using end-to-end encryption and should not be obliged by this
+> Regulation to decrypt data or create access to end-to-end encrypted data.
+
+But this is EXACTLY what you are asking, just because you think a loophole of "data is not yet encrypted so it's
+free to scan".
+
+> When executing the detection order, providers should take all available safeguard measures to ensure that the
+> technologies employed by them cannot be used by them or their employees for purposes other than compliance with this
+> Regulation, nor by third parties, and thus to avoid undermining cybersecurity and the confidentiality of the
+> communications of users, while ensuring the effective detection of online child sexual abuse and the fair balance
+> of all the fundamental rights at stake. To avoid the significant impairment of cybersecurity, providers should
+> identify, analyse and assess the possible cybersecurity risks derived from the implementation of the technologies
+> used to execute the detection order and put in place the necessary mitigation measures to minimise such risks.
+
+If the providers take this seriously, and bring in cybersecurity experts and privacy advocates, there is a single
+solution. Manual, user-provided reports (sending the last n messages to the provider for scanning) and no automated
+scanning of all your messages. But that would be a totally different regulation, one I actually would see as positive.
+
+> While end-to-end encryption is a necessary means of protecting fundamental rights and the digital security of
+> governments, industry and society, the European Union needs to ensure the effective prevention of and fight against
+> serious crime such as child sexual abuse.
+
+ Why would the EU take effective action such as actually removing explicit material from where it is hosted or even try
+ to catch perpertrators? They definitely do not share their loot with others, especially on… Whatsapp… Be honest for a
+ second, you risk criminalizing the teens, removing any sentiment of digital safety from kids (and later adults) and
+ any expectation of privacy in life. You are not bringing effective prevention, you are making groomers' work easier
+ by normalizing the lack of privacy.
+
+> Therefore, child sexual abuse material should remain detectable in all interpersonal communications services through
+> the application of vetted technologies, when uploaded, under the condition that the users give their explicit consent
+> under the provider’s terms and conditions for a specific technology being applied to such detection in the respective
+> service. Users not giving their consent should still be able to use that part of the service that does not involve
+> the sending of visual content and URLs.
+
+Therefore, user consent is still needed (that's good), but feature sets must be restricted to prevent the case that
+this regulation argues for. This, once again, assumes these legitimate services are the main ones where CSEM is
+distributed, and not that the risk to children comes from grooming. I'm afraid that this would become prime target for
+modification for future regulations, when the surveillence infrastructure will be in place, but they won't be able to
+argue for any significant improvement in child safety. Remember, any current evaluation of the effectivenes of such
+methods is despite major lack of data, in spite of professional warnings and focusing on what can become valid
+investigation for police officers, thus the actual actionable rate is an even smaller share of that.
+
+Either way, this part of the document, if followed through, offers the only valid option to a security and privacy
+minded persion. Refusal of installing any of such automation on one's own device and day-to-day usage in text form
+only for encrypted communication. Technology is evolving, just backwards.
+
+> This ensures that the detection mechanism can access the data in its unencrypted form for effective analysis and
+> action, without compromising the protection provided by end-to-end encryption once the data is transmitted. To avoid
+> the weakening of the protection provided by the encryption, technologies intended to be used for detection in
+> services using end-to-end encryption should be certified by the EU Centre and tested with the support of its
+> Technology Committee before undergoing the vetting procedure foreseen for all detection technologies.
+
+The amount of corporate focus, power that it's given to them and responsibility dispersion makes me incredibly uneasy.
+Let's remind ourselves that data aggregators and big tech would rather abuse the system and pay a fine than refuse to
+engage in legally dubious actions. [Again][apple-rather-pay-fine] and [again][microsoft-will-pay-fine].
+
+> In interpersonal communications services using end-to-end encryption, those technologies shall detect the
+> dissemination of child sexual abuse material prior to its transmission
+
+If we let all other arguments slide for a moment, I doubt currently one would be to run such a service on device and
+privately. It would need either significant amount of storage for a majority if not the full database of known hashes,
+or a pseudo-private system which asks for more hashes than needed to cover one specific identification gap, which
+still leak information, but reduce certainty. Finally, there is a sever underestimation of the processing power of
+mobile devices, with the most likely scenarios being effectively bricking them or never finishing a report on any
+video (which is likely a more prevalent CSEM format).
+
+> The technologies shall be:
+>   (a) be effective and suitable in detecting the dissemination of known or new child sexual abuse material or the
+> solicitation of children, as applicable;
+>   (aa) not introduce cybersecurity risks for which it is not possible to take any effective measures to mitigate
+> such risk;
+>   (ab) if applied in services using end-to-end encryption, be certified by the EU Centre following tests conducted
+> with the support of its Technology Committee, that their use could not lead to a weakening of the protection
+> provided by the encryption;
+
+Very hard for me to square the round peg of how one would identify solicitation if only looking at visual content and
+links and not text. This section must be removed no matter the result of this regulation. The second point makes it
+clear that this regulation should not be acted upon and comes into contradiction with expert knowledge regarding the
+rest of this document. The third is the biggest possibility of abuse and lobbying. The people evaluating this decision
+will likely be the last bastion of hope when it comes to EU citizen's privacy.
+
+> By … \[three years from the date of the entry into force of this Regulation], and if necessary, every three years
+> thereafter, the Commission shall submit a report to the European Parliament and the Council assessing the necessity
+and feasibility of including the detection of the solicitation of children in the scope of Section 2 of Chapter II of
+this Regulation. The assessment shall include an analysis of the state of development and readiness of the technologies
+to detect the solicitation of children, including within interpersonal communications services using end-to-end
+encryption, and error rates
+
+It's good that tech moves slowly and three years is not actually like a decade and a half in digital spaces. I find
+this non-continuous evaluation system rizible and proof that we are not going to be able to stop this surveillence
+machine once on its feet. Stop it now. Contact your MEP or even all MEPs willing to engage with public conversation.
+
+
+[eu-is-for-encryption]: https://vanntile.com/blog/eu-is-for-encryption
+[tuta-chat-control]: https://tuta.com/blog/chat-control-criticism
+[danish-consultation-question-1426]: https://www.ft.dk/samling/20231/almdel/REU/spm/1426/index.htm
+[eu-commission-chat-control-does-not-exist]: https://ec.social-network.europa.eu/@EUCommission/115180569539039179
+[german-implementation]: https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/JahresberichteUndLagebilder/SexualdeliktezNvKindernuJugendlichen/BLBSexualdeliktezNvKindernuJugendlichen2024.html
+[fight-chat-control]: https://fightchatcontrol.eu/
+[proposal-july-2025]: https://netzpolitik.org/wp-upload/2025/07/2025-07-01_Council_Presidency_LEWP_CSA-R_Compromise-texts_10131.pdf
+[commissioner-johansson]: https://peertube.european-pirates.eu/w/msBL6fbRRLcegQXs7dq746
+[apple-rather-pay-fine]: https://www.macrumors.com/2022/02/23/apple-rather-pay-fines-than-address-app-store/
+[microsoft-will-pay-fine]: https://www.ftc.gov/news-events/news/press-releases/2023/06/ftc-will-require-microsoft-pay-20-million-over-charges-it-illegally-collected-personal-information
+
+
+
