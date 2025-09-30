@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.7.1](https://github.com/vanntile/vanntile.com/compare/v4.7.0...v4.7.1) (2025-09-30)
+
+
+### Bug Fixes
+
+* typo ([0ccd0ce](https://github.com/vanntile/vanntile.com/commit/0ccd0ce1ba4fc9ccc90c93c76180f7ed0dea440c))
+
 ## [4.7.0](https://github.com/vanntile/vanntile.com/compare/v4.6.4...v4.7.0) (2025-09-30)
 
 
