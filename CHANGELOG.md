@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.7.0](https://github.com/vanntile/vanntile.com/compare/v4.6.4...v4.7.0) (2025-09-30)
+
+
+### Features
+
+* **blog:** add chat control article ([2ad8fae](https://github.com/vanntile/vanntile.com/commit/2ad8fae622fbaa92900eb60400d41d63480a4cbf))
+
 ### [4.6.4](https://github.com/vanntile/vanntile.com/compare/v4.6.3...v4.6.4) (2025-04-28)
 
 ### [4.6.3](https://github.com/vanntile/vanntile.com/compare/v4.6.2...v4.6.3) (2025-04-28)
