@@ -1,4 +1,33 @@
 #!/bin/bash
 
-npx lint-staged
+format_prettier() {
+	local ref
+	ref=$(git rev-parse --verify 'HEAD^{commit}' 2>/dev/null) || ref=4b825dc642cb6eb9a060e54bf8d69288fbee4904
+
+	local mode sha1 status
+	while IFS=' ' read -d '' -r _ mode _ sha1 status; do
+		local filename
+		IFS= read -d '' -r filename || break
+		if [[ $status == [CR]* ]]; then
+			IFS= read -d '' -r filename || break
+		fi
+
+		# to use staged contents
+		# git cat-file blob "$sha1"
+
+		# run on the whole file to avoid later git conflicts
+		if $(echo $filename | grep -q -E "\.js$|\.ts$|\.astro$"); then
+			./node_modules/.bin/prettier $filename --write
+			git add $filename
+		fi
+	done < <(git diff-index -z --cached --diff-filter=ACMR --ignore-submodules "$ref")
+}
+
+if [ -v SKIP_PRE_COMMIT ]; then
+	echo 'Skipping pre-commit'
+else
+	echo 'Formatting using prettier'
+	format_prettier
+	echo 'Done'
+fi
 

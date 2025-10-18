@@ -14,6 +14,9 @@ It currently integrates the following:
 
 ```sh
 git config --local core.hooksPath .githooks/
+
+# Skip pre-commit using
+export SKIP_PRE_COMMIT=1
 ```
 
 ## License
