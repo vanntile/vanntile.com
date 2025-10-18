@@ -21,20 +21,15 @@
     "build": "astro build",
     "preview": "astro preview",
     "format": "prettier -w 'src/**/*.{astro,js,ts}'",
-    "prettier": "prettier",
-    "prepare": "husky",
     "release": "standard-version --no-verify --sign"
   },
   "devDependencies": {
     "@astrojs/mdx": "^4.2.4",
     "@astrojs/sitemap": "^3.3.0",
-    "@commitlint/cli": "^19.8.0",
-    "@commitlint/config-conventional": "^19.8.0",
     "@shikijs/transformers": "^3.3.0",
     "astro": "^5.13.2",
     "astro-purgecss": "^5.2.2",
     "cloudinary": "^2.5.1",
-    "husky": "^9.1.7",
     "lint-staged": "^15.5.1",
     "mdast-util-to-string": "^4.0.0",
     "node-html-parser": "^7.0.1",
@@ -55,8 +50,8 @@
     "unist-util-visit": "^5.0.0"
   },
   "engines": {
-    "node": "22.14.0",
-    "npm": "11.3.0"
+    "node": "24.10.0",
+    "npm": "11.6.2"
   },
   "lint-staged": {
     "*.{astro,js,ts}": [
