@@ -29,7 +29,7 @@
     "@shikijs/transformers": "3.3.0",
     "astro": "5.14.5",
     "astro-purgecss": "5.3.0",
-    "cloudinary": "2.5.1",
+    "cloudinary": "2.7.0",
     "mdast-util-to-string": "4.0.0",
     "node-html-parser": "7.0.1",
     "postcss": "8.5.6",
