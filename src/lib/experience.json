@@ -72,11 +72,27 @@
     }
   },
   "job": {
+      "privx23": {
+      "title": "SSH Communications Security",
+      "position": "Senior Software Engineer",
+      "type": "Full-time",
+      "interval": "Mar 2026 - Ongoing",
+      "duration": "",
+      "organization": "",
+      "location": "Helsinki, Finland",
+      "skills": ["Cybersecurity", "Team Collaboration", "AWS", "Entra ID", "PostgreSQL", "MySQL", "Go"],
+      "content": [
+        "<strong>Collaborated</strong> in a <strong>cross-functional</strong> team to develop customer-requested features, eliminate bugs and improve architecture of a B2B product.",
+        "Investigated, implemented and set up the end-to-end testing environment for a credential rotation and management feature, synchronized across <strong>Microsoft Azure AD</strong> and <strong>Entra ID</strong>.",
+        "Core team member for a <strong>machine-in-the-middle service</strong> which secures and monitors access to target <strong>databases</strong>. As part of the feature, implemented authentication for the <strong>MySQL wire protocol</strong>, validated it using a fuzzer and wrote functional tests using the <strong>Python Robot framework</strong>.",
+        "Represented SSH in several official events and served as a <strong>guest lecturer</strong>, delivering talks to university students on topics such as <strong>cybersecurity</strong>, cryptography, CLI tools and working life."
+      ]
+    },
     "privx23": {
       "title": "SSH Communications Security",
       "position": "Software Engineer",
       "type": "Full-time",
-      "interval": "Sep 2023 - Present",
+      "interval": "Sep 2023 - Mar 2025",
       "duration": "",
       "organization": "",
       "location": "Helsinki, Finland",
